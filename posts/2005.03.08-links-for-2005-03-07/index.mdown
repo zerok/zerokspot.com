@@ -1,0 +1,23 @@
+# links for 2005-03-07
+
+<ul class="delicious">
+
+-------------------------------
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.exilim.de/de/exilimzoom/exz750/">EXILIM Zoom - EX-Z750- EXILIM</a></div>
+
+		<div class="delicious-categories">(categories: <a href="http://del.icio.us/zeroK/cameras">cameras</a> <a href="http://del.icio.us/zeroK/digital">digital</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://priv.solsector.net/">Wing Commander Universe - Privateer Remake</a></div>
+
+		<div class="delicious-categories">(categories: <a href="http://del.icio.us/zeroK/games">games</a>)</div>
+
+	</li>
+
+</ul>
