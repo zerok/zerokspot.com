@@ -1,0 +1,16 @@
+# links for 2005-03-12
+
+<ul class="delicious">
+
+-------------------------------
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.solardreamstudios.com/learn/css/footerstick/">footerStick âº css âº Learn âº solarDreamStudios</a></div>
+
+		<div class="delicious-categories">(categories: <a href="http://del.icio.us/zeroK/css">css</a>)</div>
+
+	</li>
+
+</ul>
+
