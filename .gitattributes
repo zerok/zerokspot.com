@@ -1,0 +1,4 @@
+static/media/**/*.jpg !text !filter !merge !diff
+static/media/**/*.jpeg !text !filter !merge !diff
+static/**/*.jpg !text !filter !merge !diff
+static/**/*.jpeg !text !filter !merge !diff
