@@ -1,0 +1,24 @@
+# links for 2005-02-20
+
+<ul class="delicious">
+
+-------------------------------
+
+	<li>
+
+		<div class="delicious-link"><a href="http://meyerweb.com/eric/dom/dtype/dtype-grid.html">DOCTYPE grid</a></div>
+
+		<div class="delicious-categories">(categories: <a href="http://del.icio.us/zeroK/webtech">webtech</a> <a href="http://del.icio.us/zeroK/browsers">browsers</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://mnm.uib.es/gallir/posts/2005/02/02/111/">Ricardo Galli, de software libre Â» WP-Cache 1.0 released</a></div>
+
+		<div class="delicious-categories">(categories: <a href="http://del.icio.us/zeroK/wordpress">wordpress</a> <a href="http://del.icio.us/zeroK/extensions">extensions</a>)</div>
+
+	</li>
+
+</ul>
+
