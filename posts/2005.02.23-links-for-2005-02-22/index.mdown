@@ -1,0 +1,15 @@
+# links for 2005-02-22
+
+<ul class="delicious">
+
+-------------------------------
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.w3.org/TR/html4/">HTML 4.01 Specification</a></div>
+
+		<div class="delicious-categories">(categories: <a href="http://del.icio.us/zeroK/specifications">specifications</a> <a href="http://del.icio.us/zeroK/html">html</a> <a href="http://del.icio.us/zeroK/webtech">webtech</a>)</div>
+
+	</li>
+
+</ul>
