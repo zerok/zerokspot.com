@@ -1,0 +1,16 @@
+# links for 2005-02-19
+
+<ul class="delicious">
+
+-------------------------------
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.adampolselli.com/colorschemes/">Adam Polselli Â» Where'd Ya Get That Color Scheme?</a></div>
+
+		<div class="delicious-categories">(categories: <a href="http://del.icio.us/zeroK/colours">colours</a> <a href="http://del.icio.us/zeroK/webdesign">webdesign</a>)</div>
+
+	</li>
+
+</ul>
+
