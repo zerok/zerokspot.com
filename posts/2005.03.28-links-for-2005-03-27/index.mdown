@@ -1,0 +1,15 @@
+# links for 2005-03-27
+
+<ul class="delicious">
+
+-------------------------------
+
+	<li>
+
+		<div class="delicious-link"><a href="http://hewphoria.com/?p=themes&cat=1">hewphoria.com</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/pekwm">pekwm</a> <a href="http://del.icio.us/zeroK/themes">themes</a>)</div>
+
+	</li>
+
+</ul>
