@@ -1,0 +1,39 @@
+# links for 2005-02-28
+
+<ul class="delicious">
+
+-------------------------------
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.stuffandnonsense.co.uk/archives/css_a_tribute_to_selectors.html">And all that Malarkey [CSS: A tribute to selectors]</a></div>
+
+		<div class="delicious-categories">(categories: <a href="http://del.icio.us/zeroK/css">css</a> <a href="http://del.icio.us/zeroK/webtech">webtech</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.stunicholls.myby.co.uk/index.html">Stu Nicholls | The CSS Playground | Cutting Edge CSS</a></div>
+
+		<div class="delicious-categories">(categories: <a href="http://del.icio.us/zeroK/css">css</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://colormixers.com/mixers/cmr/">ColorMixers: Remixing RGB since 2003</a></div>
+
+		<div class="delicious-categories">(categories: <a href="http://del.icio.us/zeroK/colours">colours</a> <a href="http://del.icio.us/zeroK/webdesign">webdesign</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.bbc.co.uk/languages/">BBC - Languages - Homepage</a></div>
+
+		<div class="delicious-categories">(categories: <a href="http://del.icio.us/zeroK/languages">languages</a> <a href="http://del.icio.us/zeroK/courses">courses</a>)</div>
+
+	</li>
+
+</ul>
