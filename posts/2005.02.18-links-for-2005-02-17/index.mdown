@@ -1,0 +1,23 @@
+# links for 2005-02-17
+
+<ul class="delicious">
+
+-------------------------------
+
+	<li>
+
+		<div class="delicious-link"><a href="http://home.halden.net/vkp/vkp/rules.html">Solitaire MahJongg - a guide to the world of the computer tile-matching solitaire mahjongg games - Rules</a></div>
+
+		<div class="delicious-categories">(categories: <a href="http://del.icio.us/zeroK/games">games</a> <a href="http://del.icio.us/zeroK/rules">rules</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.amazon.com/exec/obidos/subst/home/home.html/103-3543107-5086218">The Hitchhiker's Guide to the Galaxy Trailer on Amazon</a></div>
+
+		<div class="delicious-categories">(categories: <a href="http://del.icio.us/zeroK/trailers">trailers</a> <a href="http://del.icio.us/zeroK/movies">movies</a>)</div>
+
+	</li>
+
+</ul>
