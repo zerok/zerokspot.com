@@ -1,0 +1,15 @@
+# links for 2005-04-14
+
+<ul class="delicious">
+
+-------------------------------
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.masternewmedia.org/news/2005/04/01/where_to_find_great_free.htm">Where To Find Great Free Photographs And Visuals For Your Own Online Articles - Robin Good's Latest News</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/photos">photos</a>)</div>
+
+	</li>
+
+</ul>
