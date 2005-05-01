@@ -1,0 +1,31 @@
+# links for 2005-04-30
+
+<ul class="delicious">
+
+-------------------------------
+
+	<li>
+
+		<div class="delicious-link"><a href="http://developer.apple.com/internet/webcontent/xmlhttpreq.html">Dynamic HTML and XML: The XMLHttpRequest Object</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/ajax">ajax</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.alvit.de/vf/en/essential-bookmarks-for-webdesigners-and-web-developers.html">Essential bookmarks for web designers and web developers</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/webdesign">webdesign</a> <a href="http://del.icio.us/zeroK/webdevelopment">webdevelopment</a> <a href="http://del.icio.us/zeroK/resources">resources</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.ajaxmatters.com/">AJAX Matters - Asynchronous JavaScript and XML and XMLHTTP development information</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/ajax">ajax</a> <a href="http://del.icio.us/zeroK/resources">resources</a>)</div>
+
+	</li>
+
+</ul>
