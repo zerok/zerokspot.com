@@ -1,0 +1,23 @@
+# links for 2005-05-01
+
+<ul class="delicious">
+
+-------------------------------
+
+	<li>
+
+		<div class="delicious-link"><a href="http://kupu.oscom.org/">OSCOM Kupu - Kupu WYSIWYG XHTML Editor</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/wysiwyg">wysiwyg</a> <a href="http://del.icio.us/zeroK/editor">editor</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://home.tiscali.nl/annejan/swf/timeline.swf">timeline.swf (application/x-shockwave-flash Object)</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/gizmo">gizmo</a> <a href="http://del.icio.us/zeroK/flash">flash</a>)</div>
+
+	</li>
+
+</ul>
