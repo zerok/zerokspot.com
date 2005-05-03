@@ -1,0 +1,96 @@
+# links for 2005-05-02
+
+<ul class="delicious">
+
+-------------------------------
+
+	<li>
+
+		<div class="delicious-link"><a href="http://greasemonkey.mozdev.org/">mozdev.org - greasemonkey: index</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/firefox">firefox</a> <a href="http://del.icio.us/zeroK/extensions">extensions</a> <a href="http://del.icio.us/zeroK/greasemonkey">greasemonkey</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.rojo.com/">Rojo - Your news, your way</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/rss">rss</a> <a href="http://del.icio.us/zeroK/aggregator">aggregator</a> <a href="http://del.icio.us/zeroK/online">online</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.abcparislive.com/eiffeltowerwebcamsnj.htm">Eiffel Tower Paris France</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/webcam">webcam</a> <a href="http://del.icio.us/zeroK/paris">paris</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.fourmilab.ch/cgi-bin/uncgi/Earth?imgsize=320&opt=-l&lat=31.125&ns=North&lon=7.66667&ew=West&alt=150772951&img=learth.evif">Earth View</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/webcam">webcam</a> <a href="http://del.icio.us/zeroK/earth">earth</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://daemlich.net/7469">daemlich.net ;) phunny links and more - Blaupunkt Carsex Systems [mpg]</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/funny">funny</a> <a href="http://del.icio.us/zeroK/video">video</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.python.org/doc/2.3.5/">Python 2.3.5 Documentation</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/python">python</a> <a href="http://del.icio.us/zeroK/reference">reference</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://diveintopython.org/functional_programming/dynamic_import.html">16.6. Dynamically importing modules</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/python">python</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/65203">Cross-platform (posix/nt) API for flock-style file locking.</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/python">python</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://collingrady.com/2005/04/12/flickr-notes/">Collin Grady Â» Flickr Notes</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/wordpress">wordpress</a> <a href="http://del.icio.us/zeroK/flickr">flickr</a> <a href="http://del.icio.us/zeroK/plugin">plugin</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://wetware.hjalli.com/000910.shtml">Wetware: Coming to terms with tags: folksonomies, tagging systems and human information</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/tagging">tagging</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://multiply.com/">Multiply</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/networking">networking</a>)</div>
+
+	</li>
+
+</ul>
+
