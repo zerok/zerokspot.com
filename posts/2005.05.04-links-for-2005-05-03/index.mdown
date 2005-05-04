@@ -1,0 +1,31 @@
+# links for 2005-05-03
+
+<ul class="delicious">
+
+-------------------------------
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.a-sit.at/informationen/praesentationen/20040513_Biometrie.pdf">20040513_Biometrie.pdf (application/pdf Object)</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/biometrics">biometrics</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.a-sit.at/technologieb/biometrie/Leitfaden_Biometrie.pdf">Leitfaden_Biometrie.pdf (application/pdf Object)</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/biometrics">biometrics</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.wi3.uni-erlangen.de/forschung/Biometrie_StateOfTheArt/Biometrie.pdf">Biometrie.pdf (application/pdf Object)</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/biometrics">biometrics</a>)</div>
+
+	</li>
+
+</ul>
