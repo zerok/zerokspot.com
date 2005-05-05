@@ -1,0 +1,31 @@
+# links for 2005-05-04
+
+<ul class="delicious">
+
+-------------------------------
+
+	<li>
+
+		<div class="delicious-link"><a href="http://wiki.rubyonrails.com/rails/show/Howtos">Howtos in Rails</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/webdev">webdev</a> <a href="http://del.icio.us/zeroK/ruby">ruby</a> <a href="http://del.icio.us/zeroK/rails">rails</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.opera.com/swim/">THE 1 MILLION DOWNLOAD CHALLENGE - Opera Web Browser</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/opera">opera</a> <a href="http://del.icio.us/zeroK/humor">humor</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://hitchhikers.movies.go.com/games/dolphin.html">The Hitchhiker's Guide to the Galaxy :: Dolphin Sing-a-long</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/movies">movies</a> <a href="http://del.icio.us/zeroK/humor">humor</a>)</div>
+
+	</li>
+
+</ul>
