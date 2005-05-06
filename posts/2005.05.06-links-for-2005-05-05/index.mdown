@@ -1,0 +1,70 @@
+# links for 2005-05-05
+
+<ul class="delicious">
+
+-------------------------------
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.heise.de/newsticker/meldung/48179">heise online - WOS3: Telepolis-Bücher unter Creative-Commons-Lizenz als freier Download</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/book">book</a> <a href="http://del.icio.us/zeroK/free">free</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://pchere.blogspot.com/2005/03/great-flickr-tools-collection.html">Quick Online Tips: The Great Flickr Tools Collection</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/flickr">flickr</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.lyzrdstomp.com/binary/">Understanding Binary</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/humor">humor</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.python.org/doc/2.4.1/inst/inst.html">Installing Python Modules</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/python">python</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://base-art.net/Articles/18/">Base-Art / Bringing RSS to SVN</a></div>
+
+		<div class="delicious-extended">Monitoring SVN update with your news reader :-)</div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/subversion">subversion</a> <a href="http://del.icio.us/zeroK/rss">rss</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://fb2.hu/x10/Articles/MonoForFun.html">Mono Mania</a></div>
+
+		<div class="delicious-extended">J2EE Developer writes about how Mono works out for his home projects.</div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/mono">mono</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.samurai.fm/home/">samurai.fm | new music radio Japan</a></div>
+
+		<div class="delicious-extended">To bad that there is no MP3/Vorbis stream yet. But according to a forum post it is planned. Staying tuned ... or not since I can't listen to Real Media :-?</div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/radio">radio</a> <a href="http://del.icio.us/zeroK/japan">japan</a> <a href="http://del.icio.us/zeroK/music">music</a> <a href="http://del.icio.us/zeroK/online">online</a>)</div>
+
+	</li>
+
+</ul>
+
