@@ -1,0 +1,43 @@
+# links for 2005-05-06
+
+<ul class="delicious">
+
+-------------------------------
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.ilovejackdaniels.com/css/css-cheat-sheet/">CSS Cheat Sheet - CSS - ILoveJackDaniels.com</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/css">css</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.ilovejackdaniels.com/php/php-cheat-sheet/">PHP Cheat Sheet - PHP - ILoveJackDaniels.com</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/php">php</a> <a href="http://del.icio.us/zeroK/development">development</a> <a href="http://del.icio.us/zeroK/reference">reference</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://fun.drno.de/pics/flamingdrink.gif">flamingdrink.gif (GIF Image, 215x110 pixels)</a></div>
+
+		<div class="delicious-extended">via http://news.css-technik.de/index?id=P677</div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/humor">humor</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://37signals.com/svn/archives2/google_web_accelerator_hey_not_so_fast_an_alert_for_web_app_designers.php">Google Web Accelerator: Hey, not so fast - an alert for web app designers - Signal vs. Noise (by 37signals)</a></div>
+
+		<div class="delicious-extended">Jason Fried warns about Google Web Accelerator's prefetching feature</div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/google">google</a> <a href="http://del.icio.us/zeroK/accelerator">accelerator</a>)</div>
+
+	</li>
+
+</ul>
