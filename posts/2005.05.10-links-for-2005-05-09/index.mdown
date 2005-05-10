@@ -1,0 +1,31 @@
+# links for 2005-05-09
+
+<ul class="delicious">
+
+-------------------------------
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.intertwingly.net/blog/2005/03/16/AJAX-Considered-Harmful">Sam Ruby: AJAX Considered Harmful</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/ajax">ajax</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.oreilly.com/openbook/">www.oreilly.com -- O'Reilly Open Books Project</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/book">book</a> <a href="http://del.icio.us/zeroK/free">free</a>)</div>
+
+	</li>
+
+	<li>
+
+		<div class="delicious-link"><a href="http://www.ssc.ch/d2wfiles/document/263/5008/0/Swatch%20Access.pdf">Swatch Access.pdf (application/pdf Object)</a></div>
+
+		<div class="delicious-tags">(tags: <a href="http://del.icio.us/zeroK/swatch">swatch</a> <a href="http://del.icio.us/zeroK/chipcard">chipcard</a>)</div>
+
+	</li>
+
+</ul>
