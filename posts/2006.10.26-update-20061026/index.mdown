@@ -1,0 +1,23 @@
+# Update 2006.10.26
+
+Just a small update again. Last night I've started working on a new theme for zerokspot.com. I'm not sure, if I'll be done with it by Nov 1st for the CSS/Standards Reboot and I'm not even sure if it will really become the new theme for this site. There are a couple of things I wanted to try to improve the current design:
+
+* Get away again from the 2col-design for the single-article view
+* Blocks in the sidebar should finally look like blocks again compared to that pile to your left.
+* Comments ... currently they look ugly IMO and there is no real place for Gravatars. 
+* On every page I want to have at least an hCard so that everyone visiting zerokspot.com for the first time, sees right away who's the author (and not just my nickname ;-) ).
+
+
+
+-------------------------------
+
+
+
+The design I'm currently working on is less plain than the current one, but in some areas is simpler thanks to the missing sidebar in the single-article view.
+
+So far I'm really curious if I'll be able to give the site a new design for this winter season and for the 3rd birthday of this side. If this design really makes it, then it will also be a back to the roots in some areas thanks to the sites I drew inspiration from:
+
+* Dan Cederholm's [SimpleBits](http://simplebits.com/)
+* Allan Odgaard's [Macromates.com](http://macromates.com/)
+
+I hope that I won't clone too much, but I think I also have enough different ideas in it ;-)
