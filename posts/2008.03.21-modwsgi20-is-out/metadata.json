@@ -1,0 +1,9 @@
+{
+    "language": "en", 
+    "tags": [
+        "apache", 
+        "mod_wsgi", 
+        "python", 
+        "wsgi"
+    ]
+}
