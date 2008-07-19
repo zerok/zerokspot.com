@@ -1,0 +1,9 @@
+{
+    "language": "en", 
+    "tags": [
+        "django", 
+        "forms", 
+        "newforms", 
+        "newformsadmin"
+    ]
+}
