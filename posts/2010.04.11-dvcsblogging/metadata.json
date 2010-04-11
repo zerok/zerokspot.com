@@ -3,7 +3,8 @@
         "zerokspot",
         "dvcs",
         "mongodb",
-        "git"
+        "git",
+        "django"
     ],
     "language": "en"
 }
