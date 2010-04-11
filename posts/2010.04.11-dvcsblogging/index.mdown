@@ -34,7 +34,7 @@ master-branch, a post-receive hook-script checks what kind of content was
 changed (post or page) and sends the updated content right into a mongodb
 which a Django webapps then uses to render the post on the site. 
 
-<img src="sequence.png" class="figure" alt="Sequence diagram showing the update actions taking place when publishing a new post" />
+<div class="figure"><img src="sequence.png" alt="Sequence diagram showing the update actions taking place when publishing a new post" /></div>
 
 ## The database
 
