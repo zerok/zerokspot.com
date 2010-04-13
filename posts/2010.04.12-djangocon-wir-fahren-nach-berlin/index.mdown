@@ -19,7 +19,7 @@ Leidel and Florian Schlachter and many more behind the wheels and a
 According to the [talk submission page](http://djangocon.eu/talks/submit/) there
 will also be enough time for lightning talks and floor for open-space
 activities. So, even if you don't manage to get your talk accepted (hint: The
-deadline is April 15, so hurry!!!) you get another chance to present your
+deadline is <strike>April 15</strike> [May 1st](http://djangocon.eu/blog/2010/apr/12/extended-talk-deadline/), so hurry!!!) you get another chance to present your
 projects and ideas to the Django community in person.
 
 And if you want to contribute directly to Django-related projects or May 24th to
@@ -32,3 +32,5 @@ And if you're still hesitating: Just last night, the organizers announced a
 they could acquire some more funding; and there will be T-Shirts, lunch ... and
 again, hopefully a lot of awesome people. So [get a
 ticket](http://djangocon.eu/attendees/), while they are still fresh :D
+
+**Update**: The deadline for talk submissions has been [extended to May 1st](http://djangocon.eu/blog/2010/apr/12/extended-talk-deadline/).
