@@ -18,7 +18,7 @@ The whole process is remarkably simple once you know what you have to do. Django
 
 For step 5 I wrote a small script that goes through each sequence in the database (since this database is used for one Django site and one site only this works :P ) and resets its value to the highest id of the associated table:
 
-@@ python @@
+<pre><code>
 import os, sys
 sys.path.insert(0, '../')
 os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
@@ -42,13 +42,13 @@ try:
         c.execute(r"SELECT setval('%s', max(id)) FROM %s"%row)
 finally:
     c.close()
-@@
+</code></pre>
 
 Another problem that has to be solved before you do step 5 is that dumpdata has a small problem with BooleanFields in the models. If you're using any of those (you or any contrib module you're using), you have to do some cleaning up in the JSON dump. The problem is that the values of these BooleanFields are dumped as `0` or `1` instead of `false` or `true`, which confuses loaddata to no end. To make it easy for any processing script, I told `dumpdata` to nicely format the dump, which you can do with the `--indent` option, which comes in handy when trying to fix this small problem.
 
 So I wrote a little Perl script (don't hurt me, please) that just goes over the dump and corrects it:
 
-@@ perl @@
+<pre><code>
 while(<>){
     s/is_active": 0/is_active": false/;
     s/is_active": 1/is_active": true/;
@@ -69,7 +69,7 @@ while(<>){
     s/registration_required": 1/registration_required": true/;
     print $_;
 }
-@@
+</code></pre>
 
 Naturally you'll have to correct the fieldnames for your own site :-) So basically before loading the dump again, run something like `perl convert.pl dump.json > dump2.json && mv dump2.json dump.json`.
 
