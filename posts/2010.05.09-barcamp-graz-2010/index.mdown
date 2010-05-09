@@ -23,6 +23,10 @@ symbolischen Links zu basieren. Eine weitere Möglichkeit wäre hier vermutlich
 Webdav, wodurch tatsächlich dynamisch Ordner "erzeugt" werden könnten; Webdav
 oder eine andere Form eines virtuellen Dateisystems.
 
+<div class="figure">
+    <a href="http://www.flickr.com/photos/zerok/4588104861/" title="dsc_0085.nef by zerok, on Flickr"><img src="http://farm5.static.flickr.com/4062/4588104861_2ff2acb962.jpg" width="500" height="333" alt="dsc_0085.nef" /></a>
+</div>
+
 Danach wollte ich noch schnell ein paar Kleinigkeiten fürs Wochenende
 einkaufen, weshalb ich leider erst zum Social Event im
 [Ginko](http://www.restaurant-ginko.at/) (oder kurz davor zum allgemeinen
