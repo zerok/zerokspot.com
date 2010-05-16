@@ -9,12 +9,12 @@ localised can't be found in a localised form.
 All you need is a localisation file (basically JSON) and the l10n.js library:
 
 <pre><code>
-<link rel="localizations" href="/path/to/localizations.js"
-    type="application/x-i10n+json" />
-<script type="text/javascript" src="/path/to/l10n.js"></script>
-<script type="text/javascript">
+&lt;link rel="localizations" href="/path/to/localizations.js"
+    type="application/x-i10n+json" /&gt;
+&lt;script type="text/javascript" src="/path/to/l10n.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
 alert("hello".toLocaleString());
-</script>
+&lt;/script&gt;
 </code></pre>
 
 This example uses one big file for all the localised "hello"s of the world. If
