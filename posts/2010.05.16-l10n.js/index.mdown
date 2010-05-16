@@ -1,0 +1,27 @@
+# l10n.js: Localise your JavaScripts
+
+Thanks to a recent article on Ajaxian I just stumbled upon l10n.js, a thin
+localisation library for JavaScript that build upon the language's native
+String.toLocaleString() method. Because of this, it gracefully degrades it
+either the library itself is not available and also if the string to be
+localised can't be found in a localised form.
+
+All you need is a localisation file (basically JSON) and the l10n.js library:
+
+<pre><code>
+<link rel="localizations" href="/path/to/localizations.js"
+    type="application/x-i10n+json" />
+<script type="text/javascript" src="/path/to/l10n.js"></script>
+<script type="text/javascript">
+alert("hello".toLocaleString());
+</script>
+</code></pre>
+
+This example uses one big file for all the localised "hello"s of the world. If
+you want to stick with one file per language, you can use the "hreflang"
+attribute with the link-tag.
+
+This looks like a really nice and clean approach to the whole localised
+JavaScript issue. One problem, that this solution doesn't handle, though, is
+variable-replacement. For this you still need some printf- or low-level
+templating implementation.
