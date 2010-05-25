@@ -6,6 +6,8 @@ typical bar or restaurant but actually a dance hall with room for more than
 100 people at tables and enough room for those who also want to dance. A big
 thank you, again, to Jesper and Bitbucket for sponsoring the drinks.
 
+--------------
+
 ## Keynotes
 
 As every good day does, day two started with Keynotes. This time by CouchDB's
