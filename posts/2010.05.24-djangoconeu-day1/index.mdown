@@ -1,5 +1,7 @@
 # Djangocon.eu - Day 1
 
+<a class="left" href="http://www.flickr.com/photos/zerok/4640333866/" title="DSC_0101.jpg von zerok bei Flickr"><img src="http://farm5.static.flickr.com/4070/4640333866_fc95746c42_m.jpg" width="240" height="159" alt="DSC_0101.jpg" /></a>
+
 So today was day 1 of this year's [Djangocon.eu](thttp://djangocon.eu) in
 Berlin. After surviving last nights pre-show [beer-up](http://beerup.org/) at
 the [Schleusenkrug](http://www.schleusenkrug.de/) getting a seat in the local
