@@ -63,3 +63,8 @@ relevant for local communities with regards to customs and how stuff is just
 done around there and how you can adopt that with Django. The classic
 documentation is not a place for something like that but Project Alexandria
 should be.
+
+So to clarify my proposal a bit more: Let's take Django Advent and make it an
+openblog-like platform for specific topics but also for documents like really
+basic tutorials and build a format that can be used by local communities to
+provide relevant information on top of that for their users.
