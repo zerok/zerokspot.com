@@ -4,10 +4,14 @@ International documentation has always been on of those ponies for Django that
 might help bring in more people but never got fed enough oat to develop all
 the magical powers. So far most international usergroups (on a national or
 language level) have some sort of translation for the documentation. Sadly all
-these efforts never really produced a *complete* translation. At least from my
-experience with the [German translation
+these efforts never really produced a *complete* translation. So perhaps we need
+a new approach.
+
+-------------
+
+At least from my experience with the [German translation
 project](http://github.com/zerok/django-docs-de) there are a couple of reasons
-for that:
+why no complete doc-translation is out there:
 
 * The documentation is huge
 * Many articles in the documentation have reference-character, meaning that they are 1000+ lines long
