@@ -27,7 +27,7 @@ showed that keeping out features actually produced a much cleaner solution.
 
 ## Gunicorn, Django and WSGI
 
-Next was ... ... who gave a presentation of WSGI, how it plays with Django and
+Next was Benoît Chesneau who gave a presentation of WSGI, how it plays with Django and
 how to deploy them using Gunicorn. The first part of the talk consisted of a
 short summary on WSGI. Next he introduced us to two ways on how to mix Django
 with "native" WSGI applications:
