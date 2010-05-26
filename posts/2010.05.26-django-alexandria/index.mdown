@@ -56,3 +56,10 @@ lightning talk this afternoon at [Djangocon.eu](http://djangocon.eu) about the
 the motivation for this. If you are interested in helping out with the
 base-project or with the German subproject or if you think that this idea is
 totally stupid, please tell me :-)
+
+P.S.: I totally forgot to mention this, but with localized documentation I
+don't necessarily mean translations. There are also some things that are only
+relevant for local communities with regards to customs and how stuff is just
+done around there and how you can adopt that with Django. The classic
+documentation is not a place for something like that but Project Alexandria
+should be.
