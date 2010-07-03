@@ -34,21 +34,21 @@ After downloading and extracting the zip you get a `dotless.Compiler.exe`
 which lets you compile .less files into .css files etc. I usually place 3rd
 party apps somewhere in my ~/.local folder.
 
-<code><pre>
+<pre><code>
 $ cd $DOWNLOAD_DIR
 $ mkdir dotless && cd dotless
 $ unzip ../dotless-*.zip && cd ..
 $ mv dotless ~/.local
-</pre></code>
+</code></pre>
 
 
 Since .exe files are not easily executable under OSX as they are under Windows
 or with some binfmt magic under Linux, I also wrote a little wrapper script:
 
-<code><pre>
-\#!/bin/bash
+<pre><code>
+#!/bin/bash
 exec /usr/bin/mono ~/.local/dotless/dotless.Compiler.exe $@
-</pre></code>
+</code></pre>
 
 But, hey! I can't really make installing Mono any easier for you than
 installing the official package, but at least I can provide a [homebrew
