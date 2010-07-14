@@ -7,6 +7,8 @@ by Jesse Legg. The book tries to introduce you in a tutorial style to how to
 write a simple e-commerce store using Django core components and some selected
 3rd-party reusable apps.
 
+------------
+
 The author divided that into 10 chapters:
 
 1. A basic introduction into what Django is and why you might want to use it for an online store
