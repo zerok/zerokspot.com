@@ -1,4 +1,4 @@
-Django 1.2 E-Commerce
+# Django 1.2 E-Commerce
 
 Once again I received a review-copy of a book from Packt, for which I'm again
 really grateful :-) This time it was [Django 1.2
