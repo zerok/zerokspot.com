@@ -78,6 +78,8 @@ the whole web application market will and is changing thanks to it.
 The rest of the day I mostly spent looking for an available power-plug and
 working WiFi :-(
 
+<a class="left" href="http://www.flickr.com/photos/zerok/4822837005/" title="DSC_0030.jpg von zerok bei Flickr"><img src="http://farm5.static.flickr.com/4134/4822837005_0ebdb22306_m.jpg" width="240" height="159" alt="DSC_0030.jpg" /></a>
+
 After the talks I went among other places to the Wellington for some nice
 beers (and WiFi) to meet up with Jannis, [Arthur](http://twitter.com/arthurk),
 [Armin](http://twitter.com/mitsuhiko), [Georg](http://twitter.com/birkenfeld),
@@ -116,6 +118,8 @@ my not-existing free-time to miraculously disappear ;-)
 But before the conference ended there was another huge lightning talk-session
 (nearly 2 hours) with an evil VGA cable killing one laptop after the other ;-)
 
+<a class="left" href="http://www.flickr.com/photos/zerok/4848892555/" title="DSC_0118.jpg by zerok, on Flickr"><img src="http://farm5.static.flickr.com/4137/4848892555_91dcfd10e5_m.jpg" width="240" height="159" alt="DSC_0118.jpg" /></a>
+
 As evening program Jannis, Armin and I had planned to watch
 [Inception](http://www.imdb.com/title/tt1375666/) at the local
 [IMAX](http://www.imax.ac/ImaxHomepage.asp?section=29) theatre but since the
@@ -124,14 +128,13 @@ great restaurant only minutes away from our hotel right next to the Mailbox
 called [Kinnaree Sawasdee](http://www.kinnaree.co.uk/) which offered great
 Thai cuisine and also quite exotic beer.
 
-<a class="right" href="http://www.flickr.com/photos/zerok/4848892555/" title="DSC_0118.jpg by zerok, on Flickr"><img src="http://farm5.static.flickr.com/4137/4848892555_91dcfd10e5_m.jpg" width="240" height="159" alt="DSC_0118.jpg" /></a>
+<a class="right" href="http://www.flickr.com/photos/zerok/4821231576/" title="Selfridges at night von zerok bei Flickr"><img src="http://farm5.static.flickr.com/4094/4821231576_8454c8ae76_m.jpg" width="240" height="159" alt="Selfridges at night" /></a>
 
 And, I guess, I don't have to write anything about "Inception" ;-) I've you
 haven't watched it by now, then what are you waiting for?!
 
 ## Day 5 &amp; 6: Sprints
 
-<a class="right" href="http://www.flickr.com/photos/zerok/4821231576/" title="Selfridges at night von zerok bei Flickr"><img src="http://farm5.static.flickr.com/4094/4821231576_8454c8ae76_m.jpg" width="240" height="159" alt="Selfridges at night" /></a>
 
 Once again I did some sprinting on some Django bugs and worked a bit on some
 private projects I wanted to get done eventually ... (they are still not
