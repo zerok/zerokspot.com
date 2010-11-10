@@ -71,29 +71,29 @@ Last but not least came Android_ *without* a preview for the next releases but
 with some screenshots of new `Market Place`_ features since this year's
 Google I/O:
 
-    * improved search
+* improved search
 
-    * updates to the market publisher site
+* updates to the market publisher site
 
-    * more app statistics including crashes and logs thereof
+* more app statistics including crashes and logs thereof
 
-    * cloud to device messaging (push messaging)
+* cloud to device messaging (push messaging)
 
-    * and a new license server
+* and a new license server
 
 After the keynotes the conference was split into 6 tracks:
 
-    * Android
+* Android
 
-    * Chrome & HTML5
+* Chrome & HTML5
 
-    * Cloud Computing
+* Cloud Computing
 
-    * Monetization / Social Web
+* Monetization / Social Web
 
-    * Tech Talks
+* Tech Talks
 
-    * TUM & CDTM (TU München)
+* TUM & CDTM (TU München)
 
 Programming the Web with Native Client
 --------------------------------------
@@ -123,33 +123,33 @@ What's new in AppEngine?
 This talk basically went into a bit more detail regarding the new AppEngine
 features presented during the keynotes:
 
-    * The `Channel API`_ offers an asynchronous message delivery system (1:1)
-      between an application and the user's browser via JavaScript and GWT-RPC
-      for the callback.
+* The `Channel API`_ offers an asynchronous message delivery system (1:1)
+  between an application and the user's browser via JavaScript and GWT-RPC
+  for the callback.
 
-    * `Mapper API`_ is for batch processing operating entirely in the user space
-      with use-cases like data exports and report generation. The whole system
-      can be rate-configured.
+* `Mapper API`_ is for batch processing operating entirely in the user space
+  with use-cases like data exports and report generation. The whole system
+  can be rate-configured.
 
-    * If you serve multiple websites from a single application, the new
-      multi-tenancy support/`Namespace API`_ makes it easier to partition data
-      store and memcache for different sites.
+* If you serve multiple websites from a single application, the new
+  multi-tenancy support/`Namespace API`_ makes it easier to partition data
+  store and memcache for different sites.
 
-    * `Matcher API`_
+* `Matcher API`_
 
-    * `Hosted SQL`_
+* `Hosted SQL`_
 
-    * New features within the admin console include an improved task page (you
-      can for instance pause tasks) and custom admin pages.
+* New features within the admin console include an improved task page (you
+  can for instance pause tasks) and custom admin pages.
 
-    * Every page needs some `image`_ resizing, doesn't it? Well, now GAE has its
-      own API for that at least on the Python side based on PIL.
+* Every page needs some `image`_ resizing, doesn't it? Well, now GAE has its
+  own API for that at least on the Python side based on PIL.
 
-    * Custom error pages
+* Custom error pages
 
-    * Increased quotas
+* Increased quotas
 
-    * OpenID/OAuth support
+* OpenID/OAuth support
 
 Practical HTML5
 ---------------
