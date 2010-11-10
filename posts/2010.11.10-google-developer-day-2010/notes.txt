@@ -1,0 +1,416 @@
+
+Keynotes
+    2000 Registrations
+
+    1000 Attendees
+
+    gtugs.org
+        Largest number of gtugs outside of the USA in Germany
+
+    Cyber-physical systems
+        Embedded system
+
+    TUM copperation with Google
+
+    Focus:
+        Web
+        Mobile
+        Cloud
+    Themes
+        Chrome + HTML5
+        Cloud computing
+        Android
+
+    Chrome + HTML5
+        Deviding line in 2004 between desktop and web applications thanks to
+        AJAX. Web became a place for applications.
+
+        But web basics were frustrating -> HTML5
+
+        Support 18 months ago was spotty at best
+
+        Now all opensource browsers support at least the core components
+
+        WebM still active
+
+        Growing support for HTML5 also applies to HTML5
+
+        Demo of some HTML5 features
+            Canvas for 2D graphics and animations
+
+            3D canvas using WebGL
+                hardware accelarated
+
+            File system access
+                Drag'n drop
+
+            Voice input
+
+            Access to accelarometer
+
+        Chrome Web Store available at the end of the year in the USA
+
+    Cloud computing
+        AppEngine
+            5.5 Billion page views
+
+            130,000 apps
+
+            What's next?
+                Full map-reduce
+
+                Bulk im-/export
+
+                Reserved instances
+
+                Background servers (without the timeout limit)
+
+                Real time channel API
+
+                Built-in OAuth and OpenID
+
+            AppEngine for Business
+                SLA
+
+                Professional Support
+
+                Hosted SQL
+
+                Secure by default
+                    platform will verify access to internal applications
+
+                Custom domain SSL
+
+                Enterprise Administration Console
+
+            Cloud portability
+                Collaboration with VMWare/SpringSource to integrate GWT with
+                SpringRoo
+
+                Deployable to GAE
+
+                as well as to other cloud infrastructures like VMWare
+    Mobile/Android
+        more mobile than desktop users
+
+        +100,000 apps in the Android Market Place
+
+        Since Google I/O implrovements to the market place
+            improved search
+            market publisher site
+            statistics about e.g. crashes etc.
+            errors reports on publisher page
+            licensing server
+            cloud to device messaging (push messaging)
+            
+Programming the Web with Native Client (Brad Chen)
+    originally a research project
+
+    Overview
+        portable system forverifiying and executing untrusted native code
+
+        high performance like c++
+
+        goal: as safe and portable as javascript
+
+        c and c++ is just the start. in the future other popular languages
+        will be supported like c#, python, go etc.
+
+        there is already a repository of ported libraries (nacl-ports)
+
+        plugin interface for things like scripting the dom, event listening
+        audio, ...
+
+        Port desktop applications to the web
+
+        and enhance web apps with native libraries and high-performance
+        compiled code
+
+        nacl is not quite done yet
+
+        use-cases:
+            native performance
+            platform-independent multi-media
+            choice of language
+            low-level system service
+            end of confirmation messages for plugins
+
+        demo of a lego starwars port done in about a month (c#)
+
+    The Native Client SDK
+
+        sdk
+            gcc based
+            pepper (new interface for the browser)
+                interface to the browser and dom
+                audio/video
+                opengl es 2.0
+                javascript interop
+
+            standard gnu toolchain
+
+            javascript interacts through pepper and the nacl sandbox with the
+            native api
+
+    Tutorial
+        tutorial calculator
+
+    Coming Attractions
+        new interfaces
+            p2p
+            fullscreen & mouse capture
+        debugger/ide support
+            gdb
+            eclipse
+            visual studio
+        portable native client
+            currently you need builds for each architecture
+            -> portable via llvm
+What's new in GAE
+    Channel API
+        asynchronous message delivery to the browser
+        
+        bi-directional
+
+        javascript library
+
+        via gwt rpc for callback channel
+
+    Mapper API
+        Part 1 of MapReduce
+        Batch processing at scale
+        Based on Task Queues
+        Rate configurable
+        Use cases:
+            report generation
+            data exports
+            ...
+        mapreduce.appspot.com
+        entirely in userspace
+
+    Multi-tenancy/Namespace API
+        data isolation for multiple customers on one code base
+
+        check the request and set the global namespace for the given user
+
+        memcache
+            appid|namespace|key -> value
+
+        data store
+            similar
+
+    Matcher API
+        matches model instances and starts a task on match
+
+    Hosted SQL
+        optional
+
+    Admin console
+        custom admin pages
+        improved tasks page (pause etc.)
+    high performance image serving
+    custom error pages
+    increased quotas
+    openid/oauth
+
+Practical HTML5
+    usual stuff
+
+    workers
+
+    microdata
+
+    inline-svg
+
+    deeper integration with os/ui events
+        direct drag'n drop support through the browser and not through some js
+        library
+
+    animations
+        new for webkit browsers are key-frame animations
+
+    colorillo
+        uses websockets
+
+    html5rocks.com
+        
+Google Storage, BigQuery, Prediction API
+    infrastructure as a service with a twist
+
+    google storage for developers
+        Infrastructure as a Service (comparable to s3 etc.)
+
+        similar api to s3
+
+        but stronger access control
+
+        also storage for computation results
+
+        max 100GB/object
+
+        permissions tied to google accounts and groups (interesting for
+        mailinglists etc.)
+
+        so far US-only
+
+        commandline tool
+
+        used by:
+            picnik
+            google.org (used it for haiti)
+            panoramio
+            vmware, syncplicity
+            theguardian
+            ...
+
+        pricing
+            0.17$/GB/Month
+            network:
+                upload: 0.10USD/GB
+                download: $0.30/GB (APAC)
+                          $0.15/GB (Americas/EMEA)
+    Prediction API
+        1. upload training data to storage
+        2. build a model from your data (POST request auf
+           prediction/v1.1/training ...
+        3. Query with new data (with scored results)
+    Google BigQuery
+        for analyzing massive amounts of data
+        sql-like
+        steps
+            upload to storage
+            import (into bigquery table)
+            query
+        a bit less mature than prediction
+        integration with spreadsheets
+What's new in Google Geo: Maps API V3 & Fusion Table
+    Maps API V3
+        on 350.000 Websites
+        no developer keys anymore
+            all ip based now
+        designed for performance and mobile
+        no flash
+        completely rewritten
+        elevation
+        fusion table integration
+    Fusion Tables
+        both a product and api
+        quick visualisation
+        100MB per table
+        250MB per account
+        spatial queries
+            circles are actual meter radiuses
+            first time you can do bounding boxes with any google product
+        sharing settings
+            private
+            collaborators
+            public
+            ...
+
+            you can also create views on the table to share only specific
+            parts of the data
+        api
+            layer and query have to have the same id
+
+        currently no documented quota documentation but something like that is
+        definitely coming
+    Styled Maps
+        Wizard for styling certain types of elements
+        Feature-types can be hidden
+
+    Latitude
+        3mio active users
+
+        could be used for credit card plausibility checks. actually a really
+        nice idea if you consider google trustworthy
+
+    misc
+        Natural earth data (project for collecting shape-files)
+Authentication on the World Wide Web
+    what can you do to make the world a safer place?
+    openid
+        federated identity
+            safe (no passwords are exchanged)
+            faster (most of the time already logged in)
+            easier (user only has to remember one account datum)
+        [general intro]
+        a user can prefer any of millions of IdPs -> discovery important
+        Problem is, that it's not all that user-friendly
+        -> WebFinger
+    oauth
+        targeted at inter-service authentication based on a user's credentials
+        4 parties
+            protected resource (calendar data for instance)
+            resource owner (user)
+            server (api, enforces permissions)
+            client (app, instance that requests access)
+        step 1
+            establishes app credentials (consumer key & secret)
+        step 2
+            access grant
+
+            3-legged grant
+                request token
+                authorized request token
+                access token
+
+                1. get request token (~session identifier)
+                2. redirect to authorization endpoint (probably with some
+                   prompt for the user) -> returns authorized request token
+                3. request access token
+
+                one-time process per user unless token is revoked
+            2-legged grant
+                designed for the situation when the user is not in a position
+                to grant anything (company policy etc.)
+
+                client can act on behalf of the user
+        step 3
+            access resource
+    2 other legacy protocols
+        client login (http basic auth+)
+        authsub (similar to oauth but from before oauth was standardized)
+    hybrid between openid an oauth
+        extension to openid
+
+        both have user-approval process. basically for the situation where you
+        login just to be prompted again for the oauth request.
+
+    evolution of an app
+        1. simple with email and password
+        2. add 3-legged oauth for calendar sharing or something similar
+           (each user can have multiple oauth_tokens)
+        3. add openid (each user can have multiple federated_ids)
+    the future
+        oauth2
+            not backward compatible to oauth
+            optional bearer tokens
+                something that you include in the request (proof of possession)
+                less secure
+
+                makes access more flexible
+            support for different client profiles
+        openidconnect
+            built on oauth2
+            simplified protocol & discovery
+            combined identity & data access
+            leverages emerging standards
+            currently just a proposal
+    tips
+        libraries are you friends
+        protect your oauth secrets (esp. for 2lo)
+        don't write your own libraries!!!!
+        ux is important
+        trust matters
+
++
+    great talks
+    great venue
+    t-shirts(!)
+    breakfast
+    enough drinks
+-
+    worst wifi ever
+    lunch wasn't en par with the breakfast
+    no trash bins
+
