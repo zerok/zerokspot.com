@@ -228,7 +228,9 @@ The Outro
 After the last presentation there was free beer and free prezels (probably
 again only for the first 200 since I didn't get one :-P) in the main hall and
 those of us who took part in a quiz organized by the Chrome team got a new
-notebook sleeve.
+notebook sleeve. While I was still on my quest for a prezel, there was a
+blinkendroid_ world record attempt going on. There is even a `video on
+youtube`_ of that :-)
 
 Afterwards a small group including `Fabian`_, `Constantin`_, Thomas and myself
 (if you were part of this group and don't see your name here, please comment
@@ -292,3 +294,5 @@ really love to come again next year :-)
 .. _alter simpl: http://maps.google.at/maps/place?um=1&ie=UTF-8&q=alter+simpl+m%C3%BCnchen&fb=1&gl=at&hq=alter+simpl&hnear=M%C3%BCnchen,+Deutschland&cid=10726857813957190943
 .. _fabian: http://twitter.com/fabian7t
 .. _paulaner im tal: http://www.paulaner-im-tal.de/
+.. _video on youtube: http://www.youtube.com/watch?v=MhXRAaRFK-o
+.. _blinkendroid: http://code.google.com/p/blinkendroid/
