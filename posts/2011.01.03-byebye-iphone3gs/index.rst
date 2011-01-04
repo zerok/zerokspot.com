@@ -22,3 +22,6 @@ cover-art of all tracks being mixed up when the phone is locked.
 
 But perhaps it magically fixes itself once I post this (wouldn't be the first
 time) :-)
+
+**Update:**: Threatening to replace it really seems to have done the trick.
+Now the battery works normally again :D
