@@ -1,9 +1,10 @@
 # Barcamp Graz 2011
 
 <img src="bcgraz.png" alt="" title="Bild von barcamp-graz.at" class="left"
-/>Dieses Wochenende fand wieder einmal ein [Barcamp in
-Graz](http://www.barcamp.at/BarCamp_Graz_2011) statt und wie schon im letzten
-Jahr war es eigentlich eine Zusammenfassung von vier Veranstaltungen:
+/>Dieses Wochenende fand wieder einmal (und wieder zusammenfallend mit dem
+Muttertag ;-)) ein [Barcamp in Graz](http://www.barcamp.at/BarCamp_Graz_2011)
+statt und wie schon im letzten Jahr war es eigentlich eine Zusammenfassung von
+vier Veranstaltungen:
 
 * iCamp
 * Wissenscamp
