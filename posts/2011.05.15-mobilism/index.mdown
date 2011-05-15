@@ -72,7 +72,7 @@ by others and the slides where available :-)
 * How to put the Mobile in the Mobile Web by Jen Hanen ([slides](http://www.slideshare.net/msjen/mobilism-2011-how-to-put-the-mobile-in-the-mobile-web))
 * Meta layout: a closer look at media queries by Stephen Hay ([slides](http://www.slideshare.net/stephenhay/mobilism2011))
 * jQuery Mobile: Building tools for a changing web by Scott Jehl
-* Muddling Through the Mobile Web, Designing for rapid change and increasing diversity by Bryan Rieger 
+* Muddling Through the Mobile Web, Designing for rapid change and increasing diversity by Bryan Rieger ([slides](http://www.slideshare.net/yiibu/muddling-through-the-mobile-web))
 * The hitchhiker's guide to mobile development by Nikolai Onken ([slides](http://www.slideshare.net/nonken/the-hitchhikers-guide-to-mobile-development-7969412))
 * Mobile & UX: Inside the Eye of the Perfect Storm by Jared Spool
 
