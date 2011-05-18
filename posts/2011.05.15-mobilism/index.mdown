@@ -59,22 +59,22 @@ talk about "Mobile First!"</p></figcaption>
 
 Normally I'd take this opportunity to walk you through every single talk and
 share some notes but [Luke Wrobleski](http://www.lukew.com/) already did that
-for the talks of the first day so I will just link to his posts, posts
-by others and the slides where available :-)
+for the talks of the first day and most of the second day so I will just link
+to his posts, posts by others and the slides where available :-)
 
 * Mobile First! by Luke Wrobleski ([slides](http://www.lukew.com/resources/articles/MobileFirst_LukeW.pdf))
-* [The Future of the Mobile Web](http://www.lukew.com/ff/entry.asp?1321) by Peter-Paul Koch
+* [The Future of the Mobile Web](http://www.lukew.com/ff/entry.asp?1321) by Peter-Paul Koch ([slides](http://www.quirksmode.org/presentations/Spring2011/mobilism.pdf))
 * [Beyond the Mobile Web](http://www.lukew.com/ff/entry.asp?1322) by Stephanie Riegel ([slides](http://www.slideshare.net/yiibu/beyond-themobilewebbyyiibu))
 * [After HTML5: Mobile Device APIs and PhoneGap](http://www.lukew.com/ff/entry.asp?1323) by Brian Leroux ([slides](http://www.slideshare.net/brianleroux/after-html5-mobilism-2011))
 * [Devices, designs and enabling behaviours](http://www.lukew.com/ff/entry.asp?1324) by Antony Ribot
 * [Mobile browser panel: Nokia, RIM, and Opera](http://www.lukew.com/ff/entry.asp?1325) moderated by Jeremy Keith ([video](http://www.ustream.tv/recorded/14650462))
-* High Performance Mobile by Steve Souders ([slides](http://stevesouders.com/docs/mobilism-20110513.pptx))
-* How to put the Mobile in the Mobile Web by Jen Hanen ([slides](http://www.slideshare.net/msjen/mobilism-2011-how-to-put-the-mobile-in-the-mobile-web))
-* Meta layout: a closer look at media queries by Stephen Hay ([slides](http://www.slideshare.net/stephenhay/mobilism2011))
-* jQuery Mobile: Building tools for a changing web by Scott Jehl
-* Muddling Through the Mobile Web, Designing for rapid change and increasing diversity by Bryan Rieger ([slides](http://www.slideshare.net/yiibu/muddling-through-the-mobile-web))
+* [High Performance Mobile](http://www.lukew.com/ff/entry.asp?1327) by Steve Souders ([slides](http://stevesouders.com/docs/mobilism-20110513.pptx))
+* [How to put the Mobile in the Mobile Web](http://www.lukew.com/ff/entry.asp?1328) by Jen Hanen ([slides](http://www.slideshare.net/msjen/mobilism-2011-how-to-put-the-mobile-in-the-mobile-web))
+* [Meta layout: a closer look at media queries](http://www.lukew.com/ff/entry.asp?1329) by Stephen Hay ([slides](http://www.slideshare.net/stephenhay/mobilism2011))
+* [jQuery Mobile: Building tools for a changing web](http://www.lukew.com/ff/entry.asp?1330) by Scott Jehl ([slides](http://filamentgroup.com/lab/jquery_mobile_and_boston_globe_at_mobilism/))
+* [Muddling Through the Mobile Web, Designing for rapid change and increasing diversity](http://www.lukew.com/ff/entry.asp?1331) by Bryan Rieger ([slides](http://www.slideshare.net/yiibu/muddling-through-the-mobile-web))
 * The hitchhiker's guide to mobile development by Nikolai Onken ([slides](http://www.slideshare.net/nonken/the-hitchhikers-guide-to-mobile-development-7969412))
-* Mobile & UX: Inside the Eye of the Perfect Storm by Jared Spool
+* [Mobile & UX: Inside the Eye of the Perfect Storm](http://www.lukew.com/ff/entry.asp?1332) by Jared Spool
 
 I also tried to get a least one photo per speaker during her/his session. You
 can find them
