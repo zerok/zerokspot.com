@@ -3,6 +3,8 @@
 DjangoCons are awesome, and this year's DjangoCon Europe 2011 is about to fit
 into this category quite nicely :-) Monday morning started with an ...
 
+-------------------------
+
 ## Opening Talk
 
 <figure>
