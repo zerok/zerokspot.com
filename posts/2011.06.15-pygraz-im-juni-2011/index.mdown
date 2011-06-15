@@ -6,8 +6,8 @@ Rückblick auf die [DjangoCon Europe 2011](http://djangocon.eu) in Amsterdam
 vergangene Woche und einer Vorschau auf die [EuroPython
 2011](http://ep2011.europython.org) in Florenz in der nächsten Woche.
 
-Wir hatten neben Hostern (wie [ep.io](http://ep.io) und
-[djangozoom](http://djangozoom.com/)) gab auch eine sehr lange Diskussion über
+Wir hatten neben dem Thema "Hosting" (wie [ep.io](http://ep.io) und
+[djangozoom](http://djangozoom.com/)) auch eine sehr lange Diskussion über
 diverse Admin-Ansätze und wie man die Django admin-App etwas moderner
 gestalten könnte. Ein heißer Punkt hier war sicherlich, ob Inline-Editing
 bzw. zumindest Frontend-Administration wirklich die beste Lösung für
