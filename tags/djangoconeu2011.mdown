@@ -1,0 +1,4 @@
+DjangoCon Europe 2011 was a conference in June 2011 in Amsterdam about the
+Django web framework. Personally I have to say, it was one of the best
+organized conferences I've ever attended. For more details, check out either
+the blog posts or [djangocon.eu](http://djangocon.eu/).
