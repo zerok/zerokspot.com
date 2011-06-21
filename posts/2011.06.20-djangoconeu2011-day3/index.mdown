@@ -23,9 +23,8 @@ that day's sessions.
 
 After the last talk Russel prepared everyone new to the concept of code
 sprints or how they are done in the Django community for the next to days.
-That combined with a beer bar sponsored by [BitBucket](http://bitbucket.org)
-on the top floor of the building made for an awesome conclusion of the
-conference.
+That combined with a sponsored beer bar on the top floor of the building made
+for an awesome conclusion of the conference.
 
 One a personal note: Right after lunch the official photographer hired by the
 organizers had to leave, so they had no one to take the final group picture.
@@ -48,7 +47,7 @@ seems to have been really productive with tons of bugs being closed, worked on
 and important design decisions being made. My personal favorite? The death of
 IE6 when it comes to Django's admin panel ;-)
 
-Once again, I'd like to congratulate and thank to organizers for an
-extra-ordinary week. This has been one of the best organized conferences with
-probably the best venues I've attended so far. Heck, even the Wifi was
-rock-solid!
+Once again, I'd like to congratulate and thank the organizers (and all the
+sponsors) for an extra-ordinary week. This has been one of the best organized
+conferences with probably the best venues I've attended so far. Heck, even the
+Wifi was rock-solid!
