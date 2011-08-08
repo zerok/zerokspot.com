@@ -45,7 +45,7 @@ days. And boy, tons has changed:
 * No more confirming that you know what DNS means
 * No more ugly 1999-table-designs
 
-What you get now is a rather slick interface with tons of estetic bling but
+What you get now is a rather slick interface with tons of aesthetic bling but
 without really trying to jump you into your face. For instance the account
 settings for a domain or now easily accessible through a simple form with a
 handful of collapsed subforms. No unlocking or something. It's like they trust
