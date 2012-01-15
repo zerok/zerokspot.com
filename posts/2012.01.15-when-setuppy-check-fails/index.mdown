@@ -1,6 +1,6 @@
 # When setup.py check fails
 
-Last night was about to release a new version of django-flatblocks, when I ran
+Last night I was about to release a new version of django-flatblocks, when I ran
 into a weird problem:
 
 <pre class="code">
