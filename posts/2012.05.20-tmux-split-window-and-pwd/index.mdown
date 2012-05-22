@@ -39,7 +39,7 @@ in_right_pane = false
         in_sessions = true
         next
     end
-    if in_sessions and line =~ /^\s#{session_id}:.*\d+ window..*[flags=.*]/
+    if in_sessions and line =~ /^\s\d+: #{session_id}: \d+ window..*[flags=.*]/
         in_right_session = true
         next
     end   
