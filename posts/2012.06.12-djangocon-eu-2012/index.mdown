@@ -53,7 +53,7 @@ A big thank you to all the organizers, helpers and sponsors who made this year's
 
 ## ... but the kitchen sink
 
-* Reinout van Rees once again wrote a [summary of every talk](http://reinout.vanrees.org/). A big thank you for that!
+* Reinout van Rees once again wrote a [summary of every talk](http://reinout.vanrees.org/weblog/tags/djangocon.html). A big thank you for that!
 * When traveling to Switzerland get a SIM card. I got an [Orange prepaid card](http://www4.orange.ch/en/mobile/prepay/) for 10 CHF and 2 CHF per day for data. Perfect!
 * 1h tickets with the public transport are with 4.10 CHF extremely expensive.
 * [Hotel Olympia](http://www.stoller.ch/37401.html) in Badenerstrasse offers some nice 4-bed rooms for a reasonable price.
