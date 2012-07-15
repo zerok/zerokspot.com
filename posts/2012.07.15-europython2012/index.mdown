@@ -1,7 +1,7 @@
 # Back from Europython 2012
 
 With a break of just a few weeks at the end of June I was once again off to a conference : [EuroPython][ep]. Now for 
-the third time in a row the conference took place in Florence (Italy), organized by the PythonItalia group which once 
+the second time in a row the conference took place in Florence (Italy), organized by the PythonItalia group which once 
 again did an awesome job making the event a pure delight for now more than 750 attendees. And since I tend to write 
 rather long posts here comes the TL;DR version: Awesome conference, extremely well organized, looking forward to be 
 there again next year :-)
