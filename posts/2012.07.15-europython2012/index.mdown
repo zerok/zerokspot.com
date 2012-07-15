@@ -33,6 +33,11 @@ schedule included quite a few talks about Flask and [MongoDB][mo] (to my own sur
 because, while I'm rather Django focused right now, I have some projects and ideas where Flask in combination with 
 either SQLAlchemy, MongoDB or no database whatsoever simply makes more sense than Django.
 
+<figure>
+    <img src="http://photos.h10n.me/Conferences/EuroPython-2012/i-5ftrxkW/0/L/DSC4841-L.jpg" alt="" />
+    <figcaption><p>"Flask talk by Armin Ronacher".replace("Armin Ronacher", "CERN").replace("Flask", "Higgs Boson")</p></figcaption>
+</figure>
+
 As the phrase "I actually attended" kind of implies there were tons of talks and like every other conference with more 
 than one track you eventually end up missing a couple you originally wanted to see live. For me that was ... I can't 
 even count them anymore. Thankfully the organizers managed to put every single talk [on YouTube][yt]
