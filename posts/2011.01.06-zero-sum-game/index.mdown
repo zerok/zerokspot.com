@@ -1,5 +1,4 @@
-Star Trek - Typhon Pact: Zero Sum Game
-######################################
+# Star Trek - Typhon Pact: Zero Sum Game
 
 Finally a new Star Trek book for me :D Having spent most of my spare time
 recently with technical literature, reading some SciFi again was just what I
@@ -9,11 +8,11 @@ read tons of other Star Trek stuff can really appreciate.
 
 ----------------------
 
-`Zero Sum Game`_ takes place about a year after the events of `A Singular
-Destiny`_ and the Typhon Pact flexes its muscles by getting their hands on the
+[Zero Sum Game][zsg] takes place about a year after the events of [A Singular
+Destiny][asd] and the Typhon Pact flexes its muscles by getting their hands on the
 schematics of the Federation's slipstream drive. What follows is some
 behind-enemy-lines action with Julian Bashir and his old flame, the also
-genetically enhanced `Sarina Douglas`_ with Ezri Dax and the `USS Aventine`_
+genetically enhanced [Sarina Douglas][sar] with Ezri Dax and the [USS Aventine][uav]
 acting as backup.
 
 Sadly, after the extremely epic Destiny series, the plot here feels a bit flat.
@@ -41,7 +40,7 @@ a read for Star Trek fans and never gets "dull". That said, some parts of the
 plot still feel weird and far to convenient for the protagonists. If you can
 ignore these, it is a nice story fully packed with action.
 
-.. _a singular destiny: http://memory-beta.wikia.com/wiki/A_Singular_Destiny
-.. _Sarina Douglas: http://memory-beta.wikia.com/wiki/Sarina_Douglas
-.. _uss aventine: http://memory-beta.wikia.com/wiki/USS_Aventine
-.. _zero sum game: http://memory-beta.wikia.com/wiki/Zero_Sum_Game
+[asd]: http://memory-beta.wikia.com/wiki/A_Singular_Destiny
+[sar]: http://memory-beta.wikia.com/wiki/Sarina_Douglas
+[uav]: http://memory-beta.wikia.com/wiki/USS_Aventine
+[zsg]: http://memory-beta.wikia.com/wiki/Zero_Sum_Game
