@@ -4,6 +4,8 @@ I guess it is not really a secret that I enjoy Google+ quite a bit. At work I'm 
 
 And two days ago [Google+ received an update][upd] that will make this even simpler: *Google+ Communities*. If you want to search for interesting discussions on services like Twitter, App.net and Google+ you've been mostly limited to either spidering your way through your contacts' contacts or tag pages since the whole network (as are its competitors) are mostly focused around people and not topics. 
 
+--------------------
+
 ## Topics in the spotlight
 
 Google+ Communities kind of tries a different route with bridging classic forums with the way you share your thoughts or other content on your steam. The idea here is that people will create a community for virtually any topic (cooking, database administration, parenting, …) to which you can then post your thoughts in the known Google+-way.
