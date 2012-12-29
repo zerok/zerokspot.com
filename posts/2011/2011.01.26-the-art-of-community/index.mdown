@@ -1,20 +1,19 @@
-The Art of Community
-####################
+# The Art of Community
 
 It feels like reading has become my spare-time activity #1. Every time I come
 home or have a minute to relax (i.e. not coding or playing Battlefield) I try
 to spend it with a book (which should also explain the plethora of reviews
 recently). And since Christmas I had the chance - again thanks
-to O'Reilly's `Blogger Review program`_ - to read Jono Bacon's `The Art of
-Community`_, a great book if you want to learn about community building but in
+to O'Reilly's [Blogger Review program][brp] - to read Jono Bacon's [The Art of
+Community][ac], a great book if you want to learn about community building but in
 my opinion with perhaps a bit too much focus on Ubuntu and larger opensource
 communities in general. Still definitely worth reading if you want to somehow
-help with organizing a community.
+help with organising a community.
 
 -------------------------------------------------------------------------------
 
 First things first: I'm not really a community leader or manager but I'm
-currently trying to help get a small `local Python community`_ to get start.
+currently trying to help get a small [local Python community][loc] to get start.
 That is also what got me interested in this book, and it didn't disappoint.
 From what I can tell it is full of a great plan on how to create/improve
 communities, what is important not to forget and what to avoid.
@@ -22,7 +21,7 @@ communities, what is important not to forget and what to avoid.
 The progression through the chapters feels absolutely understandable with
 starting with why people actually want to get involved with a community, over
 creating a strategy and workflows for the community to solving conflicts and
-organizing events. Everything is explained with tons of good examples, mostly
+organising events. Everything is explained with tons of good examples, mostly
 from the perspective of the author himself but sometimes also from other
 people in various communities.
 
@@ -47,9 +46,9 @@ friendly and inviting and without any pomp but to the point.
 All in all I can absolutely recommend this book as long as you don't mind that
 it is a bit more focused on opensource communities and Ubuntu than the title
 might indicate. I learnt really a lot about some of the theory behind
-organizing a community and I definitely hope I could apply some of what is
+organising a community and I definitely hope I could apply some of what is
 taught in this book in the future. It is simply a good read :-)
 
-.. _the art of community: http://oreilly.com/catalog/9780596157234
-.. _local python community: http://pygraz.org/
-.. _blogger review program: http://oreilly.com/bloggers/
+[ac]: http://oreilly.com/catalog/9780596157234
+[loc]: http://pygraz.org/
+[brp]: http://oreilly.com/bloggers/
