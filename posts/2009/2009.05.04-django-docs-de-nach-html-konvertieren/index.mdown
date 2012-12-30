@@ -1,5 +1,4 @@
-Wie konvertiert man die deutschen Django-Docs nach HTML?
-########################################################
+# Wie konvertiert man die deutschen Django-Docs nach HTML?
 
 Wenn du die deutschsprachige Django-Docs verwenden möchtest, ist das leider
 noch nicht so einfach, wie es sein sollte. Ich arbeite daran, aber in der
@@ -26,7 +25,7 @@ sollte dein Workflow in etwa so aussehen:
 
 2. Als nächstes solltest du **virtualenv installieren**, damit du einfach die
    benötigte Version von Sphinx installieren kannst, ohne dass du damit andere
-   Anwendungen beinflusst::
+   Anwendungen beinflusst:
         
         # Installiere virtualenv, falls du es noch nicht hast
         easy_install virtualenv

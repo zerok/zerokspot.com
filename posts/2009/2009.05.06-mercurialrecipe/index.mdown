@@ -1,12 +1,11 @@
-MercurialRecipe
-###############
+# MercurialRecipe
 
-A couple of months ago I wrote a small `zc.buildout`_-recipe to allow the
+A couple of months ago I wrote a small [zc.buildout][]-recipe to allow the
 integration of data from some git repository into your workspace. Now I needed
-mostly the same functionality but for a Mercurial repository. Luckily, `Tim Molendijk`_
-created a small recipe just for that available in the `PyPI`_. Since the
+mostly the same functionality but for a Mercurial repository. Luckily, [Tim Molendijk][]
+created a small recipe just for that available in the [PyPI][]. Since the
 README isn't really included there, you probably also want to take a look at
-the project's repository_ on Bitbucket.
+the project's [repository][] on Bitbucket.
 
 To use it, simply configure a part like this::
     
@@ -22,7 +21,7 @@ the data you just pulled.
 Really nice stuff. Thanks Tim.
 
 
-.. _Tim Molendijk: http://timmolendijk.nl/
-.. _repository: http://bitbucket.org/tawm/mercurial-recipe/
-.. _pypi: http://pypi.python.org/pypi/MercurialRecipe/
-.. _zc.buildout: http://pypi.python.org/pypi/zc.buildout
+[Tim Molendijk]: http://timmolendijk.nl/
+[repository]: http://bitbucket.org/tawm/mercurial-recipe/
+[pypi]: http://pypi.python.org/pypi/MercurialRecipe/
+[zc.buildout]: http://pypi.python.org/pypi/zc.buildout

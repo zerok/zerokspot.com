@@ -1,5 +1,4 @@
-Internet rant #20854
-####################
+# Internet rant #20854
 
 A small rant about people giving away too much information about themselves on
 the Internet, companies having problems understanding the Internet and again
@@ -15,9 +14,8 @@ well as all that is going on around it annoy/amuse me to no end.
 
 -------------------------------
 
-Two days ago `TechCrunch wrote about a rumor
-<http://www.techcrunch.com/2009/02/20/did-lastfm-just-hand-over-user-listening-data-to-the-riaa/>`_
-that `Last.fm`_ might have leaked information to the RIAA that could be used
+Two days ago [TechCrunch wrote about a rumor](http://www.techcrunch.com/2009/02/20/did-lastfm-just-hand-over-user-listening-data-to-the-riaa/)
+that [Last.fm][] might have leaked information to the RIAA that could be used
 to identify certain users who were listening to previously not officially
 material by U2.  While this rumor has been vehemently denied by Last.fm
 representatives -- and I have no reason to doubt them -- this showed two things:
@@ -52,7 +50,7 @@ Also: As some commenters in that article already wrote: Last.fm solely
 operates on metadata your player provides. Since it is pretty easy to modify
 and there is no way to show who actually set the metadata, it's in my opinion
 (and INAL) not even close to being a proof of anything. The metadata according
-the `official API documentation <http://www.last.fm/api/submissions#subs>`_
+the [official API documentation](http://www.last.fm/api/submissions#subs)
 only consists of things like the artist's name, track title, album title, and
 track number. It also contains an optional MusicBrainz Track ID which is for
 the player to look up. No checksums, no information about who actually set
@@ -60,10 +58,9 @@ that metadata.
 
 In this case the whole story is even more entertaining thanks to the source of
 the leaked songs that caused this whole mess: The Australian branch of the
-publisher itself [according to `Ars Technica
-<http://arstechnica.com/media/news/2009/02/upcoming-u2-album-all-over-p2p-after-bands-label-screws-up.ars>`_].
+publisher itself [according to [Ars Technica](http://arstechnica.com/media/news/2009/02/upcoming-u2-album-all-over-p2p-after-bands-label-screws-up.ars)].
 So does that mean, that those people actually bought those U2-songs legally?
-At least an article about the leak by Forbes_ mentions the word "selling", so
+At least an article about the leak by [Forbes][] mentions the word "selling", so
 does the arstechnica-article. If this is really the case, I just stopped even
 remotely understanding the whole fuss. If I buy a song legally (because it
 isn't my fault when a content publisher publishes content in advance) and
@@ -71,7 +68,7 @@ those tracks show up as being scrobbled by me on Last.fm ... this makes me a
 fan of a band that took his first chance to legally buy one of the bands
 products ... It's like Universal doesn't like fans ;-)
 
-But wait again: According to another article on ArsTechnica_ a request to turn
+But wait again: According to another article on [ArsTechnica][] a request to turn
 over some data about U2-listeners was actually never made. So to sum it all up
 (to my knowledge): Last.fm never gave RIAA user-specific data. Such specific
 data was never requested by the RIAA (at least not in relation that that
@@ -81,6 +78,6 @@ that source TechCrunch quoted really was.
 
 Pure entertainment :D
 
-.. _`Last.fm`: http://last.fm/
-.. _Forbes: http://www.forbes.com/2009/02/18/u2-no-line-on-the-horizon-business-media_u2_album.html
-.. _ArsTechnica: http://arstechnica.com/media/news/2009/02/riaa-denies-rumors-that-lastfm-turned-over-data.ars
+[Last.fm]: http://last.fm/
+[Forbes]: http://www.forbes.com/2009/02/18/u2-no-line-on-the-horizon-business-media_u2_album.html
+[ArsTechnica]: http://arstechnica.com/media/news/2009/02/riaa-denies-rumors-that-lastfm-turned-over-data.ars
