@@ -1,5 +1,4 @@
-zerokspot v6
-############
+# zerokspot v6
 
 Just a short notice to assure you, that you are on the right website ;-) For
 some time now I've wanted to rewrite this site to be a bit more maintainable

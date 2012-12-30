@@ -1,19 +1,17 @@
-No Glitter Hits for me
-######################
+# No Glitter Hits for me
 
 Every time the music industry runs around crying like a little girl about how
 much pirates (they probably mean those in Somalia) hurt their business (by
 attacking tourists on expensive yachts and tankers, I guess) I sometimes start
 to feel sorry for them. But this state of delusion only holds for as long as
-it takes Last.fm to play `Glitter Hits`_ by the Italian band "The Styles". 
+it takes Last.fm to play [Glitter Hits][] by the Italian band "The Styles". 
 
 I live in Austria, a country -- if you don't mind consulting a map you think
 you can trust -- pretty damn close to Italy. But for some obscure reason I
-can't buy the above mentioned song. It's not available in the `German Amazon
-store`_ (which also acts as the one for Austria), not in the Austria `iTunes
-Music Store`_. 
+can't buy the above mentioned song. It's not available in the [German Amazon store][]
+(which also acts as the one for Austria), not in the Austria [iTunes Music Store][]. 
 
-A couple of weeks ago, I contacted `H2OMusic`_, the label of "The Styles" which
+A couple of weeks ago, I contacted [H2OMusic][], the label of "The Styles" which
 seems to be owned by Sony BMG, and asked about this. Did I ever get a
 response? Not really. I guess the next company to ask would be Sony BMG
 itself, but it's not like I expect much more a response than what I got from
@@ -27,7 +25,7 @@ actually by anything from since I'm not from Germany ...
 
 I often wonder, if the music industry really wants to sell you anything.
 
-.. _H2OMusic: http://www.h2omusic.it/
-.. _`Glitter Hits`: http://www.last.fm/music/The+Styles/_/Glitter+Hits
-.. _`german amazon store`: http://www.amazon.de
-.. _`itunes music store`: http://www.apple.com/at/itunes/overview/
+[H2OMusic]: http://www.h2omusic.it/
+[Glitter Hits]: http://www.last.fm/music/The+Styles/_/Glitter+Hits
+[german amazon store]: http://www.amazon.de
+[itunes music store]: http://www.apple.com/at/itunes/overview/
