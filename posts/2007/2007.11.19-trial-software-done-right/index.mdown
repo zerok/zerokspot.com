@@ -1,24 +1,23 @@
-Trial Software done right
-#########################
+# Trial Software done right
 
-I've been using `OmniGraffle`_ for some time now. It's simply one of the most
+I've been using [OmniGraffle][] for some time now. It's simply one of the most
 easy to use diagramming tools I've seen so far. So now I also got my new 
 laptop which doesn't come with that tool bundled unlike the old Powerbooks
 (and probably also the new MacBook Pros) and since I already considered
 upgrading for the last couple of months and because I also need a powerful
 diagramming tool for my master thesis, I downloaded the trial version ...
 
-.. _OmniGraffle: http://www.omnigroup.com/applications/omnigraffle/
+[OmniGraffle]: http://www.omnigroup.com/applications/omnigraffle/
 
 -------------------------------
 
 Well, actually I requested a trial license and then downloaded the software. 
-Right after starting `OmniGraffle Pro`_ (referred to as OGP from now on to save 
-was left of my sanity) IIRC the licences screen popped up and for some reason
+Right after starting [OmniGraffle Pro][] (referred to as OGP from now on to save 
+was left of my sanity) IIRC the licenses screen popped up and for some reason
 I didn't enter the trial license key right away. Imagine my surprise when
 I could the program anyway. 
 
-It seems like the `OmniGroup`_ takes a very interesting approach to the whole
+It seems like the [OmniGroup][] takes a very interesting approach to the whole
 trial version/shareware story in the sense that both exist:
 
 1.	If you don't enter a license key, OGP runs in unlicensed mode which 
@@ -37,5 +36,5 @@ case turns up when you really need the whole thing, you can get it for
 24 hours (And everyone who has ever drawn a "normal" UML-diagram can
 probably attest that 20 objects is *nothing* ;-)).
 
-.. _OmniGroup: http://www.omnigroup.com/
-.. _OmniGraffle Pro: http://www.omnigroup.com/applications/omnigraffle/pro/
+[OmniGroup]: http://www.omnigroup.com/
+[OmniGraffle Pro]: http://www.omnigroup.com/applications/omnigraffle/pro/
