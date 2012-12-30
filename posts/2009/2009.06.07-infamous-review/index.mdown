@@ -1,14 +1,13 @@
-inFAMOUS
-########
+# inFAMOUS
 
-When I first saw some longer gameplay footage of inFamous_ for the PS3 I
-thought: "Crackdown_ + shooting electricity from your hands? I'm in". But
+When I first saw some longer gameplay footage of [inFamous][] for the PS3 I
+thought: "[Crackdown][] + shooting electricity from your hands? I'm in". But
 inFamous is more than just a simple iteration or only a slight improvement
 over the two-year-old Xbox360 game. And with its successor still far away,
 there was nothing holding me back on getting this one.
 
-.. _crackdown: http://www.giantbomb.com/crackdown/61-4065/
-.. _infamous: http://www.giantbomb.com/infamous/61-20599/
+[crackdown]: http://www.giantbomb.com/crackdown/61-4065/
+[infamous]: http://www.giantbomb.com/infamous/61-20599/
 
 
 -------------------------------

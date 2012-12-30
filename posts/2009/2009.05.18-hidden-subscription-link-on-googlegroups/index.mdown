@@ -1,5 +1,4 @@
-Hidden subscription link on Google Groups
-#########################################
+# Hidden subscription link on Google Groups
 
 It's strange. When you visit a Google Group and are not logged into your
 Google Account (if you even have one) you might get the impression that you
@@ -11,6 +10,6 @@ thought replacing "unsubscribe" with "subscribe" would allow me to join
 ``<groupname>-subscribe@googlegroups.com`` ... 
 
 Why such a link isn't shown on each group page is beyond me, but at least it
-is hidden in the the documentation_.
+is hidden in the the [documentation][].
 
-.. _documentation: http://groups.google.com/support/bin/answer.py?hl=en&answer=46606
+[documentation]: http://groups.google.com/support/bin/answer.py?hl=en&answer=46606
