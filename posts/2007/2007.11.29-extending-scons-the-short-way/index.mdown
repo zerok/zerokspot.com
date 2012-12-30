@@ -1,19 +1,16 @@
-Extending SCons: The Short Way
-##############################
+# Extending SCons: The Short Way
 
-`SCons <http://www.scons.org/>`_ is for me one of the most convenient build systems out there but at
-least if you take a look at the manual and esp. in the `section about writing
-your own builders <http://scons.org/doc/0.97.0d20070918/HTML/scons-user/x2369.html>`_, it looks like a little bit of a pain to extend. Or actually
+[SCons](http://www.scons.org/) is for me one of the most convenient build systems out there but at
+least if you take a look at the manual and esp. in the [section about writing
+your own builders](http://scons.org/doc/0.97.0d20070918/HTML/scons-user/x2369.html), it looks like a little bit of a pain to extend. Or actually
 there doesn't seem to be a short way to extend build environments at all.
 
 -------------------------------
 
 Today, for example, I was looking for a way to convert RST documents into
 HTML using SCons and therefor wanted to write and integrate a simple builder
-that does this job. According to the `manual <http://scons.org/doc/0.97.0d20070918/HTML/scons-user/x2446.html>`_ this would work somehow like
+that does this job. According to the [manual](http://scons.org/doc/0.97.0d20070918/HTML/scons-user/x2446.html) this would work somehow like
 this (the *rstsuite* package being one of my toolkit packages):
-
-.. sourcecode:: python
     
     import os
     from rstsuite.scons import build_document
@@ -25,8 +22,6 @@ this (the *rstsuite* package being one of my toolkit packages):
     
 
 For this task, the *build_document* function would be quite short:
-
-.. sourcecode:: python
     
     def build_document(target, source, env):
         from docutils.core import publish_file
@@ -47,8 +42,6 @@ default environment called "ConstructionEnvironment" that appears to be
 what I was looking for. 
 
 Now I could compress my SConstruct file to this one:
-
-.. sourcecode:: python
     
     import rstsuite.scons
     env=Environment()
@@ -56,8 +49,6 @@ Now I could compress my SConstruct file to this one:
     
 
 with the *rstsuite.scons* module looking like this:
-
-.. sourcecode:: python
     
     from SCons.Defaults import ConstructionEnvironment
     from SCons.Builder import Builder

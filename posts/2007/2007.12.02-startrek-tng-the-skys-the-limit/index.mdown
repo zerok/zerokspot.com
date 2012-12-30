@@ -1,18 +1,14 @@
-Star Trek: TNG: The Sky's the Limit
-###################################
+# Star Trek: TNG: The Sky's the Limit
 
 So *Star Trek: The Next Generation* is now 20 years old (which probably
 makes it just a little bit last generation ...) and CBS and Simon & Schuster
 take this anniversary as an opportunity for releasing a couple of TNG-related
-books. The first one I got is `Star Trek: TNG: The Sky's the Limit <http://www.simonsays.com/content/book.cfm?tab=24&pid=537604>`_
+books. The first one I got is [Star Trek: TNG: The Sky's the Limit](http://www.simonsays.com/content/book.cfm?tab=24&pid=537604).
 
 
 -------------------------------
 
-.. figure:: {uploads}/skys_the_limit.jpg
-    
-    Front-cover
-    
+<img src="http://zerokspot.com/uploads/skys_the_limit.jpg" alt="Front cover" style="float:left;margin:0 15px 15px 0" />
 
 *The Sky's the Limit* is a collection of short stories spanning
 the whole timeline of TNG so far, starting with a story about what happened

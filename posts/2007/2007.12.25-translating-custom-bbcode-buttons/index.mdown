@@ -1,7 +1,6 @@
-Translating Custom BBCode Buttons
-#################################
+# Translating Custom BBCode Buttons
 
-Recently, in a support request on `phpbb.com <http://www.phpbb.com>`_ the question came up, if it's also possible, in the
+Recently, in a support request on [phpbb.com](http://www.phpbb.com) the question came up, if it's also possible, in the
 situation that you have a multi-lingual board, that custom BBCode-buttons
 could also have a localized button label and tooltip. While phpBB3 by itself
 doesn't really support this out of the box, it's not all that hard to
@@ -10,19 +9,16 @@ get it working.
 -------------------------------
 
 
-.. note::
-    Use the code presented here at your own risk. It was only shortly 
-    tested on my local devboard. Also don't forget to backup your files
-    before applying these changes.
+**Note:** Use the code presented here at your own risk. It was only shortly 
+tested on my local devboard. Also don't forget to backup your files
+before applying these changes.
 
 The core to this whole task is the ``display_custom_bbcode()`` function inside
-the {$phpbb_root_path}/includes/functions_display.php since this is where
+the {$phpbb\_root\_path}/includes/functions_display.php since this is where
 phpBB3 fetches the custom BBCode from the database and generates the 
 respective template variables. 
 
 Of primary interest within this function is following section (L823 - L834)
-
-.. sourcecode:: php
     
     while ($row = $db->sql_fetchrow($result))
 	{
@@ -39,13 +35,11 @@ Of primary interest within this function is following section (L823 - L834)
 	
 This is the place were we want to get the multilanguage support in. Here
 we will have to replace the values for ``BBCODE_TAG``, ``BBCODE_HELPLINE`` and 
-``A_BBCODE_HELPLINE``. The idea is to take entries from the {$phpbb_root_path}/language/\*/posting.php for these fields and fall back
+``A_BBCODE_HELPLINE``. The idea is to take entries from the {$phpbb\_root\_path}/language/\*/posting.php for these fields and fall back
 to the original value (as set in the ACP) if it isn't present in the 
 currently selected language pack.
 
 The resulting code looks like this:
-
-.. sourcecode:: php
     
     while ($row = $db->sql_fetchrow($result))
 	{
@@ -76,14 +70,10 @@ The resulting code looks like this:
 	
 Since we want to access the language files, we also will have to import
 the global ``$user`` variable in L811 which means replacing
-
-.. sourcecode:: php
     
     global $db, $template;
 	
 with 
-
-.. sourcecode:: php
     
     global $db, $template, $user;
 
@@ -92,9 +82,7 @@ within the same function.
 When you now add a new custom BBCode -- let's call it "lala" here -- and you
 want it's button to show something different depending on what language is
 selected, simply add something like this to your language definitions in the
-{$phpbb_root_path}/language/\*/posting.php:
-
-.. sourcecode:: php
+{$phpbb\_root\_path}/language/\*/posting.php:
     
     'CUSTOM_BBCODE_TAG_lala' => 'LALA button',
     'CUSTOM_BBCODE_HELP_lala' => 'Yet another useless button tooltip',
