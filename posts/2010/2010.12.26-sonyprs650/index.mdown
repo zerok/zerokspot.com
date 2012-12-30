@@ -1,13 +1,12 @@
-The Sony PRS-650 eReader
-########################
+# The Sony PRS-650 eReader
 
 I've been playing with the thought of getting an eReader for a very long time.
 For some time I could get around with just reading on my iPhone but eventually
 this became just to uncomfortable, so I went looking around which device to get.
-This was back in `September
-<http://zerokspot.com/weblog/2010/09/05/ebook-dilemma/>`_. Two months later I
-could finally make up my mind and ordered a `Sony PRS-650 eReader
-<http://www.sony.at/product/rd-reader-ebook/prs-650>`_, and since then I've been
+This was back in [September](http://zerokspot.com/weblog/2010/09/05/ebook-dilemma/).
+Two months later I
+could finally make up my mind and ordered a
+[Sony PRS-650 eReader](http://www.sony.at/product/rd-reader-ebook/prs-650), and since then I've been
 using it pretty much every spare minute I had which, I guess, makes me qualified
 to finally write a review about it :-)
 
