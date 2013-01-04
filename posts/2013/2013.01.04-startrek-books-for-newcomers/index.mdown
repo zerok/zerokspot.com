@@ -117,6 +117,6 @@ Btw.: In case you haven't noticed: [Memory Beta][] is an excellent resource for 
 [roberta lincoln]: http://memory-beta.wikia.com/wiki/Roberta_Lincoln
 [assignment earth]: http://memory-beta.wikia.com/wiki/Assignment:_Earth_(episode)
 [star trek: the wraith of khan]: http://memory-beta.wikia.com/wiki/Star_Trek_II:_The_Wrath_of_Khan
-[khan noonie singh]: http://memory-beta.wikia.com/wiki/Khan_Noonien_Singh
+[khan noonien singh]: http://memory-beta.wikia.com/wiki/Khan_Noonien_Singh
 [avatar]: http://memory-beta.wikia.com/wiki/Avatar
 [mission gamma]: http://memory-beta.wikia.com/wiki/Mission_Gamma
