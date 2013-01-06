@@ -5,6 +5,7 @@
         "python", 
         "ruby", 
         "vienna", 
-        "zope"
+        "zope",
+        "travel"
     ]
 }

@@ -4,6 +4,7 @@
         "django", 
         "edc", 
         "edc09", 
-        "eurodjangcon"
+        "eurodjangcon",
+        "travel"
     ]
 }
