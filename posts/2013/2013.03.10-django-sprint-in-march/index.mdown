@@ -4,7 +4,7 @@
 
 The sprint will take place on *Saturday, March 23th*, and *Sunday, March 24th*, at the [Moccu GmbH & Co. KG][moc] in *Pappelallee 10*. For details visit the [lanyrd][lan] page of the event :-)
 
-I guess, the main theme of the sprint will once again be Django 1.6 but given that we just recently relaunched [django-de.org](http://django-de.org/) some of use might also continue working in this site :-)
+I guess, the main topic of the sprint will once again be Django 1.6 but given that we just recently relaunched [django-de.org](http://django-de.org/) some of us might also continue working on that :-)
 
 [lan]: http://lanyrd.com/2013/django-sprint-march/
 [ddv]: http://django-de.org/verein/
