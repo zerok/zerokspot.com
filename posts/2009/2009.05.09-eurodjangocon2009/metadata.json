@@ -5,6 +5,8 @@
         "edc", 
         "edc09", 
         "eurodjangcon",
-        "travel"
+        "travel",
+        "djangocon",
+        "djangosprint"
     ]
 }
