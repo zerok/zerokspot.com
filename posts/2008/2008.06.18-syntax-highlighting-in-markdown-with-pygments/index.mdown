@@ -16,7 +16,7 @@ If you don't do it, I most of the time ended up with additional paragraphs wrapp
 
 The code I'm using right now and which is heavily based on the markdown-processor bundled with Pygments looks like this:
 
-@@ python @@
+<pre><code>
 from markdown import TextPreProcessor
 from pygments.formatters import HtmlFormatter
 from pygments.lexers import get_lexer_by_name, TextLexer
@@ -37,16 +37,16 @@ class CodeBlockPreprocessor(TextPreprocessor):
                 lexer = TextLexer()
             code = m.group(2).replace('\t','    ')
             code = pygments.highlight(code, lexer, self.formatter)
-            code = code.replace('\n\n', '\n&nbsp;\n').replace('\n', '<br />').replace('\\@','@')
+            code = code.replace('\n\n', '\n&amp;nbsp;\n').replace('\n', '&lt;br /&gt;').replace('\\@','@')
             return '\n\n%s\n\n' % code
         return self.pattern.sub(repl, lines)
-@@
+</code></pre>
 
 As you can see, it only has some minor changes like the different parent class, a slightly different regular expression for the wrapping Markdown syntax, the extra replacement for new lines and tabs (I hate tabs :-P) and the extra cssclass attribute. 
 
 To use this class, put it into a script like this:
 
-@@ python @@
+<pre><code>
 from markdown import Markdown
 
 someText = """
@@ -59,7 +59,7 @@ def test():
 md = Markdown()
 md.textPreprocessors.insert(0, CodeBlockPreprocessor())
 print md.convert(someText)
-@@
+</code></pre>
 
 
 
