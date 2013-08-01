@@ -1,18 +1,11 @@
 # Firefox 1.0-rc1
 
-<p><img src="http://www.zerokspot.com/uploads/firefox10rc1.jpg" alt="" class="left"/>The first release candidate of the upcoming Mozilla Firefox 1.0 has now appeared on ftp.mozilla.org :-) There are now already packages in french, english, german, spanish, polish, czech, greek and norwegian available. This is just the current state :-)</p>
+<img src="firefox10rc1.jpg" alt="" class="left"/>The first release candidate of the upcoming Mozilla Firefox 1.0 has now appeared on ftp.mozilla.org :-) There are now already packages in french, english, german, spanish, polish, czech, greek and norwegian available. This is just the current state :-)
 
 -------------------------------
 
-
-
-<p>Like with the PR old extensions are again disabled (with old I mean for example those that worked with the preview release ;-) ). </p>
-
-
+Like with the PR old extensions are again disabled (with old I mean for example those that worked with the preview release ;-) ).
 
 <strong><a href="ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/1.0rc1/">ftp.mozilla.org</a></strong>
 
-
-
-<p><strong>Edit:</strong> The extensions seem to work. There is just a message that you have old extensions installed.</p>
-
+<strong>Edit:</strong> The extensions seem to work. There is just a message that you have old extensions installed.
