@@ -2,7 +2,7 @@
 
 Today, [Feedly][] finally [announced](http://www.theverge.com/2013/8/5/4589764/feedly-pro-premium-subscription-article-search-evernote) the details of their pro plan. At $5 (USD) per month it is slightly more expensive than for instance feedbin's offer at $3/mo and they also offer for the first 5000 a life-time plan at $99. The monthly plan will be made available in the fall and the life-time plan will then cost $299 according to their Twitter account.
 
-<blockquote class="twitter-tweet"><p><a href="https://twitter.com/Huicthgara">@Huicthgara</a> only 5,000 will get the limited lifetime edition at $99. There will be a lifetime edition in fall. For $299.</p>&mdash; feedly (@feedly) <a href="https://twitter.com/feedly/statuses/364352234294738944">August 5, 2013</a></blockquote><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p><a href="https://twitter.com/Huicthgara">@Huicthgara</a> only 5,000 will get the limited lifetime edition at $99. There will be a lifetime edition in fall. For $299.</p>&mdash; feedly (@feedly) <a href="https://twitter.com/feedly/statuses/364352234294738944">August 5, 2013</a></blockquote>
 
 So, right now the whole pro-plan is only available to those 5000 people, basically helping to fund feedly's new infrastructure.
 
@@ -20,3 +20,5 @@ If this is worth $99 for you is something you have to and definitely should deci
 
 [feedly]: http://feedly.com
 [pro1]: https://twitter.com/feedlypro/status/364367888435519489
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
