@@ -20,5 +20,3 @@ If this is worth $99 for you is something you have to and definitely should deci
 
 [feedly]: http://feedly.com
 [pro1]: https://twitter.com/feedlypro/status/364367888435519489
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
