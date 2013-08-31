@@ -16,7 +16,7 @@ If you don't do it, I most of the time ended up with additional paragraphs wrapp
 
 The code I'm using right now and which is heavily based on the markdown-processor bundled with Pygments looks like this:
 
-<pre><code>
+<pre><code class="language-python">
 from markdown import TextPreProcessor
 from pygments.formatters import HtmlFormatter
 from pygments.lexers import get_lexer_by_name, TextLexer
@@ -46,7 +46,7 @@ As you can see, it only has some minor changes like the different parent class, 
 
 To use this class, put it into a script like this:
 
-<pre><code>
+<pre><code class="language-python">
 from markdown import Markdown
 
 someText = """
