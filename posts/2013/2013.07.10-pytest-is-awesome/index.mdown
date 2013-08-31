@@ -35,14 +35,16 @@ As I said, I've only used the basics before and never got to stuff like fixtures
 As you can see in the example about, once test has been marked as "unit", you can select it with `-m "unit"`.
 
 Also, injecting preconditions and helpers with fixtures just feels so much more natural than "beforeEach"/"setUp"-style methods.
-    
-    @pytest.fixture
-    def mock_service():
-        # ...
-        return service
 
-    def test_feature_a(mock_service):
-        assert mock_service.do_something() == 'as_expected'
+<pre><code class="language-python">
+@pytest.fixture
+def mock_service():
+    # ...
+    return service
+
+def test_feature_a(mock_service):
+    assert mock_service.do_something() == 'as_expected'
+</code></pre>
 
 
 Digging into this stuff and also the ["scope"-setting][scope] for fixtures was tons of fun and I really miss all these little things whenever I have to work with other testing frameworks (as much as I've come to love [mocha][mo] + [chai][] on the JavaScript side of things).

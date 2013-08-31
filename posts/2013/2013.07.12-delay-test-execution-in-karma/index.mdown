@@ -8,7 +8,7 @@ The problem here is, that by default Karma launches the test framework right whe
 
 First, you have to prevent Karma from running your tests at the earliest moment possible. To do this, add this assignment into some kind of setup.js right after your adapter has been loaded:
 
-<pre><code>window.__karma__.loaded = function() {};</code></pre>
+<pre><code class="language-javascript">window.__karma__.loaded = function() {};</code></pre>
 
 This way, <code>window.\_\_karma\_\_.start</code> is not launched after the last file being loaded, which is also where the Mocha adapter has [its mocha.run()](https://github.com/karma-runner/karma/blob/v0.8.6/adapter/mocha.wrapper#L6) call.
 
