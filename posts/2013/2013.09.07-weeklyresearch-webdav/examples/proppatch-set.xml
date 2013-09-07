@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<D:propertyupdate xmlns:D="DAV:" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <D:set>
+        <D:prop>
+            <dc:language>en</dc:language>
+        </D:prop>
+    </D:set>
+</D:propertyupdate>
