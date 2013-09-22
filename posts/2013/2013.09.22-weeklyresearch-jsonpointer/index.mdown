@@ -37,8 +37,7 @@ As much as I’d like to get into JSONiq and other JSON processing and querying 
 
 [rfc6901]: http://tools.ietf.org/html/rfc6901
 [esc]: https://groups.google.com/forum/#!topic/json-schema/iXHVCJk_zfQ
-[jsonpath]: 
-http://goessner.net/articles/JsonPath/
+[jsonpath]: http://goessner.net/articles/JsonPath/
 [jsoniq]: http://www.jsoniq.org/ 
 [ipl]: http://search.cpan.org/~zigorou/JSON-Pointer-0.01/lib/JSON/Pointer.pm
 [ipy]: https://github.com/stefankoegl/python-json-pointer
