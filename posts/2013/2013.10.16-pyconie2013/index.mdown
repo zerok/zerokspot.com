@@ -44,12 +44,12 @@ Quite high on every list of Dublin sights is *Dublin Castle*. Built in 1204, it 
 
 ### River promenade
 
-<figcaption>
+<figure>
     <img src="http://photos.h10n.me/Conferences/PyCon-Ireland-2013/i-dZzKW7z/0/XL/DSC01290-XL.jpg" alt="">
     <figcaption>
         <p>River Promenade</p>
     </figcaption>
-</figcaption>
+</figure>
 
 Thanks to the beautiful weather (compared to that the forecast had promised for the following couple of days) we opted for exploring the area around the River Liffey with its many bridges. The more you get to the east the more modern everything becomes. When looking up most of the stuff we saw that day on Saturday I noticed that most of the buildings around North Wall Quay and Custom House Quay are even too new for [Google Maps’ satellite view](https://www.evernote.com/shard/s3/sh/f73d4f19-2aa6-422a-95ff-89b540477a15/a1b2fc3b2c057f61d19e092448c4b734).
 
