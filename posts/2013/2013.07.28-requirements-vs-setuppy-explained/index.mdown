@@ -1,6 +1,6 @@
 # Requirements.txt vs setup.py explained
 
-Ever wondered about when you should use a requirements.txt file or the "install_requires" section in your setup.py to specify your project's dependencies? Then [this article](https://caremad.io/blog/setup-vs-requirements/) by Donald Stufft is exactly what you need.
+Ever wondered about when you should use a requirements.txt file or the "install_requires" section in your setup.py to specify your project's dependencies? Then [this article](https://caremad.io/blog/setup-vs-requirement/) by Donald Stufft is exactly what you need.
 
 > This split between abstract and concrete is an important one. 
 
