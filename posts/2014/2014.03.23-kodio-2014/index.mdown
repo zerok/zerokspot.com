@@ -1,9 +1,7 @@
 # Kod.io 2014
 
-<img
-src="http://photos.h10n.me/Conferences/Kodio-2014/i-gqXzsvN/0/S/DSC01935-S.jpg"
-alt="" style="max-width:300px; float: left; margin: 0 1em 1em 0; padding: 10px; border: 1px solid
-#EFEFEF" />On my quest to attend more diverse conferences instead of focusing on
+<img src="http://photos.h10n.me/Conferences/Kodio-2014/i-gqXzsvN/0/S/DSC01935-S.jpg" alt="" style="max-width:300px; float: left; margin: 0 1em 1em 0; padding: 10px; border: 1px solid #EFEFEF" />
+On my quest to attend more diverse conferences instead of focusing on
 Python and Django ones alone I went to Linz a couple of weeks ago for [Kod.io
 2014][1]. Compared to other events that aim at a specific segement of the
 IT/Software Development industry, Kod.io tries to bring developers from multiple
