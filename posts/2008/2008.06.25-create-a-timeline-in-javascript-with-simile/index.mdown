@@ -24,18 +24,18 @@ Therefor first get the latest source:
 
 Then place the new timeline folder for instance right into the folder containing a django\_timeline.html, which will be our main playground for now. The project itself comes with tons of separated JavaScript files, but also delivers a simple AJAX-loader that we will integrate into our `django_timeline.html` file like this:
 
-@@ html @@
+```
 <head>
     <!-- ... -->
     <script src="timeline/src/webapp/api/timeline-api.js" 
         type="text/javascript" charset="utf-8"></script>
     <!-- ... -->
 </head>
-@@
+```
 
 Next we need to define a container for our timeline and initialize it using the onload hook (or whatever event you want to trigger the initialization). Therefor we create a simple div that we give the ID "timeline".
 
-@@ html @@
+```
 <style type="text/css" media="screen">
     #timeline {width: 1000px; height: 400px;}
 </style>
@@ -46,13 +46,13 @@ Next we need to define a container for our timeline and initialize it using the 
 <body onload="init()">
     <div id="timeline"></div>
 </body>
-@@
+```
 
 Note that setting at least the height of the timeline is required and that you have to use fixed values here, so no 100% for you. If you don't specify the width, it will default to 100%.
 
 Now we just have to tell the Timeline API, how we want our timeline to be structured. This is done by creating an Array with one or more bandInfo objects in it and pass it to an initialization function. Let's say, we want 2 bands: One representing months, the other years, then our onload-handler would look like this:
 
-@@ javascript @@
+```
 function init(){
     var eventSource = new Timeline.DefaultEventSource(0);
     var bandInfos = [
@@ -74,7 +74,7 @@ function init(){
     timeline = Timeline.create(document.getElementById('timeline'),
         bandInfos);
 }
-@@
+```
 
 This function basically does 3 things:
 
@@ -89,7 +89,7 @@ A timeline is nice. A timeline with some data in it is much better, though. To l
 
 The structure of such a JSON datasource is pretty simple. Basically, Timeline looks for a top-level element named "entries" which is a list of events. A small excerpt from the Django timeline would look like this:
 
-@@ javascript @@
+```
 {
     'entries': [
         /* ... */
@@ -103,15 +103,15 @@ The structure of such a JSON datasource is pretty simple. Basically, Timeline lo
         /* ... */
     ]
 }
-@@
+```
 
 Since we want to have the data available right away, we have to append this to our init() function:
 
-@@ javascript @@
+```
 Timeline.loadJSON("django.json", function(data, url){
     eventSource.loadJSON(data, url);
 });
-@@
+```
 
 The Timeline's own loadJSON-method will then simply eval the data and pass thet struct over to the EventSource's loadJSON-method, which will the build Event-objects from it.
 
@@ -125,13 +125,13 @@ It comes with a small theming system that basically consists of a class holding 
 
 So if you don't want to start hacking the JavaScript files themselves, I guess your best option for now is to use CSS. For example to add some Django-green to the duration-bars, add following CSS definition:
 
-@@ css @@
+```
 .timeline-event-tape {background:#275132;}
-@@
+```
 
 For more general styling, scan the timeline using for instance [Firebug](http://getfirebug.com/), which will reveal classes for basically every component of the timeline. If you want to apply a special style to a certain event you can do so by adding "textColor", "classname" or "color" to the actual event:
 
-@@ javascript @@
+```
 {
     'entries': [
         {
@@ -144,7 +144,7 @@ For more general styling, scan the timeline using for instance [Firebug](http://
         }
     ]
 }
-@@
+```
 
 The sad thing again is that currently this only affects the labels of these events, but since the whole project appears to be quite active, I guess, it is only a matter of time until you can see this class on every event-related element.
 
