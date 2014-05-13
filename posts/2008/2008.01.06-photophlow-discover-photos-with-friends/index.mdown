@@ -1,6 +1,6 @@
 # Photophlow - Discover Photos with Friends
 
-<img src="{uploads}/photophlow_logo.png" alt="" class="left" />A few days ago I learned via a post by [Ted Leung](http://www.sauria.com/blog/2008/01/02/photo-20-photophlow/) about a new tool for
+<img src="photophlow_logo.png" alt="" class="left" />A few days ago I learned via a post by [Ted Leung](http://www.sauria.com/blog/2008/01/02/photo-20-photophlow/) about a new tool for
 all you Flickr fans out there. Think about [Photophlow](http://www.photophlow.com) as a chat room, where everyone
 in the room can use a common search and then promote photos to be 
 shown to everyone in the room.
