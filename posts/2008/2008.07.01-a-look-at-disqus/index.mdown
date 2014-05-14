@@ -1,6 +1,6 @@
 # A Look at Disqus
 
-<img src="{uploads}/disqus.png" class="left" alt=""/ >I have to say, that I really start thinking about just adding [Disqus](http://disqus.com) to my site here. The problem Disqus is trying to solve is exactly the one that annoys me the most when commenting on someone's weblog: I tend to forget where I commented, so I miss the whole discussion taking place afterwards. For this Disqus offers a unified interface that shows you all your comments on Disqus-enabled weblogs. 
+<img src="disqus.png" class="left" alt=""/ >I have to say, that I really start thinking about just adding [Disqus](http://disqus.com) to my site here. The problem Disqus is trying to solve is exactly the one that annoys me the most when commenting on someone's weblog: I tend to forget where I commented, so I miss the whole discussion taking place afterwards. For this Disqus offers a unified interface that shows you all your comments on Disqus-enabled weblogs. 
 
 -------------------------------
 
