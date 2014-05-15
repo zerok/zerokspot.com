@@ -11,7 +11,7 @@ Another problem is the example code available in the [repository] (http://flexvi
 So, in order to get to know Flex and this component I wrote a tiny app that does really not all that much: It renders 3 nodes on a directional graph. Each edge also has a label. The official demo apps take all the data from either an XML datastream or some XML directly stored in the apps mxml file. Since in the end I want to be able to create nodes programmatically I also did it this way here.
 
 <div class="figure">
-<img src="{uploads}/visualgraphdemo.png" alt="Visual Graph demo"/>
+<img src="visualgraphdemo.png" alt="Visual Graph demo"/>
 <p class="caption">Not much to see. But sometimes it's better this way.</p>
 </div>
 
