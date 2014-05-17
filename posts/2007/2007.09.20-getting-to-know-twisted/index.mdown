@@ -107,7 +107,7 @@ There you have more or less two options: Going for a completely standalone serve
         internet.TCPServer(8765, MyFactory()).setServiceParent(application)
         
 
-After merging all  this into [one file]({uploads}/dummytwistedserver.py.txt), just run `python dummytwistedserver.py` or `twistd -noy dummytwisttedserver.py` and you can easily mess with it using cURL :-)
+After merging all  this into [one file](dummytwistedserver.py.txt), just run `python dummytwistedserver.py` or `twistd -noy dummytwisttedserver.py` and you can easily mess with it using cURL :-)
 
 **Note:** I only started to mess around with Twisted 2 days ago, so what I'm
 describing right here might not be the best way to solve the problems
