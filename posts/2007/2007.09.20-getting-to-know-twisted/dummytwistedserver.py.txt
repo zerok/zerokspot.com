@@ -1,0 +1,42 @@
+from twisted.internet.protocol import ServerFactory
+from twisted.protocols.basic import LineReceiver
+
+class MyLineReceiver(LineReceiver):
+    def __init__(self):
+        self._lineno = 0
+        self._method = None
+        self._headers = {}
+        
+    def lineReceived(self, line):
+        self._lineno += 1
+        if self._lineno == 1:
+            self._method = line.split(" ")[0].upper()
+            if self._method != 'POST':
+                self.sendLine('HTTP/1.0 405 Method Not Allowed')
+                self.sendLine('')
+                self.transport.loseConnection()
+        else:
+            if len(line)==0:
+                self.sendLine('HTTP/1.0 200 OK')
+                self.sendLine('Content-Type: text/plain')
+                self.sendLine('')
+                self.sendLine(self._headers.get('CONTENT-LENGTH','0'))
+                self.transport.loseConnection()
+            else:
+                tmp = line.split(":")
+                key = tmp[0].upper()
+                value = ':'.join(tmp[1:])
+                self._headers[key] = value
+                
+
+class MyFactory(ServerFactory):
+    protocol = MyLineReceiver
+
+if __name__ == '__main__':
+    from twisted.internet import reactor
+    reactor.listenTCP(8765, MyFactory())
+    reactor.run()
+else:
+    from twisted.application import service, internet
+    application = service.Application('dummyserver')
+    internet.TCPServer(8765, MyFactory()).setServiceParent(application)
