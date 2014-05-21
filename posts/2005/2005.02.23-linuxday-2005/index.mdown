@@ -10,4 +10,4 @@ There was also planned something about software patents but was replaced with a 
 
 The whole event didn't consist only of talks and workshops but also of some companies that wanted to present themselves on this Linux convention... although I'm not really sure, what some of these companies had to do with Linux or Free Software ...
 
-I really hope that the next Linuxday in Klagenfurt will be a little bit longer, bigger and perhaps not only organized by the university and the <a href="www.htl-klu.at/">HTL Mössingerstrasse</a> but also by some other institutions (and companies) :-)
+I really hope that the next Linuxday in Klagenfurt will be a little bit longer, bigger and perhaps not only organized by the university and the <a href="http://www.htl-klu.at/">HTL Mössingerstrasse</a> but also by some other institutions (and companies) :-)
