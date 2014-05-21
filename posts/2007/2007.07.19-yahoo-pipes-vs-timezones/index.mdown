@@ -10,7 +10,7 @@ So far I think, that Yahoo! Pipes might have a problem with feeds using differen
 
 A screenshot of my configuration for this merge can be seen here:
 
-<img class="figure" src="{uploads}/yahoopipestz.png" alt="Merging two feeds using Yahoo! Pipes"/>
+<img class="figure" src="yahoopipestz.png" alt="Merging two feeds using Yahoo! Pipes"/>
 
 The problem is now, that the generated order is completely wrong:
 
