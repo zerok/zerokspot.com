@@ -2,7 +2,7 @@
 
 After about 40minutes of telephone support with Apple Care I finally made a decision what RSS reader I want to buy. For those of you who haven't read any of my previous posts about this topic or simply simply are too lazy to do so ;) here a short listing of all my alternatives:
 
-* <a href="firerss.com/">NewsFire</a>: Shareware (16EUR), a very simple and fast interface, small problems with exporting and importing feeds that I can live with, the best sidebar I've ever seen.
+* <a href="http://www.newsfirerss.com/">NewsFire</a>: Shareware (16EUR), a very simple and fast interface, small problems with exporting and importing feeds that I can live with, the best sidebar I've ever seen.
 * <a href="http://ranchero.com/netnewswire/">NetNewsWire</a>: Shareware (25USD), offers everything you'd normally want and need and more. Also very fast.
 * <a href="http://www.opencommunity.co.uk/vienna2.html">ViennaRSS</a>: OpenSource (free), features you'd expect. It's more or less like a Liferea for MacOSX... Maferea :P
 
