@@ -1,6 +1,6 @@
 # ByeBye, Dreamhost
 
-<img src="{uploads}/byebyedreamhost.jpg" alt="" />
+<img src="byebyedreamhost.jpg" alt="" />
 
 For the last 2 years I've now been a [Dreamhost](http://dreamhost.com)-customer. I initially moved there simply because of the price. It's really hard to beat 9USD per month for tons of disk space and bandwidth, not to mention [FastCGI](http://www.fastcgi.com/) support in addition to the usual LAMP-stuff. But then the first problems started when I noticed that it was kind of a rocky road to a mid-size configuration marathon to get for instance Django running there probably due to a really weird server config.
 

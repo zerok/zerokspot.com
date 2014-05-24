@@ -1,6 +1,6 @@
 # Digg and finally a good profile
 
-<img src="{uploads}/digg.history.png" alt="" class="left" />By now you've probably already heard of the quite big interface changes on the social bookmarking and news-site [Digg.com](http://digg.com) which were announced yesterday evening ... actually about 26 hours ago by Kevin Rose on the [official Digg blog](http://blog.digg.com/?p=94)...
+<img src="digg.history.png" alt="" class="left" />By now you've probably already heard of the quite big interface changes on the social bookmarking and news-site [Digg.com](http://digg.com) which were announced yesterday evening ... actually about 26 hours ago by Kevin Rose on the [official Digg blog](http://blog.digg.com/?p=94)...
 
 -------------------------------
 
