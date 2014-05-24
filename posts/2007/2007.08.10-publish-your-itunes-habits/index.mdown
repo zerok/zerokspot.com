@@ -1,6 +1,6 @@
 # Publish your iTunes habits
 
-<img src="{uploads}/myitunes.png" alt="" class="left" />Want something different from Apple? Then this might be something for you then: Apple has started a new service that lets you embed a widget into your website showing what songs you've recently purchased/reviewed/favorized songs from the iTunes Store and named it **[My iTunes](http://www.apple.com/itunes/myitunes/)**.
+<img src="myitunes.png" alt="" class="left" />Want something different from Apple? Then this might be something for you then: Apple has started a new service that lets you embed a widget into your website showing what songs you've recently purchased/reviewed/favorized songs from the iTunes Store and named it **[My iTunes](http://www.apple.com/itunes/myitunes/)**.
 
 -------------------------------
 
