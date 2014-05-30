@@ -17,6 +17,6 @@ So, in order to get to know Flex and this component I wrote a tiny app that does
 
 The demo also features a quite barebone zoom function which basically only increases the scale everything is rendered in. This works in most cases unless you start focusing nodes or ... well, let's say that I simply haven't found a better way to zoom the graph yet.
 
-<strong>[Download]({uploads}/Graph.mxml)</strong>
+<strong>[Download](Graph.mxml)</strong>
 
 For details on how to compile it please checkout the offical guides about Flex and how to compile 3rd-party components. Again: This example is far from being perfect and definitely reflects that I'm currently trying to make my first baby-steps in the world of Flex, so please bear with me :-)

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:un="org.un.flex.graphLayout.visual.*"
+	xmlns:ui="org.un.flex.unComponentToolbox.ui.*"
+	xmlns:pr="org.un.flex.unComponentToolbox.renderers.*"
+	xmlns:img="org.un.flex.unComponentToolbox.icons.EmbeddedIcons"
+	xmlns:pi="com.flexibleexperiments.primitiveIcons.*"
+    layout="vertical" pageTitle="Graph" backgroundColor="#EFEFEF"
+    width="100%" height="100%"
+    paddingTop="0" paddingRight="0" paddingBottom="0" paddingLeft="0"
+	creationComplete="init()">
+	<mx:Script>
+		<![CDATA[
+		    import flash.external.ExternalInterface;
+		    import org.un.flex.graphLayout.data.*;
+		    import org.un.flex.graphLayout.visual.*;
+		    import org.un.flex.graphLayout.layout.*;
+		    import com.flexibleexperiments.primitiveIcons.*;
+		    import mx.controls.*;
+		    import mx.core.IDataRenderer;
+		    import mx.core.UIComponent;
+		    import flash.geom.Point;
+		    
+		    /**
+		    * We can use this public variable for doing a quite barebone
+		    * zoom
+		    */
+		    [Bindable]
+			public var scaleFactor:Number = 1;
+		    
+		    /**
+		    * Handles the CLICK event bound in the PrimitiveIconRenderer
+		    * and uses it to focus on the clicked node.
+		    */
+		    public function singleClick(e:Event): void {
+		        if (e.currentTarget is IDataRenderer)
+		        {
+		            var vnode:IVisualNode = ((e.currentTarget as IDataRenderer).data as IVisualNode);
+		            vgraph.currentRootVNode = vnode;
+		            focusOn(new Point(vnode.x, vnode.y));
+		            vgraph.layouter.layoutChanged = true;
+		            vgraph.draw();
+		        }
+		    }
+		    
+		    /**
+		    * This function changes the focus of the graph to a given
+		    * Point.
+		    */
+		    public function focusOn(p:Point):void
+		    {
+		        var current:Point = vgraph.center;
+		        var xOffset:Number= p.x - current.x;
+		        var yOffset:Number= p.y - current.y;
+		        vgraph.scroll(-xOffset, -yOffset);
+		    }
+		    
+			private function init():void 
+			{
+			    var n1:IVisualNode;
+			    var n2:IVisualNode;
+			    var n3:IVisualNode;
+			    var e1:IVisualEdge;
+			    var e2:IVisualEdge;
+			    var e3:IVisualEdge;
+			    var layouter:ILayoutAlgorithm;
+			    
+			    try {
+				    vgraph.graph = new org.un.flex.graphLayout.data.Graph("mygraph", true);
+    				
+    				vgraph.newNodesDefaultVisible = true;
+    				vgraph.displayEdgeLabels = true;
+    				
+				    // Let's create our custom nodes here. Some notes though:
+				    // Every time you call IVisualGraph.createNode, the 
+				    // rootVNode will be set to this new node. The data 
+				    // parameter also has to be set with an XML-element since
+				    // the icon renderer requires @attribute-like properties
+				    // inside of it.
+    				n1 = vgraph.createNode("n1", <item name="n1" nodeType="PrimitiveCircle" />);
+    				n2 = vgraph.createNode("n2", <item name="n2" nodeType="PrimitiveCircle" />);
+    				n3 = vgraph.createNode("n3", <item name="n3" nodeType="PrimitiveCircle" />);
+    				
+    				// If you enable label-rendering, make sure that every
+    				// edge's data property has an @association property.		
+    				e1 = vgraph.linkNodes(n1, n2);
+    				e1.data = <edge association="hasProperty" />;
+                    e2 = vgraph.linkNodes(n2, n3);
+                    e2.data = <edge association="hasProperty" />;
+                    e3 = vgraph.linkNodes(n3, n1);
+                    e3.data = <edge association="hasProperty" />;
+                    
+				    
+    				layouter = new CircularLayouter(vgraph);
+    				(layouter as CircularLayouter).linkLength = 100;
+    				layouter.layoutChanged = true;
+                    
+                    vgraph.edgeRenderer = new DirectedEdgeRenderer;
+                    vgraph.layouter = layouter;
+                    
+				    vgraph.maxVisibleDistance = 50;
+    				vgraph.refresh();
+				    vgraph.draw();
+				}
+				catch(err:Error){
+				    throw err;
+				}				
+			}
+
+		]]>
+	</mx:Script>
+	
+	<mx:HBox>
+	    <mx:Button id="zoomIn" click="scaleFactor=scaleFactor+.1" label="+" />
+	    <mx:Button id="zoomOut" click="scaleFactor=scaleFactor-.1" label="-" />
+	</mx:HBox>
+	<mx:VBox>
+        <mx:Canvas width="500" height="300">
+            <un:VisualGraph id="vgraph" width="100%" height="100%"
+                paddingBottom="5" left="0" right="0" top="0" bottom="0" backgroundColor="#DDDDDD" alpha="0.8"
+                itemRenderer="org.un.flex.unComponentToolbox.renderers.PrimitiveIconRenderer"
+                visibilityLimitActive="true"
+                scaleX="{scaleFactor}"
+                scaleY="{scaleFactor}"
+                >
+            </un:VisualGraph>
+        </mx:Canvas>
+	</mx:VBox>    
+</mx:Application>
