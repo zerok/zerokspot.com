@@ -1,6 +1,6 @@
 # Skitching away
 
-<img src="{uploads}/skitch.dock.png" alt="" class="left" />Thanks to [David](http://startrekguide.com) I got an invitation to [Skitch](http://plasq.com/skitch/), the new all-in-one screengrabber, and so far I'm having some mixed feeling about it ...
+<img src="skitch.dock.png" alt="" class="left" />Thanks to [David](http://startrekguide.com) I got an invitation to [Skitch](http://plasq.com/skitch/), the new all-in-one screengrabber, and so far I'm having some mixed feeling about it ...
 
 -------------------------------
 

@@ -1,6 +1,6 @@
 # Barcamp about Microblogging
 
-<img class="left" alt="" src="{uploads}/twittercamp.png" />A different Barcamp is about to be held in April next year in Venice. The 
+<img class="left" alt="" src="twittercamp.png" />A different Barcamp is about to be held in April next year in Venice. The 
 focus here seems to be microblogging, hence the title "[Twittercamp](http://barcamp.org/twittercamp)" which
 will perhaps give it a totally different flair than all the Barcamps I've
 attended so far. And I love the [logo](http://flickr.com/photos/felter/1030688241/) ;-)
