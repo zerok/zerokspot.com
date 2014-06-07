@@ -78,7 +78,7 @@ pip wheel --wheel-dir=~/django-package .
 
 ## Installing Wheels
 
-Now that you have a whl file, just run `pip install package.whl`to install it. If you want to install something from PyPI and would prefer to have whl files where available, run `pip install —use-wheel packagename`.
+Now that you have a whl file, just run `pip install package.whl`to install it. If you want to install something from PyPI and would prefer to have whl files where available, run `pip install —-use-wheel packagename`.
 
 pip also lets you create whl files for all your project's requirements by simply replacing "packagename" in our previous example with a reference to your `requirements.txt`. For more details on using pip for Wheels please take a look at the project's [documentation](http://www.pip-installer.org/en/latest/cookbook.html#building-and-installing-wheels).
 
