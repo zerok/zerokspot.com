@@ -1,7 +1,6 @@
 # NP_TechnoratiTags 0.3
 
-<h4>New in 0.3</h4>
-There is now a switch for transforming "+"s into whitespaces in the tagdisplay. To get this working you also have to make a small change in your "Look of the tags" field:
+What's new in 0.3? There is now a switch for transforming "+"s into whitespaces in the tagdisplay. To get this working you also have to make a small change in your "Look of the tags" field:
 Previously you probably had something like this:
 <pre class="code">
 &lt;li&gt;&lt;a href="http://technorati.com/tag/%t" rel="tag"&gt;%t&lt;/a&gt;&lt;/li&gt;
@@ -10,9 +9,8 @@ Now you replace the %t for the link text with %d :-)
 
 -------------------------------
 
+## Changelog
 
-
-<h4>Changelog</h4>
 <pre>
 ------------------------------------------------------------------------
 r4 | zerok | 2005-02-13 17:39:16 +0100 (Sun, 13 Feb 2005) | 2 lines
