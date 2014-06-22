@@ -14,7 +14,7 @@ The mail also mentions updates to the TOS without giving any details as to what 
 
 All I can guess is that they mean the new "allow search by email" setting.
 
-<div class="figure"><img src="{uploads}/pownceemailsearch.png" alt=""/><p class="caption">Search by e-mail: Now possible and enabled by default</p></div>
+<div class="figure"><img src="pownceemailsearch.png" alt=""/><p class="caption">Search by e-mail: Now possible and enabled by default</p></div>
 
 Here you can control if your account should show up if you search it by e-mail address. I'm just not sure if it is good to have this enabled by default :-/
 

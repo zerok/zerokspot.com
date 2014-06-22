@@ -1,6 +1,6 @@
 # Enterprise: Kobayashi Maru
 
-<img src="{uploads}/kobayashi_maru.png" class="left" />The adventures of the crew of the NX-01 continue with [Kobayahi Maru](http://startrek.wikia.com/wiki/Kobayashi_Maru_(novel)) as the first novell set after the final episode of the TV-show. Andy Mangels and Michael A. Martin tell the story of Archer trying to proof for Romulan attacks on Coalition Freighters, Trip still playing spy-games and T'Pol and Reed going totally nuts. But is it worth all the madness?
+<img src="kobayashi_maru.png" class="left" />The adventures of the crew of the NX-01 continue with [Kobayahi Maru](http://startrek.wikia.com/wiki/Kobayashi_Maru_(novel)) as the first novell set after the final episode of the TV-show. Andy Mangels and Michael A. Martin tell the story of Archer trying to proof for Romulan attacks on Coalition Freighters, Trip still playing spy-games and T'Pol and Reed going totally nuts. But is it worth all the madness?
 
 -------------------------------
 

@@ -1,6 +1,6 @@
 # Ma.gnolia ad-free until October
 
-<img src="{uploads}/magnolia.png" alt="" class="left"/>On their blog the folks behind the social bookmarking service [Ma.gnolia](http://ma.gnolia.com) have [announced](http://ma.gnolia.com/blog/2007/07/23/a-gift-for-summer-ma-gnolia-is-ad-free-til-october), that the site will be ad-free until October.
+<img src="magnolia.png" alt="" class="left"/>On their blog the folks behind the social bookmarking service [Ma.gnolia](http://ma.gnolia.com) have [announced](http://ma.gnolia.com/blog/2007/07/23/a-gift-for-summer-ma-gnolia-is-ad-free-til-october), that the site will be ad-free until October.
 
 -------------------------------
 

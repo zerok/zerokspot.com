@@ -1,6 +1,6 @@
 # OmniGraffle 5.0 released
 
-<img src="{uploads}/og5.png" alt="" class="left" />Sweet, yesterday night, right before I actually wanted to get some sleep, the [OmniGroup released version 5.0](http://blog.omnigroup.com/2008/03/05/omnigraffle-50-is-final/) of their great diagram tool [OmniGraffle](http://www.omnigroup.com/applications/omnigraffle/). Back when they first announced the first beta, they said this:
+<img src="og5.png" alt="" class="left" />Sweet, yesterday night, right before I actually wanted to get some sleep, the [OmniGroup released version 5.0](http://blog.omnigroup.com/2008/03/05/omnigraffle-50-is-final/) of their great diagram tool [OmniGraffle](http://www.omnigroup.com/applications/omnigraffle/). Back when they first announced the first beta, they said this:
 
 <blockquote><p>As for pricing, any OmniGraffle 4 purchases made on or after October 31 will receive a free upgrade to OmniGraffle 5 when it ships in early 2008.</p><cite><a href="http://blog.omnigroup.com/2007/11/30/omnigraffle-50-beta-1-is-now-available/">OmniGroup</a></cite></blockquote>
 

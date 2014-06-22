@@ -5,7 +5,7 @@ Messenger bag](http://www.thinkgeek.com/computing/bags/9f64/), that actually loo
 probably get stuck in customs which at this price results in ~ +33% :-(
 
 <div class="figure">
-<img src="{uploads}/halo3messenger.png" alt="Messenger bag photo" />
+<img src="halo3messenger.png" alt="Messenger bag photo" />
 <p class="caption">Picture taken from <a href="http://www.thinkgeek.com/computing/bags/9f64/">Thinkgeek.com</a></p>
 </div>
 

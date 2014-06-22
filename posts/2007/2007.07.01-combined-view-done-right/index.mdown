@@ -13,11 +13,11 @@ First of all: I like the idea of a combined view since I normally just move from
 But if you're using primarily the keyboard for navigating the combined view in NetNewsWire is far less useful than you would expect. This has nothing to do with how you navigate, though, but more with how NNW renders the feed items. The problem is, that the latest item is not necessarily at the top of the screen which makes reading way more tiring esp. if you're working on a screen with a resolution > 1024x768 since you always have to focus on a different area of the screen.
 
 
-<a title="Problem with the combined view in NNW3" href="{uploads}/nnw-combined.png" class="thickbox figure"><img src="{uploads}/nnw-combined-small.png" alt="NNW3's combined view"/></a>
+<a title="Problem with the combined view in NNW3" href="nnw-combined.png" class="thickbox figure"><img src="nnw-combined-small.png" alt="NNW3's combined view"/></a>
 
 Then I went over to Google Reader since I remembered also seeing such a "combined view" there.  Google Reader calls it the "Expanded view" but it's basically the same, just with a small difference: Here the item you're currently reading (as indicated by using the "Next item" button or the space key) is always at the top of the screen
 
-<a title="The expanded view in Google Reader keeps items on the top" href="{uploads}/gr-combined.png" class="thickbox figure"><img src="{uploads}/gr-combined-small.png" alt="Expanded view in  Google Reader"/></a>
+<a title="The expanded view in Google Reader keeps items on the top" href="gr-combined.png" class="thickbox figure"><img src="gr-combined-small.png" alt="Expanded view in  Google Reader"/></a>
 
 Thanks to this Google Reader in my eyes has become way more usable than NetNewsWire. Sadly also on Google Reader it doesn't always work, so sometimes you will end up with the current item in the middle of the screen. But when thanks to it's height an item gets render again at the top of the screen, the next one will do the same (until another "accident" happens :-( ). I only experiences this while using the space-key for navigation and it seems works better when you use the j/k keys and then scroll manually.
 

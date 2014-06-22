@@ -1,6 +1,6 @@
 # CommandShift3
 
-<img src="{uploads}/commandshift3.png" alt="" class="left" />Every now and then I come across a site that really makes me come back
+<img src="commandshift3.png" alt="" class="left" />Every now and then I come across a site that really makes me come back
 every other minute. So happened 2 days ago with [CommandShift3.com](http://commandshift3.com).
 If you don't know it yet, CommandShift3 is basically Hot-or-Not for websites. The
 frontpage is dominated by 2 large screenshots of 2 websites and you vote

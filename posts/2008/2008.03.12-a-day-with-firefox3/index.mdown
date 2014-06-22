@@ -15,7 +15,7 @@ There is also a [simple way](http://lifehacker.com/355973/make-your-extensions-w
 Another of my problems with FF2 was the download manager. For some reason, the whole download process was always painfully slow with the browser basically freezing until the download had passed the first 50%. That was also one of the reasons why I always try to get *any* browser in one way or another interact with commandline utils like [wget](http://www.gnu.org/software/wget/) or [cURL](http://curl.haxx.se/). Now with this problem also resolved, I guess I will use them way less than before in close combination with a browser (although downloading big files is still more handy with them since at least with wget it's not really a problem to use Firefox's cookies and it's nice to have to option for instance to lower the allocated bandwidth for a download ;-)).
 
 <div class="figure">
-    <img src="{uploads}/ff3redline.png" alt="Red line" />
+    <img src="ff3redline.png" alt="Red line" />
     <p class="caption">Strange red line</p>
 </div>
  

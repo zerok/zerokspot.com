@@ -1,6 +1,6 @@
 # Community Q&A on Fluther.com
 
-<img src="{uploads}/fluther.png" alt="" class="left"/>Just saw an announcement on the Django mailinglist about the launch of [Fluther.com](http://fluther.com/), basically another take on the whole "ask the masses" concept. But unlink for example [AskMeFi](http://ask.metafilter.com/), Fluther even looks great :)
+<img src="fluther.png" alt="" class="left"/>Just saw an announcement on the Django mailinglist about the launch of [Fluther.com](http://fluther.com/), basically another take on the whole "ask the masses" concept. But unlink for example [AskMeFi](http://ask.metafilter.com/), Fluther even looks great :)
 
 
 
