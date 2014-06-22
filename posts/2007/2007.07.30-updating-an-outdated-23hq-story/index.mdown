@@ -1,6 +1,6 @@
 # Updating an outdated 23hq story ...
 
-<img src="{uploads}/23hq.png" alt="" class="left"/>There's been quite some time since I last posted about [23hq.com](http://www.23hq.com), the Danish alternative to Flickr. And since my previous article is now partially outdated (and Steffen Tiedemann Christensen from 23hq contacted me to inform me about the new features) I think it's time to roll out a small addendum to that article :)
+<img src="23hq.png" alt="" class="left"/>There's been quite some time since I last posted about [23hq.com](http://www.23hq.com), the Danish alternative to Flickr. And since my previous article is now partially outdated (and Steffen Tiedemann Christensen from 23hq contacted me to inform me about the new features) I think it's time to roll out a small addendum to that article :)
 
 -------------------------------
 

@@ -1,6 +1,6 @@
 # Facebook is a slow learner
 
-<img src="{uploads}/facebook.png" alt="" class="left"/>Sometimes I really wonder how [Facebook](http://facebook.com) could become as successful and well known as it currently is. 
+<img src="facebook.png" alt="" class="left"/>Sometimes I really wonder how [Facebook](http://facebook.com) could become as successful and well known as it currently is. 
 
 -------------------------------
 
@@ -8,6 +8,6 @@ No, I don't mean their interface. It's IMO the best of all the social networks o
 
 I think something like 2 months ago I requested the addition of my former high school to the list of high schools in Klagenfurt, Austria. 
 
-<img src="{uploads}/facebook.highschool.png" alt="Nothing there yet" class="figure" />
+<img src="facebook.highschool.png" alt="Nothing there yet" class="figure" />
 
 At least adding Klagenfurt as a city in Austria only took 2 months ...

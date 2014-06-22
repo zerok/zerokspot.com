@@ -9,7 +9,7 @@ So I removed the offending seconds (which contained quite a bit of cursing ;-)) 
 Today, I accidentally found a [solution](http://www.ambrosiasw.com/forums/lofiversion/index.php/t114755.html). The problem seems to be, that the default codec Snapz Pro uses for encoding recording, doesn't completely work in iMovie. But lucky you're not really restricted to this one codec, but can actually choose from quite a number of different A/V codecs on the settings screen right after finishing the recording process.
 
 <div class="figure">
-    <img src="{uploads}/snapzprocodec.png" alt=""/>
+    <img src="snapzprocodec.png" alt=""/>
     <p class="caption">Changing the video settings comes after recording</p>
 </div>
 

@@ -1,6 +1,6 @@
 # Amie Street's First Birthday
 
-<img src="{uploads}/amiestr.png" alt="" class="left"/>So now it's been already one year since the DRM-free music shop with the unique pricing model has launched. And they definitely know how to celebrate such an event.
+<img src="amiestr.png" alt="" class="left"/>So now it's been already one year since the DRM-free music shop with the unique pricing model has launched. And they definitely know how to celebrate such an event.
 
 
 

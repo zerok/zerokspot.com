@@ -1,6 +1,6 @@
 # Star Trek TNG: Q & A
 
-<img src="{uploads}/q_and_a.png" alt="" class="left" />One of the longest story-lines in the Star Trek universe is definitely
+<img src="q_and_a.png" alt="" class="left" />One of the longest story-lines in the Star Trek universe is definitely
 the one about those almighty beings called the Q. They, together with their
 most well known representative Q (portraid by John de Lancie), had their first
 appearance right in the first episode of the second Star Trek show: *Star Trek:

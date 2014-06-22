@@ -10,7 +10,7 @@ I just went through the activation just to see how it works anyway and well ... 
 
 Then comes the part where you can select, which services should be available to you: Purchases, Favorites and Reviews. When you select one of these, you get a new button to give you the HTML-code to be embedded into your site ... which opens a new window of your browser. 
 
-<a href="{uploads}/myitunes.code.png" title="My iTunes code interface" class="thickbox figure"><img src="{uploads}/myitunes.code-small.png" alt="My iTunes code interface"/></a>
+<a href="myitunes.code.png" title="My iTunes code interface" class="thickbox figure"><img src="myitunes.code-small.png" alt="My iTunes code interface"/></a>
 
 But My iTunes doesn't only offer you those Flash widgets but also an Atom feed containing their data :)
 

@@ -30,5 +30,5 @@ The following example would now take a null String and replace it with "I am emp
             }
         });
 <!--
-You can find a complete example [packaged here]{uploads}/jsonlibpg-defaultvalues-9891cf56f2c4.tar.bz2>`_ and `versioned here <http://hg.zerokspot.com/jsonlibpg.defaultvalues/>`_
+You can find a complete example [packaged here](jsonlibpg-defaultvalues-9891cf56f2c4.tar.bz2>) and [versioned here](http://hg.zerokspot.com/jsonlibpg.defaultvalues/).
 -->

@@ -1,6 +1,6 @@
 # New GMail feature
 
-<img src="{uploads}/gmaillabels.png" alt="" class="left" />
+<img src="gmaillabels.png" alt="" class="left" />
 Wow, seems like other people wanted this feature in GMail as well. What I'm
 talking about? Colored labels :D Last night Google updated its free mail
 service to also let its users define the color of labels. Here you can

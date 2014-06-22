@@ -1,6 +1,6 @@
 # Fall Vienna BarCamp with Date and Location
 
-<img src="{uploads}/barcamp-small.png" alt="" class="left"/>The [next BarCamp in Vienna](http://www.barcamp.at/BarCamp_Vienna_September_2007) finally seems to have a date and a location. The event will take place on the 29th and 30th of September in the Microsoft Office ...
+<img src="barcamp-small.png" alt="" class="left"/>The [next BarCamp in Vienna](http://www.barcamp.at/BarCamp_Vienna_September_2007) finally seems to have a date and a location. The event will take place on the 29th and 30th of September in the Microsoft Office ...
 
 -------------------------------
 
