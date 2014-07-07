@@ -1,4 +1,4 @@
-# Opera 7.6 Â» Opera 8
+# Opera 7.6 » Opera 8
 
 It looks like Opera Software won't release a version 7.6 of their browser but give it another major release. At first I was a little shocked because I thought I would have to buy another licenese (or to be precise 2 licenses (Laptop, Workstation), but then I noticed this nice little statement:
 
