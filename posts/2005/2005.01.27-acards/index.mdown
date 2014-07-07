@@ -1,6 +1,6 @@
-# ÂµCards
+# µCards
 
-For all of you who still think that there are not enough Flash-memory standards out there: There is a now one on the block. It's called ÂµCard and should be compatible with SD- and MMC-Cards. Heise.de wrote, that this medium should be cheaper than the current SD- and MMC-cards which will definitely make my digicam happy ;-)
+For all of you who still think that there are not enough Flash-memory standards out there: There is a now one on the block. It's called µCard and should be compatible with SD- and MMC-Cards. Heise.de wrote, that this medium should be cheaper than the current SD- and MMC-cards which will definitely make my digicam happy ;-)
 
 -------------------------------
 
