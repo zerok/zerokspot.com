@@ -18,13 +18,16 @@ Compared to the [Théâtre des Variétés][tdv] the Théâtre de Paris was built
 accommodate about twice as many people and that was absolutely necessary with
 dotJS's about 900 attendees. It was still packed beyond capacity in my opinion
 and moving around anywhere during the coffee and lunch breaks was annoying
-enough that I eventually opted for just staying seated. Let's talk about the
-seats, though: Back when it was constructued (in [1891][2] according to
-Wikipedia), I guess, there probably weren't all that many tall people around.
-That at least would be one explanation for why the seats felt like being
-designed for children or really small adults. Without having gotten a seat at
-the aisles I would have had to sit on the floor because the rows were far too
-close to each other.
+enough that I eventually opted for just staying seated. That being said, it was
+great to see the sponsors getting much more space than with the Théâtre des
+Variétés :-)
+
+Let's talk about the seats, though: Back when it was constructued (in [1891][2]
+according to Wikipedia), I guess, there probably weren't all that many tall
+people around. That at least would be one explanation for why the seats felt
+like being designed for children or really small adults. Without having gotten
+a seat at the aisles I would have had to sit on the floor because the rows were
+far too close to each other.
 
 About the conference itself: The format was basically the same as dotGo's with
 the day being split into multiple sessions with 3-4 talks each. Between the
