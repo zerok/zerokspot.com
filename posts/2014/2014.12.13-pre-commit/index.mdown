@@ -106,7 +106,9 @@ still looking for alternative implementations:
 I've already looked at [overcommit][oc] by Causes but this doesn't seem to handle the
 sharing of scripts between projects that well and also is limited to operate on
 Ruby hook scripts. Especially the latter makes adapting it harder because our
-current language stack doesn't include Ruby (except for Compass/SASS).
+current language stack doesn't include Ruby (except for Compass/SASS). From what
+I've seen it also doesn't do anything about managing dependencies of hook
+scripts.
 
 [i159]: https://github.com/pre-commit/pre-commit/issues/159
 
