@@ -1,7 +1,7 @@
 # Dependency Trees in Python
 
-One of the nice features when working with npm for io.js/node.js is the `npm
-list` command. It provides you a simple tree view of all the dependencies your
+One of the nice features when working with npm for io.js/node.js is the `npm list` command.
+It provides you a simple tree view of all the dependencies your
 package has and their dependencies and so on.
 
 ```
@@ -53,7 +53,8 @@ displaying an actual dependency hierarchy.
 
 This would be its output for one of my smaller Django projects:
 
-```$ pipdeptree
+```
+$ pipdeptree
 Warning!!! Possible confusing dependencies found:
 * django-cms==3.0.12 -> django-classy-tags [required: >=0.5, installed: 0.5.2]
   django-sekizai==0.8.1 -> django-classy-tags [required: >=0.3.1, installed: 0.5.2]
