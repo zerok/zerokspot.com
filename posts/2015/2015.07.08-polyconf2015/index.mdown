@@ -3,7 +3,7 @@
 Last week I had a bit of an extended weekend in Poznan to attend this year's
 [PolyConf][pc], a conference for developers interested in polyglot software
 development. As such it is probably one of the best places to look beyond beyond
-your tellerand. The mantra here probably was something "Use the right tool for
+your Tellerrand. The mantra here probably was something "Use the right tool for
 the job and don't be afraid of diverse systems". A big "Thank you" goes to
 [Netconomy][nc] for supporting this trip!
 
@@ -36,11 +36,11 @@ made it onto my highlights-list 😉 You have been warned:
   biggest WTF talk of this event for me. Some of the examples just described the
   solution set and the runtime generated the algorithm that could be used to get
   to them. As someone who has never seen that paradigm before I could only
-  describe it as my university Prolog class on <s>drugs</s> stroids!
+  describe it as my university Prolog class on <s>drugs</s> steroids!
 * Inside Websockets by [Leah Hanson][lh]: A very good explanation of how
   WebSockets work on the frame level.
 * An Introduction to Crystal by [Erik Michaels-Ober][emo]: A language that is
-  syntactially compatible to Ruby but is natively compiled always sounds like
+  syntactically compatible to Ruby but is natively compiled always sounds like
   something that could solve a few problems 😉
 * Contracts as Types by [Jessica Kerr][jk]: How to augment tests in Clojure with
   data type information for an additional safety net explained by the (as
