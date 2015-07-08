@@ -48,7 +48,8 @@ made it onto my highlights-list 😉 You have been warned:
 * Phoenix: A web framework for the new web by [José Valim][jv]: This was one of
   the talks I absolutely didn't want to miss and it definitely didn't disappoint
   with its focus on what makes Phoenix so different from frameworks like Django,
-  Rails, or SpringFramework.
+  Rails, or SpringFramework. I'm really glad that José was able to [fix his
+  laptop][2] so that this talk could happen!
 * Erlang in multi-lingual systems by [Robert Virding][rv]: What has Erlang to
   offer for polyglots? Quite a lot it turns out with languages like Elixir and
   LFE sitting on top of it and systems like Ports to help integrating outside
@@ -61,7 +62,17 @@ made it onto my highlights-list 😉 You have been warned:
 
 and these don't even include the lightning-talks which always range very high on
 my list simply because that format is just ideal to make me interested in a
-topic or tool without saying too much.
+topic or tool without saying too much. That and just be pure [entertainment][3] on
+some occasions 😃
+
+When it comes to quotes, Robert Virding probably reached the top spot on my list:
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">“I love Reactive Programming. I just don’t see how it’s new and innovative” - <a href="https://twitter.com/rvirding">@rvirding</a> at <a href="https://twitter.com/hashtag/polyconf?src=hash">#polyconf</a></p>&mdash; Paul Wilson (@paulanthonywils) <a href="https://twitter.com/paulanthonywils/status/617375199965655040">July 4, 2015</a></blockquote>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">&quot;We had reactive programming in Erlang 25 years ago.&quot; —<a href="https://twitter.com/rvirding">@rvirding</a>, and I swear I didn&#39;t put him up to it. <a href="https://twitter.com/hashtag/PolyConf?src=hash">#PolyConf</a></p>&mdash; Bodil Stokke (@bodil) <a href="https://twitter.com/bodil/status/617385314018066432">July 4, 2015</a></blockquote>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">&quot;Any sufficiently complicated Program contains an ad hoc, informally-specified, bug-ridden, slow implementation of half of Erlang <a href="https://twitter.com/hashtag/PolyConf?src=hash">#PolyConf</a>&quot;</p>&mdash; Serge (@Creeonix) <a href="https://twitter.com/Creeonix/status/617396706276208640">July 4, 2015</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Not all videos have been uploaded yet, but you can already find some of them on
 [YouTube](https://www.youtube.com/user/polyconf/videos).
@@ -87,6 +98,8 @@ learn new stuff and I want to thank the organisers for putting so much work into
 it! Perhaps I will be able to return next year 😃
 
 [1]: https://pl.wikipedia.org/wiki/Collegium_Iuridicum_Novum_w_Poznaniu
+[2]: https://twitter.com/josevalim/status/617005499310063616
+[3]: https://twitter.com/bodil/status/617333049676726273
 [pc]: http://polyconf.com/
 [ps]: http://piwnastopa.pl/
 [wb]: https://twitter.com/webyrd
