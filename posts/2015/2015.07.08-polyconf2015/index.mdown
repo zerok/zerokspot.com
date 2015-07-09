@@ -2,7 +2,7 @@
 
 Last week I had a bit of an extended weekend in Poznan to attend this year's
 [PolyConf][pc], a conference for developers interested in polyglot software
-development. As such it is probably one of the best places to look beyond beyond
+development. As such it is probably one of the best places to look beyond
 your Tellerrand. The mantra here probably was something "Use the right tool for
 the job and don't be afraid of diverse systems". A big "Thank you" goes to
 [Netconomy][nc] for supporting this trip!
