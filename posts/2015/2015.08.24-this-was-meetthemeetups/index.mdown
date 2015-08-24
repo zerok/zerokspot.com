@@ -35,11 +35,9 @@ the catering and Mario and Betti who provided tasty and beautifully
 community-branded cakes and muffins!
 
 <figure>
-<div style="display:-webkit-flex; -webkit-flex-direction: row; display: flex;
-flex-direction: row; margin-bottom: 2px">
-<div style="-webkit-flex: 1; flex:1; margin-right: 2px;"><img alt="" src="2015-08-21 12.01.40.jpg"/></div>
-<div style="-webkit-flex: 1; flex:1; margin-left: 2px;"><img alt=""
-src="2015-08-21 12.01.48.jpg"/></div>
+<div style="width: 100%; overflow: hidden; margin-bottom: 2px;">
+<div style="float: left; width: 50%"><img alt="" src="2015-08-21 12.01.40.jpg" style="margin-right: 1px;"/></div>
+<div style="float: right; width: 50%"><img alt="" src="2015-08-21 12.01.48.jpg" style="margin-left: 1px;"/></div>
 </div>
 <img src="2015-08-21 12.01.59.jpg" alt=""/>
 <figcaption><p>The delicious cakes and muffins Betti and Mario prepared.</p></figcaption>
