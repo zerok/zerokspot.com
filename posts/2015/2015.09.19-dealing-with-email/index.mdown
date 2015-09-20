@@ -40,7 +40,9 @@ hanging around there.
 That's pretty much it! I don't use folders, tags, labels, or other
 organisational tools except for legacy mailinglist-subscriptions that I probably
 simply should get rid of eventually and bills as they are for some reason kind
-of special to me.
+of special to me and travel arrangements. The travel folders are mostly just a
+backup if both, Dropbox and Evernote, fail me and synchronizing the respective
+e-mail folder worked for some weird reason...
 
 This also has the advantage that I don't check my email constantly. I go over
 the inbox and then I don't care about it until I get a notification that
