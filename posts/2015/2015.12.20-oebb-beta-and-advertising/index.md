@@ -47,3 +47,20 @@ anybody telling you about that and why. "Feedback" is handled within
 Wordpress comments for the
 [respective blog posts](https://beta.oebb.at/feedback-fragen-zu-oebb-konto/)
 instead of using something designed for that task 😦
+
+In general it is a bit of a weird situation right now. I luckily could resolve
+my original issue thanks to some force-restarting and the new app is "fine" but
+feels a bit like a public beta.
+
+I definitely don't envy the people behind this beta. The old tickets app is
+probably something everyone who has a smartphone and uses trains has
+installed. Building a replacement for that is not an easy job. I just wish that
+it wouldn't all just look like a one-size-fits-all solution with the website and
+the mobile app being more or less identical.
+
+In any case I wish them luck (and budget) and really hope that the final product
+will be great 😊 It looks like it's heading that way but simply isn't there
+yet. Just please get a decent feedback system 😉
+
+P.S.: This is just a more verbose version of a piece of feedback I've already
+submitted to the Beta team.
