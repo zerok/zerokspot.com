@@ -51,10 +51,10 @@ whole expression which had some special cases that easily lead to errors.
 'lala'
 ```
 
-Since `.format` is an actual method and not an operator mapping to a binary
-method handling of arguments has become more explicit. If you pass a string, it
-is interpreted as a string. If you pass a tuple containing just one string, it
-is interpreted as a tuple containing one string:
+Since `.format` is a method and not an operator (which is mapped to a binary
+method), handling of arguments has become more explicit. If you pass a string,
+it is interpreted as a string. If you pass a tuple containing just one string,
+it is interpreted as a tuple containing one string:
 
 ```
 >>> "{}".format("lala")
