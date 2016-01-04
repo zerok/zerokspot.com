@@ -1,4 +1,4 @@
-# New String Formatting in Python
+# TIL: New String Formatting in Python
 
 For a language that claims to focus on one right way to handle most situations,
 string formatting in Python is quite a buffet and it's getting more diverse by
