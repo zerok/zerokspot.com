@@ -115,9 +115,9 @@ class date:
         return str(self)
 ```
 
-This allows you format dates directly within the "parent" string format so that
-you no longer have to first convert your date into a string and then pass that
-into the string formatter:
+This allows you to format dates directly within the "parent" string format so
+that you no longer have to first convert your date into a string and then pass
+that into the string formatter:
 
 ```
 import datetime
