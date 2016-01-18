@@ -5,7 +5,7 @@ for a minute or so), but when I first saw a trailer for [Steamworld Heist][swh]
 shortly before Christmas, I knew that time was about to end. Turns out, I was
 right and it was well worth it!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WJXVHEjzzXg" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" style="max-width:100%" src="https://www.youtube.com/embed/WJXVHEjzzXg" frameborder="0" allowfullscreen></iframe>
 
 Steamworld Heist is turn-based action/strategy game similar in some degree to
 [XCom][xceu] but in 2D. You control a crew of smuggler-robots that find
