@@ -15,9 +15,10 @@ you want to learn more, simply read that post and visit [pyformat.info][], which
 contains many more examples 😉
 
 Right after my talk, we had a quick introduction into some of the awesome things
-you can do with [Pandas][]. Sadly, I don't yet have anything to link to here,
-but I'll update this post as soon as I hear back from the presenter! Big thanks
-to him too for giving the talk!
+you can do with [Pandas][]. Big thanks to Moritz for that 😊 You can find his
+slides on our [mailinglist][].
+
+[mailinglist]: https://groups.google.com/forum/#!topic/python-graz/Tb4c3EpFp3E
 
 We also had three visitors from our [sibling usergroup in Vienna][vie] which
 come by every once in a while and who have their
