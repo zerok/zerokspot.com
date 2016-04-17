@@ -26,4 +26,15 @@ With [#1970](https://github.com/sphinx-doc/sphinx/issues/1970) the basic theme
 also received keyboard shortcuts for jumping from one topic to the next (and
 vice versa). I'm really tempted to port this feature to the
 sphinx\_rtd\_theme as this is what I'm using everywhere. The code looks to be
-highly portable 💖
+highly portable 💖 But that's not even necessary! The change was made to the
+`doctools.js` template directly so it should be available to most templates
+already. Just add this to your `conf.py`:
+
+```
+html_theme_options = {
+    'navigation_with_keys': True
+}
+```
+
+(or change your `html_theme_options` accordingly) and you will be able to jump
+to the previous/next page with the left/right arrow key.
