@@ -1,7 +1,7 @@
 # Quick switching to a project's directory
 
-During her [talk about containers and sandboxes][talk] at [CraftConf][] last
-Friday, Jess Frazelle used a little helper function in her shell to quickly
+During her awesome [talk about containers and sandboxes][talk] at [CraftConf][]
+last Friday, Jess Frazelle used a little helper function in her shell to quickly
 switch into a project's directory in her shell. This little gem can be found in
 her [dotfiles repository on github][gogo]. This implementation focuses on being
 able to easily get into a directory within her GOPATH.
