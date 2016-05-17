@@ -107,8 +107,8 @@ import:
   version: ~1
 ```
 
-So if version 1.20 is released and we last executed `glide get` or `glide
-update` with version 1.19, this dependency will be updated to 1.20. If you want
+So if version 1.20 is released and we last executed `glide get` or `glide update`
+with version 1.19, this dependency will be updated to 1.20. If you want
 to know more about the syntax Glide supports for specifying versions and version
 ranges, this has its own chapter in the [documentation][doc].
 
