@@ -77,5 +77,13 @@ I hope that Evernote will finally start to evolve again after these many years
 of stagnation and that I will get a chance to re-evaluate my opinion here, but
 I'm not holding my breath right now.
 
+Another service I considered no longer paying for was Github. I have been on
+their $7 USD plan for six years now, but they constantly improve their service
+and recently even changed their whole price model with great improvements for
+heavy personal users (with unlimited private repositories). That combined with
+their huge contributions to the OSS community worldwide makes justifying
+spending a couple of dollars each month to support them easy. Evernote doesn't
+have that for me anymore.
+
 [ann]: https://blog.evernote.com/blog/2016/06/28/changes-to-evernotes-pricing-plans/
 [forum]: https://discussion.evernote.com/topic/97236-changes-to-evernote%E2%80%99s-pricing-plans/
