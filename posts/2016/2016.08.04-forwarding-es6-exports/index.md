@@ -1,6 +1,6 @@
 # Forwarding ES6 exports
 
-Recently I stumbled upon a little feature within ES6's export statement that
+Recently I stumbled upon a little feature within ES6's [export statement][] that
 helps greatly with creating `index.js` files within a package. When you try to
 organise your modules into packages you usually end up creating `index.js` files
 that simply import elements from one sub-module and export them again.
@@ -50,3 +50,5 @@ export {executeSearch} from './search';
 ```
 
 Compact and readable 😊
+
+[export statement]: https://developer.mozilla.org/en/docs/web/javascript/reference/statements/export
