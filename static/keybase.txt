@@ -1,0 +1,72 @@
+==================================================================
+https://keybase.io/zerok
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://zerokspot.com
+  * I am zerok (https://keybase.io/zerok) on keybase.
+  * I have a public key with fingerprint 650C CB27 17EE 91B2 0052  E661 4F61 D46A B923 47C7
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "650ccb2717ee91b20052e6614f61d46ab92347c7",
+            "host": "keybase.io",
+            "key_id": "4f61d46ab92347c7",
+            "kid": "0101dacbd60a7d22cb72d3ca1d92c603136a05b1852bdadaed68f0b5584b33eb6a840a",
+            "uid": "4e53d8a0811da697976bfa107b8b0f00",
+            "username": "zerok"
+        },
+        "service": {
+            "hostname": "zerokspot.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1421011847,
+    "expire_in": 157680000,
+    "prev": "75efb82ecb9371eabf0aac31dfa6f73e076c3953e072c0236fe79446c87fce03",
+    "seqno": 19,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFtkntQVFUcx3loUEnihDmJBXPthQJz7r17Xzsaz9zdCbWmtMKZ8Jx7z10vj73r
+7vISSbJ2ghoaMMcKZhgIQiFRNIfJQsgZBpKV2YloIh1heCkF5CyQICB0LzVNf3T+
+Oef8ft/v53d+Z35lIYF+Af57YV/65a2mLn/Pb8jv9YsTpQUEUqV8wlhAZODVTVZs
+VuywOxSbizASLANEEVEcyWEskIgCgKEwy5IGmSUlAwuRQNEGTuSIaOKQ6tQdGgZB
+J45VVC2mXdIUSYv+jz5jNQFIQEpQRBILICdRlIg4SqJFSEoCJbKAJmkWAgaRPEMh
+CUoQSywvA8QwvAHRNEYs5A0Aarjsv+tghpZ4CHhSo7ICJ3AskiEJOMQjIAOgC53Y
+YYNZWFMfwQ41gyiMJrRQjiJivX+9jf+mnXbVFSuqWZrT7lBdqqhmaqlDLpfdqDtd
++XZdmotR2j+QNKTYJO0TNUMOdjgV1UYYSU0puhSdShoorWWSN3DRBM6zKw6cpugK
+hmN5oC29DM7RkByDZcRTWEQCzZEYIhlAKNKkJENW5mgMOFakBUY/UCKgaFbGnGAw
+sCLPySIGNKG3ddimamxBeye0akynYrVBV7YDE4WP+JUEbAxcuzoE/05FgHX3+pX4
+de7tKfuCh8Lqw7NNx7ZC09WPknauY9aE9XuKfE/lfppcnN4edOPsw5MNtcr+MzFU
+Sn7lV/M89W4041nxdX67UnA+6NwTbWjj0boPnBODwW0jT5q/qH+stVb1bNnRMOS+
+R8aPuJvamcX+6gg0gr2/48Scmpu5KYWn3/7kUfMaq3tt+dR3S1GwyZc/dqP71kyl
+sSjwywW5oDQ05AXf0j5f6i6UWxTdPnu+7JWZmvXmPRcC20xv9lbEnft8eaxuoOq1
+se4KaZsh/PpCVJxlx1v1LXsuXXv82nSrsZ7aUiv3e2bu7/1jPnmusfrO2HOm6Zc9
+VRYixypEPNhd2LghbORAVcJ4xcJ73zeZH1DL1UF2c2roZsNCb8bQROEgKOr52jHo
+PVBVMhrp6COSS/e3nurtKErsSeh72vvnXSnh49bFsk3zJyrd2W907wq55R1PNJ6h
+alpc4w9tL5kY3tzZMBnEpt/p6jic1/Nr7e1jmdfjhnfOhVuSLpR3LGbN+Tpn+8ZP
+xsOVE4uTp5apqc+i4t8vPs3UDQsHb58Mfakt03v/x7uv/mR0EpnEkdgfnO8Mp/yS
+smHgSiBf3nXxaHFM8FX/Z1VbxKxlVAh68fiHSy28+3njzeax3uZNXR2Xpyx5286G
+3fvG6BxN6k8yXYqcjhno+Lk5u9VrA41tsnww9ZmYKyXHI/PLzH8B
+=9XTT
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/zerok
+
+==================================================================
+

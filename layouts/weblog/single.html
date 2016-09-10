@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{ partial "head.html" }}
+    <body>
+        <div class="page page--single">
+            {{ partial "header.html" }}
+            <div id="body">
+                <article class="article--frontpage">
+                    <header>
+                        <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+                        <p class="article__meta">
+                            Posted on {{ .Date.Format "Jan 2, 2006" }}
+                            {{ if .Params.tags }}
+                            <br>Tags: {{ range .Params.tags }}<a href="/tags/{{ .|urlize }}">{{ . }}</a> {{ end }}
+                            {{ end }}
+                        </p>
+                    </header>
+                    <div class="article__content">{{ .Content }}</div>
+                </article>
+            </div>
+            {{ partial "footer.html" }}
+        </div>
+    </body>
+</html>

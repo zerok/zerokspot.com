@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{ partial "head.html" }}
+    <body>
+        <div class="page page--frontpage">
+            {{ partial "header.html" }}
+            <div id="body">
+                <h1>Welcome!</h1>
+                <div class="frontpage__welcome page__intro">
+                    <p>This is the weblog of Horst Gutmann. Here I write as
+                    often as possible about various topics. The focus is usually
+                    around various technologies and development workflows but I
+                    might add the odd book review and other posts from time to
+                    time.</p>
+                </div>
+                <div class="row row--first">
+                    <section id="recent">
+                        <ul class="page__listing--mini">
+                        {{ range first 10 (where .Data.Pages "Section" "weblog") }}
+                        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <time>{{ .Date.Format "Jan 02, 2006" }}</time></li>
+                        {{ end }}
+                        </ul>
+                        <a class="more" href="/weblog/">more posts...</a>
+                    </section>
+                    <aside>
+                    <section id="tags">
+                        <p>And here a list of the most popular categories/tags I've used throughout the years:</p>
+                        <p>
+                        {{ range first 20 .Site.Taxonomies.tags.ByCount }}
+                        <a href="/tags/{{ .Name }}/">{{ .Name }}</a> <i class="count">({{ .WeightedPages|len }})</i>
+                        {{ end }}
+                        </p>
+                    </section>
+                    </aside>
+                </div>
+            </div>
+            {{ partial "footer.html" }}
+        </div>
+    </body>
+</html>

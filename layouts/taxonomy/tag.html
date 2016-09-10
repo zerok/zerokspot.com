@@ -1,0 +1,23 @@
+<!DOCTYPE html>{{ $.Scratch.Set "isArchive" true }}
+<html lang="en">
+    {{ partial "head.html" . }}
+    <body>
+        <div class="page page--archive">
+            {{ partial "header.html" $ }}
+            <div id="body">
+                <h1>Archive for "{{ .Title }}"</h1>
+                {{ range .Data.Pages.GroupByDate "2006" }}
+                <section class="archive__year" id="{{ .Key }}">
+                <h2><a href="#{{ .Key }}">{{ .Key }} <i class="count">({{ len .Pages }})</i></a></h2>
+                <ul class="page__listing page__listing--mini">
+                    {{ range .Pages }}
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <time>{{ .Date.Format "Jan 02, 2006" }}</time></li>
+                    {{ end }}
+                </ul>
+                </section>
+                {{ end }}
+            </div>
+            {{ partial "footer.html" }}
+        </div>
+    </body>
+</html>

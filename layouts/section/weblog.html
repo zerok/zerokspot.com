@@ -1,0 +1,27 @@
+<!DOCTYPE html>{{ $.Scratch.Set "isArchive" 1 }}
+<html lang="en">
+    {{ partial "head.html" }}
+    <body>
+        <div class="page page--archive">
+            {{ partial "header.html" $ }}
+            <div id="body">
+                <h1>Archive</h1>
+                <div class="page__intro">
+                    <p>Here you can find a listing of all the posts I've written over the years. Especially in early year's this blog
+                        was mostly a link-dump but in recent year's there might be something interesting here for you to read... hopefully.</p>
+                </div>
+                {{ range .Data.Pages.GroupByDate "2006" }}
+                <section class="archive__year" id="{{ .Key }}">
+                <h2><a href="#{{ .Key }}">{{ .Key }} <i class="count">({{ len .Pages }})</i></a></h2>
+                <ul class="page__listing page__listing--mini">
+                    {{ range .Pages }}
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <time>{{ .Date.Format "Jan 02, 2006" }}</time></li>
+                    {{ end }}
+                </ul>
+                </section>
+                {{ end }}
+            </div>
+            {{ partial "footer.html" $ }}
+        </div>
+    </body>
+</html>
