@@ -1,0 +1,5 @@
+baseurl = "https://zerokspot.com/"
+languageCode = "en-us"
+title = "zerokspot.com"
+[permalinks]
+weblog = "/weblog/:year/:month/:day/:filename/"

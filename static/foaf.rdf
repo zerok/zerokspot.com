@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rdf:RDF
+    xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/">
+
+    <foaf:PersonalProfileDocument rdf:about="">
+        <foaf:maker rdf:resource="#me"/>
+        <foaf:primaryTopic rdf:resource="#me"/>
+    </foaf:PersonalProfileDocument>
+
+    <foaf:Person rdf:ID="me">
+        <foaf:name xml:lang="de">Horst Gutmann</foaf:name>
+        <foaf:nickname>zerok</foaf:nickname>
+        <foaf:gender>male</foaf:gender>
+        <foaf:homepage rdf:resource="http://zerokspot.com/" />
+        <foaf:mbox_sha1sum>be4709ba35423b80680e712c5ee7a1620bbaed94</foaf:mbox_sha1sum>
+        <foaf:mbox_sha1sum>f62abacd34345cddf473a0b424e84393907a4718</foaf:mbox_sha1sum>
+        <foaf:mbox_sha1sum>d90c63159fb254dc7286fffc1eb8f518b6f96146</foaf:mbox_sha1sum>
+        <foaf:workplaceHomepage rdf:resource="http://m3-systems.com/" />
+        <foaf:jabberID>zerok@zerokspot.com</foaf:jabberID>
+        <foaf:holdsAccount>
+            <foaf:OnlineAccount>
+                <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/OnlineChatAccount"/>
+                <foaf:accountServiceHomepage rdf:resource="http://www.freenode.net/irc_servers.shtml"/>
+                <foaf:accountName>zerok</foaf:accountName>
+            </foaf:OnlineAccount>
+        </foaf:holdsAccount>
+        <foaf:holdsAccount rdf:resource="http://djangopeople.net/zerok/" />
+        <foaf:holdsAccount rdf:resource="http://delicious.com/zeroK" />
+        <foaf:holdsAccount rdf:resource="http://www.flickr.com/photos/zerok/" />
+        <foaf:holdsAccount rdf:resource="http://github.com/zerok/" />
+        <foaf:holdsAccount rdf:resource="http://www.bitbucket.org/zerok/" />
+        <foaf:holdsAccount rdf:resource="http://last.fm/user/zsHorst" />
+    </foaf:Person>
+</rdf:RDF>

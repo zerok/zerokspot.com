@@ -1,0 +1,182 @@
+@mixin content-title {
+    font-size: 275%;
+    font-family: $serif;
+    text-align: center;
+    margin-bottom: 2px;
+    line-height: 45px;
+}
+
+@mixin content-content {
+    line-height: 30px;
+    font-size: 17px;
+
+    section h1, h2, h3, h4, h5, h6 {
+        clear: both;
+        margin: 40px 0 15px 0;
+        border-bottom: 1px solid #888;
+    }
+    h2 {
+        font-size: 175%;
+    }
+    h3 {
+        font-size: 150%;
+    }
+    h4 {
+        font-size: 120%;
+        background: transparent;
+    }
+    h5 {
+        font-weight: bold;
+    }
+
+    p, ol, ul, table, dl,  blockquote, pre, .figure, figure {
+        margin-bottom: 1em;
+    }
+
+    .note {
+        margin: 1em;
+        border: 2px solid #CCC;
+        background: #EFEFEF;
+        padding: 10px;
+        .admonition-title {
+            font-size: 110%;
+            font-weight: bold;
+            font-style: italic;
+        }
+    }
+
+    strong {
+        font-weight: bold;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    ul, ol {
+        list-style: circle;
+        padding-left: 2em;
+        li {
+            margin-top: 10px;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+    ol {
+        list-style: decimal;
+        ol {
+            list-style: lower-alpha;
+        }
+    }
+    blockquote {
+        font-family: $body-font;
+        font-style: italic;
+        padding-left: 2em;
+        font-size: 95%;
+        margin: 3em 0;
+        color: $quote-fg;
+        border-left: 8px solid lighten($link-fg, 50);
+        em {
+            font-style: normal;
+        }
+        cite {
+            display: block;
+            text-align: right;
+            font-size: 90%;
+        }
+    }
+    .field-list {
+        width: 100%;
+        border: 1px solid #BBB;
+        .field {
+            border-top: 1px solid #BBB;
+            &:first-child {
+                border-top: none;
+            }
+            .field-name {
+                background: #EEE;
+                font-weight: bold;
+                width: 25%;
+            }
+            .field-name, .field-body {
+                padding: 3px 10px;
+            }
+
+        }
+    }
+
+    pre {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+        margin: 30px 0;
+        border: 1px solid #DDD;
+        padding: 1em;
+        line-height: 1.3em;
+        overflow: hidden;
+        &:hover {
+            overflow: auto;
+        }
+    }
+
+    code {
+        font-family: "Consolas", "Monaco", "Andale Mono", monospace;
+        white-space: pre;
+        display: inline-block;
+        background: #EEE;
+    }
+
+    pre code {
+        display: block;
+        background: #444;
+        color: #EEE;
+        padding: 1em;
+        overflow: hidden;
+        &:hover {
+            overflow: auto;
+        }
+    }
+
+    .sourcecode pre {
+        border-left: 10px solid #DDD;
+        background: #EAEAEA;
+    }
+    .left, .right {
+        float: left;
+        margin: 0 10px 10px 0;
+        border: 1px solid #DDD;
+        background: #FFF;
+        padding: 5px;
+    }
+    .right {
+        float: right;
+        margin: 0 0 10px 10px;
+    }
+    .figure, figure {
+        display: block;
+        text-align: center;
+        border: 1px solid #DDD;
+        background: #EFEFEF;
+        padding: 5px;
+        figcaption {
+            margin-top: 5px;
+            border-top: 1px solid #DDD;
+        }
+        p {
+            margin-bottom: 0;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+            margin: auto;
+        }
+    }
+    abbr {
+        border-bottom: 1px dashed #666;
+        cursor: help;
+    }
+    .fineprint {
+        font-size: 80%;
+        color: #888;
+    }
+}

@@ -1,0 +1,44 @@
+.page__header {
+    background: #F1F1F1;
+    height: 45px;
+    position: relative;
+    margin-bottom: 60px;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    li {
+        display: inline-block;
+        margin-right:1px;
+    }
+
+    a {
+        display: block;
+        line-height: 45px;
+        height: 45px;
+        padding: 0 20px;
+        color: #FFFFFF;
+        font-weight: bold;
+        text-transform: lowercase;
+        text-decoration: none;
+        background-color: $menuitem-bg;
+        border-bottom: 5px solid lighten($menuitem-bg, 20);
+    }
+
+    .active a, a:hover {
+        background-color: $menuitem-bg-hi;
+        border-bottom: 5px solid lighten($menuitem-bg-hi, 20);
+    }
+
+    #nav-start {
+        background-color: $red;
+        border-bottom: 5px solid lighten($red, 40);
+
+        &:hover {
+            border-bottom: 5px solid lighten($red, 20);
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans%7CUbuntu" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/main.css" media="screen">
+    <base href="{{ .Site.BaseURL }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weblog - zerokspot.com</title>
+    <link type="text/plain" rel="author" href="http://zerokspot.com/humans.txt">
+    <link rel="alternate" href="/index.xml" type="application/atom+xml" title="Latest posts">
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ if .RSSlink }}<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
+</head>
