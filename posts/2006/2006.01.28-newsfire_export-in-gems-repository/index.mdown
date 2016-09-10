@@ -1,6 +1,0 @@
-# newsfire_export in gems repository
-
-Just wanted to let you know: The gem has made it into the gems.rubyforge.org repository and you can now install newsfire_export with `sudo gem install newsfire_export` without have to download the gem first :D
-
--------------------------------
-

@@ -1,9 +1,0 @@
-{
-    "language": "en", 
-    "tags": [
-        "contentnegotiation", 
-        "django", 
-        "django-zsutils", 
-        "http"
-    ]
-}
