@@ -1,6 +1,6 @@
 # There's a new Django Podcast in town
 
-<img src="logo.png" alt="" style="margin:0 10px 10px 10px; float:left" />When "This week in Django" by Eric Florenzano, Brian Rosner and Michael Trier ended I was pretty  sad. I really enjoyed my weekly dose of the Django community as audio. But now there is a new podcast about Django called ["A Django Podcast"](http://3rdaverad.io/shows/django-podcast/) by [Greg Aker](http://www.gregaker.net/) and [Bryan Helmig](http://bryanhelmig.com/) with one topic a week for not longer than 30 minutes released on [Jeff Croft](http://jeffcroft.com/)'s podcast network [3rd avenue radio](http://3rdaverad.io/). 
+<img src="djangopodcast_logo.png" alt="" style="margin:0 10px 10px 10px; float:left" />When "This week in Django" by Eric Florenzano, Brian Rosner and Michael Trier ended I was pretty  sad. I really enjoyed my weekly dose of the Django community as audio. But now there is a new podcast about Django called ["A Django Podcast"](http://3rdaverad.io/shows/django-podcast/) by [Greg Aker](http://www.gregaker.net/) and [Bryan Helmig](http://bryanhelmig.com/) with one topic a week for not longer than 30 minutes released on [Jeff Croft](http://jeffcroft.com/)'s podcast network [3rd avenue radio](http://3rdaverad.io/).
 
 Logo screenshot from the [podcast's website](http://3rdaverad.io/shows/django-podcast/).
 

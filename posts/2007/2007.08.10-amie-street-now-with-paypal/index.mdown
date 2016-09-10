@@ -1,6 +1,6 @@
 # Amie Street now with PayPal
 
-<img src="amiestr.png" alt="" class="left" />A couple of days ago the independent music shop [Amie Street](http://amiestreet.com) [launched](http://amiestreet.com/blog/post/a-whole-new-amie-street) a new design which improved the whole experience quite a bit. But the layout was not the only aspect that got polished ...
+<img src="amiestr_logo.png" alt="" class="left" />A couple of days ago the independent music shop [Amie Street](http://amiestreet.com) [launched](http://amiestreet.com/blog/post/a-whole-new-amie-street) a new design which improved the whole experience quite a bit. But the layout was not the only aspect that got polished ...
 
 -------------------------------
 
