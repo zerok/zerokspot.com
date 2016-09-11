@@ -8,7 +8,6 @@ tags:
 title: Exploring San Francisco
 ---
 
-
 <figure>
 <img src="http://photos.h10n.me/Conferences/FluentConf-2014/i-pcSz6tj/0/L/DSC02486-L.jpg" alt="" />
 </figure>
@@ -17,8 +16,6 @@ Last month together with [Mario][20] I attended FluentConf (more on that perhaps
 in another post) and we were able to pad the conference trip with a couple of
 vacation days to explore San Francisco. Neither of us had previously visited the
 city so there was much to see, eat, drink, and in general spend money on.
-
-------
 
 Given that I normally tend to just ramble on and switch from one topic to
 another in my longer posts I thought I'd try to give this one a slightly more

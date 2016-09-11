@@ -3,6 +3,7 @@ date: '2016-04-25T18:44:15+02:00'
 language: en
 tags:
 - golang
+- development
 title: GOPATH, Vendoring, oh my...
 ---
 

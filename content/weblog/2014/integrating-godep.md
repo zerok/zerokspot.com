@@ -3,9 +3,9 @@ date: '2014-05-31T15:09:55+02:00'
 language: en
 tags:
 - golang
+- development
 title: Integrating godep into my toolchain
 ---
-
 
 Coming from Python and more recently NodeJS I've come to appreciate tools like
 [npm][] that allow you to easily manage all your project's dependencies into
@@ -26,8 +26,6 @@ far I've got.
 
 Oh, and I know about [gom][], but simply haven't had yet the time to look into
 it yet. godep simply came first for me :)
-
------------------
 
 ## How to integrate it with GoSublime
 

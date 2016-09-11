@@ -7,6 +7,7 @@ tags:
 - travel
 - budapest
 - conference
+- development
 title: This was DjangoCon Europe 2016
 ---
 

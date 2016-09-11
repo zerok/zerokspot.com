@@ -7,6 +7,7 @@ tags:
 - javascript
 - travel
 - vienna
+- development
 title: Visiting ViennaJS
 ---
 

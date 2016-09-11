@@ -2,9 +2,13 @@
 date: '2014-08-02T22:06:38+02:00'
 language: en
 rating: 2
+tags:
+- books
+- review
+- development
+- java
 title: Functional Thinking by Neal Ford; O'Reilly Media
 ---
-
 
 <img src="/media/2014/thumb.gif" alt="" style="float:left; margin: 0 1em 1em 0"/>
 In this 180 pages book Neal Ford tries to introduce the reader to functional
@@ -17,8 +21,6 @@ After that the book is all about actual language constructs like closures,
 memoization, and lazyness (as in lazy evaluation of expressions) that are
 rather hard to implement in non-functional environments without making them
 appear clumsy.
-
-----------------
 
 **Disclaimer:** I got this book as a review-copy from O'Reilly as part of their
 reviewer programme.

@@ -3,6 +3,7 @@ date: '2014-08-22T21:45:47+02:00'
 language: en
 tags:
 - xml
+- development
 title: xml:base
 ---
 
@@ -24,8 +25,6 @@ such a base path not just for the whole document but *for every node* with the
     <img src="image.png" />
 </container>
 ```
-
----------------
 
 If the `img[src]` attribute is interpreted as a link, then the resulting path
 here is `http://zerokspot.com/image.png`.

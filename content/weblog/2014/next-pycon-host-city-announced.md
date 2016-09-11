@@ -4,9 +4,9 @@ language: en
 tags:
 - pycon
 - python
+- conference
 title: PyCon 2015/16 host city announced
 ---
-
 
 On Wednesday the [PSF announced the host city for PyCons 2015 and 2016][1]
 following Montréal: [Portland, Oregon][2]. I've never been there and that is the

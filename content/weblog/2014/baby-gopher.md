@@ -3,9 +3,9 @@ date: '2014-01-26T13:22:12+01:00'
 language: en
 tags:
 - golang
+- development
 title: Admit to be a Baby Gopher
 ---
-
 
 It seems like many people are trying to get into [Go][1] right now and I'm
 pretty sure that quite a few of them learn the same way as I do: Skimming

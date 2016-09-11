@@ -4,6 +4,8 @@ language: en
 tags:
 - cardiff
 - doctorwho
+- travel
+- scifi
 title: The Doctor Who Experience
 ---
 

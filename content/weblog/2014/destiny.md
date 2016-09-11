@@ -4,9 +4,9 @@ language: en
 tags:
 - gaming
 - destiny
+- scifi
 title: The Destiny Post
 ---
-
 
 I've been thinking about how to write this post for quite a while after I got
 [Destiny][2] for the PS4 on launch-day and the reviews started to hit the net.
@@ -17,8 +17,6 @@ Sadly, they couldn't really deliver. The game has very little content compared
 to any game in the Halo series and the level-grinding stops to be fun once you
 hit level 20. There are far too many currencies and affiliation ranks you have
 to collect/climb up to get the better gear.
-
----------------
 
 For these ranks you normally have to collect so-called "bounties", like
 finishing a certain amount of fetch-quests on one planet, which give you more

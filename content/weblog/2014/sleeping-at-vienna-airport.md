@@ -10,8 +10,6 @@ title: Sleeping at Vienna Airport
 
 <img src="http://photos.h10n.me/Conferences/DjangoWeekend-2014/i-wbw5KZF/0/S/DSC01779-S.jpg" class="left" style="float:left; margin-right: 1em; max-width:200px" alt=""/>Getting to Cardiff from Graz is quite hard if you don't want to lose a whole day. So I opted to first go to Vienna by train and then from there take a plane to London with a Bus ride being the last leg of the journey. This way I could leave the office at around 17:30 on Thursday and be in Cardiff the next day at noon. Sadly, the first flight out from Vienna to London is really early (06:40am) and having to be at the airport at around 05:30 to make it through all the post-9/11 security kind of destroys any hope on getting a cheap *and* good hotel for the night while using public transport ;-)
 
----------------
-
 If you are in the same situation, [Vienna Airport][2] is actually a good place for you, esp. if you're leaving from one of the G gates. Besides the new nice cots at every second third gate or so there is also [a room at the very end of terminal][1] that is designated as a relaxation room so you're supposed to be able to sleep in there.
 
 <figure>

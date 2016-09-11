@@ -3,6 +3,7 @@ date: '2014-02-10T19:30:25-00:00'
 language: en
 tags:
 - django
+- development
 title: Skipping validators in Django forms/models
 ---
 
@@ -22,8 +23,6 @@ class UserProfile(models.Model):
 What's great about this API is that it encourages the creation of tiny, self-contained value-checks that are easily testable. Both, `check_format` and `check_minimum_resolution`, can be tested independently of each other without running into tests that might mix up cases from the other.
 
 The downside of the current implementation in Django is, that *all* validators are always executed, no matter if a previous one already reported an error and therefor the field's value can no longer end up being. Normally, this isn't really an issue but it might become one if one of you validators is rather expensive.
-
------------
 
 In our previous example we had two checks: One for the format of a file and one for the image's resolution. While the first validator can (in a rather naive implementation) be as simple as checking the file's extension, the latter really requires that we open the file and look at its content. Ideally, we'd want to avoid this if the format is not supported anyway.
 

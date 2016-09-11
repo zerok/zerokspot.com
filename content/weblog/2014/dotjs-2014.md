@@ -8,6 +8,7 @@ tags:
 - travel
 - conference
 - javascript
+- development
 title: dotJS 2014
 ---
 
@@ -23,8 +24,6 @@ As the name indicates, [dotJS][] is organised by the same folks as last month's
 [dotGo][]. Unlike that event it was focused on JavaScript and took place at the
 [Théâtre de Paris][tdp], situated near Gare Saint-Lazare in the north of the
 city.
-
------------------
 
 Compared to the [Théâtre des Variétés][tdv] the Théâtre de Paris was built to
 accommodate about twice as many people and that was absolutely necessary with

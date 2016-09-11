@@ -9,9 +9,9 @@ tags:
 - conference
 - berlin
 - travel
+- development
 title: EuroPython Conference Software Sprint in Berlin
 ---
-
 
 The software used for this year's [EuroPython conference][3] website is actually
 a continuation of what was original developed by [Markus Zapke-Gründemann][5]

@@ -3,9 +3,9 @@ date: '2014-09-27T11:15:43+02:00'
 language: en
 tags:
 - vim
+- development
 title: Learning VIM (again) in 2014
 ---
-
 
 I've used [VIM][3] for a really long time. I think the first time I used it for
 more than just editing a file on some server must have been in the early 2000s

@@ -3,9 +3,12 @@ date: '2014-01-01T12:43:23+01:00'
 language: en
 tags:
 - resolutions
+- golang
+- travel
+- conference
+- books
 title: Goals for 2014
 ---
-
 
 Haven't done something like this for a while but at least at that I succeeded
 last year. Anyway, I thought about finally writing some of my goals for this

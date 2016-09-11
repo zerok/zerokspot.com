@@ -4,6 +4,7 @@ language: en
 tags:
 - toml
 - configuration
+- development
 title: TOML - The other configuration language
 ---
 
@@ -14,8 +15,6 @@ language") is a new entry into the field with an age of just about a year. It
 was created by Tom Prescot-Werner, previously of Github, and is basically
 the good old INI format but with more data structures and different
 string handling.
-
--------------
 
 ```
 # What would be described as a section in INI/CFG files are simple hashmaps
