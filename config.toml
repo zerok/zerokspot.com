@@ -1,5 +1,7 @@
 baseurl = "https://zerokspot.com/"
 languageCode = "en-us"
 title = "zerokspot.com"
+metaDataFormat = "yaml"
+
 [permalinks]
 weblog = "/weblog/:year/:month/:day/:filename/"
