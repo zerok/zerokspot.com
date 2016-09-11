@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="/css/main.css" media="screen">
     <base href="{{ .Site.BaseURL }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Weblog - zerokspot.com</title>
+    <title>{{ if .Title }}{{ .Title }} - {{ end }}zerokspot.com</title>
     <link type="text/plain" rel="author" href="http://zerokspot.com/humans.txt">
     <link rel="alternate" href="/index.xml" type="application/atom+xml" title="Latest posts">
     <link rel="canonical" href="{{ .Permalink }}">
