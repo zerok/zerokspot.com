@@ -5,6 +5,9 @@ tags:
 - python
 - pycon
 - travel
+- conference
+- canada
+- montreal
 title: PyCon 2014
 ---
 

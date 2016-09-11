@@ -6,7 +6,8 @@ tags:
 - django
 - djangocon
 - cardiff
-- travelling
+- travel
+- conference
 title: This was DjangoCon Europe 2015
 ---
 

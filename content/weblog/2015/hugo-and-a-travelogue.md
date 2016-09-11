@@ -4,6 +4,7 @@ language: en
 tags:
 - zerokspot
 - travelogue
+- travel
 title: Hugo and a Travelogue
 ---
 

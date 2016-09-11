@@ -7,6 +7,7 @@ tags:
 - cardiff
 - conference
 - travel
+- conference
 title: Django Weekend 2014 in Cardiff
 ---
 

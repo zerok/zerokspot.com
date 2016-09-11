@@ -6,6 +6,7 @@ tags:
 - travel
 - prague
 - conference
+- documentation
 title: I loved WriteTheDocs Europe 2015
 ---
 

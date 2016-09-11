@@ -3,6 +3,10 @@ date: '2014-07-10T23:09:13+02:00'
 language: de
 tags:
 - pygraz
+- meetup
+- community
+- python
+- german
 title: PyGraz Zukunft
 ---
 

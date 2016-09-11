@@ -6,6 +6,7 @@ tags:
 - fosdem
 - belgium
 - brussels
+- conference
 title: Back from FOSDEM
 ---
 

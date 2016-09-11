@@ -4,7 +4,8 @@ language: en
 tags:
 - fosdem
 - conference
-- traveling
+- travel
+- brussels
 title: This was FOSDEM 2015
 ---
 

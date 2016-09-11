@@ -2,10 +2,11 @@
 date: '2015-08-24T21:01:18+02:00'
 language: en
 tags:
-- meetthemeetups
+- meet-the-meetups
 - netconomy
 - community
 - event
+- meetup
 title: 'MeetTheMeetups: A BBQ for the Community'
 ---
 

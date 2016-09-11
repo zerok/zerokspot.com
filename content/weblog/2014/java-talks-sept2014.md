@@ -5,6 +5,7 @@ tags:
 - java
 - usergroup
 - graz
+- meetup
 title: 'Java User Group Graz: Java Talks'
 ---
 

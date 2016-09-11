@@ -7,6 +7,7 @@ tags:
 - travel
 - conference
 - ep14
+- berlin
 title: That was EuroPython 2014
 ---
 
@@ -140,7 +141,7 @@ that myself due to being tired as hell but I heard the fun continued deep into
 the night... and rightly so!
 
 Well, that was EP2014 for me. What will happen next year? Only time will tell
-and the output of the EPS' [CFP][]. In the mean time, I want to thank everyone 
+and the output of the EPS' [CFP][]. In the mean time, I want to thank everyone
 who made this great event possible. I really enjoyed the last week and would
 love to repeat it next year :-)
 

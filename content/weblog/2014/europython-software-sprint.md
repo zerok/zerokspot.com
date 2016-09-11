@@ -6,6 +6,9 @@ tags:
 - django
 - europython
 - sprint
+- conference
+- berlin
+- travel
 title: EuroPython Conference Software Sprint in Berlin
 ---
 

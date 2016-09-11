@@ -7,6 +7,7 @@ tags:
 - paris
 - travel
 - conference
+- javascript
 title: dotJS 2014
 ---
 
