@@ -4,11 +4,8 @@ language: de
 tags:
 - graz
 - python
-title: null
+title: Eine Python-Usergroup für Graz
 ---
-
-Eine Python-Usergroup für Graz
-==============================
 
 Irgendwie ist es seltsam. Graz ist eine Studentenstadt und auch in technischer
 Hinsicht mit Einrichtungen wie Joanneum Research und der TU-Graz nicht von
