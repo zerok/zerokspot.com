@@ -4,6 +4,7 @@ language: en
 tags:
 - til
 - fishshell
+- development
 title: fish shell functions are magical!
 ---
 

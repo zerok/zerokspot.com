@@ -13,8 +13,6 @@ For the second year in a row now I’ve participated in GoodReads’ yearly
 target pretty much spot-on. Well, OK, last year I managed to read 23 out of 20
 books but this year’s 25 out of 25 was well on-target.
 
-----------------
-
 The reason why I will continue participating is that it gently forces me to read
 which is a completely different kind of recreation from watching movies or
 playing video games for me. It is much more relaxing perhaps because it pulls me

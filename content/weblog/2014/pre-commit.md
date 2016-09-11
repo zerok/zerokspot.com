@@ -3,17 +3,15 @@ date: '2014-12-13T23:13:33+01:00'
 language: en
 tags:
 - git
+- development
 title: Getting to know pre-commit
 ---
-
 
 Getting your whole team to use the same set of client-side hook scripts when
 working with Git is not a simple task. That's why I was really grateful when I
 stumbled upon the [pre-commit][pc] project by yelp. This project offers some
 tools for managing your pre-commit hooks and facilitates sharing them between
 multiple projects and developers.
-
-------------------------------
 
 ## Setup
 

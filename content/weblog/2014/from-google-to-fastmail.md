@@ -8,11 +8,7 @@ tags:
 title: From Google To Fastmail
 ---
 
-
-
 I've been using *Google Apps for Domains* for [nearly 7 years][2] now and it has served me well over the years. Except for some minor issues it was my go-to location for when I bought a new domain and wanted to put hosted emails behind it. Then, in December 2012 Google announced that they would [discontinue the free version][1] of this service most likely in favor of pushing more people towards the simpler default GMail service.
-
----------
 
 ## Looking for alternatives
 

@@ -4,6 +4,7 @@ language: en
 tags:
 - javascript
 - es6
+- development
 title: Forwarding ES6 exports
 ---
 

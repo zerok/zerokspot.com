@@ -4,6 +4,7 @@ language: en
 tags:
 - startrek
 - book
+- scifi
 title: 'Star Trek: Seekers'
 ---
 
@@ -20,7 +21,7 @@ assigned to Starbase 47: The Endeavour and the Sagittarius, exploring strange ne
 worlds within the Taurus Reach. From what it looks like after the first two
 books, the story might end being a continuous one, which I always loved about
 the Vanguard series. The first two books even started off with a cross-reference
-to one of the mystery from that era: The [Preservers][2]. 
+to one of the mystery from that era: The [Preservers][2].
 
 Compared to something like the Destiny series, Seekers is definitely more
 trigger-happy, bringing it more in line with the Enterprise than Vanguard did.

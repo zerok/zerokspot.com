@@ -4,6 +4,7 @@ language: en
 tags:
 - redis
 - gis
+- development
 title: Fun with Redis' Geo Features
 ---
 

@@ -4,6 +4,7 @@ language: en
 tags:
 - emacs
 - til
+- development
 title: 'TIL: Custom keybindings per mode'
 ---
 

@@ -5,6 +5,7 @@ tags:
 - django-channels
 - django
 - djangocon
+- development
 title: Channels in Docker example
 ---
 

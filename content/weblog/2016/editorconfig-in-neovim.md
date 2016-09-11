@@ -7,6 +7,7 @@ tags:
 - vim
 - editorconfig
 - tooling
+- development
 title: EditorConfig in NeoVIM
 ---
 

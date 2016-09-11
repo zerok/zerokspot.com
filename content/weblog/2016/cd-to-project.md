@@ -5,6 +5,7 @@ tags:
 - zsh
 - productivity
 - craftconf
+- development
 title: Quick switching to a project's directory
 ---
 

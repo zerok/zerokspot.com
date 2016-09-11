@@ -2,6 +2,10 @@
 date: '2016-01-01T14:35:27+01:00'
 language: en
 title: 2015 in Retrospect
+tags:
+- conference
+- travel
+- resolutions
 ---
 
 Wow, 2015 is already over and it once again feels like one of these years were I

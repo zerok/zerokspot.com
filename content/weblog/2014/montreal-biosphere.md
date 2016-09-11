@@ -5,7 +5,7 @@ tags:
 - travel
 - montreal
 - canada
-title: "Montr\xE9al's Biosphere"
+title: "Montréal's Biosphere"
 ---
 
 

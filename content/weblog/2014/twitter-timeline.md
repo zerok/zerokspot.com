@@ -13,8 +13,6 @@ gets in there is me by following people who post content I want to have in
 there. And the order is only determined by when they make such a post. No
 curation, no filtering, no re-ordering based on my previous likes.
 
----------------
-
 Sadly, this hasn't been completely true for a really long time now with the
 introduction of ["Promoted tweets"][pt] back in [2010][pti].
 

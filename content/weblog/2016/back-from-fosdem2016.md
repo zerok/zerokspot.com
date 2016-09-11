@@ -2,6 +2,7 @@
 date: '2016-02-05T15:28:55+01:00'
 language: en
 tags:
+- development
 - travel
 - fosdem
 - belgium

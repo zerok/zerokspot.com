@@ -9,7 +9,6 @@ tags:
 title: Exploring Montreal and Toronto
 ---
 
-
 When writing about a conference or other events I attend in some city I've never
 been to, I'm trying to keep that post focused exclusively on the event itself
 and then follow it up with a separate one about the trip itself. For some reason
@@ -17,7 +16,6 @@ I forgot doing that for my trip to [PyCon][pyc] this April where [Ulrich
 Petri][ulope] and I first explored Montreal (where the conference took place)
 and later Toronto. So here we go: Lengthy post ahead :-)
 
------------
 
 ## Montreal
 
@@ -30,7 +28,7 @@ I had been to North America quite a few times already but I imagined Canada to
 be different; and Montreal turned out to be just the right amount of that for
 me. The mix of French and English culture is just different enough from what
 I've become used to when in the USA. Luckily, not knowing French all that well
-isn't an issue here, but knowing more definitely helps. 
+isn't an issue here, but knowing more definitely helps.
 
 ### Getting there
 
@@ -124,7 +122,7 @@ to explore another one of Canada's cities. Apart from a short ride from Newark
 to Manhattan this was my first time in a train in North America and was really
 quite a different experience from European train systems. For one, the whole
 organisation felt more akin to airports than trains stations which weight
-controls and gates. 
+controls and gates.
 
 The train trip itself was, sadly, rather boring. I had hoped for some nice
 vistas but only the last 30 minutes offered that with a nice view over Lake
@@ -251,7 +249,7 @@ when visiting the city:
 
 [pyc]: http://zerokspot.com/weblog/2014/05/25/pycon-2014/
 
-[ulope]: https://twitter.com/ulope 
+[ulope]: https://twitter.com/ulope
 
 [tmc]: http://www.travelodgemontrealcentre.com/
 

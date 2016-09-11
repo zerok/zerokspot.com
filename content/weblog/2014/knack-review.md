@@ -10,17 +10,13 @@ tags:
 title: Knack reviewed
 ---
 
-
-
 A couple of weeks ago I finally bought myself a [PlayStation 4][ps4] after
 having delayed that decision until there was a bundle with at least 2 games I
 actually wanted to play. So now I have a PS4 with the new Infamous, Killzone,
 and … well, Knack. Ever since watching that game’s [quicklook on Giantbomb][ql]
 I was in the state of “I wouldn’t mind playing Knack”.
 
-Sadly, the actual game didn’t really get far beyond that. 
-
--------------
+Sadly, the actual game didn’t really get far beyond that.
 
 Knack takes place on a fictional world where humans learnt to harness the power
 of so-called "artifacts" left behind by an ancient but now extinct race. The

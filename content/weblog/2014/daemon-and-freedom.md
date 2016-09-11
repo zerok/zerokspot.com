@@ -2,6 +2,9 @@
 date: '2014-08-09T19:20:59+02:00'
 language: en
 title: Daemon and Freedom
+tags:
+- books
+- scifi
 ---
 
 
@@ -12,9 +15,7 @@ to ["Reamde"][rd] by Neal Stephenson (still my favorite book) the story merges
 aspects real and virtual life; there with online gaming while here with that and
 augmented reality tech. In Daemon's case it also focuses heavily on how
 transparent current western society is and how easy public opinion can be
-subverted. 
-
------------
+subverted.
 
 The original premise of the story is about the legacy of the fictional game
 designer Matthew Sobol, that is a network of simple computer daemons that get

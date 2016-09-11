@@ -8,9 +8,9 @@ tags:
 - conference
 - travel
 - conference
+- development
 title: Django Weekend 2014 in Cardiff
 ---
-
 
 By now [Django Weekend 2014][8] has been over for more than a week ... but now I
 finally found the time to also write about it! For those who don't know, *Django
@@ -22,8 +22,6 @@ February in Cardiff, Wales, UK. All that plus it was awesome!
 src="http://photos.h10n.me/Conferences/DjangoWeekend-2014/i-hTWjzKx/0/XL/DSC01875-XL.jpg"
 alt="Cardiff University" />
 </figure>
-
---------
 
 Personally, I'm a huge fan of one-track conferences. They keep everyone extemely
 focused and you don't "miss" anything. Usually this kind of conference also has

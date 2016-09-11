@@ -3,6 +3,7 @@ date: '2016-01-30T21:11:28+01:00'
 language: en
 tags:
 - checkio
+- development
 title: CheckIO considering Paid Accounts
 ---
 

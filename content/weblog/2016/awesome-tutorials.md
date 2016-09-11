@@ -2,7 +2,11 @@
 date: '2016-08-21T21:14:55+02:00'
 language: en
 tags:
+- development
 - documentation
+- saltstack
+- vault
+- vagrant
 title: Awesome Tutorials
 ---
 

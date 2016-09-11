@@ -9,7 +9,6 @@ tags:
 title: 'Java User Group Graz: Java Talks'
 ---
 
-
 <img src="/media/2014/sign.jpg" style="border: 5px solid #EFEFEF; padding: 5px; max-width:
 250px; float: left; margin: 0 1em 1em 0" />Wer bisher in Graz nach einer
 Java-Usergroup mit Vorträgen gesucht hat, der kann seit gestern endlich damit

@@ -6,6 +6,7 @@ tags:
 - ops
 - monitoring
 - golang
+- development
 title: Selective metric collection with Prometheus
 ---
 
