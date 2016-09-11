@@ -5,6 +5,8 @@ tags:
 - dotgo
 - conference
 - travel
+- golang
+- paris
 title: DotGo 2014
 ---
 

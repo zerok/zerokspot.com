@@ -4,6 +4,7 @@ language: en
 tags:
 - djangoconeu2015
 - djangocon
+- conference
 title: DjangoCon Europe 2015 Rescheduled
 ---
 
@@ -44,4 +45,3 @@ have a room reservation and am really looking forward to the event!
 [5]:http://www.theregister.co.uk/2015/01/12/one_direction_attack_open_source_conference/
 [6]:http://www.polygon.com/2015/1/9/7519693/one-direction-djangocon-coding-cardiff-harry-styles-so-cute-lol
 [7]:http://2015.djangocon.eu/
-

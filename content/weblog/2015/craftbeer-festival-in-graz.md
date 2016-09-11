@@ -4,6 +4,7 @@ language: en
 tags:
 - craftbeer
 - event
+- graz
 title: Craft Beer Festival 2015 in Graz
 ---
 

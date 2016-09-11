@@ -3,6 +3,7 @@ date: '2015-10-31T15:58:17+01:00'
 language: en
 tags:
 - room-escape
+- graz
 title: ExitTheRoom in Graz
 ---
 

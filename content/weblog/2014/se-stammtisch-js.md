@@ -4,6 +4,8 @@ language: de
 tags:
 - campus02
 - graz
+- meetup
+- javascript
 title: 'Software Engineering Stammtisch: JavaScript'
 ---
 
@@ -28,7 +30,7 @@ den vielen .Net-Leuten dort durchaus viele andere Workflows kennenlernen
 konnten. Scheinbar ist dort [TypeScript][3] derzeit recht populär :-)
 
 Für mich etwas ungewöhnlich war zunächst, dass hier jeder mit jedem
-einmal per Sie war, was aber den Diskussionen zumindest nicht geschadet hat. 
+einmal per Sie war, was aber den Diskussionen zumindest nicht geschadet hat.
 
 Die Location ist für externe Personen, die zum ersten Mal am Campus 02 sind,
 doch recht schwer zu finden, da alle Straßenschilder mit "Campus 02" das

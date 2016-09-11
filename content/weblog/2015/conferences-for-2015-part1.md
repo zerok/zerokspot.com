@@ -2,7 +2,7 @@
 date: '2015-01-15T22:15:04+01:00'
 language: en
 tags:
-- conferences
+- conference
 - travel
 title: Conferences for 2015 (part 1)
 ---

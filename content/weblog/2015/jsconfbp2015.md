@@ -2,8 +2,11 @@
 date: '2015-05-22T21:29:26+02:00'
 language: en
 tags:
-- traveling
+- travel
 - jsconfbp
+- conference
+- javascript
+- budapest
 title: JSConf Budapest 2015
 ---
 
