@@ -8,7 +8,7 @@ tags:
 - prague
 ---
 
-<img src="/media/2016/wtdeu-sign.jpg" style="float:left;width:180px;border:5px solid #EFEFEF;padding:2px;margin:0 1rem 1rem 0" alt=""/>
+{{< img-left path="2016/wtdeu-sign.jpg" width="180px" >}}
 The absolute highlight of any conference for me are the sprints either right
 before or after the "main event". [WriteTheDocs][] has something similar called
 "Writing Day" where participants for instance help improving other projects'
