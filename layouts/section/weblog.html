@@ -7,8 +7,8 @@
             <div id="body">
                 <h1>Archive</h1>
                 <div class="page__intro">
-                    <p>Here you can find a listing of all the posts I've written over the years. Especially in early year's this blog
-                        was mostly a link-dump but in recent year's there might be something interesting here for you to read... hopefully.</p>
+                    <p>Here you can find a listing of all the posts I've written over the years. Especially in early years this blog
+                        was mostly a link-dump but in recent years there might be something interesting here for you to read... hopefully.</p>
                 </div>
                 {{ range .Data.Pages.GroupByDate "2006" }}
                 <section class="archive__year" id="{{ .Key }}">
