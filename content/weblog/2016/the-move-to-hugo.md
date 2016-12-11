@@ -65,12 +65,16 @@ pretty sure that there are still a couple of things that are broken, but I
 decided to fix them after the roll-out instead of delaying things again and
 again. One thing I'm not yet sure how to handle is comments: I've used Disqus
 for many years and I like it. The problem is, though, that the number of
-comments per year is in the single digit(s). For that reason I've decided to
-leave comments out for now. These days I get most of the feedback via Twitter,
-e-mail, or Facebook.
+comments per year is in the single digit(s). ~~For that reason I've decided to
+leave comments out for now.~~ These days I get most of the feedback via Twitter,
+e-mail, or Facebook, but adding Disqus - on the other hand - doesn't really hurt
+and each page gets a quick feedback mechanism. So, for now I've re-added Disqus
+to the site. Will it stay? I don't really know yet.
 
 Anyway, I hope this move will make me create more content here again that I hope
 you enjoy 😊
+
+**Update:** I've re-added Disqus for now.
 
 [yearly archives]: https://github.com/spf13/hugo/issues/448
 [digital ocean]: https://www.digitalocean.com/
