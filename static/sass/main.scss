@@ -178,3 +178,28 @@ aside {
         padding: 10px;
     }
 }
+
+.page--archive {
+    form {
+        display: block;
+        text-align: center;
+
+        padding: 1rem;
+        margin: 1rem 0 2rem 0;
+        background: #EFEFEF;
+        border: 1px solid #DFDFDF;
+
+        p {
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        select {
+            margin-right: 2rem;
+            text-align: left;
+        }
+        input {
+            text-align: left;
+        }
+    }
+}

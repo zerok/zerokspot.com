@@ -1,3 +1,4 @@
 /static/css
 /node_modules
 /public
+/search.bleve
