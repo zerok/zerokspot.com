@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "normalize.css": "^4.2.0",
-    "vue": "^2.1.8"
+    "vue": "^2.1.8",
+    "whatwg-fetch": "^2.0.1"
   }
 }

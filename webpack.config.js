@@ -3,7 +3,7 @@ const Webpack = require('webpack');
 
 module.exports = {
     entry: {
-        archive: [Path.join(__dirname, 'static', 'app', 'archive.js')]
+        archive: ['whatwg-fetch', Path.join(__dirname, 'static', 'app', 'archive.js')]
     },
     output: {
         path: Path.join('static', 'js'),
