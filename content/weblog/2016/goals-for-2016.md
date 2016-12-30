@@ -75,7 +75,7 @@ whatever flight I need doesn't help either. Perhaps I will finally make that big
 jump to somewhere else this year.
 
 
-# Re-learning French
+## Re-learning French
 
 Back at school I quite enjoyed French but due to lack of use I completely forgot
 everything I've ever learnt. I've been twice to Montréal, twice to Paris and
@@ -85,7 +85,7 @@ French course in [Duolingo][dl] again and this time I'll finish it and
 afterwards continue onwards!
 
 
-# Contributing more
+## Contributing more
 
 There are so many roads to walk on to help the OpenSource/FreeSoftware
 community: Becoming a FSFE Fellow, writing documentation, contributing code,
