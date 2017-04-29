@@ -10,7 +10,7 @@ tags:
 
 For the second year now I've went to Budapest in order to
 attend [CraftConf](https://craft-conf.com/). Just like last year I wasn't alone,
-though: In total we where 8 friends who had worked together on one project or
+though: In total we were 8 friends who had worked together on one project or
 another, all with different interests and specialities. That's a perfect fit for
 the mix of topics Craft provides every year to its nearly 2,000 attendees!
 
