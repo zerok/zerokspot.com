@@ -117,7 +117,7 @@ amazing. Big thanks for inviting us up there 😍
 ## Conclusion
 
 As you can imagine from what I've written above, the trip to Portland was once
-again well worth it for WriteTheDocs alone 😉 The event simple has an awesome
+again well worth it for WriteTheDocs alone 😉 The event simply has an awesome
 atmosphere and fosters a level of community that you don't want to miss if you
 are doing anything that is even just related to documentation. Huge thanks to
 Eric and everyone else involved with the event for simply great four days! And
