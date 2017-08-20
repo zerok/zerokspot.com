@@ -1,7 +1,6 @@
 ---
 title: "Golang UK 2017"
 date: 2017-08-20T19:02:09+02:00
-draft: true
 tags:
 - conference
 - travel
