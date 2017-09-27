@@ -3,6 +3,9 @@ date: 2017-05-16T22:48:30-07:00
 title: WriteTheDocs NA 2017
 tags:
 - writethedocs
+- conference
+- travel
+- portland
 ---
 
 The long wait is over and I'm finally back in Portland. Similar to last year's

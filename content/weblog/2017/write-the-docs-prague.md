@@ -3,6 +3,7 @@ title: "Write the Docs Prague 2017"
 date: 2017-09-27T19:07:44+02:00
 tags:
 - writethedocs
+- conference
 - travel
 - prague
 ---
