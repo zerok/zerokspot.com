@@ -2,6 +2,7 @@
 date: 2017-02-14T20:04:19+01:00
 title: FOSDEM 2017
 tags:
+- conference
 - travel
 - fosdem
 - brussels
