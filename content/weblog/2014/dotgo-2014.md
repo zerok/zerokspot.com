@@ -16,7 +16,7 @@ Paris, France. Organised by the fine folks of [dotConferences][dc] this event
 filled the Théâtre des Variétés on the Boulevard Montmartre nearly completely.
 
 <figure> <img
-src="http://photos.h10n.me/Conferences/DotGo-2014/i-HwTQ62x/0/L/DSC03045-L.jpg"
+src="/media/2014/dotgo-gopher.jpg"
 alt=""><figcaption><p>Everybody got a Gopher!</p></figcaption></figure>
 
 -----------
@@ -30,7 +30,7 @@ community. For instance, having played around before with Keith Rarick's godep
 I really appreaciated his talk on dependency management.
 
 <figure><img
-src="http://photos.h10n.me/Conferences/DotGo-2014/i-VmX88dx/0/L/DSC03057-L.jpg"
+src="/media/2014/dotgo-groupphoto.jpg"
 alt=""><figcaption><p>Group photo with all the speakers</p><figcaption></figure>
 
 If you want to know more about all the sessions, take a look at the [live
@@ -45,7 +45,7 @@ I honestly don't know how many people came, but I'd guess something around 400.
 An impressive number for the very first conference of any topic in Europe.
 
 <figure><img
-src="http://photos.h10n.me/Conferences/DotGo-2014/i-3xqbDtH/0/L/DSC03051-L.jpg"><figcaption><p>View
+src="/media/2014/dotgo-view.jpg"><figcaption><p>View
 from the second floor</p></figcaption></figure>
 
 The second day (Saturday) offered some workshops for people who still wanted to
