@@ -15,7 +15,7 @@ wanted to read the old horror/fiction-classics like "Frankenstein" and "Strange
 Case of Dr Jekyll and Mr Hyde" for a long time so this was the perfect
 opportunity to get at least one of them off my list.
 
-The story by Mary Shelly surprised me right from the start with the way it was
+The story by Mary Shelley surprised me right from the start with the way it was
 told. Everything is pretty much a retelling of events by Victor Frankenstein
 himself as part of a letter the captain of a polar expedition writes to his
 sister in England. I really didn't expect the book to start that far up north
