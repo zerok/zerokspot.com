@@ -1,7 +1,6 @@
 ---
 title: "Eventful Vienna Trip"
 date: 2018-05-06T22:37:00+02:00
-draft: true
 tags:
 - makerfaire
 - linuxwochen
