@@ -1,0 +1,38 @@
+---
+stages:
+  - prepare
+  - build
+
+build-frontend:
+  stage: prepare
+  image: "node:8.11.2-slim"
+  cache:
+    paths:
+      - node_modules
+  before_script:
+    - "apt-get update -qq && apt-get install -qq --yes python make g++"
+  script:
+    - yarn
+    - yarn run gulp sass
+    - yarn run webpack
+  artifacts:
+    paths:
+      - static
+
+build-content:
+  stage: build
+  image: "jojomi/hugo:0.41"
+  script:
+    - hugo
+  artifacts:
+    paths:
+      - public
+
+build-index:
+  stage: build
+  image: "registry.gitlab.com/zerok/zerokspot.com/blogsearch:latest"
+  script:
+    - "blogsearch -hugo $PWD -index ./search.bleve"
+  artifacts:
+    paths:
+      - "search.bleve"
