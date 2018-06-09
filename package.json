@@ -19,8 +19,9 @@
     "remark-cli": "^3.0.1",
     "remark-lint-emoji-limit": "^1.0.0",
     "remark-lint-heading-length": "^1.0.0",
-    "remark-lint-write-good": "^1.0.1",
+    "remark-lint-write-good": "^1.0.3",
     "remark-preset-lint-markdown-style-guide": "^1.0.0",
+    "unified-lint-rule": "^1.0.2",
     "vue-loader": "^10.0.2",
     "vue-template-compiler": "^2.1.8",
     "webpack": "^1.14.0"
