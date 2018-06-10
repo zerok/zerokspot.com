@@ -4,7 +4,7 @@ date: 2018-04-23T18:44:18+02:00
 url: "/mastodon/"
 ---
 
-Since late 2017 I've mostly moved from Twitter to Mastodon where I have
+Since late 2017 I've mostly moved from Twitter to [Mastodon][md] where I have
 multiple accounts:
 
 * [@zerok@mastodon.social][ms]: This is my primary account where I write about
@@ -16,6 +16,7 @@ multiple accounts:
   German hacker and security scene are. I'm mostly here for hacker-space and
   related topics.
 
+[md]: https://joinmastodon.org/
 [ms]: https://mastodon.social/@zerok
 [ws]: https://wandering.shop/@zerok
 [cs]: https://chaos.social/@zerok
