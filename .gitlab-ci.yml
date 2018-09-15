@@ -48,5 +48,5 @@ deploy:
     url: https://zerokspot.com
   script:
     - "mkdir -p ~/.ssh && echo \"${SSH_IDENTITY}\" > ~/.ssh/id_rsa && chmod 0600 ~/.ssh/id_rsa"
-    - "rsync -avz search.bleve www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/var/search/"
-    - "cd public && rsync -avz * www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
+    - "rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz search.bleve www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/var/search/"
+    - "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
