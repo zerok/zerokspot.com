@@ -62,7 +62,7 @@ scrape_configs:
         regex: go_(.*)
         action: drop
       - source_labels: [__name__]
-        regex: go_(.*)
+        regex: http_(.*)
         action: drop
 ```
 
