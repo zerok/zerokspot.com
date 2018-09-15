@@ -46,7 +46,10 @@ deploy:
   environment:
     name: Production
     url: https://zerokspot.com
+  before_script:
+    - "eval $(ssh-agent)"
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - "mkdir -p ~/.ssh && chmod 0700 ~/.ssh"
   script:
-    - "mkdir -p ~/.ssh && echo \"${SSH_IDENTITY}\" > ~/.ssh/id_rsa && chmod 0600 ~/.ssh/id_rsa"
     - "rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz search.bleve www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/var/search/"
     - "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
