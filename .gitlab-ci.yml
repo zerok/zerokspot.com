@@ -2,6 +2,7 @@
 stages:
   - prepare
   - build
+  - deploy
 
 build-frontend:
   stage: prepare
@@ -36,3 +37,16 @@ build-index:
   artifacts:
     paths:
       - "search.bleve"
+
+deploy:
+  stage: deploy
+  image: "registry.gitlab.com/zerok/zerokspot.com/rsync:latest"
+  only:
+    - master
+  environment:
+    name: Production
+    url: https://zerokspot.com
+  script:
+    - "mkdir -p ~/.ssh && echo \"${SSH_IDENTITY}\" > ~/.ssh/id_rsa"
+    - "rsync -avz search.bleve www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/var/search/"
+    - "cd public && rsync -avz * www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
