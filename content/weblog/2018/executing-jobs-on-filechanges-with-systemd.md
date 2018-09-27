@@ -21,7 +21,7 @@ happens to a file-system path. A sample setup would look like this:
 ```
 $cat /etc/systemd/system/app-update.service
 [Unit]
-Name=app-update executor
+Description=app-update executor
 After=network.target
 
 [Service]
