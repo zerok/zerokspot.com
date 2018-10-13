@@ -1,0 +1,6 @@
+{
+    "objectID": "{{ .RelPermalink }}",
+    "type": "page",
+    "title": {{ .Title|jsonify }},
+    "url": "{{ .Permalink }}"
+}

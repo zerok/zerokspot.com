@@ -2,6 +2,7 @@
 stages:
   - prepare
   - build
+  - index
   - deploy
 
 build-frontend:
@@ -29,14 +30,22 @@ build-content:
     paths:
       - public
 
-build-index:
+build-search-server:
   stage: build
-  image: "registry.gitlab.com/zerok/zerokspot.com/blogsearch:latest"
+  image: "golang:1.11.1"
   script:
-    - "blogsearch -hugo $PWD -index ./search.bleve"
+    - "mkdir -p /go/src/gitlab.com/zerok/zerokspot.com"
+    - "cp -R * /go/src/gitlab.com/zerok/zerokspot.com/"
+    - "export START=$PWD && cd /go/src/gitlab.com/zerok/zerokspot.com/cmd/blogsearch && GOOS=linux GOARCH=amd64 go build -o ${START}/blogsearch"
   artifacts:
     paths:
-      - "search.bleve"
+      - blogsearch
+
+index:
+  stage: index
+  image: "golang:1.11.1"
+  script:
+    - "./blogsearch update-index"
 
 deploy:
   stage: deploy
@@ -51,6 +60,6 @@ deploy:
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - "mkdir -p ~/.ssh && chmod 0700 ~/.ssh"
   script:
-    - "rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz search.bleve www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/var/search/"
+    - "rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz blogsearch www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/bin/"
     - "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
     - "ssh www-zerokspot@zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
