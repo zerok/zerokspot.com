@@ -7,3 +7,8 @@ ignoreFiles = [ "\\.\\#" ]
 
 [permalinks]
 weblog = "/weblog/:year/:month/:day/:filename/"
+
+[outputs]
+page = ["html", "json"]
+
+

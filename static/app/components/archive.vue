@@ -10,8 +10,8 @@
         </form>
         <ul class="page__listing page__listing--mini" v-if="posts">
             <li v-for="post in posts">
-                <a v-bind:href="post.URL">{{ post.Title }}</a>
-                <time>{{ post.FormattedPublishDate }}</time>
+                <a v-bind:href="post.url">{{ post.title }}</a>
+                <time>{{ new Date(post.date * 1000).toLocaleDateString() }}</time>
             </li>
         </ul>
     </div>
@@ -52,7 +52,7 @@ export default {
             fetch(window.searchBaseURL + "/search/" + encodeURIComponent(this.searchTerm)).then(resp => {
                 return resp.json();
             }).then(data => {
-                this.posts = data.items;
+                this.posts = data.hits;
             });
         },
         selectYear: function() {
@@ -64,7 +64,7 @@ export default {
             fetch(window.searchBaseURL + "/year/" + this.selectedYear).then(resp => {
                 return resp.json();
             }).then(data => {
-                this.posts = data.items;
+                this.posts = data.hits;
             });
         }
     }
