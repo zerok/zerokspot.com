@@ -27,7 +27,7 @@ var serveCmd = &cobra.Command{
 		})
 		router.Use(corsMiddleware.Handler)
 
-		router.Get("/searc/{query}", func(w http.ResponseWriter, r *http.Request) {
+		router.Get("/search/{query}", func(w http.ResponseWriter, r *http.Request) {
 			queryString := chi.URLParam(r, "query")
 			index := client.InitIndex(baseIndexName)
 			res, err := index.Search(queryString, algoliasearch.Map{
