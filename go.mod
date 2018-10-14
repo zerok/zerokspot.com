@@ -4,6 +4,7 @@ require (
 	github.com/algolia/algoliasearch-client-go v0.0.0-20181011103956-52eecbef59a9
 	github.com/go-chi/chi v3.3.3+incompatible
 	github.com/go-chi/cors v1.0.0
+	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/mitchellh/go-homedir v1.0.0 // indirect
 	github.com/rs/zerolog v1.9.1
 	github.com/spf13/cobra v0.0.3
