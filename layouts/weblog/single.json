@@ -2,7 +2,7 @@
     "objectID": "{{ .RelPermalink }}",
     "type": "weblog",
     "title": {{ .Title|jsonify }},
-    "file": "{{ .File.Path }}",
+    "file": {{ .File.Path|jsonify }},
     "url": "{{ .Permalink }}",
     "date": {{ .Date.Unix }},
     "date_year": {{ .Date.Year }},
