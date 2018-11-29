@@ -3,5 +3,5 @@
     "type": "page",
     "title": {{ .Title|jsonify }},
     "url": "{{ .Permalink }}",
-    "file": {{ .File.Path }}"
+    "file": {{ .File.Path|jsonify }}
 }
