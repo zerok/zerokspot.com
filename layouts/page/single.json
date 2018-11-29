@@ -2,5 +2,6 @@
     "objectID": "{{ .RelPermalink }}",
     "type": "page",
     "title": {{ .Title|jsonify }},
-    "url": "{{ .Permalink }}"
+    "url": "{{ .Permalink }}",
+    "file": {{ .File.Path }}"
 }
