@@ -67,6 +67,6 @@ deploy:
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - "mkdir -p ~/.ssh && chmod 0700 ~/.ssh"
   script:
-    - "test -f blogsearch ]] && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz blogsearch www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/bin/ || echo \"blogsearch not updated\""
+    - "test -f blogsearch && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz blogsearch www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/bin/ || echo \"blogsearch not updated\""
     - "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
     - "ssh www-zerokspot@zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
