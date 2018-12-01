@@ -53,6 +53,9 @@ index:
     - "blogsearch update-index"
     - "blogsearch build-mapping"
     - "git rev-parse HEAD > public/.gitrev"
+  artifacts:
+    paths:
+      - public
 
 deploy:
   stage: deploy
@@ -68,5 +71,5 @@ deploy:
     - "mkdir -p ~/.ssh && chmod 0700 ~/.ssh"
   script:
     - "test -f blogsearch && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz blogsearch www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/bin/ || echo \"blogsearch not updated\""
-    - "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
+    - "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
     - "ssh www-zerokspot@zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
