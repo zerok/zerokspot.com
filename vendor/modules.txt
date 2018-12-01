@@ -7,6 +7,8 @@ github.com/go-chi/chi
 github.com/go-chi/cors
 # github.com/inconshreveable/mousetrap v1.0.0
 github.com/inconshreveable/mousetrap
+# github.com/pkg/errors v0.8.0
+github.com/pkg/errors
 # github.com/rs/zerolog v1.9.1
 github.com/rs/zerolog
 github.com/rs/zerolog/internal/cbor
@@ -15,3 +17,8 @@ github.com/rs/zerolog/internal/json
 github.com/spf13/cobra
 # github.com/spf13/pflag v1.0.3
 github.com/spf13/pflag
+# github.com/ulikunitz/xz v0.5.5
+github.com/ulikunitz/xz
+github.com/ulikunitz/xz/internal/xlog
+github.com/ulikunitz/xz/lzma
+github.com/ulikunitz/xz/internal/hash
