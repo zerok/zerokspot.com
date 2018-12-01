@@ -121,7 +121,7 @@ var updateIndexCmd = &cobra.Command{
 						fallthrough
 					case "A":
 						logger.Info().Msgf("Updating %s", objectID)
-						dataPath := filepath.Join("public", file.Name, "index.json")
+						dataPath := filepath.Join("public", objectID, "index.json")
 						raw, err := ioutil.ReadFile(dataPath)
 						if err != nil {
 							logger.Fatal().Err(err).Msgf("Failed to load %s", dataPath)
