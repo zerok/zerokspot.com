@@ -3,6 +3,7 @@ package cmd
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"os"
@@ -98,6 +99,10 @@ var updateIndexCmd = &cobra.Command{
 			if err != nil {
 				logger.Fatal().Err(err).Msg("Failed to retrieve gitrev")
 			}
+			newMapping, err := buildMapping("public")
+			if err != nil {
+				logger.Fatal().Err(err).Msg("Failed to generate new mapping")
+			}
 			mapping, err := loadMapping(mappingURL)
 			if err != nil {
 				logger.Fatal().Err(err).Msg("Failed to retrieve mapping")
@@ -120,6 +125,9 @@ var updateIndexCmd = &cobra.Command{
 					case "M":
 						fallthrough
 					case "A":
+						if objectID == "" {
+							objectID = newMapping[strings.TrimPrefix(file.Name, "content/")]
+						}
 						logger.Info().Msgf("Updating %s", objectID)
 						dataPath := filepath.Join("public", objectID, "index.json")
 						raw, err := ioutil.ReadFile(dataPath)
@@ -140,6 +148,7 @@ var updateIndexCmd = &cobra.Command{
 			// Determine the file changes between that previous commit ID and now
 			var objects []algoliasearch.Object
 			err := filepath.Walk("public", func(path string, info os.FileInfo, err error) error {
+				fmt.Println(path)
 				if !info.IsDir() && info.Name() == "index.json" {
 					var obj algoliasearch.Object
 					fp, err := os.Open(path)

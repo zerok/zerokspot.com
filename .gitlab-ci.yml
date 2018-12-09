@@ -53,6 +53,8 @@ index:
     - "blogsearch update-index"
     - "blogsearch build-mapping"
     - "git rev-parse HEAD > public/.gitrev"
+  dependencies:
+    - build-content
   artifacts:
     paths:
       - public
