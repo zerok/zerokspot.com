@@ -3,4 +3,5 @@
 /public
 /search.bleve
 /bin
+/.envrc
 *.bak
