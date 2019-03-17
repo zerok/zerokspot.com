@@ -8,6 +8,18 @@ tags:
 - copyright
 ---
 
+Before anything else, if you haven't watched this video about the
+proposed changes to the EU copyright law
+([savetheinternet.info](https://savetheinternet.info/) for details),
+please do so now, I'll wait:
+
+<iframe width="560" height="315"
+src="https://www.youtube-nocookie.com/embed/CyUh9wOp_Rw"
+frameborder="0" allow="accelerometer; autoplay; encrypted-media;
+gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+And now on to the actual post:
+
 Yesterday, the first ["official" protest
 rally](https://savetheinternet.info/demos) in Austria against article
 13 of the proposed changes to copyright law in the EU took place in
