@@ -7,7 +7,7 @@ stages:
 
 build-frontend:
   stage: prepare
-  image: "node:8.11.2-slim"
+  image: "node:8.15.1-stretch-slim"
   cache:
     paths:
       - node_modules
