@@ -5,6 +5,10 @@ tags:
 - sysutils
 - macports
 - homebrew
+incoming:
+- url: https://twitter.com/zerok/status/1124596591522918400
+- url: https://dev.to/zerok/custom-repositories-in-macports-5183
+- url: https://chaos.social/@zerok/102036892814475206
 ---
 
 In order to distribute custom tools among friends but also to some degree at work I've created a [custom tap](https://docs.brew.sh/Taps) in [Homebrew](https://brew.sh). This is pretty straight forward as it only requires a Git repository where the audience can access it. Does [MacPorts](https://www.macports.org) have something similar?
