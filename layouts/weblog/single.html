@@ -16,7 +16,29 @@
                         </p>
                     </header>
                     <div class="article__content">{{ .Content }}</div>
-                    <div class="article__comments"><p>Do you want to give me feedback about this article? Please send it to <a href="mailto:comments@zerokspot.com">comments@zerokspot.com</a>.</p></div>
+                    <div class="comments">
+                      <p>Do you want to give me feedback about this article? Please send it to <a href="mailto:comments@zerokspot.com">comments@zerokspot.com</a>.</p>
+                    </div>
+                    {{ if .Params.incoming }}
+                      <div class="incoming">
+                        <p>You can also find this post linked to from the following pages:</p>
+                        <ul class="incoming__listing">
+                        {{ range .Params.incoming }}
+                        <li class="incoming__item incoming__item--{{ if in .url "twitter" }}twitter{{ else if in .url "chaos.social"}}mastodon{{ else if in .url "dev.to" }}devto{{ else }}www{{ end }}"><a href="{{ .url }}">
+                            {{- if .label -}}
+                            {{ .label }}
+                            {{- else if in .url "twitter.com" -}}
+                            Twitter
+                            {{- else if in .url "chaos.social" -}}
+                            Mastodon
+                            {{- else if in .url "dev.to" -}}
+                            dev.to
+                            {{- end -}}
+                        </a></li>
+                        {{ end }}
+                        </ul>
+                      </div>
+                    {{ end }}
                 </article>
             </div>
             {{ partial "footer.html" }}

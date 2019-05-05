@@ -95,7 +95,63 @@ aside {
         padding: 0;
         margin: 5px 0 30px 0;
     }
+
 }
+
+.incoming {
+    text-align: center;
+    font-style: italic;
+}
+
+.incoming__listing {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.incoming__item {
+    display: inline-block;
+    font-style: normal;
+    a {
+        padding: 5px;
+        display: block;
+        text-decoration :none;
+        font-weight: bold;
+    }
+}
+
+.incoming__item--devto {
+    background: #0a0a0a;
+    a {
+        color: #FFFFFF;
+        text-transform: uppercase;
+    }
+}
+
+.incoming__item--twitter {
+    background: #1da1f2;
+    a {
+        color: #FFFFFF;
+    }
+}
+
+.incoming__item--mastodon {
+    background: #282c37;
+    a {
+        color: #479ddb;
+    }
+}
+
+.comments {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.comments, .incoming {
+    max-width: 70%;
+    margin: auto;
+}
+
 
 .page__listing--mini {
     list-style: none;
