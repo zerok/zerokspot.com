@@ -4,6 +4,8 @@ date: 2019-05-10T18:30:51+02:00
 tags:
 - concert
 - music
+incoming:
+- url: https://chaos.social/@zerok/102072898884065820
 ---
 
 It's extremely rare that I visit a concert. Actually, I'm pretty sure that I've only been on four or five. The first one was by a Styrian band called "[EAV](https://en.wikipedia.org/wiki/Erste_Allgemeine_Verunsicherung)". They are known for their witty lyrics, slightly provoking shows, and catchy tunes. I'm pretty sure there are only very few people in Austria (and to some degree Germany) who don't know this band.
