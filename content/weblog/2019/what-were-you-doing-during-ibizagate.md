@@ -1,5 +1,5 @@
 ---
-title: "What were you doing during IbizaGate"
+title: "What were you doing during IbizaGate?"
 date: 2019-05-20T15:06:26+02:00
 tags:
 - politics
