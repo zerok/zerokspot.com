@@ -8,6 +8,9 @@ tags:
 - cloudnative
 - cncf
 date: 2019-05-27T17:34:50+02:00
+incoming:
+- url: https://chaos.social/@zerok/102168904089105084
+- url: https://twitter.com/zerok/status/1133044346796826625
 ---
 
 Thanks to [Netconomy](https://www.netconomy.net) I had the chance to attend this year's [KubeCon/CloudNativeCon Europe in Barcelona](https://events.linuxfoundation.org/events/kubecon-cloudnativecon-europe-2019/) last week. This was also my first visit to the city so there were lots of new and exciting experience to be had, and neither the city or the conference disappointed!
