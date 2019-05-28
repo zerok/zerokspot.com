@@ -13,7 +13,7 @@ incoming:
 - url: https://twitter.com/zerok/status/1133044346796826625
 ---
 
-Thanks to [Netconomy](https://www.netconomy.net) I had the chance to attend this year's [KubeCon/CloudNativeCon Europe in Barcelona](https://events.linuxfoundation.org/events/kubecon-cloudnativecon-europe-2019/) last week. This was also my first visit to the city so there were lots of new and exciting experience to be had, and neither the city or the conference disappointed!
+Thanks to [Netconomy](https://www.netconomy.net) I had the chance to attend this year's [KubeCon/CloudNativeCon Europe in Barcelona](https://events.linuxfoundation.org/events/kubecon-cloudnativecon-europe-2019/) last week. This was also my first visit to the city so there were lots of new and exciting experience to be had, and neither the city nor the conference disappointed!
 
 {{<figure src="/media/2019/kubecon-eu-booths.jpg" caption="Sponsor showcase while everybody else was at a talk">}}
 
