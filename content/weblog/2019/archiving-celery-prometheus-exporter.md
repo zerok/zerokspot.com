@@ -1,7 +1,6 @@
 ---
 title: "Archiving celery-prometheus-exporter"
 date: 2019-09-07T16:13:06+02:00
-draft: true
 tags:
 - software
 - oss
