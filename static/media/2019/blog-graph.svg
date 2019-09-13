@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="263 -277 875 524" width="875" height="524">
+  <defs>
+    <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -3 6 6" markerWidth="6" markerHeight="6" color="#1077d7">
+      <g>
+        <path d="M 3.7333333 0 L 0 -1.4 L 0 1.4 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledBall_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-4 -3 5 6" markerWidth="5" markerHeight="6" color="#1077d7">
+      <g>
+        <circle cx="-1.3999994" cy="0" r="1.39999876271888" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker_2" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -3 6 6" markerWidth="6" markerHeight="6" color="#1077d7">
+      <g>
+        <path d="M 3.7333333 0 L 0 -1.4 L 0 1.4 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledBall_Marker_2" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-4 -3 5 6" markerWidth="5" markerHeight="6" color="#1077d7">
+      <g>
+        <circle cx="-1.3999994" cy="0" r="1.39999876271888" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.11.2 
+    <dc:date>2019-09-13 10:59:04 +0000</dc:date>
+  </metadata>
+  <g id="Canvas_1" stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
+    <title>Canvas 1</title>
+    <rect fill="white" x="263" y="-277" width="875" height="524"/>
+    <g id="Canvas_1: Layer 1">
+      <title>Layer 1</title>
+      <g id="Graphic_56">
+        <rect x="554" y="-34.5" width="274" height="279.5" fill="white"/>
+        <path d="M 554 -34.5 L 828 -34.5 L 828 245 L 554 245 Z" stroke="#1077d7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3.0,12.0" stroke-width="3"/>
+        <text transform="translate(564 -24.5)" fill="#1077d7">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="#1077d7" x="164.496" y="15">Current post</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2">
+        <rect x="956" y="-116" width="181" height="198.5" fill="white"/>
+        <rect x="956" y="-116" width="181" height="198.5" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_3">
+        <rect x="965" y="-102" width="77.5" height="14" fill="black"/>
+      </g>
+      <g id="Graphic_4">
+        <rect x="965" y="-71.5" width="77.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_5">
+        <rect x="1079.5" y="-71.5" width="36.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_6">
+        <rect x="965" y="-53" width="56.5" height="4" fill="#1077d7"/>
+      </g>
+      <g id="Graphic_7">
+        <rect x="1030" y="-53" width="56.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_8">
+        <rect x="1095" y="-53" width="21" height="4" fill="#1077d7"/>
+      </g>
+      <g id="Graphic_9">
+        <rect x="1049" y="-71.5" width="25.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_10">
+        <rect x="965" y="-34.5" width="40.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_11">
+        <rect x="1015" y="-34.5" width="67.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_12">
+        <rect x="590" y="-276" width="181" height="198.5" fill="white"/>
+        <rect x="590" y="-276" width="181" height="198.5" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_13">
+        <rect x="599" y="-262" width="77.5" height="14" fill="black"/>
+      </g>
+      <g id="Graphic_14">
+        <rect x="599" y="-231.5" width="77.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_15">
+        <rect x="713.5" y="-231.5" width="36.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_16">
+        <rect x="599" y="-213" width="56.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_17">
+        <rect x="664" y="-213" width="56.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_18">
+        <rect x="729" y="-213" width="21" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_19">
+        <rect x="683" y="-231.5" width="25.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_20">
+        <rect x="599" y="-194.5" width="40.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_21">
+        <rect x="649" y="-194.5" width="67.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_22">
+        <rect x="598.25" y="6" width="181" height="198.5" fill="white"/>
+        <rect x="598.25" y="6" width="181" height="198.5" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_23">
+        <rect x="607.25" y="20" width="77.5" height="14" fill="black"/>
+      </g>
+      <g id="Graphic_24">
+        <rect x="607.25" y="50.5" width="77.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_25">
+        <rect x="721.75" y="50.5" width="36.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_26">
+        <rect x="607.25" y="69" width="56.5" height="4" fill="#1077d7"/>
+      </g>
+      <g id="Graphic_27">
+        <rect x="672.25" y="69" width="56.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_28">
+        <rect x="737.25" y="69" width="21" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_29">
+        <rect x="691.25" y="50.5" width="25.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_30">
+        <rect x="607.25" y="87.5" width="40.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_31">
+        <rect x="657.25" y="87.5" width="67.5" height="4" fill="black"/>
+      </g>
+      <g id="Line_32">
+        <path d="M 986.4572 -61.29866 C 965.1482 -96.07691 951.8005 -141.41076 917.8531 -159.4533 C 885.0246 -176.90117 832.9144 -168.83649 787.3828 -169.46911" marker-end="url(#FilledArrow_Marker)" marker-start="url(#FilledBall_Marker)" stroke="#1077d7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_33">
+        <path d="M 1097.2835 -41.46841 C 1066.0938 -2.9581995 1048.1979 46.56726 997.5797 69 C 947.4466 91.21778 865.1875 86.87197 795.56 92.96249" marker-end="url(#FilledArrow_Marker)" marker-start="url(#FilledBall_Marker)" stroke="#1077d7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Graphic_55">
+        <rect x="264" y="-126" width="181" height="198.5" fill="white"/>
+        <rect x="264" y="-126" width="181" height="198.5" stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_54">
+        <rect x="273" y="-112" width="77.5" height="14" fill="black"/>
+      </g>
+      <g id="Graphic_53">
+        <rect x="273" y="-81.5" width="77.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_52">
+        <rect x="387.5" y="-81.5" width="36.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_51">
+        <rect x="273" y="-63" width="56.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_50">
+        <rect x="338" y="-63" width="56.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_49">
+        <rect x="403" y="-63" width="21" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_48">
+        <rect x="357" y="-81.5" width="25.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_47">
+        <rect x="273" y="-44.5" width="40.5" height="4" fill="black"/>
+      </g>
+      <g id="Graphic_46">
+        <rect x="323" y="-44.5" width="67.5" height="4" fill="black"/>
+      </g>
+      <g id="Line_45">
+        <path d="M 624.84405 63.05477 C 595.904 40.739106 566.75355 12.598758 538.1549 0 C 512.2808 -11.398492 486.84546 -10.081259 461.30586 -11.861857" marker-end="url(#FilledArrow_Marker_2)" marker-start="url(#FilledBall_Marker_2)" stroke="#1077d7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+    </g>
+  </g>
+</svg>
