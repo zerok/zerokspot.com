@@ -16,6 +16,30 @@
                         </p>
                     </header>
                     <div class="article__content">{{ .Content }}</div>
+                    {{ if index $.Site.Data.postpaths .RelPermalink }}
+                    <div class="postpaths">
+                        {{ if index (index $.Site.Data.postpaths .RelPermalink) "up" }}
+                        <div class="postpaths__up">
+                            <h2>This post was inspired by...</h2>
+                            <ul class="page__listing--mini">
+                                {{ range index (index $.Site.Data.postpaths .RelPermalink) "up" }}
+                                <li>{{ .title }}</li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                        {{ end }}
+                        {{ if index (index $.Site.Data.postpaths .RelPermalink) "down" }}
+                        <div class="postpaths__down">
+                            <h2>This post inspired...</h2>
+                            <ul class="page__listing--mini">
+                                {{ range index (index $.Site.Data.postpaths .RelPermalink) "down" }}
+                                <li><a href="{{ .objectID }}">{{ .title }}</a></li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                        {{ end }}
+                    </div>
+                    {{ end }}
                     <div class="comments">
                       <p>Do you want to give me feedback about this article? Please send it to <a href="mailto:comments@zerokspot.com">comments@zerokspot.com</a>.</p>
                     </div>
