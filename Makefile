@@ -1,4 +1,4 @@
-all: bin/blogsearch
+all: bin/blogsearch bin/blog
 
 bin:
 	mkdir -p bin
@@ -6,7 +6,10 @@ bin:
 clean:
 	rm -rf bin
 
-bin/blogsearch: $(shell find . -name '*.go')
+bin/blog: $(shell find . -name '*.go') bin
+	cd cmd/blog && go build -o ../../bin/blog
+
+bin/blogsearch: bin $(shell find . -name '*.go')
 	cd cmd/blogsearch && go build -o ../../bin/blogsearch
 
 update-blogsearch-image:

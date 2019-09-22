@@ -5,6 +5,19 @@ stages:
   - index
   - deploy
 
+build-search-server:
+  stage: prepare
+  image: "golang:1.13.0"
+  script:
+    - "mkdir -p /go/src/gitlab.com/zerok/zerokspot.com"
+    - "cp -R * /go/src/gitlab.com/zerok/zerokspot.com/"
+    - "export START=$PWD && cd /go/src/gitlab.com/zerok/zerokspot.com/cmd/blogsearch && GOOS=linux GOARCH=amd64 go build -o ${START}/blogsearch"
+    - "cd /go/src/gitlab.com/zerok/zerokspot.com/cmd/blog && GOOS=linux GOARCH=amd64 go build -o /go/src/gitlab.com/zerok/zerokspot.com/blog"
+  artifacts:
+    paths:
+      - blogsearch
+      - blog
+
 build-frontend:
   stage: prepare
   image: "node:8.15.1-stretch-slim"
@@ -26,25 +39,14 @@ build-content:
   image: "jojomi/hugo:0.41"
   script:
     - hugo
+    - ./blog build-graph
+    - hugo
+  dependencies:
+    - build-search-server
+    - build-frontend
   artifacts:
     paths:
       - public
-
-build-search-server:
-  stage: build
-  image: "golang:1.11.1"
-  only:
-    changes:
-      - cmd/**/*
-      - vendor/**/*
-      - go.*
-  script:
-    - "mkdir -p /go/src/gitlab.com/zerok/zerokspot.com"
-    - "cp -R * /go/src/gitlab.com/zerok/zerokspot.com/"
-    - "export START=$PWD && cd /go/src/gitlab.com/zerok/zerokspot.com/cmd/blogsearch && GOOS=linux GOARCH=amd64 go build -o ${START}/blogsearch"
-  artifacts:
-    paths:
-      - blogsearch
 
 index:
   stage: index
