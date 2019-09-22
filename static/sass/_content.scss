@@ -1,14 +1,7 @@
-@mixin content-title {
-    font-size: 275%;
-    font-family: $serif;
-    text-align: center;
-    margin-bottom: 2px;
-    line-height: 45px;
-}
-
 @mixin content-content {
     line-height: 32px;
     font-size: 18px;
+    font-family: $content-font;
 
     section h1, h2, h3, h4, h5, h6 {
         clear: both;
@@ -76,7 +69,8 @@
         font-size: 95%;
         margin: 3em 0;
         color: $quote-fg;
-        border-left: 8px solid lighten($link-fg, 50);
+        // border-left: 8px solid lighten($link-fg, 50);
+        border: solid 5px black !important;
         em {
             font-style: normal;
         }

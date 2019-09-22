@@ -1,4 +1,6 @@
 /static/css
+/static/js
+/.mapping.json.xz
 /node_modules
 /public
 /search.bleve
