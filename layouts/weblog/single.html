@@ -24,7 +24,7 @@
                             <h2>This post was inspired by...</h2>
                             <ul class="page__listing--mini">
                                 {{ range index (index $.Site.Data.postpaths .RelPermalink) "up" }}
-                                <li>{{ .title }}</li>
+                                <li><a href="{{ .objectID }}">{{ .title }}</a></li>
                                 {{ end }}
                             </ul>
                         </div>
