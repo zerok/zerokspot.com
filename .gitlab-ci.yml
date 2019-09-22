@@ -7,7 +7,7 @@ stages:
 
 build-search-server:
   stage: prepare
-  image: "golang:1.13.0"
+  image: "golang:1.13.0-alpine"
   script:
     - "cd cmd/blogsearch && GOOS=linux GOARCH=amd64 go build -o ../../blogsearch && cd -"
     - "cd cmd/blog && GOOS=linux GOARCH=amd64 go build -o ../../blog && cd -"
