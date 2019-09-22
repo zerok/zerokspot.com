@@ -1,0 +1,18 @@
+$baseWidth: 750px;
+$blue: #8ac2f6;
+$red: #cf2929;
+$dark-grey: #666;
+$base-fg: #333;
+$base-bg: #E3E3E3;
+$asideWidth: 200px;
+$contentPadding: 20px;
+$menuitem-bg: $blue;
+$menuitem-bg-hi: darken($menuitem-bg, 30);
+$link-fg: darken($menuitem-bg-hi, 10);
+$link-fg: #1077D7;
+$visited-link: #96B1CA;
+$quote-fg: lighten($base-fg, 10);
+$meta-fg: lighten($base-fg, 30);
+$heading-fg: darken($blue, 30);
+$body-font: 'Roboto', 'Helvetica Neue', helvetica, arial, sans-serif;
+$content-font: 'Courier New';
