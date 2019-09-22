@@ -9,10 +9,8 @@ build-search-server:
   stage: prepare
   image: "golang:1.13.0"
   script:
-    - "mkdir -p /go/src/gitlab.com/zerok/zerokspot.com"
-    - "cp -R * /go/src/gitlab.com/zerok/zerokspot.com/"
-    - "export START=$PWD && cd /go/src/gitlab.com/zerok/zerokspot.com/cmd/blogsearch && GOOS=linux GOARCH=amd64 go build -o ${START}/blogsearch"
-    - "cd /go/src/gitlab.com/zerok/zerokspot.com/cmd/blog && GOOS=linux GOARCH=amd64 go build -o /go/src/gitlab.com/zerok/zerokspot.com/blog"
+    - "cd cmd/blogsearch && GOOS=linux GOARCH=amd64 go build -o ../../blogsearch && cd -"
+    - "cd cmd/blog && GOOS=linux GOARCH=amd64 go build -o ../../blog && cd -"
   artifacts:
     paths:
       - blogsearch
