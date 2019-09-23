@@ -7,13 +7,20 @@ stages:
 
 build-search-server:
   stage: prepare
-  image: "golang:1.13.0-alpine"
+  image: "golang:1.13.0"
   script:
     - "cd cmd/blogsearch && GOOS=linux GOARCH=amd64 go build -o ../../blogsearch && cd -"
-    - "cd cmd/blog && GOOS=linux GOARCH=amd64 go build -o ../../blog && cd -"
   artifacts:
     paths:
       - blogsearch
+
+build-blog-tool:
+  stage: prepare
+  image: "golang:1.13.0-alpine"
+  script:
+    - "cd cmd/blog && GOOS=linux GOARCH=amd64 go build -o ../../blog && cd -"
+  artifacts:
+    paths:
       - blog
 
 build-frontend:
@@ -40,7 +47,7 @@ build-content:
     - ./blog build-graph
     - hugo
   dependencies:
-    - build-search-server
+    - build-blog-tool
     - build-frontend
   artifacts:
     paths:
