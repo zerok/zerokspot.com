@@ -25,7 +25,7 @@ Again no thanks to Lufthansa for the oldest trans-Atlantic plane they could find
 
 ### The Hotel and the neighbourhood
 
-<img src="http://photos.h10n.me/photos/i-3vm67Ln/0/S/i-3vm67Ln-S.jpg" style="padding: 3px; border: 1px solid #DDD; float:left; margin: 0 12px 5px 0" alt="" />For the first part of our trip we stayed at a mid-range hotel called the [Pan American Hotel][pan] in Elmhurst, about 30 minutes from Manhattan by subway. Decent and very affordable hotel with a nice mall nearby (with a Red Lobster *and* a Target *and* a BestBuy!) and a [diner][pdin] right next to it, which saw us a couple of times.
+<img src="/media/2012/nyc-popdiner.jpg" style="padding: 3px; border: 1px solid #DDD; float:left; margin: 0 12px 5px 0;width:300px" alt="" />For the first part of our trip we stayed at a mid-range hotel called the [Pan American Hotel][pan] in Elmhurst, about 30 minutes from Manhattan by subway. Decent and very affordable hotel with a nice mall nearby (with a Red Lobster *and* a Target *and* a BestBuy!) and a [diner][pdin] right next to it, which saw us a couple of times.
 
 Somehow the hotel had probably the worst Wifi ever (think opening the Timbuk2 page and waiting for about 10 minutes) but it was enough to check our emails every morning. For breakfast we either went to a nearby Chinese bakery or on St. Patrick's Day to the diner. If this is what's a traditional Sunday breakfast is supposed to be, I'll pass from now on. I'd explode after a month or so ;-) I will probably never get used to nearly everything being sweetened over there.
 
@@ -35,7 +35,12 @@ Anyway, the first thing I noticed when unpacking my suitcase was that the flight
 
 #### Times Square
 
-<a href="http://photos.h10n.me/date/2012-03-1/2012-03-31#!i=1748013870&k=64vQ4s6" style="float: right; margin: 0 0 5px 12px; padding: 3px; border: 1px solid #DDD"><img src="http://photos.h10n.me/photos/i-64vQ4s6/0/S/i-64vQ4s6-S.jpg" alt="" /></a>The next morning we went straight for the Times Square, luckily with fewer tourists than expected and even decent lighting. The queue in the Starbuck's right next to the tourist platform wasn't even 20 people long!
+<figure>
+<img src="/media/2012/nyc-timessquare.jpg" alt="">
+<figcaption>Times Square's Red Steps</figcaption>
+</figure>
+
+The next morning we went straight for the Times Square, luckily with fewer tourists than expected and even decent lighting. The queue in the Starbuck's right next to the tourist platform wasn't even 20 people long!
 
 We also went to the M&M's store nearby which was probably my worst idea ever. I spent nearly 40 dollars on sweets which still exist today (!) and with no chance of getting through them 'til the end of the year. From there we went more or less straight (probably with at least one more coffee break on the way) to Grand Central Station for lunch at the local food court. Weird train station … the trains are very well hidden there ;-)
 
@@ -44,7 +49,7 @@ After two more hours of exploration we ended up in the Madison Park right next t
 The last site for this first day was Brooklyn Bridge, which turned out to be my absolute highlight of New York. The sunny afternoon and there not being tons of tourists on the bridge definitely helped ;-)
 
 <figure>
-<img src="http://photos.h10n.me/photos/i-c9LJhsQ/0/XL/i-c9LJhsQ-XL.jpg" alt="" />
+<img src="/media/2012/nyc-brooklynbridge.jpg" alt="" />
 <figcaption><p>Brooklyn Bridge with just a few tourists</p></figcaption>
 </figure>
 
@@ -54,9 +59,19 @@ After the bridge and a slightly strange Pizza right on the other side of the Eas
 
 After the first day we chose to tune it a bit down the next day. First with shopping at the nearby mall to replace my razor. From there we went to 5th Avenue to check out Apple's flagship store. I was a little bit disappointed since it is actually nothing special. I guess, any Lego store is more exciting to me than this given that I already have an iPad and a MacBook Pro and am not interested in any of their other products ;-)
 
-<a href="http://photos.h10n.me/date/2012-03-1/2012-03-31#!i=1757459562&k=29xkGNt" style="padding: 3px; border: 1px solid #DDD; float:left; margin: 0 12px 5px 0"><img src="http://photos.h10n.me/photos/i-29xkGNt/0/M/i-29xkGNt-M.jpg" /></a>For lunch we went to [Mangia][man] in West 57th Street which offers a nice lunch buffet. A bit more on the expensive side but high quality compared to what we had eaten before :-)
+For lunch we went to [Mangia][man] in West 57th Street which offers a nice lunch buffet. A bit more on the expensive side but high quality compared to what we had eaten before :-)
+
+<figure>
+<img src="/media/2012/nyc-cp.jpg" alt="">
+<figcaption>Central Park on a sunny afternoon</figcaption>
+</figure>
 
 The afternoon was then spent relaxing in Central Park. Even though it was March it was warm enough for the benched to invite for short naps and watching other people do the hard work instead of us (like running or playing beach volleyball).
+
+<figure>
+<img src="/media/2012/nyc-911mem.jpg" alt="">
+<figcaption>9/11 memorial site</figcaption>
+</figure>
 
 The final stage for day two was the [9/11 memorial site][911]. With enough police presence there to be comparable to a European airport I was at first worried what might expect us on the other side of all these security checks. Everybody was very friendly, though, and the site is just amazing with artificial waterfalls where the twin towers stood and a nice park around them. Be sure to get there in the evening since the memorial also offers some nice light-and-water plays.
 
@@ -73,18 +88,18 @@ I'm not completely sure where we had lunch that day but I think we went all the 
 Well, when we got out of there it was already mid-afternoon so after some relaxing in Central Park and shopping (like at a local Crumpler store) it was time for the Empire State Building. Not much to say here other than "Get a ticket in advance", "take your backpack off when entering the elevator" and … "Nice view :-)"
 
 <figure>
-<img src="http://photos.h10n.me/photos/i-7XhNrVx/0/XL/i-7XhNrVx-XL.jpg" alt="" />
+<img src="/media/2012/nyc-lowermanhattan.jpg" alt="" />
 <figcaption><p>Lower Manhattan from the Empire State Building</p></figcaption>
 </figure> 
 
-#### Brookly Bridge by night
+#### Brooklyn Bridge by night
 
 Day 4 started with some really lousy weather so we decided to do some more shopping and give the local bus-system a try. Finding the ticket office at the *Port Authority Bus Station* near Times Square turned out not to be as easy as we had expected but eventually we made it to a bus to Jersey and the [Jersey Gardens][jg] shopping mall.
 
 Luckily, when we returned the sky had opened up a bit so we decided - all our bags still with us - to go down to the Brooklyn Bridge again for some night pictures :D
 
 <figure>
-<img src="http://photos.h10n.me/photos/i-B7dz6vQ/0/XL/i-B7dz6vQ-XL.jpg" alt="" />
+<img src="/media/2012/nyc-bbridgenight.jpg" alt="" />
 <figcaption><p>Brooklyn Bridge at night</p></figcaption>
 </figure>
 
@@ -103,7 +118,7 @@ SUNSHINE! So off we went first to watch the rest of the St. Patrick's Day parade
 The fairground was closed, of course, but it added a lot of the flair. Ocean, sand, fairground!
 
 <figure>
-<img src="http://photos.h10n.me/photos/i-RsTtHLk/0/XL/i-RsTtHLk-XL.jpg" alt="" />
+<img src="/media/2012/nyc-coneyisland.jpg" alt="" />
 <figcaption><p>Fairground on Coney Island</p></figcaption>
 </figure>
 
@@ -116,7 +131,7 @@ And that was New York for us. On March 18th we went shopping again and I got my 
 Contrary to our hotel in Queens the one in Washington DC was paid by the company and therefor a lot nicer ;-) A couple of years ago I had had a not-so-stellar experience at a Holiday Inn in Brussels but the [Holiday Inn Washington Central][hi] is a hotel that I can absolutely recommend! In walking distance to the White House and all the other central sites, a nice restaurants and an awesome reception staff (Sam, you rock!).
 
 <figure>
-<img src="http://photos.h10n.me/photos/i-g6MTxfD/0/XL/i-g6MTxfD-XL.jpg" alt="" />
+<img src="/media/2012/wdc-warmem.jpg" alt="" />
 <figcaption><p>War memorial with Washington Monument</p></figcaption>
 </figure>
 
@@ -142,7 +157,7 @@ On the culinary side:
 The highlight of DC for me was definitely the cherry blossom festival going on during our stay with special offers in nearly every restaurant. And … they vista over the Tidal Basin was just priceless :D
 
 <figure>
-<img src="http://photos.h10n.me/photos/i-8NpQMKp/2/XL/i-8NpQMKp-XL.jpg" alt="" />
+<img src="/media/2012/wdc-tidal.jpg" alt="" />
 <figcaption><p>Tidal Basin during the Cherry Blossom Festival</p></figcaption>
 </figure>
 
