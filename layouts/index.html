@@ -16,22 +16,12 @@
                 <div class="row row--first">
                     <section id="recent">
                         <ul class="page__listing--mini">
-                        {{ range first 10 (where .Data.Pages "Section" "weblog") }}
+                        {{ range first 10 (where (where (where .Site.Pages "Section" "weblog") "IsPage" true) "IsDraft" false) }}
                         <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <time>{{ .Date.Format "Jan 02, 2006" }}</time></li>
                         {{ end }}
                         </ul>
                         <a class="more" href="/weblog/">more posts...</a>
                     </section>
-                    <aside>
-                    <section id="tags">
-                        <p>And here a list of the most popular categories/tags I've used throughout the years:</p>
-                        <p>
-                        {{ range first 20 .Site.Taxonomies.tags.ByCount }}
-                        <a href="/tags/{{ .Name }}/">{{ .Name }}</a> <i class="count">({{ .WeightedPages|len }})</i>
-                        {{ end }}
-                        </p>
-                    </section>
-                    </aside>
                 </div>
             </div>
             {{ partial "footer.html" }}

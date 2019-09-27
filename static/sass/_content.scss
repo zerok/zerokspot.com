@@ -69,8 +69,7 @@
         font-size: 95%;
         margin: 3em 0;
         color: $quote-fg;
-        // border-left: 8px solid lighten($link-fg, 50);
-        border: solid 5px black !important;
+        border-left: 8px solid lighten($link-fg, 50);
         em {
             font-style: normal;
         }
