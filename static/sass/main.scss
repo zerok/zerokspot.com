@@ -6,6 +6,29 @@
 @import "header";
 @import "postpaths";
 
+@font-face {
+  font-family: 'Liberation Mono';
+  font-weight: normal;
+  src: url('/fonts/liberation-mono/LiberationMono-Regular-webfont.woff') format('woff')
+}
+@font-face {
+  font-family: 'Liberation Mono';
+  font-weight: bold;
+  src: url('/fonts/liberation-mono/LiberationMono-Bold-webfont.woff') format('woff')
+}
+@font-face {
+  font-family: 'Liberation Mono';
+  font-weight: bold;
+  font-style: italic;
+  src: url('/fonts/liberation-mono/LiberationMono-Bolditalic-webfont.woff') format('woff')
+}
+@font-face {
+  font-family: 'Liberation Mono';
+  font-weight: normal;
+  font-style: italic;
+  src: url('/fonts/liberation-mono/LiberationMono-Italic-webfont.woff') format('woff')
+}
+
 .more {
     display: block;
     margin-top: 1rem;
