@@ -7,14 +7,16 @@ url: "/mastodon/"
 Since late 2017 I've mostly moved from Twitter to [Mastodon][md] where I have
 multiple accounts:
 
-* [@zerok@mastodon.social][ms]: This is my primary account where I write about
-  pretty much everything I care about.
+* [@zerok@chaos.social][cs]: Chaos.social is where lots of people from the
+  German hacker and security scene are. Originally, I wanted to use my
+  account here to keep better in touch with the CCC community but it
+  eventually became my primary account where I write in both, English
+  and German.
+* [@zerok@mastodon.social][ms]: This was primary account for quite
+  some time but is now mostly abandonned.
 * [@zerok@wandering.shop][ws]: Wandering.shop has tons of authors and sci-fi
   fans so this is where I mostly write about the books that I'm reading and if
   there is something sci-fi-related.
-* [@zerok@chaos.social][cs]: Chaos.social is where lots of people from the
-  German hacker and security scene are. I'm mostly here for hacker-space and
-  related topics.
 
 [md]: https://joinmastodon.org/
 [ms]: https://mastodon.social/@zerok
