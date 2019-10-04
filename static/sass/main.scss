@@ -219,7 +219,72 @@ aside {
     }
 }
 
-@media screen and (max-width: 750px) {
+.presences__title {
+    font-size: 1.6rem;
+    padding: 5px;
+    margin: 0;
+    background: $blue;
+}
+
+.presences__content {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.presences__item {
+    margin-top: 2px;
+}
+
+.presences__item a {
+    display: block;
+    padding: 5px;
+    background: lighten($blue, 10);
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+        color: #FFF;
+        background: lighten($heading-fg, 30);
+    }
+}
+
+.tagline {
+    text-align: center;
+    margin: 10px 0 60px 0;
+    font-style: italic;
+    padding: 0;
+    opacity: 0.6;
+}
+
+.page--frontpage section.contact {
+    margin: 0;
+    p {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.page--frontpage section {
+    margin-bottom: 60px;
+}
+
+@media screen and (min-width: 800px) {
+    .page--frontpage__intro {
+        display: grid;
+        grid-template-columns: 600px 200px;
+    }
+    .presences {
+        padding-top: 20px;
+    }
+
+    .presences__title,
+    .presences__content {
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
     .row {
         display: block;
 
