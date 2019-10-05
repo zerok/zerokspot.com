@@ -4,8 +4,8 @@
     <body>
         <div class="page page--frontpage">
             {{ partial "header.html" }}
-            <div id="body">
-              <h1>Horst Gutmann</h1>
+            <div id="body" class="h-card">
+              <h1 class="p-name">Horst Gutmann</h1>
               <p class="tagline">Software Developer & OpenSource/FreeSoftware Enthusiast</p>
               <div class="page--frontpage__intro">
                 {{ range first 1 (where .Site.Pages "Type" "aboutme") }}
@@ -46,7 +46,7 @@
               </section>
               <section class="contact">
                 <div class="article__content">
-                  <p>You can contact me via <a href="mailto:zerok@zerokspot.com">e-mail</a>. If you want to do that in an encrypted way, my key's fingerprint is the following:<br>
+                  <p>You can contact me via <a class="u-email" href="mailto:zerok@zerokspot.com">e-mail</a>. If you want to do that in an encrypted way, my key's fingerprint is the following:<br>
                       <code>C4E0 2BA8 4048 3A5D 6B76  1607 6F20 3F0D 220F 8E98</code></p>
                 </div>
               </section>
