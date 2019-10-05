@@ -4,7 +4,9 @@ title: "That's me"
 type: "aboutme"
 ---
 
-I'm a software developer from [Graz, Austria][graz], where I'm currently working
+<img class="u-photo" src="/images/me.jpg" alt="Photo of Horst Gutmann"
+style="max-width:150px;float:left;padding:3px;border:2px solid #EFEFEF;margin:0 1rem
+0.5rem 0"> I'm a software developer from [Graz, Austria][graz], where I'm currently working
 for [Netconomy Software & Consulting GmbH][nc]. While I started there as a Java
 developer working on [hybris][]-based e-commerce solutions, after a couple of
 years I moved over to more frontendy grounds where I did projects with
