@@ -1,5 +1,6 @@
 /static/css
 /static/js
+/static/fontawesome*
 /.mapping.json.xz
 /node_modules
 /public
