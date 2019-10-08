@@ -90,7 +90,8 @@ aside {
     border: 1px solid #EAEAEA;
 }
 
-.article__content {
+.article__content,
+.comments {
     @include content-content;
 }
 
@@ -103,6 +104,7 @@ aside {
     .article__meta {
         text-align: center;
         font-size: 1.4rem;
+        line-height: 2.2rem;
         color: #999;
         padding: 0;
         margin: 5px 0 30px 0;

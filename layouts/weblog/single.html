@@ -9,9 +9,9 @@
                     <header>
                         <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
                         <p class="article__meta">
-                            Posted on {{ .Date.Format "Jan 2, 2006" }}
+                            <i class="far fa-clock"></i> Posted on {{ .Date.Format "Jan 2, 2006" }}
                             {{ if .Params.tags }}
-                            <br>Tags: {{ range .Params.tags }}<a href="/tags/{{ .|urlize }}">{{ . }}</a> {{ end }}
+                            <br><i class="far fa-tags"></i> Tags: {{ range .Params.tags }}<a href="/tags/{{ .|urlize }}">{{ . }}</a> {{ end }}
                             {{ end }}
                         </p>
                     </header>
@@ -42,7 +42,7 @@
                     </div>
                     {{ end }}{{ end }}
                     <div class="comments">
-                      <p>Do you want to give me feedback about this article? Please send it to <a href="mailto:comments@zerokspot.com">comments@zerokspot.com</a>.</p>
+                      <p>Do you want to give me feedback about this article? Please send it to <a href="mailto:comments@zerokspot.com"><i class="far fa-envelope"></i> comments@zerokspot.com</a>.</p>
                     </div>
                     {{ if .Params.incoming }}
                       <div class="incoming">
