@@ -138,6 +138,13 @@ var updateIndexCmd = &cobra.Command{
 						if err := json.Unmarshal(raw, &obj); err != nil {
 							logger.Fatal().Err(err).Msgf("Failed to decode JSON from %s", dataPath)
 						}
+						dyraw, ok := obj["date_year"]
+						if !ok {
+							continue
+						}
+						if dy, ok := dyraw.(int); !ok || dy <= 1 {
+							continue
+						}
 						if _, err := index.UpdateObjects([]algoliasearch.Object{obj}); err != nil {
 							logger.Fatal().Err(err).Msgf("Failed to update %s", objectID)
 						}
