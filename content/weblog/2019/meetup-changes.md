@@ -28,8 +28,8 @@ as authentication method agaist the API and you need to generate an
 OAuth2 consumer for your application. While the interface for
 registering such a consumer is available to all members, the FAQ
 basically states that only Pro subscribers can request new consumers
-(all others weill be rejected right away) and even those are not
-guaranteed to be gren-lit.
+(all others will be rejected right away) and even those are not
+guaranteed to be green-lit.
 
 <figure>
 <img src="/media/2019/meetup-consumers.png" alt="">
