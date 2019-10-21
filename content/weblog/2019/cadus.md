@@ -5,6 +5,9 @@ tags:
 - ngo
 - refugees
 - makers
+incoming:
+- url: https://chaos.social/@zerok/102996301831134661
+- url: https://twitter.com/zerok/status/1186002299686150145
 ---
 
 In a [recent episode of "Logbuch Netzpolitik"][lnp317] Linus Neumann
