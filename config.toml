@@ -4,11 +4,17 @@ title = "zerokspot.com"
 metaDataFormat = "yaml"
 editor = "em -n"
 ignoreFiles = [ "\\.\\#" ]
+paginate = 10
+
+[params]
+mainSections = ["weblog", "notes"]
 
 [permalinks]
 weblog = "/weblog/:year/:month/:day/:filename/"
+notes = "/notes/:year/:month/:day/:filename/"
 
 [outputs]
-page = ["html", "json"]
+weblog = ["html", "json", "rss"]
+pages = ["html", "rss"]
 
 

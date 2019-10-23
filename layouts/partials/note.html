@@ -1,0 +1,12 @@
+<article class="note">
+  {{ if .Params.re }}
+  <p class="note__re"><i class="far fa-reply"></i> Replying to <a href="{{ .Params.re }}">{{ (urls.Parse .Params.re).Host }}…</a></p>
+  {{ end }}
+    <div class="note__content">{{ .Content }}</div>
+    <p class="note__meta">
+        <span class="note__meta__item"><i class="far fa-clock"></i> Posted on <a href="{{ .RelPermalink }}">{{ .Date.Format "Jan 2, 2006" }}</a></span>
+        {{ if .Params.tags }}
+        <span class="note__meta__item"><i class="far fa-tags"></i> Tags: {{ range .Params.tags }}<a href="/tags/{{ .|urlize }}">{{ . }}</a> {{ end }}</span>
+        {{ end }}
+    </p>
+</article>

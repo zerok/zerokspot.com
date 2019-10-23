@@ -41,7 +41,7 @@ build-frontend:
 
 build-content:
   stage: build
-  image: "jojomi/hugo:0.41"
+  image: "jojomi/hugo:0.58"
   script:
     - hugo
     - ./blog build-graph

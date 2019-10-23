@@ -1,0 +1,25 @@
+<!DOCTYPE html>{{ $.Scratch.Set "isNotes" 1 }}
+<html lang="en">
+    {{ partial "head.html" $ }}
+    <body>
+        <div class="page page--single">
+            {{ partial "header.html" $ }}
+            <div id="body">
+                <div class="notes-listing">
+                  <h1>Notes</h1>
+                  <div class="page__intro">
+                    <p>Here you can find notes about things I discover
+                    or learn but are not (yet) worth a full-length
+                    post.</p>
+                  </div>
+                  {{ range .Paginator.Pages }}
+                  {{ partial "note.html" . }}
+                  {{ end }}
+                </div>
+                {{ template "_internal/pagination.html" . }}
+            </div>
+            {{ partial "footer.html" }}
+        </div>
+    </body>
+</html>
+

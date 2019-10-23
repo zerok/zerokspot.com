@@ -91,25 +91,76 @@ aside {
 }
 
 .article__content,
+.note__content,
 .comments {
     @include content-content;
 }
 
-.page--single {
+.page--single-note {
+    h1 {
+        margin-bottom: 3rem;
+    }
+}
+.note {
+    border: 1px solid #CCC;
+    border-bottom: 3px solid #CCC;
+    padding: 3rem;
+}
 
+.notes-listing .note {
+    margin-top: 3rem;
+}
+
+.article__meta,
+.note__meta {
+    display: block;
+    margin: 0;
+    text-align: right;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    color: #999;
+}
+.article__meta {
+    text-align: center;
+    padding: 0;
+    margin: 5px 0 30px 0;
+}
+
+.note__meta__item {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.page--single {
     article header {
         font-family: $content-font;
     }
+}
 
-    .article__meta {
-        text-align: center;
-        font-size: 1.4rem;
-        line-height: 2.2rem;
-        color: #999;
-        padding: 0;
-        margin: 5px 0 30px 0;
+.pagination {
+    list-style: none;
+    padding: 0;
+    margin: 3rem 0 0 0;
+    text-align: center;
+}
+
+.page-item {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    .page-link {
+        text-decoration: none;
     }
 
+    &.disabled {
+        opacity: 0.2;
+    }
+    &.active {
+        font-weight: bold;
+        .page-link {
+            text-decoration: underline;
+        }
+    }
 }
 
 .incoming {

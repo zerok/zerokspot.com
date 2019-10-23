@@ -1,0 +1,18 @@
+<!DOCTYPE html>{{ $.Scratch.Set "isNotes" 1 }}
+<html lang="en">
+    {{ partial "head.html" $ }}
+    <body>
+        <div class="page page--single page--single-note">
+            {{ partial "header.html" $ }}
+            <div id="body">
+                <header>
+                    <h1>{{ .Date.Format "2006-01-02" }} // {{ .File.BaseFileName }}</h1>
+                </header>
+                {{ partial "note.html" . }}
+            </div>
+            {{ partial "footer.html" $ }}
+        </div>
+    </body>
+</html>
+
+
