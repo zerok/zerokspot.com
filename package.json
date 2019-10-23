@@ -9,26 +9,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.21.0",
-    "babel-loader": "^6.2.10",
-    "babel-preset-es2015": "^6.18.0",
-    "gulp": "^4.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.0.0",
-    "merge-stream": "^1.0.0",
-    "remark-cli": "^3.0.1",
-    "remark-lint-emoji-limit": "^1.0.0",
-    "remark-lint-heading-length": "^1.0.0",
-    "remark-lint-write-good": "^1.0.3",
-    "remark-preset-lint-markdown-style-guide": "^1.0.0",
-    "unified-lint-rule": "^1.0.2",
-    "vue-loader": "^10.0.2",
-    "vue-template-compiler": "^2.1.8",
-    "webpack": "^1.14.0"
-  },
-  "dependencies": {
+    "@babel/core": "7.6.4",
+    "@babel/preset-env": "7.6.3",
+    "babel-loader": "8.0.6",
+    "css-loader": "^3.2.0",
+    "gulp": "^4.0.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
     "normalize.css": "^4.2.0",
-    "vue": "^2.1.8",
+    "vue": "2.6.10",
+    "vue-loader": "^15.7.1",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "4.41.2",
+    "webpack-cli": "^3.3.9",
     "whatwg-fetch": "^2.0.1"
   }
 }
