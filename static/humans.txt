@@ -2,4 +2,5 @@ Author, Admin, Developer:
     Horst Gutmann
     Contact: zerok [at] zerokspot.com
     Twitter: @zerok
+    Mastodon: https://chaos.social/@zerok/
     From: Graz, Austria
