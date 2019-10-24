@@ -50,8 +50,8 @@ index:
   stage: index
   image: "registry.gitlab.com/zerok/zerokspot.com/blogsearch:latest"
   script:
-    - "blogsearch update-index"
-    - "blogsearch build-mapping"
+    - "./blogsearch update-index"
+    - "./blogsearch build-mapping"
     - "git rev-parse HEAD > public/.gitrev"
   dependencies:
     - build-content
