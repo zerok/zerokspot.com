@@ -28,11 +28,11 @@ jobs:
         go-version: "1.13.1"
     - name: Build blogsearch
       run: "cd cmd/blogsearch && GOOS=linux GOARCH=amd64 go build -o ../../blogsearch && cd -"
-    - name: Build tool
+    - name: Build CLI
       run: "cd cmd/blog && GOOS=linux GOARCH=amd64 go build -o ../../blog && cd -"
     - uses: actions/upload-artifact@v1
       with:
-        name: blogtool
+        name: blogcli
         path: blog
     - uses: actions/upload-artifact@v1
       with:
@@ -54,7 +54,8 @@ jobs:
         name: frontend
     - uses: actions/download-artifact@v1
       with:
-        name: blogtool
+        name: blogcli
+        path: blog
     - run: hugo
     - run: ./blog build-graph
     - run: hugo
