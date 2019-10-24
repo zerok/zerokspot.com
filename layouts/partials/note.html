@@ -11,5 +11,11 @@
         {{ if .Params.tags }}
         <span class="note__meta__item"><i class="far fa-tags"></i> Tags: {{ range .Params.tags }}<a href="/tags/{{ .|urlize }}">{{ . }}</a> {{ end }}</span>
         {{ end }}
+        {{ if .Params.syndicated.twitter }}
+        <span class="note__meta__item"><a href="{{ .Params.syndicated.twitter }}"><i class="fab fa-twitter"></i> Twitter</a></span>
+        {{ end }}
+        {{ if .Params.syndicated.mastodon }}
+        <span class="note__meta__item"><a href="{{ .Params.syndicated.mastodon }}"><i class="fab fa-mastodon"></i> Mastodon</a></span>
+        {{ end }}
     </p>
 </article>
