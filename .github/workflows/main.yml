@@ -1,0 +1,64 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build-frontend:
+    runs-on: ubuntu-latest
+    setps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1.1.2
+      with:
+        node-version: "12.x"
+    - run: "apt-get install -qq --yes python make g++"
+    - run: "yarn"
+    - run: "yarn run gulp sass"
+    - run: "yarn run webpack"
+    - uses: actions/upload-artifact@v1
+      with:
+        name: frontend
+        path: static
+
+  build-tools:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-go@v1.1.1
+      with:
+        go-version: "1.13.1"
+    - name: Build blogsearch
+      run: "cd cmd/blogsearch && GOOS=linux GOARCH=amd64 go build -o ../../blogsearch && cd -"
+    - name: Build tool
+      run: "cd cmd/blog && GOOS=linux GOARCH=amd64 go build -o ../../blog && cd -"
+    - uses: actions/upload-artifact@v1
+      with:
+        name: blogtool
+        path: blog
+    - uses: actions/upload-artifact@v1
+      with:
+        name: blogsearch
+        path: blogsearch
+
+  build-content:
+    needs:
+      - build-tools
+      - build-frontend
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: peaceiris/actions-hugo@v2.2.2
+      with:
+        hugo-version: 0.58.3
+    - uses: actions/download-artifact@v1
+      with:
+        name: frontend
+    - uses: actions/download-artifact@v1
+      with:
+        name: blogtool
+    - run: hugo
+    - run: ./blog build-graph
+    - run: hugo
+    - uses: actions/upload-artifact@v1
+      with:
+        name: public
+        path: public
