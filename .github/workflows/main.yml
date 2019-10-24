@@ -55,9 +55,9 @@ jobs:
     - uses: actions/download-artifact@v1
       with:
         name: blogcli
-        path: blog
     - run: hugo
-    - run: ./blog build-graph
+    - run: ls frontend
+    - run: ./blogcli/blog build-graph
     - run: hugo
     - uses: actions/upload-artifact@v1
       with:
