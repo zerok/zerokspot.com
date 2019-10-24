@@ -54,6 +54,7 @@ index:
     - "./blogsearch build-mapping"
     - "git rev-parse HEAD > public/.gitrev"
   dependencies:
+    - build-tools
     - build-content
   artifacts:
     paths:
