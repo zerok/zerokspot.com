@@ -20,6 +20,7 @@ import (
 var gitrevURL string
 var mappingURL string
 var rebuild bool
+var dryRun bool
 
 func fetchGitRev(u string) (string, error) {
 	c := http.Client{}
@@ -119,6 +120,9 @@ var updateIndexCmd = &cobra.Command{
 					switch file.Status {
 					case "D":
 						logger.Info().Msgf("Deleting %s", objectID)
+						if dryRun {
+							continue
+						}
 						if _, err := index.DeleteObject(objectID); err != nil {
 							logger.Fatal().Err(err).Msgf("Failed to delete %s", objectID)
 						}
@@ -143,6 +147,9 @@ var updateIndexCmd = &cobra.Command{
 							continue
 						}
 						if dy, ok := dyraw.(int); !ok || dy <= 1 {
+							continue
+						}
+						if dryRun {
 							continue
 						}
 						if _, err := index.UpdateObjects([]algoliasearch.Object{obj}); err != nil {
@@ -173,6 +180,9 @@ var updateIndexCmd = &cobra.Command{
 			if err != nil {
 				logger.Fatal().Err(err).Msg("Failed to load JSON data")
 			}
+			if dryRun {
+				return
+			}
 			_, err = index.UpdateObjects(objects)
 			if err != nil {
 				logger.Fatal().Err(err).Msg("Failed to update index")
@@ -185,5 +195,6 @@ func init() {
 	updateIndexCmd.Flags().StringVar(&gitrevURL, "gitrev-url", "https://zerokspot.com/.gitrev", "URL to retrieve the reference Git ref from")
 	updateIndexCmd.Flags().StringVar(&mappingURL, "mapping-url", "https://zerokspot.com/.mapping.json.xz", "URL to retrieve the objectID mapping from")
 	updateIndexCmd.Flags().BoolVar(&rebuild, "rebuild", false, "Rebuild the whole index")
+	updateIndexCmd.Flags().BoolVar(&dryRun, "dry-run", false, "Do everything BUT changing the index")
 	rootCmd.AddCommand(updateIndexCmd)
 }
