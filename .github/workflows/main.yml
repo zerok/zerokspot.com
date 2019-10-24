@@ -52,11 +52,11 @@ jobs:
     - uses: actions/download-artifact@v1
       with:
         name: frontend
+        path: static
     - uses: actions/download-artifact@v1
       with:
         name: blogcli
     - run: hugo
-    - run: ls frontend
     - run: chmod +x ./blogcli/blog
     - run: ./blogcli/blog build-graph
     - run: hugo
