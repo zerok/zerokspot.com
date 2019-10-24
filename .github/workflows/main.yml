@@ -10,7 +10,7 @@ jobs:
     - uses: actions/setup-node@v1.1.2
       with:
         node-version: "12.x"
-    - run: "apt-get install -qq --yes python make g++"
+    - run: "sudo apt-get install -qq --yes python make g++"
     - run: "yarn"
     - run: "yarn run gulp sass"
     - run: "yarn run webpack"
