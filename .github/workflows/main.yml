@@ -57,6 +57,7 @@ jobs:
         name: blogcli
     - run: hugo
     - run: ls frontend
+    - run: chmod +x ./blogcli/blog
     - run: ./blogcli/blog build-graph
     - run: hugo
     - uses: actions/upload-artifact@v1
