@@ -63,8 +63,6 @@ index:
 deploy:
   stage: deploy
   image: "registry.gitlab.com/zerok/zerokspot.com/rsync:latest"
-  dependencies:
-    - build-tools
   only:
     - master
   environment:
