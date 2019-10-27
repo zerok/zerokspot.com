@@ -1,7 +1,7 @@
 <header class="page__header">
     <nav id="main-nav">
         <ul class="hoverable">
-            <li class=""><a href="/" id="nav-start"><i class="fa fa-fw fa-home"></i> zerokspot</a></li><li class="{{ if $.Scratch.Get "isNotes" }}active{{ end }}"><a href="/notes/"><i class="fa fa-fw fa-clipboard-list"></i> Notes</a></li><li class="{{ if $.Scratch.Get "isArchive" }}active{{ end }}"><a href="/weblog/"><i class="fa fa-fw fa-archive"></i> Archive</a></li><li><a href="/mastodon/"><i class="fab fa-fw fa-mastodon"></i> Mastodon</a></li>
+            <li class=""><a href="/" id="nav-start"><i class="fa fa-fw fa-home"></i> zerokspot</a></li><li class="{{ if $.Scratch.Get "isNotes" }}active{{ end }}"><a href="/notes/"><i class="fa fa-fw fa-clipboard-list"></i> Notes</a></li><li class="{{ if $.Scratch.Get "isArchive" }}active{{ end }}"><a href="/weblog/"><i class="fa fa-fw fa-archive"></i> Archive</a></li><li class="{{ if $.Scratch.Get "isReading" }}active{{ end }}"><a href="/reading/"><i class="far fa-fw fa-book-open"></i> Reading</a></li><li><a href="/mastodon/"><i class="fab fa-fw fa-mastodon"></i> Mastodon</a></li>
         </ul>
     </nav>
 </header>

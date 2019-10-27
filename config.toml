@@ -15,6 +15,6 @@ notes = "/notes/:year/:month/:day/:filename/"
 
 [outputs]
 weblog = ["html", "json", "rss"]
-page = ["html", "json"]
+page = ["html"]
 
 
