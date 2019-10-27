@@ -7,10 +7,10 @@ stages:
 
 build-tools:
   stage: prepare
-  image: "golang:1.13.1-alpine"
+  image: "golang:1.13.3-alpine"
   script:
-    - "cd cmd/blog && GOOS=linux GOARCH=amd64 go build -o ../../blog && cd -"
-    - "cd cmd/blogsearch && GOOS=linux GOARCH=amd64 go build -o ../../blogsearch && cd -"
+    - "cd cmd/blog && CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ../../blog && cd -"
+    - "cd cmd/blogsearch && CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ../../blogsearch && cd -"
   artifacts:
     paths:
       - blog
@@ -63,6 +63,8 @@ index:
 deploy:
   stage: deploy
   image: "registry.gitlab.com/zerok/zerokspot.com/rsync:latest"
+  dependencies:
+    - build-tools
   only:
     - master
   environment:
