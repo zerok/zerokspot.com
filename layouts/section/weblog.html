@@ -12,7 +12,7 @@
                 </div>
                 <script>
                     var years = [
-                    {{ range .Data.Pages.GroupByDate "2006" }}["{{ .Key }}", {{ len .Pages }}],{{end}}
+                    {{ range (where .Data.Pages "Section" "weblog").GroupByDate "2006" }}["{{ .Key }}", {{ len .Pages }}],{{end}}
                     ];
                     var searchBaseURL = "/api";
                     {{ if .Site.BuildDrafts }}
