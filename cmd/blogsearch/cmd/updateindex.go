@@ -3,7 +3,6 @@ package cmd
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"net/http"
 	"os"
@@ -159,10 +158,10 @@ var updateIndexCmd = &cobra.Command{
 				}
 			}
 		} else {
-			// Determine the file changes between that previous commit ID and now
+			// Determine the file changes between that
+			// previous commit ID and now
 			var objects []algoliasearch.Object
 			err := filepath.Walk("public", func(path string, info os.FileInfo, err error) error {
-				fmt.Println(path)
 				if !info.IsDir() && info.Name() == "index.json" {
 					var obj algoliasearch.Object
 					fp, err := os.Open(path)
@@ -173,6 +172,13 @@ var updateIndexCmd = &cobra.Command{
 					if err := json.NewDecoder(fp).Decode(&obj); err != nil {
 						return err
 					}
+					// Let's ignore notes for now
+					// until I'm sure I actually
+					// want them in the index.
+					if obj["type"] != "weblog" {
+						return nil
+					}
+					logger.Info().Msgf("Adding %s", path)
 					objects = append(objects, obj)
 				}
 				return nil

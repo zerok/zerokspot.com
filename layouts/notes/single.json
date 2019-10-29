@@ -1,0 +1,19 @@
+{
+    "objectID": "{{ .RelPermalink }}",
+    "type": "note",
+    "title": "{{ .Date.Format "2006-01-02" }} // {{ .File.BaseFileName }}",
+    "file": {{ .File.Path|jsonify }},
+    "url": "{{ .Permalink }}",
+    "date": {{ .Date.Unix }},
+    "date_year": {{ .Date.Year }},
+    "tags": [
+        {{ with $tags := .Params.tags -}}
+        {{ with $lastIdx := (add (len $tags) -1) -}}
+        {{ range $idx, $el := $tags -}}
+        "{{ $el }}"{{ if lt $idx $lastIdx }},{{ end }}
+        {{- end }}
+        {{- end }}
+        {{- end }}
+    ],
+    "content": {{ (.Content|plainify|truncate 1000) |jsonify }}
+}
