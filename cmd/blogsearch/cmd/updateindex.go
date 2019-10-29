@@ -118,6 +118,9 @@ var updateIndexCmd = &cobra.Command{
 					objectID := mapping[strings.TrimPrefix(file.Name, "content/")]
 					switch file.Status {
 					case "D":
+						if objectID == "" {
+							continue
+						}
 						logger.Info().Msgf("Deleting %s", objectID)
 						if dryRun {
 							continue
