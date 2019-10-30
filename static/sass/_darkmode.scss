@@ -1,0 +1,64 @@
+$darkmodeBlue: #8ac2f6;
+
+@media (prefers-color-scheme: dark) {
+    body {
+	background: #333;
+        color: #FEFEFE;
+    }
+
+    a, #wrapper {
+        color: #FEFEFE;
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    header p span {
+        color: $darkmodeBlue;
+        a {
+            color: $darkmodeBlue;
+        }
+    }
+
+    .article__content, .note__content, .comments {
+        a {
+            color: #FEFEFE;
+        }
+        blockquote {
+            color: #DFDFDF;
+        }
+    }
+
+    .page__header a {
+        border-bottom: 5px solid lighten($blue, 10);
+        &:hover {
+            background: darken($darkmodeBlue, 20);
+        }
+    }
+    .page__header #nav-start  {
+        border-bottom: 5px solid lighten($red, 10);
+    }
+
+    .page__listing--mini li:hover,
+    .page__header,
+    .article__content code,
+    .page--archive form,
+    .table tbody tr:hover {
+        background: #252525;
+    }
+
+    .archive__poweredby {
+        img {
+            padding: 5px;
+            background: #888;
+        }
+    }
+
+    .presences__title {
+        background: darken($darkmodeBlue, 20);
+        color: #FFF;
+    }
+
+    .presences__item a {
+        background: $darkmodeBlue;
+    }
+
+}
