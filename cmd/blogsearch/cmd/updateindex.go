@@ -146,14 +146,17 @@ var updateIndexCmd = &cobra.Command{
 						}
 						dyraw, ok := obj["date_year"]
 						if !ok {
+							logger.Warn().Msg("Document has no date_year.")
 							continue
 						}
 						if dy, ok := dyraw.(int); !ok || dy <= 1 {
+							logger.Warn().Msg("Document's date_year is not an integer.")
 							continue
 						}
 						if dryRun {
 							continue
 						}
+						logger.Info().Msgf("Updating %s", objectID)
 						if _, err := index.UpdateObjects([]algoliasearch.Object{obj}); err != nil {
 							logger.Fatal().Err(err).Msgf("Failed to update %s", objectID)
 						}
