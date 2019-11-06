@@ -144,13 +144,8 @@ var updateIndexCmd = &cobra.Command{
 						if err := json.Unmarshal(raw, &obj); err != nil {
 							logger.Fatal().Err(err).Msgf("Failed to decode JSON from %s", dataPath)
 						}
-						dyraw, ok := obj["date_year"]
-						if !ok {
-							logger.Warn().Msg("Document has no date_year.")
-							continue
-						}
-						if dy, ok := dyraw.(int); !ok || dy <= 1 {
-							logger.Warn().Msg("Document's date_year is not an integer.")
+						if err := validateSearchObject(obj); err != nil {
+							logger.Warn().Err(err).Msg("Document not valid.")
 							continue
 						}
 						if dryRun {
