@@ -1,5 +1,5 @@
 ---
-title: "Der Teufel tanzt in Graz" by Robert Preis
+title: "\"Der Teufel tanzt in Graz\" by Robert Preis"
 date: "2019-11-07T18:50:00+02:00"
 tags:
 - book
