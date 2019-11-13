@@ -6,7 +6,7 @@ tags:
 - productivity
 ---
 
-Listening to various productivity apps and throughout the OmniFocus UI
+Listening to various productivity podcasts and throughout the OmniFocus UI
 a certain name popped up that I didn't know anything about:
 TaskPaper. [TaskPaper][t] is a small macOS app that allows you to work
 GTD-style in a plain-text format. That format is defined [here][h] but
