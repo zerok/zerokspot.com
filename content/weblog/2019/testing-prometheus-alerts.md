@@ -4,6 +4,8 @@ date: "2019-11-25T20:03:00+01:00"
 tags:
 - prometheus
 - testing
+incoming:
+- url: https://www.reddit.com/r/PrometheusMonitoring/comments/e1l6ml/getting_started_with_testing_prometheus_alerts/
 ---
 
 One of [Prometheus][p]' core features is that you can not collect metrics but also declare alerting rules. You'd normally configure Prometheus to connect with [Alertmanager][a] in order to get notified if one of these rules triggered an alert. You could test these rules but just waiting for the moment when they match and then wait for an alert to show up in your inbox. There is a more practical and less time-consuming way, though:
