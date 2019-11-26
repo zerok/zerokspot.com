@@ -49,7 +49,7 @@
                         <p>You can also find this post linked to from the following pages:</p>
                         <ul class="incoming__listing">
                         {{ range .Params.incoming }}
-                        <li class="incoming__item incoming__item--{{ if in .url "twitter" }}twitter{{ else if in .url "chaos.social"}}mastodon{{ else if in .url "dev.to" }}devto{{ else }}www{{ end }}"><a href="{{ .url }}">
+                        <li class="incoming__item incoming__item--{{ if in .url "twitter" }}twitter{{ else if in .url "chaos.social"}}mastodon{{ else if in .url "dev.to" }}devto{{ else if in .url "reddit.com" }}reddit{{ else }}www{{ end }}"><a href="{{ .url }}">
                             {{- if .label -}}
                             {{ .label }}
                             {{- else if in .url "twitter.com" -}}
@@ -58,6 +58,8 @@
                             Mastodon
                             {{- else if in .url "dev.to" -}}
                             dev.to
+                            {{- else if in .url "reddit.com" -}}
+                            Reddit
                             {{- end -}}
                         </a></li>
                         {{ end }}
