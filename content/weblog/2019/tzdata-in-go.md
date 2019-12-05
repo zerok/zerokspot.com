@@ -5,6 +5,11 @@ tags:
 - tzinfo
 - golang
 - development
+incoming:
+- url: https://twitter.com/zerok/status/1202678538098401281
+- url: https://chaos.social/@zerok/103256941965229740
+- url: https://dev.to/zerok/timezone-data-in-go-2ej3
+- url: https://www.reddit.com/r/golang/comments/e6moyx/where_does_the_timezone_data_in_go_come_from/
 ---
 
 After reading Jon Skeet's excellent [blog post about issues with storing datetimes in UTC][js] inside applications I wondered, how Go was dealing with updates to timezones. In Python this is done using the [pytz package][pytz] which is updated frequently. Go goes a slightly different way:
