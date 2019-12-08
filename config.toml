@@ -6,6 +6,9 @@ editor = "em -n"
 ignoreFiles = [ "\\.\\#" ]
 paginate = 10
 
+[markup]
+  defaultMarkdownHandler = "blackFriday"
+
 [params]
 mainSections = ["weblog", "notes"]
 
