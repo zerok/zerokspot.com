@@ -34,7 +34,7 @@ One instance I saw first-hand was at the end of day two at the main entrance. Al
 
 Something similar seems to have happened on day four when CERT wrote a toot to find people who were willing to do shifts as they were struggling to cover the whole day. Same for the whole tear-down crew. Sadly, I couldn't stay myself as I was completely exhausted and it looks like I wasn't the only one based on looking at some other folks sleeping during the "Security Nightmares" talk. But that wasn't really limited to the last day.
 
-Fitting with the "Resource exhaustion" topic of this year's Congress I felt less and less energy all around me and inside of me for the whole event. Again, I cannot really pinpoint it but some part of the magic seems to have been replaced with with pure exhaustion.
+Fitting with the "Resource exhaustion" topic of this year's Congress I felt less and less energy all around me and inside of me for the whole event. Again, I cannot really pinpoint it but some part of the magic seems to have been replaced with pure exhaustion.
 
 I, myself, was at a point on day three were I actually wanted to go home, something that hasn't happened before, and on day four I was starting to think that this might very well have been my last Congress. I'm not sure if I will think like that even a couple of days from now but I will definitely want to change something about my attendance next year.
 
