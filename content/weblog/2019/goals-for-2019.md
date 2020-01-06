@@ -1,7 +1,8 @@
 ---
 title: Goals for 2019
 date: 2019-01-01T20:33:00+01:00
-tags: []
+tags:
+- goals
 ---
 
 I somehow completely forgot to come up with some goals for 2018 last year, but not so this time 🙂 To be fair, I probably wouldn’t have had all that much time for anything anyway thanks to moving into a new apartment and all the preparation and post-move action. In 2019 I want to do better again:

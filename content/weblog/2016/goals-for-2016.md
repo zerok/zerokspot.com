@@ -3,6 +3,7 @@ date: '2016-01-09T10:44:12+01:00'
 language: en
 tags:
 - resolutions
+- goals
 title: Goals for 2016
 ---
 
