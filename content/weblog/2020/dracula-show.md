@@ -38,7 +38,7 @@ Slight spoiler ahead: As I expected, Gatiss and Moffat have produced
 yet another extremely entertaining show! This time, though, the season
 ends in a way that gives a lot of closure. I'm not sure that I'd want
 another season after that unless there is a really good story to
-explain it. That being said, I'm pretyt sure that the two of them
+explain it. That being said, I'm pretty sure that the two of them
 could pull it off and I would enjoy a second season!
 
 [d]: https://en.wikipedia.org/wiki/Dracula_(2020_TV_series)
