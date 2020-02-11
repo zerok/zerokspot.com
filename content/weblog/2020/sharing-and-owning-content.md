@@ -1,6 +1,6 @@
 ---
 title: "On sharing and owning your content"
-date: "2020-02-11T17:25:00+00:00"
+date: "2020-02-11T17:25:00+01:00"
 tags:
 - blogging
 - indieweb
