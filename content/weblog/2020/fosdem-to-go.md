@@ -10,9 +10,9 @@ So I checked out the project and tried to get it to run. I immediately remembere
 The result of this effort is [FosdemToGo](https://github.com/zerok/fosdem-to-go) (I'm still bad at naming things 😅). 
 
 <figure>
-<div style="display:flex;justify-content:space-between">
-<img src="/media/2020/fosdemtogo-day.png" style="margin:0 1px 0 1px" alt="Listing of tracks for a single day">
-<img src="/media/2020/fosdemtogo-myschedule.png" style="margin: 0 1px 0 1px" alt="Listing of bookmarks">
+<div style="display:flex;justify-content:center;flex-wrap: wrap">
+<img src="/media/2020/fosdemtogo-day.png" style="display: block;max-height: 500px;margin:1px" alt="Listing of tracks for a single day">
+<img src="/media/2020/fosdemtogo-myschedule.png" style="display: block;max-height: 500px;margin:1px" alt="Listing of bookmarks">
 </div>
 </figure>
 
