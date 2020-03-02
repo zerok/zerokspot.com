@@ -4,6 +4,9 @@
     const apiEndpoint = `https://zerokspot.com/webmentions/get?target=${encodeURIComponent(targetURL)}`;
     return fetch(apiEndpoint).then(resp => {
         return resp.json().then(mentions => {
+            if (mentions.length === 0) {
+                return;
+            }
             const container = document.querySelector(".webmentions");
             const fragment = document.createDocumentFragment();
             const title = document.createElement('h2');
