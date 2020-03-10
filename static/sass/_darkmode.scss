@@ -1,8 +1,14 @@
 $darkmodeBlue: #8ac2f6;
 
-@media (prefers-color-scheme: dark) {
+.darkmode-toggle a {
+    color: #333 !important;
+}
+html.darkmode {
+    .darkmode-toggle a {
+        color: #EFEFEF !important;
+    }
     body {
-	background: #333;
+        background: #333;
         color: #FEFEFE;
     }
 
