@@ -15,6 +15,11 @@
         margin-right:1px;
     }
 
+    li.darkmode-toggle a {
+        background: transparent !important;
+        border-bottom: 5px solid transparent !important;
+    }
+
     a {
         display: block;
         line-height: 45px;
