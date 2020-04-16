@@ -9,7 +9,7 @@ title: Exploring San Francisco
 ---
 
 <figure>
-<img src="http://photos.h10n.me/Conferences/FluentConf-2014/i-pcSz6tj/0/L/DSC02486-L.jpg" alt="" />
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/zerok/49781047921/in/album-72157713914685833/" title="DSC02499"><img src="https://live.staticflickr.com/65535/49781047921_ce3bf80e6f_c.jpg" width="800" height="532" alt="DSC02499"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 </figure>
 
 Last month together with [Mario][20] I attended FluentConf (more on that perhaps
