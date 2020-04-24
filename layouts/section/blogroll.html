@@ -1,0 +1,21 @@
+<!DOCTYPE html>{{ $.Scratch.Set "isArchive" 0 }}
+<html lang="en">
+    {{ partial "head.html" }}
+    <body>
+        <div class="page page--archive">
+            {{ partial "header.html" $ }}
+            <div id="body">
+                <h1>Blogroll</h1>
+                <div class="page__intro">
+                    {{ .Content }}
+                </div>
+                <ul class="page__listing page__listing--mini">
+                {{ range $.Site.Data.blogroll }}
+                <li><a href="{{ index . "site_url" }}">{{ index . "title" }}</a> (<a href="{{ index . "feed_url" }}">Feed</a>)</li>
+                {{ end }}
+                </ul>
+            </div>
+            {{ partial "footer.html" $ }}
+        </div>
+    </body>
+</html>
