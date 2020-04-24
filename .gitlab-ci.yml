@@ -38,6 +38,7 @@ build-content:
   script:
     - hugo
     - ./blog build-graph
+    - ./blog blogroll --output data/blogroll.json
     - hugo
   dependencies:
     - build-tools
