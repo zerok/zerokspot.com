@@ -1,10 +1,10 @@
-—
-title: “Why I have a blog”
-date: “2020-04-25T23:08:33+0200”
+---
+title: "Why I have a blog"
+date: "2020-04-25T23:08:33+0200"
 tags:
 - blogging
 - zerokspot
-—
+---
 
 After reading Kev Quirk’s post about [why he has a blog](https://kevq.uk/why-i-have-a-blog/) I searched through my archives and noticed that I hadn’t written a similar post in quite a while. So her’s the 2020-edition:
 
