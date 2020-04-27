@@ -11,7 +11,7 @@ tags:
 
 [As I wrote in early March][fp], I really enjoy writing with fountain pens. One big issue I still had up until now was, though, that I could only stop smearing and bleeding by using blotting paper right after I've written something. This was annoying as it made opening and closing my journal more complicated since I had to position the paper properly.
 
-Back then I had already thought about getting myself another fountain pen but this time with an extra-fine (EF) nib which should solve this issue by simply not releasing less ink onto the paper. I finally decided which pen to get two weeks ago and since last week I've been writing nearly exclusively with a [Lamy accent EF][l] (~ €65).
+Back then I had already thought about getting myself another fountain pen but this time with an extra-fine (EF) nib which should solve this issue by simply not releasing less ink onto the paper. I finally decided which pen to get two weeks ago and since last week I've been writing nearly exclusively with a [Lamy accent EF][l] (€59).
 
 The Lamy accent is a quite sleek and elegant pen that has the grip a little farther back from the tip of the nib compared to something like a Lamy Safari or a Parker Sonnet.  Some reviews criticised that but for my way of writing this is actually a feature since I tend to hold fountain pens a bit farther back anyway in order to get a better flow (more curves). The grip is actually the most prominent feature of the accent and not hidden below the cap as it can be replaced. Lamy offers a quite wide variety of different grips from wooden to rubber in various colours so you can customise your writing experience a little more.
 
