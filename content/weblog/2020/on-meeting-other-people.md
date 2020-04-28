@@ -1,7 +1,7 @@
 ---
 title: "On meeting other people"
 date: "2020-04-28T09:27:04+0200"
-tags
+tags:
 - covid19
 - austria
 - 100daystooffload
