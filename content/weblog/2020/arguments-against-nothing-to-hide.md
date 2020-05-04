@@ -5,6 +5,7 @@ tags:
 - privacy
 - 100daystooffload
 - covid19
+inReplyTo: "https://jlelse.blog/thoughts/2020/04/nothing-to-hide/"
 ---
 
 This is a reply to Jan-Lukas Else's post titled ["Nothing to hide"](https://jlelse.blog/thoughts/2020/04/nothing-to-hide/).
