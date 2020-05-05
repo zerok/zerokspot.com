@@ -409,4 +409,17 @@ aside {
     text-align: center;
 }
 
+.webmentions__item__comment {
+    line-height: 2rem;
+    font-size: 1.4rem;
+    margin: 1rem 0 0 2rem;
+}
+
+.webmentions__item__date {
+    display: inline-block;
+    padding-left: 1rem;
+    font-size: 1.4rem;
+    opacity: 0.8;
+}
+
 @import "darkmode";
