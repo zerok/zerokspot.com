@@ -26,7 +26,6 @@ build-frontend:
     - "apt-get update -qq && apt-get install -qq --yes python make g++"
   script:
     - yarn
-    - yarn run gulp sass
     - yarn run webpack
   artifacts:
     paths:
@@ -34,7 +33,7 @@ build-frontend:
 
 build-content:
   stage: build
-  image: "jojomi/hugo:0.58"
+  image: "jojomi/hugo:0.69.0"
   script:
     - hugo
     - ./blog build-graph
