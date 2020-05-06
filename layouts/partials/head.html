@@ -1,7 +1,8 @@
+{{ $css := (resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint ) }}
 <head>
     <meta charset="utf-8">
     <script src="/fontawesome-pro-5.11.2-web/js/all.min.js"></script>
-    <link rel="stylesheet" href="/css/main.css" media="screen">
+    <link rel="stylesheet" href="{{ $css.Permalink }}" media="screen">
     <base href="{{ .Site.BaseURL }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ if .Title }}{{ .Title }} - {{ end }}zerokspot.com</title>
