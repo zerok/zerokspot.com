@@ -59,6 +59,7 @@ index:
   artifacts:
     paths:
       - public
+      - "updated-objects.txt"
 
 deploy:
   stage: deploy
