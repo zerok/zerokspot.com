@@ -50,7 +50,7 @@ index:
   stage: index
   image: "registry.gitlab.com/zerok/zerokspot.com/blogsearch:latest"
   script:
-    - "./blogsearch update-index"
+    - "./blogsearch update-index --updated-objects-path public/.updated-objects.txt"
     - "./blogsearch build-mapping"
     - "git rev-parse HEAD > public/.gitrev"
   dependencies:
@@ -59,7 +59,6 @@ index:
   artifacts:
     paths:
       - public
-      - "updated-objects.txt"
 
 deploy:
   stage: deploy
