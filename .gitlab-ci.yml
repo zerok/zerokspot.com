@@ -48,7 +48,7 @@ build-content:
 
 index:
   stage: index
-  image: "alpine:1.13"
+  image: "alpine:3.11"
   script:
     - "./blogsearch update-index --updated-objects-path public/.updated-objects.txt"
     - "cat public/.updated-objects.txt"
