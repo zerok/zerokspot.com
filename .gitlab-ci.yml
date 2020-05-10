@@ -48,12 +48,12 @@ build-content:
 
 index:
   stage: index
-  image: "registry.gitlab.com/zerok/zerokspot.com/blogsearch:latest"
+  image: "alpine:1.13"
   script:
     - "./blogsearch update-index --updated-objects-path public/.updated-objects.txt"
     - "cat public/.updated-objects.txt"
     - "./blogsearch build-mapping"
-    - "git rev-parse HEAD > public/.gitrev"
+    - "apk add git && git rev-parse HEAD > public/.gitrev"
   dependencies:
     - build-tools
     - build-content
