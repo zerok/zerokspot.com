@@ -92,4 +92,5 @@ sendmentions:
     name: Production
     url: https://zerokspot.com
   script:
-    - /bin/ash -c "cat public/.updated-objects.txt| sed 's/^/https:\\/\\/zerokspot.com/' | xargs -n 1 webmentiond send"
+    - "cat public/.updated-objects.txt"
+    - "cat public/.updated-objects.txt| sed 's/^/https:\\/\\/zerokspot.com/'"
