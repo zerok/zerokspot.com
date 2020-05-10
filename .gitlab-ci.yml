@@ -78,3 +78,17 @@ deploy:
     - "test -f blogsearch && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz blogsearch www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/bin/ || echo \"blogsearch not updated\""
     - "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
     - "ssh www-zerokspot@zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
+
+sendmentions:
+  stage: deploy
+  image: "zerok/webmentiond:latest"
+  dependencies:
+    - index
+    - deploy
+  only:
+    - master
+  environment:
+    name: Production
+    url: https://zerokspot.com
+  script:
+    - "cat public/.updated-objects.txt| sed 's/^/https:\/\/zerokspot.com/' | xargs -n 1 webmentiond send"
