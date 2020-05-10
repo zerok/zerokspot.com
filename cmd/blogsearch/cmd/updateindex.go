@@ -3,6 +3,7 @@ package cmd
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"os"
@@ -20,6 +21,7 @@ var gitrevURL string
 var mappingURL string
 var rebuild bool
 var dryRun bool
+var updatedObjectsPath string
 
 func fetchGitRev(u string) (string, error) {
 	c := http.Client{}
@@ -190,9 +192,17 @@ var updateIndexCmd = &cobra.Command{
 			if dryRun {
 				return
 			}
-			_, err = index.UpdateObjects(objects)
+			res, err := index.UpdateObjects(objects)
 			if err != nil {
 				logger.Fatal().Err(err).Msg("Failed to update index")
+			}
+			fp, err := os.OpenFile(updatedObjectsPath, os.O_CREATE|os.O_WRONLY, 0644)
+			if err != nil {
+				logger.Fatal().Err(err).Msg("Failed to create updateed-objects.txt")
+			}
+			defer fp.Close()
+			for _, oid := range res.ObjectIDs {
+				fmt.Fprintf(fp, "%s\n", oid)
 			}
 		}
 	},
@@ -203,5 +213,6 @@ func init() {
 	updateIndexCmd.Flags().StringVar(&mappingURL, "mapping-url", "https://zerokspot.com/.mapping.json.xz", "URL to retrieve the objectID mapping from")
 	updateIndexCmd.Flags().BoolVar(&rebuild, "rebuild", false, "Rebuild the whole index")
 	updateIndexCmd.Flags().BoolVar(&dryRun, "dry-run", false, "Do everything BUT changing the index")
+	updateIndexCmd.Flags().StringVar(&updatedObjectsPath, "updated-objects-path", "updated-objects.txt", "File listing updated objects")
 	rootCmd.AddCommand(updateIndexCmd)
 }
