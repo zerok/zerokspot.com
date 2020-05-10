@@ -196,6 +196,7 @@ var updateIndexCmd = &cobra.Command{
 			if err != nil {
 				logger.Fatal().Err(err).Msg("Failed to update index")
 			}
+			logger.Info().Msgf("Creating updated-objects file at %s", updatedObjectsPath)
 			fp, err := os.OpenFile(updatedObjectsPath, os.O_CREATE|os.O_TRUNC|os.O_WRONLY, 0644)
 			if err != nil {
 				logger.Fatal().Err(err).Msg("Failed to create updated-objects.txt")
