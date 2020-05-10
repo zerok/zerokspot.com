@@ -4,6 +4,7 @@ stages:
   - build
   - index
   - deploy
+  - post
 
 build-tools:
   stage: prepare
@@ -80,7 +81,7 @@ deploy:
     - "ssh www-zerokspot@zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
 
 sendmentions:
-  stage: deploy
+  stage: post
   image: "zerok/webmentiond:latest"
   dependencies:
     - index
@@ -91,4 +92,4 @@ sendmentions:
     name: Production
     url: https://zerokspot.com
   script:
-    - "cat public/.updated-objects.txt| sed 's/^/https:\/\/zerokspot.com/' | xargs -n 1 webmentiond send"
+    - "cat public/.updated-objects.txt| sed 's/^/https:\\/\\/zerokspot.com/' | xargs -n 1 webmentiond send"
