@@ -5,6 +5,7 @@ tags:
 - covid19
 - 100daystooffload
 - germany
+inReplyTo: "https://www.n-tv.de/panorama/Deutsche-Ansteckungsrate-steigt-ueber-1-0-article21770247.html"
 ---
 
 According to the Robert-Koch-Institute [the reproduction rate in Germany has now moved over 1.0 again](https://www.n-tv.de/panorama/Deutsche-Ansteckungsrate-steigt-ueber-1-0-article21770247.html) after being at only 0.83 just the day before. It sounds like more and more people start to feel like all these measures to keep the deseace in check overkill and skip their way around them or even protest against the restrictions.
