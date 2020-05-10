@@ -95,6 +95,7 @@ func loadMapping(u string) (map[string]string, error) {
 var updateIndexCmd = &cobra.Command{
 	Use: "update-index",
 	Run: func(cmd *cobra.Command, args []string) {
+		updatedObjectIDs := make([]string, 0, 5)
 		if !rebuild {
 			// Fetch a reference commit ID from a designed URL
 			gitrev, err := fetchGitRev(gitrevURL)
@@ -127,6 +128,7 @@ var updateIndexCmd = &cobra.Command{
 						if dryRun {
 							continue
 						}
+						updatedObjectIDs = append(updatedObjectIDs, objectID)
 						if _, err := index.DeleteObject(objectID); err != nil {
 							logger.Fatal().Err(err).Msgf("Failed to delete %s", objectID)
 						}
@@ -157,6 +159,7 @@ var updateIndexCmd = &cobra.Command{
 						if _, err := index.UpdateObjects([]algoliasearch.Object{obj}); err != nil {
 							logger.Fatal().Err(err).Msgf("Failed to update %s", objectID)
 						}
+						updatedObjectIDs = append(updatedObjectIDs, objectID)
 					}
 				}
 			}
@@ -196,15 +199,18 @@ var updateIndexCmd = &cobra.Command{
 			if err != nil {
 				logger.Fatal().Err(err).Msg("Failed to update index")
 			}
-			logger.Info().Msgf("Creating updated-objects file at %s", updatedObjectsPath)
-			fp, err := os.OpenFile(updatedObjectsPath, os.O_CREATE|os.O_TRUNC|os.O_WRONLY, 0644)
-			if err != nil {
-				logger.Fatal().Err(err).Msg("Failed to create updated-objects.txt")
-			}
-			defer fp.Close()
 			for _, oid := range res.ObjectIDs {
-				fmt.Fprintf(fp, "%s\n", oid)
+				updatedObjectIDs = append(updatedObjectIDs, oid)
 			}
+		}
+		logger.Info().Msgf("Creating updated-objects file at %s", updatedObjectsPath)
+		fp, err := os.OpenFile(updatedObjectsPath, os.O_CREATE|os.O_TRUNC|os.O_WRONLY, 0644)
+		if err != nil {
+			logger.Fatal().Err(err).Msg("Failed to create updated-objects.txt")
+		}
+		defer fp.Close()
+		for _, oid := range updatedObjectIDs {
+			fmt.Fprintf(fp, "%s\n", oid)
 		}
 	},
 }
