@@ -50,10 +50,11 @@ index:
   stage: index
   image: "alpine:3.11"
   script:
+    - "apk add git"
     - "./blogsearch update-index --updated-objects-path public/.updated-objects.txt"
     - "cat public/.updated-objects.txt"
     - "./blogsearch build-mapping"
-    - "apk add git && git rev-parse HEAD > public/.gitrev"
+    - "git rev-parse HEAD > public/.gitrev"
   dependencies:
     - build-tools
     - build-content
