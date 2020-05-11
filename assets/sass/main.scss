@@ -1,5 +1,4 @@
 @import "normalize";
-@import 'https://fonts.googleapis.com/css?family=Roboto';
 @import "variables";
 @import "content";
 @import "common";
@@ -10,23 +9,27 @@
 @font-face {
   font-family: 'Liberation Mono';
   font-weight: normal;
+  font-display: swap;
   src: url('/fonts/liberation-mono/LiberationMono-Regular-webfont.woff') format('woff')
 }
 @font-face {
   font-family: 'Liberation Mono';
   font-weight: bold;
+  font-display: swap;
   src: url('/fonts/liberation-mono/LiberationMono-Bold-webfont.woff') format('woff')
 }
 @font-face {
   font-family: 'Liberation Mono';
   font-weight: bold;
   font-style: italic;
-  src: url('/fonts/liberation-mono/LiberationMono-Bolditalic-webfont.woff') format('woff')
+  font-display: swap;
+  src: url('/fonts/liberation-mono/LiberationMono-BoldItalic-webfont.woff') format('woff')
 }
 @font-face {
   font-family: 'Liberation Mono';
   font-weight: normal;
   font-style: italic;
+  font-display: swap;
   src: url('/fonts/liberation-mono/LiberationMono-Italic-webfont.woff') format('woff')
 }
 
