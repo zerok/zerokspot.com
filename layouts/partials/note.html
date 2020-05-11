@@ -1,13 +1,16 @@
-<article class="note">
+<article class="note h-entry">
   {{ if .Params.re }}
   <p class="note__re"><i class="far fa-reply"></i> Replying to <a href="{{ .Params.re }}">{{ (urls.Parse .Params.re).Host }}…</a></p>
+  {{ end }}
+  {{ if .Params.likeOf }}
+  <p class="note__like"><i class="far fa-heart"></i> Like of <a class="u-like-of" href="{{ .Params.likeOf }}">{{ (urls.Parse .Params.likeOf).Host }}…</a></p>
   {{ end }}
   {{ if .Params.link }}
   <p class="note__link"><i class="far fa-link"></i> Linking to <a href="{{ .Params.re }}">{{ (urls.Parse .Params.link).Host }}…</a></p>
   {{ end }}
-    <div class="note__content">{{ .Content }}</div>
+    <div class="note__content e-content">{{ .Content }}</div>
     <p class="note__meta">
-        <span class="note__meta__item"><i class="far fa-clock"></i> Posted on <a href="{{ .RelPermalink }}">{{ .Date.Format "Jan 2, 2006" }}</a></span>
+    <span class="note__meta__item"><i class="far fa-clock"></i> Posted on <a href="{{ .RelPermalink }}" class="dt-published">{{ .Date.Format "Jan 2, 2006" }}</a> by <a href="/" class="p-author h-card">Horst Gutmann</a></span>
         {{ if .Params.tags }}
         <span class="note__meta__item"><i class="far fa-tags"></i> Tags: {{ range .Params.tags }}<a href="/tags/{{ .|urlize }}">{{ . }}</a> {{ end }}</span>
         {{ end }}
