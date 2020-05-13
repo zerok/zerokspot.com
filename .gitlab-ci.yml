@@ -80,15 +80,15 @@ deploy:
     - "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
     - "ssh www-zerokspot@zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
 
-  mention:
-    stage: mention
-    image: "zerok/webmentiond:latest"
-    dependencies:
-      - deploy
-      - index
-    only:
-      - master
-    script:
-      - "apk add git curl"
-      - "./blog changes --since-rev $(curl https://zerokspot.com/.gitrev) --url | xargs -n 1 webmentiond send"
+mention:
+  stage: mention
+  image: "zerok/webmentiond:latest"
+  dependencies:
+    - deploy
+    - index
+  only:
+    - master
+  script:
+    - "apk add git curl"
+    - "./blog changes --since-rev $(curl https://zerokspot.com/.gitrev) --url | xargs -n 1 webmentiond send"
 
