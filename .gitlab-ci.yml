@@ -51,10 +51,11 @@ index:
   stage: index
   image: "alpine:3.11"
   script:
-    - "apk add git"
+    - "apk add git curl"
     - "./blogsearch update-index --updated-objects-path public/.updated-objects.txt"
     - "cat public/.updated-objects.txt"
     - "./blogsearch build-mapping"
+    - "./blog changes --since-rev $(curl https://zerokspot.com/.gitrev) --url > public/.changes.txt"
     - "git rev-parse HEAD > public/.gitrev"
   dependencies:
     - build-tools
@@ -94,8 +95,6 @@ mention:
   only:
     - master
   script:
-    - "apk add git curl"
-    - "./blog changes --since-rev $(curl https://zerokspot.com/.gitrev) --url > changes.txt"
-    - "cat changes.txt"
-    - "cat changes.txt | xargs -n 1 /usr/local/bin/webmentiond send"
+    - "cat ./public/.changes.txt"
+    - "cat ./public/.changes.txt | xargs -n 1 /usr/local/bin/webmentiond send"
 
