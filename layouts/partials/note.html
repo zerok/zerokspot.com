@@ -1,6 +1,9 @@
 <article class="note h-entry">
+  {{ if .Params.inReplyTo }}
+  <p class="note__re"><i class="far fa-reply"></i> Replying to <a class="u-in-reply-to" href="{{ .Params.inReplyTo }}">{{ partial "note_link_text.html" . }}</a></p>
+  {{ end }}
   {{ if .Params.re }}
-  <p class="note__re"><i class="far fa-reply"></i> Replying to <a href="{{ .Params.re }}">{{ partial "note_link_text.html" . }}</a></p>
+  <p class="note__re"><i class="far fa-reply"></i> Replying to <a class="u-in-reply-to" href="{{ .Params.re }}">{{ partial "note_link_text.html" . }}</a></p>
   {{ end }}
   {{ if .Params.likeOf }}
   <p class="note__like"><i class="far fa-heart"></i> Like of <a class="u-like-of" href="{{ .Params.likeOf }}">{{ partial "note_link_text.html" . }}</a></p>

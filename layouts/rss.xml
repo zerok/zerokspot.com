@@ -27,6 +27,7 @@
       <description>
           {{- if .Params.likeOf }}{{ with .Params.likeOf }}&lt;p&gt;Like of &lt;a href="{{ . }}"&gt;{{ . }}&lt;/a&gt;&lt;/p&gt;{{ end }}{{- end }}
           {{- if .Params.re }}{{ with .Params.re }}&lt;p&gt;Reply to &lt;a href="{{ . }}"&gt;{{ . }}&lt;/a&gt;&lt;/p&gt;{{ end }}{{- end }}
+          {{- if .Params.inReplyTo }}{{ with .Params.inReplyTo }}&lt;p&gt;Reply to &lt;a href="{{ . }}"&gt;{{ . }}&lt;/a&gt;&lt;/p&gt;{{ end }}{{- end }}
           {{- if .Params.link }}{{ with .Params.link }}&lt;p&gt;Link to &lt;a href="{{ . }}"&gt;{{ . }}&lt;/a&gt;&lt;/p&gt;{{ end }}{{- end }}
           {{ .Content | html }}
       </description>
