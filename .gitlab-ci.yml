@@ -90,5 +90,7 @@ mention:
     - master
   script:
     - "apk add git curl"
-    - "./blog changes --since-rev $(curl https://zerokspot.com/.gitrev) --url | xargs -n 1 webmentiond send"
+    - "./blog changes --since-rev $(curl https://zerokspot.com/.gitrev) --url > changes.txt"
+    - "cat changes.txt"
+    - "cat changes.txt | xargs -n 1 /usr/local/bin/webmentiond send"
 
