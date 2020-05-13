@@ -86,6 +86,7 @@ mention:
     name: "zerok/webmentiond:latest"
     entrypoint:
       - /bin/ash
+      - "-c"
   dependencies:
     - build-tools
     - deploy
