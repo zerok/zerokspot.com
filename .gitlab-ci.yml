@@ -82,8 +82,12 @@ deploy:
 
 mention:
   stage: mention
-  image: "zerok/webmentiond:latest"
+  image:
+    name: "zerok/webmentiond:latest"
+    entrypoint:
+      - /bin/ash
   dependencies:
+    - build-tools
     - deploy
     - index
   only:
