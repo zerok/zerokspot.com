@@ -43,6 +43,9 @@ jobs:
       - build-tools
       - build-frontend
     runs-on: ubuntu-latest
+    env:
+      FEEDBIN_USER: ${{ secrets.FEEDBIN_USER }}
+      FEEDBIN_PASSWORD: ${{ secrets.FEEDBIN_PASSWORD }}
     steps:
     - uses: actions/checkout@v1
     - uses: peaceiris/actions-hugo@v2.2.2
@@ -73,8 +76,6 @@ jobs:
       - build-content
     runs-on: ubuntu-latest
     env:
-      FEEDBIN_USER: ${{ secrets.FEEDBIN_USER }}
-      FEEDBIN_PASSWORD: ${{ secrets.FEEDBIN_PASSWORD }}
       BLOGSEARCH_APP_ID: ${{ secrets.BLOGSEARCH_APP_ID }}
       BLOGSEARCH_APP_KEY: ${{ secrets.BLOGSEARCH_APP_KEY }}
       BLOGSEARCH_BASE_INDEX: ${{ secrets.BLOGSEARCH_BASE_INDEX }}
@@ -118,7 +119,6 @@ jobs:
     - run: "eval $(ssh-agent -s)"
     - run: echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - run: "mkdir -p ~/.ssh && chmod 0700 ~/.ssh"
-    - run: "test -f blogsearch && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz blogsearch www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/bin/ || echo \"blogsearch not updated\""
     - run: "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
     - run: "ssh www-zerokspot@zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
 
