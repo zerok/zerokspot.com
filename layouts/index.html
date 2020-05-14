@@ -9,7 +9,7 @@
               <p class="tagline">Software Developer & OpenSource/FreeSoftware Enthusiast</p>
               <div class="page--frontpage__intro">
                 {{ range first 1 (where .Site.Pages "Type" "aboutme") }}
-                <section>
+                <section class="p-note">
                     <div class="article__content">{{.Content}}</div>
                 </section>
                 {{ end }}
@@ -27,11 +27,12 @@
               <section>
                 <h2>Articles</h2>
                 <div class="frontpage__welcome page__intro">
-                    <p>Here I write as often as possible about various
-                    topics. The focus is usually around various
-                    technologies and development workflows but I might
-                    add the odd book review and other posts from time
-                    to time.</p>
+                    <p><a href="https://zerokspot.com" class="u-url"
+                    rel="me">Here</a> I write as often as possible
+                    about various topics. The focus is usually around
+                    various technologies and development workflows but
+                    I might add the odd book review and other posts
+                    from time to time.</p>
                 </div>
                 <div class="row row--first">
                     <section id="recent">

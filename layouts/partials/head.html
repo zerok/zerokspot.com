@@ -1,12 +1,17 @@
+{{ $css := (resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint ) }}
 <head>
     <meta charset="utf-8">
-    <script src="/fontawesome-pro-5.11.2-web/js/all.min.js"></script>
-    <link rel="stylesheet" href="/css/main.css" media="screen">
+    <link rel="preload" href="/fonts/liberation-mono/LiberationMono-Bold-webfont.woff">
+    <link rel="preload" href="/fonts/liberation-mono/LiberationMono-Italic-webfont.woff">
+    <link rel="preload" href="/fonts/liberation-mono/LiberationMono-Regular-webfont.woff">
+    <link rel="preload" href="/fonts/liberation-mono/LiberationMono-BoldItalic-webfont.woff">
+    <link rel="stylesheet" href="{{ $css.Permalink }}" media="screen" defer>
     <base href="{{ .Site.BaseURL }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ if .Title }}{{ .Title }} - {{ end }}zerokspot.com</title>
     <link type="text/plain" rel="author" href="http://zerokspot.com/humans.txt">
     <link rel="alternate" href="/index.xml" type="application/atom+xml" title="Latest posts">
+    <link rel="webmention" href="https://zerokspot.com/webmentions/receive">
     <link rel="canonical" href="{{ .Permalink }}">
     {{ if .RSSLink }}<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
     {{ if .Title }}<meta property="og:title" content="{{ htmlEscape .Title }}">{{ end }}

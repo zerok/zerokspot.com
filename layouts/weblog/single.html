@@ -5,17 +5,21 @@
         <div class="page page--single">
             {{ partial "header.html" }}
             <div id="body">
-                <article class="article--frontpage">
+                <article class="article--frontpage h-entry">
                     <header>
-                        <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+                        <h1 class="p-name"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
                         <p class="article__meta">
-                            <i class="far fa-clock"></i> Posted on {{ .Date.Format "Jan 2, 2006" }}
+                        <i class="far fa-clock"></i> Posted on {{ partial "post_datetime.html" . }} by <a href="/" class="p-author h-card">Horst Gutmann</a>
                             {{ if .Params.tags }}
                             <br><i class="far fa-tags"></i> Tags: {{ range .Params.tags }}<a href="/tags/{{ .|urlize }}">{{ . }}</a> {{ end }}
                             {{ end }}
+                            {{ if .Params.inReplyTo }}
+                            {{ $url := urls.Parse .Params.inReplyTo }}
+                            <br><i class="far fa-reply"></i> Replying to <a href="{{ .Params.inReplyTo }}" class="u-in-reply-to">{{ $url.Host }}{{ $url.Path }}</a>
+                            {{ end }}
                         </p>
                     </header>
-                    <div class="article__content">{{ .Content }}</div>
+                    <div class="article__content e-content">{{ .Content }}</div>
                     {{ if $.Site.Data.postpaths }}
                     {{ if index $.Site.Data.postpaths .RelPermalink }}
                     <div class="postpaths">
@@ -43,13 +47,16 @@
                     {{ end }}{{ end }}
                     <div class="comments">
                       <p>Do you want to give me feedback about this article? Please send it to <a href="mailto:comments@zerokspot.com"><i class="far fa-envelope"></i> comments@zerokspot.com</a>.</p>
+                      <p>Alternatively, I'm also experimenting with <a href="https://webmention.net/">Webmentions</a>. If you write a post on a blog that supports this technique, I should get notified about your link 🙂</p>
+                    </div>
+                    <div class="webmentions">
                     </div>
                     {{ if .Params.incoming }}
                       <div class="incoming">
                         <p>You can also find this post linked to from the following pages:</p>
                         <ul class="incoming__listing">
                         {{ range .Params.incoming }}
-                        <li class="incoming__item incoming__item--{{ if in .url "twitter" }}twitter{{ else if in .url "chaos.social"}}mastodon{{ else if in .url "dev.to" }}devto{{ else }}www{{ end }}"><a href="{{ .url }}">
+                        <li class="incoming__item incoming__item--{{ if in .url "twitter" }}twitter{{ else if in .url "chaos.social"}}mastodon{{ else if in .url "dev.to" }}devto{{ else if in .url "reddit.com" }}reddit{{ else }}www{{ end }}"><a href="{{ .url }}">
                             {{- if .label -}}
                             {{ .label }}
                             {{- else if in .url "twitter.com" -}}
@@ -58,6 +65,8 @@
                             Mastodon
                             {{- else if in .url "dev.to" -}}
                             dev.to
+                            {{- else if in .url "reddit.com" -}}
+                            Reddit
                             {{- end -}}
                         </a></li>
                         {{ end }}
@@ -67,6 +76,7 @@
                 </article>
             </div>
             {{ partial "footer.html" }}
+            <script src="/js/webmentions.js"></script>
         </div>
     </body>
 </html>

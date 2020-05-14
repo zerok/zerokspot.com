@@ -6,6 +6,9 @@ editor = "em -n"
 ignoreFiles = [ "\\.\\#" ]
 paginate = 10
 
+[markup]
+  defaultMarkdownHandler = "blackFriday"
+
 [params]
 mainSections = ["weblog", "notes"]
 
@@ -15,6 +18,6 @@ notes = "/notes/:year/:month/:day/:filename/"
 
 [outputs]
 weblog = ["html", "json", "rss"]
-pages = ["html", "rss"]
+page = ["html", "json"]
 
 

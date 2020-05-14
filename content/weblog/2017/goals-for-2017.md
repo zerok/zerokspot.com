@@ -3,6 +3,7 @@ date: 2017-01-14T23:44:35+01:00
 title: Goals for 2017
 tags:
 - resolutions
+- goals
 ---
 
 This year it took me even longer to come up with some goals for the new year 😊

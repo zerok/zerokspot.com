@@ -1,0 +1,43 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: $body-font;
+    color: $base-fg;
+}
+
+a {
+    color: $link-fg;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $heading-fg;
+
+    a {
+        color: $heading-fg;
+        text-decoration: none;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 3.5rem;
+    line-height: 4rem;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 6rem;
+    
+    tbody tr:hover {
+        background: #EFEFEF;
+    }
+    td, th {
+        padding: 5px;
+        border-bottom: 1px solid #CCC;
+    }
+}
