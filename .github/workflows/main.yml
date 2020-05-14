@@ -130,7 +130,7 @@ jobs:
     - run: tar -xJf public.tar.xz/public.tar.xz
     - uses: actions/download-artifact@v1
       with:
-        name: manifest
+        name: mapping
     - uses: actions/download-artifact@v1
       with:
         name: changes
@@ -138,7 +138,7 @@ jobs:
       with:
         name: updated-objects
     - run: "mv changes/.changes.txt public"
-    - run: "mv manifest/.manifest.json.xz public"
+    - run: "mv mapping/.mapping.json.xz public"
     - run: "mv updated-objects/.updated-objects.txt public"
     - run: "sudo apt-get install -qq --yes git curl"
     - run: "eval $(ssh-agent -s)"
