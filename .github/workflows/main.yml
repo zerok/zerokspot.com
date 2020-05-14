@@ -12,7 +12,6 @@ jobs:
         node-version: "12.x"
     - run: "sudo apt-get install -qq --yes python make g++"
     - run: "yarn"
-    - run: "yarn run gulp sass"
     - run: "yarn run webpack"
     - uses: actions/upload-artifact@v1
       with:
@@ -48,7 +47,7 @@ jobs:
     - uses: actions/checkout@v1
     - uses: peaceiris/actions-hugo@v2.2.2
       with:
-        hugo-version: 0.58.3
+        hugo-version: 0.69.0
     - uses: actions/download-artifact@v1
       with:
         name: frontend
@@ -59,6 +58,7 @@ jobs:
     - run: hugo
     - run: chmod +x ./blogcli/blog
     - run: ./blogcli/blog build-graph
+    - run: ./blogcli/blog blogroll --output data/blogroll.json
     - run: hugo
     - uses: actions/upload-artifact@v1
       with:
