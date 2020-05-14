@@ -9,7 +9,7 @@
                     <header>
                         <h1 class="p-name"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
                         <p class="article__meta">
-                            <i class="far fa-clock"></i> Posted on <span class="dt-published">{{ .Date.Format "Jan 2, 2006" }}</span> by <a href="/" class="p-author h-card">Horst Gutmann</a>
+                        <i class="far fa-clock"></i> Posted on {{ partial "post_datetime.html" . }} by <a href="/" class="p-author h-card">Horst Gutmann</a>
                             {{ if .Params.tags }}
                             <br><i class="far fa-tags"></i> Tags: {{ range .Params.tags }}<a href="/tags/{{ .|urlize }}">{{ . }}</a> {{ end }}
                             {{ end }}
