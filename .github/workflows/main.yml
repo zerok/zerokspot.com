@@ -72,6 +72,12 @@ jobs:
       - build-frontend
       - build-content
     runs-on: ubuntu-latest
+    env:
+      FEEDBIN_USER: ${{ env.FEEDBIN_USER }}
+      FEEDBIN_PASSWORD: ${{ env.FEEDBIN_PASSWORD }}
+      BLOGSEARCH_APP_ID: ${{ env.BLOGSEARCH_APP_ID }}
+      BLOGSEARCH_APP_KEY: ${{ env.BLOGSEARCH_APP_KEY }}
+      BLOGSEARCH_BASE_INDEX: ${{ env.BLOGSEARCH_BASE_INDEX }}
     steps:
     - uses: actions/download-artifact@v1
       with:
@@ -92,6 +98,9 @@ jobs:
       - build-tools
       - build-content
     runs-on: ubuntu-latest
+    env:
+      SSH_PRIVATE_KEY: ${{ env.SSH_PRIVATE_KEY }}
+      SSH_KNOWN_HOSTS: ${{ env.SSH_KNOWN_HOSTS }}
     steps:
     - uses: actions/download-artifact@v1
       with:
