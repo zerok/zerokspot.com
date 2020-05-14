@@ -8,7 +8,7 @@ title: Blogroll
 ---
 
 
-As <a href="http://weblog.zerokspot.com/posts/508/">promised quite some time ago</a> I've now finally uploaded a <strong><a href="http://www.zerokspot.com/blogroll/">HTML representation of my blogroll</a></strong> as well as an OPML file which also includes the actual feed addresses. I'm still working on the automation of the generation of this but I'm currently having some small problems with the AppleScripting for [Vienna](opencommunity.co.uk/vienna2.html).
+As <a href="http://weblog.zerokspot.com/posts/508/">promised quite some time ago</a> I've now finally uploaded a <strong><a href="http://www.zerokspot.com/blogroll/">HTML representation of my blogroll</a></strong> as well as an OPML file which also includes the actual feed addresses. I'm still working on the automation of the generation of this but I'm currently having some small problems with the AppleScripting for [Vienna](http://opencommunity.co.uk/vienna2.html).
 
 -------------------------------
 

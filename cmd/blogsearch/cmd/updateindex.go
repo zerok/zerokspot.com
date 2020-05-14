@@ -20,6 +20,8 @@ import (
 var gitrevURL string
 var mappingURL string
 var rebuild bool
+var dryRun bool
+var updatedObjectsPath string
 
 func fetchGitRev(u string) (string, error) {
 	c := http.Client{}
@@ -93,6 +95,7 @@ func loadMapping(u string) (map[string]string, error) {
 var updateIndexCmd = &cobra.Command{
 	Use: "update-index",
 	Run: func(cmd *cobra.Command, args []string) {
+		updatedObjectIDs := make([]string, 0, 5)
 		if !rebuild {
 			// Fetch a reference commit ID from a designed URL
 			gitrev, err := fetchGitRev(gitrevURL)
@@ -118,7 +121,14 @@ var updateIndexCmd = &cobra.Command{
 					objectID := mapping[strings.TrimPrefix(file.Name, "content/")]
 					switch file.Status {
 					case "D":
+						if objectID == "" {
+							continue
+						}
 						logger.Info().Msgf("Deleting %s", objectID)
+						if dryRun {
+							continue
+						}
+						updatedObjectIDs = append(updatedObjectIDs, objectID)
 						if _, err := index.DeleteObject(objectID); err != nil {
 							logger.Fatal().Err(err).Msgf("Failed to delete %s", objectID)
 						}
@@ -138,24 +148,26 @@ var updateIndexCmd = &cobra.Command{
 						if err := json.Unmarshal(raw, &obj); err != nil {
 							logger.Fatal().Err(err).Msgf("Failed to decode JSON from %s", dataPath)
 						}
-						dyraw, ok := obj["date_year"]
-						if !ok {
+						if err := validateSearchObject(obj); err != nil {
+							logger.Warn().Err(err).Msg("Document not valid.")
 							continue
 						}
-						if dy, ok := dyraw.(int); !ok || dy <= 1 {
+						if dryRun {
 							continue
 						}
+						logger.Info().Msgf("Updating %s", objectID)
 						if _, err := index.UpdateObjects([]algoliasearch.Object{obj}); err != nil {
 							logger.Fatal().Err(err).Msgf("Failed to update %s", objectID)
 						}
+						updatedObjectIDs = append(updatedObjectIDs, objectID)
 					}
 				}
 			}
 		} else {
-			// Determine the file changes between that previous commit ID and now
+			// Determine the file changes between that
+			// previous commit ID and now
 			var objects []algoliasearch.Object
 			err := filepath.Walk("public", func(path string, info os.FileInfo, err error) error {
-				fmt.Println(path)
 				if !info.IsDir() && info.Name() == "index.json" {
 					var obj algoliasearch.Object
 					fp, err := os.Open(path)
@@ -166,6 +178,13 @@ var updateIndexCmd = &cobra.Command{
 					if err := json.NewDecoder(fp).Decode(&obj); err != nil {
 						return err
 					}
+					// Let's ignore notes for now
+					// until I'm sure I actually
+					// want them in the index.
+					if obj["type"] != "weblog" {
+						return nil
+					}
+					logger.Info().Msgf("Adding %s", path)
 					objects = append(objects, obj)
 				}
 				return nil
@@ -173,10 +192,25 @@ var updateIndexCmd = &cobra.Command{
 			if err != nil {
 				logger.Fatal().Err(err).Msg("Failed to load JSON data")
 			}
-			_, err = index.UpdateObjects(objects)
+			if dryRun {
+				return
+			}
+			res, err := index.UpdateObjects(objects)
 			if err != nil {
 				logger.Fatal().Err(err).Msg("Failed to update index")
 			}
+			for _, oid := range res.ObjectIDs {
+				updatedObjectIDs = append(updatedObjectIDs, oid)
+			}
+		}
+		logger.Info().Msgf("Creating updated-objects file at %s", updatedObjectsPath)
+		fp, err := os.OpenFile(updatedObjectsPath, os.O_CREATE|os.O_TRUNC|os.O_WRONLY, 0644)
+		if err != nil {
+			logger.Fatal().Err(err).Msg("Failed to create updated-objects.txt")
+		}
+		defer fp.Close()
+		for _, oid := range updatedObjectIDs {
+			fmt.Fprintf(fp, "%s\n", oid)
 		}
 	},
 }
@@ -185,5 +219,7 @@ func init() {
 	updateIndexCmd.Flags().StringVar(&gitrevURL, "gitrev-url", "https://zerokspot.com/.gitrev", "URL to retrieve the reference Git ref from")
 	updateIndexCmd.Flags().StringVar(&mappingURL, "mapping-url", "https://zerokspot.com/.mapping.json.xz", "URL to retrieve the objectID mapping from")
 	updateIndexCmd.Flags().BoolVar(&rebuild, "rebuild", false, "Rebuild the whole index")
+	updateIndexCmd.Flags().BoolVar(&dryRun, "dry-run", false, "Do everything BUT changing the index")
+	updateIndexCmd.Flags().StringVar(&updatedObjectsPath, "updated-objects-path", "updated-objects.txt", "File listing updated objects")
 	rootCmd.AddCommand(updateIndexCmd)
 }

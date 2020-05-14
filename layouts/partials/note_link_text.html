@@ -1,0 +1,11 @@
+{{ if .Params.re }}
+{{ $.Scratch.Set "url" .Params.re }}
+{{ end }}
+{{ if .Params.link }}
+{{ $.Scratch.Set "url" .Params.link }}
+{{ end }}
+{{ if .Params.likeOf }}
+{{ $.Scratch.Set "url" .Params.likeOf }}
+{{ end }}
+{{ if ne .Title "" }}{{.Title }} ({{ (urls.Parse ($.Scratch.Get "url")).Host }}…){{ else }}
+{{ (urls.Parse ($.Scratch.Get "url")).Host }}…{{ end }}

@@ -4,24 +4,18 @@ stages:
   - build
   - index
   - deploy
+  - mention
 
-build-search-server:
+build-tools:
   stage: prepare
-  image: "golang:1.13.1"
+  image: "golang:1.13.3-alpine"
   script:
-    - "cd cmd/blogsearch && GOOS=linux GOARCH=amd64 go build -o ../../blogsearch && cd -"
-  artifacts:
-    paths:
-      - blogsearch
-
-build-blog-tool:
-  stage: prepare
-  image: "golang:1.13.1-alpine"
-  script:
-    - "cd cmd/blog && GOOS=linux GOARCH=amd64 go build -o ../../blog && cd -"
+    - "cd cmd/blog && CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ../../blog && cd -"
+    - "cd cmd/blogsearch && CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ../../blogsearch && cd -"
   artifacts:
     paths:
       - blog
+      - blogsearch
 
 build-frontend:
   stage: prepare
@@ -33,7 +27,6 @@ build-frontend:
     - "apt-get update -qq && apt-get install -qq --yes python make g++"
   script:
     - yarn
-    - yarn run gulp sass
     - yarn run webpack
   artifacts:
     paths:
@@ -41,13 +34,14 @@ build-frontend:
 
 build-content:
   stage: build
-  image: "jojomi/hugo:0.58"
+  image: "jojomi/hugo:0.69.0"
   script:
     - hugo
     - ./blog build-graph
+    - ./blog blogroll --output data/blogroll.json
     - hugo
   dependencies:
-    - build-blog-tool
+    - build-tools
     - build-frontend
   artifacts:
     paths:
@@ -55,12 +49,16 @@ build-content:
 
 index:
   stage: index
-  image: "registry.gitlab.com/zerok/zerokspot.com/blogsearch:latest"
+  image: "alpine:3.11"
   script:
-    - "blogsearch update-index"
-    - "blogsearch build-mapping"
+    - "apk add git curl"
+    - "./blogsearch update-index --updated-objects-path public/.updated-objects.txt"
+    - "cat public/.updated-objects.txt"
+    - "./blogsearch build-mapping"
+    - "./blog changes --since-rev $(curl https://zerokspot.com/.gitrev) --url > public/.changes.txt"
     - "git rev-parse HEAD > public/.gitrev"
   dependencies:
+    - build-tools
     - build-content
   artifacts:
     paths:
@@ -82,3 +80,21 @@ deploy:
     - "test -f blogsearch && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz blogsearch www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/bin/ || echo \"blogsearch not updated\""
     - "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
     - "ssh www-zerokspot@zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
+
+mention:
+  stage: mention
+  image:
+    name: "zerok/webmentiond:latest"
+    entrypoint:
+      - /bin/ash
+      - "-c"
+  dependencies:
+    - build-tools
+    - deploy
+    - index
+  only:
+    - master
+  script:
+    - "cat ./public/.changes.txt"
+    - "((test $(stat -c '%s' ./public/.changes.txt) -gt 10) && (cat ./public/.changes.txt | xargs -n 1 /usr/local/bin/webmentiond send)) || echo 'Nothing changed.'"
+

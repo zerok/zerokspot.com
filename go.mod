@@ -11,6 +11,7 @@ require (
 	github.com/rs/zerolog v1.9.1
 	github.com/spf13/cobra v0.0.4-0.20190321000552-67fc4837d267
 	github.com/ulikunitz/xz v0.5.5
+	gopkg.in/yaml.v2 v2.2.2
 )
 
 go 1.13

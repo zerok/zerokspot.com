@@ -1,0 +1,66 @@
+<!DOCTYPE html>{{ $.Scratch.Set "isReading" 1 }}
+<html lang="en">
+    {{ partial "head.html" $ }}
+    <body>
+        <div class="page page--single">
+            {{ partial "header.html" $ }}
+            <div id="body">
+                <div class="reading-listing">
+                  <h1>Reading</h1>
+                  <div class="page__intro">
+                    <p>Here you can find a list of books I've read, am reading, and want to read in the future.</p>
+                  </div>
+                  {{ $reading := (where (where .Pages ".Params.date" "!=" nil) ".Params.finished" "==" nil) }}
+                  {{ $read := (where (where .Pages ".Params.date" "<>" nil) ".Params.finished" "!=" nil) }}
+                  <section id="reading">
+                    <h2>Currently reading</h2>
+                    <table class="table table--reading-list">
+                        <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Started</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {{ range $reading }}
+                        <tr>
+                          <td>{{ .Title }}</td>
+                          <td>{{ .Params.date | dateFormat "2006-01-02" }}</td>
+                        </tr>
+                        {{ end }}
+                      </tbody>
+                    </table>
+                  </section>
+                  <section id="read">
+                  <h2>Read</h2>
+                  {{ range $read.GroupByDate "2006" }}
+                  <section id="read-{{ .Key }}">
+                  <h3>{{ .Key }} <span class="reading-listing__count">({{ len .Pages }} in total)</span></h3>
+                  <table class="table table--reading-list">
+                    <thead>
+                      <tr>
+                        <th>Title</th>
+                        <th>Started</th>
+                        <th>Finished</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {{ range .Pages }}
+                      <tr>
+                        <td>{{ .Title }}</td>
+                        <td>{{ .Params.date | dateFormat "2006-01-02" }}</td>
+                        <td>{{ .Params.finished | dateFormat "2006-01-02" }}</td>
+                      </tr>
+                      {{ end }}
+                    </tbody>
+                  </table>
+                  </section>
+                  {{ end }}
+                  </section>
+                </div>
+            </div>
+            {{ partial "footer.html" }}
+        </div>
+    </body>
+</html>
+

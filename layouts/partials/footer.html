@@ -4,9 +4,43 @@
                         <a class="licenseimg" rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/at/">
                             <img alt="Creative Commons License" width="88" height="31" src="/images/cc.png">
                         </a>
-                        <p>(cc) 2003-2019 Horst Gutmann <br>
+                        <p>(cc) 2003-2020 Horst Gutmann <br>
                             <br>If not otherwise stated this work is licensed under a
                             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/at/">Creative Commons Attribution-Share Alike 3.0 Austria License</a>.<br>The source code of this site is available on <a href="https://gitlab.com/zerok/zerokspot.com">GitLab</a>. The primary font used here is <a href="https://www.fontsquirrel.com/fonts/Liberation-Mono">Liberation Mono</a> by Red Hat.</p>
                     </div>
                 </div>
             </footer>
+    <script src="/fontawesome-pro-5.11.2-web/js/all.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            var button = document.createElement('a');
+            function toggleDarkMode(goDark) {
+                if (goDark) {
+                    button.innerHTML = '<i class="fa fa-sun"></i>';
+                    document.getElementsByTagName('html')[0].classList.add('darkmode');
+                } else {
+                    button.innerHTML = '<i class="fa fa-moon"></i>';
+                    document.getElementsByTagName('html')[0].classList.remove('darkmode');
+                }
+                window.localStorage.setItem('darkMode', goDark);
+            }
+            var goDark = window.localStorage.getItem('darkMode');
+            if (goDark == null) {
+                goDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            } else {
+                goDark = goDark === 'true';
+            }
+            var navList = document.querySelector('#main-nav > ul');
+            var navItem = document.createElement('li');
+            navItem.classList.add('darkmode-toggle');
+            toggleDarkMode(goDark);
+            button.setAttribute('href', '');
+            navItem.appendChild(button);
+            navList.appendChild(navItem);
+            button.addEventListener('click', (evt) => {
+                evt.preventDefault();
+                goDark = !goDark;
+                toggleDarkMode(goDark);
+            }, false);
+        }());
+    </script>

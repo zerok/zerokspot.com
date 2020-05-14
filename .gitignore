@@ -7,5 +7,7 @@
 /search.bleve
 /bin
 /.envrc
+/data
+.DS_Store
 *.bak
 *~
