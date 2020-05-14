@@ -84,7 +84,11 @@ jobs:
     - uses: actions/download-artifact@v1
       with:
         name: blogsearch
-        path: blogsearch
+    - uses: actions/download-artifact@v1
+      with:
+        name: blogcli
+    - run: chmod +x ./blogsearch/blogsearch
+    - run: chmod +x ./blogcli/blog
     - uses: actions/download-artifact@v1
       with:
         name: public.tar.xz
@@ -94,7 +98,7 @@ jobs:
     - run: "./blogsearch/blogsearch update-index --updated-objects-path public/.updated-objects.txt"
     - run: "cat public/.updated-objects.txt"
     - run: "./blogsearch/blogsearch build-mapping"
-    - run: "./blogcli/blogcli changes --since-rev $(curl https://zerokspot.com/.gitrev) --url > public/.changes.txt"
+    - run: "./blogcli/blog changes --since-rev $(curl https://zerokspot.com/.gitrev) --url > public/.changes.txt"
     - run: "git rev-parse HEAD > public/.gitrev"
     - run: tar -cJf public.tar.xz public
     - uses: actions/upload-artifact@v1
@@ -104,8 +108,6 @@ jobs:
   deploy:
     needs:
       - index
-      - build-tools
-      - build-content
     runs-on: ubuntu-latest
     env:
       SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
