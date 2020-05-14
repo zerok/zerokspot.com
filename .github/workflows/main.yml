@@ -141,7 +141,7 @@ jobs:
     - run: "mv updated-objects/.updated-objects.txt public"
     - run: "sudo apt-get install -qq --yes git curl"
     - run: "mkdir -p ~/.ssh && chmod 0700 ~/.ssh"
-    - run: echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - run: "echo \"$SSH_PRIVATE_KEY\" > ~/.ssh/id_rsa && chmod 0600 ~/.ssh/id_rsa"
     - run: "echo ${{ github.sha }} > public/.gitrev"
     - run: "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
     - run: "ssh www-zerokspot@zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
