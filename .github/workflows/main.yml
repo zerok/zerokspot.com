@@ -85,7 +85,7 @@ jobs:
       with:
         name: public.tar.xz
         path: public.tar.xz
-    - run: tar -xJf public.tar.xz public
+    - run: tar -xJf public.tar.xz/public.tar.xz
     - run: "sudo apt-get install -qq --yes git curl"
     - run: "./blogsearch update-index --updated-objects-path public/.updated-objects.txt"
     - run: "cat public/.updated-objects.txt"
@@ -111,7 +111,7 @@ jobs:
       with:
         name: public.tar.xz
         path: public.tar.xz
-    - run: tar -xJf public.tar.xz public
+    - run: tar -xJf public.tar.xz/public.tar.xz
     - uses: actions/download-artifact@v1
       with:
         name: blogcli
