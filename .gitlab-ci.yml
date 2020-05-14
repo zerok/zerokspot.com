@@ -96,5 +96,5 @@ mention:
     - master
   script:
     - "cat ./public/.changes.txt"
-    - "(test $(stat -c '%s' ./public/.changes.txt) -gt 10) && (cat ./public/.changes.txt | xargs -n 1 /usr/local/bin/webmentiond send)"
+    - "((test $(stat -c '%s' ./public/.changes.txt) -gt 10) && (cat ./public/.changes.txt | xargs -n 1 /usr/local/bin/webmentiond send)) || echo 'Nothing changed.'"
 
