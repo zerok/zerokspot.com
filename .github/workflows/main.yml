@@ -81,6 +81,7 @@ jobs:
       BLOGSEARCH_APP_KEY: ${{ secrets.BLOGSEARCH_APP_KEY }}
       BLOGSEARCH_BASE_INDEX: ${{ secrets.BLOGSEARCH_BASE_INDEX }}
     steps:
+    - uses: actions/checkout@v1
     - uses: actions/download-artifact@v1
       with:
         name: blogsearch
@@ -113,6 +114,7 @@ jobs:
       SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
     steps:
+    - uses: actions/checkout@v1
     - uses: actions/download-artifact@v1
       with:
         name: public.tar.xz
