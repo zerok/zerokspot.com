@@ -149,12 +149,11 @@ jobs:
   mention:
     needs:
       - deploy
-    container:
-      image: "zerok/webmentiond:latest"
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/download-artifact@v1
       with:
         name: changes
-    - run: "cat changes/.changes.txt"
-    - run: "((test $(stat -c '%s' ./changes/.changes.txt) -gt 10) && (cat ./changes/.changes.txt | xargs -n 1 /usr/local/bin/webmentiond send)) || echo 'Nothing changed.'"
+    - uses: "docker://zerok/webmentiond:latest"
+      run: "((test $(stat -c '%s' ./changes/.changes.txt) -gt 10) && (cat ./changes/.changes.txt | xargs -n 1 /usr/local/bin/webmentiond send)) || echo 'Nothing changed.'"
 
