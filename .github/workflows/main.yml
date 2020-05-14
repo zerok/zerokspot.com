@@ -64,10 +64,11 @@ jobs:
     - run: ./blogcli/blog build-graph
     - run: ./blogcli/blog blogroll --output data/blogroll.json
     - run: hugo
+    - run: tar -cJf public.tar.xz public
     - uses: actions/upload-artifact@v1
       with:
-        name: public
-        path: public
+        name: public.tar.xz
+        path: public.tar.xz
 
   index:
     needs:
@@ -82,20 +83,23 @@ jobs:
     steps:
     - uses: actions/download-artifact@v1
       with:
-        name: public
-        path: public
+        name: public.tar.xz
+        path: public.tar.xz
+    - run: tar -xJf public.tar.xz public
     - run: "sudo apt-get install -qq --yes git curl"
     - run: "./blogsearch update-index --updated-objects-path public/.updated-objects.txt"
     - run: "cat public/.updated-objects.txt"
     - run: "./blogsearch build-mapping"
     - run: "./blog changes --since-rev $(curl https://zerokspot.com/.gitrev) --url > public/.changes.txt"
     - run: "git rev-parse HEAD > public/.gitrev"
+    - run: tar -cJf public.tar.xz public
     - uses: actions/upload-artifact@v1
       with:
-        name: public
-        path: public
+        name: public.tar.xz
+        path: public.tar.xz
   deploy:
     needs:
+      - index
       - build-tools
       - build-content
     runs-on: ubuntu-latest
@@ -105,8 +109,9 @@ jobs:
     steps:
     - uses: actions/download-artifact@v1
       with:
-        name: public
-        path: public
+        name: public.tar.xz
+        path: public.tar.xz
+    - run: tar -xJf public.tar.xz public
     - uses: actions/download-artifact@v1
       with:
         name: blogcli
