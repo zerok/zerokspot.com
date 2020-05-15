@@ -6,6 +6,11 @@ jobs:
   build-frontend:
     runs-on: ubuntu-latest
     steps:
+    - uses: zerok/pushover-action@master
+      with:
+        token: ${{ secrets.PUSHOVER_TOKEN }}
+        user: ${{ secrets.PUSHOVER_USER }}
+        message: CI started
     - uses: actions/checkout@v1
     - uses: actions/setup-node@v1.1.2
       with:
@@ -157,4 +162,9 @@ jobs:
       with:
         name: changes
     - run: "((test $(stat -c '%s' ./changes/.changes.txt) -gt 10) && (cat ./changes/.changes.txt | xargs -n 1 /usr/local/bin/webmentiond send)) || echo 'Nothing changed.'"
+    - uses: zerok/pushover-action@master
+      with:
+        token: ${{ secrets.PUSHOVER_TOKEN }}
+        user: ${{ secrets.PUSHOVER_USER }}
+        message: CI completed
 
