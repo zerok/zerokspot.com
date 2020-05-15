@@ -7,6 +7,7 @@ import (
 	"io"
 	"os"
 	"path/filepath"
+	"regexp"
 	"strings"
 	"time"
 
@@ -14,6 +15,8 @@ import (
 	"github.com/zerok/textbundle-go"
 	"gopkg.in/yaml.v2"
 )
+
+var imageLine = regexp.MustCompile(`!\[(.*)\]\(([^)]+)\)`)
 
 var importTextBundleCmd = &cobra.Command{
 	Use: "import-textbundle FILE",
@@ -55,6 +58,16 @@ func processBody(text string, now time.Time) string {
 					}
 				}
 				continue
+			} else if strings.HasPrefix(line, "![") {
+				if imageLine.MatchString(line) {
+					elems := imageLine.FindStringSubmatch(line)
+					img := elems[2]
+					if strings.HasPrefix(img, "assets/") {
+						img = fmt.Sprintf("/media/%s/%s", now.Format("2006"), strings.TrimPrefix(img, "assets/"))
+					}
+					lines = append(lines, fmt.Sprintf("<figure><img src=\"%s\"><figcaption>%s</figcaption></figure>", img, elems[1]))
+					continue
+				}
 			}
 			lines = append(lines, line)
 		}
