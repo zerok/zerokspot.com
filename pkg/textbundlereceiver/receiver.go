@@ -155,6 +155,7 @@ func (recv *Receiver) createPR(ctx context.Context, slug string, branchname stri
 	if err != nil {
 		return err
 	}
+	req.SetBasicAuth(recv.GitHubUser, recv.GitHubToken)
 	resp, err := client.Do(req.WithContext(ctx))
 	if err != nil {
 		return err
