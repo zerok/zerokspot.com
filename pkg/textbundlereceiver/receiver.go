@@ -1,7 +1,9 @@
 package textbundlereceiver
 
 import (
+	"bytes"
 	"context"
+	"encoding/json"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -22,6 +24,8 @@ type Receiver struct {
 	AccessToken string
 	RepoPath    string
 	Importer    *textbundleimporter.Importer
+	GitHubUser  string
+	GitHubToken string
 }
 
 type Configurator func(*Receiver)
@@ -130,6 +134,41 @@ func (recv *Receiver) handleReceive(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Git failed", http.StatusInternalServerError)
 		return
 	}
+	if err := recv.createPR(ctx, slug, branchname); err != nil {
+		logger.Error().Err(err).Msg("Failed to create PR")
+		http.Error(w, "PR creation failed", http.StatusInternalServerError)
+		return
+	}
+}
+
+func (recv *Receiver) createPR(ctx context.Context, slug string, branchname string) error {
+	client := http.Client{}
+	body := bytes.Buffer{}
+	if err := json.NewEncoder(&body).Encode(&prBody{
+		Title: "Article: " + slug,
+		Head:  branchname,
+		Base:  "master",
+	}); err != nil {
+		return err
+	}
+	req, err := http.NewRequest(http.MethodPost, "https://api.github.com/repos/zerok/zerokspot.com/pull", &body)
+	if err != nil {
+		return err
+	}
+	resp, err := client.Do(req.WithContext(ctx))
+	if err != nil {
+		return err
+	}
+	if resp.StatusCode >= 300 {
+		return fmt.Errorf("GitHub API returned an unexpected status code: %d", resp.StatusCode)
+	}
+	return nil
+}
+
+type prBody struct {
+	Title string `json:"title"`
+	Base  string `json:"base"`
+	Head  string `json:"head"`
 }
 
 func (recv *Receiver) callGit(ctx context.Context, args ...string) error {
