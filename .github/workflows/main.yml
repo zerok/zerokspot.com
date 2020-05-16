@@ -124,6 +124,7 @@ jobs:
     needs:
       - index
       - build-content
+      - build-tools
     runs-on: ubuntu-latest
     env:
       SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -144,6 +145,13 @@ jobs:
     - uses: actions/download-artifact@v1
       with:
         name: updated-objects
+    - uses: actions/download-artifact@v1
+      with:
+        name: blogcli
+    - uses: actions/download-artifact@v1
+      with:
+        name: blogsearch
+    - run: chmod +x ./blogcli/blog ./blogsearch/blogsearch
     - run: "mv changes/.changes.txt public"
     - run: "mv mapping/.mapping.json.xz public"
     - run: "mv updated-objects/.updated-objects.txt public"
@@ -151,6 +159,8 @@ jobs:
     - run: "mkdir -p ~/.ssh && chmod 0700 ~/.ssh"
     - run: "echo \"$SSH_PRIVATE_KEY\" > ~/.ssh/id_rsa && chmod 0600 ~/.ssh/id_rsa"
     - run: "echo ${{ github.sha }} > public/.gitrev"
+    - run: "rsync -avz -e \"ssh -o StrictHostKeyChecking=no\" blogcli/blog www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/bin/"
+    - run: "rsync -avz -e \"ssh -o StrictHostKeyChecking=no\" blogsearch/blogsearch www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/bin/"
     - run: "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
     - run: "ssh www-zerokspot@zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
 
