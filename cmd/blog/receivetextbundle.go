@@ -11,12 +11,13 @@ import (
 
 var repoPath string
 var token string
+var addr string
 
 var receiveTextBundle = &cobra.Command{
 	Use: "receive-textbundle",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		srv := http.Server{}
-		srv.Addr = "localhost:8888"
+		srv.Addr = addr
 		imp := textbundleimporter.New(repoPath)
 		recv := textbundlereceiver.New(func(r *textbundlereceiver.Receiver) {
 			r.RepoPath = repoPath
@@ -33,4 +34,5 @@ func init() {
 	rootCmd.AddCommand(receiveTextBundle)
 	receiveTextBundle.Flags().StringVar(&repoPath, "repo-path", "", "Path to the repository that should be updated")
 	receiveTextBundle.Flags().StringVar(&token, "token", "", "Token required for requests")
+	receiveTextBundle.Flags().StringVar(&addr, "addr", "localhost:37080", "Address to listen on")
 }
