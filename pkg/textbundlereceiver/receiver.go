@@ -151,7 +151,7 @@ func (recv *Receiver) createPR(ctx context.Context, slug string, branchname stri
 	}); err != nil {
 		return err
 	}
-	req, err := http.NewRequest(http.MethodPost, "https://api.github.com/repos/zerok/zerokspot.com/pull", &body)
+	req, err := http.NewRequest(http.MethodPost, "https://api.github.com/repos/zerok/zerokspot.com/pulls", &body)
 	if err != nil {
 		return err
 	}
