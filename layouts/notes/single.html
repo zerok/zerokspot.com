@@ -9,6 +9,7 @@
                     <h1>{{ .Date.Format "2006-01-02" }} // {{ .File.BaseFileName }}</h1>
                 </header>
                 {{ partial "note.html" . }}
+                {{ partial "comments.html" . }}
             </div>
             {{ partial "footer.html" $ }}
         </div>
