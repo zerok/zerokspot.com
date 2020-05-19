@@ -1,7 +1,10 @@
 ---
 title: Podcasts with constraints
 date: "2020-05-19T05:24:08Z"
-tags: []
+tags:
+- podcast
+- time
+- 100daystooffload
 ---
 
 A couple of days ago I listened to the [most recent episode of the Under the Radar podcast](https://www.relay.fm/radar/191) with [David Smith](https://david-smith.org/) and [Marco Arment](https://marco.org/) which was all about working under constraints. One big topic here was also the 30min limit they set for their own podcast about which David Smith said the following: It’s basically about being “respectful of the listener”.
