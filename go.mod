@@ -11,8 +11,9 @@ require (
 	github.com/pkg/errors v0.8.1
 	github.com/rs/zerolog v1.9.1
 	github.com/spf13/cobra v0.0.4-0.20190321000552-67fc4837d267
+	github.com/stretchr/testify v1.5.1
 	github.com/ulikunitz/xz v0.5.5
-	github.com/zerok/textbundle-go v0.0.0-20200515142507-7c7fd50819d8
+	github.com/zerok/textbundle-go v0.0.0-20200521090826-d11aedee74ff
 	gopkg.in/yaml.v2 v2.2.2
 )
 

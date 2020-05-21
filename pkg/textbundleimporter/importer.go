@@ -19,12 +19,15 @@ import (
 var imageLine = regexp.MustCompile(`!\[(.*)\]\(([^)]+)\)`)
 
 type Importer struct {
-	RepoPath string
+	RepoPath     string
+	TimeLocation *time.Location
+	Now          time.Time
 }
 
 func New(repopath string) *Importer {
 	return &Importer{
 		RepoPath: repopath,
+		Now:      time.Now(),
 	}
 }
 
@@ -76,7 +79,10 @@ func (i *Importer) processBody(text string, now time.Time) string {
 
 func (i *Importer) Import(ctx context.Context, path string, slug string) error {
 	logger := zerolog.Ctx(ctx)
-	now := time.Now()
+	now := i.Now
+	if i.TimeLocation != nil {
+		now = now.In(i.TimeLocation)
+	}
 	r, err := textbundle.OpenReader(path)
 	if err != nil {
 		return err
@@ -93,6 +99,9 @@ func (i *Importer) Import(ctx context.Context, path string, slug string) error {
 	filename := fmt.Sprintf("%s.md", slug)
 	fpath := filepath.Join(folder, filename)
 	logger.Info().Msgf("Creating %s\n", fpath)
+	if err := os.MkdirAll(folder, 0700); err != nil {
+		return fmt.Errorf("could not create %s: %w", folder, err)
+	}
 	fp, err := os.OpenFile(fpath, os.O_CREATE|os.O_TRUNC|os.O_WRONLY, 0600)
 	if err != nil {
 		return fmt.Errorf("could not create %s: %w", fpath, err)
