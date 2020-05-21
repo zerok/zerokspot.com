@@ -8,7 +8,7 @@ title: Closed down reviews
 ---
 
 <img src="/media/2016/closed.png" style="float:left;padding:1px;border:1px solid #EFEFEF;margin:0 1em 1em 0"/>
-A couple of days I had one of those evenings where I was watching a TV show and
+A couple of days ago I had one of those evenings where I was watching a TV show and
 in parallel started looking up the places I visited while in the city that this
 episode was taking place in (for the curious among you it was Daredevil and
 therefore NYC).
