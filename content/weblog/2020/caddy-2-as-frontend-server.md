@@ -58,6 +58,4 @@ Something that I hadn’t expected was that Caddy also offers some nice logging 
 
 Caddy also supports dynamically changing the server configuration through an API but I haven’t used this feature yet.
 
-The only downside I’ve found so far is that the package installation is a bit more manual compared with something like nginx or Apache HTTPD. That’s not really an issue for me, though, as I manage my servers using Ansible. 
-
-# caddy #server #hosting #operations
+The only downside I’ve found so far is that the package installation is a bit more manual compared with something like nginx or Apache HTTPD. That’s not really an issue for me, though, as I manage my servers using Ansible.
