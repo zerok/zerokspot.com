@@ -79,7 +79,13 @@ func (i *Importer) processBody(text string, now time.Time) string {
 
 func (i *Importer) Import(ctx context.Context, path string, slug string) error {
 	logger := zerolog.Ctx(ctx)
-	now := i.Now
+	var now time.Time
+	defaultTime := time.Time{}
+	if i.Now == defaultTime {
+		now = time.Now()
+	} else {
+		now = i.Now
+	}
 	if i.TimeLocation != nil {
 		now = now.In(i.TimeLocation)
 	}
