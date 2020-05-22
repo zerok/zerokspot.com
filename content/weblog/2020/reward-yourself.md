@@ -1,6 +1,6 @@
 ---
 title: Reward yourself
-date: "2020-05-21T14:58:17+02:00"
+date: "2020-05-22T11:36:17+02:00"
 tags:
 - motivation
 - treats
