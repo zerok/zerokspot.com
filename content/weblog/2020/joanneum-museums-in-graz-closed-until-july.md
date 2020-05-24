@@ -1,6 +1,6 @@
 ---
 title: Joanneum museums in Graz closed until July?
-date: "2020-05-22T15:40:18+02:00"
+date: "2020-05-23T09:40:18+02:00"
 tags:
 - graz
 - tourism
