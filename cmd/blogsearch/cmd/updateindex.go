@@ -138,11 +138,21 @@ var updateIndexCmd = &cobra.Command{
 						if objectID == "" {
 							objectID = newMapping[strings.TrimPrefix(file.Name, "content/")]
 						}
-						logger.Info().Msgf("Updating %s", objectID)
 						dataPath := filepath.Join("public", objectID, "index.json")
 						raw, err := ioutil.ReadFile(dataPath)
 						if err != nil {
-							logger.Fatal().Err(err).Msgf("Failed to load %s", dataPath)
+							if os.IsNotExist(err) {
+								logger.Info().Msgf("Deleting %s", objectID)
+								if _, err := index.DeleteObject(objectID); err != nil {
+									logger.Error().Err(err).Msgf("Failed to delete %s", objectID)
+								}
+								objectID = newMapping[strings.TrimPrefix(file.Name, "content/")]
+								dataPath = filepath.Join("public", objectID, "index.json")
+								raw, err = ioutil.ReadFile(dataPath)
+							}
+							if err != nil {
+								logger.Fatal().Err(err).Msgf("Failed to load %s", dataPath)
+							}
 						}
 						var obj algoliasearch.Object
 						if err := json.Unmarshal(raw, &obj); err != nil {
