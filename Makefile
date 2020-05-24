@@ -2,6 +2,10 @@ main_js=static/js/archive.js
 
 all: bin/blogsearch bin/blog $(main_js)
 
+.PHONY: test
+test:
+	go test ./... -v
+
 prepare:
 	yarn
 

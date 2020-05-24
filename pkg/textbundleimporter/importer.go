@@ -94,6 +94,7 @@ func (i *Importer) Import(ctx context.Context, path string, slug string) error {
 		return err
 	}
 	// Create markdown file
+	logger.Info().Msgf("Setting date of new post to %s", now.Format(time.RFC3339))
 	folder := filepath.Join(i.RepoPath, fmt.Sprintf("content/weblog/%s", now.Format("2006")))
 	if slug == "" {
 		elems := strings.SplitN(filepath.Base(path), ".", 2)
