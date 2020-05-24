@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
 	"time"
 
@@ -66,12 +67,42 @@ func TestImportBundle(t *testing.T) {
 		err = i.Import(ctx, filepath.Join(path, "test.textpack"), "")
 		require.NoError(t, err)
 		expectedTS = i.Now.In(time.UTC).Format(time.RFC3339)
-		t.Logf("Expected TS: %s", expectedTS)
 		expectedFile = filepath.Join(path, "content", "weblog", i.Now.Format("2006"), "test.md")
 		fileContent, err = ioutil.ReadFile(expectedFile)
 		require.NoError(t, err)
 		require.Contains(t, string(fileContent), expectedTS)
+
+		// Now with the default value should be dynamic an change with every import:
+		now = time.Now()
+		i.Now = time.Time{}
+		i.TimeLocation = time.UTC
+		err = i.Import(ctx, filepath.Join(path, "test.textpack"), "")
+		require.NoError(t, err)
+		expectedFile = filepath.Join(path, "content", "weblog", now.Format("2006"), "test.md")
+		_, err = ioutil.ReadFile(expectedFile)
+		require.NoError(t, err)
+		firstTS := postDate(t, expectedFile)
+		time.Sleep(time.Second * 2)
+		err = i.Import(ctx, filepath.Join(path, "test.textpack"), "")
+		require.NoError(t, err)
+		secondTS := postDate(t, expectedFile)
+		require.True(t, secondTS.After(firstTS))
 	})
+}
+
+func postDate(t *testing.T, fpath string) time.Time {
+	data, err := ioutil.ReadFile(fpath)
+	require.NoError(t, err, "failed to open %s", fpath)
+	for _, l := range strings.Split(string(data), "\n") {
+		if strings.HasPrefix(l, "date: ") {
+			raw := strings.TrimPrefix(l, "date: ")
+			raw = strings.Trim(raw, "\"")
+			tm, err := time.Parse(time.RFC3339, raw)
+			require.NoError(t, err, "Failed to parse %s", raw)
+			return tm
+		}
+	}
+	return time.Time{}
 }
 
 func createTestRepo(t *testing.T, name string) string {
