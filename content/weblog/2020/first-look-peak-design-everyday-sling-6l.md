@@ -1,6 +1,6 @@
 ---
 title: 'First look: Peak Design Everyday Sling 6l'
-date: "2020-05-24T00:12:25+02:00"
+date: "2020-05-24T09:12:25+02:00"
 tags:
 - bag
 - slingbag
