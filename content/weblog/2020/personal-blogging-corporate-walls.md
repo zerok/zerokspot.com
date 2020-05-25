@@ -1,6 +1,6 @@
 ---
 title: Personal blogging, corporate walls
-date: "2020-05-25T08:22:27+02:00"
+date: "2020-05-25T08:53:27+02:00"
 tags:
 - personal
 - blogging
