@@ -27,7 +27,6 @@ type Importer struct {
 func New(repopath string) *Importer {
 	return &Importer{
 		RepoPath: repopath,
-		Now:      time.Now(),
 	}
 }
 
