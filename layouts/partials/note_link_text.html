@@ -1,6 +1,9 @@
 {{ if .Params.re }}
 {{ $.Scratch.Set "url" .Params.re }}
 {{ end }}
+{{ if .Params.inReplyTo }}
+{{ $.Scratch.Set "url" .Params.inReplyTo }}
+{{ end }}
 {{ if .Params.link }}
 {{ $.Scratch.Set "url" .Params.link }}
 {{ end }}
