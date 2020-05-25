@@ -73,8 +73,8 @@ func TestImportBundle(t *testing.T) {
 		require.Contains(t, string(fileContent), expectedTS)
 
 		// Now with the default value should be dynamic an change with every import:
+		i = New(path)
 		now = time.Now()
-		i.Now = time.Time{}
 		i.TimeLocation = time.UTC
 		err = i.Import(ctx, filepath.Join(path, "test.textpack"), "")
 		require.NoError(t, err)
