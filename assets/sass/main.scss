@@ -5,6 +5,7 @@
 @import "header";
 @import "postpaths";
 @import "reading";
+@import "hcard";
 
 @font-face {
   font-family: 'Liberation Mono';
@@ -128,8 +129,15 @@ aside {
     text-align: center;
     padding: 0;
     margin: 5px 0 30px 0;
+    display: flex;
 }
 
+.article__meta__attributes {
+    flex: 1;
+    text-align: right;
+    margin-right: 1.5rem;
+
+}
 .note__meta__item {
     display: inline-block;
     margin-left: 1rem;
@@ -349,6 +357,16 @@ aside {
 }
 
 @media screen and (max-width: 800px) {
+    .article__meta {
+        display: block;
+    }
+    .article__meta__attributes,
+    .article__meta__author {
+        text-align: left;
+        width: 100%;
+        overflow: hidden;
+        margin: 0;
+    }
     .row {
         display: block;
 

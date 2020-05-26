@@ -13,7 +13,7 @@
   {{ end }}
   {{ if .Content }}<div class="note__content e-content">{{ .Content }}</div>{{ end }}
     <p class="note__meta">
-    <span class="note__meta__item"><i class="far fa-clock"></i> Posted on <a href="{{ .RelPermalink }}">{{ partial "post_datetime.html" . }}</a> by <a href="/" class="p-author h-card">Horst Gutmann</a></span>
+    <span class="note__meta__item"><i class="far fa-clock"></i> Posted on <a href="{{ .RelPermalink }}">{{ partial "post_datetime.html" . }}</a> by <span class="h-card p-author h-card--tiny"><img src="/images/me.jpg" alt=""> <a href="/" class="p-name u-url">Horst Gutmann</a></span></span>
         {{ if .Params.tags }}
         <span class="note__meta__item"><i class="far fa-tags"></i> Tags: {{ range .Params.tags }}<a href="/tags/{{ .|urlize }}">{{ . }}</a> {{ end }}</span>
         {{ end }}

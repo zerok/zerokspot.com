@@ -8,16 +8,22 @@
                 <article class="article--frontpage h-entry">
                     <header>
                         <h1 class="p-name"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-                        <p class="article__meta">
-                        <i class="far fa-clock"></i> Posted on {{ partial "post_datetime.html" . }} by <a href="/" class="p-author h-card">Horst Gutmann</a>
-                            {{ if .Params.tags }}
-                            <br><i class="far fa-tags"></i> Tags: {{ range .Params.tags }}<a href="/tags/{{ .|urlize }}">{{ . }}</a> {{ end }}
-                            {{ end }}
-                            {{ if .Params.inReplyTo }}
-                            {{ $url := urls.Parse .Params.inReplyTo }}
-                            <br><i class="far fa-reply"></i> Replying to <a href="{{ .Params.inReplyTo }}" class="u-in-reply-to">{{ $url.Host }}{{ $url.Path }}</a>
-                            {{ end }}
-                        </p>
+                        <div class="article__meta">
+                            <p class="article__meta__attributes">
+                                <i class="far fa-clock"></i> Posted on {{ partial "post_datetime.html" . }}
+                                {{ if .Params.tags }}
+                                <br><i class="far fa-tags"></i> Tags: {{ range .Params.tags }}<a href="/tags/{{ .|urlize }}">{{ . }}</a> {{ end }}
+                                {{ end }}
+                                {{ if .Params.inReplyTo }}
+                                {{ $url := urls.Parse .Params.inReplyTo }}
+                                <br><i class="far fa-reply"></i> Replying to <a href="{{ .Params.inReplyTo }}" class="u-in-reply-to">{{ $url.Host }}{{ $url.Path }}</a>
+                                {{ end }}
+                            </p>
+                            <div class="article__meta__author h-card h-card--small p-author">
+                                <img src="/images/me.jpg" class="u-photo" alt="Picture of Horst Gutmann">
+                                <p><a href="/" class="p-author p-name u-url">Horst Gutmann</a>, <span class="p-job-title">software engineer</span> from <span class="p-locality">Graz</span>, <span class="p-country">Austria</span>.</p>
+                            </div>
+                        </div>
                     </header>
                     <div class="article__content e-content">{{ .Content }}</div>
                     {{ if $.Site.Data.postpaths }}
