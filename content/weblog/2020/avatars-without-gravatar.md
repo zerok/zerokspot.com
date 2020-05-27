@@ -72,6 +72,8 @@ The default option is actually a bit more complicated since most implementations
 
 In cases where you explicitly want to retrieve the default image, use the `forcedefault=y`/`f=y` parameter in combination with the `default` parameter.
 
+Just to make this clear: The example above is just that. An example. If you want to integrate Libravatar in your own project, please use one of the pre-existing libraries that are listed on [libravatar.org](https://wiki.libravatar.org/libraries/)!
+
 
 ## An experimental server implementation
 
@@ -90,3 +92,7 @@ So far,  I have this implementation running on avatars.zerokspot.com and set the
 ## Liberapay not the best example
 
 After all this work, I set my profile on Liberapay to use LibAvatar in the hope that they’d do the DNS lookup I described above. Sadly, [they don’t](https://github.com/Liberapay/Liberapay.com/blob/56bb0c2d5859126f38810dbb24836ccea7484860/Liberapay/elsewhere/_base.py#L267). They just calculate the hash and then forward it to Libravatar.org. So me writing my own server and jumping through all these hoops to be a good federated avatar citizen seems to have been in vain. At least I had fun and learnt something new 😅
+
+## Updates:
+
+- **2020-05-27 13:17 +02:00:** Added a link to existing libraries.
