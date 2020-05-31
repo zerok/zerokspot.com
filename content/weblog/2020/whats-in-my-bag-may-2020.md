@@ -21,7 +21,7 @@ My new default is the smallest: The Everyday Sling [which I reviewed recently](h
 
 In this post I want to focus on what’s in my Sling bag, since this is my default and the others have pretty much the same in them but simply replace the camera with a laptop (and whatever else I need to transport).
 
-<figure><img src="http://files.zerokspot.com/whats-in-my-bag/2020-05.mini.jpg"><figcaption>You can find a larger version \<a href="http://files.zerokspot.com/whats-in-my-bag/2020-05.jpg"\>here\</a\></figcaption></figure>
+<figure><img src="http://files.zerokspot.com/whats-in-my-bag/2020-05.mini.jpg"><figcaption>You can find a larger version <a href="http://files.zerokspot.com/whats-in-my-bag/2020-05.jpg">here</a></figcaption></figure>
 
 For situations where I just need the bare minimum of stuff with me, I use a Peak Design Everyday Sling 6l (black). In there I have the following items:
 
