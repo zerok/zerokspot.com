@@ -1,7 +1,10 @@
 ---
 title: At a loss of words
 date: "2020-06-01T10:34:34+02:00"
-tags: []
+tags:
+- 100daystooffload
+- usa
+- blacklivesmatter
 ---
 
 With some police officers in the USA killing innocents, people protesting, police fighting protestors with brutal force, journalists being attacked with one even losing one eye and all that during a pandemic it's really hard to write about such trivial stuff as I usually do here.
