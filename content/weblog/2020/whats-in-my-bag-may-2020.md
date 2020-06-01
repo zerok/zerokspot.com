@@ -5,6 +5,7 @@ tags:
 - whatsinmybag
 - bag
 - load
+- 100daystooffload
 ---
 
 I haven’t posted my daily load out for quite some time so I thought it was time again! I tend to use one of three bags depending on what I want to transport (or plan to do for the day) I pick up one of the following three:

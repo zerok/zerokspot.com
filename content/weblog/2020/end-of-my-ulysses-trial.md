@@ -7,6 +7,7 @@ tags:
 - iOS
 - macOS
 - ulysses
+- 100daystooffload
 ---
 
 For the last two weeks I’ve now been writing all my blogposts exclusively with [Ulysses](https://ulysses.app/) while handling notes (i.e. comments, likes, links) using [Drafts](https://getdrafts.com/). Ulysses has finally allowed me to write posts including images without having to do any additional steps before publishing them. Sure, part of that is thanks to some [custom coding around converting TextPack files](https://zerokspot.com/weblog/2020/05/20/writing-blog-posts-using-ulysses/) into proper pull-requests for my site, but I wouldn’t have spent all this time and effort if the writing experience wasn’t great!
