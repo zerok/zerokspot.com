@@ -6,6 +6,7 @@ tags:
 - tourism
 - joanneum
 - covid19
+- 100daystooffload
 ---
 
 When you walk through the inner city of Graz right now, you’ll notice that all museums linked with the [Universalmuseum Joanneum](https://www.museum-joanneum.at/) in Graz are currently closed (and have been [since 11 March](https://www.museum-joanneum.at/newsletter-mail/presse/2020/sperre-gilt-ab-11-maerz)) and have large signs on their front-doors that will open up again on July 1. With not only pretty much every restaurant but also most of the federal museums already being available to customers/visitors, this seems a bit weird especially since the rest of May has enough holidays to be attractive for (at least regional) tourists. 
