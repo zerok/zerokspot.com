@@ -6,6 +6,7 @@ tags:
 - server
 - hosting
 - operations
+- 100daystooffload
 ---
 
 For the last week I’ve been running some of my sites using [Caddy 2](https://caddyserver.com/v2) as replacement for nginx. Over the years, nginx configs have grown and grown mostly due to TLS settings not having defaults following industry best practices and due to Let’s Encrypt becoming *the* way to get certificates.
