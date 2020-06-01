@@ -6,6 +6,7 @@ tags:
 - blogging
 - platforms
 - rant
+- 100daystooffload
 ---
 
 From time to time I come across an article that I’d really like to read but the platform it was posted on simply raises some red flags. For instance, I don’t read articles on pages that want me to subscribe to some newsletter or paid plan (unless it’s a publication that pays the authors like a newspaper et al.) before I’ve even had time to look at the article.

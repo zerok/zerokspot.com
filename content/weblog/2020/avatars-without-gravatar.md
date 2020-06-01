@@ -7,6 +7,7 @@ tags:
 - libravatar
 - federated
 - fediverse
+- 100daystooffload
 ---
 
 Back when [Gravatar](http://en.gravatar.com/) launched many years ago it was a game-changer. All of a sudden, I no longer had to change my profile picture on all those dozens of forums and sites I was active on but could do that in a central place. Years later I still consider it a great service but especially for internal sites problematic to have calls to some central *external* service that is not under your control that in the worst-case can see for what website an avatar has been requested. At the same time, sometimes you simply don’t want to give someone a picture of you just so that they can hand it over to someone else again.

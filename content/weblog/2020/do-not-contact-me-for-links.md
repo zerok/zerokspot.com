@@ -6,6 +6,7 @@ tags:
 - ads
 - backlinks
 - feedback
+- 100daystooffload
 ---
 
 Yesterday, [Gregory Hammond](https://gregoryhammond.ca/blog/why-people-dont-respond-when-you-ask-for-a-backlink-or-a-link-to-your-site/) wrote a great post about why people don’t respond when asked about adding a link to their site from yours. Every couple of days I get one of these mails by some agency. Most if not all of them look somehow auto-generated, reference really old posts of mine, and plug content that is only loosely related to what I originally wrote.

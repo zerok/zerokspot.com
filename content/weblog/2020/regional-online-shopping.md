@@ -8,6 +8,7 @@ tags:
 - austria
 - graz
 - styria
+- 100daystooffload
 ---
 
 With most shopping having been restricted to online offerings during March and April we tried to buy as much as possible from regional online shops. For the sake of this article “regional” means companies with physical points of sale in our region or that produce either in Austria or the surrounding countries. Sadly, not all that many of them made it attractive to skip Amazon.
