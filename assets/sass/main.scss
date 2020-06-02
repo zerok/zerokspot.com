@@ -430,6 +430,11 @@ aside {
     text-align: center;
 }
 
+.webmentions__item svg {
+    display: inline-block;
+    margin-right: 5px;
+}
+
 .webmentions__item__comment {
     line-height: 2rem;
     font-size: 1.4rem;
