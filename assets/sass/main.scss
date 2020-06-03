@@ -6,6 +6,7 @@
 @import "postpaths";
 @import "reading";
 @import "hcard";
+@import "photo";
 
 @font-face {
   font-family: 'Liberation Mono';
@@ -117,6 +118,7 @@ aside {
 }
 
 .article__meta,
+.photo__meta,
 .note__meta {
     display: block;
     margin: 0;
@@ -125,6 +127,7 @@ aside {
     line-height: 2.2rem;
     color: #999;
 }
+.photo__meta,
 .article__meta {
     text-align: center;
     padding: 0;
@@ -132,6 +135,7 @@ aside {
     display: flex;
 }
 
+.photo__meta__attributes,
 .article__meta__attributes {
     flex: 1;
     text-align: right;

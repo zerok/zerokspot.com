@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{ partial "head.html" . }}
+    <body>
+        <div class="page page--photo">
+            {{ partial "header.html" }}
+            <div id="body">
+                <article class="photo--frontpage h-entry">
+                    <header>
+                        <h1 class="p-name"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+                        <div class="photo__meta article__meta">
+                            <p class="photo__meta__attributes article__meta__attributes">
+                                <i class="far fa-clock"></i> Posted on {{ partial "post_datetime.html" . }}
+                                {{ if .Params.tags }}
+                                <br><i class="far fa-tags"></i> Tags: {{ range .Params.tags }}<a href="/tags/{{ .|urlize }}">{{ . }}</a> {{ end }}
+                                {{ end }}
+                                {{ if .Params.inReplyTo }}
+                                {{ $url := urls.Parse .Params.inReplyTo }}
+                                <br><i class="far fa-reply"></i> Replying to <a href="{{ .Params.inReplyTo }}" class="u-in-reply-to">{{ $url.Host }}{{ $url.Path }}</a>
+                                {{ end }}
+                            </p>
+                            <div class="photo__meta__author article__meta__author h-card h-card--small p-author">
+                                <img src="/images/me.jpg" class="u-photo" alt="Picture of Horst Gutmann">
+                                <p><a href="/" class="p-author p-name u-url">Horst Gutmann</a>, <span class="p-job-title">software engineer</span> from <span class="p-locality">Graz</span>, <span class="p-country">Austria</span>.</p>
+                            </div>
+                        </div>
+                    </header>
+                    <figure class="photo__content photo__content--{{ .Params.format }}">
+                        {{ $fullImage := printf "https://files.zerokspot.com/photos/%s" .Params.image }}
+                        {{ $baseImage := strings.TrimSuffix (path.Ext $fullImage) $fullImage }}
+                        {{ $largeImage := printf "%s.large%s" $baseImage (path.Ext $fullImage) }}
+                        <a href="{{ $fullImage }}" class="photo__image"><img src="{{ $largeImage }}"></a>
+                        <figcaption class="photo__caption e-content">{{ .Content }}</figcaption>
+                        {{ if .Params.camera }}
+                        <div class="photo__camera">
+                            <dl>
+                                <dt><i class="fas fa-camera-retro"></i> Camera:</dt>
+                                <dd>{{ .Params.camera }}{{ if .Params.lens }} // {{ .Params.lens }}{{ end }}</dd>
+                            </dl>
+                        </div>
+                        {{ end }}
+                    </figure>
+                    {{ partial "comments.html" . }}
+                </article>
+            </div>
+            {{ partial "footer.html" }}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+.photo__content {
+    display: grid;
+}
+figure.photo__content {
+    margin: 0;
+}
+
+.photo__content--landscape {
+    grid-template-areas: "image image image"
+                         "caption caption camera";
+
+    .photo__camera dl {
+        margin-top: 1.8rem;
+    }
+    .photo__caption {
+        padding-right: 1.8rem;
+    }
+}
+
+
+.photo__content--portrait {
+    grid-template-areas: "image image camera"
+                         "image image caption"
+                         "image image caption";
+    .photo__camera,
+    .photo__caption {
+        padding-left: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .photo__content--landscape,
+    .photo__content--portrait {
+        grid-template-areas: "image"
+                             "camera"
+                             "caption";
+        .photo__camera {
+            padding: 1.8rem;
+            dl {
+                margin: 0;
+            }
+        }
+        .photo__caption {
+            padding: 0;
+            margin-top: 1.8rem;
+        }
+     }
+}
+
+.photo__image {
+    display: block;
+    padding: 15px;
+    background: #000;
+    box-sizing: border-box;
+    grid-area: image;
+    img {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+.photo__caption {
+    grid-area: caption;
+
+    @include content-content();
+}
+
+.photo__camera {
+    grid-area: camera;
+    box-sizing: border-box;
+    padding: 0 10px;
+    width: 100%;
+    background: #000;
+    color: #FFF;
+    line-height: 32px;
+}
+
+.photo__camera dl {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: solid 1px #FFF;
+
+    &:first-child {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+    }
+}
+
+.photo__camera dt,
+.photo__camera dd {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
