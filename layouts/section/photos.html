@@ -6,6 +6,7 @@
             {{ partial "header.html" $ }}
             <div id="body">
                 <h1>Photos</h1>
+                <p class="page__intro">This is a small collection of pictures I've taken over the years and which would have otherwise made their way onto platforms like Instagram...</p>
                 <ul class="page__listing page__listing--mini">
                     {{ range .Data.Pages }}
                     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a><time>{{ .Date.Format "Jan 02, 2006" }}</time></li>

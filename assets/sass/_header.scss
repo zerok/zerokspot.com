@@ -1,6 +1,6 @@
 .page__header {
     background: #F1F1F1;
-    height: 45px;
+    height: 40px;
     position: relative;
     margin-bottom: 60px;
 
@@ -22,11 +22,11 @@
 
     a {
         display: block;
-        line-height: 45px;
-        height: 45px;
-        padding: 0 20px;
+        line-height: 40px;
+        height: 40px;
+        padding: 0 15px;
         color: #FFFFFF;
-        font-weight: bold;
+        font-weight: normal;
         text-transform: lowercase;
         text-decoration: none;
         background-color: $menuitem-bg;
