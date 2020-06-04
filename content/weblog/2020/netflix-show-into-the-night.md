@@ -6,6 +6,7 @@ tags:
 - intothenight
 - review
 - series
+- 100daystooffload
 ---
 
 Last week we started watching [Into the Night on Netflix](https://en.wikipedia.org/wiki/Into%5C_the%5C_Night%5C_(TV%5C_series)) due to its promising cover description promising a thrilling story around a hijacked passenger aircraft and some apocalyptic event related to the sun. The trailer didn’t look all that great, though, but we still decided to give it a try.
