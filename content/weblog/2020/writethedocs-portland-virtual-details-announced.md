@@ -10,6 +10,7 @@ tags:
 After writing about [WriteTheDocs events going virtual](https://zerokspot.com/weblog/2020/05/02/writethedocs-online/) in early May I completely missed that [WriteTheDocs Portland/Virtual now finally has a date](https://www.writethedocs.org/conf/portland/2020/news/announcing-virtual-conf-dates-tickets/) and the organisers reopened their ticket-sale! The conference is now scheduled for 9 August - 11 August (with the writing day happening on 9 August).
 
 [Tickets are available](https://www.writethedocs.org/conf/portland/2020/tickets/) in 3 price categories:
+
 - Unemployed/student: $25
 - Independent: $100
 - Corporate: $125
