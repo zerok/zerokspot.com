@@ -452,4 +452,11 @@ aside {
     opacity: 0.8;
 }
 
+.disclaimer.disclaimer--small {
+    font-size: 1.3rem;
+    line-height: 2.0rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
 @import "darkmode";
