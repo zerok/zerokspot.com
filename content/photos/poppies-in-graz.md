@@ -2,7 +2,7 @@
 title: "Poppies in Graz"
 date: "2020-05-20T14:00:00+02:00"
 format: landscape
-image: "2020/poppies-in-graz.md"
+image: "2020/poppies-in-graz.jpg"
 camera: "iPhone Xs"
 ---
 
