@@ -1,6 +1,11 @@
 <article class="note h-entry">
   {{ if .Params.inReplyTo }}
-  <p class="note__re"><i class="far fa-reply"></i> Replying to <a class="u-in-reply-to" href="{{ .Params.inReplyTo }}">{{ partial "note_link_text.html" . }}</a></p>
+    {{ if .Params.rsvp }}
+    {{ $icon := cond (eq .Params.rsvp "yes") "fa-calendar-check" (cond (eq .Params.rsvp "no") "fa-calendar-times" (cond (eq .Params.rsvp "interested") "fa-calendar-star" "fa-calendar")) }}
+    <p class="note__re"><i class="far {{ $icon }}"></i> RSVP <span class="p-rsvp">{{ .Params.rsvp }}</span> to <a class="u-in-reply-to" href="{{ .Params.inReplyTo }}">{{ partial "note_link_text.html" . }}</a></p>
+    {{ else }}
+      <p class="note__re"><i class="far fa-reply"></i> Replying to <a class="u-in-reply-to" href="{{ .Params.inReplyTo }}">{{ partial "note_link_text.html" . }}</a></p>
+    {{ end }}
   {{ end }}
   {{ if .Params.re }}
   <p class="note__re"><i class="far fa-reply"></i> Replying to <a class="u-in-reply-to" href="{{ .Params.re }}">{{ partial "note_link_text.html" . }}</a></p>
