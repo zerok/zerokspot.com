@@ -6,6 +6,7 @@ tags:
 - cssgrid
 - til
 - 100daystooffload
+- webdesign
 ---
 
 I’ve wanted to play around with CSS grids for a long time ever since I noticed them landing in Firefox. Now, [3 years later](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/52) I finally got the chance while implementing the photo page here! 
