@@ -6,6 +6,7 @@ tags:
 - indieweb
 - rsvp
 - webmentiond
+- 100daystooffload
 ---
 
 The last big Webmention feature that I wanted to support on both, my website *and* webmentiond, were [event RSVPs](https://indieweb.org/rsvp). With these participants of, for instance, a user group meetup can indicate whether or not they plan to attend in a decentralised fashion as opposed to something like Meetup.com where both the event’s website *and* the participants’ RSVPs are stored on a single, centralised platform.
