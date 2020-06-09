@@ -4,8 +4,7 @@ const {VueLoaderPlugin} = require('vue-loader');
 
 module.exports = {
     entry: {
-        archive: ['whatwg-fetch', Path.join(__dirname, 'static', 'app', 'archive.js')],
-        webmentions: ['whatwg-fetch', Path.join(__dirname, 'static', 'app', 'webmentions.js')]
+        archive: ['whatwg-fetch', Path.join(__dirname, 'static', 'app', 'archive.js')]
     },
     output: {
         path: Path.resolve('static', 'js'),
