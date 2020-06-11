@@ -7,6 +7,7 @@ tags:
 - politics
 - conspiracymyths
 - netpolitics
+- 100daystooffload
 ---
 
 Thought some other channels I had heard about a podcast produced by the NYTimes called [“Rabbit Hole”](https://www.nytimes.com/2020/04/22/podcasts/rabbit-hole-prologue.html?action=click&module=audio-series-bar&region=header&pgtype=Article) by Kevin Roose et al. Over the course of the last 3 days I’ve now finally found the time to listen to it from the very beginning. That may sound like much but the show consists of “only” 8 episodes with 30-40 minutes each.
