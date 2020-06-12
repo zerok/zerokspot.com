@@ -6,6 +6,7 @@ tags:
 - getdrafts
 - ios
 - workingcopy
+- 100daystooffload
 ---
 
 I’ve finally started using one of the big features of [Drafts](https://getdrafts.com/) properly: Actions. For the longest time I just did some basic reformatting: adding a Hugo-compatible frontmatter to drafts before moving them manually into WorkingCopy. Since I’m now using notes on here more and more to collect links, comment on other people’s posts etc. I grew tired of creating all these folders in the Git repository manually.
