@@ -1,0 +1,21 @@
+<!DOCTYPE html>{{ $.Scratch.Set "isArchive" true }}
+<html lang="en">
+    {{ partial "head.html" . }}
+    <body>
+        <div class="page page--archive">
+            {{ partial "header.html" $ }}
+            <div id="body">
+                <h1>Archive for the year {{ .Title }}</h1>
+                {{ partial "archive_intro.html" . }}
+                <ul class="page__listing page__listing--mini">
+                    {{ range .Params.paths }}
+                    {{ with $.GetPage . }}
+                        {{ partial "pagelisting_entry.html" . }}
+                    {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+            {{ partial "footer.html" }}
+        </div>
+    </body>
+</html>

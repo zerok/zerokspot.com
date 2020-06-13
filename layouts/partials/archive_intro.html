@@ -1,0 +1,10 @@
+{{ if .Params.paths }}
+<div class="page__intro"><p>In this time-frame {{ .Params.paths|len }} posts were created:</p>
+<ul>
+    <li>Articles: {{ .Params.numPosts }}</li>
+    <li>Notes: {{ .Params.numNotes }}</li>
+    <li>Photos: {{ .Params.numPhotos }}</li>
+</ul></div>
+{{ else }}
+<div class="page__intro"></div>
+{{ end }}

@@ -4,6 +4,7 @@
 /.mapping.json.xz
 /node_modules
 /public
+/content/archive
 /search.bleve
 /bin
 /.envrc

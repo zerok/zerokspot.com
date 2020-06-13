@@ -65,8 +65,9 @@ jobs:
     - uses: actions/download-artifact@v1
       with:
         name: blogcli
-    - run: hugo
     - run: chmod +x ./blogcli/blog
+    - run: ./blogcli/blog build-archive
+    - run: hugo
     - run: ./blogcli/blog build-graph
     - run: ./blogcli/blog blogroll --output data/blogroll.json
     - run: hugo
