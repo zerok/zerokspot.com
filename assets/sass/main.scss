@@ -443,6 +443,13 @@ aside {
     list-style: none;
 }
 
+.page__listing__entry {
+    svg {
+        margin-right: 5px;
+        opacity: 0.5;
+    }
+}
+
 .webmention--comment .webmention__content {
     line-height: 2rem;
     font-size: 1.4rem;

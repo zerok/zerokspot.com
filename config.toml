@@ -21,5 +21,6 @@ photos = "/photos/:year/:month/:day/:filename/"
 weblog = ["html", "json", "rss"]
 page = ["html", "json"]
 photos = ["html", "rss"]
+archive = ["html"]
 
 
