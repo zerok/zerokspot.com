@@ -73,7 +73,7 @@ var buildArchiveCmd = &cobra.Command{
 
 		years := make(map[string][]page.Page)
 		months := make(map[string][]page.Page)
-		pages := sites.Pages().Reverse()
+		pages := sites.Pages()
 		for _, p := range pages {
 			if p.IsNode() {
 				continue
