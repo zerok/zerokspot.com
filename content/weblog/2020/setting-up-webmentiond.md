@@ -1,6 +1,7 @@
 ---
 title: Setting up webmentiond
 date: "2020-06-14T12:36:00+02:00"
+inReplyTo: "https://fosstodon.org/@yarmo/104341371114206112"
 tags:
 - webmentiond
 - tutorial
