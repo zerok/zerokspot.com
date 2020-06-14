@@ -38,7 +38,7 @@
                     <section id="recent">
                         <ul class="page__listing--mini">
                         {{ range first 10 (where (where (where .Site.Pages "Section" "weblog") "IsPage" true) "IsDraft" false) }}
-                        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <time>{{ .Date.Format "Jan 02, 2006" }}</time></li>
+                        {{ partial "pagelisting_entry.html" . }}
                         {{ end }}
                         </ul>
                         <a class="more" href="/weblog/">more posts...</a>

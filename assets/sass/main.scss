@@ -126,6 +126,10 @@ aside {
     font-size: 1.4rem;
     line-height: 2.2rem;
     color: #999;
+
+    a {
+        color: $base-fg;
+    }
 }
 .photo__meta,
 .article__meta {
@@ -470,4 +474,16 @@ aside {
     font-style: italic;
 }
 
+h1 a {
+    text-decoration: underline;
+}
+
+.h-entry h1 a {
+    text-decoration: none;
+}
+time a {
+    color: $base-fg;
+    font-weight: normal !important;
+}
 @import "darkmode";
+
