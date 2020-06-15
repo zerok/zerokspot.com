@@ -6,6 +6,7 @@ tags:
 - zerokspot
 - infrastructure
 - 100daystooffload
+inReplyTo: "https://kevq.uk/how-much-does-it-cost-to-run-this-blog/"
 ---
 
 Kev posted yesterday a [nice run-down of what it costs to run his blog](https://kevq.uk/how-much-does-it-cost-to-run-this-blog/). I’ve wanted to write about this for quite a while now and so I thought this might be a good time to finally actually do it 😅
