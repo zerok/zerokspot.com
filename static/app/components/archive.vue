@@ -9,15 +9,17 @@
             <input placeholder="Search by text..." type="search" v-model="searchTerm" />
         </form>
         <ul class="page__listing page__listing--mini" v-if="posts">
-            <li v-for="post in posts">
+            <li v-for="post in posts" :key="post.url">
                 <a v-bind:href="post.url">{{ post.title }}</a>
-                <time>{{ new Date(post.date * 1000).toLocaleDateString() }}</time>
+                <time>{{ formatDate(new Date(post.date * 1000)) }}</time>
             </li>
         </ul>
     </div>
 </template>
 
 <script language="babel">
+import formatDate from 'date-fns/format';
+
 export default {
     data() {
         return {
@@ -40,6 +42,9 @@ export default {
         }
     },
     methods: {
+        formatDate(dt) {
+            return formatDate(dt, 'MMM d, yyyy');
+        },
         search: function(evt) {
             if (evt) {
                 evt.preventDefault();
