@@ -9,7 +9,37 @@
                     <header>
                         <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
                     </header>
-                    <div class="article__content">{{ .Content }}</div>
+                    <div class="article__content">
+                        {{ .Content }}
+                        {{ if (eq .File.BaseFileName "reviews") }}
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Title</th>
+                                    <th>Rating</th>
+                                </tr>
+                            </thead>
+                            <tbody class="page-listing page-listing--mini">
+                                {{ range (where (where $.Site.Pages "Section" "weblog") "Params.rating" "!=" nil) }}
+                                <tr>
+                                    <td>
+                                        {{ if (or (in .Params.tags "gaming") (in .Params.tags "videogame") (in .Params.tags "game")) }}
+                                        <i class="fal fa-fw fa-gamepad" title="Video game"></i>
+                                        {{ else if (or (in .Params.tags "books") (in .Params.tags "book")) }}
+                                        <i class="fal fa-fw fa-book" title="Book"></i>
+                                        {{ else if (or (in .Params.tags "movie") (in .Params.tags "tv")) }}
+                                        <i class="fal fa-fw fa-film" title="Movie / TV"></i>
+                                        {{ end }}
+                                    </td>
+                                    <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
+                                    <td>{{ partial "rating.html" . }}</td>
+                                </tr>
+                                {{ end }}
+                            </tbody>
+                        </table>
+                        {{ end }}
+                    </div>
                 </article>
             </div>
             {{ partial "footer.html" }}
