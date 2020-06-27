@@ -251,9 +251,12 @@ aside {
     padding: 0;
 
     li {
+        display: grid;
         overflow: hidden;
         padding: 5px;
         border-bottom: 1px dotted #CCC;
+        grid-template-areas: "prefix link suffix";
+        grid-template-columns: 25px auto 110px;
 
         &:hover {
             background: #EFEFEF;
@@ -262,16 +265,45 @@ aside {
 
         a {
             font-weight: bold;
+            grid-area: link;
         }
 
-        a, time {
+        a, time, .rating {
             line-height: 2.5rem;
             font-size: 1.7rem;
         }
 
-        time {
+        .entry-prefix {
+            grid-area: prefix;
+        }
+
+        .rating, .entry-prefix {
+            svg {
+                margin: 0;
+            }
+        }
+
+        time, .rating {
+            font-size: 1.4rem;
+            a {
+                font-size: 1.4rem;
+            }
+            grid-area: suffix;
             float: right;
         }
+        .rating {
+            text-align: right;
+        }
+    }
+}
+
+.page__listing--noprefix {
+    li {
+        grid-template-areas: "link suffix";
+        grid-template-columns: auto 110px;
+    }
+    .entry-prefix {
+        display: none;
     }
 }
 

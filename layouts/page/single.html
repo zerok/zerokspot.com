@@ -11,19 +11,12 @@
                     </header>
                     <div class="article__content">
                         {{ .Content }}
+                    </div>
                         {{ if (eq .File.BaseFileName "reviews") }}
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Title</th>
-                                    <th>Rating</th>
-                                </tr>
-                            </thead>
-                            <tbody class="page-listing page-listing--mini">
+                            <ul class="page__listing page__listing--mini">
                                 {{ range (where (where $.Site.Pages "Section" "weblog") "Params.rating" "!=" nil) }}
-                                <tr>
-                                    <td>
+                                <li class="page__listing__entry">
+                                    <span class="entry-prefix">
                                         {{ if (or (in .Params.tags "gaming") (in .Params.tags "videogame") (in .Params.tags "game")) }}
                                         <i class="fal fa-fw fa-gamepad" title="Video game"></i>
                                         {{ else if (or (in .Params.tags "books") (in .Params.tags "book")) }}
@@ -31,15 +24,15 @@
                                         {{ else if (or (in .Params.tags "movie") (in .Params.tags "tv")) }}
                                         <i class="fal fa-fw fa-film" title="Movie / TV"></i>
                                         {{ end }}
-                                    </td>
-                                    <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
-                                    <td>{{ partial "rating.html" . }}</td>
-                                </tr>
+                                    </span>
+                                    <a href="{{ .RelPermalink }}">
+                                        {{ .Title }}
+                                    </a>
+                                    <span class="rating">{{ partial "rating.html" . }}</span>
+                                </li>
                                 {{ end }}
-                            </tbody>
-                        </table>
+                            </ul>
                         {{ end }}
-                    </div>
                 </article>
             </div>
             {{ partial "footer.html" }}

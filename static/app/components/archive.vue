@@ -8,7 +8,7 @@
             </select>
             <input placeholder="Search by text..." type="search" v-model="searchTerm" />
         </form>
-        <ul class="page__listing page__listing--mini" v-if="posts">
+        <ul class="page__listing page__listing--mini page__listing--noprefix" v-if="posts">
             <li v-for="post in posts" :key="post.url">
                 <a v-bind:href="post.url">{{ post.title }}</a>
                 <time>{{ formatDate(new Date(post.date * 1000)) }}</time>
