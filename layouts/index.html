@@ -36,7 +36,7 @@
                 </div>
                 <div class="row row--first">
                     <section id="recent">
-                        <ul class="page__listing--mini">
+                        <ul class="page__listing--mini page__listing page__listing--noprefix">
                         {{ range first 10 (where (where (where .Site.Pages "Section" "weblog") "IsPage" true) "IsDraft" false) }}
                         {{ partial "pagelisting_entry.html" . }}
                         {{ end }}
