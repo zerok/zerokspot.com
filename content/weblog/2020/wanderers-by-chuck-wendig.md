@@ -7,6 +7,7 @@ tags:
 - scifi
 - chuckwendig
 - 100daystooffload
+rating: 5
 ---
 
 Thanks to GoodRead’s [Best books of 2019](https://www.goodreads.com/choiceawards/best-science-fiction-books-2019) listing I stumbled upon Chuck Wendig’s latest book: [Wanderers](http://terribleminds.com/ramble/project/wanderers/). With nearly 800 pages it’s not a short book but the time spent here was well worth it. It took me more than a month to complete but that’s absolutely not the book’s fault!

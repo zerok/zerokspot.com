@@ -485,5 +485,20 @@ time a {
     color: $base-fg;
     font-weight: normal !important;
 }
+.help {
+    font-size: 1.4rem;
+    color: #999;
+
+    a {
+        color: #333 !important;
+        box-shadow: none !important;
+        text-decoration: underline;
+        border-bottom: none;
+
+        &:hover {
+            background: transparent;
+        }
+    }
+}
 @import "darkmode";
 

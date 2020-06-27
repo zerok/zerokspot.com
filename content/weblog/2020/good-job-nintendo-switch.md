@@ -7,6 +7,7 @@ tags:
 - nintendoswitch
 - review
 - 100daystooffload
+rating: 4
 ---
 
 About a week ago I decided I had to do something about my pile-of-shame for video games. Heck, I still have the latest [God of War](https://en.wikipedia.org/wiki/God_of_War_(2018_video_game)) game for the PS4 lying around here somewhere in its original shrink-wrap, I still pay for Playstation Plus even though I haven’t even switched my PS4 on in months or played anything since finishing the awesome [Horizon: Zero Dawn](https://zerokspot.com/weblog/2018/12/16/horizon-zero-dawn/).

@@ -25,7 +25,13 @@
                             </div>
                         </div>
                     </header>
-                    <div class="article__content e-content">{{ .Content }}</div>
+                    <div class="article__content e-content">
+                        {{ .Content }}
+                        {{ partial "rating.html" . }}
+                        {{ if .Params.rating }}
+                        <p class="help">Over the years I've written quite a few reviews 🙂 You can find them at <a href="/reviews/">/reviews/</a>.</p>
+                        {{ end }}
+                    </div>
                     {{ if $.Site.Data.postpaths }}
                     {{ if index $.Site.Data.postpaths .RelPermalink }}
                     <div class="postpaths">
