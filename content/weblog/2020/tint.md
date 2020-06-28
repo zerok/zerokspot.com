@@ -1,7 +1,12 @@
 ---
 title: tint. (Apple Arcade)
 date: "2020-06-28T12:42:05+02:00"
-tags: []
+tags:
+- gaming
+- applearcade
+- review
+- "100daystooffload"
+- puzzle
 ---
 
 As I wrote yesterday, I’d like to get my gaming pile-of-shame a little smaller and after finishing [Good Job!](https://zerokspot.com/weblog/2020/06/27/good-job-nintendo-switch/) for the Switch I’d focus on Apple Arcade games. The first on that list is the puzzle game [tint.](https://www.lykkestudios.com/tint) in which you solve color puzzles using brush and water colors.
