@@ -1,6 +1,7 @@
 ---
 title: tint. (Apple Arcade)
 date: "2020-06-28T12:42:05+02:00"
+rating: 4
 tags:
 - gaming
 - applearcade
