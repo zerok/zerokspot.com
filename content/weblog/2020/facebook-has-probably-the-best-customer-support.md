@@ -1,7 +1,10 @@
 ---
 title: Facebook has probably the best customer support
 date: "2020-06-29T18:52:08+02:00"
-tags: []
+tags:
+- facebook
+- uspol
+- washingtonpost
 ---
 
 … if you’re Trump. Earlier today, The Washington Post published an [article](https://www.washingtonpost.com/technology/2020/06/28/facebook-zuckerberg-trump-hate/) by Elizabeth Dwoskin, Craig Timberg, and Tony Romm in which they describe the symbiotic relationship between US-president Donald Trump and Facebook ever since his time as presidential candidate back in 2015 and 2016. There is little new in that article about this time period but one paragraph focusing on the recent weeks was definitely new to me:
