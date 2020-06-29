@@ -1,7 +1,10 @@
 ---
 title: Fitness routine
 date: "2020-06-29T09:01:32+02:00"
-tags: []
+tags:
+- fitness
+- health
+- "100daystooffload"
 ---
 
 OK, that title is probably a bit of an exaggeration. I try to go to the gym (for at least around 30 minutes) once a week and at most every two days. Unless I’m at a conference somewhere and have access to a hotel gym I practically never reach this bi-daily interval. One thing that has stuck with me from those conference trips and that I now try to revive due to being mostly at home is the time for those training sessions.
