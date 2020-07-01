@@ -10,16 +10,18 @@
                     </div>
                 </div>
             </footer>
-    <script src="/fontawesome-pro-5.13.0-web/js/all.min.js"></script>
+    <script src="/fontawesome-pro-5.13.0-web/js/solid.min.js"></script>
+    <script src="/fontawesome-pro-5.13.0-web/js/regular.min.js"></script>
+    <script src="/fontawesome-pro-5.13.0-web/js/fontawesome.min.js"></script>
     <script type="text/javascript">
         (function() {
             var button = document.createElement('a');
             function toggleDarkMode(goDark) {
                 if (goDark) {
-                    button.innerHTML = '<i class="fa fa-sun"></i>';
+                    button.innerHTML = '<i class="far fa-sun"></i>';
                     document.getElementsByTagName('html')[0].classList.add('darkmode');
                 } else {
-                    button.innerHTML = '<i class="fa fa-moon"></i>';
+                    button.innerHTML = '<i class="far fa-moon"></i>';
                     document.getElementsByTagName('html')[0].classList.remove('darkmode');
                 }
                 window.localStorage.setItem('darkMode', goDark);
