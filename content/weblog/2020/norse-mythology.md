@@ -1,6 +1,7 @@
 ---
 title: "Book: Norse Mythology by Neil Gaiman"
 date: "2020-03-13T20:28:15+0100"
+rating: 5
 tags:
 - book 
 ---

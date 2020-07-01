@@ -47,7 +47,11 @@
                     <tbody>
                       {{ range .Pages }}
                       <tr>
+                        {{ if .Params.review }}
+                        <td><a href="{{ .Params.review }}">{{ .Title }}</a></td>
+                        {{ else }}
                         <td>{{ .Title }}</td>
+                        {{ end }}
                         <td>{{ .Params.date | dateFormat "2006-01-02" }}</td>
                         <td>{{ .Params.finished | dateFormat "2006-01-02" }}</td>
                       </tr>
