@@ -1,6 +1,7 @@
 ---
 title: Little Orpheus (Apple Arcade)
 date: "2020-07-02T09:30:32+02:00"
+rating: 5
 tags:
 - gaming
 - ios
