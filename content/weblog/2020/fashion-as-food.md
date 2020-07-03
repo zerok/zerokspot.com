@@ -1,7 +1,11 @@
 ---
 title: Fashion as food?
 date: "2020-07-03T13:40:46+02:00"
-tags: []
+tags:
+- covid19
+- fashion
+- rant
+- austria
 ---
 
 The new chairman for trade at the Austrian Federal Economic Chamber (WKO), Rainer Trefelik,  said [today in an interview](https://orf.at/stories/3172098/) that he considers clothes as perishable goods (like food) due to consumers not being willing to buy things like shoes from the previous season.
@@ -13,6 +17,3 @@ According to that article, companies can get some funding (“Fixkostenzuschuss�
 A couple of weeks ago, there was a report on this issue on national TV where a shoe producer showed the difference between last year’s model having one kind of yellow and this year’s model with a slightly different yellow. I’m pretty sure that I’m somehow sitting inside an ivory tower myself (called the tech-bubble) but this just sounds completely messed up to me; especially considering that both products should be functionally identical.
 
 Can we please think about slowing that whole fashion cycle a bit down instead of redeclaring fashion as food? Last year’s model should definitely not be considered worthless (or \< 50% in value) compared to this year’s.
-
-# covid19 #fashion #rant #austria
-
