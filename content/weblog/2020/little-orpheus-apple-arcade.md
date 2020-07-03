@@ -8,6 +8,7 @@ tags:
 - applearcade
 - review
 - jumpnrun
+- 100daystooffload
 ---
 
 Most of the time I just play puzzle games on iOS devices as for anything larger I usually want to have a controller available. Now that iPadOS actually supports controllers like the Dualshock 4 controller (PS4) I wanted to give a different kind of game a try.
