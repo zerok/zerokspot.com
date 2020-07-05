@@ -11,6 +11,7 @@
                     <p>Here you can find a list of books I've read, am reading, and want to read in the future.</p>
                   </div>
                   {{ $reading := (where (where .Pages ".Params.date" "!=" nil) ".Params.finished" "==" nil) }}
+                  {{ $toread := where .Pages ".Params.date" "==" nil }}
                   {{ $read := (where (where .Pages ".Params.date" "<>" nil) ".Params.finished" "!=" nil) }}
                   <section id="reading">
                     <h2>Currently reading</h2>
@@ -31,6 +32,26 @@
                       </tbody>
                     </table>
                   </section>
+                  <section id="toread">
+                    <h2>To read <span class="reading-listing__count">({{ len $toread }} in total)</span></h2>
+                    <table class="table table--reading-list">
+                        <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {{ range $toread }}
+                        <tr>
+                          <td>{{ .Title }}</td>
+                          <td>{{ .Params.author }}</td>
+                        </tr>
+                        {{ end }}
+                      </tbody>
+                    </table>
+                  </section>
+                  <section id="read">
                   <section id="read">
                   <h2>Read</h2>
                   {{ range $read.GroupByDate "2006" }}

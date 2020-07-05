@@ -1,9 +1,9 @@
 ---
 title: Learning Swift
-started: 2016-08-07T20:44:38+02:00
+date: 2016-08-07T20:44:38+02:00
+finished: 2017-01-26T12:00:00+01:00
 author: Paris Buttfield-Addison, Jon Manning, Tim Nugent
 type: book
-active: 1
 ---
 
 At WriteTheDocs 2016 in Portland two of this books authors gave a presentation
