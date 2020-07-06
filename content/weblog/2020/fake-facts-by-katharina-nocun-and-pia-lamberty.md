@@ -6,6 +6,7 @@ tags:
 - book
 - 100daystooffload
 - conspiracytales
+rating: 5
 ---
 
 **Disclaimer:** Sorry, this book is only available in German right now.
