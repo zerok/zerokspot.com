@@ -11,7 +11,7 @@ jobs:
         token: ${{ secrets.PUSHOVER_TOKEN }}
         user: ${{ secrets.PUSHOVER_USER }}
         message: CI started
-      if: github.ref == 'refs/heads/master'
+      if: github.ref == 'refs/heads/main'
     - uses: actions/checkout@v1
     - uses: actions/cache@v2
       with:
@@ -89,7 +89,7 @@ jobs:
         path: public.tar.xz
 
   index:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     needs:
       - build-tools
       - build-frontend
@@ -132,7 +132,7 @@ jobs:
         name: changes
         path: ./public/.changes.txt
   deploy:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     needs:
       - index
       - build-content
@@ -177,7 +177,7 @@ jobs:
     - run: "ssh www-zerokspot@zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
 
   mention:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     needs:
       - deploy
     runs-on: ubuntu-latest
