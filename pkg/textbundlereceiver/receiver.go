@@ -84,7 +84,7 @@ func (recv *Receiver) handleReceive(w http.ResponseWriter, r *http.Request) {
 	}
 	slug = slugify.Make(slug)
 	branchname := fmt.Sprintf("articles/%s", slug)
-	if err := recv.callGit(ctx, "checkout", "-f", "master"); err != nil {
+	if err := recv.callGit(ctx, "checkout", "-f", "main"); err != nil {
 		logger.Error().Err(err).Msg("Git failed")
 		http.Error(w, "Git failed", http.StatusInternalServerError)
 		return
@@ -94,7 +94,7 @@ func (recv *Receiver) handleReceive(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Git failed", http.StatusInternalServerError)
 		return
 	}
-	if err := recv.callGit(ctx, "pull", "origin", "master"); err != nil {
+	if err := recv.callGit(ctx, "pull", "origin", "main"); err != nil {
 		logger.Error().Err(err).Msg("Git failed")
 		http.Error(w, "Git failed", http.StatusInternalServerError)
 		return
@@ -124,7 +124,7 @@ func (recv *Receiver) handleReceive(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Git failed", http.StatusInternalServerError)
 		return
 	}
-	if err := recv.callGit(ctx, "checkout", "-f", "master"); err != nil {
+	if err := recv.callGit(ctx, "checkout", "-f", "main"); err != nil {
 		logger.Error().Err(err).Msg("Git failed")
 		http.Error(w, "Git failed", http.StatusInternalServerError)
 		return
@@ -147,7 +147,7 @@ func (recv *Receiver) createPR(ctx context.Context, slug string, branchname stri
 	if err := json.NewEncoder(&body).Encode(&prBody{
 		Title: "Article: " + slug,
 		Head:  branchname,
-		Base:  "master",
+		Base:  "main",
 	}); err != nil {
 		return err
 	}
