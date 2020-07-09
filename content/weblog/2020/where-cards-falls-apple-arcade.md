@@ -1,6 +1,7 @@
 ---
 title: Where Cards Falls (Apple Arcade)
 date: "2020-07-09T09:28:39+02:00"
+rating: 4
 tags:
 - gaming
 - applearcade
