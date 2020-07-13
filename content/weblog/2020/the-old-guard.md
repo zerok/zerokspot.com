@@ -1,6 +1,7 @@
 ---
 title: The Old Guard
 date: "2020-07-13T11:15:35+02:00"
+rating: 5
 tags:
 - movie
 - review
