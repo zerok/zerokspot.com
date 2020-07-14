@@ -6,6 +6,7 @@ tags:
 - macbookpro
 - keyboard
 - repairs
+- 100daystooffload
 ---
 
 For the longest time I’ve been lucky: My 2018 MacBook Pro didn’t show any symptoms that were plaguing tons of other folks (and that [Apple acknowledged](https://support.apple.com/keyboard-service-program-for-mac-notebooks) after a lot of complaining) [where some keys stopped working from time to time or acting as if being hit multiple times](https://www.macrumors.com/guide/butterfly-keyboard-issues/). Sadly, about a month ago my luck ended. Due to university courses and other obligations I couldn’t bring my laptop in for repair, though, and so I worked as much as possible using external keyboards.
