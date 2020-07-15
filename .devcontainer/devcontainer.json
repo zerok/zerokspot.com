@@ -4,5 +4,9 @@
 	"dockerFile": "..\\Dockerfile.devcontainer",
 	"settings": { 
 		"terminal.integrated.shell.linux": null
-	}
+	},
+	"forwardPorts": [1313],
+	"extensions": [
+		"golang.go"
+	]
 }
