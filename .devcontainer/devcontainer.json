@@ -1,0 +1,8 @@
+{
+	"name": "dev-environment-base",
+	"context": "..",
+	"dockerFile": "..\\Dockerfile.devcontainer",
+	"settings": { 
+		"terminal.integrated.shell.linux": null
+	}
+}
