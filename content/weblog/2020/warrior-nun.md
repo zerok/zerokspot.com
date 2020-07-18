@@ -1,6 +1,7 @@
 ---
 title: Warrior Nun
 date: "2020-07-18T21:26:47+02:00"
+rating: 4
 tags:
 - 100daystooffload
 - netflix
