@@ -1,6 +1,7 @@
 ---
 title: 'Remote: Office not required'
 date: "2020-07-19T20:07:38+02:00"
+rating: 4
 tags:
 - reading
 - book
