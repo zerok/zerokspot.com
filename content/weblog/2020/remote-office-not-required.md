@@ -7,6 +7,7 @@ tags:
 - book
 - review
 - remote
+- 100daystooffload
 ---
 
 Last week a book made the jump into my “reading” list that had been in my backlog ever since the pandemic reached Austria: [“Remote: Office not required”](https://basecamp.com/books/remote) by Jason Fried and David Heinemeier Hanson in which the two describe how 37Signal was doing remote back in 2013. Now that far more people have gotten their first taste of working from home the book is even more relevant than it was seven years ago.
