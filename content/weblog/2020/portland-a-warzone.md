@@ -5,6 +5,8 @@ tags:
 - portland
 - trump
 - protests
+- uspol
+- 100daystooffload
 ---
 
 For more than [50 nights](https://www.nytimes.com/2020/07/17/opinion/portland-protests-federal-agents.html?referringSource=articleShare) there have now been protests in the US and other countries after the death of George Floyd. One place where these have more and more escalated into a testbed on how far the federal government wants to fight them has a special place in my heart: Portland, Oregon. Not a day goes by when I don’t see news of protestors being attacked and beaten mostly from federal  agents without any visible identifications.
