@@ -1,6 +1,7 @@
 ---
 title: 'Deus Ex: Mankind Divided'
 date: "2020-07-22T21:58:33+02:00"
+rating: 4
 tags:
 - gaming
 - review
