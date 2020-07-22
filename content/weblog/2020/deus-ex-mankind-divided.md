@@ -7,6 +7,7 @@ tags:
 - review
 - playstation4
 - deusex
+- 100daystooffload
 ---
 
 Since my good old PS4 is currently completely at its capacity harddisk-wise, I thought it would be time to finally also play some of those PS Plus games I had pilling up on it. The first game on that list was [Deus Ex: Mankind Divided](https://en.wikipedia.org/wiki/Deus_Ex:_Mankind_Divided) which was free with PS Plus in [January 2018](https://blog.de.playstation.com/2017/12/27/playstation-plus-im-januar-mit-deus-ex-mankind-divided-und-batman-the-telltale-series/).
