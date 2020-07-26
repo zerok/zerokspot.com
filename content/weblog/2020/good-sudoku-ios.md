@@ -1,7 +1,12 @@
 ---
 title: Good Sudoku (iOS)
 date: "2020-07-26T19:55:19+02:00"
-tags: []
+tags:
+- game
+- puzzle
+- sudoku
+- ios
+- 100daystooffload
 ---
 
 Thanks to an article on [The Verge](https://www.theverge.com/21334116/good-sudoku-iphone-ipad-app-game-zach-gage) I stumbled upon [Good Sudoku](https://apps.apple.com/at/app/good-sudoku-by-zach-gage/id1489118195?l=en) a couple of days ago. It’s been many years (at least 10 at this point) that I’ve played any Sudoku. While I always enjoyed them, especially the harder ones required a lot of effort (with notes etc.) that I eventually grew tired of.
