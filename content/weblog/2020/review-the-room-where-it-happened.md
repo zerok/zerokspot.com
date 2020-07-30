@@ -1,6 +1,7 @@
 ---
 title: 'Review: The room where it happened'
 date: "2020-07-30T21:30:13+02:00"
+review: 4
 tags:
 - 100daystooffload
 - book
