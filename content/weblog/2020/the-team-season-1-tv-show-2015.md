@@ -1,6 +1,7 @@
 ---
 title: 'The Team: Season 1 (TV show, 2015)'
 date: "2020-08-02T19:32:34+02:00"
+rating: 5
 tags:
 - tvshow
 - review
