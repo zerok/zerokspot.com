@@ -244,33 +244,41 @@ aside {
     margin: auto;
 }
 
-
-.page__listing--mini {
+.page__listing {
     list-style: none;
     margin: 0;
     padding: 0;
 
     li {
-        display: grid;
-        overflow: hidden;
         padding: 5px;
+        overflow: hidden;
         border-bottom: 1px dotted #CCC;
-        grid-template-areas: "prefix link suffix";
-        grid-template-columns: 25px auto 110px;
 
         &:hover {
             background: #EFEFEF;
         }
+    }
+
+    a {
+        font-weight: bold;
+    }
+
+
+    a, time, .rating {
+        line-height: 2.5rem;
+        font-size: 1.7rem;
+    }
+}
+.page__listing--mini {
+
+    li {
+        display: grid;
+        grid-template-areas: "prefix link suffix";
+        grid-template-columns: 25px auto 110px;
 
 
         a {
-            font-weight: bold;
             grid-area: link;
-        }
-
-        a, time, .rating {
-            line-height: 2.5rem;
-            font-size: 1.7rem;
         }
 
         .entry-prefix {
