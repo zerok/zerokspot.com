@@ -4,6 +4,7 @@ date: "2020-08-03T16:28:07+02:00"
 tags:
 - apple
 - repairs
+- 100daystooffload
 ---
 
 Today at around 14:00 o’clock it finally happened: I got my laptop back which had been at an Apple service partner since [July 14](https://zerokspot.com/weblog/2020/07/14/butterflies-should-be-beautiful/). This also means that I can finally continue working properly on things like webmentiond and other side-projects.
