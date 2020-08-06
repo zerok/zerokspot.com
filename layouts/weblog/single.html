@@ -38,7 +38,7 @@
                         {{ if index (index $.Site.Data.postpaths .RelPermalink) "up" }}
                         <div class="postpaths__up">
                             <h2>This post was inspired by...</h2>
-                            <ul class="page__listing--mini">
+                            <ul class="page__listing page__listing--mini page__listing--noprefix">
                                 {{ range index (index $.Site.Data.postpaths .RelPermalink) "up" }}
                                 <li><a href="{{ .objectID }}">{{ .title }}</a></li>
                                 {{ end }}
