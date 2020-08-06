@@ -1,6 +1,7 @@
 ---
 title: 100DaysToRead challenge
 date: "2020-08-06T15:23:10+02:00"
+inReplyTo: "https://lazybear.io/notes/100-day-of-blogging/"
 tags:
 - reading
 - challenge
