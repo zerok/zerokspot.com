@@ -1,5 +1,5 @@
 ---
-title: "Der Song zum Sonntag: TOBACCO und Trent Reznor - "Babysitter" - fm4.ORF.at"
+title: "TOBACCO und Trent Reznor - Babysitter - fm4.ORF.at"
 likeOf: "https://fm4.orf.at/m/stories/3005848/"
 date: 2020-08-10T10:30:53+0200
 tags:
