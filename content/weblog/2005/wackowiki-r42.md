@@ -7,13 +7,13 @@ title: WackoWiki R4.2
 ---
 
 
-<a href="http://wackowiki.com/">WackoWiki</a> R4.2 has finally been released. For me personally the only interesting change (besides the XSS fixes ;-) ) is probably PHP5 support. 
+<a href="http://wackowiki.org/">WackoWiki</a> R4.2 has finally been released. For me personally the only interesting change (besides the XSS fixes ;-) ) is probably PHP5 support. 
 
 -------------------------------
 
 
 
-<a href="http://wackowiki.com/WackoDownload/InEnglish?v=11e1#h4828-4">Changelog</a>
+<a href="https://wackowiki.org/doc/Dev/ChangeLog/VersionHistory">Changelog</a>
 
 
 
