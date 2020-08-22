@@ -12,9 +12,11 @@
                     or learn but are not (yet) worth a full-length
                     post.</p>
                   </div>
+                  <div class="notes-listing__listing">
                   {{ range .Paginator.Pages }}
                   {{ partial "note.html" . }}
                   {{ end }}
+                  </div>
                 </div>
                 {{ template "_internal/pagination.html" . }}
             </div>
