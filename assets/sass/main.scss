@@ -108,13 +108,15 @@ aside {
     }
 }
 .note {
-    border: 1px solid #CCC;
-    border-bottom: 3px solid #CCC;
     padding: 3rem;
 }
 
 .notes-listing .note {
-    margin-top: 3rem;
+    border-top: 3px solid #CCC;
+
+    &:first-child {
+        border-top: none;
+    }
 }
 
 .article__meta,
