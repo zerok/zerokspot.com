@@ -7,6 +7,7 @@ tags:
 - productivity
 - atomichabits
 - habits
+rating: 5
 ---
 
 While I’m still on edu-leave (for two more weeks) I noticed a couple of things that annoyed me in my daily routines and I want to do something about them. For instance, I need to take some medication in the morning (and some in the evening) which I should only take after breakfast. Since I don’t have the pillbox with me whenever I move around in the apartment and, far too often, am just too lazy for my own good I sometimes take them closer to noon than dawn.
