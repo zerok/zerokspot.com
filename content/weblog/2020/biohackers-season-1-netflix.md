@@ -1,6 +1,7 @@
 ---
 title: Biohackers (Season 1, Netflix)
 date: "2020-08-28T10:24:53+02:00"
+rating: 3
 tags:
 - netflix
 - biohackers
