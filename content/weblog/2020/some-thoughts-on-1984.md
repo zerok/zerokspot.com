@@ -1,6 +1,7 @@
 ---
 title: Some thoughts on 1984
 date: "2020-09-09T17:20:56+02:00"
+rating: 4
 tags:
 - reading
 - book
