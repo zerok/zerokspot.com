@@ -107,11 +107,15 @@ aside {
         margin-bottom: 3rem;
     }
 }
+
 .note {
-    padding: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .notes-listing .note {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     border-top: 3px solid #CCC;
 
     &:first-child {
@@ -241,7 +245,7 @@ aside {
     text-align: center;
 }
 
-.comments, .incoming {
+.comments, .incoming, .webmention-list {
     max-width: 70%;
     margin: auto;
 }
@@ -411,6 +415,9 @@ aside {
     .article__meta {
         display: block;
     }
+    .note {
+        padding: 0;
+    }
     .article__meta__attributes,
     .article__meta__author {
         text-align: left;
@@ -484,6 +491,10 @@ aside {
 .webmention svg {
     display: inline-block;
     margin: 3px 0px 0 0;
+}
+
+.webmention-list > p {
+    text-align: center;
 }
 
 .webmention-list__list {
