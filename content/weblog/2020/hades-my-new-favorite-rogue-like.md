@@ -7,6 +7,7 @@ tags:
 - supergiantgames
 - hades
 - roguelike
+rating: 5
 ---
 
 I haven’t yet played too many rogue-likes before but I always enjoyed them for the very high replayability they offer. Dead Cells has been amazing and I still come back to it every now and then. But [Hades](https://www.supergiantgames.com/games/hades/), the latest game by Supergiant Games, is even better than that! As Zagreus, son of Hades, you try to escape from the underworld and join the Olympians.
