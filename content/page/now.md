@@ -11,6 +11,7 @@ url: "/now/"
   [here](/weblog/2020/09/13/six-months-of-bullet-journaling/).
 - Looking forward to getting a new iPad or iPad Air with Pencil support.
 - Very much into fountain pens and Leuchtturm 1917 products.
+- Once again trying to learn Rust (this time mostly using Exercism).
 
 
 ## Hobby software projects
