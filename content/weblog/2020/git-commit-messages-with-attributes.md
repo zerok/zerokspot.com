@@ -1,7 +1,9 @@
 ---
 title: Git commit messages with attributes
 date: "2020-10-24T10:25:10+02:00"
-tags: []
+tags:
+- git
+- til
 ---
 
 While looking through the [ConventionalCommit spec](https://www.conventionalcommits.org/en/v1.0.0/) I stumbled upon a feature of Git I somehow always thought was there but hadn’t realize was actually part of the Git toolchain itself: Trailers!
