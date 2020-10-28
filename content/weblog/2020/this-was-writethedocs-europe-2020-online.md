@@ -15,13 +15,13 @@ Most of the talks focused on the various processes people are using to provide d
 
 ## Personal highlight: Documenting the (ancient) history of your project
 
-I love looking at the past and decision process of projects and so [this talk by Natali Vlatko](https://www.writethedocs.org/conf/prague/2020/speakers/#speaker-natali-vlatko) was right up my alley! She put a focus on something that is often overlooked when it comes to project documentation: The context and conditions that were present when decisions where made! The talk also included some practical advice on how to do that using, for instance, commit messages.
+I love looking at the past and decision process of projects and so [this talk by Natali Vlatko](https://www.writethedocs.org/conf/prague/2020/speakers/#speaker-natali-vlatko) ([video](https://www.youtube.com/watch?v=YxNx9Fi40-Y&list=PLZAeFn6dfHpmRWZJaUwQzsdagW2TtRI2x&index=4)) was right up my alley! She put a focus on something that is often overlooked when it comes to project documentation: The context and conditions that were present when decisions where made! The talk also included some practical advice on how to do that using, for instance, commit messages.
 
 Sadly, I had some schedule conflicts and therefore couldn’t enjoy the whole talk; something that I’ll definitely correct as soon as the recording is available!
 
 ## Personal highlight: Need examples? Write your own!
 
-My second personal highlight was [Joe Malin’s talk about how to handle examples](https://www.writethedocs.org/conf/prague/2020/speakers/#speaker-joe-malin) in your documentation. Among many other hints he also mentioned the creation of a style guide specifically for examples. I’m most likely not the only one who’s struggling every time he has to decide on how to put variables into code samples or what kind of data-set should be used throughout a tutorial. And that’s precisely what he solves with such guidelines.
+My second personal highlight was [Joe Malin’s talk about how to handle examples](https://www.writethedocs.org/conf/prague/2020/speakers/#speaker-joe-malin) ([video](https://www.youtube.com/watch?v=Cuyei0ZA-vQ&list=PLZAeFn6dfHpmRWZJaUwQzsdagW2TtRI2x&index=23)) in your documentation. Among many other hints he also mentioned the creation of a style guide specifically for examples. I’m most likely not the only one who’s struggling every time he has to decide on how to put variables into code samples or what kind of data-set should be used throughout a tutorial. And that’s precisely what he solves with such guidelines.
 
 This is something I’ll definitely try to implement with one of the next projects!
 
