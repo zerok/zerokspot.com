@@ -539,6 +539,9 @@ time a {
     color: $base-fg;
     font-weight: normal !important;
 }
+time .age {
+    display: block;
+}
 .help {
     font-size: 1.4rem;
     color: #999;
