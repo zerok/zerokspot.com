@@ -65,9 +65,9 @@ jobs:
       FEEDBIN_PASSWORD: ${{ secrets.FEEDBIN_PASSWORD }}
     steps:
     - uses: actions/checkout@v1
-    - uses: peaceiris/actions-hugo@v2.2.2
+    - uses: peaceiris/actions-hugo@v2.4.13
       with:
-        hugo-version: 0.78.1
+        hugo-version: 0.78.2
         extended: true
     - uses: actions/download-artifact@v1
       with:
