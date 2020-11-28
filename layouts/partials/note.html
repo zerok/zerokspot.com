@@ -1,33 +1,33 @@
 <article class="note h-entry">
   {{ if .Params.inReplyTo }}
     {{ if .Params.rsvp }}
-    {{ $icon := cond (eq .Params.rsvp "yes") "fa-calendar-check" (cond (eq .Params.rsvp "no") "fa-calendar-times" (cond (eq .Params.rsvp "interested") "fa-calendar-star" "fa-calendar")) }}
+    {{ $icon := cond (eq .Params.rsvp "yes") "icon-calendar-check" (cond (eq .Params.rsvp "no") "icon-calendar-times" (cond (eq .Params.rsvp "interested") "icon-calendar-star" "icon-calendar")) }}
     <p class="note__re"><i class="far {{ $icon }}"></i> RSVP <span class="p-rsvp">{{ .Params.rsvp }}</span> to <a class="u-in-reply-to" href="{{ .Params.inReplyTo }}">{{ partial "note_link_text.html" . }}</a></p>
     {{ else }}
-      <p class="note__re"><i class="far fa-reply"></i> Replying to <a class="u-in-reply-to" href="{{ .Params.inReplyTo }}">{{ partial "note_link_text.html" . }}</a></p>
+      <p class="note__re"><i class="icon icon-reply"></i> Replying to <a class="u-in-reply-to" href="{{ .Params.inReplyTo }}">{{ partial "note_link_text.html" . }}</a></p>
     {{ end }}
   {{ end }}
   {{ if .Params.re }}
-  <p class="note__re"><i class="far fa-reply"></i> Replying to <a class="u-in-reply-to" href="{{ .Params.re }}">{{ partial "note_link_text.html" . }}</a></p>
+  <p class="note__re"><i class="icon icon-reply"></i> Replying to <a class="u-in-reply-to" href="{{ .Params.re }}">{{ partial "note_link_text.html" . }}</a></p>
   {{ end }}
   {{ if .Params.likeOf }}
-  <p class="note__like"><i class="far fa-heart"></i> Like of <a class="u-like-of" href="{{ .Params.likeOf }}">{{ partial "note_link_text.html" . }}</a></p>
+  <p class="note__like"><i class="icon icon-heart"></i> Like of <a class="u-like-of" href="{{ .Params.likeOf }}">{{ partial "note_link_text.html" . }}</a></p>
   {{ end }}
   {{ if .Params.link }}
-  <p class="note__link"><i class="far fa-link"></i> Linking to <a href="{{ .Params.link }}">{{ partial "note_link_text.html" . }}</a></p>
+  <p class="note__link"><i class="icon icon-link"></i> Linking to <a href="{{ .Params.link }}">{{ partial "note_link_text.html" . }}</a></p>
   {{ end }}
   {{ if .Content }}<div class="note__content e-content">{{ .Content }}</div>{{ end }}
     <p class="note__meta">
-    <span class="note__meta__item"><i class="far fa-clock"></i> Posted on {{ partial "post_datetime.html" . }} by <span class="h-card p-author h-card--tiny"><img src="/images/me.jpg" alt=""> <a href="/" class="p-name u-url">Horst Gutmann</a></span></span>
+    <span class="note__meta__item"><i class="icon icon-clock"></i> Posted on {{ partial "post_datetime.html" . }} by <span class="h-card p-author h-card--tiny"><img src="/images/me.jpg" alt=""> <a href="/" class="p-name u-url">Horst Gutmann</a></span></span>
         {{ if .Params.tags }}
-        <span class="note__meta__item"><i class="far fa-tags"></i> Tags: {{ range .Params.tags }}<a href="/tags/{{ .|urlize }}">{{ . }}</a> {{ end }}</span>
+        <span class="note__meta__item"><i class="icon icon-tags"></i> Tags: {{ range .Params.tags }}<a href="/tags/{{ .|urlize }}">{{ . }}</a> {{ end }}</span>
         {{ end }}
         {{ if .Params.syndicated.twitter }}
-        <span class="note__meta__item"><a href="{{ .Params.syndicated.twitter }}"><i class="fab fa-twitter"></i> Twitter</a></span>
+        <span class="note__meta__item"><a href="{{ .Params.syndicated.twitter }}"><i class="icon icongroup-brands icon-twitter"></i> Twitter</a></span>
         {{ end }}
         {{ if .Params.syndicated.mastodon }}
-        <span class="note__meta__item"><a href="{{ .Params.syndicated.mastodon }}"><i class="fab fa-mastodon"></i> Mastodon</a></span>
+        <span class="note__meta__item"><a href="{{ .Params.syndicated.mastodon }}"><i class="icon icongroup-brands icon-mastodon"></i> Mastodon</a></span>
         {{ end }}
-        <br><span class="permalink"><i class="far fa-link"></i> <a href="{{ .RelPermalink }}">Permalink</a></span>
+        <br><span class="permalink"><i class="icon icon-link"></i> <a href="{{ .RelPermalink }}">Permalink</a></span>
     </p>
 </article>
