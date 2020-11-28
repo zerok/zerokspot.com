@@ -10,39 +10,6 @@
                     </div>
                 </div>
             </footer>
-    <script src="/fontawesome-pro-5.13.0-web/js/solid.min.js"></script>
-    <script src="/fontawesome-pro-5.13.0-web/js/regular.min.js"></script>
-    <script src="/fontawesome-pro-5.13.0-web/js/fontawesome.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            var button = document.createElement('a');
-            function toggleDarkMode(goDark) {
-                if (goDark) {
-                    button.innerHTML = '<i class="far fa-sun"></i>';
-                    document.getElementsByTagName('html')[0].classList.add('darkmode');
-                } else {
-                    button.innerHTML = '<i class="far fa-moon"></i>';
-                    document.getElementsByTagName('html')[0].classList.remove('darkmode');
-                }
-                window.localStorage.setItem('darkMode', goDark);
-            }
-            var goDark = window.localStorage.getItem('darkMode');
-            if (goDark == null) {
-                goDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            } else {
-                goDark = goDark === 'true';
-            }
-            var navList = document.querySelector('#main-nav > ul');
-            var navItem = document.createElement('li');
-            navItem.classList.add('darkmode-toggle');
-            toggleDarkMode(goDark);
-            button.setAttribute('href', '');
-            navItem.appendChild(button);
-            navList.appendChild(navItem);
-            button.addEventListener('click', (evt) => {
-                evt.preventDefault();
-                goDark = !goDark;
-                toggleDarkMode(goDark);
-            }, false);
-        }());
-    </script>
+    <script src="/js/icons.js"></script>
+    {{ $mainJS := resources.Get "js/main.js" | js.Build "js/main.js" | minify | fingerprint }}
+    <script src="{{ $mainJS.Permalink }}"></script>

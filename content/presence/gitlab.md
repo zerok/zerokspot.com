@@ -2,5 +2,5 @@
 type: presence
 title: GitLab
 website: https://gitlab.com/zerok
-icon: fab fa-gitlab
+icon: icongroup-brands icon-gitlab
 ---

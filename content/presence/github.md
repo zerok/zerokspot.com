@@ -2,5 +2,5 @@
 type: presence
 title: GitHub
 website: https://github.com/zerok
-icon: fab fa-github
+icon: icongroup-brands icon-github
 ---

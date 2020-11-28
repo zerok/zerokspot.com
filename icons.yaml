@@ -1,0 +1,39 @@
+icons:
+  - icon: envelope
+    group: regular
+  - icon: home
+    group: regular
+  - icon: archive
+    group: regular
+  - icon: camera
+    group: regular
+  - icon: sun
+    group: regular
+  - icon: moon
+    group: regular
+  - icon: list
+    group: regular
+  - icon: clipboard
+    group: regular
+  - icon: clipboard-list
+    group: regular
+  - icon: clock
+    group: regular
+  - icon: book-open
+    group: regular
+  - icon: heart
+    group: regular
+  - icon: link
+    group: regular
+  - icon: sticky-note
+    group: regular
+  - icon: reply
+    group: regular
+  - icon: github
+    group: brands
+  - icon: gitlab
+    group: brands
+  - icon: mastodon
+    group: brands
+  - icon: goodreads
+    group: brands

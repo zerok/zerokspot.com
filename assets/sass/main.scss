@@ -558,5 +558,13 @@ time .age {
         }
     }
 }
+
+.icon {
+    width: 1.25em;
+    height: 1em;
+    overflow: visible;
+    display: inline-block;
+    vertical-align: -0.125em;
+}
 @import "darkmode";
 
