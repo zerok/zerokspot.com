@@ -1,4 +1,4 @@
 {{ if .Params.rating }}
-    {{ safeHTML (strings.Repeat (int .Params.rating) "<i class=\"fas fa-star\"></i>") -}}
-    {{- safeHTML (strings.Repeat (sub 5 (int .Params.rating)) "<i class=\"far fa-star\"></i>") }}
+    {{ safeHTML (strings.Repeat (int .Params.rating) "<i class=\"icon icongroup-solid icon-star\"></i>") -}}
+    {{- safeHTML (strings.Repeat (sub 5 (int .Params.rating)) "<i class=\"icon icon-star\"></i>") }}
 {{ end }}

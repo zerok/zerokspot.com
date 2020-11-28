@@ -7,6 +7,8 @@ icons:
     group: regular
   - icon: camera
     group: regular
+  - icon: camera-retro
+    group: solid
   - icon: sun
     group: regular
   - icon: moon
@@ -19,6 +21,8 @@ icons:
     group: regular
   - icon: clock
     group: regular
+  - icon: tags
+    group: regular
   - icon: book-open
     group: regular
   - icon: heart
@@ -29,6 +33,24 @@ icons:
     group: regular
   - icon: reply
     group: regular
+  - icon: book
+    group: regular
+  - icon: film
+    group: regular
+  - icon: gamepad
+    group: regular
+  - icon: star
+    group: regular
+  - icon: calendar
+    group: regular
+  - icon: calendar-star
+    group: regular
+  - icon: calendar-times
+    group: regular
+  - icon: calendar-check
+    group: regular
+  - icon: star
+    group: solid
   - icon: github
     group: brands
   - icon: gitlab
@@ -36,4 +58,6 @@ icons:
   - icon: mastodon
     group: brands
   - icon: goodreads
+    group: brands
+  - icon: twitter
     group: brands

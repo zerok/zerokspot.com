@@ -1,13 +1,13 @@
 <li class="page__listing__entry">
     <span class="entry-prefix">
         {{ if eq .Section "photos"}}
-        <i class="fa fa-camera"></i>
+        <i class="icon icon-camera"></i>
         {{ end }}
         {{ if eq .Section "notes"}}
             {{ if .Params.inReplyTo }}<i class="icon icon-reply"></i>
             {{ else if .Params.likeOf }}<i class="icon icon-heart"></i>
             {{ else if .Params.link }}<i class="icon icon-link"></i>
-            {{ else }}<i class="far fa-sticky-note"></i>{{ end }}
+            {{ else }}<i class="icon icon-sticky-note"></i>{{ end }}
         {{ end }}
     </span>
     <a href="{{ .RelPermalink }}">{{ if .Title }}{{ .Title }}{{ else }}{{ .Date.Format "2006-01-02" }} // {{ .File.BaseFileName }} <i class="icon icon-clipboard-list"></i>{{ end }}</a>

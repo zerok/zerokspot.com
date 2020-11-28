@@ -23,7 +23,7 @@
                             <h2>{{ $tag }} <i class="count">({{ $.Scratch.Get (printf "tag_%s" $tag) | len }})</i></h2>
                             <ul class="page__listing page__listing--mini">
                                 {{ range $.Scratch.Get (printf "tag_%s" $tag) }}
-                                <li><a href="{{ .RelPermalink }}">{{ if .Title }}{{ strings.TrimPrefix "TIL: " .Title }}{{ else }}{{ .Date.Format "2006-01-02" }} // {{ .File.BaseFileName }} <i class="fa fa-clipboard-list"></i>{{ end }}</a> <time>{{ .Date.Format "Jan 02, 2006" }}</time></li>
+                                <li><a href="{{ .RelPermalink }}">{{ if .Title }}{{ strings.TrimPrefix "TIL: " .Title }}{{ else }}{{ .Date.Format "2006-01-02" }} // {{ .File.BaseFileName }} <i class="icon icon-clipboard-list"></i>{{ end }}</a> <time>{{ .Date.Format "Jan 02, 2006" }}</time></li>
                                 {{ end }}
                             </ul>
                         </section>

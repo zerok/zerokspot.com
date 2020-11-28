@@ -18,11 +18,11 @@
                                 <li class="page__listing__entry">
                                     <span class="entry-prefix">
                                         {{ if (or (in .Params.tags "gaming") (in .Params.tags "videogame") (in .Params.tags "game")) }}
-                                        <i class="far fa-fw fa-gamepad" title="Video game"></i>
+                                        <i class="icon icon-gamepad" title="Video game"></i>
                                         {{ else if (or (in .Params.tags "books") (in .Params.tags "book")) }}
-                                        <i class="far fa-fw fa-book" title="Book"></i>
+                                        <i class="icon icon-book" title="Book"></i>
                                         {{ else if (or (in .Params.tags "movie") (in .Params.tags "tv")) }}
-                                        <i class="far fa-fw fa-film" title="Movie / TV"></i>
+                                        <i class="icon icon-film" title="Movie / TV"></i>
                                         {{ end }}
                                     </span>
                                     <a href="{{ .RelPermalink }}">
