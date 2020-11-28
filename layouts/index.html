@@ -18,7 +18,7 @@
                     <ul class="presences__content">
                         {{ range (sort (where (where .Site.Pages "Type" "presence") "IsPage" true) "Title") }}
                         <li class="presences__item">
-                            <a href="{{ .Params.website }}"><i class="fa-fw {{.Params.icon}}"></i> {{ .Title }}</a>
+                            <a href="{{ .Params.website }}"><i class="icon {{.Params.icon}}"></i> {{ .Title }}</a>
                         </li>
                         {{ end }}
                     </ul>
@@ -47,12 +47,11 @@
               </section>
               <section class="contact">
                 <div class="article__content">
-                  <p>You can contact me via <a class="u-email" rel="me authn" href="mailto:zerok@zerokspot.com"><i class="far fa-envelope"></i> e-mail</a>. If you want to do that in an encrypted way, my key's fingerprint (for <a href="/pgp.asc" rel="pgpkey authn">this key</a>) is the following:<br>
+                  <p>You can contact me via <a class="u-email" rel="me authn" href="mailto:zerok@zerokspot.com"><i class="icon icon-envelope"></i> e-mail</a>. If you want to do that in an encrypted way, my key's fingerprint (for <a href="/pgp.asc" rel="pgpkey authn">this key</a>) is the following:<br>
                       <code>C4E0 2BA8 4048 3A5D 6B76  1607 6F20 3F0D 220F 8E98</code></p>
                 </div>
               </section>
             </div>
-            <script src="/fontawesome-pro-5.13.0-web/js/brands.min.js"></script>
             {{ partial "footer.html" }}
         </div>
     </body>

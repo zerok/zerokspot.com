@@ -4,11 +4,11 @@
         <i class="fa fa-camera"></i>
         {{ end }}
         {{ if eq .Section "notes"}}
-            {{ if .Params.inReplyTo }}<i class="far fa-reply"></i>
-            {{ else if .Params.likeOf }}<i class="far fa-heart"></i>
-            {{ else if .Params.link }}<i class="far fa-link"></i>
+            {{ if .Params.inReplyTo }}<i class="icon icon-reply"></i>
+            {{ else if .Params.likeOf }}<i class="icon icon-heart"></i>
+            {{ else if .Params.link }}<i class="icon icon-link"></i>
             {{ else }}<i class="far fa-sticky-note"></i>{{ end }}
         {{ end }}
     </span>
-    <a href="{{ .RelPermalink }}">{{ if .Title }}{{ .Title }}{{ else }}{{ .Date.Format "2006-01-02" }} // {{ .File.BaseFileName }} <i class="far fa-clipboard-list"></i>{{ end }}</a>
+    <a href="{{ .RelPermalink }}">{{ if .Title }}{{ .Title }}{{ else }}{{ .Date.Format "2006-01-02" }} // {{ .File.BaseFileName }} <i class="icon icon-clipboard-list"></i>{{ end }}</a>
 <time datetime="{{ .Date.Format "2006-01-02T15:04:05.000Z07:00"}}"><a href="/archive/{{ .Date.Format "2006/01" }}">{{ .Date.Format "Jan" }}</a> {{ .Date.Format "2" }}, <a href="/archive/{{ .Date.Format "2006" }}">{{.Date.Format "2006"}}</a></time>
