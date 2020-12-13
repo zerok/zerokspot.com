@@ -196,3 +196,10 @@ I'm currently in the process of adding more and more test cases to my alerting r
 [p]: https://prometheus.io
 [a]: https://prometheus.io/docs/alerting/alertmanager/
 [r]: https://www.prometheus.io/docs/prometheus/latest/configuration/recording_rules/
+
+## Update
+
+elbuenodefali has posted [some instructions on GitHub][gh] on how to improve
+the test series for resiliently mocking days across a week. Thank you!
+
+[gh]: https://github.com/zerok/zerokspot.com/issues/160
