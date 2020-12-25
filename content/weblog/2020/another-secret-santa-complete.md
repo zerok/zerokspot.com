@@ -1,7 +1,11 @@
 ---
 title: Another Secret Santa complete
 date: "2020-12-25T17:16:25+01:00"
-tags: []
+tags:
+- reddit
+- secretsanta
+- redditgifts
+- xmas
 ---
 
 This year has been my third year participating in [Reddit's Secret Santa](https://redditgifts.com) event. It has now become a fix part of my Christmas routine. What makes Secret Santa so special to me is the whole idea of gifting and getting gifts from complete strangers. You just write a little letter, answer a couple of questions (like “what are your hobbies” , “what was your year like”) and your Santa's job is then to find something nice for you!
@@ -17,5 +21,3 @@ Out of all these participants, 104,869 matches but only 98,442  shipped and out 
 If someone sends a gift and the recipient does not confirm that they got it, the sender doesn't get any credit. To prevent such cases, the sender can submit proof that they shipped something (e.g. through shipping receipts) but that process takes time.
 
 At the other end of the spectrum if someone really didn't send a gift, then the person will eventually get [banned](https://redditgifts.zendesk.com/hc/en-us/articles/200769085-What-happens-to-people-who-don-t-ship-a-gift-or-mark-a-gift-received-). Sadly, this doesn't prevent them from doing harm. So at least I try to do my part by being a good Santa every year 🙂 That and getting a nice letter back from my giftee  which is one of my personal highlights every year 😊
-
-# redditgifts #secretsanta #xmas
