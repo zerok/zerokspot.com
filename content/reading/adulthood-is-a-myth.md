@@ -1,6 +1,7 @@
 ---
 author: Sarah Andersen
 date:  "2016-04-10T10:00:00+02:00"
+started:  "2016-04-10T10:00:00+02:00"
 finished: 2016-04-10T12:35:03+02:00
 title: "Adulthood is a Myth"
 isbn13: "9781449474195"

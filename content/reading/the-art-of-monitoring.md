@@ -3,6 +3,7 @@ author: James Turnbull
 title: "The Art of Monitoring"
 type: book
 date: 2016-06-16T23:09:18+02:00
+started: 2016-06-16T23:09:18+02:00
 finished: 2016-07-23T14:59:55+02:00
 ---
 
