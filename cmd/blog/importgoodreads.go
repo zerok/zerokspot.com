@@ -89,7 +89,7 @@ func generateImportGoodReadsCSV() *cobra.Command {
 			return nil
 		},
 	}
-	importGoodReadsCSVCmd.Flags().StringVar(&outputFolder, "output-folder", "content/reading", "Output folder where markdown files are written to")
+	importGoodReadsCSVCmd.Flags().StringVar(&outputFolder, "output-folder", "content/reading", "Folder where markdown files are written to")
 	importGoodReadsCSVCmd.Flags().IntVar(&year, "year", 0, "Year to import")
 	return importGoodReadsCSVCmd
 }
@@ -112,7 +112,6 @@ func generateBookContent(e goodReadsEntry) string {
 	}
 	if e.DateAdded != nil {
 		header["date"] = e.DateAdded.Format(time.RFC3339)
-		header["started"] = e.DateAdded.Format(time.RFC3339)
 	}
 	if e.DateRead != nil {
 		header["finished"] = e.DateRead.Format(time.RFC3339)
