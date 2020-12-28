@@ -1,6 +1,7 @@
 ---
 author: John Scalzi
-date: 2016-03-03T21:22:02+01:00
+date: 2014-12-25T21:22:02+01:00
+started: 2016-02-28T21:22:02+01:00
 finished: 2016-03-04T21:30:00+01:00
 title: Redshirts
 type: book

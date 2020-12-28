@@ -3,6 +3,7 @@ author: Jim McDoniel
 title: An Unattractive Vampire
 type: book
 date: 2016-04-11T21:00:00+02:00
+started: 2016-04-11T21:00:00+02:00
 finished: 2016-05-08T21:22:02+02:00
 ---
 
