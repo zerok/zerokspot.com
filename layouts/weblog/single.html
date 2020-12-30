@@ -67,9 +67,9 @@
                             {{- if .label -}}
                             {{ .label }}
                             {{- else if in .url "twitter.com" -}}
-                            Twitter
+                            <i class="icon icongroup-brands icon-twitter"></i> Twitter
                             {{- else if in .url "chaos.social" -}}
-                            Mastodon
+                            <i class="icon icongroup-brands icon-mastodon"></i> Mastodon
                             {{- else if in .url "dev.to" -}}
                             dev.to
                             {{- else if in .url "reddit.com" -}}

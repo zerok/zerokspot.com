@@ -6,6 +6,8 @@ tags:
 - secretsanta
 - redditgifts
 - xmas
+incoming:
+- url: "https://chaos.social/@zerok/105441805298662372"
 ---
 
 This year has been my third year participating in [Reddit's Secret Santa](https://redditgifts.com) event. It has now become a fix part of my Christmas routine. What makes Secret Santa so special to me is the whole idea of gifting and getting gifts from complete strangers. You just write a little letter, answer a couple of questions (like “what are your hobbies” , “what was your year like”) and your Santa's job is then to find something nice for you!

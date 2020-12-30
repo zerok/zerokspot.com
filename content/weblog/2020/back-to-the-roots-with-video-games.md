@@ -4,6 +4,8 @@ date: "2020-11-28T12:42:19+01:00"
 tags:
 - gaming
 - lockdown
+incoming:
+- url: "https://chaos.social/@zerok/105289713583001058"
 ---
 
 Ever since the first, light lockdown that started with November and now with the full lockdown one activity has helped me relax and stay at least somehow positive like no other: video games. For the last couple of years, playing games has ended up at a very low priority compared to reading books, reading news, or coding on side projects. Unlike these other things, though, video games are completely immersive for me. When I start playing I cannot afford to have my focus on anything else. Either I play, or I don't.

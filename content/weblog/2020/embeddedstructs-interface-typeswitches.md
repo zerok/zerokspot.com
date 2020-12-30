@@ -6,6 +6,8 @@ tags:
 - retryablehttp
 - development
 - til
+incoming:
+- url: "https://chaos.social/@zerok/105464210096708044"
 ---
 
 Some time ago I ran into a weird issue related to interfaces In Go.  [hashicorp/go-retryablehttp](https://github.com/hashicorp/go-retryablehttp) is in use in various of our projects for more resilient HTTP API calls by handling retries, backoffs etc.. It also allows you to inject a logger so you can see what is happening below the surface. For this, you can implement one of two interfaces:
