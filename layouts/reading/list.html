@@ -10,9 +10,10 @@
                   <div class="page__intro">
                     <p>Here you can find a list of books I've read, am reading, and want to read in the future.</p>
                   </div>
-                  {{ $reading := (where (where .Pages ".Params.date" "!=" nil) ".Params.finished" "==" nil) }}
-                  {{ $toread := where .Pages ".Params.date" "==" nil }}
-                  {{ $read := (where (where .Pages ".Params.date" "<>" nil) ".Params.finished" "!=" nil) }}
+                  {{ $books := .Pages }}
+                  {{ $reading := (where (where $books ".Params.date" "!=" nil) ".Params.finished" "==" nil) }}
+                  {{ $toread := where $books ".Params.date" "==" nil }}
+                  {{ $read := (where (where $.Site.AllPages ".Params.date" "<>" nil) ".Params.finished" "<>" nil) }}
                   <section id="reading">
                     <h2>Currently reading</h2>
                     <table class="table table--reading-list">
@@ -52,9 +53,8 @@
                     </table>
                   </section>
                   <section id="read">
-                  <section id="read">
-                  <h2>Read</h2>
-                  {{ range $read.GroupByDate "2006" }}
+                  <h2>Read <span class="reading-listing__count">({{ len $read }} in total)</span></h2>
+                  {{ range $read.GroupByParamDate "finished" "2006" }}
                   <section id="read-{{ .Key }}">
                   <h3>{{ .Key }} <span class="reading-listing__count">({{ len .Pages }} in total)</span></h3>
                   <table class="table table--reading-list">
@@ -73,8 +73,8 @@
                         {{ else }}
                         <td>{{ .Title }}</td>
                         {{ end }}
-                        <td>{{ .Params.date | dateFormat "2006-01-02" }}</td>
-                        <td>{{ .Params.finished | dateFormat "2006-01-02" }}</td>
+                        <td>{{ if .Params.started }}{{ .Params.started | dateFormat "2006-01-02" }}{{ end }}</td>
+                        <td>{{ if .Params.finished }}{{ .Params.finished | dateFormat "2006-01-02" }}{{ end }}</td>
                       </tr>
                       {{ end }}
                     </tbody>
