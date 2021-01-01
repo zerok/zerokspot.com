@@ -1,7 +1,9 @@
 ---
 title: This was 2020
 date: "2021-01-01T17:06:11+01:00"
-tags: []
+tags:
+- goals
+- retrospective
 ---
 
 2020 was a crappy year: Corona with all its deaths, Trump, lockdowns are just some of the things that simply went far too wrong during the last 12 months. But, there were also a lot of positive things to report for 2020 and I want to focus on them in this little retrospective.
@@ -46,6 +48,3 @@ All in all I still think that I did well here given the circumstances. Only the 
 And this is pretty much the only solid goal I want to set for 2021: There needs to be some progress regarding the family tree application. Surely, there will also be tons of progress on other fronts but this one project will get some special treatment!
 
 Concluding I hope that 2021 will be a good year again! Happy new year, everyone!
-
-# goals #retrospective
-
