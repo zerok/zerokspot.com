@@ -18,7 +18,7 @@ interesting stuff. But what happened this past week in Cardiff is more like a
 huge family gatherings but where you can talk tech with anyone 😀
 
 <figure>
-<img alt="" src="http://photos.h10n.me/Conferences/DjangoCon-Europe-2015/i-C8hnCpp/0/2560x1701/DSC03937-2560x1701.jpg"/>
+<img alt="" src="https://files.zerokspot.com/photos/2015/djangoconeu2015-city-hall.large.jpg">
 <figcaption><p>The City Hall as seen from Cardiff Castle</p></figcaption>
 </figure>
 
@@ -41,7 +41,7 @@ for me as I had never done something like that before. If time permits I
 definitely want to help with workshops again in the future 😁
 
 <figure>
-<img alt="" src="http://photos.h10n.me/Conferences/DjangoCon-Europe-2015/i-5KJGpMk/0/XL/2015-06-05%2009.59.52-XL.jpg"/>
+<img alt="" src="https://files.zerokspot.com/photos/2015/djangoconeu2015-welsh-cakes.large.jpg">
 <figcaption><p>Welsh Cakes!</p></figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ we can stay in touch. It is open to the public, so if you're into this topic,
 join!
 
 <figure>
-<img alt="" src="http://photos.h10n.me/Conferences/DjangoCon-Europe-2015/i-srsqPdH/0/XL/DSC03915-XL.jpg"/>
+<img alt="" src="https://files.zerokspot.com/photos/2015/djangoconeu2015-projector.large.jpg">
 <figcaption><p>The obligatory fight with the projector that killed quite a few laptops.</p></figcaption>
 </figure>
 
