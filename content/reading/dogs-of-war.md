@@ -8,4 +8,5 @@ pages: 262
 genre: scifi
 language: en
 goodreadsID: 35827220
+review: /weblog/2021/01/04/dogs-of-war/
 ---
