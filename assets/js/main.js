@@ -81,4 +81,48 @@ window.zs = zs;
     }, false);
 }());
 
+function renderMastodonComments() {
+  var container = document.querySelector('.mastodon-comments');
+  if (!container) {
+    return;
+  }
+  var baseURL = container.getAttribute('data-url');
+  const list = document.createElement('div');
+  list.className = 'mastodon-comments-container';
+  fetch('https://zerokspot.com/retoots/api/v1/descendants?status=' + baseURL).then((resp) => {
+    return resp.json();
+  }).then(data => {
+    if (!data.length) {
+      return;
+    }
+    data.forEach(item => {
+      var comment = document.createElement('div');
+      comment.className = 'mastodon-comment';
+      var avatar = document.createElement('div');
+      avatar.className = 'mastodon-comment__avatar';
+      if (item.account.avatar) {
+        var avatarLink = document.createElement('a');
+        avatarLink.setAttribute('href', item.account.url);
+        var img = document.createElement('img');
+        img.setAttribute('src', item.account.avatar);
+        avatarLink.appendChild(img);
+        avatar.appendChild(avatarLink);
+      }
+      var content = document.createElement('div');
+      content.className = 'mastodon-comment__content';
+      content.innerHTML = item.content;
+      var dateLink = document.createElement('a');
+      dateLink.className = 'mastodon-comment__date';
+      dateLink.setAttribute('href', item.url);
+      dateLink.innerHTML = item.created_at;
+      content.appendChild(dateLink);
+      comment.appendChild(avatar);
+      comment.appendChild(content);
+      list.appendChild(comment)
+    });
+    container.appendChild(list);
+  });
+}
+
 renderIcons();
+renderMastodonComments();
