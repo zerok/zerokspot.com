@@ -98,7 +98,9 @@ aside {
 
 .article__content,
 .note__content,
-.comments {
+.comments,
+.webmention-widget,
+.mastodon-comments {
     @include content-content;
 }
 
@@ -245,9 +247,49 @@ aside {
     text-align: center;
 }
 
-.comments, .incoming, .webmention-list {
-    max-width: 70%;
+.comments, .incoming, .webmention-widget, .mastodon-comments {
+    max-width: 90%;
     margin: auto;
+}
+
+.mastodon-comment:first-child {
+    border-top: 0;
+}
+
+.mastodon-comment {
+    display: grid;
+    grid-template-columns: 100px auto;
+    padding: 10px 0;
+    border-top: 1px dotted #888;
+}
+
+.mastodon-comment__avatar {
+    a {
+        display: block;
+        border: 1px solid #888;
+        padding: 3px;
+        box-shadow: none;
+    }
+    img {
+        width: 90px;
+        display: block;
+    }
+}
+a.mastodon-comment__date {
+    display: block;
+    text-align: right;
+    border: none;
+    box-shadow: none;
+    font-size: 70%;
+    &:hover {
+        background: none;
+    }
+}
+.mastodon-comment__content {
+    padding-left: 20px;
+    p:first-child {
+        margin-top: 0;
+    }
 }
 
 .page__listing {
@@ -449,6 +491,9 @@ aside {
     .page__footer {
         padding: 10px;
     }
+    .comments, .incoming, .webmention-widget, .mastodon-comments {
+        max-width: 100%;
+    }
 }
 
 .page--archive {
@@ -485,7 +530,7 @@ aside {
     margin-top: 4rem;
 }
 .webmention-widget h2 {
-    text-align: center;
+//    text-align: center;
 }
 
 .webmention svg {
@@ -494,7 +539,6 @@ aside {
 }
 
 .webmention-list > p {
-    text-align: center;
 }
 
 .webmention-list__list {
@@ -509,9 +553,11 @@ aside {
 }
 
 .webmention--comment .webmention__content {
-    line-height: 2rem;
-    font-size: 1.4rem;
     margin: 1rem 0 0 2rem;
+}
+
+.webmention blockquote {
+    color: #FFF;
 }
 
 .webmention__date {

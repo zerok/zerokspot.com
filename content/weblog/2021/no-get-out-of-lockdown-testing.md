@@ -5,6 +5,8 @@ tags:
 - austria
 - covid19
 - lockdown
+incoming:
+- url: https://chaos.social/@zerok/105502522891397521
 ---
 
 [Before Christmas](https://zerokspot.com/weblog/2020/12/19/austria-is-getting-a-third-lockdown/) the Austrian government had announced plans that citizens should be able to get tested on the weekend before Jan 18 and, if negative, be allowed to go to shops and restaurants again. For those people the planned lockdown would then end a week early.

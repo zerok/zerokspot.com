@@ -6,3 +6,13 @@
     data-endpoint="https://zerokspot.com/webmentions"
     data-target="https://zerokspot.com{{ .RelPermalink }}"></div>
 <script src="https://zerokspot.com/webmentions/ui/dist/widget.js"></script>
+{{ if .Params.incoming }}
+    {{ range .Params.incoming }}
+        {{ if in .url "chaos.social" }}
+<div class="mastodon-comments" data-url="{{ .url }}">
+    <h2>Comments</h2>
+    <p>If you have a Mastodon account, you can also leave a comment by replying to <a href="{{ .url }}">this status</a>.</p>
+</div>
+        {{ end }}
+    {{ end }}
+{{ end }}
