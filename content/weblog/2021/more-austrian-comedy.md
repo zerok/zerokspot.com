@@ -7,6 +7,8 @@ tags:
 - entertainment
 - streaming
 - online
+incoming:
+- url: https://chaos.social/@zerok/105510697458516755
 ---
 
 My first contact with Austrian comedy (“Kabarett”) was back in the 1990s thanks to various parodies of the Olympic Winter Games by [Mini Bydlinski](https://de.wikipedia.org/wiki/Mini_Bydlinski). Then I somehow took the wrong turn for me and simply didn’t come across anybody that I really enjoyed listening to until last summer. We started watching various TV broadcasts featuring [Alex Kristan](https://www.alexkristan.at/) and [Gery Seidl](http://www.geryseidl.at/) and I was hooked again.
