@@ -27,7 +27,7 @@
                         {{ range $reading }}
                         <tr>
                           <td>{{ .Title }}</td>
-                          <td>{{ .Params.date | dateFormat "2006-01-02" }}</td>
+                          <td>{{ if .Params.started }}{{ .Params.started | dateFormat "2006-01-02" }}{{ end }}</td>
                         </tr>
                         {{ end }}
                       </tbody>
