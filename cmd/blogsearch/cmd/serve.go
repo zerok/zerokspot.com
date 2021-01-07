@@ -75,5 +75,5 @@ var serveCmd = &cobra.Command{
 
 func init() {
 	serveCmd.Flags().StringVar(&httpAddr, "http-addr", "0.0.0.0:8000", "Address to listen for requests")
-	rootCmd.AddCommand(serveCmd)
+	RootCmd.AddCommand(serveCmd)
 }

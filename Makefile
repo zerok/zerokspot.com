@@ -1,6 +1,6 @@
 main_js=static/js/archive.js
 
-all: bin/blogsearch bin/blog $(main_js)
+all: bin/blog $(main_js)
 
 .PHONY: test
 test:
@@ -23,11 +23,4 @@ clean:
 bin/blog: $(shell find . -name '*.go') bin
 	cd cmd/blog && go build -o ../../bin/blog
 
-bin/blogsearch: bin $(shell find . -name '*.go')
-	cd cmd/blogsearch && CGO_ENABLED=0 go build -o ../../bin/blogsearch
-
-update-blogsearch-image:
-	docker build -t registry.gitlab.com/zerok/zerokspot.com/blogsearch:latest .
-	docker push registry.gitlab.com/zerok/zerokspot.com/blogsearch:latest
-
-.PHONY: clean all prepare update-blogsearch-image frontend
+.PHONY: clean all prepare frontend

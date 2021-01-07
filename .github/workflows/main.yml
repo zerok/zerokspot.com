@@ -42,18 +42,12 @@ jobs:
         key: ${{ runner.os }}-go-${{ hashFiles('./go.sum') }}
         restore-keys: |
           ${{ runner.os }}-go-
-    - name: Build blogsearch
-      run: "cd cmd/blogsearch && GOOS=linux GOARCH=amd64 go build -o ../../blogsearch && cd -"
     - name: Build CLI
       run: "cd cmd/blog && GOOS=linux GOARCH=amd64 go build -o ../../blog && cd -"
     - uses: actions/upload-artifact@v1
       with:
         name: blogcli
         path: blog
-    - uses: actions/upload-artifact@v1
-      with:
-        name: blogsearch
-        path: blogsearch
 
   build-content:
     needs:
@@ -103,11 +97,7 @@ jobs:
     - uses: actions/checkout@v1
     - uses: actions/download-artifact@v1
       with:
-        name: blogsearch
-    - uses: actions/download-artifact@v1
-      with:
         name: blogcli
-    - run: chmod +x ./blogsearch/blogsearch
     - run: chmod +x ./blogcli/blog
     - uses: actions/download-artifact@v1
       with:
@@ -115,9 +105,9 @@ jobs:
         path: public.tar.xz
     - run: "tar -xJf public.tar.xz/public.tar.xz && rm -rf public.tar.xz"
     - run: "sudo apt-get install -qq --yes git curl"
-    - run: "./blogsearch/blogsearch update-index --updated-objects-path public/.updated-objects.txt"
+    - run: "./blogcli/blog search update-index --updated-objects-path public/.updated-objects.txt"
     - run: "cat public/.updated-objects.txt"
-    - run: "./blogsearch/blogsearch build-mapping"
+    - run: "./blogcli/blog search build-mapping"
     - run: "./blogcli/blog changes --since-rev $(curl https://zerokspot.com/.gitrev) --url > public/.changes.txt"
     - uses: actions/upload-artifact@v1
       with:
@@ -160,10 +150,7 @@ jobs:
     - uses: actions/download-artifact@v1
       with:
         name: blogcli
-    - uses: actions/download-artifact@v1
-      with:
-        name: blogsearch
-    - run: chmod +x ./blogcli/blog ./blogsearch/blogsearch
+    - run: chmod +x ./blogcli/blog
     - run: "mv changes/.changes.txt public"
     - run: "mv mapping/.mapping.json.xz public"
     - run: "mv updated-objects/.updated-objects.txt public"
@@ -172,7 +159,6 @@ jobs:
     - run: "echo \"$SSH_PRIVATE_KEY\" > ~/.ssh/id_rsa && chmod 0600 ~/.ssh/id_rsa"
     - run: "echo ${{ github.sha }} > public/.gitrev"
     - run: "rsync -avz -e \"ssh -o StrictHostKeyChecking=no\" blogcli/blog www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/bin/"
-    - run: "rsync -avz -e \"ssh -o StrictHostKeyChecking=no\" blogsearch/blogsearch www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/bin/"
     - run: "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
     - run: "ssh www-zerokspot@zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
 

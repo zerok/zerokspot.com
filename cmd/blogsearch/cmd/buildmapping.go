@@ -33,5 +33,5 @@ var buildMappingCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(buildMappingCmd)
+	RootCmd.AddCommand(buildMappingCmd)
 }

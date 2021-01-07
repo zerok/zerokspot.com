@@ -15,8 +15,8 @@ var baseIndexName string
 var appID string
 var appKey string
 
-var rootCmd = &cobra.Command{
-	Use: "blogsearch",
+var RootCmd = &cobra.Command{
+	Use: "search",
 	Run: func(cmd *cobra.Command, args []string) {
 
 	},
@@ -28,13 +28,13 @@ var rootCmd = &cobra.Command{
 
 func init() {
 	logger = zerolog.New(zerolog.ConsoleWriter{Out: os.Stderr})
-	rootCmd.PersistentFlags().StringVar(&baseIndexName, "base-index", os.Getenv("BLOGSEARCH_BASE_INDEX"), "Name of the base index")
-	rootCmd.PersistentFlags().StringVar(&appID, "app-id", os.Getenv("BLOGSEARCH_APP_ID"), "Algolia app ID")
-	rootCmd.PersistentFlags().StringVar(&appKey, "app-key", os.Getenv("BLOGSEARCH_APP_KEY"), "Algolia app key")
+	RootCmd.PersistentFlags().StringVar(&baseIndexName, "base-index", os.Getenv("BLOGSEARCH_BASE_INDEX"), "Name of the base index")
+	RootCmd.PersistentFlags().StringVar(&appID, "app-id", os.Getenv("BLOGSEARCH_APP_ID"), "Algolia app ID")
+	RootCmd.PersistentFlags().StringVar(&appKey, "app-key", os.Getenv("BLOGSEARCH_APP_KEY"), "Algolia app key")
 }
 
 func Execute() {
-	if err := rootCmd.Execute(); err != nil {
+	if err := RootCmd.Execute(); err != nil {
 		logger.Fatal().Err(err).Msg("blogsearch failed")
 	}
 }

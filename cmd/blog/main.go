@@ -6,6 +6,7 @@ import (
 
 	"github.com/rs/zerolog"
 	"github.com/spf13/cobra"
+	"gitlab.com/zerok/zerokspot.com/cmd/blogsearch/cmd"
 )
 
 var logger zerolog.Logger
@@ -30,6 +31,7 @@ var rootCmd = &cobra.Command{
 
 func init() {
 	rootCmd.PersistentFlags().StringVar(&localZoneName, "tz", "Europe/Vienna", "Timezone to be used for data-relevant processing")
+	rootCmd.AddCommand(cmd.RootCmd)
 }
 
 func main() {
