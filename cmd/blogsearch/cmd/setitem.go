@@ -43,5 +43,5 @@ var setItemCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(setItemCmd)
+	RootCmd.AddCommand(setItemCmd)
 }

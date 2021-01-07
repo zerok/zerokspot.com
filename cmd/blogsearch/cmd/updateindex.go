@@ -231,5 +231,5 @@ func init() {
 	updateIndexCmd.Flags().BoolVar(&rebuild, "rebuild", false, "Rebuild the whole index")
 	updateIndexCmd.Flags().BoolVar(&dryRun, "dry-run", false, "Do everything BUT changing the index")
 	updateIndexCmd.Flags().StringVar(&updatedObjectsPath, "updated-objects-path", "updated-objects.txt", "File listing updated objects")
-	rootCmd.AddCommand(updateIndexCmd)
+	RootCmd.AddCommand(updateIndexCmd)
 }
