@@ -6,6 +6,8 @@ tags:
 - comments
 - mastodon
 - retoots
+incoming:
+- url: https://chaos.social/@zerok/105513832027382636
 ---
 
 In [May 2019](https://zerokspot.com/weblog/2019/05/01/removing-comments-form/) I removed Disqus from this site simply because it had turned into an ad-network. Not wanting to “own” other people’s comments also didn’t replace it with something custom made/self-hosted. About a year later I had stumbled upon webmentions and started implementing it here using the [webmentiond](https://github.com/zerok/webmentiond) project. Nearly exactly a year after removing Disqus [webmentiond supported comments](https://zerokspot.com/weblog/2020/05/05/webmentiond-supports-comments/) and I embedded them below my blogposts.
