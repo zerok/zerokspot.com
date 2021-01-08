@@ -2,20 +2,15 @@
 <html lang="en">
     {{ partial "head.html" $ }}
     <body>
-        <div class="page page--archive">
+        <div class="page page--tags">
             {{ partial "header.html" $ }}
             <div id="body">
-                <h1>Archive for "{{ .Title }}"</h1>
-                {{ range .Data.Pages.GroupByDate "2006" }}
-                <section class="archive__year" id="{{ .Key }}">
-                <h2><a href="#{{ .Key }}">{{ .Key }} ({{ len .Pages }})</a></h2>
-                <ul class="page__listing page__listing--mini">
-                    {{ range .Pages }}
-                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <time>{{ .Date.Format "Jan 02, 2006" }}</time></li>
-                    {{ end }}
-                </ul>
-                </section>
+                <h1>All tags ({{ .Data.Terms.Alphabetical | len }})</h1>
+                <ul class="taglist">
+                {{ range .Data.Terms.Alphabetical }}
+                <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a><span class="tag__count">({{.Count }})</a></li>
                 {{ end }}
+                </ul>
             </div>
             {{ partial "footer.html" }}
         </div>
