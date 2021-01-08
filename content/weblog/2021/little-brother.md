@@ -8,6 +8,8 @@ tags:
 - corydoctorow
 - cryptography
 - privacy
+incoming:
+- url: https://chaos.social/@zerok/105519766559903843
 ---
 
 [Last October](https://craphound.com/attacksurface/2020/10/13/attack-surface-is-out/) Cory Doctorow released his latest book: [“Attack Surface”](https://craphound.com/category/attacksurface/). Since this is the third book in the “Little Brother” series and I hadn’t read any of the previous instalments, I set out to catch up as soon as possible, starting with the first book in the series: [“Little Brother”](https://craphound.com/category/littlebrother/).
