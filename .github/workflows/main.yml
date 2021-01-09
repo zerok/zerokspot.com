@@ -3,32 +3,6 @@ name: CI
 on: [push]
 
 jobs:
-  build-frontend:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: zerok/pushover-action@master
-      with:
-        token: ${{ secrets.PUSHOVER_TOKEN }}
-        user: ${{ secrets.PUSHOVER_USER }}
-        message: CI started
-      if: github.ref == 'refs/heads/main'
-    - uses: actions/checkout@v1
-    - uses: actions/cache@v2
-      with:
-        path: |
-          ./node_modules
-        key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-    - uses: actions/setup-node@v1.4.4
-      with:
-        node-version: "12.x"
-    - run: "sudo apt-get install -qq --yes python make g++"
-    - run: "yarn"
-    - run: "yarn run webpack"
-    - uses: actions/upload-artifact@v1
-      with:
-        name: frontend
-        path: static
-
   build-tools:
     runs-on: ubuntu-latest
     steps:
@@ -52,7 +26,6 @@ jobs:
   build-content:
     needs:
       - build-tools
-      - build-frontend
     runs-on: ubuntu-latest
     env:
       FEEDBIN_USER: ${{ secrets.FEEDBIN_USER }}
@@ -76,55 +49,17 @@ jobs:
     - run: ./blogcli/blog build-graph
     - run: ./blogcli/blog blogroll --output data/blogroll.json
     - run: hugo
+    - run: "./blogcli/blog search build-mapping"
+    - run: "./blogcli/blog changes --since-rev $(curl https://zerokspot.com/.gitrev) --url > public/.changes.txt"
     - run: tar -cJf public.tar.xz public
     - uses: actions/upload-artifact@v1
       with:
         name: public.tar.xz
         path: public.tar.xz
 
-  index:
-    if: github.ref == 'refs/heads/main'
-    needs:
-      - build-tools
-      - build-frontend
-      - build-content
-    runs-on: ubuntu-latest
-    env:
-      BLOGSEARCH_APP_ID: ${{ secrets.BLOGSEARCH_APP_ID }}
-      BLOGSEARCH_APP_KEY: ${{ secrets.BLOGSEARCH_APP_KEY }}
-      BLOGSEARCH_BASE_INDEX: ${{ secrets.BLOGSEARCH_BASE_INDEX }}
-    steps:
-    - uses: actions/checkout@v1
-    - uses: actions/download-artifact@v1
-      with:
-        name: blogcli
-    - run: chmod +x ./blogcli/blog
-    - uses: actions/download-artifact@v1
-      with:
-        name: public.tar.xz
-        path: public.tar.xz
-    - run: "tar -xJf public.tar.xz/public.tar.xz && rm -rf public.tar.xz"
-    - run: "sudo apt-get install -qq --yes git curl"
-    - run: "./blogcli/blog search update-index --updated-objects-path public/.updated-objects.txt"
-    - run: "cat public/.updated-objects.txt"
-    - run: "./blogcli/blog search build-mapping"
-    - run: "./blogcli/blog changes --since-rev $(curl https://zerokspot.com/.gitrev) --url > public/.changes.txt"
-    - uses: actions/upload-artifact@v1
-      with:
-        name: mapping
-        path: ./public/.mapping.json.xz
-    - uses: actions/upload-artifact@v1
-      with:
-        name: updated-objects
-        path: ./public/.updated-objects.txt
-    - uses: actions/upload-artifact@v1
-      with:
-        name: changes
-        path: ./public/.changes.txt
   deploy:
     if: github.ref == 'refs/heads/main'
     needs:
-      - index
       - build-content
       - build-tools
     runs-on: ubuntu-latest
@@ -140,20 +75,8 @@ jobs:
     - run: tar -xJf public.tar.xz/public.tar.xz
     - uses: actions/download-artifact@v1
       with:
-        name: mapping
-    - uses: actions/download-artifact@v1
-      with:
-        name: changes
-    - uses: actions/download-artifact@v1
-      with:
-        name: updated-objects
-    - uses: actions/download-artifact@v1
-      with:
         name: blogcli
     - run: chmod +x ./blogcli/blog
-    - run: "mv changes/.changes.txt public"
-    - run: "mv mapping/.mapping.json.xz public"
-    - run: "mv updated-objects/.updated-objects.txt public"
     - run: "sudo apt-get install -qq --yes git curl"
     - run: "mkdir -p ~/.ssh && chmod 0700 ~/.ssh"
     - run: "echo \"$SSH_PRIVATE_KEY\" > ~/.ssh/id_rsa && chmod 0600 ~/.ssh/id_rsa"
@@ -161,6 +84,10 @@ jobs:
     - run: "rsync -avz -e \"ssh -o StrictHostKeyChecking=no\" blogcli/blog www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/bin/"
     - run: "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
     - run: "ssh www-zerokspot@zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
+    - uses: actions/upload-artifact@v1
+      with:
+        name: changes
+        path: ./public/.changes.txt
 
   mention:
     if: github.ref == 'refs/heads/main'
