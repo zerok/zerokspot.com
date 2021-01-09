@@ -38,10 +38,6 @@ jobs:
         extended: true
     - uses: actions/download-artifact@v1
       with:
-        name: frontend
-        path: static
-    - uses: actions/download-artifact@v1
-      with:
         name: blogcli
     - run: chmod +x ./blogcli/blog
     - run: ./blogcli/blog build-archive
