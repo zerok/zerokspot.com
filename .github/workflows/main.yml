@@ -12,7 +12,7 @@ jobs:
         go-version: "1.15.6"
     - uses: actions/cache@v2
       with:
-        path: ~/go/pkg/mod
+        path: ~/go/pkg
         key: ${{ runner.os }}-go-${{ hashFiles('./go.sum') }}
         restore-keys: |
           ${{ runner.os }}-go-
@@ -23,13 +23,15 @@ jobs:
         name: blogcli
         path: blog
 
-  build-content:
+  build-and-deploy:
     needs:
       - build-tools
     runs-on: ubuntu-latest
     env:
       FEEDBIN_USER: ${{ secrets.FEEDBIN_USER }}
       FEEDBIN_PASSWORD: ${{ secrets.FEEDBIN_PASSWORD }}
+      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
     steps:
     - uses: actions/checkout@v1
     - uses: peaceiris/actions-hugo@v2.4.13
@@ -47,48 +49,32 @@ jobs:
     - run: hugo
     - run: "./blogcli/blog search build-mapping"
     - run: "./blogcli/blog changes --since-rev $(curl https://zerokspot.com/.gitrev) --url > public/.changes.txt"
-    - run: tar -cJf public.tar.xz public
-    - uses: actions/upload-artifact@v1
-      with:
-        name: public.tar.xz
-        path: public.tar.xz
 
-  deploy:
-    if: github.ref == 'refs/heads/main'
-    needs:
-      - build-content
-      - build-tools
-    runs-on: ubuntu-latest
-    env:
-      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
-    steps:
-    - uses: actions/checkout@v1
-    - uses: actions/download-artifact@v1
-      with:
-        name: public.tar.xz
-        path: public.tar.xz
-    - run: tar -xJf public.tar.xz/public.tar.xz
-    - uses: actions/download-artifact@v1
-      with:
-        name: blogcli
-    - run: chmod +x ./blogcli/blog
     - run: "sudo apt-get install -qq --yes git curl"
+      if: github.ref == 'refs/heads/main'
     - run: "mkdir -p ~/.ssh && chmod 0700 ~/.ssh"
+      if: github.ref == 'refs/heads/main'
     - run: "echo \"$SSH_PRIVATE_KEY\" > ~/.ssh/id_rsa && chmod 0600 ~/.ssh/id_rsa"
+      if: github.ref == 'refs/heads/main'
     - run: "echo ${{ github.sha }} > public/.gitrev"
+      if: github.ref == 'refs/heads/main'
     - run: "rsync -avz -e \"ssh -o StrictHostKeyChecking=no\" blogcli/blog www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/bin/"
+      if: github.ref == 'refs/heads/main'
     - run: "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
+      if: github.ref == 'refs/heads/main'
     - run: "ssh www-zerokspot@zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
+      if: github.ref == 'refs/heads/main'
+
     - uses: actions/upload-artifact@v1
       with:
         name: changes
         path: ./public/.changes.txt
+      if: github.ref == 'refs/heads/main'
 
   mention:
     if: github.ref == 'refs/heads/main'
     needs:
-      - deploy
+      - build-and-deploy
     runs-on: ubuntu-latest
     container:
       image: "zerok/webmentiond:latest"
