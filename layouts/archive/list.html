@@ -4,6 +4,7 @@
     <body>
         <div class="page page--archive">
             {{ partial "header.html" $ }}
+            {{ if .Params.paths }}
             <div id="body">
                 <h1>Archive for the year {{ .Title }}</h1>
                 {{ partial "archive_intro.html" . }}
@@ -15,6 +16,37 @@
                     {{ end }}
                 </ul>
             </div>
+            {{ else }}
+            <div id="body">
+              <h1>Archive</h1>
+              <div class="page__intro">
+                <p>
+Here you can find a complete listing of all notes, photos, and blogposts on
+this website. If you also want to get an overview over all the tags I've used
+over the years, you can find that under <a href="/tags/">/tags/</a>.</p>
+                </div>
+              <table class="archive__listing">
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Posts</th>
+                    <th>Notes</th>
+                    <th>Photos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {{ range .Pages.Reverse }}
+                <tr>
+                  <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+                  <td>{{ .Params.numposts }}</td>
+                  <td>{{ .Params.numnotes }}</td>
+                  <td>{{ .Params.numphotos }}</td>
+                </tr>
+                {{ end }}
+                </tbody>
+              </table>
+            </div>
+            {{ end }}
             {{ partial "footer.html" }}
         </div>
     </body>

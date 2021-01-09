@@ -292,33 +292,36 @@ a.mastodon-comment__date {
     }
 }
 
+.page__listing li,
+.archive__listing th,
+.archive__listing td {
+    padding: 5px;
+    overflow: hidden;
+    border-bottom: 1px dotted #CCC;
+    a {
+        font-weight: bold;
+    }
+
+    a, time, .rating {
+        line-height: 2.5rem;
+        font-size: 1.7rem;
+    }
+
+}
+
 .page__listing {
     list-style: none;
     margin: 0;
     padding: 0;
 
     li {
-        padding: 5px;
-        overflow: hidden;
-        border-bottom: 1px dotted #CCC;
-
         &:hover {
             background: #EFEFEF;
         }
     }
-
-    a {
-        font-weight: bold;
-    }
-
-
-    a, time, .rating {
-        line-height: 2.5rem;
-        font-size: 1.7rem;
-    }
 }
-.page__listing--mini {
 
+.page__listing--mini {
     li {
         display: grid;
         grid-template-areas: "prefix link suffix";
@@ -631,6 +634,22 @@ time .age {
     font-size: 70%;
     opacity: 80%;
     padding-left: 0.5rem;
+}
+
+.archive__listing {
+    margin: 18px 0;
+    border-collapse: collapse;
+    width: 100%;
+    tr:hover {
+        background: #EFEFEF;
+    }
+    th {
+        font-weight: bold;
+    }
+    td, th {
+        text-align: center;
+        border-bottom: 1px dotted #CCC;
+    }
 }
 
 @import "darkmode";
