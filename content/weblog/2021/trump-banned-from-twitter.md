@@ -6,6 +6,8 @@ tags:
 - trump
 - parler
 - socialmedia
+incoming:
+- url: https://chaos.social/@zerok/105525455554529687
 ---
 
 So Trump is now finally banned from Twitter with his primary account (after losing his presence on Facebook, Twitch et al.). Naturally, he immediately switched to the [@POTUS account](https://twitter.com/potus) (11 more days!) and Twitter immediately [blocked some of his tweets there](https://www.washingtonpost.com/technology/2021/01/08/twitter-trump-dorsey/) too. 
