@@ -243,13 +243,17 @@ aside {
 }
 
 .comments {
-    padding-top: 40px;
     text-align: center;
 }
 
-.comments, .incoming, .webmention-widget, .mastodon-comments {
-    max-width: 90%;
+.feedback {
+    max-width: 80%;
     margin: auto;
+    padding-top: 100px;
+}
+
+.incoming, .webmention-widget, .mastodon-comments {
+    padding-top: 20px;
 }
 
 .mastodon-comment:first-child {
