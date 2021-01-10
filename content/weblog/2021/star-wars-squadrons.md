@@ -1,6 +1,7 @@
 ---
 title: 'Star Wars: Squadrons'
 date: "2021-01-10T19:54:17+01:00"
+rating: 5
 tags:
 - gaming
 - review
