@@ -7,6 +7,8 @@ tags:
 - journaling
 - bujo
 - bulletjournal
+incoming:
+- url: https://chaos.social/@zerok/105538922683733366
 ---
 
 So my vacation is over 😭 and this means back to work! It also means that I finally see some folks (virtually) again 🥳. To make things easier, I picked a coding task as my first one for 2021. I think there will never come the day when I won’t enjoy an interesting coding task, and if it’s not interesting by itself, making the implementation more testable sure is!
