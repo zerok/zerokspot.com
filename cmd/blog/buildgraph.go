@@ -172,6 +172,9 @@ func (v *NodeVisitor) Visit(node ast.Node, entering bool) ast.WalkStatus {
 		if strings.HasPrefix(dest, "https://zerokspot.com") {
 			dest = strings.TrimPrefix(dest, "https://zerokspot.com")
 		}
+		if !(strings.HasPrefix(dest, "/weblog/") || strings.HasPrefix(dest, "/notes/")) {
+			return ast.GoToNext
+		}
 		for _, p := range v.Parents {
 			if p == dest {
 				return ast.GoToNext
