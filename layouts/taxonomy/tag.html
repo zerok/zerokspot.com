@@ -34,8 +34,10 @@
                     {{ if eq .Title "100daystooffload" }}
                     <div class="page__intro">
                         <p>100DaysToOffload is a challenge started by Kev Quirk at the end of April 2020 encouraging participants to post one article every day for 100 days. You can find the details on <a href="https://100daystooffload.com/">100daystooffload.com</a>.</p>
+                        {{ range (.Data.Pages.GroupByDate "2006").Reverse }}
                         {{ $count := (where .Pages "Type" "weblog").GroupByDate "2006-01-02"  | len}}
-                        <p>My progress: <b>{{ $count }}/100</b></p>
+                        <p>My progress ({{ .Key }}): <b>{{ $count }}/100</b></p>
+                        {{ end }}
                         <p class="disclaimer disclaimer--small">I sometimes posted multiple articles with that tag on the same day. The progress above only includes one post per day, though.</p>
                     </div>
                     {{ end }}
