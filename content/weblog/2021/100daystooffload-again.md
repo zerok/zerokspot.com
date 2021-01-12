@@ -4,6 +4,8 @@ date: "2021-01-12T19:50:02+01:00"
 tags:
 - 100daystooffload
 - blogging
+incoming:
+- url: https://chaos.social/@zerok/105544267193310818
 ---
 
 Mike wrote a couple of days ago that [he’d once again to a 100DaysToOffload](https://mikestone.me/a-new-year-and-a-new-challenge) on his blog. Since I also have now written something every day since the new year has started, I might as well also join him!
