@@ -5,6 +5,8 @@ tags:
 - 100daystooffload
 - ansible
 - ops
+incoming:
+- url: https://chaos.social/@zerok/105549687811383445
 ---
 
 I really like configuring servers with Ansible. It's just explicit and magic-free enough so that I don't have to relearn it every couple of months. It's still not really a magic wand that does the whole server maintenance for you. You still have to somehow trigger that playbook somehow. A couple of months ago, I stumbled upon [this tweet by Simon Willison](https://twitter.com/simonw/status/1334238720187199488) that might make things easier, though.
