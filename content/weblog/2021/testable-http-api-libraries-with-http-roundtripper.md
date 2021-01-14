@@ -7,6 +7,8 @@ tags:
 - testing
 - http
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105555682864766893
 ---
 
 Over the course of the last couple of days I’ve had a lot to do with client libraries for various online services. For this post I’m just going to use the [official Go library for Slack](https://github.com/slack-go/slack) but there are many others where the presented pattern should help integrating them into test setups.
