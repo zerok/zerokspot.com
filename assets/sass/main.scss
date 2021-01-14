@@ -296,6 +296,28 @@ a.mastodon-comment__date {
     }
 }
 
+.mastodon-favorited ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mastodon-favorited__item {
+    display: inline-block;
+    margin-right: 3px;
+    a {
+        display: block;
+        border: 1px solid #888;
+        padding: 3px;
+        box-shadow: none;
+        height: 58px;
+        box-sizing: border-box;
+    }
+    img {
+        width: 50px;
+        max-height: 50px;
+    }
+}
+
 .page__listing li,
 .archive__listing th,
 .archive__listing td {
