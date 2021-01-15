@@ -6,6 +6,8 @@ tags:
 - productivity
 - bulletjournaling
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105560464640736009
 ---
 
 Last November, [Cal Newport had an article in the New Yorker](https://www.newyorker.com/tech/annals-of-technology/the-rise-and-fall-of-getting-things-done) in which he describes the issue of information and communication overload we’re seeing in the knowledge workspace and provides some thoughts on where they’re coming from and what we could do about them. I’ve heard this article getting mentioned in quite a few of the podcasts I’ve been listening to, so I wanted to also share my 2c on it:
