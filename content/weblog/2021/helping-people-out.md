@@ -1,6 +1,7 @@
 ---
 title: Helping people out
 date: "2021-01-16T11:23:04+01:00"
+inReplyTo: "https://lazybear.io/posts/pay-it-forward/"
 tags:
 - 100daystooffload
 - charity
