@@ -34,6 +34,8 @@ jobs:
       SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
     steps:
     - uses: actions/checkout@v1
+      with:
+        lfs: true
     - uses: peaceiris/actions-hugo@v2.4.13
       with:
         hugo-version: 0.80.0
