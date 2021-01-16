@@ -5,6 +5,8 @@ inReplyTo: "https://lazybear.io/posts/pay-it-forward/"
 tags:
 - 100daystooffload
 - charity
+incoming:
+- url: https://chaos.social/@zerok/105564968024233316
 ---
 
 Today, Hyde published a great post about the movie “Pay it forward” from 2000 in which a boy to make the world a better place by helping three strangers while those would then in turn also help three others and so on. He also asked if that wouldn’t be something social networks could help with:
