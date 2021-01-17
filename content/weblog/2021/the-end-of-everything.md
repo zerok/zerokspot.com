@@ -6,6 +6,8 @@ tags:
 - review
 - cosmology
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105571577109921255
 rating: 5
 ---
 
