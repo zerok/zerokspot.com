@@ -7,6 +7,8 @@ tags:
 - availability
 - opensource
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105578140826815297
 ---
 
 While listening to one of the [recent episodes of the Ö1 radio program “Digital Leben”](https://oe1.orf.at/programm/20210114/624818/Kiwix-die-Wikipedia-als-Offline-Enzyklopaedie) I learnt about the [Kiwix project](https://www.kiwix.org/en/). The primary goal of Kiwix is to make Wikipedia (and other online resources) available to people with bad to very bad connectivity.
