@@ -8,6 +8,8 @@ tags:
 - community
 - graz
 - "100daystooffload"
+incoming:
+- url: https://chaos.social/@zerok/105589436410734712
 ---
 
 Next week, [GoGraz][] is going to be slightly different than usual. The [Go
