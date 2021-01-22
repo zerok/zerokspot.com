@@ -9,6 +9,8 @@ tags:
 - usergroup
 - community
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105600404041298688
 ---
 
 As I [hinted at recently](https://zerokspot.com/weblog/2021/01/20/gdn-learning-go-event/), here's the little change we're going to make at [GoGraz](https://gograz.org): Dorian (who has organized the events for years now) and I will change places with me taking the lead as organizer of the group. This post is mostly here so that you're not confused when, all of a sudden, someone else creates those events on meetup.com  😉
