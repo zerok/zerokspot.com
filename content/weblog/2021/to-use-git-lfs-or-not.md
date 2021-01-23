@@ -5,6 +5,8 @@ tags:
 - zerokspot
 - git
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105606327715584190
 ---
 
 A couple of days ago I had the glorious idea to move all the images I had on this blog into [Git LFS](https://git-lfs.github.com/). That system only exists to manage large files within Git and so I thought it would be a good fit.
