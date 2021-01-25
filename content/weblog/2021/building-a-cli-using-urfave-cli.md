@@ -6,6 +6,8 @@ tags:
 - cli
 - development
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105617847327860451
 ---
 
 I’ve been using [Cobra](https://cobra.dev/) for a really long time. Whenever I start a project that needs to handle more than one command add Cobra. For a small toolbox for datasphere I wanted to try something different: [urfave/cli](https://github.com/urfave/cli).
