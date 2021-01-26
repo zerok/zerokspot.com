@@ -4,6 +4,8 @@ date: "2021-01-26T18:39:06+01:00"
 tags:
 - golang
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105623257490894458
 ---
 
 When you develop applications in Go that you want to deliver as a single binary file but that require, for instance, image files then you need to somehow embed those into the binary such that the Go application can access them at runtime. One example for such a scenario is an application that wants to provide you with a JavaScript/web GUI for management.
