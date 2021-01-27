@@ -5,6 +5,9 @@ tags:
 - twitter
 - ios
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105629233945324473
+- url: https://twitter.com/zerok/status/1354505801314885632
 ---
 
 Thanks to [an article on MacStories](https://www.macstories.net/news/tweetbot-6-moves-to-subscription-pricing/) I stumbled across a new version of a Twitter app I’ve been using for many, many years now: [Tweetbot](https://www.tapbots.com/tweetbot/). I bought version 1.x back in 2011 for € 2.39 and another € 1 for the iPad version a couple of months later (yeay, now universal apps back then…). When [I returned to iOS in 2015](https://zerokspot.com/weblog/2015/10/11/and-back-to-ios/) from a couple of years using Android, Tweetbot 4.x was one of the first purchases I made from the AppStore and continued to purchase new major versions more or less as soon as they were released.
