@@ -4,6 +4,8 @@ date: "2021-01-29T13:25:00+01:00"
 tags:
 - golang
 - "100daystooffload"
+incoming:
+- url: https://chaos.social/@zerok/105639100773478442
 ---
 
 Yesterday I somehow stumbled (probably via r/golang) onto another nice feature that’s incoming with [Go 1.16](https://tip.golang.org/doc/go1.16) which I had previously missed while skimming through the release notes: [`signal.NotifyContext`](https://tip.golang.org/pkg/os/signal/#NotifyContext).
