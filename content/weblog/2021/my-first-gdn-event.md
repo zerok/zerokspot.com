@@ -25,3 +25,6 @@ In 7 talks the attendees go to know the learning paths of folks at completely di
 A Go event is also always a great opportunity to do some talk notes using [turquoise Lamy ink](https://www.lamyshop.com/tinte-lamy-t52.html?sel=516) [[part 1](https://files.zerokspot.com/photos/2021/gograz-jan-01.jpg), [part 2](https://files.zerokspot.com/photos/2021/gograz-jan-02.jpg)] 😊 
 
 I really want to thank Angelica Hill, Wilken Rivera, and everyone else who was involved for organizing this event. It was a great and very interesting (not to say anything about motivating) evening! It's great to feel part of a larger community!
+
+**Update 2021-01-29:** The recordings are now online on
+[YouTube](https://www.youtube.com/watch?v=FKXRU_KL9Io&list=PLNxyj7uDRuUv9ZNczgCY4m577MDIT2QMi)!
