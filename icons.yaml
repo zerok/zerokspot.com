@@ -61,3 +61,5 @@ icons:
     group: brands
   - icon: twitter
     group: brands
+  - icon: globe-stand
+    group: regular

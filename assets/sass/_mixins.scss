@@ -1,0 +1,28 @@
+@mixin listing-item {
+    padding: 5px;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    text-align: center;
+    border-bottom: 1px dotted #CCC;
+}
+
+
+@mixin table-listing($container) {
+    #{$container} {
+        margin: 18px 0;
+        border-collapse: collapse;
+        width: 100%;
+
+        tr:hover {
+            background: #EFEFEF;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        td, th {
+            @include listing-item;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>{{ $.Scratch.Set "isEvent" 1 }}
+<html lang="en">
+    {{ partial "head.html" $ }}
+    <body>
+        <div class="page page--single page--single-event">
+            {{ partial "header.html" $ }}
+            <div id="body">
+                <header>
+                    <h1>{{ .Title }}</h1>
+                </header>
+                {{ partial "event.html" . }}
+            </div>
+            {{ partial "footer.html" $ }}
+        </div>
+    </body>
+</html>
+
+

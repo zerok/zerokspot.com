@@ -1,0 +1,28 @@
+<article class="event h-entry">
+  <div class="event__meta entry-meta">
+    <p class="entry-meta__attributes"><i class="icon icon-clock"></i> This event took place on <b>{{ dateFormat "2006-01-02" .Date }}{{ if .Params.endDate }} - {{ dateFormat "2006-01-02" .Params.endDate }}{{ end }}</b></p>
+    {{ if .Params.location }}
+    {{ if (eq .Params.location "online") }}
+    <p class="entry-meta__attributes"><i class="icon icon-globe-stand"></i> {{ .Title }} was organized as an <b>online-event</b>.</p>
+    {{ else }}
+    <p class="entry-meta__attributes"><i class="icon icon-globe-stand"></i> {{ .Title }} took place at <b>{{ .Params.location }}</b>.</p>
+    {{ end }}
+    {{ end }}
+  </div>
+  {{ if .Content }}<div class="event__content e-content">{{ .Content }}</div>{{ end }}
+  <nav class="entry-nav">
+    <div class="entry-nav__prev">
+    {{ if .PrevInSection }}{{ with .PrevInSection }}
+    <a href="{{ .Permalink }}">Previous: <b>{{ .Title }}</b></a>
+    {{ end }}{{ else }}<span class="nav-entry__empty">No previous event</span>{{ end }}
+    </div>
+    <div class="entry-nav__up">
+      <a href="/events">Up: <b>All events</b></a>
+    </div>
+    <div class="entry-nav__next">
+    {{ if .NextInSection }}{{ with .NextInSection }}
+    <a href="{{ .Permalink }}">Next: <b>{{ .Title }}</b></a>
+    {{ end }}{{ else }}<span class="nav-entry__empty">No next event</span>{{ end }}
+    </div>
+  </nav>
+</article>

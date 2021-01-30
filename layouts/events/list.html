@@ -1,0 +1,39 @@
+<!DOCTYPE html>{{ $.Scratch.Set "isArchive" true }}
+<html lang="en">
+    {{ partial "head.html" . }}
+    <body>
+        <div class="page page--archive">
+            {{ partial "header.html" $ }}
+            <div id="body">
+              <h1>Events</h1>
+              <div class="page__intro">
+                <p>
+                  On this page I try to collect a list of all events
+                  (conferences, concerts, meetups) that I've attended
+                  and that ideally have some additional content like
+                  posts, photos, and notes attached.
+                </p>
+              </div>
+              <table class="events-listing">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Start</th>
+                    <th>End</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {{ range .Pages }}
+                <tr>
+                  <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+                  <td>{{ (dateFormat "2006-01-02" .Date ) }}</td>
+                  <td>{{ if .Params.endDate }}{{ (dateFormat "2006-01-02" .Params.endDate ) }}{{end}}</td>
+                </tr>
+                {{ end }}
+                </tbody>
+              </table>
+            </div>
+            {{ partial "footer.html" }}
+        </div>
+    </body>
+</html>

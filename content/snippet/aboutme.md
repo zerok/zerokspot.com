@@ -21,6 +21,8 @@ Outside of these two languages I'm also trying to get into [Rust][] right now
 and enjoy getting to know new technologies and helping out in the
 opensource/free software community whenever I get the chance.
 
+Oh, and I really love [attending conferences][conf] 😉
+
 [graz]: https://en.wikipedia.org/wiki/Graz
 [nc]: http://netconomy.net
 [hybris]: http://hybris.com/en/
@@ -32,3 +34,4 @@ opensource/free software community whenever I get the chance.
 [python]: https://www.python.org/
 [go]: https://golang.org/
 [rust]: https://www.rust-lang.org/en-US/
+[conf]: /events/

@@ -1,0 +1,9 @@
+@import "mixins";
+
+@include table-listing('.events-listing');
+
+.events-listing {
+    tr td:first-child {
+        text-align: left;
+    }
+}
