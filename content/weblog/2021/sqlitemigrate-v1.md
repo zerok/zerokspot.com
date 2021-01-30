@@ -6,6 +6,8 @@ tags:
 - library
 - sqlite
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105645672755483959
 ---
 
 During a [GoGraz](https://gograz.org) meetup somewhen in 2019 [Matthias](https://twitter.com/matthias_endler/) mentioned that SQLite had a pragma (basically an attribute of the database) called `user_version` which might be used for storing the “version” of a database. Could this perhaps be useful for a migration library to store at what version the database scheme was at?
