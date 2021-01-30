@@ -1,6 +1,7 @@
 ---
 title: This was WriteTheDocs Europe 2020 (online)
 date: "2020-10-22T19:28:01+02:00"
+event: 2020/writethedocs-prague
 tags:
 - writethedocs
 - conference

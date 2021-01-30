@@ -8,6 +8,7 @@ tags:
 - travel
 - belgium
 - community
+event: 2020/fosdem
 ---
 
 <figure>

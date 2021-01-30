@@ -7,6 +7,7 @@ tags:
 - conference
 - online
 - 100daystooffload
+event: 2020/jamstack-conf-virtual-event
 ---
 
 <figure><img src="/media/2020/Screenshot%202020-05-29%20at%2010.15.40.png"><figcaption>Screenshot of Jamstackconf.com/virtual</figcaption></figure>

@@ -10,6 +10,21 @@
     {{ end }}
   </div>
   {{ if .Content }}<div class="event__content e-content">{{ .Content }}</div>{{ end }}
+
+  <section>
+    <h2>Posts:</h2>
+    {{ $eventID := (printf "%s/%s" (dateFormat "2006" .Date) .File.ContentBaseName) }}
+    {{ $posts := where .Site.Pages "Params.event" $eventID }}
+    {{ if $posts }}
+    <ul class="page__listing--mini page__listing page__listing--noprefix">
+      {{ range $posts }}
+        {{ partial "pagelisting_entry.html" . }}
+      {{ end }}
+    </ul>
+    {{ else }}
+    <p class="empty">No posts about this event.</p>
+    {{ end }} 
+  </section>
   <nav class="entry-nav">
     <div class="entry-nav__prev">
     {{ if .PrevInSection }}{{ with .PrevInSection }}
