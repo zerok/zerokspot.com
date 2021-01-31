@@ -7,6 +7,8 @@ tags:
 - streaming
 - qos
 - customersupport
+incoming:
+- url: https://chaos.social/@zerok/105650192622701318
 ---
 
 Content-wise I really love Netflix. At least compared to Disney+, AppleTV+, and even Amazon Prime I’ve had a lot of fun with the exclusive content provided there. Sadly, not everything is that great with them, though.
