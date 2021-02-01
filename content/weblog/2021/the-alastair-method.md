@@ -8,6 +8,8 @@ tags:
 - futurelog
 - weeklylog
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105657601499532228
 ---
 
 A page type that is quite common among Bullet Journals is the weekly spread/weekly page/weekly log. Here, you lay out the week ahead usually in some kind of calendar-like view - with boxes, columns, or something similar. While this offers a nice presentation, it take a bit of time to setup and also might be rather restrictive to the number of items that might fit into a day while leaving lots of white-space on other days.
