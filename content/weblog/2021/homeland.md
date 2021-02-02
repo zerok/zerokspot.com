@@ -8,6 +8,8 @@ tags:
 - technothriller
 - "100daystooffload"
 rating: 4
+incoming:
+- url: https://chaos.social/@zerok/105662739212178776
 ---
 
 After finishing [“Little Brother” by Cory Doctorow](https://zerokspot.com/weblog/2021/01/08/little-brother/) at the end of my winter vacation I knew I wanted to also read its successor, [“Homeland”](https://craphound.com/category/homeland/), as soon as possible. I just needed a little break by ways of reading some non-fiction first 😉
