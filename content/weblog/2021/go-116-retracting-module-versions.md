@@ -5,6 +5,8 @@ tags:
 - releasemanagement
 - 100daystooffload
 date: "2021-02-03T19:00:00+01:00"
+incoming:
+- url: https://chaos.social/@zerok/105668658378606006
 ---
 
 Some time ago thanks to a blogpost (sorry, cannot remember anymore which one 😩) I stumbled upon another feature in Go 1.16 that I’m looking forward to: As a module author you can now mark releases as not being recommended for use. This is interesting for situations where you know that there was a really bad bug in a certain version or some security flaws in a whole range of releases up to a certain point.

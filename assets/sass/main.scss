@@ -713,3 +713,15 @@ time .age {
 @import "events";
 @import "darkmode";
 
+figure {
+    img {
+        max-height: 600px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+.figure-group {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+}
