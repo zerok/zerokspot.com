@@ -7,6 +7,9 @@ tags:
 - ios
 - overcast
 - castro
+incoming:
+- url: https://chaos.social/@zerok/105674150034706813
+- url: https://twitter.com/zerok/status/1357379974760693761
 ---
 
 For the last 5 years, [Overcast](https://overcast.fm/) has been on my iPhone as the one app that I did never consider switching away from. It just works for me. That being said, its feature set hasn’t really changed all that much since then. Sure, sharing has been improved and the support of chapters is more than just welcome, but these were the last big and visible new features. That being said, there are some less visible ones like the privacy screen that tells you about each podcast if they’re tracking you but at its core Overcast hasn’t changed much since 2015.
