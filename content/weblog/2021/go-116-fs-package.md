@@ -4,6 +4,9 @@ date: "2021-02-05T20:46:39+01:00"
 tags:
 - golang
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105680444344195025
+- url: https://twitter.com/zerok/status/1357781062588448770
 ---
 
 Embed isn’t the only new package that made it into [1.16](https://tip.golang.org/doc/go1.16). There’s now also `io/fs` which contains lots of functionality that was previously part of `io/ioutil` or something like [spf13/afero](https://github.com/spf13/afero): A general abstraction on top of file-system operations and navigation which is currently limited to read-operations.
