@@ -7,6 +7,9 @@ tags:
 - online
 - community
 - event
+incoming:
+- url: https://chaos.social/@zerok/105685783932978982
+- url: https://twitter.com/zerok/status/1358124449539772416
 ---
 
 Today was the first day of this year's [FOSDEM](https://fosdem.org/2021/). The advantage of it being online this time was that I didn't have to jump onto a completely packed tram to get there. I also managed to join every session I wanted to without being stuck in a line just to eventually see the "this room is full" sign.
