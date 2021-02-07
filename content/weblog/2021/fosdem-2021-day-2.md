@@ -6,6 +6,7 @@ tags:
 - event
 - conference
 - online
+- 100daystooffload
 ---
 
 Today was the second and last day of [FOSDEM 2021](https://fosdem.org/2021/) on which I, once again, spent a bit of time in the community track but also joined the Tool The Docs folks for some talks:
