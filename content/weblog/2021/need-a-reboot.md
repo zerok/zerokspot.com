@@ -6,6 +6,8 @@ tags:
 - monitoring
 - ops
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105696375241599438
 ---
 
 Over the weekend I wanted to improve my monitoring stack for my personal systems. One thing that I kept missing is when a server would needs a reboot due to an update. While there are options to also configure unattended reboots along unattended updates, I just wanted to get notified by Prometheus and then schedule the actual reboot manually.
