@@ -4,6 +4,8 @@ date: "2021-02-09T19:35:00+01:00"
 tags:
 - gitlab
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105702780814787748
 ---
 
 I'm working daily with [GitLab](https://gitlab.com) and absolutely love it. When it comes to all the different roles that a person can have around issues and merge requests, though, I sometimes get confused and so I thought I'd finally write them down so that even I can remember:
