@@ -5,6 +5,8 @@ inReplyTo: https://lazybear.io/posts/make-your-own-decision/
 tags:
 - socialmedia
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105708630140855651
 ---
 
 One of the big draws to platforms like Twitter is that they are supposedly great to discover new and interesting stuff to look into. Sadly, all the big players here also have commercial interests on their own and so try to influence their users regarding what content they should consume. Instagram, in particular, in the end became pretty much useless to me as every second image was actually an ad.
