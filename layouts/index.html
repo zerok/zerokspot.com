@@ -34,14 +34,15 @@
                     I might add the odd book review and other posts
                     from time to time.</p>
                 </div>
+                {{ $blogPosts := (where (where (where .Site.Pages "Section" "weblog") "IsPage" true) "IsDraft" false) }}
                 <div class="row row--first">
                     <section id="recent">
                         <ul class="page__listing--mini page__listing page__listing--noprefix">
-                        {{ range first 10 (where (where (where .Site.Pages "Section" "weblog") "IsPage" true) "IsDraft" false) }}
+                        {{ range first 10 $blogPosts }}
                         {{ partial "pagelisting_entry.html" . }}
                         {{ end }}
                         </ul>
-                        <a class="more" href="/archive/">more posts...</a>
+                        <a class="more" href="/archive/"><span>more posts…</span><span class="more__addon">({{ len $blogPosts }} in total)</span></a>
                     </section>
                 </div>
               </section>

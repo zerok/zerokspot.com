@@ -37,9 +37,19 @@
 }
 
 .more {
+    text-decoration: none;
     display: block;
     margin-top: 1rem;
     text-align: right;
+    line-height: 2.5rem;
+    span {
+        text-decoration: underline;
+    }
+    .more__addon {
+        text-decoration: none;
+        display: block;
+        font-size: 80%;
+    }
 }
 
 .row {
