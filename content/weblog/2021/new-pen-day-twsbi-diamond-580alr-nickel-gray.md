@@ -6,6 +6,9 @@ tags:
 - newpenday
 - twsbi
 - 100daystooffload
+incoming:
+- url: https://www.reddit.com/r/fountainpens/comments/lhq46l/finally_a_newpen_day_again_twsbi_diamond_580alr/
+- url: https://chaos.social/@zerok/105713877155599888
 ---
 
 When I first stumbled upon [TWSBI](https://www.twsbi.com/) thanks to various posts on [Reddit](https://www.reddit.com/r/fountainpens/) and the [Pen Addict podcast](https://www.relay.fm/penaddict) I was intrigued: most of their fountain pens have a transparent shell and use a piston ink-filling system which means I don’t have to resort to converters in order to use ink bottles. Especially their [ECO line](https://www.twsbi.com/collections/fountain-pens/products/twsbi-eco-black-fountain-pen) is also very affordable costing [only € 36.00 on Amazon](https://www.amazon.de/TWSBI-F%C3%BCllfederhalter-Demonstrator-Kolbenf%C3%BCller-Fountain/dp/B011M858FK/ref=sr_1_7?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=twsbi+eco&qid=1613062370&sr=8-7).
