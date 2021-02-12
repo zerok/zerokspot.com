@@ -6,6 +6,8 @@ tags:
 - covid19
 - feelings
 - venting
+incoming:
+- url: https://chaos.social/@zerok/105719732238219217
 ---
 
 I have no idea what is going on right now but over the course of the last two weeks I and everyone around me has been more and more on the edge. It seems like we are finally running out of patience; not with the measures against COVID-19 or the governments and politicians that work on those but simply the overall situation of isolation from friends and family. Yes, video calls are great, but I’m really missing those evenings where we could just sit around a table in a nice restaurant, drink some beer, eat some pizza together. 
