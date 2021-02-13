@@ -4,6 +4,8 @@ date: "2021-02-13T18:18:22+01:00"
 tags:
 - 100daystooffload
 - environment
+incoming:
+- url: https://chaos.social/@zerok/105725124751571023
 ---
 
 The more I look at my environment, the more I start to see things and initiatives that aim to push for recycling of as many resources as somehow possible. When we went for a Chai Latte into the city two weeks ago we noticed that a [well-known local coffee house chain](http://tribeka.at/tribeka/tribeka-start.html) was offering their goods not only in those one-way cups but also in closable glass jars that you could return at any of their locations.
