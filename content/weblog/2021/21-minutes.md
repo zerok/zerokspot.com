@@ -4,6 +4,8 @@ date: "2021-02-14T19:13:01+01:00"
 tags:
 - 100daystooffload
 - geotrace
+incoming:
+- url: https://chaos.social/@zerok/105730978794812860
 ---
 
 Originally, I wanted to spend some time today to get to know the [HAR file format](https://en.wikipedia.org/wiki/HAR_(file_format)) in detail and also implement a little library in Go for parsing it according to the spec. Before I got to that, though, we decided to get some fresh air and take a quick walk. Just before we went through the door, though, we noticed that we had forgotten to buy new cat litter and so the the walk turned into a small trip by bike down to the airport since the grocery store there has open also on Sundays. 
