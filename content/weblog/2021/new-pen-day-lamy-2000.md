@@ -6,6 +6,9 @@ tags:
 - fountainpens
 - lamy
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105736343654024935
+- url: https://www.reddit.com/r/fountainpens/comments/lig3ew/npd_again_nid_lamy_2000_ef_lamy_blueblack/
 ---
 
 OK, to be honest, that NPD actually happened last Friday but I simply didn’t have enough time to play around with the pen I got that day: A [Lamy 2000](https://www.lamy.com/en/lamy-2000/) in black with an EF nib!
