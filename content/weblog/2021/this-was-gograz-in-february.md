@@ -8,6 +8,8 @@ tags:
 - graz
 - meetup
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105742044579533650
 ---
 
 [Last night](https://gograz.org/meetup/2021-02-15/) we had our first (own) Go meetup for the community in Graz in 2021! 12 people had signed up and of these, 8 actually showed up 🥳 Since this was a slight reboot of the meetup after the holidays and some lack of energy during the first months of the pandemic I wanted to start this year off with a small talk about some of the nice new features of Go 1.16. That talk was basically a condensed version of these blog posts I wrote over the course of the last weeks:
