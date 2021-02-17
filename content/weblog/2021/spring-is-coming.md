@@ -3,6 +3,8 @@ title: Spring is coming
 date: "2021-02-17T19:32:00+01:00"
 tags:
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105748358771598672
 ---
 
 Today, after work, we made a small bike tour to the city in order to take a quick walk through the [Stadtpark](https://de.wikipedia.org/wiki/Grazer_Stadtpark) (the largest park of Graz).  We weren’t the only ones with that idea as we saw quite a few families with small children using the relatively open spaces available for their kids to play and enjoy some fresh air.
