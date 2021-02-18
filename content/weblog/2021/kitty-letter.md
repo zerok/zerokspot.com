@@ -8,6 +8,8 @@ tags:
 - oatmeal
 - 100daystooffload
 rating: 4
+incoming:
+- url: https://chaos.social/@zerok/105754042996244048
 ---
 
 So, [Matthew Inman](https://theoatmeal.com/) has a new game out and it’s called [Kitty Letter](https://theoatmeal.com/blog/free_game). If you’ve played Clash Royale before and are into word-puzzles, this one is for you. I have dumped quite a bit of time into [Dear Reader](https://www.dearreadergame.com/) (a word-game on Apple Arcade) and immediate fell for it.
