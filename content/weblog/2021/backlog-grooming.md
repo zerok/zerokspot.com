@@ -5,6 +5,8 @@ tags:
 - backlogs
 - lifestyle
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105760303232175746
 ---
 
 In SCRUM  and other agile methodologies you sometimes come across something called “backlog grooming”. That's a regular meeting where you make your way through all the tasks that are in your backlog in order to clarify open questions, update information, or just remove them altogether if they are no longer relevant.
