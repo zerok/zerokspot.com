@@ -6,6 +6,11 @@ tags:
 - personal
 - datawarehouse
 - pim
+- datasette
+- sqlite
+- postgresql
+incoming:
+- url: https://chaos.social/@zerok/105765244084150353
 ---
 
 A couple of months ago, [Simon Willison posted a talk](https://simonwillison.net/2020/Nov/14/personal-data-warehouses/) he gave about building a personal data warehouse based on all the data that can be exported from the various services we are using or that are simply out there. Sadly, I only read it today but it was very inspirational!
