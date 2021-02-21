@@ -126,12 +126,16 @@ var buildGraphCmd = &cobra.Command{
 		for _, id := range allContentIDs {
 			bg.WalkDown(id, "inspired", 0, func(g *bloggraph.Graph, node *bloggraph.Node, degree int) {
 				m := mapping[id]
-				m.Down = append(m.Down, PostPathElement{Title: node.Title, ContentID: node.ContentID, Degree: degree})
+				if !containsContentID(m.Down, node.ContentID) {
+					m.Down = append(m.Down, PostPathElement{Title: node.Title, ContentID: node.ContentID, Degree: degree})
+				}
 				mapping[id] = m
 			})
 			bg.WalkUp(id, "inspired", 0, func(g *bloggraph.Graph, node *bloggraph.Node, degree int) {
 				m := mapping[id]
-				m.Up = append(m.Up, PostPathElement{Title: node.Title, ContentID: node.ContentID, Degree: degree})
+				if !containsContentID(m.Up, node.ContentID) {
+					m.Up = append(m.Up, PostPathElement{Title: node.Title, ContentID: node.ContentID, Degree: degree})
+				}
 				mapping[id] = m
 			})
 		}
@@ -141,6 +145,15 @@ var buildGraphCmd = &cobra.Command{
 		}
 		return ioutil.WriteFile(filepath.Join("data", "postpaths.json"), data, 0600)
 	},
+}
+
+func containsContentID(haystack []PostPathElement, needle string) bool {
+	for _, u := range haystack {
+		if u.ContentID == needle {
+			return true
+		}
+	}
+	return false
 }
 
 func findParents(ctx context.Context, path string) ([]string, error) {

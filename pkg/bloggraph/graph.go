@@ -56,6 +56,11 @@ func (g *Graph) GetOrCreateNode(n Node) *Node {
 }
 
 func (g *Graph) CreateEdge(source *Node, target *Node, kind string) *Edge {
+	for _, e := range g.edges {
+		if e.Kind == kind && e.Source == source && e.Target == target {
+			return e
+		}
+	}
 	e := Edge{
 		Source: source,
 		Target: target,
