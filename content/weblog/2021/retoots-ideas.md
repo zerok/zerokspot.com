@@ -5,6 +5,8 @@ tags:
 - mastodon
 - retoots
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105776615039607886
 ---
 
 Today, I finally found the couple of minutes to integrate [retoots][] into
