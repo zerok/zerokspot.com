@@ -7,6 +7,8 @@ tags:
 - gobridge
 - meetup
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105782445237993155
 ---
 
 After their [awesome event in January](https://zerokspot.com/weblog/2021/01/28/my-first-gdn-event/), GoBridge is hosting another evening full of Go-talks as part of the GDN on [2021-03-17 (Wednesday)](https://www.meetup.com/gobridge/events/276379278/) starting at 10:00 PDT / 18:00 Europe/Vienna. At this point the schedule contains 6 talks:
