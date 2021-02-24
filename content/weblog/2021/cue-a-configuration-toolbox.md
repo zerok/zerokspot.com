@@ -6,6 +6,8 @@ tags:
 - configuration
 - opensource
 - validation
+incoming:
+- url: https://chaos.social/@zerok/105788241669271030
 ---
 
 While making my way through my podcast backlog I listened to [Go Time #163](https://changelog.com/gotime/163) today which was about a project I hadn’t heard of before: [CUE](https://cuelang.org/).
