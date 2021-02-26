@@ -5,6 +5,8 @@ tags:
 - 100daystooffload
 - movies
 - memories
+incoming:
+- url: https://chaos.social/@zerok/105799236242733553
 ---
 
 Sometimes you just have to rewatch a movie in order to appreciate it. A couple of years ago I had watched [Netflix’ Spectral](https://en.wikipedia.org/wiki/Spectral) and have felt it to be quite underwhelming. Today I saw it again and to my surprise quite enjoyed it. I cannot really explain it but I remembered a totally different ending, as if it had been completely recut since then.
