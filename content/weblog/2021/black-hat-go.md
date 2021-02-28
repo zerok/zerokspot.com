@@ -8,6 +8,8 @@ tags:
 - review
 - security
 rating: 4
+incoming:
+- url: https://chaos.social/@zerok/105809833447558843
 ---
 
 It took me a month but this morning I finally made my way through [Black Hat Go](https://nostarch.com/blackhatgo) by Tom Steele, Chris Patten, and Dan Kottmann. Let this long time not be any indication on the quality of the writing, though! I quite enjoyed the writing style and also the content but I was simply not the target audience as I’m a software developer with an interest in security while the book is probably mostly aimed at security professionals you might want to use Go to implement parts of the toolbox.
