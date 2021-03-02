@@ -3,8 +3,6 @@ date: '2004-06-18T12:00:00-00:00'
 language: en
 tags:
 - ruby
-- web
-- website
 title: ruby-lang.org back online
 ---
 

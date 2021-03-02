@@ -2,10 +2,8 @@
 date: 2016-10-09T19:37:59+02:00
 title: The Dispatcher
 tags:
-- book
+- books
 - review
-- audiobook
-- audible
 - scifi
 ---
 

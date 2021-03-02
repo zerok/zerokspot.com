@@ -2,10 +2,9 @@
 title: "The Girl with All the Gifts"
 date: 2018-01-21T11:02:19+01:00
 tags:
-- book
+- books
 - review
-- audiobook
-- audible
+- scifi
 ---
 
 As I wrote a couple of days ago in my little retrospective of 2017 I got an

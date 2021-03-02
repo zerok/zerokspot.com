@@ -2,9 +2,8 @@
 date: '2012-11-25T12:00:00-00:00'
 language: en
 tags:
-- adn
-- bookclub
-- book
+- adnbookclub
+- books
 - review
 title: Those Across the River
 ---

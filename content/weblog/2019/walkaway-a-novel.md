@@ -2,7 +2,8 @@
 title: "Walkaway: A novel"
 date: 2019-02-06T09:40:45+01:00
 tags:
-- book
+- books
+- scifi
 ---
 
 A couple of months ago I listened to an [interview with Cory

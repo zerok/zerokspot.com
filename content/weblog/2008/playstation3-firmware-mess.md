@@ -2,11 +2,8 @@
 date: '2008-07-05T12:00:00-00:00'
 language: en
 tags:
-- '2.40'
-- firmware
-- mess
-- playstation3
-- sony
+- playstation
+- gaming
 title: Playstation3 Firmware Mess
 ---
 

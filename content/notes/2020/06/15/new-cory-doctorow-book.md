@@ -2,9 +2,7 @@
 title: "New Cory Doctorow book"
 date: "2020-06-15T18:50:12+0200"
 tags:
-- littlebrother
-- book
-- doctorow
+- books
 - scifi
 ---
 

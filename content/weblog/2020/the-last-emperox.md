@@ -4,7 +4,7 @@ date: "2020-05-11T08:49:33+0200"
 tags:
 - scifi
 - 100daystooffload
-- book
+- books
 - review
 ---
 

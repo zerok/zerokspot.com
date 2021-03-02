@@ -2,8 +2,9 @@
 title: "“The Rook” by Daniel O’Malley"
 date: 2019-07-15T21:14:20+02:00
 tags:
-- book
+- books
 - review
+- alternative-reality
 ---
 
 I thought it was time, after many months, to once again write a little book review. I’ve had [“The Rook” by Daniel O’Malley](https://en.wikipedia.org/wiki/The_Rook_(novel)) on my reading-list for quite some time and thought it might be a relaxing read during my trip to Mallorca this summer. Turns out that it was the *perfect* book for that occasion!

@@ -2,8 +2,7 @@
 date: '2008-01-11T12:00:00-00:00'
 language: en
 tags:
-- commandshift3
-- website
+- webdesign
 title: CommandShift3
 ---
 

@@ -2,9 +2,8 @@
 date: '2013-01-13T21:55:20+01:00'
 language: en
 tags:
-- book
-- peterdavid
-- vampires
+- books
+- fantasy
 title: Pulling up stakes
 ---
 

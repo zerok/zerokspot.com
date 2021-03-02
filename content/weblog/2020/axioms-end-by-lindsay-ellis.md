@@ -3,7 +3,7 @@ title: Axiom’s End by Lindsay Ellis
 date: "2020-08-19T15:19:01+02:00"
 rating: 3
 tags:
-- book
+- books
 - review
 - scifi
 ---

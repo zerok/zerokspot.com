@@ -3,11 +3,10 @@ date: '2009-09-02T12:00:00-00:00'
 language: en
 rating: 3
 tags:
-- book
-- ds9
-- mirroruniverse
+- books
 - review
 - startrek
+- scifi
 title: 'Star Trek: DS9 - The Soul Key'
 ---
 

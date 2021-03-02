@@ -2,9 +2,7 @@
 date: '2008-09-27T12:00:00-00:00'
 language: en
 tags:
-- drm
 - music
-- walmart
 title: DRM-fear slowly becoming mainstream?
 ---
 

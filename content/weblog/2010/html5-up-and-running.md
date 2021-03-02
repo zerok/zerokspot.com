@@ -3,9 +3,8 @@ date: '2010-11-21T12:00:00-00:00'
 language: en
 rating: 3
 tags:
-- book
+- books
 - review
-- html5
 title: 'HTML5: Up and Running by Mark Pilgrim'
 ---
 

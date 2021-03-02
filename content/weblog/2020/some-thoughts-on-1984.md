@@ -4,8 +4,7 @@ date: "2020-09-09T17:20:56+02:00"
 rating: 4
 tags:
 - reading
-- book
-- classics
+- books
 ---
 
 After all these years I finally put [1984](https://en.wikipedia.org/wiki/Nineteen_Eighty-Four) on my to-read list and about three weeks ago it finally made it to its top. With totalitarian movements being on the rise and more and more authors referencing George Orwell’s famous book I simply wanted to finally get to know the source material.

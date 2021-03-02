@@ -2,10 +2,9 @@
 title: Wanderers by Chuck Wendig
 date: "2020-06-26T08:03:51+02:00"
 tags:
-- book
+- books
 - review
 - scifi
-- chuckwendig
 - 100daystooffload
 rating: 5
 ---

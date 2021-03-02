@@ -2,8 +2,8 @@
 date: '2006-06-15T12:00:00-00:00'
 language: en
 tags:
-- '23'
-- flickr
+- photography
+- online-service
 - google
 title: Google launches PicasaWeb
 ---

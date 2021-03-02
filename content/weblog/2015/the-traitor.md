@@ -2,11 +2,9 @@
 date: '2015-10-26T19:38:41+01:00'
 language: en
 tags:
-- book
+- books
 - review
-- swordandlaser
-- bookclub
-- assignment
+- swordandlaser-bookclub
 title: The Traitor
 ---
 

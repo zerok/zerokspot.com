@@ -2,10 +2,7 @@
 date: '2009-01-08T12:00:00-00:00'
 language: en
 tags:
-- 1up
-- 1upexodus
-- ugo
-- ziffdavis
+- gaming
 title: Farewell, 1UP.com crew
 ---
 

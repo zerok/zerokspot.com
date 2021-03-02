@@ -4,9 +4,10 @@ date: "2020-07-30T21:30:13+02:00"
 rating: 4
 tags:
 - 100daystooffload
-- book
+- books
 - review
-- uspol
+- usa
+- politics
 ---
 
 Yesterday I finally made it through John Bolton’s book “The room where it happened” and I thought I should at least write a very brief review about the style and structure instead of the content.

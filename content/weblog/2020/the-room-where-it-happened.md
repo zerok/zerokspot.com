@@ -2,9 +2,10 @@
 title: The room where it happened
 date: "2020-07-25T16:03:25+02:00"
 tags:
-- book
+- books
 - firstlook
-- uspol
+- usa
+- politics
 - 100daystooffload
 ---
 

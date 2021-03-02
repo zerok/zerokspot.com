@@ -2,9 +2,7 @@
 date: '2015-07-09T19:40:56+02:00'
 language: en
 tags:
-- gb
 - golang
-- wgo
 title: Workspacing in Go with gb and wgo
 ---
 

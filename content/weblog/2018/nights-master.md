@@ -2,9 +2,10 @@
 title: "Night's Master"
 date: 2018-06-13T17:01:24+02:00
 tags:
-- book
+- books
 - review
-- swordandlaser
+- swordandlaser-bookclub
+- fantasy
 ---
 
 I totally forgot to write about last month’s Sword & Laser assignment [Night’s

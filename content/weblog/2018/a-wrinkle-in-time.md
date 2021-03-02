@@ -2,9 +2,10 @@
 title: "A Wrinkle in Time"
 date: 2018-02-10T21:43:51+01:00
 tags:
-- book
+- books
+- scifi
 - review
-- swordandlaser
+- swordandlaser-bookclub
 ---
 
 If you’re wondering why I’m already writing about the February assignment of

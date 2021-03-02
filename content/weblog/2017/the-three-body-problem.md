@@ -2,9 +2,9 @@
 date: 2017-01-08T10:47:15+01:00
 title: The Three-Body Problem
 tags:
-- book
+- books
 - review
-- swordandlaser
+- swordandlaser-bookclub
 ---
 
 <a style="float:left;margin:0 1em 0 0;border:2px solid #CCC;padding:3px;display:block"

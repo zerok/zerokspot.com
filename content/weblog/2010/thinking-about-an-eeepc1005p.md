@@ -2,9 +2,7 @@
 date: '2010-01-26T12:00:00-00:00'
 language: en
 tags:
-- 1005p
-- asus
-- eeepc
+- hardware
 title: So thinking about an EeePC 1005P
 ---
 

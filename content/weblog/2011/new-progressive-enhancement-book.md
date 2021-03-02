@@ -2,9 +2,8 @@
 date: '2011-06-03T12:00:00-00:00'
 language: en
 tags:
-- book
+- books
 - webdesign
-- progressiveenhancement
 title: New Book about Progressive Enhancement
 ---
 

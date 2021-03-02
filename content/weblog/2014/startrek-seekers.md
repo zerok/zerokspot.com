@@ -3,8 +3,9 @@ date: '2014-11-08T12:37:26+01:00'
 language: en
 tags:
 - startrek
-- book
+- books
 - scifi
+- review
 title: 'Star Trek: Seekers'
 ---
 

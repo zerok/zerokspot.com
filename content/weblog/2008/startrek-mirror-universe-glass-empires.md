@@ -3,8 +3,8 @@ date: '2008-06-28T12:00:00-00:00'
 language: en
 rating: 4
 tags:
-- book
-- mirroruniverse
+- books
+- scifi
 - review
 - startrek
 title: 'Star Trek: Mirror Universe - Glass Empires'

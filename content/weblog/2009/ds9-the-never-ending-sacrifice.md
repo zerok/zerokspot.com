@@ -3,10 +3,10 @@ date: '2009-10-22T12:00:00-00:00'
 language: en
 rating: 5
 tags:
-- book
-- ds9
+- books
 - review
 - startrek
+- scifi
 title: 'Deep Space Nine: The Never-Ending Sacrifice'
 ---
 

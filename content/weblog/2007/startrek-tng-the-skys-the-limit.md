@@ -3,10 +3,9 @@ date: '2007-12-02T12:00:00-00:00'
 language: en
 rating: 5
 tags:
-- book
+- books
 - review
 - startrek
-- tng
 title: 'Star Trek: TNG: The Sky''s the Limit'
 ---
 

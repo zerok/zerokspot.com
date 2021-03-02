@@ -2,8 +2,9 @@
 date: '2008-01-02T12:00:00-00:00'
 language: en
 tags:
-- book
-- gearsofwar
+- books
+- gaming
+- scifi
 title: Gears of War Prequel as Book
 ---
 

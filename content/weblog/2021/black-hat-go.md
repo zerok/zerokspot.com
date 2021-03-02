@@ -4,7 +4,7 @@ date: "2021-02-28T15:19:43+01:00"
 tags:
 - golang
 - 100daystooffload
-- book
+- books
 - review
 - security
 rating: 4

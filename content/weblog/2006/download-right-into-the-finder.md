@@ -3,22 +3,12 @@ date: '2006-11-05T12:00:00-00:00'
 language: en
 tags:
 - applescript
-- finder
-- mac
-- macosx
-- scripts
-- wget
+- macos
 title: Download right into the Finder
 ---
 
 
 Well, no real story behind this. The motivation just came from the need to combine downloading [dl.tv](http://dl.tv) episodes and drag'n dropping them from Finder to [Disco](http://www.discoapp.com) ;-) ). So I wrote a little script that would download me a file right into the current folder in the front most Finder window. 
-
-
-
--------------------------------
-
-
 
 <pre class="code applescript">
 on do_download(dl_file, dl_folder)

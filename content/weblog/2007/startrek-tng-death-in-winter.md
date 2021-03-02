@@ -3,8 +3,8 @@ date: '2007-12-20T12:00:00-00:00'
 language: en
 rating: 3
 tags:
-- book
-- death-in-winter
+- books
+- scifi
 - review
 - startrek
 title: 'Star Trek TNG: Death in Winter'

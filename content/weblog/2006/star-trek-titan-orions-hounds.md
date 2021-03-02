@@ -3,7 +3,6 @@ date: '2006-01-21T12:00:00-00:00'
 language: en
 rating: 4
 tags:
-- book
 - books
 - review
 title: 'Star Trek: Titan - Orion''s Hounds'

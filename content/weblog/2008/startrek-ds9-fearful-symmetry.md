@@ -3,10 +3,10 @@ date: '2008-07-17T12:00:00-00:00'
 language: en
 rating: 3
 tags:
-- book
-- ds9
+- books
 - review
 - startrek
+- scifi
 title: ' Star Trek: Deep Space Nine - Fearful Symmetry'
 ---
 

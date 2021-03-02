@@ -3,10 +3,9 @@ date: '2010-06-02T12:00:00-00:00'
 language: en
 rating: 4
 tags:
-- book
+- books
 - review
 - vim
-- packtpub
 title: 'Book review: Hacking Vim 7.2'
 ---
 

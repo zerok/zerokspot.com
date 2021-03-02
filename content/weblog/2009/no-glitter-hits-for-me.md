@@ -2,11 +2,7 @@
 date: '2009-04-03T12:00:00-00:00'
 language: en
 tags:
-- glitterhits
-- h2omusic
 - music
-- sonybmg
-- thestyles
 title: No Glitter Hits for me
 ---
 

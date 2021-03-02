@@ -2,12 +2,8 @@
 date: '2006-08-08T12:00:00-00:00'
 language: en
 tags:
-- '23'
-- flickr
-- photos
-- web2-0
-- webapps
-- yourep
+- online-service
+- photography
 title: YouREP.com - A first look
 ---
 
@@ -15,10 +11,6 @@ title: YouREP.com - A first look
 Florian Cervenka from [yourep.com](http://www.yourep.com) contacted me a couple of days ago and informed me about his new Flickr alternative. Since it is still in Alpha state or just getting Beta, it's really hard to compare it to long standing sites like Flickr or 23, so ... I simply will try not to compare them at all but but instead state what I like so far about yourep.com and what I don't like (sorry Florian, but you asked for that ;)). 
 
 **Note:** These comments are made after just browsing the page as a guest, so what I'm writing here might be incorrect. The time has come for me to stop registering at every Web2.0 app that might be interesting ;) I simply grew tired of scanning each TOS and privacy guidelines for the world "soul".
-
--------------------------------
-
-
 
 * yourep seems to offer basically all the features you'd expect: Tags, different licenses, some basic permission system, notes, comments, etc.
 * Accounts get a 2.0GB storage limit instead of going the Flickr way of inflicting an upload limitation per month for the pro accounts.

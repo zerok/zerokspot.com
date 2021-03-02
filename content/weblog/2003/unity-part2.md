@@ -2,11 +2,9 @@
 date: '2003-11-30T12:00:00-00:00'
 language: en
 tags:
-- 1080-avalanche
 - books
 - gaming
 - startrek
-- unity
 - zerokspot
 title: Unity (Part 2)
 ---

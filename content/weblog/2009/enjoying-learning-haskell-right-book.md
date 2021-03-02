@@ -2,9 +2,8 @@
 date: '2009-03-13T12:00:00-00:00'
 language: en
 tags:
-- book
+- books
 - haskell
-- realworldhaskell
 title: Enjoying learning Haskell with the right book
 ---
 

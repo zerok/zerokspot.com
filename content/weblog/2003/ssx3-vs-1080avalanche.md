@@ -2,10 +2,7 @@
 date: '2003-11-28T12:00:00-00:00'
 language: en
 tags:
-- 1080-avalanche
 - gaming
-- ssx3
-- ps2
 title: SSX3 vs. 1080 Avalanche
 ---
 

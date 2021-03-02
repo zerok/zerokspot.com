@@ -5,9 +5,8 @@ item:
 language: en
 rating: 4
 tags:
-- artofcommunity
 - review
-- book
+- books
 title: The Art of Community
 ---
 

@@ -3,8 +3,7 @@ date: '2010-06-20T12:00:00-00:00'
 language: en
 rating: 5
 tags:
-- solr
-- book
+- books
 - review
 title: Solr 1.4 Enterprise Search Server
 ---

@@ -2,8 +2,9 @@
 date: 2017-06-18T17:25:42+02:00
 title: The Last Machine in the Solar System
 tags:
-- book
+- books
 - review
+- scifi
 ---
 
 While working my way through my podcast backlog I stumbled upon

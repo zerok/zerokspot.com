@@ -2,7 +2,7 @@
 date: '2006-09-30T12:00:00-00:00'
 language: en
 tags:
-- blogtalk
+- conference
 - python
 - ruby
 - vienna
@@ -24,20 +24,21 @@ Well, after 10 minutes of installing ZODB and Zope I wanted to give it a try to 
 
 Just a small break to who you how bored I was \*g\*
 
-<code><pre>#!/usr/bin/env python
+```
+#!/usr/bin/env python
 class RubyArray:
-	def \_\_init\_\_(self):
+	def __init__(self):
 		self.data = []
-	def \_\_lshift\_\_(self,data):
+	def __lshift__(self,data):
 		self.data.append(data)
 		return self
-	def \_\_str\_\_(self):
+	def __str__(self):
 		return str(self.data)
-	def \_\_getattr\_\_(self,attr):
+	def __getattr__(self,attr):
 		getattr(self.data,attr)
 
-if \_\_name\_\_ == &apos;\_\_main\_\_&apos;:
+if __name__ == "__main__":
 	a = RubyArray()
-	a &lt;&lt; 1 &lt;&lt; 2
+	a << 1 << 2
 	print str(a) # [1, 2]
-</pre></code>
+```

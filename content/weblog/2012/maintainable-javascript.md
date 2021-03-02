@@ -3,7 +3,7 @@ date: '2012-05-17T12:00:00-00:00'
 language: en
 rating: 4
 tags:
-- book
+- books
 - review
 - javascript
 title: Maintainable JavaScript

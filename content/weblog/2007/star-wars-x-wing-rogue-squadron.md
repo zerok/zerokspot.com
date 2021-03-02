@@ -5,10 +5,8 @@ rating: 4
 tags:
 - books
 - review
-- roguesquadron
-- stackpole
 - starwars
-- xwing
+- scifi
 title: 'Star Wars: X-Wing - Rogue Squadron'
 ---
 

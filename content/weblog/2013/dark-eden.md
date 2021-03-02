@@ -4,9 +4,9 @@ language: en
 rating: 4
 tags:
 - adnbookclub
-- bookclubsep13
-- book
+- books
 - review
+- scifi
 title: Dark Eden
 ---
 

@@ -2,7 +2,6 @@
 date: '2006-09-19T12:00:00-00:00'
 language: en
 tags:
-- 2-5
 - python
 title: My favlist of Python2.5 features
 ---

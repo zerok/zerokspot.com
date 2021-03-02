@@ -2,9 +2,8 @@
 title: "\"The end of everything\" by Katie Mack"
 date: "2021-01-17T15:00:00+02:00"
 tags:
-- book
+- books
 - review
-- cosmology
 - 100daystooffload
 incoming:
 - url: https://chaos.social/@zerok/105571577109921255

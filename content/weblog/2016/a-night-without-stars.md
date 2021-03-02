@@ -3,8 +3,7 @@ date: 2016-12-08T17:26:37+01:00
 title: A Night Without Stars
 tags:
 - scifi
-- commonwealth
-- book
+- books
 - review
 ---
 

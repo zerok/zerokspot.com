@@ -3,10 +3,10 @@ date: '2009-03-28T12:00:00-00:00'
 language: en
 rating: 4
 tags:
-- book
+- books
 - review
 - startrek
-- titan
+- scifi
 title: 'Star Trek: Titan - Over a Torrent Sea'
 ---
 

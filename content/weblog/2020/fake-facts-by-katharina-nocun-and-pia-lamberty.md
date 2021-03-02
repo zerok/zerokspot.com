@@ -3,9 +3,8 @@ title: 'Fake Facts by Katharina Nocun & Pia Lamberty '
 date: "2020-07-06T09:37:49+02:00"
 tags:
 - review
-- book
+- books
 - 100daystooffload
-- conspiracytales
 rating: 5
 ---
 

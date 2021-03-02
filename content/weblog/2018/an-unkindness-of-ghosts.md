@@ -2,8 +2,9 @@
 title: "An Unkindness of Ghosts"
 date: 2018-03-03T10:29:08+01:00
 tags:
-- swordandlaser
-- book
+- swordandlaser-bookclub
+- books
+- scifi
 - review
 ---
 

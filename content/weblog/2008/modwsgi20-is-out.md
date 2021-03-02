@@ -2,10 +2,7 @@
 date: '2008-03-21T12:00:00-00:00'
 language: en
 tags:
-- apache
-- mod_wsgi
 - python
-- wsgi
 title: mod_wsgi 2.0 is out
 ---
 

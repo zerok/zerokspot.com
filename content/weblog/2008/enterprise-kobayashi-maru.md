@@ -3,9 +3,8 @@ date: '2008-11-02T12:00:00-00:00'
 language: en
 rating: 3
 tags:
-- book
-- enterprise
-- kobayashimaru
+- books
+- scifi
 - review
 - startrek
 title: 'Enterprise: Kobayashi Maru'

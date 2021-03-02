@@ -2,10 +2,9 @@
 date: '2015-09-02T15:56:26+02:00'
 language: en
 tags:
-- swordandlaser
-- bookclub
+- swordandlaser-bookclub
 - review
-- book
+- books
 title: A Canticle for Leibowitz
 ---
 

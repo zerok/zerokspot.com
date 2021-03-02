@@ -3,11 +3,9 @@ date: '2007-03-06T12:00:00-00:00'
 language: en
 rating: 5
 tags:
-- adeepnessinthesky
 - books
 - review
 - scifi
-- vernorvinge
 title: A Deepness in the Sky
 ---
 

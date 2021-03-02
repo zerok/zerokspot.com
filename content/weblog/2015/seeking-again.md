@@ -4,8 +4,9 @@ language: en
 rating: 4
 tags:
 - startrek
-- book
+- books
 - review
+- scifi
 title: 'Star Trek: Seekers again'
 ---
 

@@ -2,7 +2,8 @@
 date: '2005-09-13T12:00:00-00:00'
 language: en
 tags:
-- '23'
+- online-service
+- photography
 title: 23hq.com - A Flickr alternative?
 ---
 

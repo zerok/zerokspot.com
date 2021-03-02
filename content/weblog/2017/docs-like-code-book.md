@@ -2,8 +2,9 @@
 date: 2017-05-19T20:14:05-07:00
 title: "Docs Like Code: The book: A review"
 tags:
-- book
+- books
 - review
+- documentation
 ---
 
 Docs-like-code is a relatively new term, but the idea behind it has been

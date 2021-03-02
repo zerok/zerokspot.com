@@ -2,9 +2,7 @@
 date: '2004-10-21T12:00:00-00:00'
 language: en
 tags:
-- book
-- web
-- xml
+- books
 title: Eric von der Vlist's "XML Schema"
 ---
 

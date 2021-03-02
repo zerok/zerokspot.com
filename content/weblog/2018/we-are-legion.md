@@ -2,8 +2,9 @@
 title: "We Are Legion (We Are Bob)"
 date: 2018-04-22T12:29:15+02:00
 tags:
-- swordandlaser
-- book
+- swordandlaser-bookclub
+- books
+- scifi
 - review
 ---
 

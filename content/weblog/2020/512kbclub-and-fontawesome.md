@@ -2,11 +2,9 @@
 title: 512KB club and FontAwesome
 date: "2020-11-29T18:38:31+01:00"
 tags:
-- website
+- zerokspot
 - performance
 - challenge
-- 512kbclub
-- fontawesome
 ---
 
 Yesterday I had a bit of fun trying to make my website here pass the rules for the [512KB club](https://512kb.club/). For those of you who don’t know that, it’s basically a challenge to get the size of your website below 512 KB. I’ve known for a very long time that my use of FontAwesome was a big issue here, coming in at around 1.5MB.

@@ -3,9 +3,10 @@ date: '2008-01-14T12:00:00-00:00'
 language: en
 rating: 4
 tags:
-- book
+- books
 - review
 - startrek
+- scifi
 title: 'Star Trek TNG: Q & A'
 ---
 

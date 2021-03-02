@@ -3,11 +3,10 @@ date: '2007-09-22T12:00:00-00:00'
 language: en
 rating: 3
 tags:
-- book
-- exiles
+- books
 - review
 - startrek
-- vulcanssoul
+- scifi
 title: 'Star Trek: Vulcan''s Soul II - Exiles'
 ---
 

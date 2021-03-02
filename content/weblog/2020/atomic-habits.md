@@ -2,10 +2,9 @@
 title: Atomic Habits
 date: "2020-08-24T09:51:51+02:00"
 tags:
-- book
+- books
 - review
 - productivity
-- atomichabits
 - habits
 rating: 5
 ---

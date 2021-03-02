@@ -2,10 +2,9 @@
 title: "Homeland by Cory Doctorow"
 date: "2021-02-02T17:00:00+01:00"
 tags:
-- book
+- books
 - review
 - scifi
-- technothriller
 - "100daystooffload"
 rating: 4
 incoming:

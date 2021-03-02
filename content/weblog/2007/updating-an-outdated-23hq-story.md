@@ -2,8 +2,8 @@
 date: '2007-07-30T12:00:00-00:00'
 language: en
 tags:
-- '23'
-- photosharing
+- photography
+- online-service
 title: Updating an outdated 23hq story ...
 ---
 

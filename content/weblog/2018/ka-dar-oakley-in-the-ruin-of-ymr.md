@@ -2,8 +2,9 @@
 title: "Ka: Dar Oakley in the Ruin of Ymr"
 date: 2018-12-30T23:00:00+01:00
 tags:
-- swordandlaser 
-- book
+- swordandlaser-bookclub
+- books
+- review
 ---
 
 As the last Sword & Laser assignment of the year I read [“Ka: Dar Oakley in the Ruin of Ymr”](https://www.goodreads.com/book/show/34466930) by John Crowley in which the reader gets to know the world from the point of view of a crow. 

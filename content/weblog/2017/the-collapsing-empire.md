@@ -2,7 +2,7 @@
 date: 2017-04-15T11:46:05+02:00
 title: The Collapsing Empire
 tags:
-- book
+- books
 - review
 - scifi
 ---

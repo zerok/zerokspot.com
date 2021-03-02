@@ -2,7 +2,7 @@
 title: "S./Ship of Theseus"
 date: "2020-03-03T20:20:53+0100"
 tags:
-- book
+- books
 - review
 ---
 

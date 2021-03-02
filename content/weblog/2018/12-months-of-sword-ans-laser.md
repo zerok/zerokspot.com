@@ -2,8 +2,8 @@
 title: "12 months of Sword & Laser"
 date: 2018-12-21T16:01:51+01:00
 tags:
-- book
-- swordandlaser
+- books
+- swordandlaser-bookclub
 ---
 
 This year I tried to read all the book assignments of the [Sword & Laser](http://swordandlaser.com/) book-club in order to dive into worlds that I otherwise never would have discovered. The 12 books of 2019 where the following:

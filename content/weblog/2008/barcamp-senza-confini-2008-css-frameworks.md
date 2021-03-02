@@ -2,15 +2,10 @@
 date: '2008-02-03T12:00:00-00:00'
 language: en
 tags:
+- conference
 - barcamp
-- barcampsenzaconfini
-- blueprint
 - css
-- framework
-- grid
 - klagenfurt
-- yaml
-- yui
 title: 'BarCamp SenzaConfini 2008: CSS Frameworks'
 ---
 

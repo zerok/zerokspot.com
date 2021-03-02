@@ -2,10 +2,7 @@
 date: '2008-03-16T12:00:00-00:00'
 language: en
 tags:
-- acer
-- console
 - gaming
-- open
 title: Gaming + Console + Acer? Huh???
 ---
 

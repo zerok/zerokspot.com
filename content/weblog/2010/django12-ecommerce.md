@@ -4,7 +4,7 @@ language: en
 rating: 2
 tags:
 - django
-- book
+- books
 - review
 title: Django 1.2 E-Commerce
 ---

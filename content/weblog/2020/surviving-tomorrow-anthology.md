@@ -3,11 +3,8 @@ title: Surviving Tomorrow anthology
 date: "2020-06-19T07:10:36+02:00"
 tags:
 - 100daystooffload
-- reading
 - scifi
-- anthology
-- book
-- charity
+- books
 ---
 
 Thanks to Cory Doctorow’s [Pluralistic blog](https://pluralistic.net/2020/06/17/on-face-interaction/#survivingtomorrow) I stumbled upon the [Surviving Tomorrow anthology](https://www.survivingtomorrowanthology.com/) edited by Bryan Thomas Schmidt who previously also edited Andy Weir’s “The Martian”.

@@ -2,8 +2,9 @@
 title: "\"Children of Time\" by Adrian Tchaikovsky"
 date: "2019-11-24T11:45:00+01:00"
 tags:
-- book
+- books
 - review
+- scifi
 ---
 
 ["Children of Time"](https://en.wikipedia.org/wiki/Children_of_Time_(novel)) had been on my backlog for two years but a couple of weeks ago I stumbled upon another one of [Adrian Tchaikovsky](https://en.wikipedia.org/wiki/Adrian_Tchaikovsky)'s books, "Dogs of war". When adding it to my to-read list I noticed that [Ulrich](https://mobile.twitter.com/ulope) had read "Children of Time" already. He didn't like it all that much but I simply couldn't just skip it. Now I'm really glad that I didn't.

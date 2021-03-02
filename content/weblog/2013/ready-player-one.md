@@ -3,10 +3,9 @@ date: '2013-09-16T21:09:25+02:00'
 language: en
 rating: 3
 tags:
-- book
+- books
 - review
 - adnbookclub
-- bookclubsep13
 title: Ready Player One
 ---
 

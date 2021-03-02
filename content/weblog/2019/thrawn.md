@@ -2,7 +2,7 @@
 title: "\"Star Wars: Thrawn\" by Timothy Zahn"
 date: "2019-12-08T19:40:00+01:00"
 tags:
-- book
+- books
 - review
 - starwars
 - scifi

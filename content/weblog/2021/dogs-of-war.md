@@ -4,7 +4,7 @@ rating: 5
 date: "2021-01-04T11:47:00+01:00"
 tags:
 - review
-- book
+- books
 - scifi
 ---
 

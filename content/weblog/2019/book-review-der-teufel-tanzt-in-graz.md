@@ -2,8 +2,9 @@
 title: "\"Der Tod tanzt in Graz\" by Robert Preis"
 date: "2019-11-07T18:50:00+02:00"
 tags:
-- book
+- books
 - review
+- crime
 ---
 
 To mix up my reading pattern I recently set out to read a crime novel set in Graz by [Robert Preis][rp] called ["Der Tod tanzt in Graz"][d] ("Death is dancing in Graz"). It is, if I counted correctly, by now the sixth book about the police investigator Armin Trost, his team, and their cases. This time, a murder gets committed during a folk music performance on the "Teichalm", around 30 km from Graz. If one murder wouldn't be bad enough, the circumstances are extremely weird and eventually the story goes down into local folk tales all the way to the devil himself.

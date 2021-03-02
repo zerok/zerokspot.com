@@ -7,8 +7,8 @@ rating: 4
 tags:
 - startrek
 - review
-- book
-- typhonpact
+- books
+- scifi
 title: 'Star Trek - Typhon Pact: Zero Sum Game'
 ---
 

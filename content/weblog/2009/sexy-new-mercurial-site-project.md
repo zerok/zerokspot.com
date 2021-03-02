@@ -3,7 +3,6 @@ date: '2009-02-16T12:00:00-00:00'
 language: en
 tags:
 - mercurial
-- website
 title: Sexy new Mercurial-site project
 ---
 
