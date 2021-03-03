@@ -2,10 +2,7 @@
 date: '2011-02-27T12:00:00-00:00'
 language: en
 tags:
-- ubuntu
-- upstart
-- openvz
-- sshd
+- linux
 title: Ubuntu update gone wrong
 ---
 

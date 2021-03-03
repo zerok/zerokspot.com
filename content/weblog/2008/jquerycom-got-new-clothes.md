@@ -2,8 +2,8 @@
 date: '2008-08-29T12:00:00-00:00'
 language: en
 tags:
-- jquery
-- redesign
+- news
+- javascript
 title: jQuery.com got new clothes
 ---
 

@@ -2,7 +2,6 @@
 date: '2012-10-15T12:00:00-00:00'
 language: en
 tags:
-- adn
 - appdotnet
 - twitter
 title: Now on App.net!

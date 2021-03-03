@@ -4,8 +4,6 @@ date: "2020-10-06T19:16:20+02:00"
 tags:
 - productivity
 - gtd
-- eisenhower
-- bujo
 - bulletjournaling
 ---
 

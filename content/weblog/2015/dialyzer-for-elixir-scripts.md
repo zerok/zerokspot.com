@@ -3,7 +3,6 @@ date: '2015-07-18T10:27:26+02:00'
 language: en
 tags:
 - elixir
-- learning
 - erlang
 title: Dialyzer for Elixir Scripts
 ---

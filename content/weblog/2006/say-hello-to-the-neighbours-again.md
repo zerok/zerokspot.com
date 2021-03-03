@@ -4,7 +4,6 @@ language: en
 tags:
 - drupal
 - zerokspot
-- zk_blockroll
 title: Say "Hello" to the neighbours again
 ---
 

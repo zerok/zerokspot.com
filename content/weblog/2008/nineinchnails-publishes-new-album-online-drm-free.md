@@ -2,11 +2,7 @@
 date: '2008-03-04T12:00:00-00:00'
 language: en
 tags:
-- drmfree
-- ghosts
 - music
-- nin
-- nineinchnails
 title: Nine Inch Nails publishing new album online (DRM-free)
 ---
 

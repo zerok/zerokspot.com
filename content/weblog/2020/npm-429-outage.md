@@ -2,11 +2,8 @@
 title: "npm outage due to Cloudflare"
 date: "2020-02-18T19:20:00+0100"
 tags:
-- npm
 - javascript
-- cloudflare
-- operations
-- security
+- news
 ---
 
 Yesterday at 13:26 CET  a coworker contacted me asking what this error was all about:

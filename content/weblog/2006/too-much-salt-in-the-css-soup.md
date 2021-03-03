@@ -3,9 +3,7 @@ date: '2006-07-25T12:00:00-00:00'
 language: en
 tags:
 - css
-- dvorak
-- game
-- malarkey
+- games
 - webdesign
 title: Too much salt in the CSS soup
 ---

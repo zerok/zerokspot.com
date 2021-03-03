@@ -2,8 +2,7 @@
 date: '2006-10-19T12:00:00-00:00'
 language: en
 tags:
-- forums
-- twit
+- news
 title: TWiT's board down?
 ---
 

@@ -2,7 +2,6 @@
 date: '2015-03-07T17:14:12+01:00'
 language: en
 tags:
-- traffic
 - biking
 title: Hand signals are hard
 ---

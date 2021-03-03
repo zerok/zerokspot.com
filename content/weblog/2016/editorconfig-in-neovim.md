@@ -2,12 +2,7 @@
 date: '2016-07-10T08:38:15+02:00'
 language: en
 tags:
-- editor
-- neovim
-- vim
-- editorconfig
 - tooling
-- development
 title: EditorConfig in NeoVIM
 ---
 

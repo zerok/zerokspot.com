@@ -3,8 +3,6 @@ date: '2009-03-17T12:00:00-00:00'
 language: en
 tags:
 - python
-- searching
-- whoosh
 title: Whoosh looks interesting
 ---
 

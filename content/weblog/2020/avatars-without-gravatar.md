@@ -2,10 +2,6 @@
 title: Avatars without Gravatar
 date: "2020-05-26T16:23:55+02:00"
 tags:
-- avatar
-- gravatar
-- libravatar
-- federated
 - fediverse
 - 100daystooffload
 ---

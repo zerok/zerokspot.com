@@ -3,9 +3,6 @@ date: '2006-07-25T12:00:00-00:00'
 language: en
 tags:
 - apple
-- patent
-- touchless
-- touchscreen
 title: What's so new about Apple's new patent?
 ---
 

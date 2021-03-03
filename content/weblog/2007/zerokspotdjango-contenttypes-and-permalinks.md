@@ -2,9 +2,7 @@
 date: '2007-03-29T12:00:00-00:00'
 language: en
 tags:
-- contenttypes
 - django
-- permalink
 - zerokspot
 title: 'zerokspot+Django: contenttypes and permalinks'
 ---

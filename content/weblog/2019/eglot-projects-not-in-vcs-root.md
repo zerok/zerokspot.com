@@ -3,8 +3,6 @@ title: LSP-support with eglot in nested projects
 date: "2019-11-27T22:00:00+01:00"
 tags:
 - emacs
-- eglot
-- lsp
 - golang
 ---
 

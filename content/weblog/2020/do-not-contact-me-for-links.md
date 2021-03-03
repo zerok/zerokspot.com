@@ -3,9 +3,7 @@ title: Do not contact me for links!
 date: "2020-05-28T08:08:27+02:00"
 tags:
 - blogging
-- ads
-- backlinks
-- feedback
+- zerokspot
 - 100daystooffload
 ---
 

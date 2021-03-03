@@ -2,8 +2,6 @@
 date: '2006-08-06T12:00:00-00:00'
 language: en
 tags:
-- dom
-- internetexplorer
 - javascript
 - zerokspot
 title: Now work in IE

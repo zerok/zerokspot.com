@@ -3,8 +3,6 @@ date: '2007-04-16T12:00:00-00:00'
 language: en
 tags:
 - accessibility
-- accesskeys
-- opera
 title: I <3 Opera's accesskey handling
 ---
 

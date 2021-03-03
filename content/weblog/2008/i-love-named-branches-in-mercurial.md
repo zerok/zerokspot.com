@@ -2,9 +2,7 @@
 date: '2008-03-15T12:00:00-00:00'
 language: en
 tags:
-- hg
 - mercurial
-- namedbranches
 title: I <3 Named Branches in Mercurial
 ---
 

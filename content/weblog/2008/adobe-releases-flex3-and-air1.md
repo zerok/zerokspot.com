@@ -2,10 +2,7 @@
 date: '2008-02-25T12:00:00-00:00'
 language: en
 tags:
-- adobe
-- air
-- flex
-- ria
+- software-release
 title: Adobe releases Flex 3 and AIR 1.0
 ---
 

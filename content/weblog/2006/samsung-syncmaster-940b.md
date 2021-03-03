@@ -2,8 +2,7 @@
 date: '2006-06-13T12:00:00-00:00'
 language: en
 tags:
-- monitor
-- samsung
+- hardware
 title: Samsung SyncMaster 940B
 ---
 

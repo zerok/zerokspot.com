@@ -3,8 +3,6 @@ date: 2016-09-16T19:29:15+02:00
 title: Hello, Lektor
 tags:
 - python
-- lektor
-- development
 - meet-the-meetups
 ---
 

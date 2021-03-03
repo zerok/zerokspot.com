@@ -4,9 +4,6 @@ date: "2020-10-03T19:28:32+02:00"
 tags:
 - gaming
 - nintendoswitch
-- supergiantgames
-- hades
-- roguelike
 rating: 5
 ---
 

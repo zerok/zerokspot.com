@@ -3,9 +3,6 @@ date: '2008-02-09T12:00:00-00:00'
 language: en
 tags:
 - java
-- json
-- json-lib
-- 'null'
 title: Default value handling with Json-lib
 ---
 

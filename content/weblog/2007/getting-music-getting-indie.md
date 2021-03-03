@@ -2,10 +2,8 @@
 date: '2007-03-16T12:00:00-00:00'
 language: en
 tags:
-- amiestreet
-- emusic
-- indie
 - music
+- online-services
 title: Getting Music. Getting Indie
 ---
 

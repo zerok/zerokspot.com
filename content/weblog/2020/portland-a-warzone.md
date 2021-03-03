@@ -3,9 +3,8 @@ title: Portland, a warzone
 date: "2020-07-20T19:57:28+02:00"
 tags:
 - portland
-- trump
-- protests
-- uspol
+- usa
+- politics
 - 100daystooffload
 ---
 

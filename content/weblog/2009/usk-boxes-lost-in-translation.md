@@ -2,12 +2,7 @@
 date: '2009-12-19T12:00:00-00:00'
 language: en
 tags:
-- box
 - gaming
-- i18n
-- language
-- mirrorsedge
-- usk
 title: USK game boxes - Lost in Translation
 ---
 

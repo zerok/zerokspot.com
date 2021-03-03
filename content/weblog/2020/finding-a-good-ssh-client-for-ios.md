@@ -3,12 +3,8 @@ title: Finding a good SSH client for iOS
 date: "2020-07-27T18:20:27+02:00"
 tags:
 - 100daystooffload
-- ios
-- ssh
-- mosh
 - development
-- productivity
-- app
+- ios
 ---
 
 Since my laptop is still at the repair shop I had a bit of time and need to test some SSH clients for iOS for daily use. I started off with Prompt, which I had purchased a couple of years ago simply because I just wanted an SSH client without any bells and whistles and without any kind of in-app purchase in order to make it work properly. 

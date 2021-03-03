@@ -3,9 +3,7 @@ title: 'CUE: A configuration toolbox'
 date: "2021-02-24T21:07:34+01:00"
 tags:
 - 100daystooffload
-- configuration
 - opensource
-- validation
 incoming:
 - url: https://chaos.social/@zerok/105788241669271030
 ---

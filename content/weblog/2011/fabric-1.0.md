@@ -2,10 +2,8 @@
 date: '2011-03-06T12:00:00-00:00'
 language: en
 tags:
-- fabric
+- software-release
 - python
-- deployment
-- tools
 title: Fabric 1.0 released
 ---
 

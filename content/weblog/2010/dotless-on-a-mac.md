@@ -2,9 +2,6 @@
 date: '2010-07-03T12:00:00-00:00'
 language: en
 tags:
-- dotless
-- homebrew
-- css
 - webdevelopment
 title: dotLess on a Mac
 ---

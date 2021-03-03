@@ -3,8 +3,7 @@ date: '2009-02-08T12:00:00-00:00'
 language: de
 tags:
 - barcamp
-- bcklu
-- retrospektive
+- klagenfurt
 title: Das war das Barcamp Klagenfurt 2009
 ---
 

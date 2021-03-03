@@ -2,8 +2,8 @@
 date: '2008-09-23T12:00:00-00:00'
 language: en
 tags:
-- automattic
-- intensedebate
+- online-services
+- blogging
 title: IntenseDebate acquired by Automattic
 ---
 

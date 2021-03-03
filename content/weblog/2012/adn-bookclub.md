@@ -2,8 +2,8 @@
 date: '2012-11-20T12:00:00-00:00'
 language: en
 tags:
-- bookclub
-- adn
+- adnbookclub
+- appdotnet
 title: Book-clubbing on ADN!
 ---
 

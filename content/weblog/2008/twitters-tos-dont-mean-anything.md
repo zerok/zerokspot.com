@@ -2,8 +2,7 @@
 date: '2008-05-22T12:00:00-00:00'
 language: en
 tags:
-- arielwaldman
-- harassment
+- society
 - twitter
 title: Twitter's TOS don't mean anything?
 ---

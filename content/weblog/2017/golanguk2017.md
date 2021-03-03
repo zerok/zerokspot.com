@@ -2,11 +2,10 @@
 title: "Golang UK 2017"
 date: 2017-08-20T19:02:09+02:00
 tags:
-- conference
+- conferences
 - travel
 - london
 - golang
-- gouk17
 ---
 
 As I've spent more and more time writing Go both at work and at home for

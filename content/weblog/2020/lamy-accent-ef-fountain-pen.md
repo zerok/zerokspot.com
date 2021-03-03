@@ -2,11 +2,8 @@
 title: "Lamy accent fountain pen"
 date: "2020-04-27T10:19:12+0200"
 tags:
-- writing
-- lamy
-- parker
 - fountainpens
-- 100DaysToOffload
+- 100daystooffload
 ---
 
 [As I wrote in early March][fp], I really enjoy writing with fountain pens. One big issue I still had up until now was, though, that I could only stop smearing and bleeding by using blotting paper right after I've written something. This was annoying as it made opening and closing my journal more complicated since I had to position the paper properly.

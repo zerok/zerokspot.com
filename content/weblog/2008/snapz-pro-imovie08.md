@@ -2,9 +2,7 @@
 date: '2008-04-09T12:00:00-00:00'
 language: en
 tags:
-- black
-- imovie
-- snapzpro
+- macos
 title: Snapz Pro + iMovie'08
 ---
 

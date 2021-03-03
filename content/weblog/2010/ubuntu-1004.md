@@ -2,8 +2,7 @@
 date: '2010-05-01T12:00:00-00:00'
 language: en
 tags:
-- ubuntu
-- netbook
+- linux
 title: Ubuntu 10.04 on my Netbook
 ---
 

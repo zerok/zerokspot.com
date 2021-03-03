@@ -2,8 +2,9 @@
 date: 2019-09-28T12:16:48+02:00
 title: Validating my WKD setup
 tags:
-- gnupg
-- wkd
+- security
+- privacy
+- openpgp
 ---
 
 Right after writing [Signed GPG keys and keyservers][sk], [Wiktor][]

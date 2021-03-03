@@ -2,9 +2,7 @@
 date: '2008-06-26T12:00:00-00:00'
 language: en
 tags:
-- ads
-- github
-- tos
+- policies
 title: Ads and Terms of Service
 ---
 

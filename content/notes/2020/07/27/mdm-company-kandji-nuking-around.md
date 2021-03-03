@@ -3,7 +3,7 @@ title: "MDM company Kandji nuking around?"
 link: "https://twitter.com/dguido/status/1287800680946819073"
 date: 2020-07-27T21:46:20+0200
 tags:
-- mdm
+- horror-stories
 ---
 > Last Thursday, I was locked out of my cloud MDM, my data was deleted, and MDM agents for every device @trailofbits were silently removed by the vendor, leaving the entire company unmanaged. There was no advance notice and no explanation.
 

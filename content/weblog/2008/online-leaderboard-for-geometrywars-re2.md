@@ -3,10 +3,6 @@ date: '2008-08-14T12:00:00-00:00'
 language: en
 tags:
 - gaming
-- geometrywars
-- leaderboard
-- online
-- re2
 - xbox360
 title: Online leaderboard for Geometry Wars RE2
 ---

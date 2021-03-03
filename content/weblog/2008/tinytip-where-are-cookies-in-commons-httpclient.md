@@ -2,10 +2,7 @@
 date: '2008-02-04T12:00:00-00:00'
 language: en
 tags:
-- cookies
-- httpclient
 - java
-- tinytip
 title: 'TinyTip: Where are my cookies in commons-httpclient?'
 ---
 

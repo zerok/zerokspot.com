@@ -2,9 +2,8 @@
 date: '2006-06-21T12:00:00-00:00'
 language: en
 tags:
-- mac
-- osx
-- r
+- macos
+- rlang
 title: lcc_dynanmic problem when compiling R libraries
 ---
 

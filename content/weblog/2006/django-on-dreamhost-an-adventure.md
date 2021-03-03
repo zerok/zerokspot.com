@@ -3,8 +3,7 @@ date: '2006-09-01T12:00:00-00:00'
 language: en
 tags:
 - django
-- dreamhost
-- fastcgi
+- python
 title: 'Django on Dreamhost: An adventure'
 ---
 

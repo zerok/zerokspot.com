@@ -2,12 +2,7 @@
 date: '2007-08-10T12:00:00-00:00'
 language: en
 tags:
-- apple
-- atom
-- feed
-- flash
-- itunes
-- myitunes
+- music
 title: Publish your iTunes habits
 ---
 

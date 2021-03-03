@@ -2,8 +2,6 @@
 date: '2007-05-22T12:00:00-00:00'
 language: en
 tags:
-- adobe
-- lightroom
 - photography
 title: I <3 Lightroom
 ---

@@ -2,10 +2,7 @@
 date: '2008-11-29T12:00:00-00:00'
 language: en
 tags:
-- firefox
-- firegpg
-- gmail
-- gnupg
+- openpgp
 title: Finally FireGPG
 ---
 

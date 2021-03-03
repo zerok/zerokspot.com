@@ -3,7 +3,6 @@ date: 2016-12-19T22:12:54+01:00
 title: 1-pixel Moon and the Solar System
 tags:
 - astronomy
-- totd
 ---
 
 <figure>

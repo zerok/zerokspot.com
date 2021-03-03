@@ -2,7 +2,6 @@
 date: '2006-05-14T12:00:00-00:00'
 language: en
 tags:
-- actionmailer
 - ruby
 title: ActionMailer in standalone apps
 ---

@@ -2,11 +2,7 @@
 date: '2006-07-23T12:00:00-00:00'
 language: en
 tags:
-- css
-- html
 - javascript
-- powerpoint
-- s5
 - webdevelopment
 title: S5 is no longer a one-man show
 ---

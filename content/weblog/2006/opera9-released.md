@@ -2,8 +2,8 @@
 date: '2006-06-20T12:00:00-00:00'
 language: en
 tags:
-- browsers
-- opera
+- news
+- software-release
 title: Opera9 released
 ---
 

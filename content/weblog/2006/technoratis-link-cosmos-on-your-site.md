@@ -2,10 +2,7 @@
 date: '2006-07-31T12:00:00-00:00'
 language: en
 tags:
-- cosmos
-- php
-- ruby
-- technorati
+- blogging
 title: Technorati's link cosmos on your site
 ---
 

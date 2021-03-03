@@ -2,8 +2,8 @@
 date: '2007-06-15T12:00:00-00:00'
 language: en
 tags:
-- flickr
-- zooomr
+- photography
+- online-services
 title: Zooomr ... huh?
 ---
 

@@ -2,9 +2,7 @@
 date: '2007-08-08T12:00:00-00:00'
 language: en
 tags:
-- iptc
-- lightroom
-- metadata
+- photography
 title: Location Metadata in Lightroom
 ---
 

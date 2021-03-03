@@ -2,11 +2,8 @@
 date: '2004-01-04T12:00:00-00:00'
 language: en
 tags:
-- ayumi-hamasaki
-- beyond-good-and-evil
 - gaming
 - music
-- prince-of-persia
 title: Some luck
 ---
 

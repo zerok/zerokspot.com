@@ -2,8 +2,7 @@
 date: '2009-11-03T12:00:00-00:00'
 language: en
 tags:
-- domainapps
-- googlegroups
+- online-services
 title: Some movement on Google Groups?
 ---
 

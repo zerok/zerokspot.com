@@ -2,10 +2,7 @@
 date: '2009-02-23T12:00:00-00:00'
 language: en
 tags:
-- camcorder
-- gadget
-- kodak
-- zi6
+- photography
 title: Looking forward to the Kodak Zi6
 ---
 

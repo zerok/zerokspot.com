@@ -2,8 +2,7 @@
 date: 2017-01-15T01:07:35+01:00
 title: The end of App.net
 tags:
-- appnet
-- eol
+- appdotnet
 ---
 
 Sadly, it looks like the end for [app.net][] is near. According to [this post][]

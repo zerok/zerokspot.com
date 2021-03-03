@@ -2,10 +2,7 @@
 date: '2008-06-11T12:00:00-00:00'
 language: en
 tags:
-- gametrailers
 - gaming
-- metalgear
-- retrospective
 title: Metal Gear Retrospective
 ---
 

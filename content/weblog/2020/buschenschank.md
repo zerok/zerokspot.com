@@ -3,9 +3,6 @@ title: Buschenschank
 date: "2020-06-13T18:50:10+02:00"
 tags:
 - austria
-- tourism
-- buschenschank
-- tradition
 - 100daystooffload
 ---
 

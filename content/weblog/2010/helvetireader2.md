@@ -3,10 +3,8 @@ date: '2010-04-01T12:00:00-00:00'
 language: en
 link: http://helvetireader.com/
 tags:
-- googlereader
-- helvetireader
-- userscript
-- userstyle
+- news
+- software-release
 title: Helvetireader 2.0 released
 ---
 

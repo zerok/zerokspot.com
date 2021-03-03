@@ -2,9 +2,7 @@
 date: '2007-05-21T12:00:00-00:00'
 language: en
 tags:
-- fsf
-- ogg
-- vorbis
+- opensource
 title: Play Ogg!
 ---
 

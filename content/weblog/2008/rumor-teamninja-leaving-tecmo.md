@@ -3,9 +3,6 @@ date: '2008-06-16T12:00:00-00:00'
 language: en
 tags:
 - gaming
-- itagaki
-- teamninja
-- tecmo
 title: 'Rumor: Team Ninja leaving Tecmo'
 ---
 

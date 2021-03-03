@@ -2,9 +2,7 @@
 date: '2009-08-20T12:00:00-00:00'
 language: en
 tags:
-- epic
 - gaming
-- shadowcomplex
 - xbox360
 title: Finishing Shadow Complex without finishing it
 ---

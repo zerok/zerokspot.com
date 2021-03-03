@@ -2,13 +2,8 @@
 date: '2008-05-07T12:00:00-00:00'
 language: en
 tags:
-- 23hq
-- flickr
-- fotocommunity
 - photography
-- service
-- smugmug
-- zooomr
+- online-services
 title: Some Flickr alternatives
 ---
 

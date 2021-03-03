@@ -2,11 +2,8 @@
 date: '2008-10-01T12:00:00-00:00'
 language: en
 tags:
-- app
+- python
 - django
-- django-oopviews
-- library
-- oopviews
 title: Django-oopviews now in its own library
 ---
 

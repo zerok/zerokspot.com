@@ -2,11 +2,9 @@
 date: '2007-10-01T12:00:00-00:00'
 language: en
 tags:
-- '2007'
 - barcamp
-- barcampvienna
+- vienna
 - django
-- presentation
 title: Barcamp Vienna 2007 - Django Slides
 ---
 

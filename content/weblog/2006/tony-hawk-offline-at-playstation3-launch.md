@@ -3,11 +3,6 @@ date: '2006-09-18T12:00:00-00:00'
 language: en
 tags:
 - gaming
-- neversoft
-- online
-- playstation3
-- sony
-- tonyhawk
 title: Tony Hawk offline at Playstation3 launch
 ---
 

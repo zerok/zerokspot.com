@@ -3,8 +3,6 @@ title: "Großrazzia gegen Muslimbruderschaft"
 link: "https://orf.at/stories/3189079/"
 date: 2020-11-09T18:40:22+0100
 tags:
-- extremism
-- fpoe
 - austria
 - politics
 ---

@@ -3,8 +3,7 @@ date: '2013-07-18T22:31:11+02:00'
 language: en
 tags:
 - json
-- jq
-- tools
+- tooling
 title: Processing JSON with jq
 ---
 

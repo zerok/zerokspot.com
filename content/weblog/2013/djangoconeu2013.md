@@ -4,7 +4,6 @@ language: en
 tags:
 - django
 - djangocon
-- djangocircus
 - conference
 - warsaw
 - poland

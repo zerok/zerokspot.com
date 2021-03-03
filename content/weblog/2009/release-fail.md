@@ -2,12 +2,7 @@
 date: '2009-02-18T12:00:00-00:00'
 language: en
 tags:
-- capcom
 - gaming
-- ps3
-- psn
-- ssf2thdr
-- streetfighter2
 title: Release Fail
 ---
 

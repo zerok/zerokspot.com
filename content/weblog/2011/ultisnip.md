@@ -3,8 +3,6 @@ date: '2011-09-25T12:00:00-00:00'
 language: en
 tags:
 - vim
-- snippets
-- ultisnip
 title: 'UltiSnip: Snippets for VIM'
 ---
 

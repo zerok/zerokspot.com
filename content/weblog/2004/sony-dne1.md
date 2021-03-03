@@ -2,10 +2,7 @@
 date: '2004-01-31T12:00:00-00:00'
 language: en
 tags:
-- cdplayer
 - music
-- portable
-- sonydne1
 title: Sony D-NE 1
 ---
 

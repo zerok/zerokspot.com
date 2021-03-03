@@ -2,10 +2,7 @@
 date: '2011-06-02T12:00:00-00:00'
 language: en
 tags:
-- html5
-- forms
-- opera
-- webkit
+- webdevelopment
 title: Embracing the native number widget
 ---
 

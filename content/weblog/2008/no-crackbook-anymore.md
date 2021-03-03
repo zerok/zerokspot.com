@@ -3,10 +3,6 @@ date: '2008-07-30T12:00:00-00:00'
 language: en
 tags:
 - apple
-- crackbook
-- digitalis
-- macbook
-- service
 title: No CrackBook anymore
 ---
 

@@ -2,9 +2,7 @@
 date: '2006-06-28T12:00:00-00:00'
 language: en
 tags:
-- firefox
-- messengerbag
-- ogio
+- bags
 title: Firefox Messenger Bag
 ---
 

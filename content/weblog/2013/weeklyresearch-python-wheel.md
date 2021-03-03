@@ -3,8 +3,6 @@ date: '2013-09-29T19:40:36+02:00'
 language: en
 tags:
 - python
-- packaging
-- wheel
 - weeklyresearch
 title: 'Weekly Research: Python''s Wheel Format'
 ---
