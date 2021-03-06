@@ -6,6 +6,9 @@ tags:
 - books
 - review
 - 100daystooffload
+rating: 5
+incoming:
+- url: https://chaos.social/@zerok/105844248970438395
 ---
 
 Back in 2020 Tor had started a [Terry Pratchett book club](https://www.tor.com/2020/06/16/introducing-the-terry-pratchett-book-club/) in which they wanted to reread the authors books, starting with the [Discworld series](https://www.terrypratchettbooks.com/book-series/discworld/).
