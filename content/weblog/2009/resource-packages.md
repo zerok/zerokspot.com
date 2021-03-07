@@ -2,8 +2,6 @@
 date: '2009-12-14T12:00:00-00:00'
 language: de
 tags:
-- mozilla
-- resourcepackages
 - webdevelopment
 title: Resource packages - generische CSS Sprites
 ---

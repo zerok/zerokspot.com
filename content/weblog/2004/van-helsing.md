@@ -2,9 +2,7 @@
 date: '2004-05-23T12:00:00-00:00'
 language: en
 tags:
-- english
 - movies
-- vanhelsing
 title: Van Helsing
 ---
 

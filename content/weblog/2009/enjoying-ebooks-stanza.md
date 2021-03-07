@@ -2,11 +2,7 @@
 date: '2009-03-01T12:00:00-00:00'
 language: en
 tags:
-- ebook
-- iphone
-- ipodtouch
 - reading
-- stanza
 title: Enjoying eBooks with Stanza
 ---
 

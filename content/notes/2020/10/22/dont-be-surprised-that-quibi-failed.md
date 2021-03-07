@@ -3,8 +3,7 @@ title: "Don’t be surprised that Quibi failed"
 likeOf: "https://om.co/2020/10/21/dont-be-surprised-that-quibi-failed/"
 date: 2020-10-22T19:51:19+0200
 tags:
-- quibi
-- shuttingdown
+- news
 ---
 > Let me put this in the kindest terms: Quibi was trying to solve a problem that no one had — and certainly weren’t going to pay $5-a-month to address.
 

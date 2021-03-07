@@ -4,8 +4,6 @@ language: en
 link: http://fgnass.github.com/spin.js/
 tags:
 - javascript
-- spinjs
-- animation
 - css
 title: 'spin.js: A pure JavaScript Spinner Library'
 ---

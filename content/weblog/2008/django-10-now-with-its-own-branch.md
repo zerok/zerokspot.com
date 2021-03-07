@@ -2,9 +2,7 @@
 date: '2008-09-29T12:00:00-00:00'
 language: en
 tags:
-- branch
 - django
-- stable
 title: Django 1.0 now with its own branch
 ---
 

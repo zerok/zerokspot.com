@@ -3,8 +3,6 @@ date: '2008-04-28T12:00:00-00:00'
 language: en
 tags:
 - django
-- django_zsutils
-- oop
 title: OOP Views for Django now on GitHub
 ---
 

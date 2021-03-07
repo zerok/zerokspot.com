@@ -2,13 +2,9 @@
 date: '2008-10-29T12:00:00-00:00'
 language: en
 tags:
-- agpl
-- gpl
+- software-release
 - java
-- licenses
 - licensing
-- owl
-- pellet
 - semanticweb
 title: Pellet 2.0rc1 ... and a big surprise
 ---

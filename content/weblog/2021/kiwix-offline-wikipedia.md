@@ -2,9 +2,6 @@
 title: 'Kiwix: Offline Wikipedia'
 date: "2021-01-18T19:25:32+01:00"
 tags:
-- wikipedia
-- offline
-- availability
 - opensource
 - 100daystooffload
 incoming:

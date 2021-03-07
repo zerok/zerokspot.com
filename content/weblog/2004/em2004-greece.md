@@ -2,8 +2,6 @@
 date: '2004-07-05T12:00:00-00:00'
 language: en
 tags:
-- '2004'
-- eurocup
 - football
 title: 'EM2004: Greece'
 ---

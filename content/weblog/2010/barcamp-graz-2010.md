@@ -4,7 +4,6 @@ language: de
 tags:
 - barcamp
 - graz
-- bcg10
 title: Barcamp Graz 2010
 ---
 

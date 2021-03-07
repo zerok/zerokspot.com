@@ -2,9 +2,7 @@
 date: '2009-02-04T12:00:00-00:00'
 language: en
 tags:
-- legistyles
-- netnewswire
-- themes
+- macos
 title: Finally the right NNW-theme for me
 ---
 

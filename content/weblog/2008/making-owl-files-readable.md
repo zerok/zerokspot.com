@@ -2,9 +2,7 @@
 date: '2008-12-28T12:00:00-00:00'
 language: en
 tags:
-- owl
-- xsl
-- xslt
+- semanticweb
 title: Making OWL files readable
 ---
 

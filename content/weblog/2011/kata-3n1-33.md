@@ -2,9 +2,8 @@
 date: '2011-09-10T12:00:00-00:00'
 language: en
 tags:
-- kata
-- 3n1-33
-- review
+- bags
+- reviews
 title: Kata 3N1-33 Camera bag
 ---
 

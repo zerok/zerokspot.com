@@ -2,8 +2,7 @@
 date: '2008-11-19T12:00:00-00:00'
 language: en
 tags:
-- montypython
-- youtube
+- entertainment
 title: Monty Python officially on YouTube
 ---
 

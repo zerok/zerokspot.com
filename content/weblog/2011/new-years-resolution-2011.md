@@ -3,14 +3,10 @@ date: '2011-01-16T12:00:00-00:00'
 language: en
 tags:
 - newyearsresolution
-- scala
 - python
-- lift
 - usergroups
 - sports
 - photography
-- freenode
-- pdpc
 title: New Year's Resolution 2011
 ---
 

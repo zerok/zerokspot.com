@@ -2,9 +2,6 @@
 date: '2011-06-03T12:00:00-00:00'
 language: en
 tags:
-- ps3
-- infamous2
-- demo
 - gaming
 title: inFAMOUS 2 demo is out!
 ---

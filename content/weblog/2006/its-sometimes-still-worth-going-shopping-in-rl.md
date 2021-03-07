@@ -4,7 +4,8 @@ language: en
 tags:
 - darkangel
 - firefly
-- shopping
+- scifi
+- tv-shows
 title: It's sometimes still worth going shopping in RL
 ---
 

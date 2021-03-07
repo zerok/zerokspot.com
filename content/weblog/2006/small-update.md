@@ -2,14 +2,7 @@
 date: '2006-07-01T12:00:00-00:00'
 language: en
 tags:
-- canon
-- charmed
-- d50
-- drupal
-- dslite
-- eos350d
-- nikon
-- personal
+- photography
 title: Small update
 ---
 

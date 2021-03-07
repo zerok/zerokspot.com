@@ -2,7 +2,6 @@
 date: '2006-11-01T12:00:00-00:00'
 language: en
 tags:
-- picture
 - zerokspot
 title: Now again with photos
 ---

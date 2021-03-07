@@ -2,8 +2,8 @@
 date: '2007-11-16T12:00:00-00:00'
 language: en
 tags:
-- leopard
-- lightroom
+- macos
+- photography
 title: Lightroom 1.3
 ---
 

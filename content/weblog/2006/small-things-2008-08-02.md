@@ -3,15 +3,8 @@ date: '2006-08-03T12:00:00-00:00'
 language: en
 tags:
 - blogging
+- gaming
 - books
-- ign
-- mightymouse
-- perl-in-a-nutshell
-- podcast
-- psp
-- ridgeracer
-- shopping
-- vox
 title: Small things (2008-08-02)
 ---
 

@@ -3,9 +3,8 @@ date: '2012-04-15T12:00:00-00:00'
 language: en
 rating: 5
 tags:
-- chrome
-- bag
-- review
+- bags
+- reviews
 title: Chrome Buran
 ---
 

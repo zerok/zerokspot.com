@@ -2,9 +2,7 @@
 date: '2011-08-08T12:00:00-00:00'
 language: en
 tags:
-- hover
-- dns
-- registrar
+- web
 title: Some love for Hover's DNS management
 ---
 

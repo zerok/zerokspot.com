@@ -3,8 +3,7 @@ date: '2006-07-28T12:00:00-00:00'
 language: en
 tags:
 - meme
-- st-ckchen
-title: "St\xF6ckchen: \xDCber das Blog/About this blog"
+title: "Stöckchen: Über das Blog/About this blog"
 ---
 
 

@@ -2,10 +2,9 @@
 date: 2017-06-16T22:41:48+02:00
 title: "GrazJS #16"
 tags:
+- usergroups
 - grazjs
 - javascript
-- graphql
-- timeular
 ---
 
 On Tuesday evening was once again

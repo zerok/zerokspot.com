@@ -2,9 +2,7 @@
 date: '2008-01-08T12:00:00-00:00'
 language: en
 tags:
-- bluray
-- hd
-- hddvd
+- movies
 title: Blu-ray wins ...
 ---
 

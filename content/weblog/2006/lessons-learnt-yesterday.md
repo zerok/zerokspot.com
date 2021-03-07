@@ -3,13 +3,7 @@ date: '2006-09-07T12:00:00-00:00'
 language: en
 tags:
 - apple
-- core2duo
 - gaming
-- imac
-- playstation2
-- playstation3
-- ratchet---clank
-- sony
 title: Lessons learnt yesterday
 ---
 

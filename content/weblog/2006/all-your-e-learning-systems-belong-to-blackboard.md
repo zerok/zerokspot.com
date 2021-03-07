@@ -2,10 +2,7 @@
 date: '2006-07-30T12:00:00-00:00'
 language: en
 tags:
-- blackboard
-- claroline
 - e-learning
-- moodle
 title: All your e-learning systems belong to Blackboard
 ---
 

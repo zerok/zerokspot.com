@@ -2,11 +2,7 @@
 date: '2004-05-26T12:00:00-00:00'
 language: en
 tags:
-- camera
-- dimage
-- dimagexg
-- english
-- minolta
+- photography
 title: My new camera
 ---
 

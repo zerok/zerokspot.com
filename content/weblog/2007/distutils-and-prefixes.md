@@ -2,9 +2,7 @@
 date: '2007-10-17T12:00:00-00:00'
 language: en
 tags:
-- distutils
 - python
-- setuptools
 title: distutils and prefixes
 ---
 

@@ -2,10 +2,7 @@
 date: '2008-07-11T12:00:00-00:00'
 language: en
 tags:
-- playstation3
-- superstardusthd
-- trophies
-- xmb
+- gaming
 title: 2 days of PS3 Trophies and Counting
 ---
 

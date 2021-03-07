@@ -2,8 +2,7 @@
 date: '2006-06-18T12:00:00-00:00'
 language: en
 tags:
-- claimid
-- openid
+- web
 title: claimID now with OpenID
 ---
 

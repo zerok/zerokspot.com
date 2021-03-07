@@ -2,7 +2,7 @@
 date: '2008-04-06T12:00:00-00:00'
 language: en
 tags:
-- socialnetworks
+- web
 title: Brand name social networks ... huh?
 ---
 

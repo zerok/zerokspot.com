@@ -2,12 +2,8 @@
 date: '2006-08-05T12:00:00-00:00'
 language: en
 tags:
-- gdi
-- minolta
-- pagepro1100l
-- printer
-- samba
 - windows
+- linux
 title: Minolta PagePro 1100L directly from hell?
 ---
 

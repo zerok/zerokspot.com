@@ -2,8 +2,7 @@
 date: '2006-12-20T12:00:00-00:00'
 language: en
 tags:
-- dreamhost
-- mediawiki
+- development
 title: MediaWiki's infinite redirection on Dreamhost
 ---
 

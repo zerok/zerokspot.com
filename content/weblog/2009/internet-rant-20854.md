@@ -2,11 +2,7 @@
 date: '2009-02-23T12:00:00-00:00'
 language: en
 tags:
-- lastfm
-- people
-- rant
-- riaa
-- techcrunch
+- music
 title: 'Internet rant #20854'
 ---
 

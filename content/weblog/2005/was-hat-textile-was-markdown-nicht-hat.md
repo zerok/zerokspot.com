@@ -4,7 +4,6 @@ language: en
 tags:
 - development
 - markdown
-- textile
 title: Was hat Textile, was Markdown nicht hat?
 ---
 

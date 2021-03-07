@@ -2,8 +2,7 @@
 date: '2004-07-18T12:00:00-00:00'
 language: en
 tags:
-- compiler
-- messages
+- development
 title: g++'s cool messages (1)
 ---
 

@@ -3,10 +3,7 @@ title: Home improvement day
 date: "2020-05-17T08:36:47Z"
 tags:
 - 100daystooffload
-- ikea
 - smarthome
-- fatboy
-- home
 ---
 
 Sorry, not all that much technical happened yesterday. I had some drafts in the backlog but didn’t find the time to finish any of them. Instead, I spent most of the day on various “home improvement” projects:

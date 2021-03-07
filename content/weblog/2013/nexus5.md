@@ -2,8 +2,7 @@
 date: '2013-11-10T19:53:11+01:00'
 language: en
 tags:
-- google
-- nexus
+- android
 title: Nexus 5
 ---
 

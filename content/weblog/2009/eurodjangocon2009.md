@@ -3,12 +3,10 @@ date: '2009-05-09T12:00:00-00:00'
 language: en
 tags:
 - django
-- edc
-- edc09
-- eurodjangcon
-- travel
 - djangocon
-- djangosprint
+- conferences
+- traveling
+- prague
 title: EuroDjangoCon 2009
 ---
 

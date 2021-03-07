@@ -2,9 +2,7 @@
 date: '2007-05-10T12:00:00-00:00'
 language: en
 tags:
-- last-fm
 - music
-- video
 title: Last.fm to become MTV 2.0?
 ---
 

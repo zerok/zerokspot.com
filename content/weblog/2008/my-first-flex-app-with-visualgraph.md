@@ -3,8 +3,6 @@ date: '2008-01-20T12:00:00-00:00'
 language: en
 tags:
 - actionscript
-- flex
-- visualgraph
 title: My first Flex-App with VisualGraph
 ---
 

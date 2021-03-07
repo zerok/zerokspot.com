@@ -2,7 +2,7 @@
 title: "What's a good (mobile) app subscription price?"
 date: "2020-02-29T19:30:31+0100"
 tags:
-- mobileapps
+- apps
 ---
 
 During the last year more and more apps have moved from a one-time payments to subscription systems. Apps that were previously available for 5-10 EUR and then charged their users again for the next major version moved to either monthly or yearly fees.

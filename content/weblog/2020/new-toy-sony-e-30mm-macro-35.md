@@ -3,9 +3,6 @@ title: 'New toy: Sony E 30mm 3.5 Macro'
 date: "2020-06-20T11:46:21+02:00"
 tags:
 - photography
-- sonye
-- lens
-- macro
 - 100daystooffload
 ---
 

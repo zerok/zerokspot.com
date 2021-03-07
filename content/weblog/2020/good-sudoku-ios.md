@@ -2,9 +2,7 @@
 title: Good Sudoku (iOS)
 date: "2020-07-26T19:55:19+02:00"
 tags:
-- game
-- puzzle
-- sudoku
+- gaming
 - ios
 - 100daystooffload
 ---

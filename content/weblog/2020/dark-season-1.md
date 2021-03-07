@@ -3,11 +3,8 @@ title: Dark (Season 1)
 date: "2020-08-21T11:29:30+02:00"
 tags:
 - netflix
-- show
-- mystery
+- tv-show
 - scifi
-- german
-- dark
 rating: 5
 ---
 

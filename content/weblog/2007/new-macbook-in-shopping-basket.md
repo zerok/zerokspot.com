@@ -3,11 +3,7 @@ date: '2007-11-04T12:00:00-00:00'
 language: en
 tags:
 - apple
-- hardware
-- macbook
-- parallels
-- shopping
-- vmware
+- macos
 title: New MacBook in the shopping basket
 ---
 

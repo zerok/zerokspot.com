@@ -2,9 +2,8 @@
 date: '2007-12-30T12:00:00-00:00'
 language: en
 tags:
-- gear
-- halo3
-- swag
+- gaming
+- bags
 title: Halo 3 Messenger Bag
 ---
 

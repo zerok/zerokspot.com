@@ -2,9 +2,7 @@
 date: '2008-03-12T12:00:00-00:00'
 language: en
 tags:
-- firebug
-- firefox
-- firefox3
+- software-release
 title: A day with Firefox 3
 ---
 

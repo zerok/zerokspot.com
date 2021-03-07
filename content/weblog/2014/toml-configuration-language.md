@@ -2,8 +2,6 @@
 date: '2014-09-09T22:16:53+02:00'
 language: en
 tags:
-- toml
-- configuration
 - development
 title: TOML - The other configuration language
 ---

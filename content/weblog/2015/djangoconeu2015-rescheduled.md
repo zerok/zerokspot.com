@@ -2,9 +2,9 @@
 date: '2015-01-13T19:14:04+01:00'
 language: en
 tags:
-- djangoconeu2015
 - djangocon
-- conference
+- django
+- conferences
 title: DjangoCon Europe 2015 Rescheduled
 ---
 

@@ -2,9 +2,7 @@
 date: '2009-03-08T12:00:00-00:00'
 language: en
 tags:
-- bitbucket
-- markup
-- readme
+- opensource
 title: Marked up README on bitbucket
 ---
 

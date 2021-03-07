@@ -2,10 +2,8 @@
 date: '2006-09-04T12:00:00-00:00'
 language: en
 tags:
-- blizzard
 - gaming
-- mac
-- starcraft
+- macos
 title: Getting Starcraft for Mac ... Or dying trying
 ---
 

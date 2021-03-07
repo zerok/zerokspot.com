@@ -2,9 +2,8 @@
 title: "Will Smith in 4D"
 date: 2019-10-05T11:49:03+02:00
 tags:
-- movie
+- movies
 - review
-- mx4d
 ---
 
 For about a year now the [cinema next to my apartment][cp] has offered

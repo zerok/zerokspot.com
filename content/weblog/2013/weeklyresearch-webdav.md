@@ -2,10 +2,7 @@
 date: '2013-09-07T23:33:53+02:00'
 language: en
 tags:
-- webdav
 - weeklyresearch
-- http
-- ietf
 title: 'Weekly Research: WebDAV'
 ---
 

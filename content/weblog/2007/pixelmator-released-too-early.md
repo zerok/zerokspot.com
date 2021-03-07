@@ -2,9 +2,8 @@
 date: '2007-09-26T12:00:00-00:00'
 language: en
 tags:
-- app
-- mac
-- pixelmator
+- macos
+- software-release
 title: Pixelmator released ... too early?
 ---
 

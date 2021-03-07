@@ -2,9 +2,7 @@
 title: "Apple Watch: First impressions"
 date: 2016-12-04T21:26:32+01:00
 tags:
-- apple-watch
-- android-wear
-- pebble
+- apple
 - smartwatches
 ---
 

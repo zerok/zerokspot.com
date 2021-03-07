@@ -2,7 +2,7 @@
 date: '2005-05-21T12:00:00-00:00'
 language: en
 tags:
-- openbox
+- linux
 title: OpenBox WITH first menuitem selected
 ---
 

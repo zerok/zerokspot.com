@@ -4,9 +4,6 @@ language: en
 tags:
 - development
 - documentation
-- saltstack
-- vault
-- vagrant
 title: Awesome Tutorials
 ---
 

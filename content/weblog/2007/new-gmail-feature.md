@@ -2,8 +2,7 @@
 date: '2007-12-04T12:00:00-00:00'
 language: en
 tags:
-- gmail
-- labels
+- software-release
 title: New GMail feature
 ---
 

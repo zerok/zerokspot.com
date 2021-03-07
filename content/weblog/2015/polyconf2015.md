@@ -2,10 +2,10 @@
 date: '2015-07-08T19:41:50+02:00'
 language: en
 tags:
-- travel
+- traveling
 - polyconf
 - poznan
-- conference
+- conferences
 title: Back from PolyConf 2015
 ---
 

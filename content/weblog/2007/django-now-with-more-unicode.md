@@ -2,10 +2,7 @@
 date: '2007-07-05T12:00:00-00:00'
 language: en
 tags:
-- development
 - django
-- unicode
-- web
 title: Django now with more Unicode
 ---
 

@@ -2,10 +2,7 @@
 date: '2008-02-13T12:00:00-00:00'
 language: en
 tags:
-- cglib
-- hibernate
-- json
-- json-lib
+- java
 title: Json-lib vs. CGLib Proxies - 1:0
 ---
 

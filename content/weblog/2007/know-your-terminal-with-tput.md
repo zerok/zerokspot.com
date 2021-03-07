@@ -3,9 +3,6 @@ date: '2007-03-04T12:00:00-00:00'
 language: en
 tags:
 - programming
-- shell
-- terminal
-- tput
 title: Know your terminal with tput
 ---
 

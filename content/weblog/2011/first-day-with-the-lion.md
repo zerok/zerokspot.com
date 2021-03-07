@@ -3,8 +3,7 @@ date: '2011-07-22T12:00:00-00:00'
 language: en
 tags:
 - apple
-- lion
-- osx
+- macos
 title: First day with the Lion
 ---
 

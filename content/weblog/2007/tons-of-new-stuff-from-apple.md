@@ -3,10 +3,7 @@ date: '2007-08-07T12:00:00-00:00'
 language: en
 tags:
 - apple
-- ilife
-- imac
-- iphoto
-- keyboard
+- macos
 title: Tons of new stuff from Apple
 ---
 

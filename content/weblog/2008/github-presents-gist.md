@@ -2,8 +2,6 @@
 date: '2008-07-22T12:00:00-00:00'
 language: en
 tags:
-- gist
-- git
 - github
 title: Github presents Gist
 ---

@@ -3,10 +3,8 @@ date: '2014-07-14T20:33:33+02:00'
 language: en
 rating: 2
 tags:
-- knack
-- ps4
 - gaming
-- review
+- reviews
 title: Knack reviewed
 ---
 

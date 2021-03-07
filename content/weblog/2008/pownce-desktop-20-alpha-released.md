@@ -2,10 +2,7 @@
 date: '2008-07-12T12:00:00-00:00'
 language: en
 tags:
-- air
-- app
-- pownce
-- powncemonkey
+- software-release
 title: Pownce Desktop 2.0 alpha released
 ---
 

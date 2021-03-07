@@ -5,8 +5,6 @@ date: 2020-05-26T08:33:35+0200
 tags:
 - prometheus
 - monitoring
-- node_exporter
-- opensource
-- release
+- software-release
 ---
 

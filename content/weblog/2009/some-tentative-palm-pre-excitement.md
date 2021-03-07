@@ -2,8 +2,7 @@
 date: '2009-01-11T12:00:00-00:00'
 language: en
 tags:
-- palm
-- pre
+- hardware
 title: Some tentative Palm Pre excitement
 ---
 

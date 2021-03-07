@@ -4,11 +4,6 @@ date: "2020-09-19T22:24:31+02:00"
 tags:
 - linux
 - unix
-- locking
-- advisorylocking
-- syscall
-- fcntl
-- flock
 ---
 
 Many folks have their first contact with file-locking when it goes wrong and a lock is flying around that should no longer relevant. In general, lock-files are used to prevent two processes or threads from doing the same operation. An extreme example is to prevent two processes from reading a file at the same time.

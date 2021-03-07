@@ -2,10 +2,7 @@
 title: Personal blogging, corporate walls
 date: "2020-05-25T08:53:27+02:00"
 tags:
-- personal
 - blogging
-- platforms
-- rant
 - 100daystooffload
 ---
 

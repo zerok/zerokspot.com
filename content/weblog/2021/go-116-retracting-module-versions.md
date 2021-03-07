@@ -2,7 +2,6 @@
 title: "Go 1.16: Retracting module versions"
 tags:
 - golang
-- releasemanagement
 - 100daystooffload
 date: "2021-02-03T19:00:00+01:00"
 incoming:

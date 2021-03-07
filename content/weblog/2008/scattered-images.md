@@ -3,7 +3,6 @@ date: '2008-02-23T12:00:00-00:00'
 language: en
 tags:
 - photography
-- scatteredimages
 title: Scattered Images
 ---
 

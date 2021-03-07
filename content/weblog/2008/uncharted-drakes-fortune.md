@@ -4,9 +4,7 @@ language: en
 rating: 4
 tags:
 - gaming
-- playstation3
-- review
-- uncharted
+- reviews
 title: 'Uncharted: Drake''s Fortune'
 ---
 

@@ -2,7 +2,6 @@
 title: "Timezone data in Go"
 date: "2019-12-05T20:48:00+01:00"
 tags:
-- tzinfo
 - golang
 - development
 incoming:

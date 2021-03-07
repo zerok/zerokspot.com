@@ -3,8 +3,6 @@ date: '2012-02-05T12:00:00-00:00'
 language: en
 tags:
 - android
-- ics
-- galaxynexus
 title: Getting to know Android
 ---
 

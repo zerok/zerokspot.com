@@ -4,10 +4,6 @@ date: "2020-07-29T17:24:23+02:00"
 tags:
 - 100daystooffload
 - fountainpens
-- pens
-- lamy
-- ink
-- collection
 ---
 
 As you might have noticed, I’m more and more writing about pens and especially fountain pens here. My light obsession with pen & paper has now finally reached a point where I also started referring to my set of fountain pens as a “collection”. It’s not a “fancy collection” yet and there is still hope that it will never get to this point but I now have 3 pens in active use. (+1 that’s inactive at the moment) each with a different purpose:

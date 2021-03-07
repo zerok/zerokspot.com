@@ -3,10 +3,7 @@ date: '2006-08-11T12:00:00-00:00'
 language: en
 tags:
 - apple
-- mac
-- macbreak
-- podcast
-- twit
+- podcasts
 title: TWiT launches "MacBreak Weekly"
 ---
 

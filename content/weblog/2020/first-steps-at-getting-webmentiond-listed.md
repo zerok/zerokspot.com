@@ -3,7 +3,7 @@ title: First steps at getting webmentiond listed
 date: "2020-07-04T09:12:54+02:00"
 tags:
 - webmentiond
-- w3c
+- web
 - community
 - 100daystooffload
 ---

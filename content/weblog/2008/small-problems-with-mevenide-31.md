@@ -2,10 +2,7 @@
 date: '2008-05-23T12:00:00-00:00'
 language: en
 tags:
-- maven
-- mevenide
-- netbeans
-- problem
+- java
 title: Small problems with Mevenide 3.1
 ---
 

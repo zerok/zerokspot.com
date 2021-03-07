@@ -3,7 +3,7 @@ date: '2008-01-12T12:00:00-00:00'
 language: en
 tags:
 - django
-- tagging
+- software-release
 title: django-tagging 0.2
 ---
 
