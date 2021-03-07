@@ -4,6 +4,8 @@ date: "2021-03-07T17:10:49+01:00"
 tags:
 - gaming
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105849400683325825
 ---
 
 Today I wanted, for the first time in a while, play something from my video game backlog again. During the holiday sale on Steam I had gotten [Control](https://store.steampowered.com/app/870780/Control_Ultimate_Edition/) simply because it looked like something that would be pretty much up my alley: Mystery, conspiracy, action, a bit of horror. If you haven’t heard of the game before, take a look at [this trailer](https://www.youtube.com/watch?v=w6bE11FrSFM) from last year.
