@@ -4,6 +4,8 @@ date: "2021-03-09T18:40:20+01:00"
 tags:
 - side-projects
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105861107110361910
 ---
 
 For the last couple of months I’ve had a side-project on the back burner that should allow me to consume some Instagram accounts via RSS. I’ve previously tried some third party services like [rss.app](https://rss.app/) but simply wasn’t willing to pay for yet another subscription just for getting updates to 2-3 Instagram accounts…
