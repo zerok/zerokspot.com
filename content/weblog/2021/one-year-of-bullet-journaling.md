@@ -5,6 +5,8 @@ tags:
 - bulletjournal
 - 100daystooffload
 - journaling
+incoming:
+- url: https://chaos.social/@zerok/105881726748487087
 ---
 
 Exactly 12 months ago, right when the pandemic started to hit Austria and in the first weeks of my educational leave, I started replacing GTD with bullet journaling as the primary method to organise my life. I’ve already written about the actual move back then and also in my updates after [two](https://zerokspot.com/weblog/2020/05/13/two-month-bulletjournaling/) and [six](https://zerokspot.com/weblog/2020/09/13/six-months-of-bullet-journaling/) months so I will try to only write here about what has changed since then 😀
