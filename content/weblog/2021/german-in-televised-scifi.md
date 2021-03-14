@@ -6,6 +6,8 @@ tags:
 - netflix
 - 100daystooffload
 - localization
+incoming:
+- url: https://chaos.social/@zerok/105888261857311001
 ---
 
 Last night I started watching [“Tribes of Europe”](https://en.wikipedia.org/wiki/Tribes_of_Europa), a new sci-fi show on Netflix. It is 2074 and after a global blackout all of Europe has fractured into tiny states with completely different cultures and value models called “Tribes”. The show was produced in Germany with German as the source language. Sadly, this has also led to some weird language mixes that have started to really get on my nerves over the last couple of years.
