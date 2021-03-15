@@ -1,10 +1,12 @@
 ---
-title: “The subtle art of not giving a f\*ck” by Mark Manson
+title: “The subtle art of not giving a f*ck” by Mark Manson
 date: "2021-03-15T17:56:00+01:00"
 tags:
 - 100daystooffload
 - reviews
 - books
+incoming:
+- url: https://chaos.social/@zerok/105894878120092062
 rating: 2
 ---
 
