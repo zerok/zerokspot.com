@@ -5,6 +5,8 @@ tags:
 - golang
 - gograz
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105900623138286825
 ---
 
 Last night we once again had our [monthly Go meetup](https://gograz.org/meetup/2021-03-15/) for the local community in Graz! Same as in February we also had a presentation thanks to [Christoph](https://tux21b.org/) who gave us a little tour of [Gio](https://gioui.org/), a toolkit for Go which allows for a very low-level yet convenient way to create GUI applications on Windows, macOS, Linux, Android, and even iOS. Oh, and you can even compile the applications into WebAssembly!
