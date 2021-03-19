@@ -1,5 +1,5 @@
 ---
-title: Japanese ink search for fitting pen
+title: Japanese ink searching for fitting pen
 date: "2021-03-19T18:41:15+01:00"
 tags:
 - inks
