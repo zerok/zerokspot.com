@@ -9,7 +9,7 @@ incoming:
 - url: https://chaos.social/@zerok/105934677573705196
 ---
 
-Last night at the FSF’s community conference [RMS announced](https://www.theregister.com/2021/03/22/richard_stallman_back_on_fsf_board/) that we was now back on the board of the FSF. He resigned in 2019 after some of his statements about Marvin Minsky and Jeffrey Epstein. 
+Last night at the FSF’s community conference [RMS announced](https://www.theregister.com/2021/03/22/richard_stallman_back_on_fsf_board/) that we was now back on the board of the FSF. He resigned in 2019 after some of his statements about Marvin Minsky and Jeffrey Epstein sparked a loud outcry and protests by large parts of the Free Software and Open Source cummunity. 
 
 Honestly? I think it’s a bad idea for him to return into any kind of leadership position at the FSF given his communication style. He did (and perhaps still does) lots of important work on the technical side of things but his messaging in the past has quite often been ... unfortunate, to put it mildly, even if I ignore some of his social comments. But also the FSF as a whole seems to be somehow living in the past regarding how to communicate important decisions (and yes, someone like RMS returning to the board is important - either good or bad).
 
