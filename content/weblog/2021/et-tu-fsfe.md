@@ -5,6 +5,8 @@ tags:
 - freesoftware
 - community
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/105940070310126827
 ---
 
 In [yesterday’s post](https://zerokspot.com/weblog/2021/03/22/rms-is-back-on-the-fsf-board/) I wrote that the FSFE has a more modern image compared to the FSF. I got that impression after seeing them every year at FOSDEM and the Chaos Communication Congress, and also following at least some of their work (e.g. [Public Money? Public Code!](https://fsfe.org/activities/publiccode/publiccode.en.html)).
