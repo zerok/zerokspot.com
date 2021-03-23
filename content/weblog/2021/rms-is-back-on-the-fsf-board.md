@@ -17,8 +17,10 @@ As [Kev](https://kevq.uk/my-thoughts-on-richard-stallmans-return-to-the-fsf-boar
 
 > We were working on a video to announce this…but that turned out to be difficult. We didn’t have experience doing that sort of thing.
 
-It’s just unprofessional and out of touch. At this point I’m more happy than ever that the FSFE (disclaimer: I’m a donating member there) is so completely different from the FSF. I think the core values of Free Software are important and will continue to be so in the future. These values need to be clearly and attractively communicated, though. This message should not be mixed with entitled, toxic communications that just make the whole movement look like something that is stuck in the past.
+It’s just unprofessional and out of touch. ~~At this point I’m more happy than ever that the FSFE (disclaimer: I’m a donating member there) is so completely different from the FSF. I think the core values of Free Software are important and will continue to be so in the future.~~ These values need to be clearly and attractively communicated, though. This message should not be mixed with entitled, toxic communications that just make the whole movement look like something that is stuck in the past.
 
-The Free Software Foundation Europe, on the other hand, feels just friendlier and more modern and the FSF would do good to immitate their European sister organisation in some areas if they want to stay relevant.
+~~The Free Software Foundation Europe, on the other hand, feels just friendlier and more modern and the FSF would do good to immitate their European sister organisation in some areas if they want to stay relevant.~~
 
 Moves like adding RMS back to the board after him leaving just 1.5 years ago doesn't help here. Instead it tells everyone in the industry that the FSF will just stay the same as it has been in the past.
+
+**Update:** After reading some articles about recent and not do recent incidents at the FSFE I've decided to remove the praise in the article and suspend further donations.
