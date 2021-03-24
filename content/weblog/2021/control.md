@@ -5,6 +5,7 @@ tags:
 - gaming
 - reviews
 - 100daystooffload
+rating: 5
 ---
 
 [Two weeks ago](https://zerokspot.com/weblog/2021/03/07/not-the-time-for-control/) I had already written about a game I had wanted to try: [Control](https://store.steampowered.com/app/870780/Control_Ultimate_Edition/). After a turbulent week I then spent an hour or two pretty much every evening last week within its world. Today, after around 14 hours, I finished the main storyline.
