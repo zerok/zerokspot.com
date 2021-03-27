@@ -4,7 +4,7 @@ all: bin/blog $(main_js)
 
 .PHONY: test
 test:
-	go test ./... -v
+	go test -mod=mod ./... -v
 
 prepare:
 	yarn
