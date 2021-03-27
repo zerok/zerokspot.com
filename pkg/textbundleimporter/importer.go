@@ -46,7 +46,8 @@ func (i *Importer) processBody(text string, now time.Time) string {
 		if idx == 0 && strings.HasPrefix(line, "# ") {
 			fm.Title = strings.TrimPrefix(line, "# ")
 		} else {
-			if len(inputLines)-1 == idx && strings.HasPrefix(line, "#") {
+			if len(inputLines)-1 == idx && (strings.HasPrefix(line, "#") || strings.HasPrefix(line, "%% #")) {
+				line = strings.TrimPrefix(line, "%% ")
 				for _, t := range strings.Split(line, " ") {
 					tag := strings.TrimPrefix(t, "#")
 					if len(tag) > 0 {
