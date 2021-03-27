@@ -24,6 +24,6 @@ func TestGoodReadsContent(t *testing.T) {
 	t.Run("simple", func(t *testing.T) {
 		e := goodReadsEntry{}
 		e.Title = "Hello World (Strange new worlds #123)"
-		require.Equal(t, "---\ntitle: 'Hello World (Strange new worlds #123)'\n---\n", generateBookContent(e))
+		require.Equal(t, "---\ntitle: 'Hello World (Strange new worlds #123)'\ntype: book\n---\n", generateBookContent(e))
 	})
 }
