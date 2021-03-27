@@ -28,6 +28,28 @@ func TestImportBundle(t *testing.T) {
 		require.Error(t, err)
 	})
 
+	t.Run("tags", func(t *testing.T) {
+		now := time.Date(2021, 03, 20, 12, 13, 14, 0, time.UTC)
+		path := createTestRepo(t, "something")
+		fp, err := os.OpenFile(filepath.Join(path, "test.textpack"), os.O_CREATE|os.O_TRUNC|os.O_WRONLY, 0600)
+		require.NoError(t, err)
+		w := textbundle.NewWriter(fp)
+		w.SetText("md", "Hello world\n\n#tag1 #tag2")
+		w.Close()
+		fp.Close()
+
+		i := New(path)
+		// First with UTC
+		i.Now = now.In(time.UTC)
+		err = i.Import(ctx, filepath.Join(path, "test.textpack"), "")
+		require.NoError(t, err)
+		expectedFile := filepath.Join(path, "content", "weblog", i.Now.Format("2006"), "test.md")
+		fileContent, err := ioutil.ReadFile(expectedFile)
+		require.NoError(t, err)
+		require.Equal(t, "---\ntitle: \"\"\ndate: \"2021-03-20T12:13:14Z\"\ntags:\n- tag1\n- tag2\n---\nHello world\n", string(fileContent))
+
+	})
+
 	t.Run("timezone", func(t *testing.T) {
 		now := time.Now()
 		path := createTestRepo(t, "something")
