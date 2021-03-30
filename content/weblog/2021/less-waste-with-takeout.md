@@ -4,6 +4,8 @@ date: "2021-03-30T20:05:28+02:00"
 tags:
 - 100daystooffload
 - environment
+incoming:
+- url: https://chaos.social/@zerok/105980085737874890
 ---
 
 Since restaurants are still closed in Austria apart from offering take-out and delivery a certain part of all the meals I’m consuming comes in boxes either picked up by myself or through a delivery service. The amount of waste these boxes produce is considerable and so I’m always extremely happy when a restaurant cares and uses biodegradable packaging.
