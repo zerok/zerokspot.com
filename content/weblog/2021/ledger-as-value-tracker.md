@@ -4,6 +4,8 @@ date: "2021-04-02T14:08:10+02:00"
 tags:
 - 100daystooffload
 - finances
+incoming:
+- url: https://chaos.social/@zerok/105995961755000543
 ---
 
 I just realised that [ledger](https://www.ledger-cli.org/), the tool that I’m using to track my income and expenses, can also be used to keep track of the value of your assets over time! For me this is mostly interesting because of some of the crypto coins I have. Internally, this feature relies on a separate price-db which can be just a simple text file with a structure like this:
