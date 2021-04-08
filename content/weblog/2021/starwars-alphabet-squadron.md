@@ -7,6 +7,7 @@ tags:
 - starwars
 - scifi
 - 100daystooffload
+rating: 4
 ---
 
 It’s been quite a while since I’ve read any Star Trek or Star Wars book but this one had been on my list long enough and after playing [Star Wars: Squadrons](https://zerokspot.com/weblog/2021/01/10/star-wars-squadrons/) I simply had to read it! [“Alphabet Squadron”](https://starwars.fandom.com/wiki/Alphabet_Squadron_(novel)) tells the story of [Yrica Quell](https://starwars.fandom.com/wiki/Yrica_Quell), a TIE pilot that defects a few months after the [Battle of Endor](https://starwars.fandom.com/wiki/Battle_of_Endor). All she wants is to fly but first she has to earn some trust of the New Republic and New Republic Intelligence in particular. And how better to do that than to help them hunt her former squad-mates who are still continuing the battle for the Empire?
