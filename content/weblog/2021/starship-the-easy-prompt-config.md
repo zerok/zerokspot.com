@@ -5,6 +5,8 @@ tags:
 - tools
 - 100daystooffload
 - rust
+incoming:
+- url: https://chaos.social/@zerok/106036954835899622
 ---
 
 [Starship.rs](https://starship.rs/config/#custom-commands) is a little tool
