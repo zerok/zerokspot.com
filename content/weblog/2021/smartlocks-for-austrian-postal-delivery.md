@@ -4,6 +4,9 @@ date: "2021-04-12T19:55:00+02:00"
 tags:
 - smartlocks
 - smarthome
+- security
+- privacy
+- 100daystooffload
 ---
 
 According to [this article on "Der Standard"][ds] the [Austrian postal
