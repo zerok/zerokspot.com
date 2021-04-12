@@ -7,6 +7,9 @@ tags:
 - security
 - privacy
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/106053687876016598
+- url: https://twitter.com/zerok/status/1381670407061839873
 ---
 
 According to [this article on "Der Standard"][ds] the [Austrian postal
