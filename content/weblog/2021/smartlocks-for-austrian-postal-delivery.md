@@ -39,7 +39,7 @@ delivering to your garage.
 
 I don't think that ÖPAG will do much better here. Why you would give a delivery
 person access to your home is beyond me. There are just so many aspects of that
-idea that make me kringe. Who is responsible that the camera only records if
+idea that make me cringe. Who is responsible that the camera only records if
 the door has been opened by the delivery service? Where are the recordings
 stored?  Are there recordings? Are they admissible at a court if lock is
 abused? The camera is provided by the ISP A1, what if you are with some other
