@@ -5,6 +5,8 @@ tags:
 - 100daystooffload
 - rss
 - feedbin
+incoming:
+- url: https://chaos.social/@zerok/106065373083221534
 ---
 
 [A year ago](https://zerokspot.com/weblog/2020/03/26/feedbin/) I made the switch from Feedly to [Feedbin](https://feedbin.com/). There’s actually not much to report since it’s still working as expected and does all that I want it to do. In January they also added a [better rendering for embedded YouTube videos](https://feedbin.com/blog/2021/01/21/youtube-embeds/). Since I use my feedreader also to subscribe to YouTube channels, that was a very welcome change!
