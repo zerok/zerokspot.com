@@ -6,6 +6,9 @@ tags:
 - reviews
 - scifi
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/106096079399349902
+- url: https://twitter.com/zerok/status/1384383741255110657
 ---
 
 It’s around the end of the 21st century and after a lot of crisis the world of [Infomocracy](https://publishing.tor.com/infomocracy-malkaolder/9780765392367/) is no longer organised in countries but into so-called “centenals” with 100,000 citizens each and their own governments. In this micro-democracy, every ten years citizens can elect a government for their centenal.
