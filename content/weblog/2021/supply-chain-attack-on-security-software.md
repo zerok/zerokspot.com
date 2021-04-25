@@ -5,6 +5,8 @@ tags:
 - security
 - news
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/106126026592321029
 ---
 
 Last Friday [the news hit](https://arstechnica.com/gadgets/2021/04/hackers-backdoor-corporate-password-manager-and-steal-customer-data/) that Passwordstate, a password manager that is mostly used in corporate environments for shared password lists, has been successfully attacked through a their update mechanism. Around 29,000 users may have been affected here with potentially all secrets stored in their respective Passwordstate installation having been compromised. 
