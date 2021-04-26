@@ -9,7 +9,7 @@ incoming:
 - url: https://chaos.social/@zerok/106126026592321029
 ---
 
-Last Friday [the news hit](https://arstechnica.com/gadgets/2021/04/hackers-backdoor-corporate-password-manager-and-steal-customer-data/) that Passwordstate, a password manager that is mostly used in corporate environments for shared password lists, has been successfully attacked through a their update mechanism. Around 29,000 users may have been affected here with potentially all secrets stored in their respective Passwordstate installation having been compromised. 
+Last Friday [the news hit](https://arstechnica.com/gadgets/2021/04/hackers-backdoor-corporate-password-manager-and-steal-customer-data/) that Passwordstate, a password manager that is mostly used in corporate environments for shared password lists, has been successfully attacked through their update mechanism. Around 29,000 users may have been affected here with potentially all secrets stored in their respective Passwordstate installation having been compromised. 
 
 Details on the attack itself are sparse but it looks like the attackers were able to manipulate an update file provided by [Click Studios](https://www.clickstudios.com.au/), the company behind Passwordstate. An administrator that downloaded that update file from the official update site between April 20 and April 22 and install the update file hasn’t only installed the update but also a malware client on their servers that submits various data sets to the attackers. 
 
