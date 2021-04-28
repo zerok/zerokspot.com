@@ -4,6 +4,9 @@ date: "2021-04-28T21:44:09+02:00"
 tags:
 - emacs
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/106144679902769628
+- url: https://twitter.com/zerok/status/1387493921350160385
 ---
 
 One thing that has driven me mad over the last months was the default indentation that [Org Mode](https://orgmode.org/) applies whenever you write something below a headline. Basically, content is always indented to visualise the hierarchy of the content. This is useful for outlining but I mostly use to Org for general note-taking (and even long-form writing from time to time) and there this default behaviour simply didn’t fit my writing style 🙂
