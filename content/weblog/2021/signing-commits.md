@@ -5,6 +5,8 @@ tags:
 - 100daystooffload
 - git
 - gitlab
+incoming:
+- url: https://chaos.social/@zerok/106167416815152723
 ---
 
 When you look through a commit log in Git, you always see the name and the e-mail address of the author/committer. Sadly, as a consumer of such changelogs you cannot be sure that the name and address are valid or even be owned by the actual author of a commit. Nothing can stop me from doing a commit with the following command:
