@@ -5,6 +5,7 @@ tags:
 - movies
 - reviews
 - 100daystooffload
+rating: 5
 ---
 
 [Parasite](https://en.wikipedia.org/wiki/Parasite_(2019_film)) is a South-Korean movie directed by [Bong Joon-ho](https://en.wikipedia.org/wiki/Bong_Joon-ho), who you mind know from his work on [Snowpiercer](https://en.wikipedia.org/wiki/Snowpiercer). It was released in 2019 and received a Palme d’Or at the Cannes Film Festival, which is when I first noticed it. Last Friday, we finally were in the mood for a movie night again and this was the last out of three movies we picked.
