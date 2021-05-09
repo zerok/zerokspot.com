@@ -7,6 +7,8 @@ tags:
 - applearcade
 - solitaire
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/106199668321332116
 rating: 5
 ---
 
