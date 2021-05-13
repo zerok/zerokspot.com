@@ -6,6 +6,8 @@ tags:
 - golang
 - 100daystooffload
 - concurrency
+incoming:
+- url: https://chaos.social/@zerok/106227216140026354
 ---
 
 When having whole groups of goroutines it gets quite tedious to always write the logic around error handling. Luckily, there is the [x/sync/errgroup](https://pkg.go.dev/golang.org/x/sync/errgroup) package which allows you things like cancelling the whole group if a single one returns with an error:
