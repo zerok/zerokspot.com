@@ -5,6 +5,8 @@ tags:
 - 100daystooffload
 - netflix
 - documentary
+incoming:
+- url: https://chaos.social/@zerok/106235370369982751
 ---
 
 Today I watched one of the most touching documentaries I’ve seen in a while. [My Octopus Teacher](https://en.wikipedia.org/wiki/My_Octopus_Teacher) follows film-maker Craig Foster as he picks up a childhood habit of diving again and comes across an octopus. Eventually they become accustomed to each other. In daily diving sessions he comes to learn all about the life of the octopus and find his place in that ecosystem. 
