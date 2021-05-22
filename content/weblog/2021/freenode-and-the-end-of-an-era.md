@@ -7,6 +7,8 @@ tags:
 - 100daystooffload
 - freenode
 - liberachat
+incoming:
+- url: https://chaos.social/@zerok/106280142029692528
 ---
 
 I have no idea how long I’ve been on [Freenode](https://en.wikipedia.org/wiki/Freenode). Back when I started with/on/for OpenSource projects like OpenBB and phpBB in the early 2000s, the IRC network mostly if not exclusively run by volunteers was the place where contributors and users could meetup up to exchange ideas or get help. No matter what project you were playing around with, there was a good chance its developers were also on Freenode and so you could easily get help if you were stuck somewhere.
