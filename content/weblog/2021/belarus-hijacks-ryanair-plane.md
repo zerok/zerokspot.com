@@ -5,6 +5,8 @@ tags:
 - europe
 - news
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/106291655143549036
 ---
 
 Just think about what happened yesterday. Belarus diverted a Ryanair machine from one EU capital (Athens) to another (Vilnius) 30km before leaving their airspace due a “bomb threat”, using a MIG-29. Seven hours after the plane was allowed to take off again but now five passengers were missing. Among them: Blogger and critic of the Belarusian government/regime Roman Protassewitsch.
