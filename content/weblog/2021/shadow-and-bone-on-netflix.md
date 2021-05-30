@@ -6,6 +6,9 @@ tags:
 - fantasy
 - shows
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/106320639770272679
+- url: https://twitter.com/zerok/status/1398755312941862914
 ---
 
 I haven’t read the [books](https://en.wikipedia.org/wiki/Shadow_and_Bone) but the trailer for the TV adaptation of “Shadow and Bone” looked intriguing enough that we started watching the show on Friday evening. Season 1 has 8 episodes so it only took us two evenings to finish it and the time was well spent! 
