@@ -6,6 +6,9 @@ tags:
 - security
 - privacy
 - amazon
+incoming:
+- url: https://chaos.social/@zerok/106337065185932096
+- url: https://twitter.com/zerok/status/1399806953300410371
 ---
 
 A couple of days ago, [arstechnica](https://arstechnica.com/gadgets/2021/05/amazon-devices-will-soon-automatically-share-your-internet-with-neighbors/) published a story about Amazon experimentally enabling their Sidewalk service for their consumer devices like the Echo in the US starting on June 8. What does this do? It basically shares a part of your internet connection with devices in the vicinity that are offline.
