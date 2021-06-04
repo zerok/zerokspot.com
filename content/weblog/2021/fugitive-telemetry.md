@@ -7,6 +7,9 @@ tags:
 - books
 - scifi
 - murderbot
+rating: 4
+incoming:
+- url: https://chaos.social/@zerok/106352713968668448
 ---
 
 Right before completely freaking out due to learning, working, and reading technical literature I thought it was time to read something lighter. Luckily, my backlog isn’t exactly small and since it contained the latest entry in the Murderbot series it was rather easy to find something to relax 😅
