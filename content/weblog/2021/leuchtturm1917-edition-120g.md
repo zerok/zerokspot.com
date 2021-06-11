@@ -5,6 +5,8 @@ tags:
 - 100daystooffload
 - journaling
 - notebooks
+incoming:
+- url: https://chaos.social/@zerok/106392095041934307
 ---
 
 A couple of days ago, [Leuchtturm1917](https://www.leuchtturm1917.de/), the company behind my favourite notebooks right now, announced that they’d now also produce notebooks with a thicker paper which should work better for fountain-pens, markers, and wetter pens in general. (Thanks to [u/Anon13785432](https://www.reddit.com/r/bujo/comments/nq57pj/notebooks_for_bujo_with_fountain_pens/h0cywix/?utm_source=reddit&utm_medium=web2x&context=3) for noticing that!)

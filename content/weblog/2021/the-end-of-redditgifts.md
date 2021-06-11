@@ -4,6 +4,9 @@ date: "2021-06-10T18:50:36+02:00"
 tags:
 - reddit
 - secretsanta
+- 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/106387482479245027
 ---
 
 When I woke up today and looked through my e-mails that had come in over night I basically wanted to go to bed again: Reddit had announced that they’d sunset RedditGifts, the platform behind the yearly Secret Santa event there.

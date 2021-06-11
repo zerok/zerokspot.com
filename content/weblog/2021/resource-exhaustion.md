@@ -3,6 +3,8 @@ title: Resource exhaustion
 date: "2021-06-09T20:50:45+02:00"
 tags:
 - 100daystooffload
+incoming:
+- url: https://chaos.social/@zerok/106386272619704719
 ---
 
 In 2019 that was the slogan of the [36th Chaos Communication Congress](https://www.ccc.de/en/updates/2019/36c3-in-leipzig) in Leipzig and to this day I still carry the admittance band. Everybody should know their limits and thereby this kind of attack against themselves.
