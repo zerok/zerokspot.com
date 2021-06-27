@@ -6,7 +6,10 @@ tags:
 - 100daystooffload
 - nintendo
 - nintendoswitch
+- reviews
 rating: 3
+incoming:
+- url: https://chaos.social/@zerok/106481729002518531
 ---
 
 Usually I don’t enjoy sports games with one exception: Nintendo sports games. I think the only golf game, for instance, that I played and also enjoyed as a kid was [Golf](https://nintendo.fandom.com/wiki/Golf_(video_game)) for the original Gameboy. Same for [Ice Hockey](https://nintendo.fandom.com/wiki/Ice_Hockey) or [Soccer](https://nintendo.fandom.com/wiki/Soccer) for the NES and [Tennis](https://nintendo.fandom.com/wiki/Tennis) on the Gameboy again (and don’t get me started about the awesomeness that is everything [Wave Race](https://nintendo.fandom.com/wiki/Wave_Race_64)!). So when Nintendo published a new instalment of their Mario Tennis series for the Switch in 2018 I knew I’d eventually get it.
