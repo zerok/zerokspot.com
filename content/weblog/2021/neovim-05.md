@@ -6,6 +6,8 @@ tags:
 - neovim
 - vim
 - development
+incoming:
+- url: https://chaos.social/@zerok/106595016813374664
 ---
 
 A couple of days ago, [Neovim 0.5](https://neovim.io/news/2021/07) was released. If you’ve never heard of it, it’s a fork of the by now 30 year-old editor VIM (which itself is an improvement of vi which was released in 1976). Neovim now tries to add new features to the editor while staying to Vim wherever possible.
