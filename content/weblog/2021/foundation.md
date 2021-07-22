@@ -6,6 +6,7 @@ tags:
 - reviews
 - scifi
 - 100daystooffload
+rating: 5
 ---
 
 Now that the [Foundation show on AppleTV+](https://tv.apple.com/at/show/foundation/umc.cmc.5983fipzqbicvrve6jdfep4x3) is finally on the horizon (sometime in September) I thought I should read the books again. It’s been around 30 years since I read them for the first time with it being probably my first SciFi book ever. After all this time I only remembered the name Hari Seldon and that the story was spanning a really long time-frame.
