@@ -5,6 +5,7 @@ tags:
 - books
 - reviews
 - 100daystooffload
+rating: 2
 ---
 
 I wanted to up my skills regarding pair-programming while accidentally stumbling about [“Practical pair programming”](https://abookapart.com/products/practical-pair-programming) in the A Book Apart catalog. This one won’t teach you the basics but instead focuses provide you with some tips and tricks for first getting the practice established and then improving your own behaviour to become a better pairing partner. And all that in a very concise way without all that much fluff around it.
