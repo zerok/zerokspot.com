@@ -13,7 +13,7 @@ require (
 	github.com/spf13/cobra v1.1.1
 	github.com/spf13/viper v1.7.1
 	github.com/stretchr/testify v1.6.1
-	github.com/ulikunitz/xz v0.5.5
+	github.com/ulikunitz/xz v0.5.8
 	github.com/zerok/textbundle-go v0.0.0-20200521090826-d11aedee74ff
 	gopkg.in/yaml.v2 v2.4.0
 )
