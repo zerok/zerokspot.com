@@ -6,6 +6,7 @@ tags:
 - reviews
 - comics
 - dc
+rating: 4
 ---
 
 Last week I had the chance to go to [my previous home-cinema](https://www.cineplexx.at/mobile/center/cineplexx-villach/) in Villach after nearly 20 years and watch [“The Suicide Squad”](https://en.wikipedia.org/wiki/The_Suicide_Squad_(film)). Unlike the rest of my viewing party I really enjoyed Harley’s latest adventure on the fictional South American island nation of Corte Maltese. It was goofy, funny, and, as was to be expected, over-the-top violent. Personally, I’d hoped for a bit more story but wasn’t really expected all that much on this front. I was definitely there for the action and the goofiness 😉
