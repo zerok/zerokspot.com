@@ -4,6 +4,7 @@ date: "2021-08-29T10:48:06+02:00"
 tags:
 - books
 - reviews
+rating: 5
 ---
 
 In [Chuck Wendig](http://terribleminds.com/ramble/)’s latest book [“The Book of Accidents”](http://terribleminds.com/ramble/project/the-book-of-accidents/) you follow the story of the Graves family consisting of Nate (father), Maddie (mother), and Oliver (son) as they move from the city to Ramble Rocks into the house of Nate’s father after him passing away.  Right away, strange things start to happen: Animals behaving erratically, Nate seeing the ghost of his much-hated father, Maddie while working as artist on a statue having a black-out, Oliver meeting a boy that look for some reason extremely familiar…
