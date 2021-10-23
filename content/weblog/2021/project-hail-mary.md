@@ -13,4 +13,4 @@ In a sense, Project Hail Mary feels like a clear successor to [The Martian](http
 
 Nobody can really help him there as he is - again similar to the protagonist from The Martian” - all alone. That feeling of loneliness is again very well represented here. It helps you realize once again how a small speck of matter you as a human being are in the grand scheme of things. That and how far away even the closest stars are from Earth.
 
-I guess by now I don’t really have to say that I really enjoyed this one. Sure, it’s not as “novel” as “The Martian” but it improves on nearly every aspect here, increasing the scope once more and simply makes or an awesome read!
+I guess by now I don’t really have to say that I really enjoyed this one. Sure, it’s not as “novel” as “The Martian” but it improves on nearly every aspect here, increasing the scope once more and simply makes for an awesome read!
