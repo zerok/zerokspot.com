@@ -7,6 +7,7 @@ tags:
 - playstation4
 - godofwar
 - sony
+rating: 5
 ---
 
 I’ve had [God of War for the Playstation 4](https://en.wikipedia.org/wiki/God_of_War_(2018_video_game)) lying around for a couple of years now but about a month ago I finally decided to give it a try. The game takes place quite a while after the events of previous God of War games. Kratos has moved to the north where he’s married again and now has a son, Atreus. On her dying bed, Faye, Kratos’ wife had asked that her ashes are scattered at the highest peak. When Kratos is also attacked by a mysterious man who cannot be hurt and barely escapes that encounter, he and Atreus leave their home and begin their journey to fulfil Faye’s last wish.
