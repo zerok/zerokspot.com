@@ -1,6 +1,6 @@
 ---
 title: "One ticket for all public transportation in Austria"
-data: "2021-11-01T17:58:00+01:00"
+date: "2021-11-01T17:58:00+01:00"
 tags:
 - austria
 - climatechange
