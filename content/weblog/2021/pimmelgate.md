@@ -23,6 +23,6 @@ Let’s take a look at the timeline here:
 
 If you think this all sounds like abuse of power and just bullshit in general, you are not wrong. Why did the police think that raiding an apartment three months after an insult was made and the person responsible for that had already confessed, is beyond me. Same as the prosecutors agreeing to it.
 
-During the most recent episode of Logbuch Netzpolitik Linus Neumann mentioned another incident where the Soko Wand und Farbe went out to remove some text in [1994](https://youtu.be/rO6pb6iZgEg). And yes, back then they didn’t a good job either.
+During the most recent episode of Logbuch Netzpolitik Linus Neumann mentioned another incident where the Soko Wand und Farbe went out to remove some text in [1994](https://youtu.be/rO6pb6iZgEg). And yes, back then they didn’t do a good job either.
 
 As of [26 October 2021](https://taz.de/Hamburgs-Pimmelgate/!5811340/) it looks like the story might finally have come to an end. Police said they’d no longer remove the message at Rote Flora. Perhaps this will finally end the [Streisand-effect](https://en.wikipedia.org/wiki/Streisand_effect)... But no matter the outcome, I’d like to thank everyone involved for some great entertainment!
