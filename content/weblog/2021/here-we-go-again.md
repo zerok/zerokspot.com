@@ -12,4 +12,4 @@ The situation is quite dire right now. The number of new infections is exploding
 
 Why are we where we are? Delta, nobody giving a damn about keeping their distance, nobody actually checking your certificates outside of just scanning the QR codes with their eyes (the “Bundesheer method”), [PCR tests that can be done at home](https://test.zmdx.at/) (at least in Styria) are only sent to single lab that is most likely already beyond its capacity, people in Salzburg and Upper Austria who refuse to get vaccinated and their politicians being just … I guess I should stop here. I’m starting to lose all patience with those in our society, that eat the cheapest meat they can find which is probably full of experimental meds but refuse to get vaccinated during a pandemic with something that has by now been tested by billions.
 
-If you can vaccinated and a doctor doesn’t tell you otherwise, please finally do!
+If you are not yet but can get vaccinated and a doctor doesn’t tell you otherwise, please finally do!
