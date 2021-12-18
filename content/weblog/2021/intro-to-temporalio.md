@@ -1,7 +1,10 @@
 ---
 title: Intro to Temporal.io
 date: "2021-12-18T18:07:45+01:00"
-tags: []
+tags:
+- golang
+- microservice
+- temporalio
 ---
 
 About a month ago I listened to [episode #467 of The Changelog](https://changelog.com/podcast/467) where Adam and Jerod interviewed Shawn Wang. During that interview he mentioned a newish project called [Temporal.io](https://temporal.io/) which aims at providing a platform for building and running reliable microservices build around workflows.
