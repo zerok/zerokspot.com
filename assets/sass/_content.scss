@@ -123,10 +123,7 @@
         background: #444;
         color: #EEE;
         padding: 1em;
-        overflow: hidden;
-        &:hover {
-            overflow: auto;
-        }
+        overflow: auto;
     }
 
     .sourcecode pre {
