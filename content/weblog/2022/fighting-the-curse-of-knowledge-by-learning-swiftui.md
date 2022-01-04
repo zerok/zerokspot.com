@@ -4,6 +4,8 @@ date: "2022-01-04T19:26:42+01:00"
 tags:
 - swift
 - swiftui
+incoming:
+- url: https://chaos.social/@zerok/107565614227024722
 ---
 
 This morning I finally read [an article by Sarah Maddox about the connection between the “curse of knowledge” and “imposter syndrome”](https://ffeathers.wordpress.com/2021/08/15/linking-the-curse-of-knowledge-imposter-syndrome-and-metaknowledge/):
