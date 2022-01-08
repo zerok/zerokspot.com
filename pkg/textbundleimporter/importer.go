@@ -123,6 +123,9 @@ func (i *Importer) Import(ctx context.Context, path string, slug string) error {
 	for _, a := range r.Assets {
 		fpath = filepath.Join(i.RepoPath, fmt.Sprintf("static/media/%s/%s", now.Format("2006"), a.Name))
 		logger.Info().Msgf("Creating %s\n", fpath)
+		if err := os.MkdirAll(filepath.Dir(fpath), 0755); err != nil {
+			return fmt.Errorf("Failed to create media folder: %w", err)
+		}
 		ain, err := a.File.Open()
 		if err != nil {
 			return err
