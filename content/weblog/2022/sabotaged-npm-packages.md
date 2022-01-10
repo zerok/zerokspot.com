@@ -5,6 +5,8 @@ tags:
 - sabotage
 - development
 - opensource
+incoming:
+- url: "https://chaos.social/@zerok/107600077629480894"
 ---
 
 A couple of days ago, Marak Squires released version 1.4.44-liberty-2 (and later also 1.4.1 and 1.4.2) of the [colors](https://www.npmjs.com/package/colors) package onto NPM. This is a simple utility library that makes it easy to write output onto a terminal in different colors and formats. It’s widely used as dependency throughout the node eco-system including (for instance)...
@@ -28,3 +30,5 @@ Yes, open source has a huge funding problem and it’s not like we didn’t have
 Especially since there would have been other ways like changing the license. The original author of the *colors* package may certainly have the attention of parts of the developer community, but I guess everyone will in the future think twice about giving him any serious job.
 
 One good thing that might come out of all of that is that hopefully more people will look harder at what’s included in updates to packages not changed for 2 years and pin their dependencies. But that’s about it. Securing (financially *and* technically) is hard and we are just doing a pretty bad job there all around, but you shouldn’t make it worse. Make the situation better, instead!
+
+(I originally stumbled upon this thanks to this article on [bleepingcomputer.com](https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/).)
