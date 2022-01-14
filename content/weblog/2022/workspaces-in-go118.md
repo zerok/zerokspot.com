@@ -4,6 +4,8 @@ date: "2022-01-14T19:16:12+01:00"
 tags:
 - golang
 - development
+incoming:
+- url: https://chaos.social/@zerok/107622198919801998
 ---
 
 While generics are definitely the start of [Go 1.18](https://tip.golang.org/doc/go1.18), the next stable release of the language (or actual the tool) will come with another cool new feature that will make working on multiple dependent packages at the same time much easier: Workspaces!
