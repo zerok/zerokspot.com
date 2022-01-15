@@ -6,6 +6,8 @@ tags:
 - conferences
 - fosdemtogo
 - releases
+incoming:
+- url: https://chaos.social/@zerok/107627852235713705
 ---
 
 [FOSDEM 2022](https://fosdem.org/2022/) is just three weeks away and since today [FosdemToGo](https://apps.apple.com/at/app/fosdemtogo/id1500192366?l=en) can also show you this year’s schedule. I originally wanted to finally automate the check if a schedule is available and unlock it in the app, but I didn’t get to it in time. Perhaps next year 🙃
