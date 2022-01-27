@@ -23,7 +23,7 @@ events = "/events/:year/:filename/"
 
 [outputs]
 weblog = ["html", "json", "rss"]
-page = ["html"]
+page = ["html", "json"]
 photos = ["html", "rss"]
 archive = ["html"]
 events = ["html"]
