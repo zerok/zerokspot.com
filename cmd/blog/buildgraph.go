@@ -69,6 +69,9 @@ var buildGraphCmd = &cobra.Command{
 			if info.IsDir() || info.Name() != "index.json" {
 				return nil
 			}
+			if !(strings.HasPrefix(path, "public/weblog") || strings.HasPrefix(path, "public/notes")) {
+				return nil
+			}
 			doc, err := decodeMetadata(ctx, path)
 			if err != nil {
 				return err
@@ -90,6 +93,9 @@ var buildGraphCmd = &cobra.Command{
 				return err
 			}
 			if info.IsDir() || info.Name() != "index.json" {
+				return nil
+			}
+			if !(strings.HasPrefix(path, "public/weblog") || strings.HasPrefix(path, "public/notes")) {
 				return nil
 			}
 			doc, err := decodeMetadata(ctx, path)
