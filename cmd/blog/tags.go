@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/gohugoio/hugo/config"
 	hugodeps "github.com/gohugoio/hugo/deps"
 	hugofs "github.com/gohugoio/hugo/hugofs"
 	"github.com/gohugoio/hugo/hugolib"
 	page "github.com/gohugoio/hugo/resources/page"
 	"github.com/spf13/afero"
 	"github.com/spf13/cobra"
-	"github.com/spf13/viper"
 )
 
 func buildSites() (*hugolib.HugoSites, error) {
@@ -19,7 +19,7 @@ func buildSites() (*hugolib.HugoSites, error) {
 		return nil, err
 	}
 	fs := afero.NewOsFs()
-	hfs := hugofs.NewFrom(fs, &viper.Viper{})
+	hfs := hugofs.NewFrom(fs, config.New())
 	dcfg := &hugodeps.DepsCfg{
 		Fs: hfs,
 	}

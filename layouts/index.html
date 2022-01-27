@@ -34,7 +34,7 @@
                     I might add the odd book review and other posts
                     from time to time.</p>
                 </div>
-                {{ $blogPosts := (where (where (where .Site.Pages "Section" "weblog") "IsPage" true) "IsDraft" false) }}
+                {{ $blogPosts := (where (where (where .Site.Pages "Section" "weblog") "IsPage" true) "Draft" false) }}
                 <div class="row row--first">
                     <section id="recent">
                         <ul class="page__listing--mini page__listing page__listing--noprefix">

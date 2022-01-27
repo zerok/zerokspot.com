@@ -6,13 +6,13 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/gohugoio/hugo/config"
 	hugodeps "github.com/gohugoio/hugo/deps"
 	hugofs "github.com/gohugoio/hugo/hugofs"
 	"github.com/gohugoio/hugo/hugolib"
 	page "github.com/gohugoio/hugo/resources/page"
 	"github.com/spf13/afero"
 	"github.com/spf13/cobra"
-	"github.com/spf13/viper"
 	"gopkg.in/yaml.v2"
 )
 
@@ -47,7 +47,8 @@ var buildArchiveCmd = &cobra.Command{
 			return err
 		}
 		fs := afero.NewOsFs()
-		hfs := hugofs.NewFrom(fs, &viper.Viper{})
+		v := config.New()
+		hfs := hugofs.NewFrom(fs, v)
 		dcfg := &hugodeps.DepsCfg{
 			Fs: hfs,
 		}
