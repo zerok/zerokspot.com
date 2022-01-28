@@ -5,6 +5,8 @@ tags:
 - commenting
 - selfhosted
 - golang
+incoming:
+- url: https://chaos.social/@zerok/107701844591013470
 ---
 
 Every now and then I think about re-adding classic comments on my blog. Some time ago I stumbled upon [remark42](https://github.com/umputun/remark42), a system that would allow me to self-host the commenting infrastructure and integrate it into a statically generated site. 
