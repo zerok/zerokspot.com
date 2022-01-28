@@ -716,6 +716,19 @@ time .age {
     }
 }
 
+#webring {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.8rem;
+
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
 @import "events";
 @import "darkmode";
 
