@@ -1,7 +1,10 @@
 ---
 title: Cowboy Bebop
 date: "2022-02-01T21:24:21+01:00"
-tags: []
+tags:
+- anime
+- scifi
+- cowboybebop
 ---
 
 It took me 23 years but I’ve finally made it through all 26 episodes of the 1998 series [Cowboy Bebop](https://en.wikipedia.org/wiki/Cowboy_Bebop)! It actually might have been one of the first anime shows that I’d come across back in the early 2000s and I even got the first DVD. Back then, only 3 or 4 episodes were included on each disc and you had to buy each separately which resulted in me never actually watching the rest of the show (because I just couldn’t or didn’t want to afford it) 😅
