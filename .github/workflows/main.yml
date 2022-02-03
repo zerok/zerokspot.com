@@ -62,9 +62,11 @@ jobs:
       if: github.ref == 'refs/heads/main'
     - run: "rsync -avz -e \"ssh -o StrictHostKeyChecking=no\" blogcli/blog www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/bin/"
       if: github.ref == 'refs/heads/main'
-    - run: "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
+    - run: "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/ && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@preview.zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
       if: github.ref == 'refs/heads/main'
     - run: "ssh www-zerokspot@zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
+      if: github.ref == 'refs/heads/main'
+    - run: "ssh www-zerokspot@preview.zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
       if: github.ref == 'refs/heads/main'
 
     - uses: actions/upload-artifact@v1
