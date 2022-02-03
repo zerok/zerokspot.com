@@ -6,7 +6,7 @@
 <div class="webmentions webmentions-container"
     data-endpoint="https://zerokspot.com/webmentions"
     data-target="https://zerokspot.com{{ .RelPermalink }}"></div>
-<script src="https://zerokspot.com/webmentions/ui/dist/widget.js"></script>
+<script src="/webmentions/ui/dist/widget.js"></script>
 {{ if .Params.incoming }}
     {{ range .Params.incoming }}
         {{ if in .url "chaos.social" }}
