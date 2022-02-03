@@ -52,6 +52,7 @@ jobs:
     - run: "./blogcli/blog search build-mapping"
     - run: "./blogcli/blog changes --since-rev $(curl https://zerokspot.com/.gitrev) --url > public/.changes.txt"
 
+    # Prepare deployment
     - run: "sudo apt-get install -qq --yes git curl"
       if: github.ref == 'refs/heads/main'
     - run: "mkdir -p ~/.ssh && chmod 0700 ~/.ssh"
@@ -60,11 +61,22 @@ jobs:
       if: github.ref == 'refs/heads/main'
     - run: "echo ${{ github.sha }} > public/.gitrev"
       if: github.ref == 'refs/heads/main'
+
+    # Deploy to zerokspot.com
     - run: "rsync -avz -e \"ssh -o StrictHostKeyChecking=no\" blogcli/blog www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/bin/"
       if: github.ref == 'refs/heads/main'
-    - run: "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/ && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@preview.zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
+    - run: "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
       if: github.ref == 'refs/heads/main'
     - run: "ssh www-zerokspot@zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
+      if: github.ref == 'refs/heads/main'
+
+    # Deploy to preview.zerokspot.com
+    - name: "Build site for preview.zerokspot.com"
+      run: "hugo --baseURL https://preview.zerokspot.com/"
+      if: github.ref == 'refs/heads/main'
+    - run: "rsync -avz -e \"ssh -o StrictHostKeyChecking=no\" blogcli/blog www-zerokspot@preview.zerokspot.com:/srv/www/zerokspot.com/www/bin/"
+      if: github.ref == 'refs/heads/main'
+    - run: "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@preview.zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
       if: github.ref == 'refs/heads/main'
     - run: "ssh www-zerokspot@preview.zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
       if: github.ref == 'refs/heads/main'
