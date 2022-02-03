@@ -17,4 +17,4 @@
             </footer>
     <script src="/js/icons.js"></script>
     {{ $mainJS := resources.Get "js/main.js" | js.Build "js/main.js" | minify | fingerprint }}
-    <script src="{{ $mainJS.Permalink }}"></script>
+    <script src="{{ $mainJS.RelPermalink }}"></script>

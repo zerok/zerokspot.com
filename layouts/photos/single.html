@@ -44,7 +44,7 @@
                 </article>
             </div>
             {{ $timeJS := resources.Get "js/time.js" | js.Build "js/time.js" | minify | fingerprint }}
-            <script src="{{ $timeJS.Permalink }}"></script>
+            <script src="{{ $timeJS.RelPermalink }}"></script>
             {{ partial "footer.html" }}
         </div>
     </body>
