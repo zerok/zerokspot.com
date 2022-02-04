@@ -4,6 +4,8 @@ date: "2022-02-04T22:46:20+01:00"
 tags:
 - brexit
 - postalservices
+incoming:
+- url: https://chaos.social/@zerok/107741940282307788
 ---
 
 Tracking a parcel across multiple services and through customs still seems to be one of the hard problems alongside printers and off-by-one errors. Today, I was able to pick a package up that had in in transit for about 10 days, coming from the UK, and with undetermined status up to the point of me writing this post (again: after I had already picked it up).
