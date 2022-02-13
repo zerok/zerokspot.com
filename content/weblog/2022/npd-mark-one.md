@@ -5,6 +5,8 @@ tags:
 - npd
 - penandpaper
 - markone
+incoming:
+- url: https://chaos.social/@zerok/107792579227514146
 ---
 
 I usually only write about fountain pens here but a couple of weeks ago I saw on one of the more [recent GCP Grey videos](https://youtu.be/fSwpe8r50_o) a rollerball pen that looked really nice, simple, and had an awesome click-sounds. After a bit of research I learnt it’s called the [Mark One by Studio Neat](https://www.studioneat.com/products/markone) in Austin, Texas.
