@@ -62,23 +62,14 @@ jobs:
     - run: "echo ${{ github.sha }} > public/.gitrev"
       if: github.ref == 'refs/heads/main'
 
-    # Deploy to zerokspot.com
-    - run: "rsync -avz -e \"ssh -o StrictHostKeyChecking=no\" blogcli/blog www-zerokspot@old.zerokspot.com:/srv/www/zerokspot.com/www/bin/"
-      if: github.ref == 'refs/heads/main'
-    - run: "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@old.zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
-      if: github.ref == 'refs/heads/main'
-    - run: "ssh www-zerokspot@old.zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
-      if: github.ref == 'refs/heads/main'
-
-    # Deploy to preview.zerokspot.com
     - name: "Build site for preview.zerokspot.com"
       run: "hugo --baseURL https://zerokspot.com/"
       if: github.ref == 'refs/heads/main'
-    - run: "rsync -avz -e \"ssh -o StrictHostKeyChecking=no\" blogcli/blog www-zerokspot@preview.zerokspot.com:/srv/www/zerokspot.com/www/bin/"
+    - run: "rsync -avz -e \"ssh -o StrictHostKeyChecking=no\" blogcli/blog www-zerokspot@zs-web-001.nodes.h10n.me:/srv/www/zerokspot.com/www/bin/"
       if: github.ref == 'refs/heads/main'
-    - run: "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@preview.zerokspot.com:/srv/www/zerokspot.com/www/htdocs/"
+    - run: "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@zs-web-001.nodes.h10n.me:/srv/www/zerokspot.com/www/htdocs/"
       if: github.ref == 'refs/heads/main'
-    - run: "ssh www-zerokspot@preview.zerokspot.com \"touch /srv/www/zerokspot.com/www/deployed\""
+    - run: "ssh www-zerokspot@zs-web-001.nodes.h10n.me \"touch /srv/www/zerokspot.com/www/deployed\""
       if: github.ref == 'refs/heads/main'
 
     - uses: actions/upload-artifact@v1
