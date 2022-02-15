@@ -4,6 +4,8 @@ date: "2022-02-15T21:04:14+01:00"
 tags:
 - fosdem
 - conferences
+incoming:
+- url: https://chaos.social/@zerok/107804058059979921
 ---
 
 For the second year now [FOSDEM](https://fosdem.org/2022/) hasn’t been run as an in-person event, filling the university campus in Brussels, but instead as an online-only event with lots of chat rooms, recordings, and live-streams. As with last year, the big advantage was that “Room full” signs were only used as jokes by the organisers. Sadly, being remote also meant that attendees had to organise their Belgian beer and waffles on their own. On that front I failed miserably this year, having neither any Belgian beer left nor any waffles, crepes, or at least fries at home.
