@@ -49,6 +49,7 @@ jobs:
     - run: ./blogcli/blog build-graph
     - run: ./blogcli/blog blogroll --output data/blogroll.json
     - run: hugo
+    - run: "./blogcli/blog books gen-opml"
     - run: "./blogcli/blog search build-mapping"
     - run: "./blogcli/blog changes --since-rev $(curl https://zerokspot.com/.gitrev) --url > public/.changes.txt"
 

@@ -1,23 +1,27 @@
 package bookscollection
 
 import (
+	"context"
 	"fmt"
 	"io"
+	"os"
+	"path/filepath"
 	"time"
 
 	"github.com/gohugoio/hugo/parser/pageparser"
 )
 
 type Book struct {
-	Title        string     `yaml:"title"`
-	Author       string     `yaml:"author"`
-	Pages        int        `yaml:"pages"`
-	ISBN         string     `yaml:"isbn"`
-	Genre        string     `yaml:"genre"`
-	GoodreadsID  string     `yaml:"goodreadsID"`
-	FinishedDate *time.Time `yaml:"finished"`
-	StartedDate  *time.Time `yaml:"started"`
-	Date         *time.Time `yaml:"date"`
+	Title         string     `yaml:"title"`
+	Author        string     `yaml:"author"`
+	Pages         int        `yaml:"pages"`
+	ISBN          string     `yaml:"isbn"`
+	Genre         string     `yaml:"genre"`
+	GoodreadsID   string     `yaml:"goodreadsID"`
+	OpenLibraryID string     `yaml:"openlibraryID"`
+	FinishedDate  *time.Time `yaml:"finished"`
+	StartedDate   *time.Time `yaml:"started"`
+	Date          *time.Time `yaml:"date"`
 }
 
 func (b *Book) ReadingDur() time.Duration {
@@ -25,6 +29,25 @@ func (b *Book) ReadingDur() time.Duration {
 		return -1
 	}
 	return b.FinishedDate.Sub(*b.StartedDate)
+}
+
+func LoadBooks(ctx context.Context) ([]*Book, error) {
+	var books []*Book
+	paths, err := filepath.Glob("content/reading/*.md")
+	if err != nil {
+		return nil, err
+	}
+	for _, path := range paths {
+		fp, err := os.Open(path)
+		if err != nil {
+			return nil, err
+		}
+		book, err := ParseBook(fp)
+		fp.Close()
+		books = append(books, book)
+	}
+	return books, nil
+
 }
 
 func ParseBook(r io.Reader) (*Book, error) {
@@ -54,6 +77,11 @@ func ParseBook(r io.Reader) (*Book, error) {
 		return nil, err
 	}
 	book.ISBN = s
+	s, err = getFieldAsString(fm, "openlibraryID")
+	if err != nil {
+		return nil, err
+	}
+	book.OpenLibraryID = s
 	i, err := getFieldAsInt(fm, "pages")
 	if err != nil {
 		return nil, err

@@ -18,6 +18,30 @@ var booksCmd = &cobra.Command{
 	},
 }
 
+func generateGenOPMLCommand() *cobra.Command {
+	var cmd = &cobra.Command{
+		Use: "gen-opml",
+		RunE: func(cmd *cobra.Command, args []string) error {
+			ctx := cmd.Context()
+			collection, err := bookscollection.LoadBooks(ctx)
+			if err != nil {
+				return err
+			}
+
+			books := make([]*bookscollection.Book, 0, 10)
+
+			for _, book := range collection {
+				if book.StartedDate != nil && book.FinishedDate == nil {
+					books = append(books, book)
+				}
+			}
+
+			return bookscollection.GenerateOPML(ctx, "public/opml/books/current.opml", "Horst Gutmann's current reading list", books)
+		},
+	}
+	return cmd
+}
+
 var booksLintCmd = &cobra.Command{
 	Use: "lint",
 	RunE: func(cmd *cobra.Command, args []string) error {
@@ -121,5 +145,6 @@ func humanizeDuration(d time.Duration) string {
 func init() {
 	rootCmd.AddCommand(booksCmd)
 	booksCmd.AddCommand(booksLintCmd)
+	booksCmd.AddCommand(generateGenOPMLCommand())
 	booksCmd.AddCommand(generateBookStatsCommand())
 }
