@@ -15,7 +15,7 @@
                   {{ $toread := where $books ".Params.date" "==" nil }}
                   {{ $read := (where (where $.Site.AllPages ".Params.date" "<>" nil) ".Params.finished" "<>" nil) }}
                   <section id="reading">
-                    <h2>Currently reading</h2>
+                    <h2>Currently reading (<a href="/opml/books/current.opml">OPML</a>)</h2>
                     <table class="table table--reading-list">
                         <thead>
                         <tr>
