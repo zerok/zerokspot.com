@@ -5,4 +5,5 @@ started: "2015-08-23T00:00:00Z"
 finished: "2015-09-02T00:00:00Z"
 title: A Canticle For Leibowitz
 type: book
+isbn: "9780060892999"
 ---

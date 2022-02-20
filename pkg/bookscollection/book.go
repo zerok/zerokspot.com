@@ -1,6 +1,7 @@
 package bookscollection
 
 import (
+	"bytes"
 	"context"
 	"fmt"
 	"io"
@@ -9,19 +10,21 @@ import (
 	"time"
 
 	"github.com/gohugoio/hugo/parser/pageparser"
+	"gopkg.in/yaml.v2"
 )
 
 type Book struct {
-	Title         string     `yaml:"title"`
-	Author        string     `yaml:"author"`
-	Pages         int        `yaml:"pages"`
-	ISBN          string     `yaml:"isbn"`
-	Genre         string     `yaml:"genre"`
-	GoodreadsID   string     `yaml:"goodreadsID"`
-	OpenLibraryID string     `yaml:"openlibraryID"`
-	FinishedDate  *time.Time `yaml:"finished"`
-	StartedDate   *time.Time `yaml:"started"`
-	Date          *time.Time `yaml:"date"`
+	Title         string     `yaml:"title,omitempty"`
+	Author        string     `yaml:"author,omitempty"`
+	Date          *time.Time `yaml:"date,omitempty"`
+	StartedDate   *time.Time `yaml:"started,omitempty"`
+	FinishedDate  *time.Time `yaml:"finished,omitempty"`
+	ISBN          string     `yaml:"isbn,omitempty"`
+	GoodreadsID   string     `yaml:"goodreadsID,omitempty"`
+	OpenLibraryID string     `yaml:"openlibraryID,omitempty"`
+	Genre         string     `yaml:"genre,omitempty"`
+	Pages         int        `yaml:"pages,omitempty"`
+	Body          string     `yaml:"-"`
 }
 
 func (b *Book) ReadingDur() time.Duration {
@@ -102,7 +105,26 @@ func ParseBook(r io.Reader) (*Book, error) {
 		return nil, err
 	}
 	book.FinishedDate = t
+	book.Body = string(res.Content)
 	return book, nil
+}
+
+func WriteBook(ctx context.Context, outpath string, book *Book) error {
+	out := bytes.Buffer{}
+	out.WriteString("---\n")
+	enc := yaml.NewEncoder(&out)
+	if err := enc.Encode(book); err != nil {
+		return err
+	}
+	out.WriteString("---\n")
+	out.WriteString(book.Body)
+	fp, err := os.OpenFile(outpath, os.O_CREATE|os.O_TRUNC|os.O_WRONLY, 0644)
+	if err != nil {
+		return err
+	}
+	defer fp.Close()
+	_, err = io.Copy(fp, &out)
+	return err
 }
 
 func getFieldAsString(m map[string]interface{}, k string) (string, error) {

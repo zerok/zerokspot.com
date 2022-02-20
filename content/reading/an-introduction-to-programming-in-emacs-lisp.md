@@ -5,4 +5,6 @@ started: "2014-12-20T00:00:00Z"
 finished: "2014-12-26T00:00:00Z"
 title: An Introduction to Programming in Emacs Lisp
 type: book
+openlibraryID: "OL8892798W"
+isbn: "9781882114436"
 ---

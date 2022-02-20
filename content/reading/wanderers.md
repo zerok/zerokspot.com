@@ -1,12 +1,11 @@
 ---
-title: "Wanderers"
-author: "Chuck Wendig"
-date: "2020-05-10T12:00:00+02:00"
-started: "2020-05-10T12:00:00+02:00"
-finished: "2020-06-21T12:00:00+02:00"
-review: /weblog/2020/06/26/wanderers-by-chuck-wendig/
-pages: 782
-goodreadsID: 34019083
+title: Wanderers
+author: Chuck Wendig
+date: 2020-05-10T12:00:00+02:00
+started: 2020-05-10T12:00:00+02:00
+finished: 2020-06-21T12:00:00+02:00
 isbn: "9780399182105"
+openlibraryID: OL27253923M
 genre: scifi
+pages: 782
 ---

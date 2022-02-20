@@ -45,23 +45,52 @@ func generateGenOPMLCommand() *cobra.Command {
 var booksLintCmd = &cobra.Command{
 	Use: "lint",
 	RunE: func(cmd *cobra.Command, args []string) error {
+		log := logger.With().Str("component", "lint").Logger()
 		paths, err := filepath.Glob("content/reading/*.md")
 		if err != nil {
 			return err
 		}
+		numWarnings := 0
 		for _, path := range paths {
+			l := log.With().Str("file", path).Logger()
 			fp, err := os.Open(path)
 			if err != nil {
 				return err
 			}
-			_, err = bookscollection.ParseBook(fp)
+			b, err := bookscollection.ParseBook(fp)
 			fp.Close()
 			if err != nil {
-				logger.Error().Err(err).Str("file", path).Msg("Failed to parse book file")
+				l.Error().Err(err).Msg("Failed to parse book file")
+			}
+			if b.OpenLibraryID == "" {
+				numWarnings++
+				l.Warn().Msg("No OpenLibraryID set")
 			}
 		}
+		log.Info().Msgf("%d warnings found", numWarnings)
 		return nil
 	},
+}
+
+func generateEnrichBookDataCommand() *cobra.Command {
+	cmd := &cobra.Command{
+		Use: "enrich",
+		RunE: func(cmd *cobra.Command, args []string) error {
+			failed := false
+			for _, path := range args {
+				logger := logger.With().Str("path", path).Logger()
+				if err := bookscollection.EnrichData(cmd.Context(), path); err != nil {
+					logger.Error().Err(err).Msg("Failed to enrich data")
+					failed = true
+				}
+			}
+			if failed {
+				return fmt.Errorf("failed to enrich at least one file")
+			}
+			return nil
+		},
+	}
+	return cmd
 }
 
 func generateBookStatsCommand() *cobra.Command {
@@ -146,5 +175,6 @@ func init() {
 	rootCmd.AddCommand(booksCmd)
 	booksCmd.AddCommand(booksLintCmd)
 	booksCmd.AddCommand(generateGenOPMLCommand())
+	booksCmd.AddCommand(generateEnrichBookDataCommand())
 	booksCmd.AddCommand(generateBookStatsCommand())
 }

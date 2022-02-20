@@ -5,6 +5,8 @@ type: book
 date: 2016-04-11T21:00:00+02:00
 started: 2016-04-11T21:00:00+02:00
 finished: 2016-05-08T21:22:02+02:00
+isbn: "9781941758632"
+openlibraryID: "OL19912973W"
 ---
 
 Haven't read a vampire story in a long time and after listening to the interview

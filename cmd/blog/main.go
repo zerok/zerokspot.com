@@ -30,6 +30,7 @@ var rootCmd = &cobra.Command{
 }
 
 func init() {
+	rootCmd.SilenceUsage = true
 	rootCmd.PersistentFlags().StringVar(&localZoneName, "tz", "Europe/Vienna", "Timezone to be used for data-relevant processing")
 	rootCmd.AddCommand(cmd.RootCmd)
 }
