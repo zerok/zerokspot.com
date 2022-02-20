@@ -1,12 +1,11 @@
 ---
+title: 'Torchwood: Another Life'
 author: Peter Anghelides
-date:  "2016-03-12T20:39:29+01:00"
-started:  "2016-03-12T20:39:29+01:00"
-finished:  "2016-03-29T20:39:29+01:00"
-title: "Torchwood: Another Life"
-asin: B003X27OGU
-type: book
-rating: 2
+date: 2016-03-12T20:39:29+01:00
+started: 2016-03-12T20:39:29+01:00
+finished: 2016-03-29T20:39:29+01:00
+isbn: "9780563486534"
+openlibraryID: OL7852048M
 ---
 
 I love Torchwood and Doctor Who but for some reason have never tried one of the
