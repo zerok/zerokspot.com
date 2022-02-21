@@ -24,6 +24,7 @@ type Book struct {
 	OpenLibraryID string     `yaml:"openlibraryID,omitempty"`
 	Genre         string     `yaml:"genre,omitempty"`
 	Pages         int        `yaml:"pages,omitempty"`
+	Rating        int        `yaml:"rating,omitempty"`
 	Body          string     `yaml:"-"`
 }
 
@@ -105,6 +106,11 @@ func ParseBook(r io.Reader) (*Book, error) {
 		return nil, err
 	}
 	book.FinishedDate = t
+	i, err = getFieldAsInt(fm, "rating")
+	if err != nil {
+		return nil, err
+	}
+	book.Rating = i
 	book.Body = string(res.Content)
 	return book, nil
 }
