@@ -10,4 +10,5 @@ pages: 432
 goodreadsID: 31189192
 genre: scifi
 review: /weblog/2021/07/10/null-states-by-malka-older/
+openlibraryID: OL22538307W
 ---

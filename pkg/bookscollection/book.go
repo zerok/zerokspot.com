@@ -7,6 +7,7 @@ import (
 	"io"
 	"os"
 	"path/filepath"
+	"strconv"
 	"time"
 
 	"github.com/gohugoio/hugo/parser/pageparser"
@@ -16,6 +17,7 @@ import (
 type Book struct {
 	Title         string     `yaml:"title,omitempty"`
 	Author        string     `yaml:"author,omitempty"`
+	Language      string     `yaml:"language,omitempty"`
 	Date          *time.Time `yaml:"date,omitempty"`
 	StartedDate   *time.Time `yaml:"started,omitempty"`
 	FinishedDate  *time.Time `yaml:"finished,omitempty"`
@@ -25,6 +27,9 @@ type Book struct {
 	Genre         string     `yaml:"genre,omitempty"`
 	Pages         int        `yaml:"pages,omitempty"`
 	Rating        int        `yaml:"rating,omitempty"`
+	Review        string     `yaml:"review,omitempty"`
+	Series        string     `yaml:"series,omitempty"`
+	BookInSeries  float64    `yaml:"bookInSeries,omitempty"`
 	Body          string     `yaml:"-"`
 }
 
@@ -71,6 +76,21 @@ func ParseBook(r io.Reader) (*Book, error) {
 		return nil, err
 	}
 	book.Author = s
+	s, err = getFieldAsString(fm, "review")
+	if err != nil {
+		return nil, err
+	}
+	book.Review = s
+	s, err = getFieldAsString(fm, "series")
+	if err != nil {
+		return nil, err
+	}
+	book.Series = s
+	s, err = getFieldAsString(fm, "language")
+	if err != nil {
+		return nil, err
+	}
+	book.Language = s
 	s, err = getFieldAsString(fm, "genre")
 	if err != nil {
 		return nil, err
@@ -111,6 +131,11 @@ func ParseBook(r io.Reader) (*Book, error) {
 		return nil, err
 	}
 	book.Rating = i
+	f, err := getFieldAsFloat(fm, "bookInSeries")
+	if err != nil {
+		return nil, err
+	}
+	book.BookInSeries = f
 	book.Body = string(res.Content)
 	return book, nil
 }
@@ -168,6 +193,29 @@ func getFieldAsInt(m map[string]interface{}, k string) (int, error) {
 	value, ok := v.(int)
 	if !ok {
 		return 0, fmt.Errorf("%s is not a int", k)
+	}
+	return value, nil
+}
+
+func getFieldAsFloat(m map[string]interface{}, k string) (float64, error) {
+	v, ok := m[k]
+	if !ok {
+		return 0, nil
+	}
+	var value float64
+	var err error
+	switch val := v.(type) {
+	case float64:
+		value = val
+	case int:
+		value = float64(val)
+	case string:
+		value, err = strconv.ParseFloat(val, 64)
+		if err != nil {
+			return 0, err
+		}
+	default:
+		return 0, fmt.Errorf("unexpected type provided")
 	}
 	return value, nil
 }

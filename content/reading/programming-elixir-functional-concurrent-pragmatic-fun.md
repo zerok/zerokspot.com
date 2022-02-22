@@ -5,4 +5,5 @@ started: "2015-06-19T00:00:00Z"
 finished: "2015-07-01T00:00:00Z"
 title: 'Programming Elixir: Functional |> Concurrent |> Pragmatic |> Fun'
 type: book
+openlibraryID: OL19547073W
 ---

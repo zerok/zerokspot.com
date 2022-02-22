@@ -7,4 +7,5 @@ author: "Brian K. Vaughan"
 goodreadsID: 26934849
 pages: 144
 genre: comic
+openlibraryID: OL16809836W
 ---

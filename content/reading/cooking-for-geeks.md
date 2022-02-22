@@ -3,6 +3,7 @@ active: 2
 author: Jeff Potter
 title: Cooking for Geeks
 type: book
+openlibraryID: OL15197192W
 ---
 
 Want to know why you do the things you sometimes do in the kitchen? Why do you

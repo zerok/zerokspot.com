@@ -5,4 +5,5 @@ started: "2014-05-08T00:00:00Z"
 finished: "2014-06-06T00:00:00Z"
 title: 'Clean Code: A Handbook of Agile Software Craftsmanship'
 type: book
+openlibraryID: OL17618370W
 ---

@@ -5,6 +5,7 @@ started: 2016-02-28T21:22:02+01:00
 finished: 2016-03-04T21:30:00+01:00
 title: Redshirts
 type: book
+openlibraryID: OL16564627W
 ---
 
 Remember all these poor folks in the original Star Trek series wearing red
