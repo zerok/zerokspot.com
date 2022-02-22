@@ -4,7 +4,8 @@ date:  "2016-03-29T20:39:29+01:00"
 started:  "2016-03-29T20:39:29+01:00"
 finished: 2016-04-08T20:35:03+02:00
 title: "The Life Engineered"
-isbn13: "9781941758595"
+isbn: "9781941758595"
+openlibraryID: OL20486173W
 type: book
 rating: 5
 ---

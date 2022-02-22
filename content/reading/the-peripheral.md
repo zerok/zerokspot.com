@@ -7,4 +7,5 @@ author: "William Gibson"
 pages: 496
 goodreadsID: 22010718
 genre: scifi
+openlibraryID: OL19984645W
 ---

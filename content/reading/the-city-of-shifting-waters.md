@@ -7,4 +7,5 @@ author: "Pierre Christin"
 pages: 48
 genre: comic
 goodreadsID: 24253144
+openlibraryID: OL17527590W
 ---
