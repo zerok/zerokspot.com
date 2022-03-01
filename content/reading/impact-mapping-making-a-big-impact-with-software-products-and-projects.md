@@ -5,6 +5,7 @@ started: 2016-03-08T20:16:16+01:00
 finished: 2016-03-12T15:34:00+01:00
 title: Impact Mapping
 type: book
+openlibraryID: OL24326376W
 ---
 
 Recently (March 2016) while scanning my to-read list on Pocket I stumbled upon

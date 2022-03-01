@@ -5,4 +5,5 @@ started: "2014-12-26T00:00:00Z"
 finished: "2015-04-22T00:00:00Z"
 title: Learn You a Haskell for Great Good!
 type: book
+openlibraryID: OL15916305W
 ---

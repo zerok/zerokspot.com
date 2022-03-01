@@ -5,4 +5,5 @@ started: "2015-05-11T00:00:00Z"
 finished: "2015-05-25T00:00:00Z"
 title: 'Building Microservices: Designing Fine-Grained Systems'
 type: book
+openlibraryID: OL19547194W
 ---

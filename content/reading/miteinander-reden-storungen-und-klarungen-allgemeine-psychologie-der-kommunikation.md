@@ -5,6 +5,7 @@ type: book
 date: 2016-05-08T20:09:18+02:00
 started: 2016-05-08T20:09:18+02:00
 finished: 2016-06-16T22:56:55+02:00
+openlibraryID: OL27309150W
 ---
 
 Well, I wanted to improve my communication skills and therefore went with a book

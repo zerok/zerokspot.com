@@ -5,4 +5,5 @@ started: "2014-07-06T00:00:00Z"
 finished: "2014-08-07T00:00:00Z"
 title: 'Freedom™ (Daemon #2)'
 type: book
+openlibraryID: OL14996932W
 ---

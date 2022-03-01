@@ -8,4 +8,5 @@ started: "2021-07-09T12:00:00+02:00"
 finished: "2021-07-16T12:00:00+02:00"
 genre: scifi
 review: /weblog/2021/07/18/foundation/
+openlibraryID: OL46125W
 ---

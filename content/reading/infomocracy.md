@@ -11,4 +11,5 @@ isbn: "0765385155"
 goodreadsID: 26114433
 genre: scifi
 review: /weblog/2021/04/20/infomocracy-by-malka-older/
+openlibraryID: OL19633556W
 ---

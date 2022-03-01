@@ -5,4 +5,5 @@ started: "2014-09-27T00:00:00Z"
 finished: "2014-10-09T00:00:00Z"
 title: From History's Shadow
 type: book
+openlibraryID: OL22308626W
 ---

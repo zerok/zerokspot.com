@@ -5,6 +5,7 @@ date: 2016-07-23T12:55:49+02:00
 started: 2016-07-23T12:55:49+02:00
 finished: 2016-07-31T12:56:27+02:00
 type: book
+openlibraryID: OL20014237W
 ---
 
 I had originally learnt about this book when Angus Crol gave a talk at dotJS
