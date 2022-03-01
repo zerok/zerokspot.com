@@ -6,4 +6,4 @@ tags:
 - ukraine
 - russia
 ---
-> Russian warship, get fuck yourself.
+> Russian warship, go fuck yourself.
