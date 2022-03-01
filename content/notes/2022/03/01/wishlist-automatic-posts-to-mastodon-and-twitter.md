@@ -1,6 +1,6 @@
 ---
-title: "Wishlist: Automatic posts to Mastodon and Twitter“
-date: „2022-03-01T13:32:29+0100“
+title: "Wishlist: Automatic posts to Mastodon and Twitter"
+date: "2022-03-01T13:32:29+0100"
 tags:
 - blogging
 - posse
