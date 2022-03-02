@@ -1,7 +1,9 @@
 ---
 title: Drafts and iOS smart dashes/punctuation
 date: "2022-03-02T18:42:35+01:00"
-tags: []
+tags:
+- ios
+- draftsapp
 ---
 
 It's weird, I've been using [Drafts](https://getdrafts.com) for a long time to write pretty much all my notes on this blog (using some shortcuts to push the data then into WorkingCopy and up to my repository) but only just recently I started running into a weird issue.
