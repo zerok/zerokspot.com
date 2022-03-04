@@ -37,3 +37,7 @@ This is a bit of a weird one so here’s a list of all the conditions and their 
 4. System setting disabled, Drafts setting enabled:  No smart punctuation
 
 As you can see, (1) behaves differently when text is entered using the script instead of just manually using the keyboard. Since my use-cases falls under this scenario, I have to disable smart punctuation system-wide for now. The perfect scenario for me would be if Drafts could somehow override the smart punctuation flag for its input fields but I have no idea if that’s possible. At the very least I’m going to ask in the [Drafts forums](https://forums.getdrafts.com) about this inconsistency 🙂
+
+## Update (2022-03-02)
+
+I've created [a topic on the Drafts forums](https://forums.getdrafts.com/t/smart-punctuation-vs-smart-quotes-dashes/12213?u=zerok) and get the confirmation that this is not just me 😁
