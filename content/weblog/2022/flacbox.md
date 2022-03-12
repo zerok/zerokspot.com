@@ -1,7 +1,9 @@
 ---
 title: Flacbox
 date: "2022-03-12T20:07:00+01:00"
-tags: []
+tags:
+- ios
+- music
 ---
 
 For the last week or so I’ve been thinking more and more about reviving my local music library. There are some songs in there that are simply no longer available anywhere else or that I just want to remember again. 
