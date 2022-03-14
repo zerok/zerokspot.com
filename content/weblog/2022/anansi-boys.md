@@ -5,6 +5,8 @@ tags:
 - books
 - reviews
 rating: 5
+incoming:
+- url: https://chaos.social/@zerok/107956710741414071
 ---
 
 While I’m not a fantasy-person, stories by Neil Gaiman somehow just manage to connect with me in ways that other authors simply usually don’t manage to. It all started two years ago when I read [“American Gods”](https://en.wikipedia.org/wiki/American_Gods) and then watched “Good Omens” and finally read “Norse Mythology”. All of these had me hooked right away and made it surprisingly hard to do anything else until I had finished them. 
