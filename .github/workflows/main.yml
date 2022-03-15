@@ -63,8 +63,8 @@ jobs:
     - run: "echo ${{ github.sha }} > public/.gitrev"
       if: github.ref == 'refs/heads/main'
 
-    - name: "Final build"
-      run: "hugo"
+    - name: "Build site for preview.zerokspot.com"
+      run: "hugo --baseURL https://zerokspot.com/"
       if: github.ref == 'refs/heads/main'
     - run: "rsync -avz -e \"ssh -o StrictHostKeyChecking=no\" blogcli/blog www-zerokspot@zs-web-001.nodes.h10n.me:/srv/www/zerokspot.com/www/bin/"
       if: github.ref == 'refs/heads/main'
