@@ -4,7 +4,7 @@ date: "2022-03-16T17:32:12+01:00"
 tags:
 - postgresql
 - sql
-incoming
+incoming:
 - url: https://chaos.social/@zerok/107967918317746149  
 ---
 
