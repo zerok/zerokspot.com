@@ -4,6 +4,8 @@ date: "2022-03-16T17:32:12+01:00"
 tags:
 - postgresql
 - sql
+incoming
+- url: https://chaos.social/@zerok/107967918317746149  
 ---
 
 A couple of days ago I wanted to implement a basic histogram for a range of values I had in a PostgreSQL database. I basically wanted to create 10 equally sized buckets with the first bucket starting at the lowest value of my dataset and the last bucket ending with the highest value.
