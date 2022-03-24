@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: actions/setup-go@v1.1.3
+    - uses: actions/setup-go@v3
       with:
-        go-version: "1.17.4"
+        go-version: "1.18"
     - uses: actions/cache@v2
       with:
         path: ~/go/pkg
@@ -38,7 +38,7 @@ jobs:
         lfs: true
     - uses: peaceiris/actions-hugo@v2.4.13
       with:
-        hugo-version: 0.92.1
+        hugo-version: 0.95.0
         extended: true
     - uses: actions/download-artifact@v1
       with:
