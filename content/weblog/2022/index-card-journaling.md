@@ -4,6 +4,8 @@ date: "2022-04-24T12:50:00+02:00"
 tags:
 - journaling
 - bulletjournal
+incoming:
+- url: https://chaos.social/@zerok/108186695940936305
 ---
 
 I couple of days [I commented on r/journaling][c] that I was currently doing a little experiment with index cards as a way to do journaling (and bullet journaling) on the go. So here is what I'm currently using:
