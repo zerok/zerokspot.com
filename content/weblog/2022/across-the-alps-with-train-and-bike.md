@@ -5,6 +5,8 @@ tags:
 - biking
 - oebb
 - klimaticket
+incoming:
+- url: https://chaos.social/@zerok/108217419904398091  
 ---
 
 Last week we traveled using the [EC 164 train (aka “Transalpin”)](https://en.wikipedia.org/wiki/Transalpin) from Graz to Zurich stopping at Feldkirch on our way to Lake Constance for some bicycling. What makes that train so special is that it doesn’t take any shortcuts offering you a lot of nice landscape to look at. It also doesn’t pass through Germany and so the whole trip is covered by the “Klimaticket” 😉 The bikes were not free, though, but cost around €10 each and direction. For that we got a reserved place within the freight carriage.
