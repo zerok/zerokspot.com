@@ -1,7 +1,8 @@
 ---
 title: Top 10 books
 date: "2022-04-30T21:33:36+02:00"
-tags: []
+tags:
+- books
 ---
 
 This morning [Hyde asked around, if there were only 10 books, which ones would you take with you](https://lazybear.io/notes/top-10-books/)? At first I could only [come up with 7](https://chaos.social/@zerok/108219585643163283) but I intended to complete that list eventually. So here would be my list of 10 books in no particular order. Please note that this also includes some audio-books simply because they are superior to the text-editions due to the voice acting talent of the narrator.
@@ -15,5 +16,3 @@ This morning [Hyde asked around, if there were only 10 books, which ones would y
 - [The Rook](https://openlibrary.org/works/OL19086399W/The_Rook) by Daniel O'Malley
 - [Radicalized](https://openlibrary.org/works/OL19545315W/Radicalized) by Cory Doctorow
 - [Old Man's War](https://openlibrary.org/works/OL5734647W/Old_Man%E2%80%99s_War) by John Scalzi
-
-# books
