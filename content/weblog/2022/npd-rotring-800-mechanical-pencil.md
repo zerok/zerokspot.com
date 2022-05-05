@@ -5,6 +5,8 @@ tags:
 - pens
 - npd
 - mechanicalpencils
+incoming:
+- url: https://chaos.social/@zerok/108251232897891891
 ---
 
 It’s been a while but this Wednesday was finally a “new pen day” (NPD) again! I’ve grown scared of putting my trusted Kuru Toga pencil directly into my backpack and also tired of carrying an extra pencil-case with me all the time. For this reason I started looking around for mechanical pencils that had a way to retract the lead.
