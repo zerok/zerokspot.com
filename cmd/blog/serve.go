@@ -15,7 +15,7 @@ func generateServeCmd() *cobra.Command {
 		Use: "serve",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			ctx := logger.WithContext(context.Background())
-			srv, err := server.NewServer(ctx, server.WithPublicBaseURL(publicBaseURL)
+			srv, err := server.NewServer(ctx, server.WithPublicBaseURL(publicBaseURL))
 			if err != nil {
 				return err
 			}
