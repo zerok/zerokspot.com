@@ -4,6 +4,8 @@ date: "2022-05-07T19:49:02+02:00"
 tags:
 - tv
 - fantasy
+incoming:
+- url: https://chaos.social/@zerok/108261929054050163
 ---
 
 I usually don’t enjoy fantasy but after a friend recommended [“The Legend of Vox Machina”](https://en.wikipedia.org/wiki/The_Legend_of_Vox_Machina) to me, I got curious. The show comes out of a Dungeons & Dragons campaign of the [Critical Role](https://critrole.com/) web-series, which is basically a group of  voice actors who like to play RPGs and broadcast it via Twitch and YouTube. The show was initially funded via Kickstarter and then picked up by Amazon.
