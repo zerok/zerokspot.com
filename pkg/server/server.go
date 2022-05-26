@@ -5,17 +5,17 @@ import (
 	"net/http"
 
 	"github.com/go-chi/chi"
-	"github.com/spf13/afero"
 	"gitlab.com/zerok/zerokspot.com/pkg/photostore"
+	"gitlab.com/zerok/zerokspot.com/pkg/resizer"
 )
 
 type Server struct {
 	router        chi.Router
 	publicBaseURL string
 	dataFolder    string
-	fs            afero.Fs
 	photoStore    *photostore.Store
 	apiKey        string
+	resizer       resizer.Resizer
 }
 
 type ServerOption func(*Server)
@@ -32,15 +32,15 @@ func WithDataFolder(u string) ServerOption {
 	}
 }
 
-func WithFS(fs afero.Fs) ServerOption {
-	return func(srv *Server) {
-		srv.fs = fs
-	}
-}
-
 func WithAPIKey(key string) ServerOption {
 	return func(srv *Server) {
 		srv.apiKey = key
+	}
+}
+
+func WithResizer(r resizer.Resizer) ServerOption {
+	return func(srv *Server) {
+		srv.resizer = r
 	}
 }
 
@@ -72,10 +72,10 @@ func (srv *Server) setup(ctx context.Context) error {
 	r := chi.NewRouter()
 	r.Route("/api", func(r chi.Router) {
 		r.With(srv.requireAPIKey()).Post("/photos/", srv.handleUploadPhoto)
-		r.Get("/photos/{year}/{month}/{day}/{slug}", srv.handleGetPhoto)
+		r.Get("/photos/{year:\\d\\d\\d\\d}/{month:\\d\\d}/{day:\\d\\d}/{filename}", srv.handleGetPhoto)
 	})
 	srv.router = r
-	store, err := photostore.New(srv.fs, srv.dataFolder+"/photos")
+	store, err := photostore.New(srv.dataFolder + "/photos")
 	if err != nil {
 		return err
 	}

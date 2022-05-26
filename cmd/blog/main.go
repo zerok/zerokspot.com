@@ -34,6 +34,7 @@ func init() {
 	rootCmd.PersistentFlags().StringVar(&localZoneName, "tz", "Europe/Vienna", "Timezone to be used for data-relevant processing")
 	rootCmd.AddCommand(cmd.RootCmd)
 	rootCmd.AddCommand(generateServeCmd())
+	rootCmd.AddCommand(generateResizePhotosCmd())
 }
 
 func main() {

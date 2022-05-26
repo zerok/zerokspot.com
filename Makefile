@@ -21,6 +21,6 @@ clean:
 	rm -rf bin $(main_js)
 
 bin/blog: $(shell find . -name '*.go') bin
-	cd cmd/blog && go build -mod=mod -o ../../bin/blog
+	cd cmd/blog && go build -o ../../bin/blog
 
 .PHONY: clean all prepare frontend
