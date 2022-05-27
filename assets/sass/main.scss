@@ -116,6 +116,11 @@ aside {
     @include content-content;
 }
 
+.note__content img {
+    display: block;
+    max-width: 100%;
+}
+
 .page--single-note {
     h1 {
         margin-bottom: 3rem;
