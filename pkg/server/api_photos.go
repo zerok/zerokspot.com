@@ -48,8 +48,10 @@ func (srv *Server) handleUploadPhoto(w http.ResponseWriter, r *http.Request) {
 		logger.Error().Err(err).Msg("Failed to resize photo")
 		http.Error(w, "Could not resize photo", http.StatusInternalServerError)
 	}
-	w.Header().Set("Location", srv.publicBaseURL+"/api/photos/"+targetPath)
+	absoluteURL := srv.publicBaseURL + "/api/photos/" + targetPath
+	w.Header().Set("Location", absoluteURL)
 	w.WriteHeader(http.StatusCreated)
+	fmt.Fprint(w, absoluteURL)
 }
 
 var photoFilenamePattern = regexp.MustCompile("^[a-z0-9A-Z._-]+$")
