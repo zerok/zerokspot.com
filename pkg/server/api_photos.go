@@ -98,10 +98,10 @@ func (srv *Server) handleGetPhoto(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "text/html")
+	w.WriteHeader(http.StatusOK)
 	for _, pname := range srv.resizer.GetProfiles().Names() {
 		fmt.Fprintf(w, "<a href=\"?profile=%s\">%s</a><br>", pname, pname)
 	}
-	w.WriteHeader(http.StatusOK)
 }
 
 func (srv *Server) resize(ctx context.Context, photoPath string) error {

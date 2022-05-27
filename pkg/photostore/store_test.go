@@ -17,7 +17,8 @@ func TestPhotoStoreWrite(t *testing.T) {
 	ts := time.Date(2022, 5, 7, 10, 00, 00, 00, time.UTC)
 	require.NoError(t, err)
 	data := bytes.Buffer{}
-	require.NoError(t, s.Write(ctx, ts, "test.jpg", &data))
+	_, err = s.Write(ctx, ts, "test.jpg", &data)
+	require.NoError(t, err)
 
 	require.FileExists(t, filepath.Join(dataDir, "/2022/05/07/test.jpg"))
 }
