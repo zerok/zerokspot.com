@@ -7,6 +7,8 @@ tags:
 - mcu
 - marvel
 - doctorstrange
+incoming:
+- url: https://chaos.social/@zerok/108384601731104541
 ---
 
 I cannot help myself but I really preferred [Moon Knight](https://en.wikipedia.org/wiki/Moon_Knight_(TV_series)) over the latest Doctor Strange movie “[Doctor Strange in the Multiverse of Madness](https://en.wikipedia.org/wiki/Doctor_Strange_in_the_Multiverse_of_Madness)”. Right after finishing the show I went to the cinema with friends and family and … simply didn’t enjoy the movie at all.
