@@ -5,6 +5,8 @@ tags:
 - reviews
 - biking
 - bags
+incoming:
+- url: https://chaos.social/@zerok/108408899181397845
 ---
 
 After a couple of weeks with my new bike and then also using it in combination with trains to do longer tours I knew I needed something more than just backpacks for carrying stuff around with me. I started looking around and eventually decided I wanted some dedicated bike bags that are easy to mount and unmount, weather-resistant, and flexible. If possible, these should even offer storage comparable to a medium or even large suitcase so that we could use them for extended stays or even replace other kind of luggage for trips where we wanted to have our bikes with us.
