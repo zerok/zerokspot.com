@@ -4,6 +4,8 @@ date: "2022-06-06T12:39:10+02:00"
 tags:
 - openpolicyagent
 - features
+incoming:
+- url: https://chaos.social/@zerok/108430140018046479
 ---
 
 Since [0.41](https://github.com/open-policy-agent/opa/releases/tag/v0.41.0), OPA now also has some [built-in functions for working with GraphQL](https://www.openpolicyagent.org/docs/latest/policy-reference/#graphql) requests! These allow you to parse requests, parse schemas, and verify that a request adheres to a schema:
