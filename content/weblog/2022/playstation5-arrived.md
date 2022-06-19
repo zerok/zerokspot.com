@@ -3,6 +3,8 @@ title: PlayStation 5 arrived!
 date: "2022-06-18T21:14:42+02:00"
 tags:
 - gaming
+incoming:
+- url: https://chaos.social/@zerok/108502871737602972  
 ---
 
 I’ve waited for a very long time for this day but today it has finally come: At noon I got a call from a local electronics store that my PlayStation 5 has arrived. As I wrote [here](https://zerokspot.com/notes/2022/06/11/ps5-preordered/), last week I was able to pre-order it with the promise that I’d get it within the month. So this afternoon we rode our bikes down to Seiersberg and picked up my order, an additional controller (just in case anybody ever wants to play with me), and a copy of [Deathloop](https://www.playstation.com/de-de/games/deathloop/) which was just a very attractive price right now.
