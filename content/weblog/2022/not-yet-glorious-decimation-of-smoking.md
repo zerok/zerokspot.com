@@ -5,6 +5,7 @@ tags:
 - health
 - smoking
 - austria
+inReplyTo: "https://birchtree.me/blog/the-glorious-decimation-of-smoking"
 ---
 Triggered by [this post by Matt Birchler](https://birchtree.me/blog/the-glorious-decimation-of-smoking/) were he mentioned that in the US only about 12.5% of adults were still smoking, I went looking for some statistics for Austria. Turns out [Statistik Austria also has some numbers](https://statistik.at/statistiken/bevoelkerung-und-soziales/gesundheit/gesundheitsverhalten/rauchen) going back to 1972!
 
