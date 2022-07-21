@@ -31,6 +31,10 @@ html.darkmode {
         blockquote {
             color: #DFDFDF;
         }
+
+        td, th {
+            border-bottom: 1px solid #FEFEFE;
+        }
     }
 
     .page__header a {

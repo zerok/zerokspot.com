@@ -189,4 +189,13 @@
         display: block;
         }
     }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    td, th {
+        padding: 5px 10px;
+        border-bottom: 1px solid $base-fg;
+    }
 }
