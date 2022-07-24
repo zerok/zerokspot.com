@@ -7,6 +7,7 @@ tags:
 - 1password
 incoming:
 - url: https://chaos.social/@zerok/108701722694651457
+- url: https://twitter.com/zerok/status/1551145191628804096
 ---
 
 Triggered by [this post from the official 1Password blog by K.J. Valencik](https://blog.1password.com/1password-ssh-changed-how-i-work/) I’ve been using a new feature of the product for the last couple of weeks: [SSH key management](https://developer.1password.com/docs/ssh/get-started). The feature consists of two parts: First of all you can now _store SSH keys within 1Password_ either by just importing an existing private key file or by letting the application generate a RSA or Ed25519 key for you. As usual, you can then add notes, extra fields etc. to that new key.
