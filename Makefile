@@ -1,26 +1,31 @@
-main_js=static/js/archive.js
-
-all: bin/blog $(main_js)
+all: bin/blog
 
 .PHONY: test
 test:
 	go test ./... -v
 
-prepare:
-	yarn
-
-frontend: $(main_js)
-
-static/js/archive.js: $(shell find ./static/app -name '*.js')
-	yarn run webpack
-
 bin:
 	mkdir -p bin
 
-clean:
-	rm -rf bin $(main_js)
+.PHONY: alldata
+alldata:
+	./bin/blog build-archive
+	hugo
+	./bin/blog build-graph
+	./bin/blog blogroll --output ./data/blogroll.json
+	hugo
+	./bin/blog books gen-opml
+	./bin/blog search build-mapping
 
-bin/blog: $(shell find . -name '*.go') bin
+clean:
+	rm -rf bin data/blogroll.json
+
+bin/blog: $(shell find . -name '*.go') bin go.mod
 	cd cmd/blog && go build -o ../../bin/blog
 
-.PHONY: clean all prepare frontend
+
+.PHONY: run
+run: alldata
+	hugo serve -D
+
+.PHONY: clean all
