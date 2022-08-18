@@ -4,6 +4,8 @@ date: "2022-08-18T20:38:39+02:00"
 tags:
 - rust
 - development
+incoming:
+- url: https://chaos.social/@zerok/108845363496305485  
 ---
 
 Every now and then I’m trying to learn Rust. For some reason it hasn’t clicked with me yet though but at least this time I’ve tried something new: Normally I use Exercism for getting used to a new language or just exploring it. But with Rust in particular I think my main problem is that I don’t know what Rust code should look like and how all these concepts are actually used in practice. For this reason I’ve done all the nearly 100 exercises that the [Rustlings project](https://github.com/rust-lang/rustlings) offers over the last two weeks 🙂
