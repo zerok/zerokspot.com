@@ -12,4 +12,4 @@ Every now and then I’m trying to learn Rust. For some reason it hasn’t click
 
 Unlike [Exercism](https://exercism.org/tracks/rust) where you get a task and need to implement it as idiomatically as possible, Rustlings provides you incomplete code and tasks you to finish/fix it using a specific language concept that it wants to teach you in each exercise. This starts with how to work with the two string types all the way up to multi-threading, reference counting, and queues. Obviously, also borrowing got its set of exercises and that concept might finally have clicked with me. Life-times were also quite close but I’m not ready for them yet 🙃
 
-Even *if* this doesn’t manage to really get me into Rust (and the final decision hasn’t been made yet) I had lots of fun here and can absolutely recommend it to anyone who is event remotely interested in Rust!
+Even *if* this doesn’t manage to really get me into Rust (and the final decision hasn’t been made yet) I had lots of fun here and can absolutely recommend it to anyone who is even remotely interested in Rust!
