@@ -1,9 +1,11 @@
 ---
-title: Rest in Peach, Le Petit Canard
+title: Rest in Peace, Le Petit Canard
 date: "2022-08-29T21:36:14+02:00"
 tags:
 - restaurants
 - paris
+aliases:
+- /weblog/2022/08/29/rest-in-peach-le-petit-canard/  
 ---
 
 Back in 2014 a couple of co-workers and I were in Paris to attend a local JavaScript conference. While planning the trip I had stumbled upon a nice little restaurant specialized in duck meat: [Le Petit Canard](http://resto-lepetitcanard.com). This all sounded nice and so I booked it for our first evening in town which was incidentally also my birthday. 
