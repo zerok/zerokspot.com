@@ -26,9 +26,8 @@
                         </div>
                     </header>
                     <figure class="photo__content photo__content--{{ .Params.format }}">
-                        {{ $fullImage := printf "https://files.zerokspot.com/photos/%s" .Params.image }}
-                        {{ $baseImage := strings.TrimSuffix (path.Ext $fullImage) $fullImage }}
-                        {{ $largeImage := printf "%s.large%s" $baseImage (path.Ext $fullImage) }}
+                        {{ $fullImage := printf "https://zerokspot.com/api/photos/%s?profile=1024" .Params.image }}
+                        {{ $largeImage := printf "https://zerokspot.com/api/photos/%s?profile=800" .Params.image }}
                         <a href="{{ $fullImage }}" class="photo__image"><img src="{{ $largeImage }}"></a>
                         <figcaption class="photo__caption e-content">{{ .Content }}</figcaption>
                         {{ if .Params.camera }}

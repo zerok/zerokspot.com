@@ -1,7 +1,7 @@
 ---
 title: "Flower friends"
 date: "2020-06-02T19:00:00+02:00"
-image: 2020/flower-friends.jpg
+image: 2020/06/02/flower-friends.jpg
 tags:
 - flower
 camera: "Sony NEX 6"

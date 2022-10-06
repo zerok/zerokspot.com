@@ -2,7 +2,7 @@
 title: "Sudhaus Shopping"
 date: "2020-05-15T16:00:00+02:00"
 format: portrait
-image: "2020/sudhaus-shopping.jpg"
+image: "2020/05/15/sudhaus-shopping.jpg"
 camera: "iPhone Xs"
 ---
 

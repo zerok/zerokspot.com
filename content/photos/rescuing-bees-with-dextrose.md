@@ -2,7 +2,7 @@
 title: "Rescuing bees with dextrose"
 date: "2020-08-07T16:00:00+02:00"
 format: landscape
-image: "2020/bee-and-dextrose.jpg"
+image: "2020/08/07/bee-and-dextrose.jpg"
 camera: "iPhone Xs"
 ---
 

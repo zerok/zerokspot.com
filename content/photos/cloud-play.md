@@ -2,7 +2,7 @@
 title: "Cloud play"
 date: "2020-06-18T20:50:00+02:00"
 format: landscape
-image: "2020/cloud-play.jpg"
+image: "2020/06/18/cloud-play.jpg"
 camera: "Sony NEX 6"
 lens: "10-105mm G"
 ---
