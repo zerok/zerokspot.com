@@ -4,6 +4,8 @@ date: "2022-10-11T20:19:38+02:00"
 tags:
 - politics
 - austria
+incoming:
+- url: "https://chaos.social/@zerok/109155364476778459"
 ---
 
 Last weekend Austria finally had our [presidential election](https://en.wikipedia.org/wiki/2022_Austrian_presidential_election). Seven candidates were battling it out in order to reach the highest office in the country for the next six years with the current president (Alexander Van der Bellen) being far ahead of everyone else in most pre-election polls.
