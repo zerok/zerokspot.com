@@ -4,6 +4,8 @@ date: "2022-10-19T20:04:15+02:00"
 tags:
 - tvshows
 - thrillers
+incoming:
+- url: https://chaos.social/@zerok/109196281232545364
 ---
 
 Last weekend we were in binge-watching mood again and powered through the first season of [Severance](https://en.wikipedia.org/wiki/Severance_(TV_series)) on AppleTV+.  I didn’t know what to expect. For some reason I thought this would be some kind of office-comedy but imagine my surprise when the show turned dark very quickly!
