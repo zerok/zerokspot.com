@@ -16,5 +16,5 @@ Last week I’ve been to Paris for the first time in a couple of years. While th
 
 The staff was extremely friendly and very helpful despite our large knowledge gaps regarding the French language. As for the furniture and style, it's exactly what you'd expect in a French café and everything including the toilet was tidy and clean 🙂
 
-I think Le Café Qui Parse might be the one restaurant in Paris that will always be on my list when in town!
+I think Le Café Qui Parle might be the one restaurant in Paris that will always be on my list when in town!
 
