@@ -6,6 +6,8 @@ tags:
 - france
 - reviews
 - restaurants
+incoming:
+- url: https://chaos.social/@zerok/109262760497519109  
 ---
 
 Last week I’ve been to Paris for the first time in a couple of years. While there I’ve noticed that some of the places I really enjoyed had less than stellar ratings on Google Maps and other places. To change that I’ve started to post some reviews there and also mirror them here. At this point I’m not yet sure how many posts these are going to be but here it goes 🙂
