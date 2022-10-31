@@ -1,7 +1,11 @@
 ---
 title: 'Review: Le Café Qui Parle'
 date: "2022-10-31T12:23:30+01:00"
-tags: []
+tags:
+- paris
+- france
+- reviews
+- restaurants
 ---
 
 Last week I’ve been to Paris for the first time in a couple of years. While there I’ve noticed that some of the places I really enjoyed had less than stellar ratings on Google Maps and other places. To change that I’ve started to post some reviews there and also mirror them here. At this point I’m not yet sure how many posts these are going to be but here it goes 🙂
@@ -13,6 +17,4 @@ Last week I’ve been to Paris for the first time in a couple of years. While th
 The staff was extremely friendly and very helpful despite our large knowledge gaps regarding the French language. As for the furniture and style, it's exactly what you'd expect in a French café and everything including the toilet was tidy and clean 🙂
 
 I think Le Café Qui Parse might be the one restaurant in Paris that will always be on my list when in town!
-
-# paris #france #restaurants #reviews
 
