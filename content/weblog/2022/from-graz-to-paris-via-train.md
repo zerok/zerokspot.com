@@ -5,6 +5,8 @@ tags:
 - travels
 - train
 - paris
+incoming:
+- url: https://chaos.social/@zerok/109298107919904444
 ---
 
 For our autumn holiday trip to Paris we decided not to fly but to go by train. Turns out that this is surprisingly complicated thanks to ÖBB, DB and SNCF somehow not being able to route that properly. The first learning from all of this was [Trainline.com](https://www.thetrainline.com/de), a service that makes booking train tickets across multiple European countries much more convenient.
