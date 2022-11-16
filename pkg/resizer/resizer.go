@@ -34,7 +34,7 @@ func (mr *MagickResizer) Resize(ctx context.Context, path string) error {
 	}
 	for name, prof := range mr.profiles.p {
 		targetPath := filepath.Join(outputFolder, fmt.Sprintf("%s.%s", name, prof.Format))
-		if err := exec.CommandContext(ctx, "magick", "convert", sourcePath, "-strip", "-resize", fmt.Sprintf("%dx", prof.Width)+">", targetPath).Run(); err != nil {
+		if err := exec.CommandContext(ctx, "magick", "convert", sourcePath, "-auto-orient", "-strip", "-resize", fmt.Sprintf("%dx", prof.Width)+">", targetPath).Run(); err != nil {
 			return err
 		}
 	}
