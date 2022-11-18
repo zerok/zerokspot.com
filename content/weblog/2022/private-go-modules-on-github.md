@@ -5,6 +5,8 @@ tags:
 - golang
 - tutorials
 - github
+incoming:
+- url: https://chaos.social/@zerok/109364056241331254
 ---
 
 If you want to work with private modules hosted on GitHub and still have all the advantages of [GitHub Actions](https://docs.github.com/en/actions), you will have to jump through a handful of hoops first. This post is mostly a reminder for myself so that I don't forget half of the step again and again and wonder why access doesn't work.
