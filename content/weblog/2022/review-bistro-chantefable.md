@@ -6,6 +6,8 @@ tags:
 - paris
 - reviews
 - paris-oct-2022
+incoming:
+- url: https://chaos.social/@zerok/109422508127704876  
 ---
 
 On our last evening we wanted to end it we wanted to have some duck steak! Since Le Petit Canard is now closed, we had to look for a new place. The [Bistro Chantefable](http://chantefable.fr/en/home/) had a great duck and much more including delicious oysters in various price levels and snails.
