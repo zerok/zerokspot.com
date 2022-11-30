@@ -4,6 +4,8 @@ date: "2022-11-30T16:16:58+01:00"
 tags:
 - career
 - jobs
+incoming:
+- url: https://chaos.social/@zerok/109433545715303873
 ---
 
 After 13 years I’ve now decided to try something new and am therefore leaving [Netconomy](https://netconomy.net/) with the end of November. Over the years I’ve worked on large-scale e-commerce platforms, mobile applications, infrastructure projects, and much more. I’ve also had the chance to work with lots of awesome people, many of which I’ve the privilege of calling friends now. Without Netconomy I wouldn’t be where I am today and I’d like to wish everyone there all the best for the future!
