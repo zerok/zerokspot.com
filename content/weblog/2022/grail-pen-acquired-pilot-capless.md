@@ -5,6 +5,8 @@ tags:
 - fountainpens
 - pilot
 - penaddict
+incoming:
+- url: https://chaos.social/@zerok/109451318739274184 
 ---
 
 For those of you who haven’t heard the term before, a “grail pen” is a pen that you want to have but for some reason or another cannot - due to pricing or availability. 
