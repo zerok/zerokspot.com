@@ -6,12 +6,11 @@ type: "aboutme"
 
 <img class="u-photo" src="/images/me.jpg" alt="Photo of Horst Gutmann"
 style="max-width:150px;float:left;padding:3px;border:2px solid #EFEFEF;margin:0 1rem
-0.5rem 0"> I'm a software developer from [Graz, Austria][graz], where I'm currently working
-for [Netconomy Software & Consulting GmbH][nc]. While I started there as a Java
-developer working on [hybris][]-based e-commerce solutions, after a couple of
-years I moved over to more frontendy grounds where I did projects with
-[Sencha touch][] and [ReactJS][]. Right now I'm working on our internal tools,
-services and frameworks 😃
+0.5rem 0"> I'm a software developer from [Graz, Austria][graz], where I'm
+currently working for [Grafana Labs][gl] on the Release Engineering team.
+Previously, I had worked for [Netconomy][nc] with Java on [hybris/SAP
+Commerce][]-based e-commerce solutions and with [Sencha touch][] and
+[ReactJS][] on frontend projects.
 
 Before that I studied Computer Science at the [University of Klagenfurt][uniklu].
 
@@ -35,3 +34,4 @@ Oh, and I really love [attending conferences][conf] 😉
 [go]: https://golang.org/
 [rust]: https://www.rust-lang.org/en-US/
 [conf]: /events/
+[gl]: https://grafana.com
