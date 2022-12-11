@@ -9,7 +9,7 @@ style="max-width:150px;float:left;padding:3px;border:2px solid #EFEFEF;margin:0 
 0.5rem 0"> I'm a software developer from [Graz, Austria][graz], where I'm
 currently working for [Grafana Labs][gl] on the Release Engineering team.
 Previously, I had worked for [Netconomy][nc] with Java on [hybris/SAP
-Commerce][]-based e-commerce solutions and with [Sencha touch][] and
+Commerce][hybris]-based e-commerce solutions and with [Sencha touch][] and
 [ReactJS][] on frontend projects.
 
 Before that I studied Computer Science at the [University of Klagenfurt][uniklu].
