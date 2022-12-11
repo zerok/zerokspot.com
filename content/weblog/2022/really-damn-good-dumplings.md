@@ -5,6 +5,8 @@ tags:
 - reviews
 - restaurants
 - vienna
+incoming:
+- url: https://chaos.social/@zerok/109495934826998733
 ---
 
 While on our way to Sous Bois, a Traveler’s Company partner shop in Vienna, we stumbled upon a tiny dumplings restaurant called [“ballroom 1070 - damn.good.dumplings”](https://www.damngooddumplings.at/). On the inside there is place for only about 6 people but if the weather is fine, there are also some tables on the outside. The weather was definitely not fine on that day and so we stayed inside and enjoyed the heating while browsing the menu. The restaurant offers vegan and non-vegan dumplings in servings from 6 to 12. If you want, you can also pick them as a combo which will also include something to drink and a side (edamame, coleslaw, …). 
