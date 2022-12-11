@@ -15,4 +15,4 @@ We had one 9-dumplings combo of “Berlin Ball”, a vegan version with mushroom
 
 A medium-size (9 dumplings) combo cost € 9.50 + € 4.30 which was more than fair for what we got!
 
-The only downside of ballroom 1070 is that there is so little room in there and no toilet, but there’s also another location (ballroom 1080) which should have both and which we might try on our next trip to Vienna! That being said, we had a great meal at ballroom 1070 and the staff was extremely friendly *and* fast 🙂
+The only downside of ballroom 1070 is that there is so little room in there and no toilet, but there’s also another location (ballroom 1090) which should have both and which we might try on our next trip to Vienna! That being said, we had a great meal at ballroom 1070 and the staff was extremely friendly *and* fast 🙂
