@@ -5,6 +5,8 @@ tags:
 - techo
 - planner
 - techokaigi
+incoming:
+- url: https://chaos.social/@zerok/109614588533751008
 ---
 
 In a recent post Kimberly from ThePenAddict introduced the term [“Techo Kaigi”](https://www.penaddict.com/blog/2022/12/16/my-techo-kaigi-for-2023) to me. It’s basically a meeting with yourself in which you look back at your current planner setup in order to decide what you’ll keep and change about it for the next year. So here comes what I’ve planned for 2023 (for now) 🙂
