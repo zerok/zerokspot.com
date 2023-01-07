@@ -5,6 +5,8 @@ tags:
 - decentralized
 - funding
 - matrix
+incoming:
+- url: https://chaos.social/@zerok/109648303465020350
 ---
 In the recent [Holiday Update post](https://matrix.org/blog/2022/12/25/the-matrix-holiday-update-2022) on the [Matrix.org](https://matrix.org/) blog Matthew Hodgson gave a great overview of what the foundation had achieved in 2022. Tons of work on the “Faster joins” and “Sliding Sync” features promise a lot of usability improvements in the future. Huge efforts have also been spent on the encryption implementation(s) while reacting to some findings by researchers from the Royal Holloway University London.
 
