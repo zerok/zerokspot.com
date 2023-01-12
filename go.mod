@@ -1,6 +1,7 @@
 module gitlab.com/zerok/zerokspot.com
 
 require (
+	dagger.io/dagger v0.4.3
 	github.com/algolia/algoliasearch-client-go v0.0.0-20181011103956-52eecbef59a9
 	github.com/go-chi/chi v3.3.3+incompatible
 	github.com/go-chi/cors v1.0.0
@@ -11,7 +12,7 @@ require (
 	github.com/rs/zerolog v1.9.1
 	github.com/spf13/afero v1.6.0
 	github.com/spf13/cobra v1.3.0
-	github.com/stretchr/testify v1.7.1-0.20210427113832-6241f9ab9942
+	github.com/stretchr/testify v1.8.1
 	github.com/ulikunitz/xz v0.5.8
 	github.com/zerok/textbundle-go v0.0.0-20200521090826-d11aedee74ff
 	gopkg.in/yaml.v2 v2.4.0
@@ -19,8 +20,10 @@ require (
 
 require (
 	github.com/BurntSushi/locker v0.0.0-20171006230638-a6e239ea1c69 // indirect
+	github.com/Khan/genqlient v0.5.0 // indirect
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
+	github.com/adrg/xdg v0.4.0 // indirect
 	github.com/alecthomas/chroma v0.9.4 // indirect
 	github.com/armon/go-radix v1.0.0 // indirect
 	github.com/bep/debounce v1.2.0 // indirect
@@ -45,6 +48,7 @@ require (
 	github.com/gohugoio/go-i18n/v2 v2.1.3-0.20210430103248-4c28c89f8013 // indirect
 	github.com/gohugoio/locales v0.14.0 // indirect
 	github.com/gohugoio/localescompressed v0.14.0 // indirect
+	github.com/iancoleman/strcase v0.2.0 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/jdkato/prose v1.2.1 // indirect
 	github.com/kyokomi/emoji/v2 v2.2.8 // indirect
@@ -68,15 +72,16 @@ require (
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/tdewolff/minify/v2 v2.9.22 // indirect
 	github.com/tdewolff/parse/v2 v2.5.21 // indirect
+	github.com/vektah/gqlparser/v2 v2.5.1 // indirect
 	github.com/yuin/goldmark v1.4.4 // indirect
 	github.com/yuin/goldmark-highlighting v0.0.0-20200307114337-60d527fdb691 // indirect
 	golang.org/x/image v0.0.0-20211028202545-6944b10bf410 // indirect
-	golang.org/x/net v0.0.0-20210813160813-60bc85c4be6d // indirect
-	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
-	golang.org/x/sys v0.0.0-20211210111614-af8b64212486 // indirect
+	golang.org/x/net v0.0.0-20211015210444-4f30a5c0130f // indirect
+	golang.org/x/sync v0.0.0-20220722155255-886fb9371eb4 // indirect
+	golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab // indirect
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
 go 1.19

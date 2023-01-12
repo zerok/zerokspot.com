@@ -16,18 +16,6 @@ jobs:
     - uses: actions/setup-go@v3
       with:
         go-version: "1.19"
-    - uses: actions/cache@v2
-      with:
-        path: ~/go/pkg
-        key: ${{ runner.os }}-go-${{ hashFiles('./go.sum') }}
-        restore-keys: |
-          ${{ runner.os }}-go-
-    - name: Build CLI
-      run: "cd cmd/blog && GOOS=linux GOARCH=amd64 go build -mod=mod -o ../../blog && cd -"
-    - uses: actions/upload-artifact@v1
-      with:
-        name: blogcli
-        path: blog
 
     # Build the site
     - uses: peaceiris/actions-hugo@v2
@@ -37,34 +25,9 @@ jobs:
     - uses: actions/download-artifact@v1
       with:
         name: blogcli
-    - run: chmod +x ./blogcli/blog
-    - run: ./blogcli/blog build-archive
-    - run: hugo
-    - run: ./blogcli/blog build-graph
-    - run: ./blogcli/blog blogroll --output data/blogroll.json
-    - run: hugo
-    - run: "./blogcli/blog books gen-opml"
-    - run: "./blogcli/blog search build-mapping"
-    - run: "./blogcli/blog changes --since-rev $(curl https://zerokspot.com/.gitrev) --url > public/.changes.txt"
-
-    # Prepare deployment
-    - run: "sudo apt-get install -qq --yes git curl"
-      if: github.ref == 'refs/heads/main'
-    - run: "mkdir -p ~/.ssh && chmod 0700 ~/.ssh"
-      if: github.ref == 'refs/heads/main'
-    - run: "echo \"$SSH_PRIVATE_KEY\" > ~/.ssh/id_rsa && chmod 0600 ~/.ssh/id_rsa"
-      if: github.ref == 'refs/heads/main'
-    - run: "echo ${{ github.sha }} > public/.gitrev"
-      if: github.ref == 'refs/heads/main'
-
-    - name: "Build site for preview.zerokspot.com"
-      run: "hugo"
-      if: github.ref == 'refs/heads/main'
-    - run: "rsync -avz -e \"ssh -o StrictHostKeyChecking=no\" blogcli/blog www-zerokspot@zs-web-001.nodes.h10n.me:/srv/www/zerokspot.com/www/bin/"
-      if: github.ref == 'refs/heads/main'
-    - run: "cd public && rsync -e \"ssh -o StrictHostKeyChecking=no\" -avz * .mapping.json.xz .gitrev www-zerokspot@zs-web-001.nodes.h10n.me:/srv/www/zerokspot.com/www/htdocs/"
-      if: github.ref == 'refs/heads/main'
-    - run: "ssh www-zerokspot@zs-web-001.nodes.h10n.me \"touch /srv/www/zerokspot.com/www/deployed\""
+    - run: go run ci/main.go
+      if: github.ref != 'refs/heads/main'
+    - run: go run ci/main.go --publish
       if: github.ref == 'refs/heads/main'
 
     - uses: actions/upload-artifact@v1
