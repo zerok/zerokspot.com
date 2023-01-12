@@ -17,14 +17,6 @@ jobs:
       with:
         go-version: "1.19"
 
-    # Build the site
-    - uses: peaceiris/actions-hugo@v2
-      with:
-        hugo-version: "0.108.0"
-        extended: true
-    - uses: actions/download-artifact@v1
-      with:
-        name: blogcli
     - run: go run ci/main.go
       if: github.ref != 'refs/heads/main'
     - run: go run ci/main.go --publish
