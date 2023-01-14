@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"context"
 	"flag"
 	"fmt"
@@ -19,7 +20,7 @@ func main() {
 	flag.Parse()
 
 	logger := zerolog.New(zerolog.ConsoleWriter{Out: os.Stderr}).With().Timestamp().Logger()
-	ctx := context.Background()
+	ctx := logger.WithContext(context.Background())
 	client, err := dagger.Connect(ctx, dagger.WithLogOutput(os.Stderr))
 	if err != nil {
 		logger.Fatal().Err(err).Msg("Failed to setup Dagger")
@@ -58,6 +59,7 @@ func getPublicRev(ctx context.Context) (string, error) {
 }
 
 func build(ctx context.Context, client *dagger.Client, publish bool) error {
+	logger := zerolog.Ctx(ctx)
 	feedbinUsername := client.Host().EnvVariable("FEEDBIN_USER").Secret()
 	feedbinPassword := client.Host().EnvVariable("FEEDBIN_PASSWORD").Secret()
 	sshPrivateKey, err := client.Host().EnvVariable("SSH_PRIVATE_KEY").Value(ctx)
@@ -155,5 +157,44 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 	if _, err := rsyncContainer.ExitCode(ctx); err != nil {
 		return err
 	}
+
+	changes, err := getChanges(ctx, "./public/.changes.txt")
+	if err != nil {
+		return err
+	}
+
+	if len(changes) == 0 {
+		logger.Info().Msg("No changes found. Skipping webmentions.")
+		return nil
+	}
+	logger.Info().Msg("Generating webmentions")
+	mentionContainer := client.Container().From("zerok/webmentiond:latest").WithEntrypoint([]string{})
+	for _, change := range changes {
+		logger.Info().Msgf("Mentioning from %s", change)
+		mentionContainer = mentionContainer.WithExec([]string{"/usr/local/bin/webmentiond", "send", change})
+		if _, err := mentionContainer.ExitCode(ctx); err != nil {
+			return err
+		}
+	}
+
 	return nil
+}
+
+func getChanges(ctx context.Context, path string) ([]string, error) {
+	fp, err := os.Open(path)
+	if err != nil {
+		return nil, err
+	}
+	defer fp.Close()
+	result := make([]string, 0, 10)
+	scanner := bufio.NewScanner(fp)
+	scanner.Split(bufio.ScanLines)
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		if len(line) > 0 {
+			result = append(result, line)
+		}
+
+	}
+	return result, nil
 }

@@ -11,7 +11,6 @@ jobs:
       SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
     runs-on: ubuntu-latest
     steps:
-    # Build the build tool
     - uses: actions/checkout@v1
     - uses: actions/setup-go@v3
       with:
@@ -21,28 +20,4 @@ jobs:
       if: github.ref != 'refs/heads/main'
     - run: go run ci/main.go --publish
       if: github.ref == 'refs/heads/main'
-
-    - uses: actions/upload-artifact@v1
-      with:
-        name: changes
-        path: ./public/.changes.txt
-      if: github.ref == 'refs/heads/main'
-
-  mention:
-    if: github.ref == 'refs/heads/main'
-    needs:
-      - build
-    runs-on: ubuntu-latest
-    container:
-      image: "zerok/webmentiond:latest"
-    steps:
-    - uses: actions/download-artifact@v1
-      with:
-        name: changes
-    - run: "((test $(stat -c '%s' ./changes/.changes.txt) -gt 10) && (cat ./changes/.changes.txt | xargs -n 1 /usr/local/bin/webmentiond send)) || echo 'Nothing changed.'"
-    - uses: zerok/pushover-action@master
-      with:
-        token: ${{ secrets.PUSHOVER_TOKEN }}
-        user: ${{ secrets.PUSHOVER_USER }}
-        message: CI completed
 
