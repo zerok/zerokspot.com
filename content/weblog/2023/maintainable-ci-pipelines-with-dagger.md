@@ -6,6 +6,8 @@ tags:
 - cicd
 - zerokspot
 - golang
+incoming:
+- url: https://chaos.social/@zerok/109700453017087686
 ---
 
 The CI pipeline for a blog such as zerokspot.com *should* be quite simple. Run Hugo and push the result onto a server via rsync. Over the years, though, the site has gained a lot of functionality that is (or at least was not possible at the time of implementing it) with a plain Hugo setup and so the pipeline became more complicated, too.
