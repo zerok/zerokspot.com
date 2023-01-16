@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"context"
 	"flag"
-	"fmt"
 	"io/ioutil"
 	"net/http"
 	"os"
@@ -30,14 +29,6 @@ func main() {
 	if err := build(ctx, client, publish); err != nil {
 		logger.Fatal().Err(err).Msg("Failed to build")
 	}
-}
-
-func requireEnv(name string) (string, error) {
-	v := os.Getenv(name)
-	if v == "" {
-		return "", fmt.Errorf("%s not set", name)
-	}
-	return v, nil
 }
 
 func getPublicRev(ctx context.Context) (string, error) {
