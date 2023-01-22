@@ -129,7 +129,6 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 			WithEnvVariable("GOARCH", "amd64").
 			WithEnvVariable("GOCACHE", "/go/pkg/cache").
 			WithMountedCache("/go/pkg", goCacheVolume).
-			WithExec([]string{"go", "env"}).
 			WithMountedDirectory("/src/pkg", rootDirectory.Directory("pkg")).
 			WithMountedDirectory("/src/cmd", rootDirectory.Directory("cmd")).
 			WithMountedFile("/src/go.mod", rootDirectory.File("go.mod")).
