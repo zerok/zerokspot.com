@@ -220,8 +220,8 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 			WithMountedFile("/usr/local/bin/blogcli", blogBin).
 			WithMountedDirectory("/src/public", hugoContainer.Directory("/src/public")).
 			WithWorkdir("/src/public").
-			WithExec([]string{"rsync", "-e", "ssh -o StrictHostKeyChecking=no", "-avz", "/usr/local/bin/blogcli", "www-zerokspot@zs-web-001.nodes.h10n.me:/srv/www/zerokspot.com/www/bin/"}).
-			WithExec([]string{"rsync", "-e", "ssh -o StrictHostKeyChecking=no", "-avz", ".", ".mapping.json.xz", ".gitrev", "www-zerokspot@zs-web-001.nodes.h10n.me:/srv/www/zerokspot.com/www/htdocs/"}).
+			WithExec([]string{"rsync", "-e", "ssh -o StrictHostKeyChecking=no", "-az", "/usr/local/bin/blogcli", "www-zerokspot@zs-web-001.nodes.h10n.me:/srv/www/zerokspot.com/www/bin/"}).
+			WithExec([]string{"rsync", "-e", "ssh -o StrictHostKeyChecking=no", "-az", ".", ".mapping.json.xz", ".gitrev", "www-zerokspot@zs-web-001.nodes.h10n.me:/srv/www/zerokspot.com/www/htdocs/"}).
 			WithExec([]string{"ssh", "www-zerokspot@zs-web-001.nodes.h10n.me", "touch /srv/www/zerokspot.com/www/deployed"})
 
 		if _, err := rsyncContainer.ExitCode(ctx); err != nil {
