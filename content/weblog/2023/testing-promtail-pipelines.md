@@ -6,6 +6,8 @@ tags:
 - grafana
 - logging
 - observability
+incoming:
+- url: https://chaos.social/@zerok/109751559102541892
 ---
 
 If you want to get data into Grafana Loki then [Promtail](https://grafana.com/docs/loki/latest/clients/promtail/) probably the easiest way to do so. In my case, I wanted to forward Caddy’s access logs to Loki. There are some fields, though, that I don’t want to send over to Loki, like a user’s IP or port number.
