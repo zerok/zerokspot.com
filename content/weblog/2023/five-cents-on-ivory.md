@@ -5,6 +5,8 @@ tags:
 - mastodon
 - ios
 - fediverse
+incoming:
+- url: https://chaos.social/@zerok/109774308759239022 
 ---
 
 Ever since Twitter went down the sewer I thought what I’d do about [Tweetbot](https://tapbots.com/tweetbot/#eulogy). It was actually the only way I could imagine myself using the platform for a long time and once Twitter banned all third-party apps I decided to keep paying for it until Tapbot releases a Mastodon app.
