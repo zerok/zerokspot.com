@@ -57,7 +57,7 @@ func findParentTrace(ctx context.Context) context.Context {
 		logger.Info().Msg("No parent trace provided")
 		return ctx
 	}
-	logger.Info().Msg("Parent trace provided")
+	logger.Info().Msgf("Parent trace provided: %s", traceParent)
 	carrier := make(propagation.MapCarrier)
 	carrier.Set("traceparent", traceParent)
 	prop := otel.GetTextMapPropagator()
@@ -112,7 +112,16 @@ func main() {
 	defer cancel()
 
 	tp := initOtel(ctx)
-	defer tp.Shutdown(context.Background())
+	defer func() {
+		if err := tp.ForceFlush(context.Background()); err != nil {
+			logger.Error().Err(err).Msg("Failed to flush tracer provider")
+		}
+	}()
+	defer func() {
+		if err := tp.Shutdown(context.Background()); err != nil {
+			logger.Error().Err(err).Msg("Failed to shut down tracer provider")
+		}
+	}()
 
 	if err := rootCmd.ExecuteContext(ctx); err != nil {
 		logger.Fatal().Msg(err.Error())
