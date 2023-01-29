@@ -110,13 +110,18 @@ func getTraceParent(ctx context.Context) string {
 	return carrier.Get("traceparent")
 }
 
-func withOtelEnv(ctx context.Context, container *dagger.Container) *dagger.Container {
+func withOtelEnv(ctx context.Context, client *dagger.Client, container *dagger.Container) *dagger.Container {
+	logger := zerolog.Ctx(ctx)
 	for _, v := range []string{
 		"OTEL_EXPORTER_OTLP_PROTOCOL",
 		"OTEL_EXPORTER_OTLP_HEADERS",
 		"OTEL_EXPORTER_OTLP_ENDPOINT",
 	} {
-		container = container.WithEnvVariable(v, os.Getenv(v))
+		value, err := client.Host().EnvVariable(v).Value(ctx)
+		if err != nil {
+			logger.Error().Err(err).Msgf("Failed to retrieve environment variable %s", v)
+		}
+		container = container.WithEnvVariable(v, value)
 	}
 	return container.
 		WithEnvVariable("TRACEPARENT", getTraceParent(ctx))
@@ -153,7 +158,7 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 	if err := func(ctx context.Context) error {
 		ctx, span := tracer.Start(ctx, "buildBlogBinary")
 		defer span.End()
-		buildContainer = withOtelEnv(ctx, client.Container().From("golang:1.19")).
+		buildContainer = withOtelEnv(ctx, client, client.Container().From("golang:1.19")).
 			WithEnvVariable("GOOS", "linux").
 			WithEnvVariable("GOARCH", "amd64").
 			WithEnvVariable("GOCACHE", "/go/pkg/cache").
@@ -180,7 +185,7 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 	if err := func(ctx context.Context) error {
 		ctx, span := tracer.Start(ctx, "buildWebsite")
 		defer span.End()
-		hugoContainer = withOtelEnv(ctx, client.Container().From("klakegg/hugo:0.107.0-ext-ubuntu")).
+		hugoContainer = withOtelEnv(ctx, client, client.Container().From("klakegg/hugo:0.107.0-ext-ubuntu")).
 			WithEntrypoint([]string{}).
 			WithExec([]string{"apt-get", "update"}).
 			WithExec([]string{"apt-get", "install", "-y", "git"}).
@@ -238,7 +243,7 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 		ctx, span := tracer.Start(ctx, "rsync")
 		defer span.End()
 		// Prepare an rsync container which we can then use to upload everything:
-		rsyncContainer := withOtelEnv(ctx, client.Container().From("alpine:3.17")).
+		rsyncContainer := withOtelEnv(ctx, client, client.Container().From("alpine:3.17")).
 			WithExec([]string{"apk", "add", "rsync", "openssh-client-default"}).
 			WithExec([]string{"mkdir", "/root/.ssh"}).
 			WithExec([]string{"chmod", "0700", "/root/.ssh"}).
@@ -277,7 +282,7 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 		ctx, span := tracer.Start(ctx, "sendWebmentions")
 		defer span.End()
 		logger.Info().Msg("Generating webmentions")
-		mentionContainer := withOtelEnv(ctx, client.Container().From("zerok/webmentiond:latest")).
+		mentionContainer := withOtelEnv(ctx, client, client.Container().From("zerok/webmentiond:latest")).
 			WithEntrypoint([]string{})
 		for _, change := range changes {
 			logger.Info().Msgf("Mentioning from %s", change)
