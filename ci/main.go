@@ -69,7 +69,7 @@ func main() {
 	defer span.End()
 	span.SetAttributes(attribute.Bool("publish", publish))
 
-	client, err := dagger.Connect(ctx, dagger.WithLogOutput(os.Stderr))
+	client, err := dagger.Connect(ctx, dagger.WithLogOutput(os.Stderr), dagger.WithNoExtensions())
 	if err != nil {
 		span.SetStatus(codes.Error, "Failed to setup Dagger")
 		logger.Fatal().Err(err).Msg("Failed to setup Dagger")
@@ -111,8 +111,11 @@ func getTraceParent(ctx context.Context) string {
 }
 
 func withOtelEnv(ctx context.Context, client *dagger.Client, container *dagger.Container) *dagger.Container {
-	c := container.WithEnvVariable("TRACEPARENT", getTraceParent(ctx))
 	logger := zerolog.Ctx(ctx)
+	c := container.
+		WithEnvVariable("TRACEPARENT", getTraceParent(ctx)).
+		WithoutEnvVariable("OTEL_TRACES_EXPORTER")
+
 	for _, v := range []string{
 		"OTEL_EXPORTER_OTLP_PROTOCOL",
 		"OTEL_EXPORTER_OTLP_HEADERS",
@@ -120,7 +123,7 @@ func withOtelEnv(ctx context.Context, client *dagger.Client, container *dagger.C
 	} {
 		value, err := client.Host().EnvVariable(v).Value(ctx)
 		if err != nil {
-			logger.Error().Err(err).Msgf("Failed to retrieve environment variable %s", v)
+			logger.Warn().Err(err).Msgf("Failed to extract `%s`", v)
 			continue
 		}
 		c = c.WithEnvVariable(v, value)

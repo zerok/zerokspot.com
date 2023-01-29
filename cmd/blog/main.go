@@ -74,6 +74,10 @@ func initOtel(ctx context.Context) *sdktrace.TracerProvider {
 		Msg("Configuring Otel")
 
 	if os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT") != "" {
+		os.Setenv("OTEL_EXPORTER_OTLP_TRACES_ENDPOINT", os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT"))
+		os.Setenv("OTEL_EXPORTER_OTLP_TRACES_PROTOCOL", os.Getenv("OTEL_EXPORTER_OTLP_PROTOCOL"))
+		os.Setenv("OTEL_EXPORTER_OTLP_TRACES_HEADERS", os.Getenv("OTEL_EXPORTER_OTLP_HEADERS"))
+
 		otlpClient := otlptracehttp.NewClient()
 		exporter, err = otlptrace.New(ctx, otlpClient)
 		logger.Info().Msg("Sending traces to remote endpoint")
@@ -118,6 +122,7 @@ func main() {
 		}
 	}()
 	defer func() {
+		logger.Info().Msg("Shutting down tracer provider")
 		if err := tp.Shutdown(context.Background()); err != nil {
 			logger.Error().Err(err).Msg("Failed to shut down tracer provider")
 		}
