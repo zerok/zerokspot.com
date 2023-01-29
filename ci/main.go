@@ -111,6 +111,7 @@ func getTraceParent(ctx context.Context) string {
 }
 
 func withOtelEnv(ctx context.Context, client *dagger.Client, container *dagger.Container) *dagger.Container {
+	c := container.WithEnvVariable("TRACEPARENT", getTraceParent(ctx))
 	logger := zerolog.Ctx(ctx)
 	for _, v := range []string{
 		"OTEL_EXPORTER_OTLP_PROTOCOL",
@@ -120,11 +121,11 @@ func withOtelEnv(ctx context.Context, client *dagger.Client, container *dagger.C
 		value, err := client.Host().EnvVariable(v).Value(ctx)
 		if err != nil {
 			logger.Error().Err(err).Msgf("Failed to retrieve environment variable %s", v)
+			continue
 		}
-		container = container.WithEnvVariable(v, value)
+		c = c.WithEnvVariable(v, value)
 	}
-	return container.
-		WithEnvVariable("TRACEPARENT", getTraceParent(ctx))
+	return c
 }
 
 func build(ctx context.Context, client *dagger.Client, publish bool) error {

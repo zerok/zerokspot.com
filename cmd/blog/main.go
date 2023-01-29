@@ -68,11 +68,18 @@ func initOtel(ctx context.Context) *sdktrace.TracerProvider {
 	var exporter sdktrace.SpanExporter
 	var err error
 
+	logger.Info().
+		Str("OTEL_EXPORTER_OTLP_ENDPOINT", os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT")).
+		Str("OTEL_EXPORTER_OTLP_PROTOCOL", os.Getenv("OTEL_EXPORTER_OTLP_PROTOCOL")).
+		Msg("Configuring Otel")
+
 	if os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT") != "" {
 		otlpClient := otlptracehttp.NewClient()
 		exporter, err = otlptrace.New(ctx, otlpClient)
+		logger.Info().Msg("Sending traces to remote endpoint")
 	} else {
 		exporter, err = stdouttrace.New(stdouttrace.WithWriter(os.Stderr))
+		logger.Info().Msg("Sending traces to stderr")
 	}
 	if err != nil {
 		logger.Fatal().Err(err).Msg("Failed to initialize trace exporter")
@@ -100,6 +107,7 @@ func initOtel(ctx context.Context) *sdktrace.TracerProvider {
 }
 
 func main() {
+	logger = zerolog.New(zerolog.ConsoleWriter{Out: os.Stderr})
 	ctx, cancel := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
 	defer cancel()
 
