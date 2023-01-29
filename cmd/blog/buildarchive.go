@@ -6,12 +6,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/gohugoio/hugo/config"
-	hugodeps "github.com/gohugoio/hugo/deps"
-	hugofs "github.com/gohugoio/hugo/hugofs"
-	"github.com/gohugoio/hugo/hugolib"
 	page "github.com/gohugoio/hugo/resources/page"
-	"github.com/spf13/afero"
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v2"
 )
@@ -44,35 +39,15 @@ var buildArchiveCmd = &cobra.Command{
 	RunE: func(cmd *cobra.Command, args []string) error {
 		ctx := logger.WithContext(cmd.Context())
 		ctx = findParentTrace(ctx)
-		ctx, span := tracer.Start(ctx, "build-archive")
+		ctx, span := tracer.Start(ctx, "cmd:build-archive")
 		defer span.End()
 		wd, err := os.Getwd()
 		if err != nil {
 			return err
 		}
-		fs := afero.NewOsFs()
-		v := config.New()
-		hfs := hugofs.NewFrom(fs, v)
-		dcfg := &hugodeps.DepsCfg{
-			Fs: hfs,
-		}
-		dcfg.Cfg, _, err = hugolib.LoadConfig(hugolib.ConfigSourceDescriptor{
-			Fs:         fs,
-			Filename:   "config.toml",
-			Path:       wd,
-			WorkingDir: wd,
-		})
+
+		sites, err := buildSites()
 		if err != nil {
-			return err
-		}
-		sites, err := hugolib.NewHugoSites(*dcfg)
-		if err != nil {
-			return err
-		}
-		if err := sites.Build(hugolib.BuildCfg{
-			ResetState: true,
-			SkipRender: true,
-		}); err != nil {
 			return err
 		}
 

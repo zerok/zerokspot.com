@@ -22,7 +22,10 @@ func generateGenOPMLCommand() *cobra.Command {
 	var cmd = &cobra.Command{
 		Use: "gen-opml",
 		RunE: func(cmd *cobra.Command, args []string) error {
-			ctx := cmd.Context()
+			ctx := logger.WithContext(cmd.Context())
+			ctx = findParentTrace(ctx)
+			ctx, span := tracer.Start(ctx, "cmd:books/gen-opml")
+			defer span.End()
 			collection, err := bookscollection.LoadBooks(ctx)
 			if err != nil {
 				return err

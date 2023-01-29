@@ -43,7 +43,7 @@ var blogrollCmd = &cobra.Command{
 	RunE: func(cmd *cobra.Command, args []string) error {
 		ctx := logger.WithContext(cmd.Context())
 		ctx = findParentTrace(ctx)
-		ctx, span := tracer.Start(ctx, "generate-blogroll")
+		ctx, span := tracer.Start(ctx, "cmd:blogroll")
 		defer span.End()
 		span.SetStatus(codes.Ok, "")
 		user := os.Getenv("FEEDBIN_USER")

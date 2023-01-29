@@ -19,7 +19,10 @@ func buildSites() (*hugolib.HugoSites, error) {
 		return nil, err
 	}
 	fs := afero.NewOsFs()
-	hfs := hugofs.NewFrom(fs, config.New())
+	c := config.New()
+	c.Set("publishDir", "./output")
+	c.Set("workingDir", wd)
+	hfs := hugofs.NewFrom(fs, c)
 	dcfg := &hugodeps.DepsCfg{
 		Fs: hfs,
 	}
@@ -46,7 +49,7 @@ func buildSites() (*hugolib.HugoSites, error) {
 }
 
 func isContentPage(p page.Page) bool {
-	return (p.Section() == "weblog" || p.Section() == "notes") && p.IsPage() && !p.IsDraft()
+	return (p.Section() == "weblog" || p.Section() == "notes") && p.IsPage() && !p.Draft()
 }
 
 func generateSingletonTagsCmd() *cobra.Command {
@@ -60,7 +63,12 @@ func generateSingletonTagsCmd() *cobra.Command {
 			}
 			for _, p := range sites.Pages() {
 				if isContentPage(p) {
-					if tags, ok := p.GetParam("tags").([]string); ok {
+					rawTags, err := p.Param("tags")
+					if err != nil {
+						continue
+					}
+
+					if tags, ok := rawTags.([]string); ok {
 						for _, t := range tags {
 							prev, ok := allTags[t]
 							if !ok {

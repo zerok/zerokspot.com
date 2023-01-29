@@ -53,7 +53,7 @@ var buildGraphCmd = &cobra.Command{
 	RunE: func(command *cobra.Command, args []string) error {
 		ctx := logger.WithContext(command.Context())
 		ctx = findParentTrace(ctx)
-		ctx, span := tracer.Start(ctx, "build-graph")
+		ctx, span := tracer.Start(ctx, "cmd:build-graph")
 		defer span.End()
 		if err := os.MkdirAll("data", 0700); err != nil {
 			return err
