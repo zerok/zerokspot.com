@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"context"
 	"flag"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"os"
@@ -17,7 +18,6 @@ import (
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace"
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp"
 	"go.opentelemetry.io/otel/exporters/stdout/stdouttrace"
-	"go.opentelemetry.io/otel/propagation"
 	"go.opentelemetry.io/otel/sdk/resource"
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 	semconv "go.opentelemetry.io/otel/semconv/v1.12.0"
@@ -60,7 +60,11 @@ func main() {
 		sdktrace.WithSpanProcessor(sdktrace.NewBatchSpanProcessor(exporter)),
 		sdktrace.WithResource(res),
 	)
-	defer tp.Shutdown(context.Background())
+	defer func() {
+		if err := tp.Shutdown(context.Background()); err != nil {
+			logger.Error().Err(err).Msg("Failed to shut tracer provider down")
+		}
+	}()
 	otel.SetTracerProvider(tp)
 
 	tracer = tp.Tracer("zerokspot-ci")
@@ -104,16 +108,17 @@ func getPublicRev(ctx context.Context) (string, error) {
 }
 
 func getTraceParent(ctx context.Context) string {
-	prop := otel.GetTextMapPropagator()
-	carrier := make(propagation.MapCarrier)
-	prop.Extract(ctx, carrier)
-	return carrier.Get("traceparent")
+	sctx := trace.SpanContextFromContext(ctx)
+	return fmt.Sprintf("00-%s-%s-%s", sctx.TraceID().String(), sctx.SpanID().String(), sctx.TraceFlags()&trace.FlagsSampled)
 }
 
 func withOtelEnv(ctx context.Context, client *dagger.Client, container *dagger.Container) *dagger.Container {
 	logger := zerolog.Ctx(ctx)
+	parentTrace := getTraceParent(ctx)
+	logger.Info().Msgf("Container with parent trace: %s", parentTrace)
 	c := container.
-		WithEnvVariable("TRACEPARENT", getTraceParent(ctx)).
+		WithEnvVariable("TRACEPARENT", parentTrace).
+		WithEnvVariable("OVERRIDE_TRACEPARENT", parentTrace).
 		WithoutEnvVariable("OTEL_TRACES_EXPORTER")
 
 	for _, v := range []string{
@@ -189,6 +194,7 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 	if err := func(ctx context.Context) error {
 		ctx, span := tracer.Start(ctx, "buildWebsite")
 		defer span.End()
+		logger.Info().Msgf("BUILD WEBSITE SPAN: %s", span.SpanContext().SpanID())
 		hugoContainer = withOtelEnv(ctx, client, client.Container().From("klakegg/hugo:0.107.0-ext-ubuntu")).
 			WithEntrypoint([]string{}).
 			WithExec([]string{"apt-get", "update"}).

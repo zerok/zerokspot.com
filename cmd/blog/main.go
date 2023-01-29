@@ -52,7 +52,13 @@ func init() {
 
 func findParentTrace(ctx context.Context) context.Context {
 	logger := zerolog.Ctx(ctx)
-	traceParent := os.Getenv("TRACEPARENT")
+	var traceParent string
+	for _, v := range []string{"OVERRIDE_TRACEPARENT", "TRACEPARENT"} {
+		traceParent = os.Getenv(v)
+		if traceParent != "" {
+			break
+		}
+	}
 	if traceParent == "" {
 		logger.Info().Msg("No parent trace provided")
 		return ctx
@@ -61,7 +67,12 @@ func findParentTrace(ctx context.Context) context.Context {
 	carrier := make(propagation.MapCarrier)
 	carrier.Set("traceparent", traceParent)
 	prop := otel.GetTextMapPropagator()
-	return prop.Extract(ctx, carrier)
+	ctx = prop.Extract(ctx, carrier)
+	span := trace.SpanFromContext(ctx)
+	if span == nil {
+		return ctx
+	}
+	return trace.ContextWithRemoteSpanContext(ctx, span.SpanContext())
 }
 
 func initOtel(ctx context.Context) *sdktrace.TracerProvider {
@@ -74,7 +85,7 @@ func initOtel(ctx context.Context) *sdktrace.TracerProvider {
 		Msg("Configuring Otel")
 
 	if os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT") != "" {
-		os.Setenv("OTEL_EXPORTER_OTLP_TRACES_ENDPOINT", os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT"))
+		os.Setenv("OTEL_EXPORTER_OTLP_TRACES_ENDPOINT", os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT")+"/v1/traces")
 		os.Setenv("OTEL_EXPORTER_OTLP_TRACES_PROTOCOL", os.Getenv("OTEL_EXPORTER_OTLP_PROTOCOL"))
 		os.Setenv("OTEL_EXPORTER_OTLP_TRACES_HEADERS", os.Getenv("OTEL_EXPORTER_OTLP_HEADERS"))
 
