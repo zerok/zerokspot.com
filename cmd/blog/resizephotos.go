@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"io/fs"
 	"path/filepath"
 	"strings"
@@ -32,7 +31,10 @@ func generateResizePhotosCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use: "resize-photos",
 		RunE: func(cmd *cobra.Command, args []string) error {
-			ctx := context.Background()
+			ctx := logger.WithContext(cmd.Context())
+			ctx = findParentTrace(ctx)
+			ctx, span := tracer.Start(ctx, "resize-photos")
+			defer span.End()
 			profiles := generatePhotoProfiles()
 			r := resizer.NewMagickResizer(dataFolder, profiles)
 			photosFolder := filepath.Join(dataFolder, "photos")

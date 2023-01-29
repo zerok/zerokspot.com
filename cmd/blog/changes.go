@@ -20,6 +20,10 @@ var baseURL string
 var changesCmd = &cobra.Command{
 	Use: "changes",
 	RunE: func(cmd *cobra.Command, args []string) error {
+		ctx := logger.WithContext(cmd.Context())
+		ctx = findParentTrace(ctx)
+		ctx, span := tracer.Start(ctx, "changes")
+		defer span.End()
 		var out bytes.Buffer
 		currentMapping, err := contentmapping.LoadFromFile("public/.mapping.json.xz")
 		if err != nil {

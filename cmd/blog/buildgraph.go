@@ -51,10 +51,13 @@ func decodeMetadata(ctx context.Context, path string) (*searchdoc.SearchDoc, err
 var buildGraphCmd = &cobra.Command{
 	Use: "build-graph",
 	RunE: func(command *cobra.Command, args []string) error {
+		ctx := logger.WithContext(command.Context())
+		ctx = findParentTrace(ctx)
+		ctx, span := tracer.Start(ctx, "build-graph")
+		defer span.End()
 		if err := os.MkdirAll("data", 0700); err != nil {
 			return err
 		}
-		ctx := logger.WithContext(context.Background())
 		bg := bloggraph.NewGraph()
 
 		allContentIDs := make([]string, 0, 100)

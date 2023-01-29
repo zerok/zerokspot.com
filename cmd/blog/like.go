@@ -24,6 +24,10 @@ type noteData struct {
 var likeCmd = &cobra.Command{
 	Use: "like SLUG URL",
 	RunE: func(cmd *cobra.Command, args []string) error {
+		ctx := logger.WithContext(cmd.Context())
+		ctx = findParentTrace(ctx)
+		ctx, span := tracer.Start(ctx, "like")
+		defer span.End()
 		if len(args) < 2 {
 			return fmt.Errorf("specify at least a URL to like")
 		}

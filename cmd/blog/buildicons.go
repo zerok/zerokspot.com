@@ -40,6 +40,10 @@ var buildIconsCmd = &cobra.Command{
 	Use:   "build-icons",
 	Short: "Build an icons.js file",
 	RunE: func(cmd *cobra.Command, args []string) error {
+		ctx := logger.WithContext(cmd.Context())
+		ctx = findParentTrace(ctx)
+		ctx, span := tracer.Start(ctx, "build-icons")
+		defer span.End()
 		var config iconsConfig
 		fp, err := os.Open(configFile)
 		if err != nil {

@@ -16,6 +16,8 @@ import (
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace"
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp"
+	"go.opentelemetry.io/otel/exporters/stdout/stdouttrace"
+	"go.opentelemetry.io/otel/propagation"
 	"go.opentelemetry.io/otel/sdk/resource"
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 	semconv "go.opentelemetry.io/otel/semconv/v1.12.0"
@@ -32,8 +34,15 @@ func main() {
 	logger := zerolog.New(zerolog.ConsoleWriter{Out: os.Stderr}).With().Timestamp().Logger()
 	ctx := logger.WithContext(context.Background())
 
-	otlpClient := otlptracehttp.NewClient()
-	exporter, err := otlptrace.New(ctx, otlpClient)
+	var exporter sdktrace.SpanExporter
+	var err error
+
+	if os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT") != "" {
+		otlpClient := otlptracehttp.NewClient()
+		exporter, err = otlptrace.New(ctx, otlpClient)
+	} else {
+		exporter, err = stdouttrace.New()
+	}
 	if err != nil {
 		logger.Fatal().Err(err).Msg("Failed to initialize oltp output")
 	}
@@ -93,6 +102,13 @@ func getPublicRev(ctx context.Context) (string, error) {
 
 }
 
+func getTraceParent(ctx context.Context) string {
+	prop := otel.GetTextMapPropagator()
+	carrier := make(propagation.MapCarrier)
+	prop.Extract(ctx, carrier)
+	return carrier.Get("traceparent")
+}
+
 func build(ctx context.Context, client *dagger.Client, publish bool) error {
 	ctx, span := tracer.Start(ctx, "build")
 	defer span.End()
@@ -128,6 +144,7 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 			WithEnvVariable("GOOS", "linux").
 			WithEnvVariable("GOARCH", "amd64").
 			WithEnvVariable("GOCACHE", "/go/pkg/cache").
+			WithEnvVariable("TRACEPARENT", getTraceParent(ctx)).
 			WithMountedCache("/go/pkg", goCacheVolume).
 			WithMountedDirectory("/src/pkg", rootDirectory.Directory("pkg")).
 			WithMountedDirectory("/src/cmd", rootDirectory.Directory("cmd")).
@@ -153,6 +170,7 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 		defer span.End()
 		hugoContainer = client.Container().From("klakegg/hugo:0.107.0-ext-ubuntu").
 			WithEntrypoint([]string{}).
+			WithEnvVariable("TRACEPARENT", getTraceParent(ctx)).
 			WithExec([]string{"apt-get", "update"}).
 			WithExec([]string{"apt-get", "install", "-y", "git"}).
 			WithSecretVariable("FEEDBIN_USER", feedbinUsername).
@@ -213,6 +231,7 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 			WithExec([]string{"apk", "add", "rsync", "openssh-client-default"}).
 			WithExec([]string{"mkdir", "/root/.ssh"}).
 			WithExec([]string{"chmod", "0700", "/root/.ssh"}).
+			WithEnvVariable("TRACEPARENT", getTraceParent(ctx)).
 			WithNewFile("/root/.ssh/id_rsa", dagger.ContainerWithNewFileOpts{
 				Contents:    strings.TrimSpace(sshPrivateKey) + "\n",
 				Permissions: 0600,
@@ -248,7 +267,10 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 		ctx, span := tracer.Start(ctx, "sendWebmentions")
 		defer span.End()
 		logger.Info().Msg("Generating webmentions")
-		mentionContainer := client.Container().From("zerok/webmentiond:latest").WithEntrypoint([]string{})
+		mentionContainer := client.Container().
+			From("zerok/webmentiond:latest").
+			WithEnvVariable("TRACEPARENT", getTraceParent(ctx)).
+			WithEntrypoint([]string{})
 		for _, change := range changes {
 			logger.Info().Msgf("Mentioning from %s", change)
 			mentionContainer = mentionContainer.WithExec([]string{"/usr/local/bin/webmentiond", "send", change})

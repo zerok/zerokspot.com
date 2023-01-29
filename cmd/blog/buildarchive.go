@@ -42,6 +42,10 @@ type monthCtx struct {
 var buildArchiveCmd = &cobra.Command{
 	Use: "build-archive",
 	RunE: func(cmd *cobra.Command, args []string) error {
+		ctx := logger.WithContext(cmd.Context())
+		ctx = findParentTrace(ctx)
+		ctx, span := tracer.Start(ctx, "build-archive")
+		defer span.End()
 		wd, err := os.Getwd()
 		if err != nil {
 			return err
