@@ -6,6 +6,8 @@ tags:
 - cicd
 - opentelemetry
 - o11y
+incoming:
+- url: https://chaos.social/@zerok/109785810097123025
 ---
 
 Recently I tried to generate tracing data out of the pipeline for zerokspot.com and feed that into an external collector. Doing that with the `ci/main.go` itself was easy: Just set the relevant environment variables, integrate the OpenTelemetry SDK and off we go.
