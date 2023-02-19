@@ -7,6 +7,8 @@ tags:
 - reviews
 - food
 - restaurants
+incoming:
+- url: https://chaos.social/@zerok/109891672223801667
 ---
 
 With quite a delay I’m now finally getting to writing down some thoughts an experiences from FOSDEM 2023 in Brussels on the first weekend of February 😅 Took a while but here we go with the first meal I had that weekend:
