@@ -4,6 +4,8 @@ date: "2023-02-25T21:59:43+01:00"
 tags:
 - fosdem
 - conferences
+incoming:
+- url: https://chaos.social/@zerok/109927422046917943 
 ---
 
 It’s always sad when [FOSDEM](https://fosdem.org) is over. Besides enjoying great Belgium dishes, the trips to Brussels have always provided me lots of new knowledge but also new ideas what might be interesting to play with next! This time around, the trip and the work-week before that turned out to be a bit more taxing than expected and so I couldn’t join that many talks.
