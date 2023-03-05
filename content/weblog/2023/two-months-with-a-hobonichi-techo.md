@@ -7,6 +7,8 @@ tags:
 - bulletjournal
 - hobonichi
 - penaddict
+incoming:
+- url: https://chaos.social/@zerok/109971168902044359  
 ---
 
 This year I wanted to try something new: Using a Hobonichi planner for pretty much all my daily (task) planning and bullet journaling. It’s now been two months and I’m not sure, how to think of it. Let’s start with the things that I like about it:
