@@ -5,6 +5,8 @@ tags:
 - til
 - docker
 - dagger
+incoming:
+- url: https://chaos.social/@zerok/110323501433274869
 ---
 
 A couple of days ago I had the problem that I needed to know the ID of a Docker image I had exported previously with Dagger. What I wanted to achieve was to retag an image that I only had available as [Docker image file](https://github.com/moby/moby/blob/v23.0.5/image/spec/v1.2.md).
