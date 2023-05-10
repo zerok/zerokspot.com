@@ -4,6 +4,8 @@ date: "2023-05-10T19:56:24+02:00"
 tags:
 - pkm
 - productivity
+incoming:
+- url: https://chaos.social/@zerok/110345795091175294 
 ---
 
 First while using GTD and the after adopting the Bullet Journal method I've always struggled on how to organize references, notes, and other support material.
