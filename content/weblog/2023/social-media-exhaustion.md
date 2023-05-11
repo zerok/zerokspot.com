@@ -5,6 +5,8 @@ tags:
 - socialmedia
 - blogging
 - fediverse
+incoming:
+- url: https://chaos.social/@zerok/110351721908350929 
 ---
 
 Over the last couple of months my relation ship with social media in general has felt like a roller coaster but in general, it's just a bit too much again. While I still enjoy my little corner of the Fediverse also thanks to apps like [Mona](https://mastodon.social/@MonaApp) (more on that perhaps in another post), the demise of Twitter and the recent (private) launch of BlueSky has changed something in the community.
