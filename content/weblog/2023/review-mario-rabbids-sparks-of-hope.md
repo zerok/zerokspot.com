@@ -5,6 +5,8 @@ tags:
 - gaming
 - nintendoswitch
 - reviews
+incoming:
+- url: https://chaos.social/@zerok/110361061253876326
 ---
 
 After reading a couple of books I wanted to take a little break again and started playing [“Mario + Rabbids Sparks of Hope”](https://en.wikipedia.org/wiki/Mario_%2B_Rabbids_Sparks_of_Hope) on the Nintendo Switch. I quite enjoyed the previous game in the series ([“Kingdom Battle”](https://en.wikipedia.org/wiki/Mario_%2B_Rabbids_Kingdom_Battle)) and the new one promised some interesting changes to the otherwise strictly round-based strategy-game formula, so I just had to give it a try. One big change here is that the levels are no longer grid based but you can freely move around and use slide-attacks and similars to hit your enemies before using your character’s primary abilities. And yes, every character has their own unique abilities and characteristics, making it quite fun to mix and match (and upgrade)!
