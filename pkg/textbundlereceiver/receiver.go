@@ -1,9 +1,7 @@
 package textbundlereceiver
 
 import (
-	"bytes"
 	"context"
-	"encoding/json"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -14,9 +12,11 @@ import (
 	"strings"
 
 	"github.com/go-chi/chi"
+	"github.com/google/go-github/v52/github"
 	slugify "github.com/gosimple/slug"
 	"github.com/rs/zerolog"
 	"gitlab.com/zerok/zerokspot.com/pkg/textbundleimporter"
+	"golang.org/x/oauth2"
 )
 
 type Receiver struct {
@@ -26,6 +26,7 @@ type Receiver struct {
 	Importer    *textbundleimporter.Importer
 	GitHubUser  string
 	GitHubToken string
+	ghClient    *github.Client
 }
 
 type Configurator func(*Receiver)
@@ -37,6 +38,12 @@ func New(configs ...Configurator) *Receiver {
 	for _, c := range configs {
 		c(recv)
 	}
+	ctx := context.Background()
+	ts := oauth2.StaticTokenSource(
+		&oauth2.Token{AccessToken: recv.GitHubToken},
+	)
+	tc := oauth2.NewClient(ctx, ts)
+	recv.ghClient = github.NewClient(tc)
 	return recv
 }
 
@@ -142,34 +149,23 @@ func (recv *Receiver) handleReceive(w http.ResponseWriter, r *http.Request) {
 }
 
 func (recv *Receiver) createPR(ctx context.Context, slug string, branchname string) error {
-	client := http.Client{}
-	body := bytes.Buffer{}
-	if err := json.NewEncoder(&body).Encode(&prBody{
-		Title: "Article: " + slug,
-		Head:  branchname,
-		Base:  "main",
-	}); err != nil {
-		return err
+	title := fmt.Sprintf("Article: %s", slug)
+	base := "main"
+	pull := github.NewPullRequest{
+		Title: &title,
+		Head:  &branchname,
+		Base:  &base,
 	}
-	req, err := http.NewRequest(http.MethodPost, "https://api.github.com/repos/zerok/zerokspot.com/pulls", &body)
+	pr, _, err := recv.ghClient.PullRequests.Create(ctx, "zerok", "zerokspot.com", &pull)
 	if err != nil {
-		return err
+		return fmt.Errorf("failed to create pull-request: %w", err)
 	}
-	req.SetBasicAuth(recv.GitHubUser, recv.GitHubToken)
-	resp, err := client.Do(req.WithContext(ctx))
-	if err != nil {
-		return err
-	}
-	if resp.StatusCode >= 300 {
-		return fmt.Errorf("GitHub API returned an unexpected status code: %d", resp.StatusCode)
+	// Merge the PR right away, so that it's only used for documentation
+	// purposes
+	if _, _, err := recv.ghClient.PullRequests.Merge(ctx, "zerok", "zerokspot.com", pr.GetNumber(), title, nil); err != nil {
+		return fmt.Errorf("failed to merge pull-request: %w", err)
 	}
 	return nil
-}
-
-type prBody struct {
-	Title string `json:"title"`
-	Base  string `json:"base"`
-	Head  string `json:"head"`
 }
 
 func (recv *Receiver) callGit(ctx context.Context, args ...string) error {
