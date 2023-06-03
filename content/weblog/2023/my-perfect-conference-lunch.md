@@ -1,8 +1,10 @@
 ---
-title: My perfect Conference lunch
+title: My perfect conference lunch
 date: "2023-06-03T16:32:56+02:00"
 tags:
 - conferences
+incoming:
+- url: https://chaos.social/@zerok/110480888987288041
 ---
 
 In a recent GoTime podcast titled [“HallwayConf - A new style of conference”](https://changelog.com/news/hallwayconf-a-new-style-of-conference-LWRn) one of the topic discussed was how various conferences handled lunch breaks. Triggered by that  I thought back at some of the lunch experiences I’ve had over the years at events like PyCon, WriteTheDocs, GopherCon, FOSDEM, KubeCon Europe, or the various dotConferences. 
