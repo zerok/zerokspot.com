@@ -133,14 +133,16 @@ var buildGraphCmd = &cobra.Command{
 			}
 		}
 		for _, id := range allContentIDs {
-			bg.WalkDown(id, "inspired", 0, func(g *bloggraph.Graph, node *bloggraph.Node, degree int) {
+			visited := make(map[string]struct{})
+			bg.WalkDown(visited, id, "inspired", 0, func(g *bloggraph.Graph, node *bloggraph.Node, degree int) {
 				m := mapping[id]
 				if !containsContentID(m.Down, node.ContentID) {
 					m.Down = append(m.Down, PostPathElement{Title: node.Title, ContentID: node.ContentID, Degree: degree})
 				}
 				mapping[id] = m
 			})
-			bg.WalkUp(id, "inspired", 0, func(g *bloggraph.Graph, node *bloggraph.Node, degree int) {
+			visited = make(map[string]struct{})
+			bg.WalkUp(visited, id, "inspired", 0, func(g *bloggraph.Graph, node *bloggraph.Node, degree int) {
 				m := mapping[id]
 				if !containsContentID(m.Up, node.ContentID) {
 					m.Up = append(m.Up, PostPathElement{Title: node.Title, ContentID: node.ContentID, Degree: degree})

@@ -26,21 +26,29 @@ func (g *Graph) NumNodes() int {
 type WalkerFunc func(graph *Graph, node *Node, depth int)
 
 // WalkDown the graph.
-func (g *Graph) WalkDown(startID string, kind string, degree int, walker WalkerFunc) {
+func (g *Graph) WalkDown(visited map[string]struct{}, startID string, kind string, degree int, walker WalkerFunc) {
+	if _, found := visited[startID]; found {
+		return
+	}
 	for _, e := range g.edges {
 		if e.Source.ContentID == startID && e.Kind == kind {
 			walker(g, e.Target, degree)
-			g.WalkDown(e.Target.ContentID, kind, degree+1, walker)
+			visited[startID] = struct{}{}
+			g.WalkDown(visited, e.Target.ContentID, kind, degree+1, walker)
 		}
 	}
 }
 
 // WalkUp the graph.
-func (g *Graph) WalkUp(startID string, kind string, depth int, walker WalkerFunc) {
+func (g *Graph) WalkUp(visited map[string]struct{}, startID string, kind string, depth int, walker WalkerFunc) {
+	if _, found := visited[startID]; found {
+		return
+	}
 	for _, e := range g.edges {
 		if e.Target.ContentID == startID && e.Kind == kind {
 			walker(g, e.Source, depth)
-			g.WalkUp(e.Source.ContentID, kind, depth+1, walker)
+			visited[startID] = struct{}{}
+			g.WalkUp(visited, e.Source.ContentID, kind, depth+1, walker)
 		}
 	}
 }
