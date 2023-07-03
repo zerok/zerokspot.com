@@ -7,6 +7,9 @@ tags:
 - opendata
 ---
 
+
+**Note:** This project has been archived on [2023-07-03](https://zerokspot.com/weblog/2023/07/03/sunsetting-covid19-aut-stats/).
+
 For 10 days now I've been scraping information from the [Austrian "Sozialministerium"][a] (and since yesterday also from [info.gesundheitsministerium.at][f]) to get a historical view on the course COVID-19 is taking in Austria. That page doesn't offer any kind of history to its values and so I thought it might be useful to some to have that data available as CSV or SQLite database. You can find the result on [GitHub][b] where you can also see exactly how I'm fetching the data as well as the resulting [CSV file][c] with values going back to March 13 thanks to [Archive.org's Wayback machine][g].
 
 The CI job in that repository also bundles that CSV with [datasette][e] and publishes it onto [covid19-aut-stats.h10n.me][d]. Thanks to the datasette-vega plugin you can even generate some nice graphs out of the data:
