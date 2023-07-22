@@ -5,4 +5,5 @@ type SearchDoc struct {
 	Title    string `json:"title"`
 	File     string `json:"file"`
 	Content  string `json:"content"`
+	Date     int64  `json:"date"`
 }

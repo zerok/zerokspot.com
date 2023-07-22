@@ -53,6 +53,7 @@ func BuildMapping(ctx context.Context, rootPath string) (map[string]PostPaths, e
 		bg.GetOrCreateNode(Node{
 			ContentID: doc.ObjectID,
 			Title:     doc.Title,
+			Date:      doc.Date,
 		})
 		return nil
 	}); err != nil {
@@ -87,6 +88,9 @@ func BuildMapping(ctx context.Context, rootPath string) (map[string]PostPaths, e
 				sourceNode := bg.GetOrCreateNode(Node{
 					ContentID: parent,
 				})
+				if sourceNode.ContentID == targetNode.ContentID {
+					continue
+				}
 				bg.CreateEdge(sourceNode, targetNode, "inspired")
 			}
 		}
@@ -104,9 +108,20 @@ func BuildMapping(ctx context.Context, rootPath string) (map[string]PostPaths, e
 	}
 	for _, id := range allContentIDs {
 		visited := make(map[string]struct{})
+		thisNode := bg.GetOrCreateNode(Node{
+			ContentID: id,
+		})
 		bg.WalkDown(visited, id, "inspired", 0, func(g *Graph, node *Node, degree int) {
 			m := mapping[id]
+			// Prevent circles here that might arise due to higher-degree connections:
+			if node.ContentID == id {
+				return
+			}
 			if !containsContentID(m.Down, node.ContentID) {
+				// Never add anything to "Down" that is older than thisNode
+				if node.Date < thisNode.Date {
+					return
+				}
 				m.Down = append(m.Down, PostPathElement{Title: node.Title, ContentID: node.ContentID, Degree: degree})
 			}
 			mapping[id] = m
@@ -114,7 +129,15 @@ func BuildMapping(ctx context.Context, rootPath string) (map[string]PostPaths, e
 		visited = make(map[string]struct{})
 		bg.WalkUp(visited, id, "inspired", 0, func(g *Graph, node *Node, degree int) {
 			m := mapping[id]
+			// Prevent circles here that might arise due to higher-degree connections:
+			if node.ContentID == id {
+				return
+			}
 			if !containsContentID(m.Up, node.ContentID) {
+				// Never add anything to Up that is newer
+				if node.Date > thisNode.Date {
+					return
+				}
 				m.Up = append(m.Up, PostPathElement{Title: node.Title, ContentID: node.ContentID, Degree: degree})
 			}
 			mapping[id] = m
@@ -125,8 +148,6 @@ func BuildMapping(ctx context.Context, rootPath string) (map[string]PostPaths, e
 }
 
 func decodeMetadata(ctx context.Context, path string) (*searchdoc.SearchDoc, error) {
-	logger := zerolog.Ctx(ctx)
-	logger.Debug().Msgf("Loading data from %s", path)
 	fp, err := os.Open(path)
 	if err != nil {
 		return nil, fmt.Errorf("failed to open `%s`: %w", path, err)
@@ -149,8 +170,6 @@ func containsContentID(haystack []PostPathElement, needle string) bool {
 }
 
 func findParents(ctx context.Context, rootPath, path string) ([]string, error) {
-	logger := zerolog.Ctx(ctx)
-	logger.Debug().Msgf("Finding parents of %s", path)
 	contentPath := filepath.Join(rootPath, "content", path)
 	content, err := ioutil.ReadFile(contentPath)
 	if err != nil {
