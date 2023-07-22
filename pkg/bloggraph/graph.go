@@ -82,6 +82,7 @@ func (g *Graph) CreateEdge(source *Node, target *Node, kind string) *Edge {
 type Node struct {
 	ContentID string
 	Title     string
+	Date      int64
 }
 
 // Edge combines two nodes.
