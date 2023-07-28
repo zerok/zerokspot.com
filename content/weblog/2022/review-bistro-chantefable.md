@@ -6,6 +6,8 @@ tags:
 - paris
 - reviews
 - paris-oct-2022
+- places
+rating: 5
 incoming:
 - url: https://chaos.social/@zerok/109422508127704876  
 ---

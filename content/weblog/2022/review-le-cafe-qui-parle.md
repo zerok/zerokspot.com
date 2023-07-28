@@ -6,6 +6,8 @@ tags:
 - france
 - reviews
 - restaurants
+- places
+rating: 5
 incoming:
 - url: https://chaos.social/@zerok/109262760497519109  
 ---

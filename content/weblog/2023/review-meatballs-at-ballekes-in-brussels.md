@@ -7,6 +7,8 @@ tags:
 - reviews
 - food
 - restaurants
+- places
+rating: 4
 incoming:
 - url: https://chaos.social/@zerok/109891672223801667
 ---
