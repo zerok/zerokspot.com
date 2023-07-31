@@ -8,6 +8,9 @@ tags:
 - paris-oct-2022
 - places
 rating: 2
+website: https://www.adagio-city.com/fr/hotel-a0x1-aparthotel-adagio-paris-nation.shtml
+address: 15 Ter Rue Lamblardie, 75012 Paris, France
+coordinates: "48.84041/2.39751"
 ---
 
 Finding a good and affordable hotel for Paris is always a bit of a challenge, especially when you want to have one that is at least somehow within the Boulevard Périphérique. This year we tried the [Aparthotel Adagio Paris Nation](https://www.adagio-city.com/fr/hotel-a0x1-aparthotel-adagio-paris-nation.shtml), which belongs to Accor, the company you probably know from their Ibis, Novotel or Mercure hotels.

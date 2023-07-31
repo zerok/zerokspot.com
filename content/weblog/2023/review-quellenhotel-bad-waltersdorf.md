@@ -8,6 +8,9 @@ tags:
 - austria
 - places
 rating: 4
+website: https://www.heiltherme.at/hotel/
+coordinates: "47.16926/16.02870"
+address: Thermenstraße 111, 8271 Bad Waltersdorf, Austria
 ---
 
 After a couple of stressful work-weeks and family events we thought to take a little timeout at a thermal bath in Bad Waltersdorf. Due to a special offer we didn't stay at the [Spa Resort Styria](https://www.sparesortstyria.com/) but instead decided to give the [Quellenhotel Bad Waltersdorf](https://www.heiltherme.at/hotel/) a try, which is basically the hotel complex attached to the large thermal bath in Bad Waltersdorf. 

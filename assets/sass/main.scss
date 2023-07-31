@@ -734,6 +734,19 @@ time .age {
     }
 }
 
+.place {
+    padding: 1rem 0;
+    border-top: 1px dotted #479ddb;
+    border-bottom: 1px dotted #479ddb;
+    span {
+        display: inline-block;
+        margin-left: 1rem;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
 @import "events";
 @import "darkmode";
 

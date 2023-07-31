@@ -8,6 +8,9 @@ tags:
 - restaurants
 - places
 rating: 5
+website: https://cafequiparle.fr/fr
+address: 24 Rue Caulaincourt, 75018 Paris, France 
+coordinates: "48.88752/2.33354"
 incoming:
 - url: https://chaos.social/@zerok/109262760497519109  
 ---

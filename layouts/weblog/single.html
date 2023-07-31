@@ -27,6 +27,7 @@
                     </header>
                     <div class="article__content e-content">
                         {{ .Content }}
+                        {{ partial "place.html" . }}
                         {{ partial "rating.html" . }}
                         {{ if .Params.rating }}
                         <p class="help">Over the years I've written quite a few reviews 🙂 You can find them at <a href="/reviews/">/reviews/</a>.</p>

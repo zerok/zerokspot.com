@@ -1,0 +1,6 @@
+{{ if (and .Params.address (in .Params.tags "places")) }}
+<p class="place">
+    {{ if .Params.website }}<span class="place-website"><i class="icon icon-link"></i> <a href="{{ .Params.website }}">{{ (urls.Parse .Params.website).Hostname }}</a></span>{{ end }}
+    {{ if .Params.address }}<span class="place-address"><i class="icon icon-globe-stand"></i> {{if .Params.coordinates }}<a href="https://www.openstreetmap.org/#map=18/{{ .Params.coordinates }}">{{ .Params.address }}</a>{{ else }}{{ .Params.address }}{{ end }}</span>{{ end}}
+</p>
+{{ end }}

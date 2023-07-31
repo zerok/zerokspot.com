@@ -9,6 +9,9 @@ tags:
 - restaurants
 - places
 rating: 4
+address: Chaussée de Charleroi, 174, 1060 Bruxelles, Belgium
+website: http://www.ballekes.be/
+coordinates: "50.82543/4.35477"
 incoming:
 - url: https://chaos.social/@zerok/109891672223801667
 ---

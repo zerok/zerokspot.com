@@ -7,6 +7,9 @@ tags:
 - austria
 - places
 rating: 5
+website: https://all.accor.com/hotel/B3Y1/index.de.shtml
+address: Viktringer Ring 28, 9020 Klagenfurt, Austria
+coordinates: "46.62098/14.30684"
 ---
 
 Last weekend we were in Klagenfurt to enjoy the latest programme of Austrian Kabarett artist [Alex Kristan](https://www.alexkristan.at). Since the show took place at [Kärntner Messen](https://www.kaerntnermessen.at/) and we arrived via public transport at the main station, we decided to stay over night at [Ibis Styles Klagenfurt](https://all.accor.com/hotel/B3Y1/index.de.shtml), which is just around ten minutes on foot from the main station and five from the fairground.

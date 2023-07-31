@@ -11,6 +11,11 @@ tags:
 incoming:
 - url: https://chaos.social/@zerok/110723955073072450
 rating: 5
+address: Archkogl 188, 8993 Grundlsee, Austria
+website: "https://www.zloamwirt.at/"
+country: "AUT"
+visitedAt: "2023-07"
+coordinates: "47.61665/13.83519"
 ---
 
 [“Zloam Wirt”](https://www.zloamwirt.at/) is a restaurant located within the “Narzissendorf Zloam" holiday village (near Bad Aussee in Austria) but you can also go there if you’re not a village guest! From the outside it looks like a modern log cabin with a large outdoor seating area and a playground for smaller children. On the inside, it is decorated as a classic Austrian country restaurant but brand new. The menu also reflects that: Regional dishes with a modern touch, focussing on ingredients from local farmers.

@@ -8,6 +8,9 @@ tags:
 - paris-oct-2022
 - places
 rating: 5
+website: https://chantefable.fr/en/home/
+address: 93 Av. Gambetta, Paris 20e, France
+coordinates: "48.86646/2.39967"
 incoming:
 - url: https://chaos.social/@zerok/109422508127704876  
 ---
