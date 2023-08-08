@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"os"
 	"os/signal"
 	"syscall"
@@ -27,7 +28,8 @@ var localZone *time.Location
 var tracer trace.Tracer
 
 var rootCmd = &cobra.Command{
-	Use: "blog",
+	Use:           "blog",
+	SilenceErrors: true,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return nil
 	},
@@ -142,4 +144,14 @@ func main() {
 	if err := rootCmd.ExecuteContext(ctx); err != nil {
 		logger.Fatal().Msg(err.Error())
 	}
+}
+
+func requireStringFlags(cmd *cobra.Command, flags ...string) error {
+	for _, flag := range flags {
+		val, err := cmd.Flags().GetString(flag)
+		if err != nil || val == "" {
+			return fmt.Errorf("required flag `%s` not set", flag)
+		}
+	}
+	return nil
 }
