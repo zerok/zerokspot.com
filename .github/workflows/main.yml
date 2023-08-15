@@ -21,8 +21,8 @@ jobs:
       with:
         go-version: "1.21"
 
-    - run: go run ci/main.go
+    - run: go run ./ci
       if: github.ref != 'refs/heads/main'
-    - run: go run ci/main.go --publish
+    - run: go run ./ci --publish
       if: github.ref == 'refs/heads/main'
 
