@@ -34,7 +34,7 @@ var changesCmd = &cobra.Command{
 			return err
 		}
 		s := repostate.RepoState{}
-		changes, err := s.ChangedFilesSince(sinceRev)
+		changes, err := s.ChangedFilesSince(ctx, sinceRev)
 		if err != nil {
 			return err
 		}

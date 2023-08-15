@@ -5,6 +5,7 @@ import (
 	"context"
 	"io/ioutil"
 	"net/http"
+	"os"
 	"os/exec"
 	"strings"
 )
@@ -52,11 +53,12 @@ func (f *FileChangeStatus) IsLayout() bool {
 	return strings.HasPrefix(f.Name, "layout") && strings.HasSuffix(f.Name, ".json")
 }
 
-func (s *RepoState) ChangedFilesSince(ref string) ([]FileChangeStatus, error) {
+func (s *RepoState) ChangedFilesSince(ctx context.Context, ref string) ([]FileChangeStatus, error) {
 	var stdout bytes.Buffer
 	result := make([]FileChangeStatus, 0, 5)
-	cmd := exec.Command("git", "diff", "--name-status", ref)
+	cmd := exec.CommandContext(ctx, "git", "diff", "--name-status", ref)
 	cmd.Stdout = &stdout
+	cmd.Stderr = os.Stderr
 	err := cmd.Run()
 	if err != nil {
 		return nil, err
