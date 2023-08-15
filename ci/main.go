@@ -24,6 +24,9 @@ import (
 	"go.opentelemetry.io/otel/trace"
 )
 
+const alpineImage = "alpine:3.17"
+const webmentiondImage = "zerok/webmentiond:latest"
+
 var tracer trace.Tracer
 
 func main() {
@@ -73,14 +76,20 @@ func main() {
 	defer span.End()
 	span.SetAttributes(attribute.Bool("publish", publish))
 
-	client, err := dagger.Connect(ctx, dagger.WithLogOutput(os.Stderr), dagger.WithNoExtensions())
+	client, err := dagger.Connect(ctx, dagger.WithLogOutput(os.Stderr))
 	if err != nil {
 		span.SetStatus(codes.Error, "Failed to setup Dagger")
 		logger.Fatal().Err(err).Msg("Failed to setup Dagger")
 	}
 	defer client.Close()
 
-	if err := build(ctx, client, publish); err != nil {
+	versions, err := LoadVersions(ctx)
+	if err != nil {
+		span.SetStatus(codes.Error, "Failed to load versions")
+		logger.Fatal().Err(err).Msg("Failed to load versions")
+	}
+
+	if err := build(ctx, client, versions, publish); err != nil {
 		span.SetStatus(codes.Error, "Failed to setup build")
 		logger.Fatal().Err(err).Msg("Failed to build")
 	}
@@ -126,27 +135,19 @@ func withOtelEnv(ctx context.Context, client *dagger.Client, container *dagger.C
 		"OTEL_EXPORTER_OTLP_HEADERS",
 		"OTEL_EXPORTER_OTLP_ENDPOINT",
 	} {
-		value, err := client.Host().EnvVariable(v).Value(ctx)
-		if err != nil {
-			logger.Warn().Err(err).Msgf("Failed to extract `%s`", v)
-			continue
-		}
-		c = c.WithEnvVariable(v, value)
+		sec := client.SetSecret(v, os.Getenv(v))
+		c = c.WithSecretVariable(v, sec)
 	}
 	return c
 }
 
-func build(ctx context.Context, client *dagger.Client, publish bool) error {
+func build(ctx context.Context, client *dagger.Client, versions *Versions, publish bool) error {
 	ctx, span := tracer.Start(ctx, "build")
 	defer span.End()
 	logger := zerolog.Ctx(ctx)
-	feedbinUsername := client.Host().EnvVariable("FEEDBIN_USER").Secret()
-	feedbinPassword := client.Host().EnvVariable("FEEDBIN_PASSWORD").Secret()
-	sshPrivateKey, err := client.Host().EnvVariable("SSH_PRIVATE_KEY").Value(ctx)
-	if err != nil {
-		span.SetStatus(codes.Error, "Failed to SSH key")
-		return err
-	}
+	feedbinUsername := client.SetSecret("feedbinUsername", os.Getenv("FEEDBIN_USER"))
+	feedbinPassword := client.SetSecret("feedbinPassword", os.Getenv("FEEDBIN_PASSWORD"))
+	sshPrivateKey := os.Getenv("SSH_PRIVATE_KEY")
 
 	publicRev, err := getPublicRev(ctx)
 	if err != nil {
@@ -167,7 +168,7 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 	if err := func(ctx context.Context) error {
 		ctx, span := tracer.Start(ctx, "buildBlogBinary")
 		defer span.End()
-		buildContainer = withOtelEnv(ctx, client, client.Container().From("golang:1.19")).
+		buildContainer = withOtelEnv(ctx, client, client.Container().From(versions.GoImage())).
 			WithEnvVariable("GOOS", "linux").
 			WithEnvVariable("GOARCH", "amd64").
 			WithEnvVariable("GOCACHE", "/go/pkg/cache").
@@ -181,7 +182,7 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 			WithExec([]string{"go", "build", "-o", "../../bin/blog"})
 
 		blogBin = buildContainer.File("/src/bin/blog")
-		if _, err := buildContainer.ExitCode(ctx); err != nil {
+		if _, err := buildContainer.Sync(ctx); err != nil {
 			span.SetStatus(codes.Error, "Failed build binary")
 			return err
 		}
@@ -195,7 +196,7 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 		ctx, span := tracer.Start(ctx, "buildWebsite")
 		defer span.End()
 		logger.Info().Msgf("BUILD WEBSITE SPAN: %s", span.SpanContext().SpanID())
-		hugoContainer = withOtelEnv(ctx, client, client.Container().From("klakegg/hugo:0.107.0-ext-ubuntu")).
+		hugoContainer = withOtelEnv(ctx, client, client.Container().From(versions.HugoImage())).
 			WithEntrypoint([]string{}).
 			WithExec([]string{"apt-get", "update"}).
 			WithExec([]string{"apt-get", "install", "-y", "git"}).
@@ -242,7 +243,7 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 
 	// If we don't plan to publish anything, then we're done here
 	if !publish {
-		if _, err := hugoContainer.ExitCode(ctx); err != nil {
+		if _, err := hugoContainer.Sync(ctx); err != nil {
 			span.SetStatus(codes.Error, "Failed to build website")
 			return err
 		}
@@ -253,7 +254,7 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 		ctx, span := tracer.Start(ctx, "rsync")
 		defer span.End()
 		// Prepare an rsync container which we can then use to upload everything:
-		rsyncContainer := withOtelEnv(ctx, client, client.Container().From("alpine:3.17")).
+		rsyncContainer := withOtelEnv(ctx, client, client.Container().From(alpineImage)).
 			WithExec([]string{"apk", "add", "rsync", "openssh-client-default"}).
 			WithExec([]string{"mkdir", "/root/.ssh"}).
 			WithExec([]string{"chmod", "0700", "/root/.ssh"}).
@@ -268,7 +269,7 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 			WithExec([]string{"rsync", "-e", "ssh -o StrictHostKeyChecking=no", "-az", ".", ".mapping.json.xz", ".gitrev", "www-zerokspot@zs-web-001.nodes.h10n.me:/srv/www/zerokspot.com/www/htdocs/"}).
 			WithExec([]string{"ssh", "www-zerokspot@zs-web-001.nodes.h10n.me", "touch /srv/www/zerokspot.com/www/deployed"})
 
-		if _, err := rsyncContainer.ExitCode(ctx); err != nil {
+		if _, err := rsyncContainer.Sync(ctx); err != nil {
 			span.SetStatus(codes.Error, "Failed to rsync")
 			return err
 		}
@@ -292,12 +293,12 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 		ctx, span := tracer.Start(ctx, "sendWebmentions")
 		defer span.End()
 		logger.Info().Msg("Generating webmentions")
-		mentionContainer := withOtelEnv(ctx, client, client.Container().From("zerok/webmentiond:latest")).
+		mentionContainer := withOtelEnv(ctx, client, client.Container().From(webmentiondImage)).
 			WithEntrypoint([]string{})
 		for _, change := range changes {
 			logger.Info().Msgf("Mentioning from %s", change)
 			mentionContainer = mentionContainer.WithExec([]string{"/usr/local/bin/webmentiond", "send", change})
-			if _, err := mentionContainer.ExitCode(ctx); err != nil {
+			if _, err := mentionContainer.Sync(ctx); err != nil {
 				span.SetStatus(codes.Error, "Failed to execute webmentions")
 				return err
 			}
@@ -312,7 +313,7 @@ func build(ctx context.Context, client *dagger.Client, publish bool) error {
 }
 
 func getChanges(ctx context.Context, path string) ([]string, error) {
-	ctx, span := tracer.Start(ctx, "getChanges")
+	_, span := tracer.Start(ctx, "getChanges")
 	defer span.End()
 	fp, err := os.Open(path)
 	if err != nil {
