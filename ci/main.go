@@ -172,6 +172,7 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 			WithEnvVariable("GOOS", "linux").
 			WithEnvVariable("GOARCH", "amd64").
 			WithEnvVariable("GOCACHE", "/go/pkg/cache").
+			WithEnvVariable("CGO_ENABLED", "0").
 			WithMountedCache("/go/pkg", goCacheVolume).
 			WithMountedDirectory("/src/pkg", rootDirectory.Directory("pkg")).
 			WithMountedDirectory("/src/cmd", rootDirectory.Directory("cmd")).
