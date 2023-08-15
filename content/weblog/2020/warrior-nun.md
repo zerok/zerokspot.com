@@ -5,7 +5,8 @@ rating: 4
 tags:
 - 100daystooffload
 - netflix
-- show
+- shows
+- reviews
 - warriornun
 ---
 

@@ -3,7 +3,8 @@ date: '2005-01-30T12:00:00-00:00'
 language: en
 rating: 3
 tags:
-- movies-tv
+- movies
+- reviews
 title: 'Blade: Trinity'
 ---
 

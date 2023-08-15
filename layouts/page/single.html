@@ -17,11 +17,11 @@
                                 {{ range (where (where $.Site.Pages "Section" "weblog") "Params.rating" "!=" nil) }}
                                 <li class="page__listing__entry">
                                     <span class="entry-prefix">
-                                        {{ if (or (in .Params.tags "gaming") (in .Params.tags "videogame") (in .Params.tags "game")) }}
+                                        {{ if (or (in .Params.tags "gaming") (in .Params.tags "videogame") (in .Params.tags "game") (in .Params.tags "games")) }}
                                         <i class="icon icon-gamepad" title="Video game"></i>
                                         {{ else if (or (in .Params.tags "books") (in .Params.tags "book")) }}
                                         <i class="icon icon-book" title="Book"></i>
-                                        {{ else if (or (in .Params.tags "movie") (in .Params.tags "tv")) }}
+                                        {{ else if (or (in .Params.tags "movie") (in .Params.tags "tv") (in .Params.tags "movies") (in .Params.tags "show") (in .Params.tags "shows") (in .Params.tags "tv-show") (in .Params.tags "tvshow")) }}
                                         <i class="icon icon-film" title="Movie / TV"></i>
                                         {{ end }}
                                     </span>

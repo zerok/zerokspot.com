@@ -5,7 +5,8 @@ rating: 3
 tags:
 - metalgearacid
 - psp
-- review
+- reviews
+- games
 title: Metal Gear AC!D 2
 ---
 
