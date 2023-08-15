@@ -198,8 +198,6 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		logger.Info().Msgf("BUILD WEBSITE SPAN: %s", span.SpanContext().SpanID())
 		hugoContainer = withOtelEnv(ctx, client, client.Container().From(versions.HugoImage())).
 			WithEntrypoint([]string{}).
-			WithExec([]string{"apt-get", "update"}).
-			WithExec([]string{"apt-get", "install", "-y", "git"}).
 			WithSecretVariable("FEEDBIN_USER", feedbinUsername).
 			WithSecretVariable("FEEDBIN_PASSWORD", feedbinPassword).
 			WithMountedDirectory("/src", rootDirectory).
