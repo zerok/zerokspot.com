@@ -4,6 +4,8 @@ tags:
 - pen-and-paper
 - reading
 title: Reading books and taking notes
+incoming:
+- url: https://chaos.social/@zerok/110921496664566890
 ---
 
 While reading books (and especially technical ones) I always get the feeling that I forget the content basically 5 minutes after I've read it. This is completely independent of the quality of the writing or the actual content of the book, so it's more related to the way I consume it than what the author(s) had produced.
