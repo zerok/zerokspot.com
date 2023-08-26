@@ -5,6 +5,8 @@ tags:
 - releases
 - projects
 title: Webmentiond 1.1.0 released
+incoming:
+- url: "https://chaos.social/@zerok/110956132451395833"
 ---
 
 After two years I thought it was time to finally put some of those changes that had been made to [Webmentiond](https://github.com/zerok/webmentiond) actually also into a numbered release again. So after some cleaning up and tooling improvements last night, I've now pushed [version 1.1.0](https://github.com/zerok/webmentiond/releases/tag/v1.1.0) of Webmentiond out this morning 🥳
