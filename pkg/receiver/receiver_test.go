@@ -3,6 +3,7 @@ package receiver_test
 import (
 	"bytes"
 	"context"
+	"io"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
@@ -40,9 +41,15 @@ title: something
 ---
 
 Some content`
+		expectedResponseBody := `{"path":"content/weblog/2023/something.md"}
+`
 		resp, err := http.Post(testSrv.URL, "text/markdown", bytes.NewBufferString(content))
 		require.NoError(t, err)
 		require.Equal(t, http.StatusOK, resp.StatusCode)
+		// Also ensure that the path is returned from the server
+		respBody, err := io.ReadAll(resp.Body)
+		require.NoError(t, err)
+		require.Equal(t, expectedResponseBody, string(respBody))
 		require.FileExists(t, filepath.Join(tmpDir, "content/weblog/2023/something.md"))
 		rawFileContent, err := ioutil.ReadFile(filepath.Join(tmpDir, "content/weblog/2023/something.md"))
 		require.NoError(t, err)

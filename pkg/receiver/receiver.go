@@ -1,6 +1,7 @@
 package receiver
 
 import (
+	"bytes"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -127,7 +128,10 @@ func (recv *Receiver) handleReceiveMarkdown(w http.ResponseWriter, r *http.Reque
 	}
 	fp.WriteString("---\n")
 	yaml.NewEncoder(fp).Encode(data.FrontMatter)
-	fp.WriteString("---\n\n")
+	fp.WriteString("---\n")
+	if !bytes.HasPrefix(data.Content, []byte("\n")) {
+		fp.WriteString("\n")
+	}
 	fp.Write(data.Content)
 	if err := fp.Close(); err != nil {
 		return nil, fmt.Errorf("failed to close target file: %w", err)
