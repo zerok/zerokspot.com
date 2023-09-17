@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"log/slog"
 	"os"
 	"path/filepath"
 	"strings"
@@ -12,7 +12,6 @@ import (
 	"github.com/gomarkdown/markdown"
 	"github.com/gomarkdown/markdown/ast"
 	"github.com/gomarkdown/markdown/parser"
-	"github.com/rs/zerolog"
 	"gitlab.com/zerok/zerokspot.com/pkg/searchdoc"
 )
 
@@ -28,13 +27,12 @@ type PostPaths struct {
 }
 
 func BuildMapping(ctx context.Context, rootPath string) (map[string]PostPaths, error) {
-	logger := zerolog.Ctx(ctx)
 	allContentIDs := make([]string, 0, 100)
 	mapping := make(map[string]PostPaths)
 	bg := NewGraph()
 
 	// Pass 1
-	logger.Info().Msg("Pass 1")
+	slog.InfoContext(ctx, "Pass 1")
 	if err := filepath.Walk(filepath.Join(rootPath, "public"), func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
@@ -61,7 +59,7 @@ func BuildMapping(ctx context.Context, rootPath string) (map[string]PostPaths, e
 	}
 
 	// Pass 2
-	logger.Info().Msg("Pass 2")
+	slog.InfoContext(ctx, "Pass 2")
 	if err := filepath.Walk(filepath.Join(rootPath, "public"), func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
@@ -99,7 +97,7 @@ func BuildMapping(ctx context.Context, rootPath string) (map[string]PostPaths, e
 		return nil, err
 	}
 
-	logger.Info().Msgf("%d edges found.\n", bg.NumEdges())
+	slog.InfoContext(ctx, fmt.Sprintf("%d edges found", bg.NumEdges()))
 	for _, id := range allContentIDs {
 		mapping[id] = PostPaths{
 			Up:   make([]PostPathElement, 0, 5),
@@ -171,7 +169,7 @@ func containsContentID(haystack []PostPathElement, needle string) bool {
 
 func findParents(ctx context.Context, rootPath, path string) ([]string, error) {
 	contentPath := filepath.Join(rootPath, "content", path)
-	content, err := ioutil.ReadFile(contentPath)
+	content, err := os.ReadFile(contentPath)
 	if err != nil {
 		return nil, fmt.Errorf("failed to open `%s`: %w", contentPath, err)
 	}

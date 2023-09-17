@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
+	"log/slog"
 	"net/http"
 	"time"
 
 	"github.com/spf13/cobra"
-	"gitlab.com/zerok/zerokspot.com/pkg/middlewares"
 	"gitlab.com/zerok/zerokspot.com/pkg/textbundleimporter"
 	"gitlab.com/zerok/zerokspot.com/pkg/textbundlereceiver"
 )
@@ -21,6 +21,7 @@ var tzName string
 var receiveTextBundle = &cobra.Command{
 	Use: "receive-textbundle",
 	RunE: func(cmd *cobra.Command, args []string) error {
+		ctx := cmd.Context()
 		var err error
 		tz := time.UTC
 		tz, err = time.LoadLocation(tzName)
@@ -38,8 +39,8 @@ var receiveTextBundle = &cobra.Command{
 			r.GitHubUser = githubUser
 			r.GitHubToken = githubToken
 		})
-		srv.Handler = middlewares.InjectLogger(recv, logger)
-		logger.Info().Msgf("Listening on %s", srv.Addr)
+		srv.Handler = recv
+		slog.InfoContext(ctx, fmt.Sprintf("Listening on %s", srv.Addr))
 		return srv.ListenAndServe()
 	},
 }

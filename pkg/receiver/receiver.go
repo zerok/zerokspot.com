@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"log/slog"
 	"net/http"
 	"os"
 	"os/exec"
@@ -13,7 +14,6 @@ import (
 	"github.com/go-chi/chi"
 	"github.com/gohugoio/hugo/parser/pageparser"
 	"github.com/google/go-github/v52/github"
-	"github.com/rs/zerolog"
 	"golang.org/x/oauth2"
 	"gopkg.in/yaml.v2"
 )
@@ -85,7 +85,6 @@ func (recv *Receiver) handleRecieve(w http.ResponseWriter, r *http.Request) {
 
 func (recv *Receiver) handleReceiveMarkdown(w http.ResponseWriter, r *http.Request) (*postStatus, error) {
 	ctx := r.Context()
-	logger := zerolog.Ctx(ctx)
 	defer r.Body.Close()
 	data, err := pageparser.ParseFrontMatterAndContent(r.Body)
 	if err != nil {
@@ -103,7 +102,7 @@ func (recv *Receiver) handleReceiveMarkdown(w http.ResponseWriter, r *http.Reque
 	now = now.In(recv.cfg.TimeLocation)
 
 	if !recv.cfg.SkipPull {
-		logger.Debug().Msg("Switching to main and pulling latest changes")
+		slog.DebugContext(ctx, "Switching to main and pulling latest changes")
 		if err := recv.callGit(ctx, "switch", "main"); err != nil {
 			return nil, err
 		}
@@ -120,7 +119,7 @@ func (recv *Receiver) handleReceiveMarkdown(w http.ResponseWriter, r *http.Reque
 	}
 	destPath := filepath.Join(destDir, fmt.Sprintf("%s.md", slug))
 	data.FrontMatter["date"] = now.Format(time.RFC3339)
-	logger.Info().Msgf("Writing output to %s", destPath)
+	slog.InfoContext(ctx, fmt.Sprintf("Writing output to %s", destPath))
 	fp, err := os.OpenFile(destPath, os.O_CREATE|os.O_RDWR|os.O_EXCL, 0600)
 	if err != nil {
 		return nil, fmt.Errorf("failed to open destination file `%s`: %w", destPath, err)
@@ -153,7 +152,7 @@ func (recv *Receiver) handleReceiveMarkdown(w http.ResponseWriter, r *http.Reque
 		if err := recv.cleanupBranch(ctx, branchname); err != nil {
 			return nil, err
 		}
-		logger.Debug().Msg("Creating pull-request")
+		slog.DebugContext(ctx, "Creating pull-request")
 		if err := recv.createPR(ctx, slug, branchname); err != nil {
 			return nil, err
 		}
@@ -174,8 +173,7 @@ func (recv *Receiver) cleanupBranch(ctx context.Context, branchname string) erro
 }
 
 func (recv *Receiver) callGit(ctx context.Context, args ...string) error {
-	logger := zerolog.Ctx(ctx)
-	logger.Debug().Msgf("Executing git-command: %s", args)
+	slog.DebugContext(ctx, fmt.Sprintf("Executing git-command: %s", args))
 	cmd := exec.CommandContext(ctx, "git", args...)
 	cmd.Dir = recv.cfg.RepoPath
 	cmd.Stdout = os.Stdout
@@ -184,7 +182,6 @@ func (recv *Receiver) callGit(ctx context.Context, args ...string) error {
 }
 
 func (recv *Receiver) createPR(ctx context.Context, slug string, branchname string) error {
-	logger := zerolog.Ctx(ctx)
 	title := fmt.Sprintf("Article: %s", slug)
 	base := "main"
 	pull := github.NewPullRequest{
@@ -196,6 +193,6 @@ func (recv *Receiver) createPR(ctx context.Context, slug string, branchname stri
 	if err != nil {
 		return fmt.Errorf("failed to create pull-request: %w", err)
 	}
-	logger.Info().Msgf("Pull-request created: %s", pr.GetHTMLURL())
+	slog.InfoContext(ctx, fmt.Sprintf("Pull-request created: %s", pr.GetHTMLURL()))
 	return nil
 }

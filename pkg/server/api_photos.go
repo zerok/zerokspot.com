@@ -8,16 +8,16 @@ import (
 	"strings"
 	"time"
 
+	"log/slog"
+
 	"github.com/go-chi/chi"
-	"github.com/rs/zerolog"
 )
 
 func (srv *Server) handleUploadPhoto(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
-	logger := zerolog.Ctx(ctx).With().Str("handler", "api/upload-photo").Logger()
-	ctx = logger.WithContext(ctx)
+	logger := slog.With(slog.String("handler", "api/upload-photo"))
 	if err := r.ParseMultipartForm(10 * 1024 * 1024); err != nil {
-		logger.Error().Err(err).Msg("Failed to parse form data")
+		logger.ErrorContext(ctx, "Failed to parse form data", slog.String("err", err.Error()))
 		http.Error(w, "Invalid multipart data", http.StatusBadRequest)
 		return
 	}
@@ -28,7 +28,7 @@ func (srv *Server) handleUploadPhoto(w http.ResponseWriter, r *http.Request) {
 	}
 	fp, err := photos[0].Open()
 	if err != nil {
-		logger.Error().Err(err).Msg("Failed to read photo")
+		logger.ErrorContext(ctx, "Failed to read photo", slog.String("err", err.Error()))
 		http.Error(w, "Could not read photo", http.StatusBadRequest)
 		return
 	}
@@ -40,12 +40,12 @@ func (srv *Server) handleUploadPhoto(w http.ResponseWriter, r *http.Request) {
 	}
 	targetPath, err := srv.photoStore.Write(ctx, time.Now(), photos[0].Filename, fp)
 	if err != nil {
-		logger.Error().Err(err).Msg("Failed to store photo")
+		slog.ErrorContext(ctx, "Failed to store photo", slog.String("err", err.Error()))
 		http.Error(w, "Could not save photo", http.StatusInternalServerError)
 		return
 	}
 	if err := srv.resize(ctx, targetPath); err != nil {
-		logger.Error().Err(err).Msg("Failed to resize photo")
+		slog.ErrorContext(ctx, "Failed to resize photo", slog.String("err", err.Error()))
 		http.Error(w, "Could not resize photo", http.StatusInternalServerError)
 	}
 	absoluteURL := srv.publicBaseURL + "/api/photos/" + targetPath
@@ -68,8 +68,6 @@ func ValidatePhotoFilename(fname string) error {
 
 func (srv *Server) handleGetPhoto(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
-	logger := zerolog.Ctx(ctx).With().Str("handler", "api/get-photo").Logger()
-	ctx = logger.WithContext(ctx)
 	year := chi.URLParam(r, "year")
 	month := chi.URLParam(r, "month")
 	day := chi.URLParam(r, "day")

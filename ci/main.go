@@ -6,12 +6,13 @@ import (
 	"flag"
 	"fmt"
 	"io/ioutil"
+	"log/slog"
 	"net/http"
 	"os"
 	"strings"
 
 	"dagger.io/dagger"
-	"github.com/rs/zerolog"
+	"gitlab.com/zerok/zerokspot.com/pkg/otelhandler"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/codes"
@@ -34,8 +35,9 @@ func main() {
 	flag.BoolVar(&publish, "publish", false, "Also upload stuff")
 	flag.Parse()
 
-	logger := zerolog.New(zerolog.ConsoleWriter{Out: os.Stderr}).With().Timestamp().Logger()
-	ctx := logger.WithContext(context.Background())
+	logger := slog.New(otelhandler.OTELHandler{Handler: slog.NewTextHandler(os.Stderr, nil)})
+	slog.SetDefault(logger)
+	ctx := context.Background()
 
 	var exporter sdktrace.SpanExporter
 	var err error
@@ -47,7 +49,8 @@ func main() {
 		exporter, err = stdouttrace.New()
 	}
 	if err != nil {
-		logger.Fatal().Err(err).Msg("Failed to initialize oltp output")
+		slog.ErrorContext(ctx, "Failed to initialize OTLP output", slog.Any("err", err))
+		os.Exit(1)
 	}
 	res, err := resource.Merge(
 		resource.Default(),
@@ -57,7 +60,8 @@ func main() {
 		),
 	)
 	if err != nil {
-		logger.Fatal().Err(err).Msg("Failed to generate OLTP resource")
+		slog.ErrorContext(ctx, "Failed to generate OTLP resource", slog.Any("err", err))
+		os.Exit(1)
 	}
 	tp := sdktrace.NewTracerProvider(
 		sdktrace.WithSpanProcessor(sdktrace.NewBatchSpanProcessor(exporter)),
@@ -65,33 +69,39 @@ func main() {
 	)
 	defer func() {
 		if err := tp.Shutdown(context.Background()); err != nil {
-			logger.Error().Err(err).Msg("Failed to shut tracer provider down")
+			slog.ErrorContext(ctx, "Failed to shut tracer provider down", slog.Any("err", err))
 		}
 	}()
 	otel.SetTracerProvider(tp)
 
 	tracer = tp.Tracer("zerokspot-ci")
 	ctx, span := tracer.Start(ctx, "main")
-	logger.Info().Msgf("TraceID: %s", span.SpanContext().TraceID().String())
+	slog.InfoContext(ctx, fmt.Sprintf("TraceID: %s", span.SpanContext().TraceID().String()))
 	defer span.End()
 	span.SetAttributes(attribute.Bool("publish", publish))
 
 	client, err := dagger.Connect(ctx, dagger.WithLogOutput(os.Stderr))
 	if err != nil {
 		span.SetStatus(codes.Error, "Failed to setup Dagger")
-		logger.Fatal().Err(err).Msg("Failed to setup Dagger")
+		slog.ErrorContext(ctx, "Failed to setup Dagger", slog.Any("err", err))
+		os.Exit(1)
 	}
 	defer client.Close()
 
 	versions, err := LoadVersions(ctx)
 	if err != nil {
 		span.SetStatus(codes.Error, "Failed to load versions")
-		logger.Fatal().Err(err).Msg("Failed to load versions")
+		slog.ErrorContext(ctx, "Failed to load versions", slog.Any("err", err))
+		os.Exit(1)
 	}
 
 	if err := build(ctx, client, versions, publish); err != nil {
 		span.SetStatus(codes.Error, "Failed to setup build")
-		logger.Fatal().Err(err).Msg("Failed to build")
+		slog.ErrorContext(ctx, "Failed to build", slog.Any("err", err))
+		// TODO: This will prevent the trace-provider from shutting down
+		// properly. The whole blog should be moved into a function that does
+		// not panic.
+		os.Exit(1)
 	}
 	span.SetStatus(codes.Ok, "")
 }
@@ -122,9 +132,8 @@ func getTraceParent(ctx context.Context) string {
 }
 
 func withOtelEnv(ctx context.Context, client *dagger.Client, container *dagger.Container) *dagger.Container {
-	logger := zerolog.Ctx(ctx)
 	parentTrace := getTraceParent(ctx)
-	logger.Info().Msgf("Container with parent trace: %s", parentTrace)
+	slog.InfoContext(ctx, fmt.Sprintf("Container with parent trace: %s", parentTrace))
 	c := container.
 		WithEnvVariable("TRACEPARENT", parentTrace).
 		WithEnvVariable("OVERRIDE_TRACEPARENT", parentTrace).
@@ -144,7 +153,6 @@ func withOtelEnv(ctx context.Context, client *dagger.Client, container *dagger.C
 func build(ctx context.Context, client *dagger.Client, versions *Versions, publish bool) error {
 	ctx, span := tracer.Start(ctx, "build")
 	defer span.End()
-	logger := zerolog.Ctx(ctx)
 	feedbinUsername := client.SetSecret("feedbinUsername", os.Getenv("FEEDBIN_USER"))
 	feedbinPassword := client.SetSecret("feedbinPassword", os.Getenv("FEEDBIN_PASSWORD"))
 	sshPrivateKey := os.Getenv("SSH_PRIVATE_KEY")
@@ -196,7 +204,6 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 	if err := func(ctx context.Context) error {
 		ctx, span := tracer.Start(ctx, "buildWebsite")
 		defer span.End()
-		logger.Info().Msgf("BUILD WEBSITE SPAN: %s", span.SpanContext().SpanID())
 		hugoContainer = withOtelEnv(ctx, client, client.Container().From(versions.HugoImage())).
 			WithEntrypoint([]string{}).
 			WithSecretVariable("FEEDBIN_USER", feedbinUsername).
@@ -224,7 +231,7 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		return err
 	}
 
-	hugoContainer = hugoContainer.
+	hugoContainer = withOtelEnv(ctx, client, hugoContainer).
 		WithExec([]string{"blog", "changes", "--since-rev", publicRev, "--url", "--output", "public/.changes.txt"}).
 		WithNewFile("/src/public/.gitrev", dagger.ContainerWithNewFileOpts{
 			Contents: gitRev,
@@ -284,20 +291,22 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 	}
 
 	if len(changes) == 0 {
-		logger.Info().Msg("No changes found. Skipping webmentions.")
+		slog.InfoContext(ctx, "No changes found. Skipping webmentions.")
 		return nil
 	}
 
 	if err := func(ctx context.Context) error {
 		ctx, span := tracer.Start(ctx, "sendWebmentions")
 		defer span.End()
-		logger.Info().Msg("Generating webmentions")
+		slog.InfoContext(ctx, "Generating webmentions")
 		mentionContainer := withOtelEnv(ctx, client, client.Container().From(webmentiondImage)).
 			WithEntrypoint([]string{})
 		for _, change := range changes {
-			logger.Info().Msgf("Mentioning from %s", change)
+			logger := slog.With(slog.String("mentionFrom", change))
+			logger.InfoContext(ctx, "Mentioning")
 			mentionContainer = mentionContainer.WithExec([]string{"/usr/local/bin/webmentiond", "send", change})
 			if _, err := mentionContainer.Sync(ctx); err != nil {
+				logger.ErrorContext(ctx, "Failed to execute webmentions", slog.Any("err", err))
 				span.SetStatus(codes.Error, "Failed to execute webmentions")
 				return err
 			}

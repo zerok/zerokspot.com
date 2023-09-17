@@ -12,7 +12,6 @@ import (
 	"testing"
 	"time"
 
-	"github.com/rs/zerolog"
 	"github.com/stretchr/testify/require"
 	"gitlab.com/zerok/zerokspot.com/pkg/resizer"
 )
@@ -61,8 +60,6 @@ func TestAPIUploadPhoto(t *testing.T) {
 	t.Run("invalid-name", func(t *testing.T) {
 		rootPath := t.TempDir()
 		ctx := context.Background()
-		logger := zerolog.New(zerolog.ConsoleWriter{Out: os.Stderr})
-		ctx = logger.WithContext(ctx)
 		srv, err := NewServer(ctx, WithDataFolder(rootPath), WithAPIKey(apiKey))
 		require.NoError(t, err)
 		require.NotNil(t, srv)
@@ -85,8 +82,6 @@ func TestAPIUploadPhoto(t *testing.T) {
 	t.Run("happy", func(t *testing.T) {
 		rootPath := t.TempDir()
 		ctx := context.Background()
-		logger := zerolog.New(zerolog.ConsoleWriter{Out: os.Stderr})
-		ctx = logger.WithContext(ctx)
 		profiles := resizer.NewProfiles()
 		profiles.Add("800", resizer.Profile{
 			Width:  800,
@@ -138,8 +133,6 @@ func TestAPIUploadPhoto(t *testing.T) {
 func TestAPIGetPhoto(t *testing.T) {
 	rootPath := t.TempDir()
 	ctx := context.Background()
-	logger := zerolog.New(zerolog.ConsoleWriter{Out: os.Stderr})
-	ctx = logger.WithContext(ctx)
 	profiles := resizer.NewProfiles()
 	profiles.Add("800", resizer.Profile{
 		Width:  800,

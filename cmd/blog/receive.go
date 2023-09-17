@@ -3,11 +3,11 @@ package main
 import (
 	"context"
 	"fmt"
+	"log/slog"
 	"net/http"
 	"time"
 
 	"github.com/spf13/cobra"
-	"gitlab.com/zerok/zerokspot.com/pkg/middlewares"
 	"gitlab.com/zerok/zerokspot.com/pkg/receiver"
 )
 
@@ -32,8 +32,8 @@ var receive = &cobra.Command{
 			cfg.GitHubToken = githubToken
 			cfg.AccessToken = token
 		})
-		srv.Handler = middlewares.InjectLogger(recv, logger)
-		logger.Info().Msgf("Listening on %s", srv.Addr)
+		srv.Handler = recv
+		slog.InfoContext(ctx, fmt.Sprintf("Listening on %s", srv.Addr))
 		go func() {
 			<-ctx.Done()
 			srv.Shutdown(context.Background())

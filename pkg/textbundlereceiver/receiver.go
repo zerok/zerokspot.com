@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
+	"log/slog"
 	"mime/multipart"
 	"net/http"
 	"os"
@@ -14,7 +15,6 @@ import (
 	"github.com/go-chi/chi"
 	"github.com/google/go-github/v52/github"
 	slugify "github.com/gosimple/slug"
-	"github.com/rs/zerolog"
 	"gitlab.com/zerok/zerokspot.com/pkg/textbundleimporter"
 	"golang.org/x/oauth2"
 )
@@ -53,37 +53,36 @@ func (recv *Receiver) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 func (recv *Receiver) handleReceive(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
-	logger := zerolog.Ctx(ctx)
 	token := r.Header.Get("Authorization")
 	if recv.AccessToken != "" && token != recv.AccessToken {
 		http.Error(w, "Invalid token", http.StatusUnauthorized)
 		return
 	}
 	if err := r.ParseMultipartForm(5_000_000); err != nil {
-		logger.Debug().Err(err).Msg("Invalid form data")
+		slog.DebugContext(ctx, "Invalid form data", slog.String("err", err.Error()))
 		http.Error(w, "Invalid form data", http.StatusBadRequest)
 		return
 	}
 	slug := r.FormValue("slug")
 	file, filehdr, err := r.FormFile("data")
 	if err != nil {
-		logger.Debug().Err(err).Msg("Invalid file data")
+		slog.DebugContext(ctx, "Invalid file data", slog.String("err", err.Error()))
 		http.Error(w, "Invalid file data", http.StatusBadRequest)
 		return
 	}
 	packpath, err := recv.storePack(ctx, file, filehdr)
 	if err != nil {
-		logger.Error().Err(err).Msg("Failed to store file")
+		slog.ErrorContext(ctx, "Failed to store file", slog.String("err", err.Error()))
 		http.Error(w, "Failed to store file", http.StatusInternalServerError)
 		return
 	}
-	logger.Info().Msgf("Stored pack under %s", packpath)
+	slog.InfoContext(ctx, fmt.Sprintf("Stored pack under %s", packpath))
 	defer os.RemoveAll(packpath)
 
 	if slug == "" {
 		elems := strings.SplitN(filehdr.Filename, ".", 2)
 		if len(elems) < 1 {
-			logger.Debug().Err(err).Msgf("Invalid file name: %s", filehdr.Filename)
+			slog.DebugContext(ctx, fmt.Sprintf("Invalid file name: %s", filehdr.Filename, slog.String("err", err.Error())))
 			http.Error(w, "Invalid file data", http.StatusBadRequest)
 			return
 		}
@@ -92,57 +91,57 @@ func (recv *Receiver) handleReceive(w http.ResponseWriter, r *http.Request) {
 	slug = slugify.Make(slug)
 	branchname := fmt.Sprintf("articles/%s", slug)
 	if err := recv.callGit(ctx, "checkout", "-f", "main"); err != nil {
-		logger.Error().Err(err).Msg("Git failed")
+		slog.ErrorContext(ctx, "Git failed", slog.String("err", err.Error()))
 		http.Error(w, "Git failed", http.StatusInternalServerError)
 		return
 	}
 	if err := recv.callGit(ctx, "clean", "-f"); err != nil {
-		logger.Error().Err(err).Msg("Git failed")
+		slog.ErrorContext(ctx, "Git failed", slog.String("err", err.Error()))
 		http.Error(w, "Git failed", http.StatusInternalServerError)
 		return
 	}
 	if err := recv.callGit(ctx, "pull", "origin", "main"); err != nil {
-		logger.Error().Err(err).Msg("Git failed")
+		slog.ErrorContext(ctx, "Git failed", slog.String("err", err.Error()))
 		http.Error(w, "Git failed", http.StatusInternalServerError)
 		return
 	}
 	if err := recv.callGit(ctx, "checkout", "-f", "-b", branchname); err != nil {
-		logger.Error().Err(err).Msg("Git failed")
+		slog.ErrorContext(ctx, "Git failed", slog.String("err", err.Error()))
 		http.Error(w, "Git failed", http.StatusInternalServerError)
 		return
 	}
 	if err := recv.Importer.Import(ctx, packpath, slug); err != nil {
-		logger.Error().Err(err).Msg("Import failed")
+		slog.ErrorContext(ctx, "Git failed", slog.String("err", err.Error()))
 		http.Error(w, "Import failed", http.StatusInternalServerError)
 		return
 	}
 	if err := recv.callGit(ctx, "add", "."); err != nil {
-		logger.Error().Err(err).Msg("Git failed")
+		slog.ErrorContext(ctx, "Git failed", slog.String("err", err.Error()))
 		http.Error(w, "Git failed", http.StatusInternalServerError)
 		return
 	}
 	if err := recv.callGit(ctx, "commit", "-m", "Add "+slug); err != nil {
-		logger.Error().Err(err).Msg("Git failed")
+		slog.ErrorContext(ctx, "Git failed", slog.String("err", err.Error()))
 		http.Error(w, "Git failed", http.StatusInternalServerError)
 		return
 	}
 	if err := recv.callGit(ctx, "push", "origin", branchname); err != nil {
-		logger.Error().Err(err).Msg("Git failed")
+		slog.ErrorContext(ctx, "Git failed", slog.String("err", err.Error()))
 		http.Error(w, "Git failed", http.StatusInternalServerError)
 		return
 	}
 	if err := recv.callGit(ctx, "checkout", "-f", "main"); err != nil {
-		logger.Error().Err(err).Msg("Git failed")
+		slog.ErrorContext(ctx, "Git failed", slog.String("err", err.Error()))
 		http.Error(w, "Git failed", http.StatusInternalServerError)
 		return
 	}
 	if err := recv.callGit(ctx, "branch", "-D", branchname); err != nil {
-		logger.Error().Err(err).Msg("Git failed")
+		slog.ErrorContext(ctx, "Git failed", slog.String("err", err.Error()))
 		http.Error(w, "Git failed", http.StatusInternalServerError)
 		return
 	}
 	if err := recv.createPR(ctx, slug, branchname); err != nil {
-		logger.Error().Err(err).Msg("Failed to create PR")
+		slog.ErrorContext(ctx, "Git failed", slog.String("err", err.Error()))
 		http.Error(w, "PR creation failed", http.StatusInternalServerError)
 		return
 	}

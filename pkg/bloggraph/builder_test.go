@@ -2,18 +2,14 @@ package bloggraph_test
 
 import (
 	"context"
-	"os"
 	"testing"
 
-	"github.com/rs/zerolog"
 	"github.com/stretchr/testify/require"
 	"gitlab.com/zerok/zerokspot.com/pkg/bloggraph"
 )
 
 func TestBuildMapping(t *testing.T) {
 	ctx := context.Background()
-	logger := zerolog.New(zerolog.ConsoleWriter{Out: os.Stderr})
-	ctx = logger.WithContext(ctx)
 
 	t.Run("Simple mapping", func(t *testing.T) {
 		result, err := bloggraph.BuildMapping(ctx, "testdata/simplemapping")

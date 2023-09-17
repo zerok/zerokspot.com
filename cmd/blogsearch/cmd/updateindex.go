@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"log/slog"
 	"net/http"
 	"os"
 	"os/exec"
@@ -95,42 +96,48 @@ func loadMapping(u string) (map[string]string, error) {
 var updateIndexCmd = &cobra.Command{
 	Use: "update-index",
 	Run: func(cmd *cobra.Command, args []string) {
+		ctx := cmd.Context()
 		updatedObjectIDs := make([]string, 0, 5)
 		if !rebuild {
 			// Fetch a reference commit ID from a designed URL
 			gitrev, err := fetchGitRev(gitrevURL)
 			if err != nil {
-				logger.Fatal().Err(err).Msg("Failed to retrieve gitrev")
+				slog.ErrorContext(ctx, "Failed to retrieve gitrev", slog.Any("err", err))
+				os.Exit(1)
 			}
 			newMapping, err := buildMapping("public")
 			if err != nil {
-				logger.Fatal().Err(err).Msg("Failed to generate new mapping")
+				slog.ErrorContext(ctx, "Failed to generate new mapping", slog.Any("err", err))
+				os.Exit(1)
 			}
 			mapping, err := loadMapping(mappingURL)
 			if err != nil {
-				logger.Fatal().Err(err).Msg("Failed to retrieve mapping")
+				slog.ErrorContext(ctx, "Failed to retrieve mapping", slog.Any("err", err))
+				os.Exit(1)
 			}
 			changedFiles, err := changedFilesSince(gitrev)
 			if err != nil {
-				logger.Fatal().Err(err).Msg("Failed to retrieve changes")
+				slog.ErrorContext(ctx, "Failed to retrieve changes", slog.Any("err", err))
+				os.Exit(1)
 			}
-			logger.Info().Msgf("Changes since %s", gitrev)
 			for _, file := range changedFiles {
-				logger.Info().Msgf(" - %s (%s, is_content: %v, is_layout: %v)", file.Name, file.Status, file.IsContent(), file.IsLayout())
+				logger := slog.With(slog.String("file_name", file.Name), slog.String("file_status", file.Status))
 				if file.IsContent() {
 					objectID := mapping[strings.TrimPrefix(file.Name, "content/")]
+					logger := logger.With(slog.String("object_id", objectID))
 					switch file.Status {
 					case "D":
 						if objectID == "" {
 							continue
 						}
-						logger.Info().Msgf("Deleting %s", objectID)
+						logger.InfoContext(ctx, "Deleting object")
 						if dryRun {
 							continue
 						}
 						updatedObjectIDs = append(updatedObjectIDs, objectID)
 						if _, err := index.DeleteObject(objectID); err != nil {
-							logger.Fatal().Err(err).Msgf("Failed to delete %s", objectID)
+							logger.ErrorContext(ctx, "Failed to delete object", slog.Any("err", err))
+							os.Exit(1)
 						}
 					case "M":
 						fallthrough
@@ -139,35 +146,38 @@ var updateIndexCmd = &cobra.Command{
 							objectID = newMapping[strings.TrimPrefix(file.Name, "content/")]
 						}
 						dataPath := filepath.Join("public", objectID, "index.json")
-						raw, err := ioutil.ReadFile(dataPath)
+						raw, err := os.ReadFile(dataPath)
 						if err != nil {
 							if os.IsNotExist(err) {
-								logger.Info().Msgf("Deleting %s", objectID)
+								logger.InfoContext(ctx, "Deleting object")
 								if _, err := index.DeleteObject(objectID); err != nil {
-									logger.Error().Err(err).Msgf("Failed to delete %s", objectID)
+									logger.ErrorContext(ctx, "Failed to delete object", slog.Any("err", err))
 								}
 								objectID = newMapping[strings.TrimPrefix(file.Name, "content/")]
 								dataPath = filepath.Join("public", objectID, "index.json")
-								raw, err = ioutil.ReadFile(dataPath)
+								raw, err = os.ReadFile(dataPath)
 							}
 							if err != nil {
-								logger.Fatal().Err(err).Msgf("Failed to load %s", dataPath)
+								logger.ErrorContext(ctx, "Failed to load file", slog.String("dataPath", dataPath), slog.Any("err", err))
+								os.Exit(1)
 							}
 						}
 						var obj algoliasearch.Object
 						if err := json.Unmarshal(raw, &obj); err != nil {
-							logger.Fatal().Err(err).Msgf("Failed to decode JSON from %s", dataPath)
+							logger.ErrorContext(ctx, "Failed to decode JSON", slog.String("dataPath", dataPath), slog.Any("err", err))
+							os.Exit(1)
 						}
 						if err := validateSearchObject(obj); err != nil {
-							logger.Warn().Err(err).Msg("Document not valid.")
+							logger.WarnContext(ctx, "Document not valid.", slog.Any("err", err))
 							continue
 						}
 						if dryRun {
 							continue
 						}
-						logger.Info().Msgf("Updating %s", objectID)
+						logger.InfoContext(ctx, "Updating object")
 						if _, err := index.UpdateObjects([]algoliasearch.Object{obj}); err != nil {
-							logger.Fatal().Err(err).Msgf("Failed to update %s", objectID)
+							slog.ErrorContext(ctx, "Failed to update object", slog.Any("err", err))
+							os.Exit(1)
 						}
 						updatedObjectIDs = append(updatedObjectIDs, objectID)
 					}
@@ -194,29 +204,32 @@ var updateIndexCmd = &cobra.Command{
 					if obj["type"] != "weblog" {
 						return nil
 					}
-					logger.Info().Msgf("Adding %s", path)
+					slog.InfoContext(ctx, "Adding file", slog.String("dataPath", path))
 					objects = append(objects, obj)
 				}
 				return nil
 			})
 			if err != nil {
-				logger.Fatal().Err(err).Msg("Failed to load JSON data")
+				slog.ErrorContext(ctx, "Failed to load JSON data", slog.Any("err", err))
+				os.Exit(1)
 			}
 			if dryRun {
 				return
 			}
 			res, err := index.UpdateObjects(objects)
 			if err != nil {
-				logger.Fatal().Err(err).Msg("Failed to update index")
+				slog.ErrorContext(ctx, "Failed to update index", slog.Any("err", err))
+				os.Exit(1)
 			}
 			for _, oid := range res.ObjectIDs {
 				updatedObjectIDs = append(updatedObjectIDs, oid)
 			}
 		}
-		logger.Info().Msgf("Creating updated-objects file at %s", updatedObjectsPath)
+		slog.InfoContext(ctx, "Creating updated-objects file", slog.String("outputFile", updatedObjectsPath))
 		fp, err := os.OpenFile(updatedObjectsPath, os.O_CREATE|os.O_TRUNC|os.O_WRONLY, 0644)
 		if err != nil {
-			logger.Fatal().Err(err).Msg("Failed to create updated-objects.txt")
+			slog.ErrorContext(ctx, "Failed to create updated-objects file", slog.String("outputFile", updatedObjectsPath), slog.Any("err", err))
+			os.Exit(1)
 		}
 		defer fp.Close()
 		for _, oid := range updatedObjectIDs {

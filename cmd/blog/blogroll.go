@@ -41,7 +41,7 @@ var blogrollCmd = &cobra.Command{
 	Use:   "blogroll",
 	Short: "Generate blogroll.json",
 	RunE: func(cmd *cobra.Command, args []string) error {
-		ctx := logger.WithContext(cmd.Context())
+		ctx := cmd.Context()
 		ctx = findParentTrace(ctx)
 		ctx, span := tracer.Start(ctx, "cmd:blogroll")
 		defer span.End()

@@ -3,14 +3,15 @@ package main
 import (
 	"context"
 	"fmt"
+	"log/slog"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
 
-	"github.com/rs/zerolog"
 	"github.com/spf13/cobra"
 	"gitlab.com/zerok/zerokspot.com/cmd/blogsearch/cmd"
+	"gitlab.com/zerok/zerokspot.com/pkg/otelhandler"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace"
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp"
@@ -22,7 +23,6 @@ import (
 	"go.opentelemetry.io/otel/trace"
 )
 
-var logger zerolog.Logger
 var localZoneName string
 var localZone *time.Location
 var tracer trace.Tracer
@@ -35,7 +35,6 @@ var rootCmd = &cobra.Command{
 	},
 	PersistentPreRunE: func(cmd *cobra.Command, args []string) error {
 		var err error
-		logger = zerolog.New(zerolog.ConsoleWriter{Out: os.Stderr})
 		localZone, err = time.LoadLocation(localZoneName)
 		if err != nil {
 			return err
@@ -53,7 +52,6 @@ func init() {
 }
 
 func findParentTrace(ctx context.Context) context.Context {
-	logger := zerolog.Ctx(ctx)
 	var traceParent string
 	for _, v := range []string{"OVERRIDE_TRACEPARENT", "TRACEPARENT"} {
 		traceParent = os.Getenv(v)
@@ -62,10 +60,10 @@ func findParentTrace(ctx context.Context) context.Context {
 		}
 	}
 	if traceParent == "" {
-		logger.Info().Msg("No parent trace provided")
+		slog.InfoContext(ctx, "No parent trace provided")
 		return ctx
 	}
-	logger.Info().Msgf("Parent trace provided: %s", traceParent)
+	slog.InfoContext(ctx, "Parent trace provided", slog.String("traceparent", traceParent))
 	carrier := make(propagation.MapCarrier)
 	carrier.Set("traceparent", traceParent)
 	prop := otel.GetTextMapPropagator()
@@ -81,10 +79,10 @@ func initOtel(ctx context.Context) *sdktrace.TracerProvider {
 	var exporter sdktrace.SpanExporter
 	var err error
 
-	logger.Info().
-		Str("OTEL_EXPORTER_OTLP_ENDPOINT", os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT")).
-		Str("OTEL_EXPORTER_OTLP_PROTOCOL", os.Getenv("OTEL_EXPORTER_OTLP_PROTOCOL")).
-		Msg("Configuring Otel")
+	slog.InfoContext(ctx, "Configuring OTEL",
+		slog.String("OTEL_EXPORTER_OTLP_ENDPOINT", os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT")),
+		slog.String("OTEL_EXPORTER_OTLP_PROTOCOL", os.Getenv("OTEL_EXPORTER_OTLP_PROTOCOL")),
+	)
 
 	if os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT") != "" {
 		os.Setenv("OTEL_EXPORTER_OTLP_TRACES_ENDPOINT", os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT")+"/v1/traces")
@@ -93,13 +91,14 @@ func initOtel(ctx context.Context) *sdktrace.TracerProvider {
 
 		otlpClient := otlptracehttp.NewClient()
 		exporter, err = otlptrace.New(ctx, otlpClient)
-		logger.Info().Msg("Sending traces to remote endpoint")
+		slog.InfoContext(ctx, "Sending traces to remote endpoint")
 	} else {
 		exporter, err = stdouttrace.New(stdouttrace.WithWriter(os.Stderr))
-		logger.Info().Msg("Sending traces to stderr")
+		slog.InfoContext(ctx, "Sending traces to stderr")
 	}
 	if err != nil {
-		logger.Fatal().Err(err).Msg("Failed to initialize trace exporter")
+		slog.ErrorContext(ctx, "Failed to initialize trace exporter", slog.Any("err", err))
+		os.Exit(1)
 	}
 
 	res, err := resource.Merge(
@@ -110,7 +109,8 @@ func initOtel(ctx context.Context) *sdktrace.TracerProvider {
 		),
 	)
 	if err != nil {
-		logger.Fatal().Err(err).Msg("Failed to generate OLTP resource")
+		slog.ErrorContext(ctx, "Failed to generate OTLP resource", slog.Any("err", err))
+		os.Exit(1)
 	}
 	tp := sdktrace.NewTracerProvider(
 		sdktrace.WithSpanProcessor(sdktrace.NewBatchSpanProcessor(exporter)),
@@ -124,25 +124,27 @@ func initOtel(ctx context.Context) *sdktrace.TracerProvider {
 }
 
 func main() {
-	logger = zerolog.New(zerolog.ConsoleWriter{Out: os.Stderr})
+	logger := slog.New(otelhandler.OTELHandler{Handler: slog.NewTextHandler(os.Stderr, nil)})
+	slog.SetDefault(logger)
 	ctx, cancel := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
 	defer cancel()
 
 	tp := initOtel(ctx)
 	defer func() {
 		if err := tp.ForceFlush(context.Background()); err != nil {
-			logger.Error().Err(err).Msg("Failed to flush tracer provider")
+			slog.ErrorContext(ctx, "Failed to flush tracer provider", slog.Any("err", err))
 		}
 	}()
 	defer func() {
-		logger.Info().Msg("Shutting down tracer provider")
+		slog.InfoContext(ctx, "Shutting down tracer provider")
 		if err := tp.Shutdown(context.Background()); err != nil {
-			logger.Error().Err(err).Msg("Failed to shut down tracer provider")
+			slog.ErrorContext(ctx, "Failed to shut down tracer provider", slog.Any("err", err))
 		}
 	}()
 
 	if err := rootCmd.ExecuteContext(ctx); err != nil {
-		logger.Fatal().Msg(err.Error())
+		slog.ErrorContext(ctx, err.Error())
+		os.Exit(1)
 	}
 }
 

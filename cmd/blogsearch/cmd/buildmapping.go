@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"encoding/json"
+	"fmt"
 	"os"
 	"path/filepath"
 
@@ -11,24 +12,25 @@ import (
 
 var buildMappingCmd = &cobra.Command{
 	Use: "build-mapping",
-	Run: func(cmd *cobra.Command, args []string) {
+	RunE: func(cmd *cobra.Command, args []string) error {
 		mapping, err := buildMapping("public")
 		if err != nil {
-			logger.Fatal().Err(err).Msg("Failed to build mapping")
+			return fmt.Errorf("failed to build mapping: %w", err)
 		}
 		fp, err := os.OpenFile(filepath.Join("public", ".mapping.json.xz"), os.O_CREATE|os.O_TRUNC|os.O_WRONLY, 0644)
 		if err != nil {
-			logger.Fatal().Err(err).Msgf("Failed to open %s for writing", ".mapping.json.xz")
+			return fmt.Errorf("failed to open %s for writing: %w", ".mapping.json.xz", err)
 		}
 		defer fp.Close()
 		w, err := xz.NewWriter(fp)
 		if err != nil {
-			logger.Fatal().Err(err).Msgf("Failed to create new xz writer")
+			return fmt.Errorf("failed to create new xz writer: %w", err)
 		}
 		defer w.Close()
 		if err := json.NewEncoder(w).Encode(mapping); err != nil {
-			logger.Fatal().Err(err).Msgf("Failed to write mapping file")
+			return fmt.Errorf("failed to write mapping file: %w", err)
 		}
+		return nil
 	},
 }
 

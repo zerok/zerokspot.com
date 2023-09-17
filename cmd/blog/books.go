@@ -7,6 +7,8 @@ import (
 	"path/filepath"
 	"time"
 
+	"log/slog"
+
 	"github.com/spf13/cobra"
 	"gitlab.com/zerok/zerokspot.com/pkg/bookscollection"
 )
@@ -22,7 +24,7 @@ func generateGenOPMLCommand() *cobra.Command {
 	var cmd = &cobra.Command{
 		Use: "gen-opml",
 		RunE: func(cmd *cobra.Command, args []string) error {
-			ctx := logger.WithContext(cmd.Context())
+			ctx := cmd.Context()
 			ctx = findParentTrace(ctx)
 			ctx, span := tracer.Start(ctx, "cmd:books/gen-opml")
 			defer span.End()
@@ -48,14 +50,15 @@ func generateGenOPMLCommand() *cobra.Command {
 var booksLintCmd = &cobra.Command{
 	Use: "lint",
 	RunE: func(cmd *cobra.Command, args []string) error {
-		log := logger.With().Str("component", "lint").Logger()
+		ctx := cmd.Context()
+		log := slog.With(slog.String("component", "lint"))
 		paths, err := filepath.Glob("content/reading/*.md")
 		if err != nil {
 			return err
 		}
 		numWarnings := 0
 		for _, path := range paths {
-			l := log.With().Str("file", path).Logger()
+			l := log.With(slog.String("file", path))
 			fp, err := os.Open(path)
 			if err != nil {
 				return err
@@ -63,14 +66,14 @@ var booksLintCmd = &cobra.Command{
 			b, err := bookscollection.ParseBook(fp)
 			fp.Close()
 			if err != nil {
-				l.Error().Err(err).Msg("Failed to parse book file")
+				l.ErrorContext(ctx, "Failed to parse book file", slog.Any("err", err))
 			}
 			if b.OpenLibraryID == "" {
 				numWarnings++
-				l.Warn().Msg("No OpenLibraryID set")
+				l.WarnContext(ctx, "No OpenLibraryID set")
 			}
 		}
-		log.Info().Msgf("%d warnings found", numWarnings)
+		log.InfoContext(ctx, "%d warnings found", numWarnings)
 		return nil
 	},
 }
@@ -79,11 +82,12 @@ func generateEnrichBookDataCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use: "enrich",
 		RunE: func(cmd *cobra.Command, args []string) error {
+			ctx := cmd.Context()
 			failed := false
 			for _, path := range args {
-				logger := logger.With().Str("path", path).Logger()
+				logger := slog.With(slog.String("path", path))
 				if err := bookscollection.EnrichData(cmd.Context(), path); err != nil {
-					logger.Error().Err(err).Msg("Failed to enrich data")
+					logger.ErrorContext(ctx, "Failed to enrich data", slog.Any("err", err))
 					failed = true
 				}
 			}
@@ -101,6 +105,7 @@ func generateBookStatsCommand() *cobra.Command {
 	var cmd = &cobra.Command{
 		Use: "stats",
 		RunE: func(cmd *cobra.Command, args []string) error {
+			ctx := cmd.Context()
 			var books []bookscollection.Book
 			paths, err := filepath.Glob("content/reading/*.md")
 			if err != nil {
@@ -114,14 +119,13 @@ func generateBookStatsCommand() *cobra.Command {
 				book, err := bookscollection.ParseBook(fp)
 				fp.Close()
 				if err != nil {
-					logger.Error().Err(err).Str("file", path).Msg("Failed to parse book file")
+					slog.ErrorContext(ctx, "Failed to parse book", slog.String("file", path), slog.Any("err", err))
 				}
 				if book.FinishedDate == nil || book.FinishedDate.Year() != year {
 					continue
 				}
 				books = append(books, *book)
 			}
-			fmt.Printf("Count: %d\n", len(books))
 			totalPages := 0
 			genreCount := make(map[string]int)
 			var maxPagesBook bookscollection.Book
@@ -147,7 +151,7 @@ func generateBookStatsCommand() *cobra.Command {
 					c := genreCount[b.Genre]
 					genreCount[b.Genre] = c + 1
 				} else {
-					logger.Warn().Msgf("No genre set for %s", b.Title)
+					slog.WarnContext(ctx, "No genre set", slog.String("book", b.Title))
 				}
 			}
 			fmt.Printf("Total pages: %d\n", totalPages)

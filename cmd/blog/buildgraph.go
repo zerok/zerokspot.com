@@ -19,7 +19,7 @@ type doc struct {
 var buildGraphCmd = &cobra.Command{
 	Use: "build-graph",
 	RunE: func(command *cobra.Command, args []string) error {
-		ctx := logger.WithContext(command.Context())
+		ctx := command.Context()
 		ctx = findParentTrace(ctx)
 		ctx, span := tracer.Start(ctx, "cmd:build-graph")
 		defer span.End()
