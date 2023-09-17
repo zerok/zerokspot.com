@@ -3,7 +3,9 @@ package cmd
 import (
 	"encoding/json"
 	"fmt"
+	"log/slog"
 	"net/http"
+	"os"
 
 	"github.com/algolia/algoliasearch-client-go/algoliasearch"
 	"github.com/go-chi/chi"
@@ -19,6 +21,7 @@ var serveCmd = &cobra.Command{
 
 	},
 	Run: func(cmd *cobra.Command, args []string) {
+		ctx := cmd.Context()
 		router := chi.NewRouter()
 
 		corsMiddleware := cors.New(cors.Options{
@@ -38,7 +41,7 @@ var serveCmd = &cobra.Command{
 				},
 			})
 			if err != nil {
-				logger.Error().Err(err).Msg("Search query failed")
+				slog.ErrorContext(ctx, "Search query failed", slog.Any("err", err))
 				http.Error(w, "Search query failed", http.StatusInternalServerError)
 			}
 			w.Header().Set("Content-type", "application/json")
@@ -57,7 +60,7 @@ var serveCmd = &cobra.Command{
 				},
 			})
 			if err != nil {
-				logger.Error().Err(err).Msg("Year query failed")
+				slog.ErrorContext(ctx, "Year query failed", slog.Any("err", err))
 				http.Error(w, "Year query failed", http.StatusInternalServerError)
 			}
 			w.Header().Set("Content-type", "application/json")
@@ -66,9 +69,10 @@ var serveCmd = &cobra.Command{
 		server := http.Server{}
 		server.Handler = router
 		server.Addr = httpAddr
-		logger.Info().Msgf("Listening on %s", httpAddr)
+		slog.InfoContext(ctx, "Listening", slog.String("httpAddr", httpAddr))
 		if err := server.ListenAndServe(); err != nil {
-			logger.Fatal().Err(err).Msg("Failed to start server")
+			slog.ErrorContext(ctx, "Failed to start server", slog.Any("err", err))
+			os.Exit(1)
 		}
 	},
 }

@@ -21,8 +21,7 @@ var imageLine = regexp.MustCompile(`!\[(.*)\]\(([^)]+)\)`)
 var importTextBundleCmd = &cobra.Command{
 	Use: "import-textbundle FILE",
 	RunE: func(cmd *cobra.Command, args []string) error {
-		ctx := logger.WithContext(cmd.Context())
-		ctx = findParentTrace(ctx)
+		ctx := findParentTrace(cmd.Context())
 		ctx, span := tracer.Start(ctx, "import-textbundle")
 		defer span.End()
 		if len(args) < 1 {

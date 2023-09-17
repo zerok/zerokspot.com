@@ -10,8 +10,7 @@ var outputFile string
 var buildMappingCmd = &cobra.Command{
 	Use: "build-mapping",
 	RunE: func(cmd *cobra.Command, args []string) error {
-		ctx := logger.WithContext(cmd.Context())
-		ctx = findParentTrace(ctx)
+		ctx := findParentTrace(cmd.Context())
 		ctx, span := tracer.Start(ctx, "build-mapping")
 		defer span.End()
 		mapping, err := contentmapping.BuildMapping("public")

@@ -23,22 +23,23 @@ func validateSearchObject(obj algoliasearch.Object) error {
 var setItemCmd = &cobra.Command{
 	Use:   "set-item",
 	Short: "Update a single object based on a JSON file",
-	Run: func(c *cobra.Command, args []string) {
+	RunE: func(c *cobra.Command, args []string) error {
 		var obj algoliasearch.Object
 		fp, err := os.Open(args[0])
 		if err != nil {
-			logger.Fatal().Err(err).Msgf("Failed to open %s", args[0])
+			return fmt.Errorf("failed to open %s: %w", args[0], err)
 		}
 		defer fp.Close()
 		if err := json.NewDecoder(fp).Decode(&obj); err != nil {
-			logger.Fatal().Err(err).Msgf("Failed to decode %s", args[0])
+			return fmt.Errorf("failed to decode %s: %w", args[0], err)
 		}
 		if err := validateSearchObject(obj); err != nil {
-			logger.Fatal().Err(err).Msg("JSON not valid.")
+			return fmt.Errorf("JSON not valid: %w", err)
 		}
 		if _, err := index.UpdateObjects([]algoliasearch.Object{obj}); err != nil {
-			logger.Fatal().Err(err).Msg("Failed to update object")
+			return fmt.Errorf("failed to update object: %w", err)
 		}
+		return nil
 	},
 }
 

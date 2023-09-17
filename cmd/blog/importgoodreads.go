@@ -29,8 +29,7 @@ func generateImportGoodReadsCSV() *cobra.Command {
 	var importGoodReadsCSVCmd = &cobra.Command{
 		Use: "import-goodreads-csv",
 		RunE: func(cmd *cobra.Command, args []string) error {
-			ctx := logger.WithContext(cmd.Context())
-			ctx = findParentTrace(ctx)
+			ctx := findParentTrace(cmd.Context())
 			ctx, span := tracer.Start(ctx, "import-goodreads-csv")
 			defer span.End()
 			if len(args) < 1 {

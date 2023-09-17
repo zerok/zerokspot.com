@@ -20,8 +20,7 @@ var baseURL string
 var changesCmd = &cobra.Command{
 	Use: "changes",
 	RunE: func(cmd *cobra.Command, args []string) error {
-		ctx := logger.WithContext(cmd.Context())
-		ctx = findParentTrace(ctx)
+		ctx := findParentTrace(cmd.Context())
 		ctx, span := tracer.Start(ctx, "cmd:changes")
 		defer span.End()
 		var out bytes.Buffer

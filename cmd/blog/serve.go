@@ -1,7 +1,8 @@
 package main
 
 import (
-	"context"
+	"fmt"
+	"log/slog"
 	"net/http"
 	"os"
 
@@ -17,8 +18,8 @@ func generateServeCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use: "serve",
 		RunE: func(cmd *cobra.Command, args []string) error {
+			ctx := cmd.Context()
 			apiKey := os.Getenv("ZS_API_KEY")
-			ctx := logger.WithContext(context.Background())
 			profiles := generatePhotoProfiles()
 			r := resizer.NewMagickResizer(dataFolder, profiles)
 			srv, err := server.NewServer(ctx,
@@ -34,7 +35,7 @@ func generateServeCmd() *cobra.Command {
 			hs := http.Server{}
 			hs.Addr = addr
 			hs.Handler = srv
-			logger.Info().Msgf("Starting server on %s", addr)
+			slog.InfoContext(ctx, fmt.Sprintf("Starting server on %s", addr))
 			return hs.ListenAndServe()
 		},
 	}

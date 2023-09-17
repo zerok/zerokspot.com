@@ -5,13 +5,13 @@ import (
 	"context"
 	"fmt"
 	"io"
+	"log/slog"
 	"os"
 	"path/filepath"
 	"regexp"
 	"strings"
 	"time"
 
-	"github.com/rs/zerolog"
 	"github.com/zerok/textbundle-go"
 	"gopkg.in/yaml.v2"
 )
@@ -78,7 +78,6 @@ func (i *Importer) processBody(text string, now time.Time) string {
 }
 
 func (i *Importer) Import(ctx context.Context, path string, slug string) error {
-	logger := zerolog.Ctx(ctx)
 	var now time.Time
 	defaultTime := time.Time{}
 	if i.Now == defaultTime {
@@ -94,7 +93,7 @@ func (i *Importer) Import(ctx context.Context, path string, slug string) error {
 		return err
 	}
 	// Create markdown file
-	logger.Info().Msgf("Setting date of new post to %s", now.Format(time.RFC3339))
+	slog.InfoContext(ctx, fmt.Sprintf("Setting date of new post to %s", now.Format(time.RFC3339)))
 	folder := filepath.Join(i.RepoPath, fmt.Sprintf("content/weblog/%s", now.Format("2006")))
 	if slug == "" {
 		elems := strings.SplitN(filepath.Base(path), ".", 2)
@@ -105,7 +104,7 @@ func (i *Importer) Import(ctx context.Context, path string, slug string) error {
 	}
 	filename := fmt.Sprintf("%s.md", slug)
 	fpath := filepath.Join(folder, filename)
-	logger.Info().Msgf("Creating %s\n", fpath)
+	slog.InfoContext(ctx, fmt.Sprintf("Creating %s", fpath))
 	if err := os.MkdirAll(folder, 0700); err != nil {
 		return fmt.Errorf("could not create %s: %w", folder, err)
 	}
@@ -122,7 +121,7 @@ func (i *Importer) Import(ctx context.Context, path string, slug string) error {
 	// Create asset files
 	for _, a := range r.Assets {
 		fpath = filepath.Join(i.RepoPath, fmt.Sprintf("static/media/%s/%s", now.Format("2006"), a.Name))
-		logger.Info().Msgf("Creating %s\n", fpath)
+		slog.InfoContext(ctx, fmt.Sprintf("Creating %s", fpath))
 		if err := os.MkdirAll(filepath.Dir(fpath), 0755); err != nil {
 			return fmt.Errorf("Failed to create media folder: %w", err)
 		}

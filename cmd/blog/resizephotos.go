@@ -31,8 +31,7 @@ func generateResizePhotosCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use: "resize-photos",
 		RunE: func(cmd *cobra.Command, args []string) error {
-			ctx := logger.WithContext(cmd.Context())
-			ctx = findParentTrace(ctx)
+			ctx := findParentTrace(cmd.Context())
 			ctx, span := tracer.Start(ctx, "resize-photos")
 			defer span.End()
 			profiles := generatePhotoProfiles()
