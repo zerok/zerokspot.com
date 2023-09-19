@@ -8,6 +8,7 @@ import (
 
 	page "github.com/gohugoio/hugo/resources/page"
 	"github.com/spf13/cobra"
+	"go.opentelemetry.io/otel/codes"
 	"gopkg.in/yaml.v2"
 )
 
@@ -43,11 +44,13 @@ var buildArchiveCmd = &cobra.Command{
 		defer span.End()
 		wd, err := os.Getwd()
 		if err != nil {
+			span.SetStatus(codes.Error, "failed to getwd")
 			return err
 		}
 
 		sites, err := buildSites()
 		if err != nil {
+			span.SetStatus(codes.Error, "failed to build sites")
 			return err
 		}
 
@@ -73,11 +76,13 @@ var buildArchiveCmd = &cobra.Command{
 		}
 		rootFolder := filepath.Join(wd, "content", "archive")
 		if err := os.RemoveAll(rootFolder); err != nil {
+			span.SetStatus(codes.Error, "failed to clean archive folder")
 			return err
 		}
 		for year, pages := range years {
 			f := filepath.Join(rootFolder, year, "_index.md")
 			if err := os.MkdirAll(filepath.Join(rootFolder, year), 0700); err != nil {
+				span.SetStatus(codes.Error, "failed to create yearly folder")
 				return err
 			}
 			paths := make([]string, 0, len(pages))
@@ -105,6 +110,7 @@ var buildArchiveCmd = &cobra.Command{
 				NumNotes:  numNotes,
 				URL:       fmt.Sprintf("archive/%s/", year),
 			}); err != nil {
+				span.SetStatus(codes.Error, "failed to create yearly file")
 				return err
 			}
 		}
@@ -140,6 +146,7 @@ var buildArchiveCmd = &cobra.Command{
 				NumNotes:  numNotes,
 				URL:       fmt.Sprintf("archive/%s/%s/", year, month),
 			}); err != nil {
+				span.SetStatus(codes.Error, "failed to create monthly file")
 				return err
 			}
 		}

@@ -54,7 +54,7 @@ func LoadFromURL(u string) (ContentMapping, error) {
 }
 
 func SaveToFile(path string, mapping ContentMapping) error {
-	fp, err := os.OpenFile(path, os.O_CREATE|os.O_TRUNC|os.O_WRONLY, 0600)
+	fp, err := os.OpenFile(path, os.O_CREATE|os.O_TRUNC|os.O_WRONLY, 0644)
 	if err != nil {
 		return err
 	}

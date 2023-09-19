@@ -54,6 +54,11 @@ var changesCmd = &cobra.Command{
 			}
 		}
 
+		outputFile, err := cmd.Flags().GetString("output")
+		if err != nil {
+			return fmt.Errorf("failed to read output flag as string: %w", err)
+		}
+
 		if outputFile == "-" {
 			io.Copy(os.Stdout, &out)
 		} else {
@@ -75,7 +80,7 @@ func init() {
 	rootCmd.AddCommand(changesCmd)
 	changesCmd.Flags().StringVar(&sinceRev, "since-rev", "", "Git rev of the previous state")
 	changesCmd.Flags().StringVar(&baseURL, "base-url", "https://zerokspot.com", "Base URL")
-	changesCmd.Flags().StringVar(&outputFile, "output", "-", "Output file")
+	changesCmd.Flags().String("output", "-", "Output file")
 	changesCmd.Flags().BoolVar(&showAll, "all", false, "List all changes")
 	changesCmd.Flags().BoolVar(&asURL, "url", false, "List all changes as URLs")
 }
