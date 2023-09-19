@@ -10,7 +10,6 @@ import (
 	"time"
 
 	"github.com/spf13/cobra"
-	"gitlab.com/zerok/zerokspot.com/cmd/blogsearch/cmd"
 	"gitlab.com/zerok/zerokspot.com/pkg/otelhandler"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace"
@@ -46,7 +45,6 @@ var rootCmd = &cobra.Command{
 func init() {
 	rootCmd.SilenceUsage = true
 	rootCmd.PersistentFlags().StringVar(&localZoneName, "tz", "Europe/Vienna", "Timezone to be used for data-relevant processing")
-	rootCmd.AddCommand(cmd.RootCmd)
 	rootCmd.AddCommand(generateServeCmd())
 	rootCmd.AddCommand(generateResizePhotosCmd())
 }
