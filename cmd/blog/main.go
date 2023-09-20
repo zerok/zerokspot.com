@@ -10,7 +10,6 @@ import (
 	"time"
 
 	"github.com/spf13/cobra"
-	"gitlab.com/zerok/zerokspot.com/cmd/blogsearch/cmd"
 	"gitlab.com/zerok/zerokspot.com/pkg/otelhandler"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace"
@@ -46,7 +45,6 @@ var rootCmd = &cobra.Command{
 func init() {
 	rootCmd.SilenceUsage = true
 	rootCmd.PersistentFlags().StringVar(&localZoneName, "tz", "Europe/Vienna", "Timezone to be used for data-relevant processing")
-	rootCmd.AddCommand(cmd.RootCmd)
 	rootCmd.AddCommand(generateServeCmd())
 	rootCmd.AddCommand(generateResizePhotosCmd())
 }
@@ -130,22 +128,22 @@ func main() {
 	defer cancel()
 
 	tp := initOtel(ctx)
-	defer func() {
+	shutDown := func() {
 		if err := tp.ForceFlush(context.Background()); err != nil {
 			slog.ErrorContext(ctx, "Failed to flush tracer provider", slog.Any("err", err))
 		}
-	}()
-	defer func() {
 		slog.InfoContext(ctx, "Shutting down tracer provider")
 		if err := tp.Shutdown(context.Background()); err != nil {
 			slog.ErrorContext(ctx, "Failed to shut down tracer provider", slog.Any("err", err))
 		}
-	}()
+	}
 
 	if err := rootCmd.ExecuteContext(ctx); err != nil {
 		slog.ErrorContext(ctx, err.Error())
+		shutDown()
 		os.Exit(1)
 	}
+	shutDown()
 }
 
 func requireStringFlags(cmd *cobra.Command, flags ...string) error {

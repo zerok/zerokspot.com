@@ -5,7 +5,7 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"log/slog"
 	"net/http"
 	"os"
@@ -76,14 +76,18 @@ func main() {
 
 	tracer = tp.Tracer("zerokspot-ci")
 	ctx, span := tracer.Start(ctx, "main")
-	slog.InfoContext(ctx, fmt.Sprintf("TraceID: %s", span.SpanContext().TraceID().String()))
 	defer span.End()
+	slog.InfoContext(ctx, fmt.Sprintf("TraceID: %s", span.SpanContext().TraceID().String()))
 	span.SetAttributes(attribute.Bool("publish", publish))
 
 	client, err := dagger.Connect(ctx, dagger.WithLogOutput(os.Stderr))
 	if err != nil {
 		span.SetStatus(codes.Error, "Failed to setup Dagger")
 		slog.ErrorContext(ctx, "Failed to setup Dagger", slog.Any("err", err))
+		span.End()
+		if err := tp.Shutdown(context.Background()); err != nil {
+			slog.ErrorContext(ctx, "Failed to shut tracer provider down", slog.Any("err", err))
+		}
 		os.Exit(1)
 	}
 	defer client.Close()
@@ -92,15 +96,22 @@ func main() {
 	if err != nil {
 		span.SetStatus(codes.Error, "Failed to load versions")
 		slog.ErrorContext(ctx, "Failed to load versions", slog.Any("err", err))
+		span.End()
+		if err := tp.Shutdown(context.Background()); err != nil {
+			slog.ErrorContext(ctx, "Failed to shut tracer provider down", slog.Any("err", err))
+		}
+		client.Close()
 		os.Exit(1)
 	}
 
 	if err := build(ctx, client, versions, publish); err != nil {
 		span.SetStatus(codes.Error, "Failed to setup build")
 		slog.ErrorContext(ctx, "Failed to build", slog.Any("err", err))
-		// TODO: This will prevent the trace-provider from shutting down
-		// properly. The whole blog should be moved into a function that does
-		// not panic.
+		span.End()
+		if err := tp.Shutdown(context.Background()); err != nil {
+			slog.ErrorContext(ctx, "Failed to shut tracer provider down", slog.Any("err", err))
+		}
+		client.Close()
 		os.Exit(1)
 	}
 	span.SetStatus(codes.Ok, "")
@@ -118,7 +129,7 @@ func getPublicRev(ctx context.Context) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	data, err := ioutil.ReadAll(resp.Body)
+	data, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return "", err
 	}
@@ -163,7 +174,9 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		return err
 	}
 
-	rootDirectory := client.Host().Directory(".")
+	rootDirectory := client.Host().Directory(".", dagger.HostDirectoryOpts{
+		Exclude: []string{"public", "bin"},
+	})
 
 	goCacheVolume := client.CacheVolume("gocache")
 
@@ -171,6 +184,13 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 	var hugoContainer *dagger.Container
 	var blogBin *dagger.File
 	var gitRev string
+
+	hugoContainer = client.Container().From(versions.HugoImage()).
+		WithEntrypoint([]string{}).
+		WithExec([]string{"apt-get", "update"}).
+		WithExec([]string{"apt-get", "install", "-y", "curl"}).
+		WithExec([]string{"curl", "-L", "-o", "/tmp/otel-cli.deb", "https://github.com/equinix-labs/otel-cli/releases/download/v0.4.0/otel-cli_0.4.0_linux_amd64.deb"}).
+		WithExec([]string{"dpkg", "-i", "/tmp/otel-cli.deb"})
 
 	// Build a binary that can be used on a Ubuntu server
 	if err := func(ctx context.Context) error {
@@ -204,20 +224,21 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 	if err := func(ctx context.Context) error {
 		ctx, span := tracer.Start(ctx, "buildWebsite")
 		defer span.End()
-		hugoContainer = withOtelEnv(ctx, client, client.Container().From(versions.HugoImage())).
-			WithEntrypoint([]string{}).
+		hugoContainer = withOtelEnv(ctx, client, hugoContainer).
 			WithSecretVariable("FEEDBIN_USER", feedbinUsername).
 			WithSecretVariable("FEEDBIN_PASSWORD", feedbinPassword).
 			WithMountedDirectory("/src", rootDirectory).
 			WithWorkdir("/src").
 			WithMountedFile("/usr/local/bin/blog", blogBin).
 			WithExec([]string{"blog", "build-archive"}).
-			WithExec([]string{"hugo"}).
+			// This will *not* fail if hugo fails but that should be ok for now
+			// as build-archive already does lots of content checking
+			WithExec([]string{"/bin/sh", "-c", "unset OTEL_TRACES_EXPORTER && unset OTEL_EXPORTER_OTLP_TRACES_ENDPOINT && unset OTEL_EXPORTER_OTLP_TRACES_PROTOCOL && otel-cli exec --timeout 60s --verbose --name hugo --service zerokspot-cli hugo"}).
 			WithExec([]string{"blog", "build-graph"}).
 			WithExec([]string{"blog", "blogroll", "--output", "data/blogroll.json"}).
-			WithExec([]string{"hugo"}).
+			WithExec([]string{"/bin/sh", "-c", "unset OTEL_TRACES_EXPORTER && unset OTEL_EXPORTER_OTLP_TRACES_ENDPOINT && unset OTEL_EXPORTER_OTLP_TRACES_PROTOCOL && otel-cli exec --timeout 60s --verbose --name hugo --service zerokspot-cli hugo"}).
 			WithExec([]string{"blog", "books", "gen-opml"}).
-			WithExec([]string{"blog", "search", "build-mapping"}).
+			WithExec([]string{"blog", "build-mapping"}).
 			WithExec([]string{"git", "rev-parse", "HEAD"})
 
 		gitRev, err = hugoContainer.Stdout(ctx)
@@ -299,8 +320,7 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		ctx, span := tracer.Start(ctx, "sendWebmentions")
 		defer span.End()
 		slog.InfoContext(ctx, "Generating webmentions")
-		mentionContainer := withOtelEnv(ctx, client, client.Container().From(webmentiondImage)).
-			WithEntrypoint([]string{})
+		mentionContainer := withOtelEnv(ctx, client, client.Container().From(webmentiondImage))
 		for _, change := range changes {
 			logger := slog.With(slog.String("mentionFrom", change))
 			logger.InfoContext(ctx, "Mentioning")
