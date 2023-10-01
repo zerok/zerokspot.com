@@ -320,7 +320,7 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		ctx, span := tracer.Start(ctx, "sendWebmentions")
 		defer span.End()
 		slog.InfoContext(ctx, "Generating webmentions")
-		mentionContainer := withOtelEnv(ctx, client, client.Container().From(webmentiondImage))
+		mentionContainer := withOtelEnv(ctx, client, client.Container().From(webmentiondImage)).WithEntrypoint(nil)
 		for _, change := range changes {
 			logger := slog.With(slog.String("mentionFrom", change))
 			logger.InfoContext(ctx, "Mentioning")
