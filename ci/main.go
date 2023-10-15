@@ -25,9 +25,6 @@ import (
 	"go.opentelemetry.io/otel/trace"
 )
 
-const alpineImage = "alpine:3.17"
-const webmentiondImage = "zerok/webmentiond:latest"
-
 var tracer trace.Tracer
 
 func main() {
@@ -281,7 +278,7 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		ctx, span := tracer.Start(ctx, "rsync")
 		defer span.End()
 		// Prepare an rsync container which we can then use to upload everything:
-		rsyncContainer := withOtelEnv(ctx, client, client.Container().From(alpineImage)).
+		rsyncContainer := withOtelEnv(ctx, client, client.Container().From(versions.AlpineImage())).
 			WithExec([]string{"apk", "add", "rsync", "openssh-client-default"}).
 			WithExec([]string{"mkdir", "/root/.ssh"}).
 			WithExec([]string{"chmod", "0700", "/root/.ssh"}).
@@ -320,7 +317,7 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		ctx, span := tracer.Start(ctx, "sendWebmentions")
 		defer span.End()
 		slog.InfoContext(ctx, "Generating webmentions")
-		mentionContainer := withOtelEnv(ctx, client, client.Container().From(webmentiondImage)).WithEntrypoint(nil)
+		mentionContainer := withOtelEnv(ctx, client, client.Container().From(versions.WebmentiondImage())).WithEntrypoint(nil)
 		for _, change := range changes {
 			logger := slog.With(slog.String("mentionFrom", change))
 			logger.InfoContext(ctx, "Mentioning")
