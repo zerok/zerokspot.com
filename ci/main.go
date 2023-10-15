@@ -39,7 +39,7 @@ func main() {
 	var exporter sdktrace.SpanExporter
 	var err error
 
-	if os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT") != "" {
+	if os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT") != "" && os.Getenv("OTEL_EXPORTER_OTLP_HEADERS") != "" {
 		otlpClient := otlptracehttp.NewClient()
 		exporter, err = otlptrace.New(ctx, otlpClient)
 	} else {

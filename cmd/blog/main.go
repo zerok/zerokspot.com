@@ -82,7 +82,7 @@ func initOtel(ctx context.Context) *sdktrace.TracerProvider {
 		slog.String("OTEL_EXPORTER_OTLP_PROTOCOL", os.Getenv("OTEL_EXPORTER_OTLP_PROTOCOL")),
 	)
 
-	if os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT") != "" {
+	if os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT") != "" && os.Getenv("OTEL_EXPORTER_OTLP_HEADERS") != "" {
 		os.Setenv("OTEL_EXPORTER_OTLP_TRACES_ENDPOINT", os.Getenv("OTEL_EXPORTER_OTLP_ENDPOINT")+"/v1/traces")
 		os.Setenv("OTEL_EXPORTER_OTLP_TRACES_PROTOCOL", os.Getenv("OTEL_EXPORTER_OTLP_PROTOCOL"))
 		os.Setenv("OTEL_EXPORTER_OTLP_TRACES_HEADERS", os.Getenv("OTEL_EXPORTER_OTLP_HEADERS"))
