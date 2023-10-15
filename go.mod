@@ -2,18 +2,15 @@ module gitlab.com/zerok/zerokspot.com
 
 require (
 	dagger.io/dagger v0.8.2
-	github.com/algolia/algoliasearch-client-go v0.0.0-20181011103956-52eecbef59a9
 	github.com/go-chi/chi v3.3.3+incompatible
-	github.com/go-chi/cors v1.0.0
 	github.com/gohugoio/hugo v0.111.3
 	github.com/gomarkdown/markdown v0.0.0-20190912180731-281270bc6d83
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.9.0
-	github.com/pkg/errors v0.9.1
 	github.com/spf13/afero v1.9.3
 	github.com/spf13/cobra v1.6.1
 	github.com/stretchr/testify v1.8.2
-	github.com/ulikunitz/xz v0.5.8
+	github.com/ulikunitz/xz v0.5.11
 	github.com/zerok/textbundle-go v0.0.0-20200521090826-d11aedee74ff
 	go.opentelemetry.io/otel v1.11.2
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.11.2
