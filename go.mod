@@ -6,7 +6,7 @@ require (
 	github.com/gohugoio/hugo v0.111.3
 	github.com/gomarkdown/markdown v0.0.0-20190912180731-281270bc6d83
 	github.com/google/go-github/v52 v52.0.0
-	github.com/gosimple/slug v1.9.0
+	github.com/gosimple/slug v1.13.1
 	github.com/spf13/afero v1.10.0
 	github.com/spf13/cobra v1.7.0
 	github.com/stretchr/testify v1.8.4
@@ -66,6 +66,7 @@ require (
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/go-cmp v0.5.9 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
+	github.com/gosimple/unidecode v1.0.1 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.16.0 // indirect
 	github.com/hairyhenderson/go-codeowners v0.2.3-0.20201026200250-cdc7c0759690 // indirect
 	github.com/hashicorp/golang-lru/v2 v2.0.1 // indirect
@@ -89,7 +90,6 @@ require (
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.6 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/rainycape/unidecode v0.0.0-20150907023854-cb7f23ec59be // indirect
 	github.com/rogpeppe/go-internal v1.10.0 // indirect
 	github.com/rwcarlsen/goexif v0.0.0-20190401172101-9e8deecbddbd // indirect
 	github.com/sanity-io/litter v1.5.5 // indirect
