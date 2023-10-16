@@ -8,7 +8,7 @@ require (
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.9.0
 	github.com/spf13/afero v1.10.0
-	github.com/spf13/cobra v1.6.1
+	github.com/spf13/cobra v1.7.0
 	github.com/stretchr/testify v1.8.4
 	github.com/ulikunitz/xz v0.5.11
 	github.com/zerok/textbundle-go v0.0.0-20200521090826-d11aedee74ff
@@ -70,7 +70,7 @@ require (
 	github.com/hairyhenderson/go-codeowners v0.2.3-0.20201026200250-cdc7c0759690 // indirect
 	github.com/hashicorp/golang-lru/v2 v2.0.1 // indirect
 	github.com/iancoleman/strcase v0.3.0 // indirect
-	github.com/inconshreveable/mousetrap v1.0.1 // indirect
+	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/invopop/yaml v0.1.0 // indirect
 	github.com/jdkato/prose v1.2.1 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
