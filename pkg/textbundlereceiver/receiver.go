@@ -12,7 +12,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/go-chi/chi"
+	"github.com/go-chi/chi/v5"
 	"github.com/google/go-github/v52/github"
 	slugify "github.com/gosimple/slug"
 	"gitlab.com/zerok/zerokspot.com/pkg/textbundleimporter"

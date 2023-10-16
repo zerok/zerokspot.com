@@ -2,7 +2,7 @@ module gitlab.com/zerok/zerokspot.com
 
 require (
 	dagger.io/dagger v0.8.2
-	github.com/go-chi/chi v3.3.3+incompatible
+	github.com/go-chi/chi/v5 v5.0.10
 	github.com/gohugoio/hugo v0.111.3
 	github.com/gomarkdown/markdown v0.0.0-20190912180731-281270bc6d83
 	github.com/google/go-github/v52 v52.0.0

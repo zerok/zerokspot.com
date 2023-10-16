@@ -11,7 +11,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/go-chi/chi"
+	"github.com/go-chi/chi/v5"
 	"github.com/gohugoio/hugo/parser/pageparser"
 	"github.com/google/go-github/v52/github"
 	"golang.org/x/oauth2"

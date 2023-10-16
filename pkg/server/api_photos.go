@@ -10,7 +10,7 @@ import (
 
 	"log/slog"
 
-	"github.com/go-chi/chi"
+	"github.com/go-chi/chi/v5"
 )
 
 func (srv *Server) handleUploadPhoto(w http.ResponseWriter, r *http.Request) {
