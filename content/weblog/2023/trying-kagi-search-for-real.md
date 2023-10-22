@@ -5,6 +5,8 @@ tags:
 - kagi
 - search
 title: Trying Kagi search for real
+incoming:
+- url: https://chaos.social/@zerok/111277902176870015
 ---
 
 After hearing about [Kagi](https://kagi.com) from various folks in my Mastodon timeline I thought I should give it a try! Kagi is search engine that launched with a public beta in 2022 and has a completely different business model from the likes of Google or DuckDuckGo. While most of its competition is financed through advertising, Kagi is funded through subscriptions. Basically, you pick a plan that limits (or doesn't) how many searches you can do each month, and pay accordingly. The free tier is a total of 100 queries (again, not per month but in total), followed by 300 search requests per month for $5 and unlimited searches for $10.
