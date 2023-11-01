@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/gohugoio/hugo/config"
+	"github.com/gohugoio/hugo/config/allconfig"
 	hugodeps "github.com/gohugoio/hugo/deps"
 	hugofs "github.com/gohugoio/hugo/hugofs"
 	"github.com/gohugoio/hugo/hugolib"
@@ -19,18 +20,17 @@ func buildSites() (*hugolib.HugoSites, error) {
 		return nil, err
 	}
 	fs := afero.NewOsFs()
-	c := config.New()
-	c.Set("publishDir", "./output")
-	c.Set("workingDir", wd)
+	c := config.BaseConfig{
+		PublishDir: "./output",
+		WorkingDir: wd,
+	}
 	hfs := hugofs.NewFrom(fs, c)
 	dcfg := &hugodeps.DepsCfg{
 		Fs: hfs,
 	}
-	dcfg.Cfg, _, err = hugolib.LoadConfig(hugolib.ConfigSourceDescriptor{
-		Fs:         fs,
-		Filename:   "config.toml",
-		Path:       wd,
-		WorkingDir: wd,
+	dcfg.Configs, err = allconfig.LoadConfig(allconfig.ConfigSourceDescriptor{
+		Fs:       fs,
+		Filename: "config.toml",
 	})
 	if err != nil {
 		return nil, err
