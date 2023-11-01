@@ -45,10 +45,10 @@ func (vs *Versions) AlpineImage() string {
 	return fmt.Sprintf("alpine:%s", vs.images["alpine"])
 }
 
-func (vs *Versions) WebmentiondImage() string {
-	return fmt.Sprintf("zerok/webmentiond:%s", vs.images["zerok/webmentiond"])
+func (vs *Versions) UbuntuImage() string {
+	return fmt.Sprintf("ubuntu:%s", vs.images["ubuntu"])
 }
 
-func (vs *Versions) HugoImage() string {
-	return fmt.Sprintf("klakegg/hugo:%s", vs.images["klakegg/hugo"])
+func (vs *Versions) WebmentiondImage() string {
+	return fmt.Sprintf("zerok/webmentiond:%s", vs.images["zerok/webmentiond"])
 }

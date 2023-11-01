@@ -182,12 +182,26 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 	var blogBin *dagger.File
 	var gitRev string
 
-	hugoContainer = client.Container().From(versions.HugoImage()).
-		WithEntrypoint([]string{}).
+	versionOutput, err := client.Container().From(versions.GoImage()).
+		WithWorkdir("/src").
+		WithMountedDirectory("/src", rootDirectory).
+		WithExec([]string{"bash", "-c", "go list -m github.com/gohugoio/hugo | cut -d ' ' -f 2"}).
+		Stdout(ctx)
+	if err != nil {
+		return err
+	}
+	hugoVersion := strings.TrimSpace(strings.TrimPrefix(versionOutput, "v"))
+
+	// Let's build a hugo container by taking a base container and then just
+	// install Hugo into it:
+	hugoContainer = client.Container().From(versions.UbuntuImage()).
+		WithEnvVariable("DEBIAN_FRONTEND", "noninteractive").
 		WithExec([]string{"apt-get", "update"}).
-		WithExec([]string{"apt-get", "install", "-y", "curl"}).
+		WithExec([]string{"apt-get", "install", "-y", "curl", "tzdata", "git"}).
 		WithExec([]string{"curl", "-L", "-o", "/tmp/otel-cli.deb", "https://github.com/equinix-labs/otel-cli/releases/download/v0.4.0/otel-cli_0.4.0_linux_amd64.deb"}).
-		WithExec([]string{"dpkg", "-i", "/tmp/otel-cli.deb"})
+		WithExec([]string{"dpkg", "-i", "/tmp/otel-cli.deb"}).
+		WithExec([]string{"curl", "-L", "-o", "/tmp/hugo.deb", fmt.Sprintf("https://github.com/gohugoio/hugo/releases/download/v%s/hugo_extended_%s_linux-amd64.deb", hugoVersion, hugoVersion)}).
+		WithExec([]string{"dpkg", "-i", "/tmp/hugo.deb"})
 
 	// Build a binary that can be used on a Ubuntu server
 	if err := func(ctx context.Context) error {
@@ -249,6 +263,16 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		return err
 	}
 
+	//
+	// If we don't plan to publish anything, then we're done here
+	if !publish {
+		if _, err := hugoContainer.Directory("/src/public").Export(ctx, "./output"); err != nil {
+			span.SetStatus(codes.Error, "Failed to build website")
+			return err
+		}
+		return nil
+	}
+
 	hugoContainer = withOtelEnv(ctx, client, hugoContainer).
 		WithExec([]string{"blog", "changes", "--since-rev", publicRev, "--url", "--output", "public/.changes.txt"}).
 		WithNewFile("/src/public/.gitrev", dagger.ContainerWithNewFileOpts{
@@ -263,15 +287,6 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 	if _, err := hugoContainer.File("/src/public/.changes.txt").Export(ctx, "./public/.changes.txt"); err != nil {
 		span.SetStatus(codes.Error, "Failed to export changes.txt")
 		return err
-	}
-
-	// If we don't plan to publish anything, then we're done here
-	if !publish {
-		if _, err := hugoContainer.Sync(ctx); err != nil {
-			span.SetStatus(codes.Error, "Failed to build website")
-			return err
-		}
-		return nil
 	}
 
 	if err := func(ctx context.Context) error {
