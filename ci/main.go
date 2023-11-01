@@ -263,6 +263,16 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		return err
 	}
 
+	//
+	// If we don't plan to publish anything, then we're done here
+	if !publish {
+		if _, err := hugoContainer.Directory("/src/public").Export(ctx, "./output"); err != nil {
+			span.SetStatus(codes.Error, "Failed to build website")
+			return err
+		}
+		return nil
+	}
+
 	hugoContainer = withOtelEnv(ctx, client, hugoContainer).
 		WithExec([]string{"blog", "changes", "--since-rev", publicRev, "--url", "--output", "public/.changes.txt"}).
 		WithNewFile("/src/public/.gitrev", dagger.ContainerWithNewFileOpts{
@@ -277,15 +287,6 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 	if _, err := hugoContainer.File("/src/public/.changes.txt").Export(ctx, "./public/.changes.txt"); err != nil {
 		span.SetStatus(codes.Error, "Failed to export changes.txt")
 		return err
-	}
-
-	// If we don't plan to publish anything, then we're done here
-	if !publish {
-		if _, err := hugoContainer.Sync(ctx); err != nil {
-			span.SetStatus(codes.Error, "Failed to build website")
-			return err
-		}
-		return nil
 	}
 
 	if err := func(ctx context.Context) error {
