@@ -8,7 +8,7 @@ require (
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.13.1
 	github.com/spf13/afero v1.10.0
-	github.com/spf13/cobra v1.7.0
+	github.com/spf13/cobra v1.8.0
 	github.com/stretchr/testify v1.8.4
 	github.com/ulikunitz/xz v0.5.11
 	github.com/zerok/textbundle-go v0.0.0-20200521090826-d11aedee74ff
