@@ -3,7 +3,7 @@ module gitlab.com/zerok/zerokspot.com
 require (
 	dagger.io/dagger v0.9.1
 	github.com/go-chi/chi/v5 v5.0.10
-	github.com/gohugoio/hugo v0.120.2
+	github.com/gohugoio/hugo v0.120.3
 	github.com/gomarkdown/markdown v0.0.0-20190912180731-281270bc6d83
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.13.1
@@ -144,8 +144,8 @@ require (
 	github.com/sanity-io/litter v1.5.5 // indirect
 	github.com/spf13/cast v1.5.1 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
-	github.com/tdewolff/minify/v2 v2.20.1 // indirect
-	github.com/tdewolff/parse/v2 v2.7.1 // indirect
+	github.com/tdewolff/minify/v2 v2.20.5 // indirect
+	github.com/tdewolff/parse/v2 v2.7.3 // indirect
 	github.com/vektah/gqlparser/v2 v2.5.6 // indirect
 	github.com/yuin/goldmark v1.6.0 // indirect
 	github.com/yuin/goldmark-emoji v1.0.2 // indirect
