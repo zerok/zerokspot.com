@@ -10,7 +10,7 @@ title: Carpenter Brut live in Vienna
 
 I love listening to music (ok, only the subset that I enjoy ...) but for some reason or another I only rarely go to live concerts. Perhaps it is that I don't like the extreme volume or that people are usually crammed into tiny places with some folks just being there to actively bump into others. That being said, I've now been to two concerts in the last couple of years (I know, right?!) and very much enjoyed them!
 
-This Monday I had the chance to see [Carpenter Brut](https://www.noquarterprod.com) & [Perturbator](https://perturbator.bandcamp.com/) live in Vienna as part of their joint "Leather Sacraments" tour. It was either them or going to KubeCon in Chicago 🤣 Together with [Ho99o9](https://ho99o9.com) as supporting act they managed to fill most of the [Planet.TT hall](https://planet.tt) which is part of the Gasometer event complex, and that on a Monday!
+This Monday and thanks to my partner I had the chance to see [Carpenter Brut](https://www.noquarterprod.com) & [Perturbator](https://perturbator.bandcamp.com/) live in Vienna as part of their joint "Leather Sacraments" tour. It was either them or going to KubeCon in Chicago 🤣 Together with [Ho99o9](https://ho99o9.com) as supporting act they managed to fill most of the [Planet.TT hall](https://planet.tt) which is part of the Gasometer event complex, and that on a Monday!
 
 <figure>
 <img src="https://zerokspot.com/api/photos/2023/11/08/IMG_1386.jpeg?profile=1024">
