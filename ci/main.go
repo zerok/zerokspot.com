@@ -323,12 +323,12 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		return err
 	}
 
-	if len(changes) == 0 {
-		slog.InfoContext(ctx, "No changes found. Skipping webmentions.")
-		return nil
-	}
-
 	if err := func(ctx context.Context) error {
+		if len(changes) == 0 {
+			slog.InfoContext(ctx, "No changes found. Skipping webmentions.")
+			return nil
+		}
+
 		ctx, span := tracer.Start(ctx, "sendWebmentions")
 		defer span.End()
 		slog.InfoContext(ctx, "Generating webmentions")
