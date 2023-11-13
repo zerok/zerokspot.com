@@ -349,6 +349,27 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		span.SetStatus(codes.Error, "Failed to execute webmentions")
 		return err
 	}
+
+	if err := func(ctx context.Context) error {
+		ntfyURL := os.Getenv("NTFY_URL")
+		if ntfyURL == "" {
+			return nil
+		}
+		ctx, span := tracer.Start(ctx, "sendNotification")
+		defer span.End()
+		slog.InfoContext(ctx, "Sending notification")
+		ntfyURLSecret := client.SetSecret("NTFY_URL", ntfyURL)
+		_, err := hugoContainer.
+			WithSecretVariable("NTFY_URL", ntfyURLSecret).
+			WithExec([]string{
+				"/bin/sh", "-c",
+				"curl -d 'Website updated' ${NTFY_URL}",
+			}).Sync(ctx)
+		return err
+	}(ctx); err != nil {
+		span.SetStatus(codes.Error, "Failed to send notification")
+		return err
+	}
 	return nil
 }
 
