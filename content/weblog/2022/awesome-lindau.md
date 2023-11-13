@@ -14,12 +14,13 @@ Since I’ve now been multiple times to Lindau I thought it would be time to cre
 ## Restaurants
 
 - [Bodolzer Dorfstüble](https://www.bodolzer-dorfstueble.de/)
+- [Café Augustin](https://www.altemoellersche.de/augustin/)
 - [Eil.Gut.Halle](https://eilguthalle.li)
 - [Eil.Gut.Halle](https://eilguthalle.li) (Beergarden)
+- [Heimat Lindau](https://zerokspot.com/weblog/2023/11/11/heimat-lindau/)
 - [Thai House](https://thaihouse-lindau.de/)
-- [Café Augustin](https://www.altemoellersche.de/augustin/)
-- [Zur Alten Werft](https://www.openstreetmap.org/#map=18/47.54491/9.68546) (Beergarden)
 - [Schützinger am See](https://www.schuetzinger-am-see.com/): Beach bar on the south-west side of the island.
+- [Zur Alten Werft](https://www.openstreetmap.org/#map=18/47.54491/9.68546) (Beergarden)
 
 ## Places
 
