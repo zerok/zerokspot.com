@@ -5,6 +5,8 @@ tags:
 - development
 - til
 title: Signing Git commits with your SSH key
+incoming:
+- url: https://chaos.social/@zerok/111426681483108534
 ---
 
 When someone commits code (or anything) into a Git repository, there is a simple way to identify that author: An e-mail address. The problem with this property is that it can be freely chosen by the author/committer. I could create commits with the e-mail address of any of my co-workers or Tim Cook and the system wouldn't complain. For anybody who checks the history of a file it would appear as if Apple's CEO had all of a sudden decided that writing Go was his new passion.
