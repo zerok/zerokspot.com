@@ -24,8 +24,8 @@ jobs:
       with:
         go-version: "1.21"
 
-    - run: go run ./ci
+    - run: go run ./ci pipelines pr
       if: github.ref != 'refs/heads/main'
-    - run: go run ./ci --publish
+    - run: go run ./ci pipelines main
       if: github.ref == 'refs/heads/main'
 

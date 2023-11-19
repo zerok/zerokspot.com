@@ -3,7 +3,6 @@ package main
 import (
 	"bufio"
 	"context"
-	"flag"
 	"fmt"
 	"io"
 	"log/slog"
@@ -12,9 +11,9 @@ import (
 	"strings"
 
 	"dagger.io/dagger"
+	"github.com/spf13/cobra"
 	"gitlab.com/zerok/zerokspot.com/pkg/otelhandler"
 	"go.opentelemetry.io/otel"
-	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace"
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp"
@@ -27,11 +26,11 @@ import (
 
 var tracer trace.Tracer
 
-func main() {
-	var publish bool
-	flag.BoolVar(&publish, "publish", false, "Also upload stuff")
-	flag.Parse()
+var rootCmd = &cobra.Command{}
 
+var versions *Versions
+
+func main() {
 	logger := slog.New(otelhandler.OTELHandler{Handler: slog.NewTextHandler(os.Stderr, nil)})
 	slog.SetDefault(logger)
 	ctx := context.Background()
@@ -72,46 +71,22 @@ func main() {
 	otel.SetTracerProvider(tp)
 
 	tracer = tp.Tracer("zerokspot-ci")
-	ctx, span := tracer.Start(ctx, "main")
-	defer span.End()
-	slog.InfoContext(ctx, fmt.Sprintf("TraceID: %s", span.SpanContext().TraceID().String()))
-	span.SetAttributes(attribute.Bool("publish", publish))
-
-	client, err := dagger.Connect(ctx, dagger.WithLogOutput(os.Stderr))
+	versions, err = LoadVersions(ctx)
 	if err != nil {
-		span.SetStatus(codes.Error, "Failed to setup Dagger")
-		slog.ErrorContext(ctx, "Failed to setup Dagger", slog.Any("err", err))
-		span.End()
+		slog.Error("Failed to load versions", slog.Any("error", err))
 		if err := tp.Shutdown(context.Background()); err != nil {
 			slog.ErrorContext(ctx, "Failed to shut tracer provider down", slog.Any("err", err))
 		}
-		os.Exit(1)
-	}
-	defer client.Close()
-
-	versions, err := LoadVersions(ctx)
-	if err != nil {
-		span.SetStatus(codes.Error, "Failed to load versions")
-		slog.ErrorContext(ctx, "Failed to load versions", slog.Any("err", err))
-		span.End()
-		if err := tp.Shutdown(context.Background()); err != nil {
-			slog.ErrorContext(ctx, "Failed to shut tracer provider down", slog.Any("err", err))
-		}
-		client.Close()
 		os.Exit(1)
 	}
 
-	if err := build(ctx, client, versions, publish); err != nil {
-		span.SetStatus(codes.Error, "Failed to setup build")
-		slog.ErrorContext(ctx, "Failed to build", slog.Any("err", err))
-		span.End()
+	if err := rootCmd.ExecuteContext(ctx); err != nil {
+		slog.Error("Command failed", slog.Any("error", err))
 		if err := tp.Shutdown(context.Background()); err != nil {
 			slog.ErrorContext(ctx, "Failed to shut tracer provider down", slog.Any("err", err))
 		}
-		client.Close()
 		os.Exit(1)
 	}
-	span.SetStatus(codes.Ok, "")
 }
 
 func getPublicRev(ctx context.Context) (string, error) {
@@ -167,7 +142,7 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 
 	publicRev, err := getPublicRev(ctx)
 	if err != nil {
-		span.SetStatus(codes.Error, "Failed to retrieve public rev")
+		failSpan(ctx, span, "Failed to retrieve public rev", err)
 		return err
 	}
 
@@ -175,14 +150,21 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		Exclude: []string{"public", "bin"},
 	})
 
-	goCacheVolume := client.CacheVolume("gocache")
-
-	var buildContainer *dagger.Container
-	var hugoContainer *dagger.Container
-	var blogBin *dagger.File
 	var gitRev string
 
-	versionOutput, err := client.Container().From(versions.GoImage()).
+	goContainer := getGoContainer(client)
+
+	// Prime the Go cache
+	if _, err := goContainer.
+		WithMountedFile("/src/go.mod", rootDirectory.File("go.mod")).
+		WithMountedFile("/src/go.sum", rootDirectory.File("go.sum")).
+		WithWorkdir("/src").
+		WithExec([]string{"go", "mod", "download"}).Sync(ctx); err != nil {
+		return err
+	}
+	goContainer = withOtelEnv(ctx, client, goContainer)
+
+	versionOutput, err := goContainer.
 		WithWorkdir("/src").
 		WithMountedDirectory("/src", rootDirectory).
 		WithExec([]string{"bash", "-c", "go list -m github.com/gohugoio/hugo | cut -d ' ' -f 2"}).
@@ -191,51 +173,13 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		return err
 	}
 	hugoVersion := strings.TrimSpace(strings.TrimPrefix(versionOutput, "v"))
-
-	// Let's build a hugo container by taking a base container and then just
-	// install Hugo into it:
-	hugoContainer = client.Container().From(versions.UbuntuImage()).
-		WithEnvVariable("DEBIAN_FRONTEND", "noninteractive").
-		WithExec([]string{"apt-get", "update"}).
-		WithExec([]string{"apt-get", "install", "-y", "curl", "tzdata", "git"}).
-		WithExec([]string{"curl", "-L", "-o", "/tmp/otel-cli.deb", "https://github.com/equinix-labs/otel-cli/releases/download/v0.4.0/otel-cli_0.4.0_linux_amd64.deb"}).
-		WithExec([]string{"dpkg", "-i", "/tmp/otel-cli.deb"}).
-		WithExec([]string{"curl", "-L", "-o", "/tmp/hugo.deb", fmt.Sprintf("https://github.com/gohugoio/hugo/releases/download/v%s/hugo_extended_%s_linux-amd64.deb", hugoVersion, hugoVersion)}).
-		WithExec([]string{"dpkg", "-i", "/tmp/hugo.deb"})
-
-	// Build a binary that can be used on a Ubuntu server
-	if err := func(ctx context.Context) error {
-		ctx, span := tracer.Start(ctx, "buildBlogBinary")
-		defer span.End()
-		buildContainer = withOtelEnv(ctx, client, client.Container().From(versions.GoImage())).
-			WithEnvVariable("GOOS", "linux").
-			WithEnvVariable("GOARCH", "amd64").
-			WithEnvVariable("GOCACHE", "/go/pkg/cache").
-			WithEnvVariable("CGO_ENABLED", "0").
-			WithMountedCache("/go/pkg", goCacheVolume).
-			WithMountedDirectory("/src/pkg", rootDirectory.Directory("pkg")).
-			WithMountedDirectory("/src/cmd", rootDirectory.Directory("cmd")).
-			WithMountedFile("/src/go.mod", rootDirectory.File("go.mod")).
-			WithMountedFile("/src/go.sum", rootDirectory.File("go.sum")).
-			WithExec([]string{"mkdir", "/src/bin"}).
-			WithWorkdir("/src/cmd/blog").
-			WithExec([]string{"go", "build", "-o", "../../bin/blog"})
-
-		blogBin = buildContainer.File("/src/bin/blog")
-		if _, err := buildContainer.Sync(ctx); err != nil {
-			span.SetStatus(codes.Error, "Failed build binary")
-			return err
-		}
-		return nil
-	}(ctx); err != nil {
-		span.SetStatus(codes.Error, "Failed build binary")
-		return err
-	}
+	hugoContainer := withOtelEnv(ctx, client, getHugoContainer(client, hugoVersion))
+	blogBin := getBlogBinary(client, withOtelEnv(ctx, client, goContainer))
 
 	if err := func(ctx context.Context) error {
 		ctx, span := tracer.Start(ctx, "buildWebsite")
 		defer span.End()
-		hugoContainer = withOtelEnv(ctx, client, hugoContainer).
+		hugoContainer = hugoContainer.
 			WithSecretVariable("FEEDBIN_USER", feedbinUsername).
 			WithSecretVariable("FEEDBIN_PASSWORD", feedbinPassword).
 			WithMountedDirectory("/src", rootDirectory).
@@ -254,12 +198,11 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 
 		gitRev, err = hugoContainer.Stdout(ctx)
 		if err != nil {
-			span.SetStatus(codes.Error, "Failed build website")
 			return err
 		}
 		return nil
 	}(ctx); err != nil {
-		span.SetStatus(codes.Error, "Failed build website")
+		failSpan(ctx, span, "Failed to build website", err)
 		return err
 	}
 
@@ -273,7 +216,7 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		return nil
 	}
 
-	hugoContainer = withOtelEnv(ctx, client, hugoContainer).
+	hugoContainer = hugoContainer.
 		WithExec([]string{"blog", "changes", "--since-rev", publicRev, "--url", "--output", "public/.changes.txt"}).
 		WithNewFile("/src/public/.gitrev", dagger.ContainerWithNewFileOpts{
 			Contents: gitRev,
@@ -281,11 +224,11 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		WithExec([]string{"chmod", "0755", "/src/public"})
 
 	if err := os.MkdirAll("public", 0700); err != nil {
-		span.SetStatus(codes.Error, "Failed to create public folder")
+		failSpan(ctx, span, "Failed to create public folder", err)
 		return err
 	}
 	if _, err := hugoContainer.File("/src/public/.changes.txt").Export(ctx, "./public/.changes.txt"); err != nil {
-		span.SetStatus(codes.Error, "Failed to export changes.txt")
+		failSpan(ctx, span, "Failed to export changes.txt", err)
 		return err
 	}
 
@@ -293,8 +236,7 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		ctx, span := tracer.Start(ctx, "rsync")
 		defer span.End()
 		// Prepare an rsync container which we can then use to upload everything:
-		rsyncContainer := withOtelEnv(ctx, client, client.Container().From(versions.AlpineImage())).
-			WithExec([]string{"apk", "add", "rsync", "openssh-client-default"}).
+		rsyncContainer := withOtelEnv(ctx, client, getRsyncContainer(client)).
 			WithExec([]string{"mkdir", "/root/.ssh"}).
 			WithExec([]string{"chmod", "0700", "/root/.ssh"}).
 			WithNewFile("/root/.ssh/id_rsa", dagger.ContainerWithNewFileOpts{
@@ -309,17 +251,17 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 			WithExec([]string{"ssh", "www-zerokspot@zs-web-001.nodes.h10n.me", "touch /srv/www/zerokspot.com/www/deployed"})
 
 		if _, err := rsyncContainer.Sync(ctx); err != nil {
-			span.SetStatus(codes.Error, "Failed to rsync")
 			return err
 		}
 		return nil
 	}(ctx); err != nil {
-		span.SetStatus(codes.Error, "Failed to rsync")
+		failSpan(ctx, span, "Failed to rsync", err)
 		return err
 	}
 
 	changes, err := getChanges(ctx, "./public/.changes.txt")
 	if err != nil {
+		failSpan(ctx, span, "Failed to get changes", err)
 		return err
 	}
 
@@ -338,15 +280,13 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 			logger.InfoContext(ctx, "Mentioning")
 			mentionContainer = mentionContainer.WithExec([]string{"/usr/local/bin/webmentiond", "send", change})
 			if _, err := mentionContainer.Sync(ctx); err != nil {
-				logger.ErrorContext(ctx, "Failed to execute webmentions", slog.Any("err", err))
-				span.SetStatus(codes.Error, "Failed to execute webmentions")
 				return err
 			}
 		}
 
 		return nil
 	}(ctx); err != nil {
-		span.SetStatus(codes.Error, "Failed to execute webmentions")
+		failSpan(ctx, span, "Failed to execute webmentions", err)
 		return err
 	}
 
@@ -367,7 +307,7 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 			}).Sync(ctx)
 		return err
 	}(ctx); err != nil {
-		span.SetStatus(codes.Error, "Failed to send notification")
+		failSpan(ctx, span, "Failed to send notifications", err)
 		return err
 	}
 	return nil
@@ -393,4 +333,10 @@ func getChanges(ctx context.Context, path string) ([]string, error) {
 
 	}
 	return result, nil
+}
+
+func failSpan(ctx context.Context, span trace.Span, msg string, err error) {
+	span.SetStatus(codes.Error, msg)
+	slog.ErrorContext(ctx, msg, slog.Any("err", err))
+	span.End()
 }
