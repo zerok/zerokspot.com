@@ -12,8 +12,6 @@ type Versions struct {
 }
 
 func LoadVersions(ctx context.Context) (*Versions, error) {
-	_, span := tracer.Start(ctx, "loadVersions")
-	defer span.End()
 	vs := &Versions{
 		images: make(map[string]string),
 	}

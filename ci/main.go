@@ -73,6 +73,7 @@ func main() {
 	tracer = tp.Tracer("zerokspot-ci")
 	versions, err = LoadVersions(ctx)
 	if err != nil {
+		slog.Error("Failed to load versions", slog.Any("error", err))
 		if err := tp.Shutdown(context.Background()); err != nil {
 			slog.ErrorContext(ctx, "Failed to shut tracer provider down", slog.Any("err", err))
 		}
@@ -169,7 +170,6 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		WithExec([]string{"bash", "-c", "go list -m github.com/gohugoio/hugo | cut -d ' ' -f 2"}).
 		Stdout(ctx)
 	if err != nil {
-		failSpan(ctx, span, "Failed to detect Hugo version", err)
 		return err
 	}
 	hugoVersion := strings.TrimSpace(strings.TrimPrefix(versionOutput, "v"))
