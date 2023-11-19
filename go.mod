@@ -7,6 +7,7 @@ require (
 	github.com/gomarkdown/markdown v0.0.0-20190912180731-281270bc6d83
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.13.1
+	github.com/mattn/go-mastodon v0.0.6
 	github.com/spf13/afero v1.10.0
 	github.com/spf13/cobra v1.8.0
 	github.com/stretchr/testify v1.8.4
@@ -109,6 +110,7 @@ require (
 	github.com/google/wire v0.5.0 // indirect
 	github.com/googleapis/enterprise-certificate-proxy v0.2.5 // indirect
 	github.com/googleapis/gax-go/v2 v2.12.0 // indirect
+	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/gosimple/unidecode v1.0.1 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.16.0 // indirect
 	github.com/hairyhenderson/go-codeowners v0.4.0 // indirect
@@ -146,6 +148,7 @@ require (
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/tdewolff/minify/v2 v2.20.5 // indirect
 	github.com/tdewolff/parse/v2 v2.7.3 // indirect
+	github.com/tomnomnom/linkheader v0.0.0-20180905144013-02ca5825eb80 // indirect
 	github.com/vektah/gqlparser/v2 v2.5.6 // indirect
 	github.com/yuin/goldmark v1.6.0 // indirect
 	github.com/yuin/goldmark-emoji v1.0.2 // indirect

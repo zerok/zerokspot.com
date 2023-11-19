@@ -1,0 +1,6 @@
+name: "Import Mastodon Links"
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - run: "go run ./ci pipelines import-mastodon-links"
