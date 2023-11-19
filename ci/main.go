@@ -71,15 +71,8 @@ func main() {
 	otel.SetTracerProvider(tp)
 
 	tracer = tp.Tracer("zerokspot-ci")
-	ctx, span := tracer.Start(ctx, "main")
-	defer span.End()
-	slog.InfoContext(ctx, fmt.Sprintf("TraceID: %s", span.SpanContext().TraceID().String()))
-
 	versions, err = LoadVersions(ctx)
 	if err != nil {
-		span.SetStatus(codes.Error, "Failed to load versions")
-		slog.ErrorContext(ctx, "Failed to load versions", slog.Any("err", err))
-		span.End()
 		if err := tp.Shutdown(context.Background()); err != nil {
 			slog.ErrorContext(ctx, "Failed to shut tracer provider down", slog.Any("err", err))
 		}
@@ -87,15 +80,12 @@ func main() {
 	}
 
 	if err := rootCmd.ExecuteContext(ctx); err != nil {
-		span.SetStatus(codes.Error, "Failed to setup build")
-		slog.ErrorContext(ctx, "Failed to build", slog.Any("err", err))
-		span.End()
+		slog.Error("Command failed", slog.Any("error", err))
 		if err := tp.Shutdown(context.Background()); err != nil {
 			slog.ErrorContext(ctx, "Failed to shut tracer provider down", slog.Any("err", err))
 		}
 		os.Exit(1)
 	}
-	span.SetStatus(codes.Ok, "")
 }
 
 func getPublicRev(ctx context.Context) (string, error) {
