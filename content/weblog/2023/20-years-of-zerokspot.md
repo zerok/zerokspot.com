@@ -1,5 +1,7 @@
 ---
 date: "2023-11-28T09:53:23+01:00"
+incoming:
+- url: "https://chaos.social/@zerok/111487389485440778"
 tags:
 - zerokspot
 - meta
