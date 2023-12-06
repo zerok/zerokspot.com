@@ -35,20 +35,33 @@ var importMastodonLinks = &cobra.Command{
 			Exclude: []string{"output", "public"},
 		})
 
-		goContainer := getGoContainer(dc)
-		blogBin := getBlogBinary(dc, withOtelEnv(ctx, dc, goContainer))
-
 		container := dc.Container().From(versions.AlpineImage()).
 			WithExec([]string{"apk", "add", "--no-cache", "git", "tzdata", "github-cli"}).
 			WithDirectory("/src", rootDirectory).
 			WithWorkdir("/src").
-			WithFile("/src/bin/blog", blogBin).
 			WithSecretVariable("GITHUB_TOKEN", githubTokenSecret).
-			WithEnvVariable("CACHE_BUSTER", time.Now().Format(time.RFC3339Nano)).
-			WithExec([]string{"git", "checkout", "-f", "main"}).
 			WithExec([]string{"git", "config", "user.email", "bot@zerokspot.com"}).
 			WithExec([]string{"git", "config", "user.name", "zerokspot-bot"}).
 			WithExec([]string{"/bin/sh", "-c", "git remote set-url origin https://oauth2:$GITHUB_TOKEN@github.com/zerok/zerokspot.com.git"}).
+			WithEnvVariable("CACHE_BUSTER", time.Now().Format(time.RFC3339Nano)).
+			WithExec([]string{"git", "fetch", "origin"})
+
+		// Before doing anything else, check if the branch exists
+		branches, err := container.WithExec([]string{"git", "branch", "--remote", "--list"}).Stdout(ctx)
+		if err != nil {
+			return err
+		}
+		if strings.Contains(branches, "import-mastodon-links") {
+			slog.ErrorContext(ctx, "import-mastodon-links branch already exists remotely.")
+			return fmt.Errorf("import-mastodon-links branch already exists remotely")
+		}
+
+		goContainer := getGoContainer(dc)
+		blogBin := getBlogBinary(dc, withOtelEnv(ctx, dc, goContainer))
+
+		container = container.
+			WithFile("/src/bin/blog", blogBin).
+			WithExec([]string{"git", "checkout", "-f", "main"}).
 			WithExec([]string{"git", "pull", "origin", "main"}).
 			// Reset the import-mastodon-links branch if it already exists so
 			// that there is only one in flight at the same time.
@@ -71,7 +84,6 @@ var importMastodonLinks = &cobra.Command{
 			return nil
 		}
 		_, err = container.
-			WithExec([]string{"/bin/sh", "-c", "(gh pr view import-mastodon-links && gh pr close import-mastodon-links) || true"}).
 			WithExec([]string{"git", "add", "."}).
 			WithExec([]string{"git", "commit", "-m", "Add mastodon link(s)"}).
 			WithExec([]string{"git", "push", "origin", "import-mastodon-links"}).
