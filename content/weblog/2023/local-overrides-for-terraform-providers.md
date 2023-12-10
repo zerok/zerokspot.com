@@ -1,5 +1,7 @@
 ---
 date: "2023-12-10T21:56:11+01:00"
+incoming:
+- url: https://chaos.social/@zerok/111558140299027220
 tags:
 - terraform
 - til
