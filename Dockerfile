@@ -2,4 +2,4 @@
 FROM zerok/webmentiond:latest
 FROM alpine:3.18
 FROM ubuntu:22.04
-FROM golang:1.21.4 as builder
+FROM golang:1.21.5 as builder
