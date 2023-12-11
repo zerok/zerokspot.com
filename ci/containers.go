@@ -19,7 +19,9 @@ func getGoContainer(dc *dagger.Client) *dagger.Container {
 }
 
 func getHugoContainer(dc *dagger.Client, hugoVersion string) *dagger.Container {
-	return dc.Container().From(versions.UbuntuImage()).
+	return dc.Container(dagger.ContainerOpts{
+		Platform: "linux/amd64",
+	}).From(versions.UbuntuImage()).
 		WithEnvVariable("DEBIAN_FRONTEND", "noninteractive").
 		WithExec([]string{"apt-get", "update"}).
 		WithExec([]string{"apt-get", "install", "-y", "curl", "tzdata", "git"}).

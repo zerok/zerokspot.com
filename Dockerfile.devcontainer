@@ -1,4 +1,0 @@
-FROM zerok/dev-environment-base:latest
-
-RUN curl -L -o /tmp/hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v0.74.1/hugo_extended_0.74.1_Linux-64bit.tar.gz && \
-    mkdir -p /tmp/hugo && cd /tmp/hugo && tar -xf ../hugo.tar.gz && mv hugo /usr/local/bin && cd / && rm -rf /tmp/hugo*

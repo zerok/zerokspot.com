@@ -1,12 +1,22 @@
 {
 	"name": "dev-environment-base",
-	"context": "..",
-	"dockerFile": "..\\Dockerfile.devcontainer",
-	"settings": { 
-		"terminal.integrated.shell.linux": null
-	},
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
 	"forwardPorts": [1313],
-	"extensions": [
-		"golang.go"
-	]
+	"features": {
+		"ghcr.io/devcontainers/features/hugo": {
+			"extended": true
+		},
+		"ghcr.io/devcontainers/features/go:1": {},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.go",
+				"tamasfe.even-better-toml",
+				"ms-vscode.makefile-tools",
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	}
 }

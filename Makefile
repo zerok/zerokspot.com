@@ -15,7 +15,7 @@ alldata:
 	./bin/blog blogroll --output ./data/blogroll.json
 	hugo
 	./bin/blog books gen-opml
-	./bin/blog search build-mapping
+	./bin/blog build-mapping
 
 clean:
 	rm -rf bin data/blogroll.json
