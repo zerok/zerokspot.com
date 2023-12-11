@@ -32,6 +32,12 @@ default via <http://localhost:1313>).
 [go]: https://go.dev/
 [make]: https://www.gnu.org/software/make/
 
+If you don't want to install all these dependencies and you already have Docker
+and VSCode installed, you can also start this project from inside a [dev
+container][].
+
+[dev container]: https://code.visualstudio.com/docs/devcontainers/containers
+
 
 ## Limitations
 
