@@ -6,13 +6,16 @@
 		"ghcr.io/devcontainers/features/hugo": {
 			"extended": true
 		},
-		"ghcr.io/devcontainers/features/go": {}
+		"ghcr.io/devcontainers/features/go:1": {},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
 	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"golang.go",
-				"tamasfe.even-better-toml"
+				"tamasfe.even-better-toml",
+				"ms-vscode.makefile-tools",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	}
