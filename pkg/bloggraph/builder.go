@@ -4,14 +4,15 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"io"
 	"log/slog"
 	"os"
 	"path/filepath"
 	"strings"
 
-	"github.com/gomarkdown/markdown"
-	"github.com/gomarkdown/markdown/ast"
-	"github.com/gomarkdown/markdown/parser"
+	"github.com/yuin/goldmark"
+	"github.com/yuin/goldmark/ast"
+	"github.com/yuin/goldmark/renderer"
 	"gitlab.com/zerok/zerokspot.com/pkg/searchdoc"
 )
 
@@ -167,45 +168,51 @@ func containsContentID(haystack []PostPathElement, needle string) bool {
 	return false
 }
 
+type markdownRenderer struct {
+	parents []string
+}
+
+func newMarkdownRenderer() *markdownRenderer {
+	return &markdownRenderer{
+		parents: make([]string, 0, 5),
+	}
+}
+
+func (r *markdownRenderer) Render(w io.Writer, source []byte, n ast.Node) error {
+	foundParents := make(map[string]struct{})
+	ast.Walk(n, func(n ast.Node, entering bool) (ast.WalkStatus, error) {
+		if !entering && n.Kind() == ast.KindLink {
+			link := n.(*ast.Link)
+			dest := string(link.Destination)
+			dest = strings.TrimPrefix(dest, "https://zerokspot.com")
+			if !(strings.HasPrefix(dest, "/weblog/") || strings.HasPrefix(dest, "/notes/")) {
+				return ast.WalkContinue, nil
+			}
+			foundParents[dest] = struct{}{}
+		}
+		return ast.WalkContinue, nil
+	})
+
+	result := make([]string, 0, len(foundParents))
+	for p := range foundParents {
+		result = append(result, p)
+	}
+	r.parents = result
+	return nil
+}
+
+func (r *markdownRenderer) AddOptions(...renderer.Option) {}
+
 func findParents(ctx context.Context, rootPath, path string) ([]string, error) {
 	contentPath := filepath.Join(rootPath, "content", path)
 	content, err := os.ReadFile(contentPath)
 	if err != nil {
 		return nil, fmt.Errorf("failed to open `%s`: %w", contentPath, err)
 	}
-	extensions := parser.CommonExtensions | parser.AutoHeadingIDs
-	p := parser.NewWithExtensions(extensions)
-	tree := markdown.Parse(content, p)
-	var nv NodeVisitor
-	ast.Walk(tree, &nv)
-	return nv.Parents, nil
-}
 
-type NodeVisitor struct {
-	Parents []string
-}
-
-func NewNodeVisitor() *NodeVisitor {
-	return &NodeVisitor{
-		Parents: make([]string, 0, 10),
+	mdRenderer := newMarkdownRenderer()
+	if err := goldmark.New(goldmark.WithRenderer(mdRenderer)).Convert(content, io.Discard); err != nil {
+		return nil, fmt.Errorf("failed to parse content: %w", err)
 	}
-}
-
-func (v *NodeVisitor) Visit(node ast.Node, entering bool) ast.WalkStatus {
-	if link, ok := node.(*ast.Link); ok {
-		dest := string(link.Destination)
-		if strings.HasPrefix(dest, "https://zerokspot.com") {
-			dest = strings.TrimPrefix(dest, "https://zerokspot.com")
-		}
-		if !(strings.HasPrefix(dest, "/weblog/") || strings.HasPrefix(dest, "/notes/")) {
-			return ast.GoToNext
-		}
-		for _, p := range v.Parents {
-			if p == dest {
-				return ast.GoToNext
-			}
-		}
-		v.Parents = append(v.Parents, dest)
-	}
-	return ast.GoToNext
+	return mdRenderer.parents, nil
 }
