@@ -4,7 +4,6 @@ require (
 	dagger.io/dagger v0.9.3
 	github.com/go-chi/chi/v5 v5.0.10
 	github.com/gohugoio/hugo v0.120.4
-	github.com/gomarkdown/markdown v0.0.0-20190912180731-281270bc6d83
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.13.1
 	github.com/mattn/go-mastodon v0.0.6
@@ -12,6 +11,7 @@ require (
 	github.com/spf13/cobra v1.8.0
 	github.com/stretchr/testify v1.8.4
 	github.com/ulikunitz/xz v0.5.11
+	github.com/yuin/goldmark v1.6.0
 	github.com/zerok/textbundle-go v0.0.0-20200521090826-d11aedee74ff
 	go.opentelemetry.io/otel v1.20.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.20.0
@@ -150,7 +150,6 @@ require (
 	github.com/tdewolff/parse/v2 v2.7.3 // indirect
 	github.com/tomnomnom/linkheader v0.0.0-20180905144013-02ca5825eb80 // indirect
 	github.com/vektah/gqlparser/v2 v2.5.6 // indirect
-	github.com/yuin/goldmark v1.6.0 // indirect
 	github.com/yuin/goldmark-emoji v1.0.2 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	go.opentelemetry.io/otel/metric v1.20.0 // indirect
