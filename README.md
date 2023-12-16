@@ -6,7 +6,7 @@ technologies:
 
 - Hugo (as the static site generator that produces all the HTML pages that are
   then served)
-- Go (for implementing the search backend)
+- Go (for implementing various preprocessors and helper APIs)
 
 
 ## How to build

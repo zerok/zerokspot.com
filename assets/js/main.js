@@ -28,7 +28,31 @@ function renderIcons() {
   });
 }
 
+const emojiMapping = {
+  'sun': '☀️',
+  'archive': '🗄️',
+  'clipboard': '📋',
+  'camera': '📷',
+  'list': '📃',
+  'home': '🏡',
+  'clock': '🕑',
+  'book-open': '📖',
+  'envelope': '✉️',
+  'moon': '🌒',
+  'tags': '🏷️',
+};
+
 zs.icons.createIconElement = function(cfg) {
+  if (typeof window.icons === 'undefined') {
+    const elem = document.createElement('span');
+    elem.classList.add('icon');
+    if (typeof emojiMapping[cfg.icon] === 'undefined') {
+      console.log(`No fallback icon defined for ${cfg.icon}`);
+    } else {
+      elem.innerHTML = emojiMapping[cfg.icon];
+    }
+    return elem;
+  }
   var ns = 'http://www.w3.org/2000/svg';
   var svg = document.createElementNS(ns, 'svg');
   var icon = window.icons[cfg.group][cfg.icon];

@@ -213,6 +213,14 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 			span.SetStatus(codes.Error, "Failed to build website")
 			return err
 		}
+		if _, err := hugoContainer.Directory("/src/data").Export(ctx, "./data"); err != nil {
+			span.SetStatus(codes.Error, "Failed to build website")
+			return err
+		}
+		if _, err := hugoContainer.Directory("/src/content/archive").Export(ctx, "./content/archive"); err != nil {
+			span.SetStatus(codes.Error, "Failed to build website")
+			return err
+		}
 		return nil
 	}
 
