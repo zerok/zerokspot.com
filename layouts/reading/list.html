@@ -13,6 +13,7 @@
                   {{ $books := .Pages }}
                   {{ $reading := (where (where $books ".Params.date" "!=" nil) ".Params.finished" "==" nil) }}
                   {{ $toread := where $books ".Params.date" "==" nil }}
+                  {{ $challenges := data.GetJSON "data/reading-challenges.json" }}
                   {{ $read := (where (where $.Site.AllPages ".Params.date" "<>" nil) ".Params.finished" "<>" nil) }}
                   <section id="reading">
                     <h2>Currently reading (<a href="/opml/books/current.opml">OPML</a>)</h2>
@@ -55,8 +56,9 @@
                   <section id="read">
                   <h2>Read <span class="reading-listing__count">({{ len $read }} in total)</span></h2>
                   {{ range $read.GroupByParamDate "finished" "2006" }}
+                  {{ $challenge := index $challenges .Key }}
                   <section id="read-{{ .Key }}">
-                  <h3>{{ .Key }} <span class="reading-listing__count">({{ len .Pages }} in total)</span></h3>
+                      <h3>{{ .Key }} <span class="reading-listing__count">({{ len .Pages }} in total{{ if $challenge }}; <span title="Reading challenge">🏁</span> {{ index $challenge "goal" }}{{ end }})</span></h3>
                   <table class="table table--reading-list">
                     <thead>
                       <tr>

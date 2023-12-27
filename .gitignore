@@ -8,7 +8,8 @@
 /search.bleve
 /bin
 /.envrc
-/data
+/data/postpaths.json
+/data/blogroll.json
 /resources
 /vendor
 .DS_Store
