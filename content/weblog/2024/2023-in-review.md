@@ -1,5 +1,7 @@
 ---
 date: "2024-01-06T22:09:45+01:00"
+incoming:
+- url: https://chaos.social/@zerok/111711076298873236
 tags:
 - retrospective
 title: 2023 in review
