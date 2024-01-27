@@ -1,5 +1,7 @@
 ---
 date: "2024-01-27T19:30:08+01:00"
+incoming:
+- url: https://chaos.social/@zerok/111829392605555798
 rating: 5
 tags:
 - books
