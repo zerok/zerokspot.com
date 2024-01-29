@@ -710,11 +710,6 @@
     "site_url": "https://www.sethvargo.com"
   },
   {
-    "title": "Shaun Inman",
-    "feed_url": "http://www.shauninman.com/feeds/plus",
-    "site_url": "http://www.shauninman.com/"
-  },
-  {
     "title": "Simon Willison",
     "feed_url": "http://feeds.simonwillison.net/swn-everything",
     "site_url": "http://simonwillison.net/"
