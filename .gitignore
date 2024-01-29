@@ -9,7 +9,6 @@
 /bin
 /.envrc
 /data/postpaths.json
-/data/blogroll.json
 /resources
 /vendor
 .DS_Store
