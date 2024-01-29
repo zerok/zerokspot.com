@@ -136,8 +136,6 @@ func withOtelEnv(ctx context.Context, client *dagger.Client, container *dagger.C
 func build(ctx context.Context, client *dagger.Client, versions *Versions, publish bool) error {
 	ctx, span := tracer.Start(ctx, "build")
 	defer span.End()
-	feedbinUsername := client.SetSecret("feedbinUsername", os.Getenv("FEEDBIN_USER"))
-	feedbinPassword := client.SetSecret("feedbinPassword", os.Getenv("FEEDBIN_PASSWORD"))
 	sshPrivateKey := os.Getenv("SSH_PRIVATE_KEY")
 
 	publicRev, err := getPublicRev(ctx)
@@ -180,8 +178,6 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		ctx, span := tracer.Start(ctx, "buildWebsite")
 		defer span.End()
 		hugoContainer = hugoContainer.
-			WithSecretVariable("FEEDBIN_USER", feedbinUsername).
-			WithSecretVariable("FEEDBIN_PASSWORD", feedbinPassword).
 			WithMountedDirectory("/src", rootDirectory).
 			WithWorkdir("/src").
 			WithMountedFile("/usr/local/bin/blog", blogBin).
@@ -190,7 +186,6 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 			// as build-archive already does lots of content checking
 			WithExec([]string{"/bin/sh", "-c", "unset OTEL_TRACES_EXPORTER && unset OTEL_EXPORTER_OTLP_TRACES_ENDPOINT && unset OTEL_EXPORTER_OTLP_TRACES_PROTOCOL && otel-cli exec --timeout 60s --verbose --name hugo --service zerokspot-cli hugo"}).
 			WithExec([]string{"blog", "build-graph"}).
-			WithExec([]string{"blog", "blogroll", "--output", "data/blogroll.json"}).
 			WithExec([]string{"/bin/sh", "-c", "unset OTEL_TRACES_EXPORTER && unset OTEL_EXPORTER_OTLP_TRACES_ENDPOINT && unset OTEL_EXPORTER_OTLP_TRACES_PROTOCOL && otel-cli exec --timeout 60s --verbose --name hugo --service zerokspot-cli hugo"}).
 			WithExec([]string{"blog", "books", "gen-opml"}).
 			WithExec([]string{"blog", "build-mapping"}).
