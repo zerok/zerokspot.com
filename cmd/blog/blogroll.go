@@ -99,7 +99,9 @@ var blogrollCmd = &cobra.Command{
 			return err
 		}
 		defer fp.Close()
-		if err := json.NewEncoder(fp).Encode(result); err != nil {
+		enc := json.NewEncoder(fp)
+		enc.SetIndent("", "  ")
+		if err := enc.Encode(result); err != nil {
 			span.SetStatus(codes.Error, err.Error())
 			return err
 		}
