@@ -435,6 +435,11 @@
     "site_url": "https://surfthedream.com.au"
   },
   {
+    "title": "Justin Garrison's Homepage",
+    "feed_url": "https://justingarrison.com/index.xml",
+    "site_url": "https://justingarrison.com/"
+  },
+  {
     "title": "Karen Sawrey",
     "feed_url": "https://krnswry.com/feed/",
     "site_url": "https://krnswry.com"
@@ -763,11 +768,6 @@
     "title": "The Pragmatic Engineer",
     "feed_url": "https://blog.pragmaticengineer.com/rss/",
     "site_url": "https://blog.pragmaticengineer.com/"
-  },
-  {
-    "title": "Thomas (advi) Brandt",
-    "feed_url": "https://www.advdiaboli.de/feed/",
-    "site_url": "https://www.advdiaboli.de"
   },
   {
     "title": "Tom Critchlow",
