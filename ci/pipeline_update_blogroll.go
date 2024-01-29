@@ -38,8 +38,13 @@ func generateBlogroll(ctx context.Context, dc *dagger.Client, versions *Versions
 	goContainer := getGoContainer(dc)
 	blogBin := getBlogBinary(dc, withOtelEnv(ctx, dc, goContainer))
 
+	rootDirectory := dc.Host().Directory(".", dagger.HostDirectoryOpts{
+		Exclude: []string{"output", "public"},
+	})
+
 	blogrollFile := dc.Container().From(versions.AlpineImage()).
 		WithExec([]string{"apk", "add", "--no-cache", "tzdata"}).
+		WithEnvVariable("CACHE_BUSTER", time.Now().Format(time.RFC3339Nano)).
 		WithFile("/usr/local/bin/blog", blogBin).
 		WithSecretVariable("FEEDBIN_USER", feedbinUsername).
 		WithSecretVariable("FEEDBIN_PASSWORD", feedbinPassword).
@@ -51,13 +56,16 @@ func generateBlogroll(ctx context.Context, dc *dagger.Client, versions *Versions
 	// that file and if there is change, create a PR + automerge.
 	container, err := dc.Container().From(versions.AlpineImage()).
 		WithExec([]string{"apk", "add", "--no-cache", "git", "tzdata", "github-cli"}).
-		WithExec([]string{"/bin/sh", "-c", "git clone --depth=1 https://oauth2:$GITHUB_TOKEN@github.com/zerok/zerokspot.com.git /src"}).
-		WithWorkdir("/src").
+		WithEnvVariable("CACHE_BUSTER", time.Now().Format(time.RFC3339Nano)).
 		WithSecretVariable("GITHUB_TOKEN", githubTokenSecret).
+		WithMountedDirectory("/src", rootDirectory).
+		WithWorkdir("/src").
+		WithExec([]string{"/bin/sh", "-c", "git remote set-url origin https://oauth2:$GITHUB_TOKEN@github.com/zerok/zerokspot.com.git"}).
 		WithExec([]string{"git", "config", "user.email", "bot@zerokspot.com"}).
 		WithExec([]string{"git", "config", "user.name", "zerokspot-bot"}).
-		WithEnvVariable("CACHE_BUSTER", time.Now().Format(time.RFC3339Nano)).
 		WithFile("/input/data/blogroll.json", blogrollFile).
+		WithExec([]string{"git", "checkout", "-f", "main"}).
+		WithExec([]string{"git", "pull", "origin", "main"}).
 		WithExec([]string{"git", "switch", "-C", "update-blogroll"}).
 		WithExec([]string{"cp", "/input/data/blogroll.json", "/src/data/"}).
 		WithExec([]string{"git", "status", "--porcelain", "data/blogroll.json"}).Sync(ctx)
@@ -76,9 +84,9 @@ func generateBlogroll(ctx context.Context, dc *dagger.Client, versions *Versions
 	_, err = container.
 		WithExec([]string{"git", "add", "./data/blogroll.json"}).
 		WithExec([]string{"git", "commit", "-m", "Update blogroll"}).
-		WithExec([]string{"git", "push", "origin", "update-blogroll"}).
+		WithExec([]string{"git", "push", "--set-upstream", "origin", "update-blogroll"}).
 		WithExec([]string{"gh", "pr", "create", "--fill"}).
-		WithExec([]string{"gh", "pr", "merge", "--auto"}).
+		WithExec([]string{"gh", "pr", "merge", "--auto", "--squash"}).
 		Sync(ctx)
 	return err
 }
