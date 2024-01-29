@@ -78,6 +78,7 @@ func generateBlogroll(ctx context.Context, dc *dagger.Client, versions *Versions
 		WithExec([]string{"git", "commit", "-m", "Update blogroll"}).
 		WithExec([]string{"git", "push", "origin", "update-blogroll"}).
 		WithExec([]string{"gh", "pr", "create", "--fill"}).
+		WithExec([]string{"gh", "pr", "merge", "--auto"}).
 		Sync(ctx)
 	return err
 }
