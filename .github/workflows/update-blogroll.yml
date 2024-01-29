@@ -22,3 +22,5 @@ jobs:
       - run: "go run ./ci pipelines update-blogroll"
         env:
           GITHUB_TOKEN: "${{ github.token }}"
+          FEEDBIN_USER: "${{ secrets.FEEDBIN_USER }}"
+          FEEDBIN_PASSWORD: "${{ secrets.FEEDBIN_PASSWORD }}"

@@ -12,8 +12,6 @@ concurrency: ci-${{ github.ref }}
 jobs:
   build:
     env:
-      FEEDBIN_USER: ${{ secrets.FEEDBIN_USER }}
-      FEEDBIN_PASSWORD: ${{ secrets.FEEDBIN_PASSWORD }}
       SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
       OTEL_EXPORTER_OTLP_ENDPOINT: ${{ vars.OTEL_EXPORTER_OTLP_ENDPOINT }}
