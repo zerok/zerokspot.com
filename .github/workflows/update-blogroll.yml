@@ -13,6 +13,11 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -21,6 +26,6 @@ jobs:
           go-version: "1.21"
       - run: "go run ./ci pipelines update-blogroll"
         env:
-          GITHUB_TOKEN: "${{ github.token }}"
+          GITHUB_TOKEN: "${{ steps.app-token.outputs.token }}"
           FEEDBIN_USER: "${{ secrets.FEEDBIN_USER }}"
           FEEDBIN_PASSWORD: "${{ secrets.FEEDBIN_PASSWORD }}"
