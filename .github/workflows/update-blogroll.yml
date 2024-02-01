@@ -24,8 +24,14 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: "1.21"
+      - id: cache-blog-binary
+        uses: actions/cache@v4
+        with:
+          path: ./bin/blog
+          key: blog-binary-${{ hashFiles('Dockerfile', 'go.sum', '**/*.go') }}
       - run: "go run ./ci pipelines update-blogroll"
         env:
           GITHUB_TOKEN: "${{ steps.app-token.outputs.token }}"
           FEEDBIN_USER: "${{ secrets.FEEDBIN_USER }}"
           FEEDBIN_PASSWORD: "${{ secrets.FEEDBIN_PASSWORD }}"
+          CACHE_HIT_BLOG_BINARY: "${{ steps.cache-blog-binary.outputs.cache-hit }}"
