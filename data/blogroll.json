@@ -445,11 +445,6 @@
     "site_url": "https://krnswry.com"
   },
   {
-    "title": "Karl Voit",
-    "feed_url": "https://Karl-Voit.at/feeds/lazyblorg-all.atom_1.0.links-and-content.xml",
-    "site_url": "http://Karl-Voit.at"
-  },
-  {
     "title": "Katja Diehl",
     "feed_url": "https://katja-diehl.de/feed/",
     "site_url": "https://katja-diehl.de"
@@ -503,11 +498,6 @@
     "title": "Luke Wroblewski",
     "feed_url": "http://feeds.feedburner.com/FunctioningForm",
     "site_url": "http://www.lukew.com"
-  },
-  {
-    "title": "Manton Reece (Creator of Micro.blog)",
-    "feed_url": "https://www.manton.org/feed.xml",
-    "site_url": "https://www.manton.org/"
   },
   {
     "title": "Manuel Matuzović - Blog",
