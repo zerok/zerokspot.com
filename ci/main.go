@@ -150,29 +150,17 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 
 	var gitRev string
 
-	goContainer := getGoContainer(client)
-
-	// Prime the Go cache
-	if _, err := goContainer.
-		WithMountedFile("/src/go.mod", rootDirectory.File("go.mod")).
-		WithMountedFile("/src/go.sum", rootDirectory.File("go.sum")).
-		WithWorkdir("/src").
-		WithExec([]string{"go", "mod", "download"}).Sync(ctx); err != nil {
+	blogBin, err := getOrRestoreBlogBinary(ctx, client)
+	if err != nil {
 		return err
 	}
-	goContainer = withOtelEnv(ctx, client, goContainer)
 
-	versionOutput, err := goContainer.
-		WithWorkdir("/src").
-		WithMountedDirectory("/src", rootDirectory).
-		WithExec([]string{"bash", "-c", "go list -m github.com/gohugoio/hugo | cut -d ' ' -f 2"}).
-		Stdout(ctx)
+	versionOutput, err := client.Container().From(versions.AlpineImage()).WithFile("/usr/local/bin/blog", blogBin).WithExec([]string{"/usr/local/bin/blog", "--hugo-version"}).Stdout(ctx)
 	if err != nil {
 		return err
 	}
 	hugoVersion := strings.TrimSpace(strings.TrimPrefix(versionOutput, "v"))
 	hugoContainer := withOtelEnv(ctx, client, getHugoContainer(client, hugoVersion))
-	blogBin := getBlogBinary(client, withOtelEnv(ctx, client, goContainer))
 
 	if err := func(ctx context.Context) error {
 		ctx, span := tracer.Start(ctx, "buildWebsite")
