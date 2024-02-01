@@ -56,8 +56,10 @@ var importMastodonLinks = &cobra.Command{
 			return fmt.Errorf("import-mastodon-links branch already exists remotely")
 		}
 
-		goContainer := getGoContainer(dc)
-		blogBin := getBlogBinary(dc, withOtelEnv(ctx, dc, goContainer))
+		blogBin, err := getOrRestoreBlogBinary(ctx, dc)
+		if err != nil {
+			return err
+		}
 
 		container = container.
 			WithFile("/src/bin/blog", blogBin).

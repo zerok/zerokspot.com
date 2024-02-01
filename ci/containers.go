@@ -1,7 +1,9 @@
 package main
 
 import (
+	"context"
 	"fmt"
+	"os"
 
 	"dagger.io/dagger"
 )
@@ -46,4 +48,20 @@ func getBlogBinary(dc *dagger.Client, buildContainer *dagger.Container) *dagger.
 		WithWorkdir("/src/cmd/blog").
 		WithExec([]string{"go", "build", "-o", "../../bin/blog"}).
 		File("/src/bin/blog")
+}
+
+func getOrRestoreBlogBinary(ctx context.Context, dc *dagger.Client) (*dagger.File, error) {
+	var blogBin *dagger.File
+	binaryCacheHit := os.Getenv("CACHE_HIT_BLOG_BINARY") == "true"
+
+	if binaryCacheHit {
+		blogBin = dc.Host().File("./bin/blog")
+	} else {
+		goContainer := getGoContainer(dc)
+		blogBin = getBlogBinary(dc, withOtelEnv(ctx, dc, goContainer))
+		if _, err := blogBin.Export(ctx, "./bin/blog"); err != nil {
+			return nil, fmt.Errorf("failed to export the generated binary: %w", err)
+		}
+	}
+	return blogBin, nil
 }

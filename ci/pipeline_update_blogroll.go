@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"log/slog"
 	"os"
 	"strings"
@@ -36,17 +35,9 @@ func generateBlogroll(ctx context.Context, dc *dagger.Client, versions *Versions
 	feedbinPassword := dc.SetSecret("feedbinPassword", os.Getenv("FEEDBIN_PASSWORD"))
 	githubTokenSecret := dc.SetSecret("GITHUB_TOKEN", os.Getenv("GITHUB_TOKEN"))
 
-	var blogBin *dagger.File
-	binaryCacheHit := os.Getenv("CACHE_HIT_BLOG_BINARY") == "true"
-
-	if binaryCacheHit {
-		blogBin = dc.Host().File("./bin/blog")
-	} else {
-		goContainer := getGoContainer(dc)
-		blogBin = getBlogBinary(dc, withOtelEnv(ctx, dc, goContainer))
-		if _, err := blogBin.Export(ctx, "./bin/blog"); err != nil {
-			return fmt.Errorf("failed to export the generated binary: %w", err)
-		}
+	blogBin, err := getOrRestoreBlogBinary(ctx, dc)
+	if err != nil {
+		return err
 	}
 
 	rootDirectory := dc.Host().Directory(".", dagger.HostDirectoryOpts{
