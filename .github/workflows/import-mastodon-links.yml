@@ -25,10 +25,7 @@ jobs:
         with:
           go-version: "1.21"
       - id: cache-blog-binary
-        uses: actions/cache@v4
-        with:
-          path: ./bin/blog
-          key: blog-binary-${{ hashFiles('Dockerfile', 'go.sum', '**/*.go') }}
+        uses: ./.github/actions/cache-blog-binary
       - run: "go run ./ci pipelines import-mastodon-links"
         env:
           GITHUB_TOKEN: "${{ steps.app-token.outputs.token }}"

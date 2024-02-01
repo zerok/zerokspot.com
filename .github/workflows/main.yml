@@ -8,7 +8,6 @@ on:
 
 concurrency: ci-${{ github.ref }}
 
-
 jobs:
   build:
     env:
@@ -27,8 +26,16 @@ jobs:
       with:
         go-version: "1.21"
 
+    - id: cache-blog-binary
+      uses: ./.github/actions/cache-blog-binary
+
     - run: go run ./ci pipelines pr
       if: github.ref != 'refs/heads/main'
+      env:
+        CACHE_HIT_BLOG_BINARY: "${{ steps.cache-blog-binary.outputs.cache-hit }}"
+
     - run: go run ./ci pipelines main
       if: github.ref == 'refs/heads/main'
+      env:
+        CACHE_HIT_BLOG_BINARY: "${{ steps.cache-blog-binary.outputs.cache-hit }}"
 

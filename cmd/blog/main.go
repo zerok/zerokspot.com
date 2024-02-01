@@ -6,6 +6,7 @@ import (
 	"log/slog"
 	"os"
 	"os/signal"
+	"runtime/debug"
 	"syscall"
 	"time"
 
@@ -25,6 +26,7 @@ import (
 var localZoneName string
 var localZone *time.Location
 var tracer trace.Tracer
+var showHugoVersion bool
 
 var rootCmd = &cobra.Command{
 	Use:           "blog",
@@ -33,6 +35,19 @@ var rootCmd = &cobra.Command{
 		return nil
 	},
 	PersistentPreRunE: func(cmd *cobra.Command, args []string) error {
+		if showHugoVersion {
+			info, ok := debug.ReadBuildInfo()
+			if !ok {
+				return fmt.Errorf("build information not available")
+			}
+			for _, dep := range info.Deps {
+				if dep.Path == "github.com/gohugoio/hugo" {
+					fmt.Println(dep.Version)
+					return nil
+				}
+			}
+			return fmt.Errorf("hugo version information not available")
+		}
 		var err error
 		localZone, err = time.LoadLocation(localZoneName)
 		if err != nil {
@@ -45,8 +60,29 @@ var rootCmd = &cobra.Command{
 func init() {
 	rootCmd.SilenceUsage = true
 	rootCmd.PersistentFlags().StringVar(&localZoneName, "tz", "Europe/Vienna", "Timezone to be used for data-relevant processing")
+	rootCmd.Flags().BoolVar(&showHugoVersion, "hugo-version", false, "Print the Hugo version and exit")
 	rootCmd.AddCommand(generateServeCmd())
 	rootCmd.AddCommand(generateResizePhotosCmd())
+	rootCmd.AddCommand(generateHugoVersionCmd())
+}
+
+func generateHugoVersionCmd() *cobra.Command {
+	return &cobra.Command{
+		Use: "hugo-version",
+		RunE: func(cmd *cobra.Command, args []string) error {
+			info, ok := debug.ReadBuildInfo()
+			if !ok {
+				return fmt.Errorf("build information not available")
+			}
+			for _, dep := range info.Deps {
+				if dep.Path == "github.com/gohugoio/hugo" {
+					fmt.Println(dep.Version)
+					return nil
+				}
+			}
+			return nil
+		},
+	}
 }
 
 func findParentTrace(ctx context.Context) context.Context {
