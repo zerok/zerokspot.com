@@ -10,5 +10,5 @@ runs:
       uses: actions/cache@v4
       with:
         path: ./bin/blog
-        key: blog-binary-${{ hashFiles('Dockerfile', 'go.sum', '**/*.go') }}
+        key: blog-binary-${{ hashFiles('Dockerfile', 'go.sum', 'cmd/**.go', 'pkg/**.go') }}
 
