@@ -1,5 +1,7 @@
 ---
 date: "2024-02-04T10:39:29+01:00"
+incoming:
+- url: https://chaos.social/@zerok/111872578246371121
 tags:
 - vegetarian
 title: 'Vegetarian January: A quick summary'
