@@ -90,6 +90,7 @@ var importMastodonLinks = &cobra.Command{
 			WithExec([]string{"git", "commit", "-m", "Add mastodon link(s)"}).
 			WithExec([]string{"git", "push", "origin", "import-mastodon-links"}).
 			WithExec([]string{"gh", "pr", "create", "--fill"}).
+			WithExec([]string{"gh", "pr", "merge", "--auto", "--squash"}).
 			Sync(ctx)
 		return err
 	},
