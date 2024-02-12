@@ -255,6 +255,11 @@
     "site_url": "https://desmondrivet.com/posts/"
   },
   {
+    "title": "Dimitris",
+    "feed_url": "https://dsotirakis.fyi/index.xml",
+    "site_url": "https://dsotirakis.fyi/"
+  },
+  {
     "title": "Doc Searls",
     "feed_url": "http://blogs.law.harvard.edu/doc/feed/",
     "site_url": "https://doc.searls.com"
@@ -798,11 +803,6 @@
     "title": "Vincent Ritter",
     "feed_url": "https://vincentritter.com/feeds/all.rss",
     "site_url": "https://vincentritter.com/"
-  },
-  {
-    "title": "Welcome to my blog!",
-    "feed_url": "https://dsotirakis.fyi/index.xml",
-    "site_url": "https://dsotirakis.fyi/"
   },
   {
     "title": "Writing on Carolyn Van Slyck",
