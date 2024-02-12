@@ -800,6 +800,11 @@
     "site_url": "https://vincentritter.com/"
   },
   {
+    "title": "Welcome to my blog!",
+    "feed_url": "https://dsotirakis.fyi/index.xml",
+    "site_url": "https://dsotirakis.fyi/"
+  },
+  {
     "title": "Writing on Carolyn Van Slyck",
     "feed_url": "https://carolynvanslyck.com/blog/index.xml",
     "site_url": "https://carolynvanslyck.com/blog/"
