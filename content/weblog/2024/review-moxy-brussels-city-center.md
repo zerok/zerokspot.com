@@ -2,6 +2,8 @@
 address: Rue du Prince Albert 32, 1050 Ixelles, Belgium
 coordinates: 50.834639/4.363508
 date: "2024-02-18T11:14:40+01:00"
+incoming:
+- url: https://chaos.social/@zerok/111952000713757329
 rating: 4
 tags:
 - places
