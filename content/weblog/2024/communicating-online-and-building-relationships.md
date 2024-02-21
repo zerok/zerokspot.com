@@ -25,7 +25,7 @@ I'm just glad that it's no longer billed as remote call like in [one of my all-t
 > docsigma2000: jesus christ man  
 > docsigma2000: my son is sooooooo dead  
 > c8info: Why?  
-> docsigma2000: hes been looking at internet web sites in fucking EUROPE. 
+> docsigma2000: hes been looking at internet web sites in fucking EUROPE.  
 > docsigma2000: HE IS SURFING LONG DISTANCE  
 > docsigma2000: our fucking phone bill is gonna be nuts  
 > c8info: Ooh, this is bad. Surfing long distance adds an extra $69.99 to your bill per hour.  
