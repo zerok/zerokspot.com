@@ -22,19 +22,19 @@ No matter the tool, though, what is still fascinating to me after all these year
 
 I'm just glad that it's no longer billed as remote call like in [one of my all-time favorite Bash.org entries](https://web.archive.org/web/20230607114941/http://www.bash.org/?142934):
 
-> docsigma2000: jesus christ man
-> docsigma2000: my son is sooooooo dead
-> c8info: Why?
-> docsigma2000: hes been looking at internet web sites in fucking EUROPE
-> docsigma2000: HE IS SURFING LONG DISTANCE
-> docsigma2000: our fucking phone bill is gonna be nuts
-> c8info: Ooh, this is bad. Surfing long distance adds an extra $69.99 to your bill per hour.
-> docsigma2000: ...!!!!!! FUCK FUCK FUCK
-> docsigma2000: is there some plan we can sign up for???
-> docsigma2000: cuz theres some cool stuff in europe, but i dun wanna pauy that much
-> c8info: Sorry, no. There is no plan. you'll have to live with it.
-> docsigma2000: o well, i ccan live without europe intenet sites.
-> docsigma2000: but till i figure out how to block it hes sooooo dead
-> c8info: By the way, I'm from Europe, your chatting long distance.
+> docsigma2000: jesus christ man  
+> docsigma2000: my son is sooooooo dead  
+> c8info: Why?  
+> docsigma2000: hes been looking at internet web sites in fucking EUROPE. 
+> docsigma2000: HE IS SURFING LONG DISTANCE  
+> docsigma2000: our fucking phone bill is gonna be nuts  
+> c8info: Ooh, this is bad. Surfing long distance adds an extra $69.99 to your bill per hour.  
+> docsigma2000: ...!!!!!! FUCK FUCK FUCK  
+> docsigma2000: is there some plan we can sign up for???  
+> docsigma2000: cuz theres some cool stuff in europe, but i dun wanna pauy that much  
+> c8info: Sorry, no. There is no plan. you'll have to live with it.  
+> docsigma2000: o well, i ccan live without europe intenet sites.  
+> docsigma2000: but till i figure out how to block it hes sooooo dead  
+> c8info: By the way, I'm from Europe, your chatting long distance.  
 > ** docsigma2000 has quit (Connection reset by peer)
 
