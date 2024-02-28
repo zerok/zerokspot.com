@@ -1,5 +1,7 @@
 ---
 date: "2024-02-28T21:32:00+01:00"
+incoming:
+- url: https://chaos.social/@zerok/112011025603871715
 tags:
 - stationery
 - fountainpens
