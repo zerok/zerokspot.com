@@ -9,7 +9,7 @@ require (
 	github.com/mattn/go-mastodon v0.0.6
 	github.com/spf13/afero v1.11.0
 	github.com/spf13/cobra v1.8.0
-	github.com/stretchr/testify v1.8.4
+	github.com/stretchr/testify v1.9.0
 	github.com/ulikunitz/xz v0.5.11
 	github.com/yuin/goldmark v1.7.0
 	github.com/zerok/textbundle-go v0.0.0-20200521090826-d11aedee74ff
