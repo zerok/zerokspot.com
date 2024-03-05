@@ -5,7 +5,7 @@ require (
 	github.com/go-chi/chi/v5 v5.0.11
 	github.com/gohugoio/hugo v0.122.0
 	github.com/google/go-github/v52 v52.0.0
-	github.com/gosimple/slug v1.13.1
+	github.com/gosimple/slug v1.14.0
 	github.com/mattn/go-mastodon v0.0.6
 	github.com/spf13/afero v1.11.0
 	github.com/spf13/cobra v1.8.0
