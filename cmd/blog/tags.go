@@ -40,7 +40,6 @@ func buildSites() (*hugolib.HugoSites, error) {
 		return nil, err
 	}
 	if err := sites.Build(hugolib.BuildCfg{
-		ResetState: true,
 		SkipRender: true,
 	}); err != nil {
 		return nil, err
