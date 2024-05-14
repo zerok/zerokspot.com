@@ -330,6 +330,11 @@
     "site_url": "https://georgholzer.at/start/"
   },
   {
+    "title": "Gio's Blog",
+    "feed_url": "https://giordanoricci.com/rss.xml",
+    "site_url": "https://giordanoricci.com/"
+  },
+  {
     "title": "Graham Dumpleton",
     "feed_url": "http://blog.dscpl.com.au/feeds/posts/default",
     "site_url": "http://blog.dscpl.com.au/"
