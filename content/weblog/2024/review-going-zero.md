@@ -2,9 +2,12 @@
 date: "2024-05-14T20:39:50+02:00"
 rating: 5
 title: 'Review: Going Zero'
+tags:
+- reviews
+- books
 ---
 
-It's been a while since I've read a book that I simply could not put down. "Going Zero" by Anthony McCarten managed that. The story is about an experiment where CIA/FBA/NSA cooperate with a Facebook-like company called "WorldShare" in order to see if that company with some of the resources of these agencies can manage to track down 10 volunteers (the Zeros) within a month. If one of them is still out there after that, they will get 3 million USD. All of them have been selected in some way to represent people with various skill levels, from cybersecurity experts to those who might know only little about the surveillance capability of the industry and government. All Zeros have their own reasons to participate in that test but one of them is a bit more special...
+It's been a while since I've read a book that I simply could not put down. ["Going Zero" by Anthony McCarten](https://app.thestorygraph.com/books/9c009061-8c53-4242-933b-a3669f697553) (German edition) managed that. The story is about an experiment where CIA/FBA/NSA cooperate with a Facebook-like company called "WorldShare" in order to see if that company with some of the resources of these agencies can manage to track down 10 volunteers (the Zeros) within a month. If one of them is still out there after that, they will get 3 million USD. All of them have been selected in some way to represent people with various skill levels, from cybersecurity experts to those who might know only little about the surveillance capability of the industry and government. All Zeros have their own reasons to participate in that test but one of them is a bit more special...
 
 The story is basically 100% action with the plot jumping between the headquarters of Fusion (the name of the joint venture) and the Zeros. I think all the characters are interesting and most even likeable! It's not quite clear until the end if there are even bad people in the game (spoiler: of course there are...) but especially that provides a lot of room for character development.
 
