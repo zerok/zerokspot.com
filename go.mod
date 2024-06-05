@@ -3,7 +3,7 @@ module gitlab.com/zerok/zerokspot.com
 require (
 	dagger.io/dagger v0.11.6
 	github.com/go-chi/chi/v5 v5.0.12
-	github.com/gohugoio/hugo v0.126.1
+	github.com/gohugoio/hugo v0.127.0
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.14.0
 	github.com/mattn/go-mastodon v0.0.8
@@ -63,6 +63,7 @@ require (
 	github.com/gobuffalo/flect v1.0.2 // indirect
 	github.com/gobwas/glob v0.2.3 // indirect
 	github.com/gohugoio/go-i18n/v2 v2.1.3-0.20230805085216-e63c13218d0e // indirect
+	github.com/gohugoio/httpcache v0.7.0 // indirect
 	github.com/gohugoio/hugo-goldmark-extensions/extras v0.1.0 // indirect
 	github.com/gohugoio/hugo-goldmark-extensions/passthrough v0.2.0 // indirect
 	github.com/gohugoio/locales v0.14.0 // indirect
