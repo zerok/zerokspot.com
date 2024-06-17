@@ -8,7 +8,7 @@ require (
 	github.com/gosimple/slug v1.14.0
 	github.com/mattn/go-mastodon v0.0.8
 	github.com/spf13/afero v1.11.0
-	github.com/spf13/cobra v1.8.0
+	github.com/spf13/cobra v1.8.1
 	github.com/stretchr/testify v1.9.0
 	github.com/ulikunitz/xz v0.5.12
 	github.com/yuin/goldmark v1.7.1
