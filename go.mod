@@ -1,7 +1,7 @@
 module gitlab.com/zerok/zerokspot.com
 
 require (
-	dagger.io/dagger v0.11.8
+	dagger.io/dagger v0.11.9
 	github.com/go-chi/chi/v5 v5.0.12
 	github.com/gohugoio/hugo v0.127.0
 	github.com/google/go-github/v52 v52.0.0
@@ -11,7 +11,7 @@ require (
 	github.com/spf13/cobra v1.8.1
 	github.com/stretchr/testify v1.9.0
 	github.com/ulikunitz/xz v0.5.12
-	github.com/yuin/goldmark v1.7.3
+	github.com/yuin/goldmark v1.7.4
 	github.com/zerok/textbundle-go v0.0.0-20200521090826-d11aedee74ff
 	go.opentelemetry.io/otel v1.27.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.27.0
