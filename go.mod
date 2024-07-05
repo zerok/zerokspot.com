@@ -3,7 +3,7 @@ module gitlab.com/zerok/zerokspot.com
 require (
 	dagger.io/dagger v0.11.9
 	github.com/go-chi/chi/v5 v5.1.0
-	github.com/gohugoio/hugo v0.127.0
+	github.com/gohugoio/hugo v0.128.2
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.14.0
 	github.com/mattn/go-mastodon v0.0.8
@@ -29,7 +29,7 @@ require (
 	github.com/Khan/genqlient v0.7.0 // indirect
 	github.com/ProtonMail/go-crypto v0.0.0-20230217124315-7d5c6f04bbb8 // indirect
 	github.com/adrg/xdg v0.4.0 // indirect
-	github.com/alecthomas/chroma/v2 v2.13.0 // indirect
+	github.com/alecthomas/chroma/v2 v2.14.0 // indirect
 	github.com/armon/go-radix v1.0.1-0.20221118154546-54df44f2176c // indirect
 	github.com/bep/clocks v0.5.0 // indirect
 	github.com/bep/debounce v1.2.0 // indirect
@@ -50,7 +50,7 @@ require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/disintegration/gift v1.2.1 // indirect
 	github.com/dlclark/regexp2 v1.11.0 // indirect
-	github.com/evanw/esbuild v0.20.2 // indirect
+	github.com/evanw/esbuild v0.21.4 // indirect
 	github.com/fatih/color v1.16.0 // indirect
 	github.com/frankban/quicktest v1.14.6 // indirect
 	github.com/fsnotify/fsnotify v1.7.0 // indirect
@@ -64,7 +64,7 @@ require (
 	github.com/gobwas/glob v0.2.3 // indirect
 	github.com/gohugoio/go-i18n/v2 v2.1.3-0.20230805085216-e63c13218d0e // indirect
 	github.com/gohugoio/httpcache v0.7.0 // indirect
-	github.com/gohugoio/hugo-goldmark-extensions/extras v0.1.0 // indirect
+	github.com/gohugoio/hugo-goldmark-extensions/extras v0.2.0 // indirect
 	github.com/gohugoio/hugo-goldmark-extensions/passthrough v0.2.0 // indirect
 	github.com/gohugoio/locales v0.14.0 // indirect
 	github.com/gohugoio/localescompressed v1.0.1 // indirect
@@ -110,7 +110,7 @@ require (
 	github.com/tdewolff/parse/v2 v2.7.13 // indirect
 	github.com/tomnomnom/linkheader v0.0.0-20180905144013-02ca5825eb80 // indirect
 	github.com/vektah/gqlparser/v2 v2.5.16 // indirect
-	github.com/yuin/goldmark-emoji v1.0.2 // indirect
+	github.com/yuin/goldmark-emoji v1.0.3 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploggrpc v0.0.0-20240518090000-14441aefdf88 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploghttp v0.3.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.27.0 // indirect
