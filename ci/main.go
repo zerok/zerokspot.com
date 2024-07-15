@@ -209,9 +209,7 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 
 	hugoContainer = hugoContainer.
 		WithExec([]string{"blog", "changes", "--since-rev", publicRev, "--url", "--output", "public/.changes.txt"}).
-		WithNewFile("/src/public/.gitrev", dagger.ContainerWithNewFileOpts{
-			Contents: gitRev,
-		}).
+		WithNewFile("/src/public/.gitrev", gitRev).
 		WithExec([]string{"chmod", "0755", "/src/public"})
 
 	if err := os.MkdirAll("public", 0700); err != nil {
@@ -230,8 +228,7 @@ func build(ctx context.Context, client *dagger.Client, versions *Versions, publi
 		rsyncContainer := withOtelEnv(ctx, client, getRsyncContainer(client)).
 			WithExec([]string{"mkdir", "/root/.ssh"}).
 			WithExec([]string{"chmod", "0700", "/root/.ssh"}).
-			WithNewFile("/root/.ssh/id_rsa", dagger.ContainerWithNewFileOpts{
-				Contents:    strings.TrimSpace(sshPrivateKey) + "\n",
+			WithNewFile("/root/.ssh/id_rsa", strings.TrimSpace(sshPrivateKey)+"\n", dagger.ContainerWithNewFileOpts{
 				Permissions: 0600,
 			}).
 			WithMountedFile("/usr/local/bin/blogcli", blogBin).
