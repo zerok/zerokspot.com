@@ -3,7 +3,7 @@ module gitlab.com/zerok/zerokspot.com
 require (
 	dagger.io/dagger v0.12.0
 	github.com/go-chi/chi/v5 v5.1.0
-	github.com/gohugoio/hugo v0.128.2
+	github.com/gohugoio/hugo v0.129.0
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.14.0
 	github.com/mattn/go-mastodon v0.0.8
@@ -33,7 +33,7 @@ require (
 	github.com/armon/go-radix v1.0.1-0.20221118154546-54df44f2176c // indirect
 	github.com/bep/clocks v0.5.0 // indirect
 	github.com/bep/debounce v1.2.0 // indirect
-	github.com/bep/gitmap v1.1.2 // indirect
+	github.com/bep/gitmap v1.6.0 // indirect
 	github.com/bep/goat v0.5.0 // indirect
 	github.com/bep/godartsass v1.2.0 // indirect
 	github.com/bep/godartsass/v2 v2.0.0 // indirect
@@ -44,6 +44,7 @@ require (
 	github.com/bep/overlayfs v0.9.2 // indirect
 	github.com/bep/tmc v0.5.1 // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
+	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/clbanning/mxj/v2 v2.7.0 // indirect
 	github.com/cli/safeexec v1.0.1 // indirect
 	github.com/cloudflare/circl v1.3.7 // indirect
@@ -106,8 +107,8 @@ require (
 	github.com/sosodev/duration v1.3.1 // indirect
 	github.com/spf13/cast v1.6.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
-	github.com/tdewolff/minify/v2 v2.20.20 // indirect
-	github.com/tdewolff/parse/v2 v2.7.13 // indirect
+	github.com/tdewolff/minify/v2 v2.20.36 // indirect
+	github.com/tdewolff/parse/v2 v2.7.15 // indirect
 	github.com/tomnomnom/linkheader v0.0.0-20180905144013-02ca5825eb80 // indirect
 	github.com/vektah/gqlparser/v2 v2.5.16 // indirect
 	github.com/yuin/goldmark-emoji v1.0.3 // indirect
