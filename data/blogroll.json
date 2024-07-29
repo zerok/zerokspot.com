@@ -310,11 +310,6 @@
     "site_url": "https://neugierig.org/software/blog/"
   },
   {
-    "title": "Feed for https://jamesg.blog/",
-    "feed_url": "https://jamesg.blog/feeds/posts.xml",
-    "site_url": "https://jamesg.blog/"
-  },
-  {
     "title": "Florian Klien",
     "feed_url": "https://blog.flo.cx/feed/",
     "site_url": "https://blog.flo.cx"
@@ -363,6 +358,11 @@
     "title": "Ire Aderinokun",
     "feed_url": "https://bitsofco.de/rss/",
     "site_url": "https://bitsofco.de/"
+  },
+  {
+    "title": "James",
+    "feed_url": "https://jamesg.blog/feeds/posts.xml",
+    "site_url": "https://jamesg.blog/"
   },
   {
     "title": "James Bennett",
