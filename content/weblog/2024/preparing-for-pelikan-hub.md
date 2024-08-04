@@ -1,5 +1,7 @@
 ---
 date: "2024-08-04T21:43:48+02:00"
+incoming:
+- url: https://chaos.social/@zerok/112905477863610875
 tags:
 - stationery
 - pelikan
