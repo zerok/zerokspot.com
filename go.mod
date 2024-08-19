@@ -3,7 +3,7 @@ module gitlab.com/zerok/zerokspot.com
 require (
 	dagger.io/dagger v0.12.5
 	github.com/go-chi/chi/v5 v5.1.0
-	github.com/gohugoio/hugo v0.132.2
+	github.com/gohugoio/hugo v0.133.0
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.14.0
 	github.com/mattn/go-mastodon v0.0.8
@@ -109,7 +109,7 @@ require (
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/tdewolff/minify/v2 v2.20.37 // indirect
 	github.com/tdewolff/parse/v2 v2.7.15 // indirect
-	github.com/tetratelabs/wazero v1.7.4-0.20240805170331-2b12e189eeec // indirect
+	github.com/tetratelabs/wazero v1.8.0 // indirect
 	github.com/tomnomnom/linkheader v0.0.0-20180905144013-02ca5825eb80 // indirect
 	github.com/vektah/gqlparser/v2 v2.5.16 // indirect
 	github.com/yuin/goldmark-emoji v1.0.3 // indirect
@@ -126,12 +126,12 @@ require (
 	golang.org/x/mod v0.19.0 // indirect
 	golang.org/x/net v0.28.0 // indirect
 	golang.org/x/sync v0.8.0 // indirect
-	golang.org/x/sys v0.23.0 // indirect
+	golang.org/x/sys v0.24.0 // indirect
 	golang.org/x/text v0.17.0 // indirect
 	golang.org/x/tools v0.23.0 // indirect
-	google.golang.org/genproto/googleapis/api v0.0.0-20240701130421-f6361c86f094 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20240722135656-d784300faade // indirect
-	google.golang.org/grpc v1.64.1 // indirect
+	google.golang.org/genproto/googleapis/api v0.0.0-20240812133136-8ffd90a71988 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20240812133136-8ffd90a71988 // indirect
+	google.golang.org/grpc v1.65.0 // indirect
 	google.golang.org/protobuf v1.34.2 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
