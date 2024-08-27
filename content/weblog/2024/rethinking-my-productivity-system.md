@@ -1,5 +1,7 @@
 ---
 date: "2024-08-27T16:27:22+02:00"
+incoming:
+- url: https://chaos.social/@zerok/113034488449772679
 tags:
 - gtd
 - omnifocus
