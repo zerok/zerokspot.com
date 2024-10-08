@@ -705,6 +705,11 @@
     "site_url": "https://heyscottyj.com/"
   },
   {
+    "title": "Scripting News",
+    "feed_url": "http://scripting.com/rss.xml",
+    "site_url": "http://scripting.com/"
+  },
+  {
     "title": "Sebastian Greger",
     "feed_url": "https://sebastiangreger.net/feed/",
     "site_url": "https://sebastiangreger.net"
