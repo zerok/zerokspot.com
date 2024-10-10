@@ -1,6 +1,6 @@
 cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
-dagger.io/dagger v0.13.3 h1:ZgsQr0QDZfSe24ItkzJt6c4IvSUQK47WGmisPx7rsrw=
-dagger.io/dagger v0.13.3/go.mod h1:MskKkqirGk7Nzq8TQY+bGoT7arpLr0D1/ODkJ4jH9i8=
+dagger.io/dagger v0.13.4 h1:zWuNjrotPB+l9xPB7xfRcdoueLFx1MGNJWN4kf6IqxM=
+dagger.io/dagger v0.13.4/go.mod h1:MskKkqirGk7Nzq8TQY+bGoT7arpLr0D1/ODkJ4jH9i8=
 github.com/99designs/gqlgen v0.17.49 h1:b3hNGexHd33fBSAd4NDT/c3NCcQzcAVkknhN9ym36YQ=
 github.com/99designs/gqlgen v0.17.49/go.mod h1:tC8YFVZMed81x7UJ7ORUwXF4Kn6SXuucFqQBhN8+BU0=
 github.com/BurntSushi/locker v0.0.0-20171006230638-a6e239ea1c69 h1:+tu3HOoMXB7RXEINRVIpxJCT+KdYiI7LAEAUrOw3dIU=
