@@ -16,7 +16,7 @@ A couple of years ago when we went to Amsterdam and The Hague we stumbled upon s
 Earlier this year we also stumbled upon [“Wolf” in Brussels](https://wolf.be), which is following the same concept. We enjoyed it so much, that we pretty much spent half a day there to try meals from pretty much every stand. It certainly also helped that they have their brewery with some delicious options.
 
 <figure>
-<img src=“https://zerokspot.com/api/photos/2024/10/12/IMG_2976.jpeg?profile=1024” />
+<img src="https://zerokspot.com/api/photos/2024/10/12/IMG_2976.jpeg?profile=1024" />
 <figcaption>Front entrance of the Gleis//Garten with some outdoor seating</figcaption>
 </figure>
 
