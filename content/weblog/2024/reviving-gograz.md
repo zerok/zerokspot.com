@@ -1,5 +1,7 @@
 ---
 date: "2024-10-20T21:36:23+02:00"
+incoming:
+- url: https://chaos.social/@zerok/113341455267405868
 tags:
 - gograz
 - golang
