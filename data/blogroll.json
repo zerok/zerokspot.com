@@ -615,6 +615,11 @@
     "site_url": "https://mikestone.me/"
   },
   {
+    "title": "Molly White's activity feed",
+    "feed_url": "https://www.mollywhite.net/feed/feed.xml",
+    "site_url": "https://mollywhite.net/feed"
+  },
+  {
     "title": "Nadia Eghbal",
     "feed_url": "https://nadiaeghbal.com/feed.xml",
     "site_url": "https://nadiaeghbal.com/"
