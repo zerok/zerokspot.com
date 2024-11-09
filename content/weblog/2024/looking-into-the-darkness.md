@@ -1,5 +1,7 @@
 ---
 date: "2024-11-09T22:21:52+01:00"
+incoming:
+- url: https://chaos.social/@zerok/113455137161854403
 tags:
 - politics
 title: Looking into the darkness
