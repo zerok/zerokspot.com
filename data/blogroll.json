@@ -565,11 +565,6 @@
     "site_url": "https://birchtree.me/"
   },
   {
-    "title": "Matt Mullenweg",
-    "feed_url": "http://ma.tt/feed/",
-    "site_url": "https://ma.tt"
-  },
-  {
     "title": "Matt Webb",
     "feed_url": "http://interconnected.org/home/feed",
     "site_url": "https://interconnected.org/home"
@@ -683,11 +678,6 @@
     "title": "Robert Lender",
     "feed_url": "http://www.robertlender.info/blog/feeds/index.rss2",
     "site_url": "https://nureinblog.at"
-  },
-  {
-    "title": "Ron Jeffries",
-    "feed_url": "https://ronjeffries.com/feed.xml",
-    "site_url": "https://ronjeffries.com/"
   },
   {
     "title": "Rosemary Orchard",
