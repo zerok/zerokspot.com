@@ -103,7 +103,7 @@ var buildArchiveCmd = &cobra.Command{
 			if err := writeFile(f, yearCtx{
 				Title:     year,
 				Year:      year,
-				Date:      year,
+				Date:      year + "-01-01",
 				Paths:     paths,
 				NumPosts:  numPosts,
 				NumPhotos: numPhotos,
@@ -138,7 +138,7 @@ var buildArchiveCmd = &cobra.Command{
 			if err := writeFile(f, monthCtx{
 				Title:     fmt.Sprintf("%s // %s", year, month),
 				Year:      year,
-				Date:      year,
+				Date:      year + "-" + month + "-01",
 				Month:     month,
 				Paths:     paths,
 				NumPosts:  numPosts,
