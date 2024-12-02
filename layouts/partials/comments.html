@@ -11,10 +11,21 @@
     {{ range .Params.incoming }}
         {{ if in .url "chaos.social" }}
 <div class="mastodon-comments" data-url="{{ .url }}">
-    <h2>Comments</h2>
+    <h2>Comments via Mastdon</h2>
     <p>If you have a Mastodon account, you can also leave a comment by replying to <a href="{{ .url }}">this status</a>.</p>
 </div>
+        {{ end }}
+        {{ if in .url "bsky.app" }}
+        <div class="bluesky-comments">
+            <h2>Comments via Bluesky</h2>
+            <p>If you have a Bluesky account, you can also leave a comment by replying to <a href="{{ .url }}">this post</a>.</p>
+            {{ $handle := index (strings.Split .url "/") 4 }}
+            {{ $postid := index (strings.Split .url "/") 6 }}
+            <div hx-swap="innerHTML" hx-trigger="load" hx-get="http://localhost:8080/api/v1/thread?uri=at://{{ $handle }}/app.bsky.feed.post/{{ $postid }}"></div>
+        </div>
+        <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
         {{ end }}
     {{ end }}
 {{ end }}
 </div>
+

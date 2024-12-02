@@ -112,7 +112,8 @@ aside {
 .event__content,
 .comments,
 .webmention-widget,
-.mastodon-comments {
+.mastodon-comments,
+.bluesky-comments {
     @include content-content;
 }
 
@@ -288,14 +289,27 @@ aside {
     border-top: 0;
 }
 
-.mastodon-comment {
+.mastodon-comment,
+.bsky-feed-post {
     display: grid;
     grid-template-columns: 100px auto;
     padding: 10px 0;
     border-top: 1px dotted #888;
 }
 
-.mastodon-comment__avatar {
+.bsky-feed-thread {
+    padding: 10px 0;
+    border-top: 1px dotted #888;
+}
+.bsky-feed-thread.bsky-feed-thread--lvl0,
+.bsky-feed-post__replies > .bsky-feed-thread
+{
+  border-top: 0px;
+  padding: 0px;
+}
+
+.mastodon-comment__avatar,
+.bsky-feed-post__avatar {
     a {
         display: block;
         border: 1px solid #888;
@@ -307,7 +321,18 @@ aside {
         display: block;
     }
 }
-a.mastodon-comment__date {
+
+.bsky-feed-post__replies {
+    display: block;
+    margin-left: 50px;
+}
+
+.bsky-feed-thread--lvl0 > .bsky-feed-post__replies {
+    margin-left: 0px;
+}
+
+a.mastodon-comment__date,
+a.bsky-feed-post__date {
     display: block;
     text-align: right;
     border: none;
@@ -317,7 +342,8 @@ a.mastodon-comment__date {
         background: none;
     }
 }
-.mastodon-comment__content {
+.mastodon-comment__content,
+.bsky-feed-post__content {
     padding-left: 20px;
     p:first-child {
         margin-top: 0;
