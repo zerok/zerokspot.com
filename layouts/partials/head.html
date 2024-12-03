@@ -20,4 +20,7 @@
     <link href="{{ .Permalink }}" rel="alternate" type="{{ .MediaType.Type }}" title="{{ if $pageTitle }}{{ $pageTitle }} - {{ end }}zerokspot.com" />
     {{ end }}
     {{- if .Title }}<meta property="og:title" content="{{ htmlEscape .Title }}">{{ end }}
+    <!-- Needed for local development -->
+    <meta name="htmx-config" content='{"selfRequestsOnly":false}'>
+
 </head>

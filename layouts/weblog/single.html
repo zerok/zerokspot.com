@@ -75,6 +75,8 @@
                             dev.to
                             {{- else if in .url "reddit.com" -}}
                             Reddit
+                            {{- else if in .url "bsky.app" -}}
+                            Bluesky
                             {{- end -}}
                         </a></li>
                         {{ end }}
