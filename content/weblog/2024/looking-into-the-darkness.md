@@ -5,6 +5,8 @@ incoming:
 tags:
 - politics
 title: Looking into the darkness
+incoming:
+- url: "https://bsky.app/profile/zerokspot.com/post/3lakaimpey226"
 ---
 
 When I woke up on Wednesday morning, I was shocked. I had not expect the US election to end up this way and with such a lead. I'm lucky in that regard that, whatever comes next, will affect me only indirectly.  In my head there are tons of scenarios how bad this all going to get, but just playing around with these won't help anyone.
