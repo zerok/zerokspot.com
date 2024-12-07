@@ -3,6 +3,7 @@ address: Friedberger Landstraße 83, 60318 Frankfurt am Main
 date: "2024-11-02T21:33:50+01:00"
 incoming:
 - url: https://chaos.social/@zerok/113415299167654917
+- url: https://bsky.app/profile/zerokspot.com/post/3l7ykeofbcw2s
 tags:
 - reviews
 - restaurants
