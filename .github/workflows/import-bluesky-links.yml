@@ -1,0 +1,32 @@
+name: "Import Bluesky Links"
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: "./go.mod"
+      - id: cache-blog-binary
+        uses: ./.github/actions/cache-blog-binary
+      - run: "go run ./ci pipelines import-bluesky-links"
+        env:
+          GITHUB_TOKEN: "${{ steps.app-token.outputs.token }}"
+          CACHE_HIT_BLOG_BINARY: "${{ steps.cache-blog-binary.outputs.cache-hit }}"
