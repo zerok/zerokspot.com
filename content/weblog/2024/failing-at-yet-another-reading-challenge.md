@@ -1,5 +1,7 @@
 ---
 date: "2024-12-14T22:34:20+01:00"
+incoming:
+- url: https://bsky.app/profile/zerokspot.com/post/3ldcbdcwde22b
 tags:
 - reading
 title: Failing at yet another reading challenge
