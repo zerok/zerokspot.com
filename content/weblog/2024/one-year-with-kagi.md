@@ -1,5 +1,7 @@
 ---
 date: "2024-12-19T16:39:43+01:00"
+incoming:
+- url: https://bsky.app/profile/zerokspot.com/post/3ldo7m7royc2r
 tags:
 - search
 - web
