@@ -2,6 +2,7 @@
 date: "2025-01-09T17:52:47+01:00"
 incoming:
 - url: https://chaos.social/@zerok/113799449728881490
+- url: https://bsky.app/profile/zerokspot.com/post/3lfd5hv7ohc2r
 tags:
 - rant
 - journaling
