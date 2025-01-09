@@ -1,5 +1,7 @@
 ---
 date: "2025-01-09T17:52:47+01:00"
+incoming:
+- url: https://chaos.social/@zerok/113799449728881490
 tags:
 - rant
 - journaling
