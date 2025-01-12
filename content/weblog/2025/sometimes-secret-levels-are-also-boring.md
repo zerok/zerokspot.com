@@ -2,6 +2,7 @@
 date: "2025-01-12T21:18:00+01:00"
 incoming:
 - url: https://chaos.social/@zerok/113817435482943198
+- url: https://bsky.app/profile/zerokspot.com/post/3lfl52ulhnk2q
 tags:
 - gaming
 - tvshows
