@@ -1,5 +1,7 @@
 ---
 date: "2025-01-14T07:51:11+01:00"
+incoming:
+- url: https://chaos.social/@zerok/113825539795114710
 tags:
 - challenges
 - meta
