@@ -1,4 +1,4 @@
-{{ $css := (resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint ) }}
+{{ $css := (resources.Get "sass/main.scss" | css.Sass | resources.Minify | resources.Fingerprint ) }}
 <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/favicon.ico">

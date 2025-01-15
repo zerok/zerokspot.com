@@ -3,7 +3,9 @@ title = "zerokspot.com"
 metaDataFormat = "yaml"
 editor = "em -n"
 ignoreFiles = [ "\\.\\#" ]
-paginate = 10
+
+[pagination]
+pageSize = 10
 
 [markup]
   defaultMarkdownHandler = "goldmark"

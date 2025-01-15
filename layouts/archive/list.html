@@ -35,7 +35,7 @@ over the years, you can find that under <a href="/tags/">/tags/</a>.</p>
                   </tr>
                 </thead>
                 <tbody>
-                {{ range .Pages.Reverse }}
+                {{ range .Pages }}
                 <tr>
                   <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
                   <td>{{ .Params.numposts }}</td>
