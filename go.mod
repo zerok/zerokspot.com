@@ -4,7 +4,7 @@ require (
 	dagger.io/dagger v0.15.2
 	github.com/bluesky-social/indigo v0.0.0-20241206035216-5ee8937072a8
 	github.com/go-chi/chi/v5 v5.2.0
-	github.com/gohugoio/hugo v0.140.2
+	github.com/gohugoio/hugo v0.141.0
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.15.0
 	github.com/mattn/go-mastodon v0.0.9
@@ -30,7 +30,7 @@ require (
 	github.com/Khan/genqlient v0.7.0 // indirect
 	github.com/ProtonMail/go-crypto v0.0.0-20230217124315-7d5c6f04bbb8 // indirect
 	github.com/adrg/xdg v0.5.3 // indirect
-	github.com/alecthomas/chroma/v2 v2.14.0 // indirect
+	github.com/alecthomas/chroma/v2 v2.15.0 // indirect
 	github.com/armon/go-radix v1.0.1-0.20221118154546-54df44f2176c // indirect
 	github.com/bep/clocks v0.5.0 // indirect
 	github.com/bep/debounce v1.2.0 // indirect
@@ -52,8 +52,8 @@ require (
 	github.com/cloudflare/circl v1.3.7 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/disintegration/gift v1.2.1 // indirect
-	github.com/dlclark/regexp2 v1.11.0 // indirect
-	github.com/evanw/esbuild v0.24.0 // indirect
+	github.com/dlclark/regexp2 v1.11.4 // indirect
+	github.com/evanw/esbuild v0.24.2 // indirect
 	github.com/fatih/color v1.18.0 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/frankban/quicktest v1.14.6 // indirect
@@ -68,7 +68,7 @@ require (
 	github.com/gobwas/glob v0.2.3 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/gohugoio/go-i18n/v2 v2.1.3-0.20230805085216-e63c13218d0e // indirect
-	github.com/gohugoio/hashstructure v0.1.0 // indirect
+	github.com/gohugoio/hashstructure v0.3.0 // indirect
 	github.com/gohugoio/httpcache v0.7.0 // indirect
 	github.com/gohugoio/hugo-goldmark-extensions/extras v0.2.0 // indirect
 	github.com/gohugoio/hugo-goldmark-extensions/passthrough v0.3.0 // indirect
@@ -167,7 +167,7 @@ require (
 	golang.org/x/sync v0.10.0 // indirect
 	golang.org/x/sys v0.29.0 // indirect
 	golang.org/x/text v0.21.0 // indirect
-	golang.org/x/tools v0.28.0 // indirect
+	golang.org/x/tools v0.29.0 // indirect
 	golang.org/x/xerrors v0.0.0-20240716161551-93cc26a95ae9 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20250115164207-1a7da9e5054f // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250115164207-1a7da9e5054f // indirect
@@ -175,6 +175,7 @@ require (
 	google.golang.org/protobuf v1.36.3 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	lukechampine.com/blake3 v1.2.1 // indirect
+	rsc.io/qr v0.2.0 // indirect
 )
 
 go 1.23
