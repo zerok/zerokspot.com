@@ -1,0 +1,24 @@
+name: Auto-merge new articles
+on:
+  pull_request: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-approve-article:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          if [[ "${{ github.event.pull_request.user.login }}" != "zerok" ]]; then
+            echo "Wrong PR author"
+            exit 0
+          fi
+          TITLE=$(gh pr view --json title ${{ github.event.number }} | jq -r '.title')
+          if [[ "$TITLE" == "Article: "* ]]; then
+            gh pr merge --squash --auto ${{ github.event.number }}
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
