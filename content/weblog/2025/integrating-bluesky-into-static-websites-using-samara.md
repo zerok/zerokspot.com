@@ -1,5 +1,7 @@
 ---
 date: "2025-01-26T11:47:46+01:00"
+incoming:
+- url: https://bsky.app/profile/zerokspot.com/post/3lgnbt3gahc2j
 tags:
 - bluesky
 - meta
