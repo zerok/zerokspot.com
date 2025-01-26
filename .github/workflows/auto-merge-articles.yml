@@ -10,6 +10,11 @@ jobs:
   auto-approve-article:
     runs-on: ubuntu-24.04
     steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - uses: actions/checkout@v4
       - run: |
           if [[ "${{ github.event.pull_request.user.login }}" != "zerok" ]]; then
@@ -21,4 +26,4 @@ jobs:
             gh pr merge --squash --auto ${{ github.event.number }}
           fi
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
