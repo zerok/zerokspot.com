@@ -4,7 +4,7 @@ require (
 	dagger.io/dagger v0.15.2
 	github.com/bluesky-social/indigo v0.0.0-20241206035216-5ee8937072a8
 	github.com/go-chi/chi/v5 v5.2.0
-	github.com/gohugoio/hugo v0.142.0
+	github.com/gohugoio/hugo v0.143.0
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.15.0
 	github.com/mattn/go-mastodon v0.0.9
