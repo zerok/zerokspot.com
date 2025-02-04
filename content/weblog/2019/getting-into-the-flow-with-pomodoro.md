@@ -8,7 +8,7 @@ tags:
 - workflow
 ---
 
-In mid-November my mental workload finally reached a dangerous level, so I started to experiment with the [Pomodoro technique](https://francescocirillo.com/pages/pomodoro-technique). For those who don't know it, Pomodoro is a time management method developed by Francesco Cirillo which focuses on creating highly focused work time intervals interleaved with breaks. Usually, every work iteration has 25 minutes followed by a pause of five minutes. After four such iterations there is a longer break of around 20-30 minutes.
+In mid-November my mental workload finally reached a dangerous level, so I started to experiment with the [Pomodoro technique](https://francescocirillo.com/pages/pomodoro-technique) ([archive.org link](https://web.archive.org/web/20230306054358/https://francescocirillo.com/products/the-pomodoro-technique). For those who don't know it, Pomodoro is a time management method developed by Francesco Cirillo which focuses on creating highly focused work time intervals interleaved with breaks. Usually, every work iteration has 25 minutes followed by a pause of five minutes. After four such iterations there is a longer break of around 20-30 minutes.
 
 With Pomodoro you have a timer somewhere lying around that enforces these time limits. A quick search through the AppStore resulted in far too many options but luckily also included [BFT, the Bear Focus Timer](https://itunes.apple.com/us/app/bft-bear-focus-timer/id1328806990). BFT has the additional benefit, that it uses the phone audio output to play some "rain music" which makes staying focused easier. The only disadvantage I've noticed there yet is that when used throughout the day it needs quite a lot of battery power.
 
