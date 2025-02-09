@@ -1,5 +1,7 @@
 ---
 date: "2025-02-09T21:13:29+01:00"
+incoming:
+- url: https://chaos.social/@zerok/113975770356995609
 tags:
 - fosdem
 - belgium
