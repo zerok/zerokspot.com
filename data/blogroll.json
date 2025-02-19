@@ -800,6 +800,11 @@
     "site_url": "https://newsletter.danielmiessler.com/"
   },
   {
+    "title": "Vardan Torosyan",
+    "feed_url": "https://vtorosyan.github.io/feed.xml",
+    "site_url": "https://vtorosyan.github.io/"
+  },
+  {
     "title": "Vincent Ritter",
     "feed_url": "https://vincentritter.com/feeds/all.rss",
     "site_url": "https://vincentritter.com/"
