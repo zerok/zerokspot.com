@@ -1,7 +1,7 @@
 module gitlab.com/zerok/zerokspot.com
 
 require (
-	dagger.io/dagger v0.16.2
+	dagger.io/dagger v0.16.3
 	github.com/bluesky-social/indigo v0.0.0-20241206035216-5ee8937072a8
 	github.com/go-chi/chi/v5 v5.2.1
 	github.com/gohugoio/hugo v0.145.0
@@ -143,7 +143,7 @@ require (
 	github.com/tdewolff/parse/v2 v2.7.18 // indirect
 	github.com/tetratelabs/wazero v1.9.0 // indirect
 	github.com/tomnomnom/linkheader v0.0.0-20180905144013-02ca5825eb80 // indirect
-	github.com/vektah/gqlparser/v2 v2.5.22 // indirect
+	github.com/vektah/gqlparser/v2 v2.5.23 // indirect
 	github.com/whyrusleeping/cbor-gen v0.2.1-0.20241030202151-b7a6831be65e // indirect
 	github.com/yuin/goldmark-emoji v1.0.5 // indirect
 	go.opentelemetry.io/auto/sdk v1.1.0 // indirect
@@ -161,14 +161,14 @@ require (
 	go.uber.org/atomic v1.11.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.27.0 // indirect
-	golang.org/x/crypto v0.33.0 // indirect
+	golang.org/x/crypto v0.36.0 // indirect
 	golang.org/x/exp v0.0.0-20231110203233-9a3e6036ecaa // indirect
 	golang.org/x/image v0.24.0 // indirect
 	golang.org/x/mod v0.23.0 // indirect
-	golang.org/x/net v0.35.0 // indirect
-	golang.org/x/sync v0.11.0 // indirect
-	golang.org/x/sys v0.30.0 // indirect
-	golang.org/x/text v0.22.0 // indirect
+	golang.org/x/net v0.37.0 // indirect
+	golang.org/x/sync v0.12.0 // indirect
+	golang.org/x/sys v0.31.0 // indirect
+	golang.org/x/text v0.23.0 // indirect
 	golang.org/x/tools v0.30.0 // indirect
 	golang.org/x/xerrors v0.0.0-20240716161551-93cc26a95ae9 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20250218202821-56aae31c358a // indirect
@@ -180,6 +180,6 @@ require (
 	rsc.io/qr v0.2.0 // indirect
 )
 
-go 1.23
+go 1.23.0
 
-toolchain go1.23.3
+toolchain go1.24.1
