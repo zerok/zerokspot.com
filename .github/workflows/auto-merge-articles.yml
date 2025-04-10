@@ -18,7 +18,7 @@ jobs:
           fi
           echo "result=true" >> $GITHUB_OUTPUT
 
-      - uses: actions/create-github-app-token@v1
+      - uses: actions/create-github-app-token@v2
         if: steps.check.outputs.result == 'true'
         id: app-token
         with:
