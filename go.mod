@@ -4,7 +4,7 @@ require (
 	dagger.io/dagger v0.18.3
 	github.com/bluesky-social/indigo v0.0.0-20241206035216-5ee8937072a8
 	github.com/go-chi/chi/v5 v5.2.1
-	github.com/gohugoio/hugo v0.146.4
+	github.com/gohugoio/hugo v0.146.7
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.15.0
 	github.com/mattn/go-mastodon v0.0.9
@@ -12,7 +12,7 @@ require (
 	github.com/spf13/cobra v1.9.1
 	github.com/stretchr/testify v1.10.0
 	github.com/ulikunitz/xz v0.5.12
-	github.com/yuin/goldmark v1.7.9
+	github.com/yuin/goldmark v1.7.10
 	github.com/zerok/textbundle-go v0.0.0-20200521090826-d11aedee74ff
 	go.opentelemetry.io/otel v1.35.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.35.0
@@ -40,7 +40,7 @@ require (
 	github.com/bep/golibsass v1.2.0 // indirect
 	github.com/bep/goportabletext v0.1.0 // indirect
 	github.com/bep/gowebp v0.3.0 // indirect
-	github.com/bep/imagemeta v0.11.0 // indirect
+	github.com/bep/imagemeta v0.12.0 // indirect
 	github.com/bep/lazycache v0.8.0 // indirect
 	github.com/bep/logg v0.4.0 // indirect
 	github.com/bep/overlayfs v0.10.0 // indirect
@@ -144,7 +144,7 @@ require (
 	github.com/tomnomnom/linkheader v0.0.0-20180905144013-02ca5825eb80 // indirect
 	github.com/vektah/gqlparser/v2 v2.5.23 // indirect
 	github.com/whyrusleeping/cbor-gen v0.2.1-0.20241030202151-b7a6831be65e // indirect
-	github.com/yuin/goldmark-emoji v1.0.5 // indirect
+	github.com/yuin/goldmark-emoji v1.0.6 // indirect
 	go.opentelemetry.io/auto/sdk v1.1.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.58.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploggrpc v0.8.0 // indirect

@@ -39,8 +39,8 @@ github.com/bep/goportabletext v0.1.0 h1:8dqym2So1cEqVZiBa4ZnMM1R9l/DnC1h4ONg4J5k
 github.com/bep/goportabletext v0.1.0/go.mod h1:6lzSTsSue75bbcyvVc0zqd1CdApuT+xkZQ6Re5DzZFg=
 github.com/bep/gowebp v0.3.0 h1:MhmMrcf88pUY7/PsEhMgEP0T6fDUnRTMpN8OclDrbrY=
 github.com/bep/gowebp v0.3.0/go.mod h1:ZhFodwdiFp8ehGJpF4LdPl6unxZm9lLFjxD3z2h2AgI=
-github.com/bep/imagemeta v0.11.0 h1:jL92HhL1H70NC+f8OVVn5D/nC3FmdxTnM3R+csj54mE=
-github.com/bep/imagemeta v0.11.0/go.mod h1:23AF6O+4fUi9avjiydpKLStUNtJr5hJB4rarG18JpN8=
+github.com/bep/imagemeta v0.12.0 h1:ARf+igs5B7pf079LrqRnwzQ/wEB8Q9v4NSDRZO1/F5k=
+github.com/bep/imagemeta v0.12.0/go.mod h1:23AF6O+4fUi9avjiydpKLStUNtJr5hJB4rarG18JpN8=
 github.com/bep/lazycache v0.8.0 h1:lE5frnRjxaOFbkPZ1YL6nijzOPPz6zeXasJq8WpG4L8=
 github.com/bep/lazycache v0.8.0/go.mod h1:BQ5WZepss7Ko91CGdWz8GQZi/fFnCcyWupv8gyTeKwk=
 github.com/bep/logg v0.4.0 h1:luAo5mO4ZkhA5M1iDVDqDqnBBnlHjmtZF6VAyTp+nCQ=
@@ -122,8 +122,8 @@ github.com/gohugoio/hashstructure v0.5.0 h1:G2fjSBU36RdwEJBWJ+919ERvOVqAg9tfcYp4
 github.com/gohugoio/hashstructure v0.5.0/go.mod h1:Ser0TniXuu/eauYmrwM4o64EBvySxNzITEOLlm4igec=
 github.com/gohugoio/httpcache v0.7.0 h1:ukPnn04Rgvx48JIinZvZetBfHaWE7I01JR2Q2RrQ3Vs=
 github.com/gohugoio/httpcache v0.7.0/go.mod h1:fMlPrdY/vVJhAriLZnrF5QpN3BNAcoBClgAyQd+lGFI=
-github.com/gohugoio/hugo v0.146.4 h1:wV9BPs40xWmPxI5oklsDec+KcW1nG1KPtsyHBnfaD2k=
-github.com/gohugoio/hugo v0.146.4/go.mod h1:WsWhL6F5z0/ER9LgREuNp96eovssVKVCEDHgkibceuU=
+github.com/gohugoio/hugo v0.146.7 h1:HZ2BVvXX4DsAqBvPXe31HhOGMppIcE+ur2HD6mGr/k0=
+github.com/gohugoio/hugo v0.146.7/go.mod h1:EoUvqV0cPxt+ghvJylO9cnsxKNfUGFYSi8ui1/wuS1I=
 github.com/gohugoio/hugo-goldmark-extensions/extras v0.3.0 h1:gj49kTR5Z4Hnm0ZaQrgPVazL3DUkppw+x6XhHCmh+Wk=
 github.com/gohugoio/hugo-goldmark-extensions/extras v0.3.0/go.mod h1:IMMj7xiUbLt1YNJ6m7AM4cnsX4cFnnfkleO/lBHGzUg=
 github.com/gohugoio/hugo-goldmark-extensions/passthrough v0.3.1 h1:nUzXfRTszLliZuN0JTKeunXTRaiFX6ksaWP0puLLYAY=
@@ -359,11 +359,10 @@ github.com/whyrusleeping/cbor-gen v0.2.1-0.20241030202151-b7a6831be65e/go.mod h1
 github.com/yuin/goldmark v1.1.27/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.2.1/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.3.5/go.mod h1:mwnBkeHKe2W/ZEtQ+71ViKU8L12m81fl3OWwC1Zlc8k=
-github.com/yuin/goldmark v1.7.1/go.mod h1:uzxRWxtg69N339t3louHJ7+O03ezfj6PlliRlaOzY1E=
-github.com/yuin/goldmark v1.7.9 h1:rVSeT+f7/lAM+bJHVm5YHGwNrnd40i1Ch2DEocEjHQ0=
-github.com/yuin/goldmark v1.7.9/go.mod h1:ip/1k0VRfGynBgxOz0yCqHrbZXhcjxyuS66Brc7iBKg=
-github.com/yuin/goldmark-emoji v1.0.5 h1:EMVWyCGPlXJfUXBXpuMu+ii3TIaxbVBnEX9uaDC4cIk=
-github.com/yuin/goldmark-emoji v1.0.5/go.mod h1:tTkZEbwu5wkPmgTcitqddVxY9osFZiavD+r4AzQrh1U=
+github.com/yuin/goldmark v1.7.10 h1:S+LrtBjRmqMac2UdtB6yyCEJm+UILZ2fefI4p7o0QpI=
+github.com/yuin/goldmark v1.7.10/go.mod h1:ip/1k0VRfGynBgxOz0yCqHrbZXhcjxyuS66Brc7iBKg=
+github.com/yuin/goldmark-emoji v1.0.6 h1:QWfF2FYaXwL74tfGOW5izeiZepUDroDJfWubQI9HTHs=
+github.com/yuin/goldmark-emoji v1.0.6/go.mod h1:ukxJDKFpdFb5x0a5HqbdlcKtebh086iJpI31LTKmWuA=
 github.com/zerok/textbundle-go v0.0.0-20200521090826-d11aedee74ff h1:L5Irjs3uqjTFS/2t8kBXOKqyAuqLEHSeEt0/oR8unvI=
 github.com/zerok/textbundle-go v0.0.0-20200521090826-d11aedee74ff/go.mod h1:ycbaKH978VcZHHVv7DAR+t3OHBwnHZT3Xeent1x8Thc=
 go.opentelemetry.io/auto/sdk v1.1.0 h1:cH53jehLUN6UFLY71z+NDOiNJqDdPRaXzTel0sJySYA=
