@@ -62,7 +62,7 @@
   {
     "title": "Aral Balkan",
     "feed_url": "https://ar.al/index.xml",
-    "site_url": "https://ar.al/"
+    "site_url": "https://localhost/"
   },
   {
     "title": "Armin Ronacher",
