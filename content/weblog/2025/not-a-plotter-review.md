@@ -2,6 +2,7 @@
 date: "2025-05-05T20:16:54+02:00"
 incoming:
 - url: https://chaos.social/@zerok/114456616531464185
+- url: https://bsky.app/profile/zerokspot.com/post/3logyfjqwnc2y
 tags:
 - plotter
 - pen-and-paper
