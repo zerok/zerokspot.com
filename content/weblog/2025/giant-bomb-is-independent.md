@@ -1,5 +1,7 @@
 ---
 date: "2025-05-11T18:58:26+02:00"
+incoming:
+- url: https://chaos.social/@zerok/114490280629346992
 tags:
 - gaming
 title: Giant Bomb is now staff-owned!
