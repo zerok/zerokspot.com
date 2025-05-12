@@ -1,7 +1,7 @@
 module gitlab.com/zerok/zerokspot.com
 
 require (
-	dagger.io/dagger v0.18.5
+	dagger.io/dagger v0.18.6
 	github.com/bluesky-social/indigo v0.0.0-20241206035216-5ee8937072a8
 	github.com/go-chi/chi/v5 v5.2.1
 	github.com/gohugoio/hugo v0.147.3
