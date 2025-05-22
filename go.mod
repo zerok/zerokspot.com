@@ -4,7 +4,7 @@ require (
 	dagger.io/dagger v0.18.8
 	github.com/bluesky-social/indigo v0.0.0-20241206035216-5ee8937072a8
 	github.com/go-chi/chi/v5 v5.2.1
-	github.com/gohugoio/hugo v0.147.3
+	github.com/gohugoio/hugo v0.147.5
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.15.0
 	github.com/mattn/go-mastodon v0.0.9
@@ -138,8 +138,8 @@ require (
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/spf13/cast v1.7.1 // indirect
 	github.com/spf13/pflag v1.0.6 // indirect
-	github.com/tdewolff/minify/v2 v2.21.1 // indirect
-	github.com/tdewolff/parse/v2 v2.7.18 // indirect
+	github.com/tdewolff/minify/v2 v2.23.5 // indirect
+	github.com/tdewolff/parse/v2 v2.8.0 // indirect
 	github.com/tetratelabs/wazero v1.9.0 // indirect
 	github.com/tomnomnom/linkheader v0.0.0-20180905144013-02ca5825eb80 // indirect
 	github.com/vektah/gqlparser/v2 v2.5.26 // indirect
