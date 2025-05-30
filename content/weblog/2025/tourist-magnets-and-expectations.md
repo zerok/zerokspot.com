@@ -2,6 +2,7 @@
 date: "2025-05-30T17:32:37+02:00"
 incoming:
 - url: https://bsky.app/profile/zerokspot.com/post/3lqfkyltbtc2u
+- url: https://chaos.social/@zerok/114597928044130555
 tags:
 - salzburg
 - travels
