@@ -735,6 +735,11 @@
     "site_url": "https://stationery.pizza"
   },
   {
+    "title": "Steve Klabnik",
+    "feed_url": "https://steveklabnik.com/feed.xml",
+    "site_url": "https://steveklabnik.com/"
+  },
+  {
     "title": "Steven Aquino",
     "feed_url": "https://www.stevensblog.co/blogs?format=rss",
     "site_url": "https://www.stevensblog.co/"
