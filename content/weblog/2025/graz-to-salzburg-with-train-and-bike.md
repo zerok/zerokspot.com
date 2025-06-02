@@ -1,5 +1,7 @@
 ---
 date: "2025-06-02T20:40:12+02:00"
+incoming:
+- url: https://chaos.social/@zerok/114615374765198715
 tags:
 - travels
 - biking
