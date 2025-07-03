@@ -2,6 +2,7 @@
 date: "2025-07-03T14:58:08+02:00"
 incoming:
 - url: https://chaos.social/@zerok/114789461750616681
+- url: https://bsky.app/profile/zerokspot.com/post/3lt2spwe55c24
 tags:
 - til
 - linux
