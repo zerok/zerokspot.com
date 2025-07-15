@@ -765,6 +765,11 @@
     "site_url": "https://tantek.com/"
   },
   {
+    "title": "The Enthusiast",
+    "feed_url": "https://www.theenthusiast.net/rss/",
+    "site_url": "https://www.theenthusiast.net/"
+  },
+  {
     "title": "The Jolly Teapot",
     "feed_url": "https://thejollyteapot.com/feed.rss",
     "site_url": "https://thejollyteapot.com/"
