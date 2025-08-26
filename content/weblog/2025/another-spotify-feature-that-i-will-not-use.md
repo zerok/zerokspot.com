@@ -1,5 +1,7 @@
 ---
 date: "2025-08-26T16:05:01+02:00"
+incoming:
+- url: https://chaos.social/@zerok/115095466204259500
 tags:
 - spotify
 - enshittification
