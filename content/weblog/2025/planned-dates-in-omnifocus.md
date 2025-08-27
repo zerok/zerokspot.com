@@ -1,5 +1,7 @@
 ---
 date: "2025-08-27T21:22:17+02:00"
+incoming:
+- url: https://chaos.social/@zerok/115102387091758278
 tags:
 - productivity
 - news
