@@ -11,7 +11,7 @@ require (
 	github.com/spf13/afero v1.14.0
 	github.com/spf13/cobra v1.9.1
 	github.com/stretchr/testify v1.11.1
-	github.com/ulikunitz/xz v0.5.14
+	github.com/ulikunitz/xz v0.5.15
 	github.com/yuin/goldmark v1.7.13
 	github.com/zerok/textbundle-go v0.0.0-20200521090826-d11aedee74ff
 	go.opentelemetry.io/otel v1.37.0
