@@ -1,5 +1,7 @@
 ---
 date: "2025-09-02T20:50:23+02:00"
+incoming:
+- url: https://chaos.social/@zerok/115141564455195177
 rating: 3
 tags:
 - books
