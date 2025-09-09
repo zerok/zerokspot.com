@@ -1,5 +1,7 @@
 ---
 date: "2025-09-09T14:34:19+02:00"
+incoming:
+- url: https://chaos.social/@zerok/115174381644790597
 tags:
 - escooter
 - reviews
