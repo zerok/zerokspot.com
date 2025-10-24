@@ -1,7 +1,7 @@
 module gitlab.com/zerok/zerokspot.com
 
 require (
-	dagger.io/dagger v0.19.2
+	dagger.io/dagger v0.19.3
 	github.com/bluesky-social/indigo v0.0.0-20241206035216-5ee8937072a8
 	github.com/go-chi/chi/v5 v5.2.3
 	github.com/gohugoio/hugo v0.151.2
@@ -25,7 +25,7 @@ require (
 )
 
 require (
-	github.com/99designs/gqlgen v0.17.80 // indirect
+	github.com/99designs/gqlgen v0.17.81 // indirect
 	github.com/BurntSushi/locker v0.0.0-20171006230638-a6e239ea1c69 // indirect
 	github.com/JohannesKaufmann/dom v0.2.0 // indirect
 	github.com/JohannesKaufmann/html-to-markdown/v2 v2.4.0 // indirect
@@ -182,7 +182,7 @@ require (
 	golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20250825161204-c5933d9347a5 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250929231259-57b25ae835d4 // indirect
-	google.golang.org/grpc v1.75.1 // indirect
+	google.golang.org/grpc v1.76.0 // indirect
 	google.golang.org/protobuf v1.36.9 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	lukechampine.com/blake3 v1.2.1 // indirect
