@@ -1,9 +1,11 @@
 ---
 date: "2025-11-04T20:45:00+01:00"
+incoming:
+- url: https://chaos.social/@zerok/115493179663147109
 tags:
 - fountainpens
 - pelikanhub
-title: "Pelikan Hub 2025 in Vienna"
+title: Pelikan Hub 2025 in Vienna
 ---
 
 It's been a while and a lot has happened in my life. Focusing on the positive I thought it might be nice to do a little recap of my trip to Vienna two weeks ago for this year's Pelikan Hub 🙂
