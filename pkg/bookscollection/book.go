@@ -7,6 +7,7 @@ import (
 	"io"
 	"os"
 	"path/filepath"
+	"reflect"
 	"strconv"
 	"time"
 
@@ -25,8 +26,8 @@ type Book struct {
 	GoodreadsID   string     `yaml:"goodreadsID,omitempty"`
 	OpenLibraryID string     `yaml:"openlibraryID,omitempty"`
 	Genre         string     `yaml:"genre,omitempty"`
-	Pages         int        `yaml:"pages,omitempty"`
-	Rating        int        `yaml:"rating,omitempty"`
+	Pages         int64      `yaml:"pages,omitempty"`
+	Rating        int64      `yaml:"rating,omitempty"`
 	Review        string     `yaml:"review,omitempty"`
 	Series        string     `yaml:"series,omitempty"`
 	BookInSeries  float64    `yaml:"bookInSeries,omitempty"`
@@ -52,6 +53,9 @@ func LoadBooks(ctx context.Context) ([]*Book, error) {
 			return nil, err
 		}
 		book, err := ParseBook(fp)
+		if err != nil {
+			return nil, fmt.Errorf("failed to parse %s: %w", path, err)
+		}
 		fp.Close()
 		books = append(books, book)
 	}
@@ -185,19 +189,36 @@ func getFieldAsTime(m map[string]interface{}, k string) (*time.Time, error) {
 	return &t, nil
 }
 
-func getFieldAsInt(m map[string]interface{}, k string) (int, error) {
+func getFieldAsInt(m map[string]any, k string) (int64, error) {
 	v, ok := m[k]
 	if !ok {
 		return 0, nil
 	}
-	value, ok := v.(int)
-	if !ok {
-		return 0, fmt.Errorf("%s is not a int", k)
+	var value int64
+	switch val := v.(type) {
+	case float64:
+		value = int64(val)
+	case int:
+		value = int64(val)
+	case int32:
+		value = int64(val)
+	case int64:
+		value = int64(val)
+	case uint64:
+		value = int64(val)
+	case string:
+		raw, err := strconv.ParseInt(val, 10, 64)
+		if err != nil {
+			return 0, fmt.Errorf("%s is not an int inside a string (%v)", k, v)
+		}
+		value = raw
+	default:
+		return 0, fmt.Errorf("unexpected type provided for %s: %s", k, reflect.TypeOf(v))
 	}
 	return value, nil
 }
 
-func getFieldAsFloat(m map[string]interface{}, k string) (float64, error) {
+func getFieldAsFloat(m map[string]any, k string) (float64, error) {
 	v, ok := m[k]
 	if !ok {
 		return 0, nil
@@ -205,6 +226,8 @@ func getFieldAsFloat(m map[string]interface{}, k string) (float64, error) {
 	var value float64
 	var err error
 	switch val := v.(type) {
+	case uint64:
+		value = float64(val)
 	case float64:
 		value = val
 	case int:
@@ -215,7 +238,7 @@ func getFieldAsFloat(m map[string]interface{}, k string) (float64, error) {
 			return 0, err
 		}
 	default:
-		return 0, fmt.Errorf("unexpected type provided")
+		return 0, fmt.Errorf("unexpected type provided for %s: %s", k, reflect.TypeOf(v))
 	}
 	return value, nil
 }
