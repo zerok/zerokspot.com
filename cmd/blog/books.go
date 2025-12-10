@@ -126,7 +126,7 @@ func generateBookStatsCommand() *cobra.Command {
 				}
 				books = append(books, *book)
 			}
-			totalPages := 0
+			var totalPages int64 = 0
 			genreCount := make(map[string]int)
 			var maxPagesBook bookscollection.Book
 			var minPagesBook bookscollection.Book

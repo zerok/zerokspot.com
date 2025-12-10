@@ -21,7 +21,7 @@ date: "2021-01-01T12:34:00Z"
 		require.NoError(t, err)
 		require.NotNil(t, book)
 		require.Equal(t, "title", book.Title)
-		require.Equal(t, 123, book.Pages)
+		require.Equal(t, int64(123), book.Pages)
 		require.Equal(t, "scifi", book.Genre)
 		require.Equal(t, "Author Name", book.Author)
 		require.Equal(t, "9780380789030", book.ISBN)
