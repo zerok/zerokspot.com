@@ -1,9 +1,11 @@
 ---
-title: "3 Years at Grafana Labs"
+date: "2025-12-14T21:00:00+01:00"
+incoming:
+- url: https://chaos.social/@zerok/115719720804356308
 tags:
 - jobs
 - career
-date: "2025-12-14T21:00:00+01:00"
+title: 3 Years at Grafana Labs
 ---
 
 How time flies! It's now been [three years](https://zerokspot.com/weblog/2022/11/30/taking-the-next-step/) since I joined [Grafana Labs](https://grafana.com/) and I’m still extremely glad that I took that chance back in 2022. It’s not fair to compare my current work with my previous job simply because the context and companies are completely different, so I won’t even try.
