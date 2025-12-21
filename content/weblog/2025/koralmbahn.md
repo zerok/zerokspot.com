@@ -17,7 +17,7 @@ With all of those I got to drive through nice countrysides but they just took fa
 
 Now everything is different! 41 minutes (or [38 if you travel with our president](https://www.bundespraesident.at/aktuelles/detail/eroeffnung-der-koralmbahn))! That’s quick enough to just use it for a quick visit or a late return trip, something that I did this Wednesday when I needed to get to Graz since I had some tickets for the new Avatar movie but was in Klagenfurt during the day due to logistics.
 
-![Screenshot of route on oebb.at](https://zerokspot.com/api/photos/2025/12/21/IMG_0039.jpeg?profile=1024)
+<figure><figcaption>Screenshot of route on oebb.at</figcaption><img src="https://zerokspot.com/api/photos/2025/12/21/IMG_0039.jpeg?profile=1024"/></figure>
 
 Since then I went back and forth one more time just to receive a delivery. It's hard to overstate hoe much this connection will make my life easier over the years to come ❤️
 
