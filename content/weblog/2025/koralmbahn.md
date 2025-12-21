@@ -1,10 +1,12 @@
 ---
-title: "Koralmbahn: From Graz to Klagenfurt with speed"
 date: "2025-12-21T11:50:00+01:00"
+incoming:
+- url: https://chaos.social/@zerok/115757755090370611
 tags:
 - trains
 - oebb
 - railways
+title: 'Koralmbahn: From Graz to Klagenfurt with speed'
 ---
 
 I cannot describe how much I’ve waited for this! Since last Sunday there is finally a direct train connection between [Graz](https://en.wikipedia.org/wiki/Graz) and [Klagenfurt](https://en.wikipedia.org/wiki/Klagenfurt), the capitals of Styria and Carinthia in Austria respectively. Ever since I moved to Graz I’ve pretty much had three options to get back to Klagenfurt in order to visit my parents or enjoy a summer vacation at Wörthersee:
