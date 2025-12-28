@@ -1,11 +1,13 @@
 ---
-title: Techo Kaigi for 2026
 date: "2025-12-28T21:23:00+01:00"
+incoming:
+- url: https://chaos.social/@zerok/115799080996719489
 tags:
 - techokaigi
 - techo
 - planners
 - productivity
+title: Techo Kaigi for 2026
 ---
 
 October is now long over, but, unfortunately, I had other things on my mind back then and so I couldn’t really think about my planner setup for 2026 until recently. A couple of things were mostly set, though:
