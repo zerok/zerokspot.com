@@ -1,9 +1,11 @@
 ---
-title: "Reading challenges for the new year"
 date: "2026-01-11T19:30:00+01:00"
+incoming:
+- url: https://chaos.social/@zerok/115877933353792322
 tags:
 - books
 - reading
+title: Reading challenges for the new year
 ---
 
 Another year has come and so it’s once again time for a book reading challenge! Last year I had sat the bar quite low with 15 books. After many times I simply wanted to actually complete the challenge again. Turned out, even 15 books was quite hard and I had to fill in some graphical novels towards the end which had been on my list anyway.
