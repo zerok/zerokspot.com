@@ -1,10 +1,12 @@
 ---
-title: "Managing .env files"
 date: "2026-01-24T19:55:00-08:00"
+incoming:
+- url: https://chaos.social/@zerok/115953753470427177
 tags:
 - development
 - security
-----
+title: Managing .env files
+---
 
 Injecting secrets into applications usually happens through environment variables. For local development it has become common to use `.env` files (or `.envrc` files if you’re using [direnv](https://direnv.net/)) to manage those.
 
