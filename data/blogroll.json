@@ -347,7 +347,7 @@
   {
     "title": "Hyde Stevenson",
     "feed_url": "https://lazybear.io/index.xml",
-    "site_url": "https://lazybea.rs/"
+    "site_url": "http://localhost:1313/"
   },
   {
     "title": "Ian Bicking",
