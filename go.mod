@@ -4,7 +4,7 @@ require (
 	dagger.io/dagger v0.19.11
 	github.com/bluesky-social/indigo v0.0.0-20241206035216-5ee8937072a8
 	github.com/go-chi/chi/v5 v5.2.5
-	github.com/gohugoio/hugo v0.155.2
+	github.com/gohugoio/hugo v0.155.3
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.15.0
 	github.com/mattn/go-mastodon v0.0.10
@@ -59,7 +59,7 @@ require (
 	github.com/cloudflare/circl v1.6.1 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/dlclark/regexp2 v1.11.5 // indirect
-	github.com/evanw/esbuild v0.27.2 // indirect
+	github.com/evanw/esbuild v0.27.3 // indirect
 	github.com/fatih/color v1.18.0 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/frankban/quicktest v1.14.6 // indirect
