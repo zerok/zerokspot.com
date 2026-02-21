@@ -1,10 +1,12 @@
 ---
-title: "Complex app-logic configuration with Rego"
+date: "2026-02-21T21:20:00+01:00"
+incoming:
+- url: https://chaos.social/@zerok/116110499127697125
 tags:
 - golang
 - rego
 - openpolicyagent
-date: "2026-02-21T21:20:00+01:00"
+title: Complex app-logic configuration with Rego
 ---
 
 Over the last couple of years I've written tons of little Go services that required part of their logic to be dynamically configurable. For more complex scenarios it might be time for an embedded scripting language like Lua. Especially when it comes to situations where some kind of document needs to be dynamically generated or a decision to be made based on user-defined input, there is an easier way: [OpenPolicyAgent](https://www.openpolicyagent.org/)'s [Rego language](https://www.openpolicyagent.org/docs/policy-language) and library.
