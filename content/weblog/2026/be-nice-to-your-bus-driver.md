@@ -2,6 +2,7 @@
 date: "2026-02-28T20:51:00+01:00"
 incoming:
 - url: https://bsky.app/profile/zerokspot.com/post/3mfwzleilrk2v
+- url: https://chaos.social/@zerok/116150054804871897
 tags:
 - culture
 title: Be nice to your bus driver
