@@ -1,8 +1,10 @@
 ---
-title: "Be nice to your bus driver"
 date: "2026-02-28T20:51:00+01:00"
+incoming:
+- url: https://bsky.app/profile/zerokspot.com/post/3mfwzleilrk2v
 tags:
 - culture
+title: Be nice to your bus driver
 ---
 
 During my recent trip to [Vancouver](https://www.reddit.com/r/vancouver/s/MLpW8agw5O) I noticed something that I've come to really love in [Portland, Oregon](https://www.reddit.com/r/Portland/s/0rcCrzNwAF): It is pretty much expected of you that you greet your bus driver when entering and thank them when leaving.
