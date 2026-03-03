@@ -7,7 +7,7 @@ require (
 	github.com/gohugoio/hugo v0.157.0
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.15.0
-	github.com/mattn/go-mastodon v0.0.10
+	github.com/mattn/go-mastodon v0.0.11
 	github.com/spf13/afero v1.15.0
 	github.com/spf13/cobra v1.10.2
 	github.com/stretchr/testify v1.11.1
@@ -154,7 +154,7 @@ require (
 	github.com/tdewolff/minify/v2 v2.24.9 // indirect
 	github.com/tdewolff/parse/v2 v2.8.8 // indirect
 	github.com/tetratelabs/wazero v1.11.0 // indirect
-	github.com/tomnomnom/linkheader v0.0.0-20180905144013-02ca5825eb80 // indirect
+	github.com/tomnomnom/linkheader v0.0.0-20250811210735-e5fe3b51442e // indirect
 	github.com/vektah/gqlparser/v2 v2.5.30 // indirect
 	github.com/whyrusleeping/cbor-gen v0.2.1-0.20241030202151-b7a6831be65e // indirect
 	github.com/woodsbury/decimal128 v1.3.0 // indirect
