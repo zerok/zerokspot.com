@@ -13,6 +13,6 @@ tags:
 
 To make the transition slightly easier I bought myself a little present (something I want to do more often in order to keep the spirit high): A black [Kaweco AL SPORT fountain pen](https://www.kaweco-pen.com/serien/al-sport/113/kaweco-al-sport-fuellhalter-schwarz?c=49) again with an EF nib. I’m probably write more about this little beauty in another post but a teaser is definitely in order 😉
 
-<figure><img src="https://files.zerokspot.com/photos/2020/kaweco-al-sport.large.jpg"><figcaption>Kaweco AL SPORT black fountain pen</figcaption></figure>
+<figure><img src="https://zerokspot.com/api/photos/2026/03/05/IMG_5130.jpeg?profile=1024"><figcaption>Kaweco AL SPORT black fountain pen</figcaption></figure>
 
 I’m also trying to do bullet journaling for work-tasks. Same as six months ago, this will start out as a simple experiment which I’m going to evaluate every month or so. I’m really curious if and how this will work out but the first day was already quite promising especially thanks to the way I do time-tracking here 🙂 But more on the page-types and templates I’m using hopefully in a future post as they get refined over time.
