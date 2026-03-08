@@ -2,6 +2,7 @@
 date: "2026-03-08T16:30:00+01:00"
 incoming:
 - url: https://chaos.social/@zerok/116194298686590583
+- url: https://bsky.app/profile/zerokspot.com/post/3mgkoe6mlv22n
 tags:
 - review
 - fountainpen
