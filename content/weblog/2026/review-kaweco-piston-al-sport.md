@@ -1,10 +1,12 @@
 ---
-title: "Review: Kaweco Piston AL Sport"
 date: "2026-03-08T16:30:00+01:00"
+incoming:
+- url: https://chaos.social/@zerok/116194298686590583
 tags:
 - review
 - fountainpen
 - kaweco
+title: 'Review: Kaweco Piston AL Sport'
 ---
 
 When I got my first Kaweco AL Sport in 2020, I noted that I liked then pen very much but wasn't all that happy with the [converter's ink capacity](https://zerokspot.com/weblog/2020/09/20/kaweco-al-sport-fountain-pen/). Since then I've used the pen on and off, tried various inks, failed at getting Platinum Carbon Black to work with it, and experimented with different nib units. After a while though, I nearly forgot about it. But then Kaweco released a version that promised to fix that one complaint that I had with the pen: The [Kaweco Piston AL Sport](https://www.kaweco-pen.com/en/series/al-sport/944/kaweco-piston-sport-al-black/gold?c=248)!
