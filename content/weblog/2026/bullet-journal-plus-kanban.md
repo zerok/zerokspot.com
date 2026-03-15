@@ -2,6 +2,7 @@
 date: "2026-03-15T15:15:00+01:00"
 incoming:
 - url: https://bsky.app/profile/zerokspot.com/post/3mh4k4mgrgc2v
+- url: https://chaos.social/@zerok/116234532956086237
 tags:
 - productivity
 - kanban
