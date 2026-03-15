@@ -1,10 +1,12 @@
 ---
-title: "Bullet Journal + Kanban"
+date: "2026-03-15T15:15:00+01:00"
+incoming:
+- url: https://bsky.app/profile/zerokspot.com/post/3mh4k4mgrgc2v
 tags:
 - productivity
 - kanban
 - bulletjournal
-date: "2026-03-15T15:15:00+01:00"
+title: Bullet Journal + Kanban
 ---
 
 As I wrote [back in December](https://zerokspot.com/weblog/2025/12/28/techo-kaigi-for-2026/) I still required GTD + OmniFocus since I probably couldn't handle my high and diverse workload with a Bullet Journal. Weirdly enough, exactly that high workload caused some problems with my OmniFocus setup. I could no longer see the big picture. Projects were far too fine-grained and folders did not help. I also didn't really know based on just looking at the system, what project was the most important one *right now*.
