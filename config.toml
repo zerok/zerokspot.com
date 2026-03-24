@@ -17,10 +17,10 @@ pageSize = 10
 mainSections = ["weblog", "notes"]
 
 [permalinks]
-weblog = "/weblog/:year/:month/:day/:filename/"
-notes = "/notes/:year/:month/:day/:filename/"
-photos = "/photos/:year/:month/:day/:filename/"
-events = "/events/:year/:filename/"
+weblog = "/weblog/:year/:month/:day/:contentbasename/"
+notes = "/notes/:year/:month/:day/:contentbasename/"
+photos = "/photos/:year/:month/:day/:contentbasename/"
+events = "/events/:year/:contentbasename/"
 
 [outputs]
 weblog = ["html", "json", "rss"]
