@@ -10,7 +10,7 @@
                     {{ .Content }}
                 </div>
                 <ul class="page__listing page__listing--blogroll">
-                {{ range $.Site.Data.blogroll }}
+                {{ range hugo.Data.blogroll }}
                 <li><a href="{{ index . "site_url" }}">{{ index . "title" }}</a> (<a href="{{ index . "feed_url" }}">Feed</a>)</li>
                 {{ end }}
                 </ul>
