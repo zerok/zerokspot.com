@@ -682,7 +682,7 @@
   {
     "title": "Ru Singh",
     "feed_url": "https://rusingh.com/feed.xml",
-    "site_url": "https://rusingh.com/"
+    "site_url": "http://localhost:8080"
   },
   {
     "title": "Sarah Maddox",
