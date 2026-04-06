@@ -4,7 +4,7 @@ require (
 	dagger.io/dagger v0.20.3
 	github.com/bluesky-social/indigo v0.0.0-20241206035216-5ee8937072a8
 	github.com/go-chi/chi/v5 v5.2.5
-	github.com/gohugoio/hugo v0.159.2
+	github.com/gohugoio/hugo v0.160.0
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.15.0
 	github.com/mattn/go-mastodon v0.0.11
@@ -78,8 +78,8 @@ require (
 	github.com/gohugoio/go-radix v1.2.0 // indirect
 	github.com/gohugoio/hashstructure v0.6.0 // indirect
 	github.com/gohugoio/httpcache v0.8.0 // indirect
-	github.com/gohugoio/hugo-goldmark-extensions/extras v0.6.0 // indirect
-	github.com/gohugoio/hugo-goldmark-extensions/passthrough v0.4.0 // indirect
+	github.com/gohugoio/hugo-goldmark-extensions/extras v0.7.0 // indirect
+	github.com/gohugoio/hugo-goldmark-extensions/passthrough v0.5.0 // indirect
 	github.com/google/go-cmp v0.7.0 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
