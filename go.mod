@@ -1,7 +1,7 @@
 module gitlab.com/zerok/zerokspot.com
 
 require (
-	dagger.io/dagger v0.20.3
+	dagger.io/dagger v0.20.5
 	github.com/bluesky-social/indigo v0.0.0-20241206035216-5ee8937072a8
 	github.com/go-chi/chi/v5 v5.2.5
 	github.com/gohugoio/hugo v0.160.1
@@ -25,7 +25,7 @@ require (
 )
 
 require (
-	github.com/99designs/gqlgen v0.17.81 // indirect
+	github.com/99designs/gqlgen v0.17.89 // indirect
 	github.com/BurntSushi/locker v0.0.0-20171006230638-a6e239ea1c69 // indirect
 	github.com/JohannesKaufmann/dom v0.2.0 // indirect
 	github.com/JohannesKaufmann/html-to-markdown/v2 v2.5.0 // indirect
@@ -145,7 +145,7 @@ require (
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/polydawn/refmt v0.89.1-0.20221221234430-40501e09de1f // indirect
 	github.com/rogpeppe/go-internal v1.14.1 // indirect
-	github.com/sosodev/duration v1.3.1 // indirect
+	github.com/sosodev/duration v1.4.0 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/spf13/cast v1.10.0 // indirect
 	github.com/spf13/pflag v1.0.10 // indirect
@@ -153,7 +153,7 @@ require (
 	github.com/tdewolff/parse/v2 v2.8.11 // indirect
 	github.com/tetratelabs/wazero v1.11.0 // indirect
 	github.com/tomnomnom/linkheader v0.0.0-20250811210735-e5fe3b51442e // indirect
-	github.com/vektah/gqlparser/v2 v2.5.30 // indirect
+	github.com/vektah/gqlparser/v2 v2.5.32 // indirect
 	github.com/whyrusleeping/cbor-gen v0.2.1-0.20241030202151-b7a6831be65e // indirect
 	github.com/woodsbury/decimal128 v1.3.0 // indirect
 	github.com/yuin/goldmark-emoji v1.0.6 // indirect
