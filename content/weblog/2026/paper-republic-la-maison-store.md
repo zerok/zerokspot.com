@@ -2,6 +2,7 @@
 date: "2026-04-19T22:04:00+02:00"
 incoming:
 - url: https://chaos.social/@zerok/116436710874464966
+- url: https://bsky.app/profile/zerokspot.com/post/3mjwd73uwos2l
 tags:
 - stationery
 - vienna
