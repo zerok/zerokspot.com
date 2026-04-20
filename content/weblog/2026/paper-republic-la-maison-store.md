@@ -1,10 +1,12 @@
 ---
-title: "Paper Republic's beautiful stationery store"
 date: "2026-04-19T22:04:00+02:00"
+incoming:
+- url: https://chaos.social/@zerok/116436710874464966
 tags:
 - stationery
 - vienna
 - paperrepublic
+title: Paper Republic's beautiful stationery store
 ---
 
 While walking through Vienna's inner city on Friday, I stumbled upon Paper Republic's official store in Vienna: [La Maison](https://www.paper-republic.com/de-gb/blogs/paper-republic/la-maison-shop-opens-in-vienna). While it was already closed for the day, I decided to come back the next morning, and it was well worth it!
