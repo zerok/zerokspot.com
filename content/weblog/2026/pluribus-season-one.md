@@ -1,6 +1,6 @@
 ---
 title: Pluribus season one
-date: "2026-04-27T22:48:00+01:00"
+date: "2026-04-27T22:48:00+02:00"
 tags:
 - shows
 - scifi
