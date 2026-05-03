@@ -1,11 +1,13 @@
 ---
-title: "Simple data analysis setup"
+date: "2026-05-03T11:30:00+02:00"
+incoming:
+- url: https://chaos.social/@zerok/116510092124723114
 tags:
 - python
 - jupyter
 - data
 - duckdb
-date: "2026-05-03T11:30:00+02:00"
+title: Simple data analysis setup
 ---
 
 Over the last couple of months I've had to do a bit more number-crunching than usual in order to write design docs. In a recent example I had to work with a datasource that was slow to query (GitHub's REST API) and eventually needed to work with 100,000+ data points.
