@@ -2,6 +2,7 @@
 date: "2026-05-03T11:30:00+02:00"
 incoming:
 - url: https://chaos.social/@zerok/116510092124723114
+- url: https://bsky.app/profile/zerokspot.com/post/3mkww52nlds2i
 tags:
 - python
 - jupyter
