@@ -1,9 +1,11 @@
 ---
-title: "Self hosting my RSS aggregator"
 date: "2026-05-10T20:52:00+02:00"
+incoming:
+- url: https://chaos.social/@zerok/116551811041800849
 tags:
 - rss
 - selfhosting
+title: Self hosting my RSS aggregator
 ---
 
 I've been using [Feedbin](https://feedbin.com/) since 2008 after moving there from Feedly. Back then, Feedly had become somehow annoying with lots of integrations that I actually didn't care about. This is not the reason why I decided to look at alternative RSS aggregators this time. I really like Feedbin and haven't had any real problems with it ever. At the same time, RSS aggregation just feels like something that I could solve for myself with a little service running on one of the servers I already have for other things.
