@@ -1,9 +1,11 @@
 ---
-title: "Sorry, you are only one part of my target audience"
+date: "2026-06-09T20:18:00+02:00"
+incoming:
+- url: https://chaos.social/@zerok/116721578434324959
 tags:
 - blogging
 - writing
-date: "2026-06-09T20:18:00+02:00"
+title: Sorry, you are only one part of my target audience
 ---
 The primary idea for the [blogging calendar](https://zerokspot.com/weblog/2026/01/18/sticking-to-a-blogging-schedule/) I started earlier this year was to be able to find topics that you, the reader, might find interesting. What I overlooked there, though, was that I have the classic writing block: Will someone care what I write about?
 
