@@ -2,6 +2,7 @@
 date: "2026-06-09T20:18:00+02:00"
 incoming:
 - url: https://chaos.social/@zerok/116721578434324959
+- url: https://bsky.app/profile/zerokspot.com/post/3mnuth6jlo22r
 tags:
 - blogging
 - writing
