@@ -1,8 +1,10 @@
 ---
-title: Surprised by The Running Man
 date: "2026-06-18T21:20:00+02:00"
+incoming:
+- url: https://bsky.app/profile/zerokspot.com/post/3mopbudt3rc2u
 tags:
 - movies
+title: Surprised by The Running Man
 ---
 
 Whenever I come across a movie that might be interesting and that is not included in any subscription yet, I consider just getting it as Bluray. And sometimes I pick another movie just because it sounds interesting. That just happened last week with [The Running Man](https://en.wikipedia.org/wiki/The_Running_Man_(2025_film)). I had never seen the Arnold Schwarzenegger movie nor read the book, although I had wanted to. 
