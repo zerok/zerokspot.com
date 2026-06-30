@@ -32,6 +32,11 @@ Embedded into the conference itself there were two games, encouraging attendees 
 
 [Punk Security](https://punksecurity.co.uk/) built a little PCB shaped like a wasp with 19 LEDs on it and sent you on a scavenger hunt. Every board had one of these LEDs shining blue. When you met someone with a blue light at a different position, you could ask them to send you their light through a little sensor near the mouth of the wasp. Once you had collected 5, you got a battery extension pack for the wasp and with 10 you got a little extra board. Some exhibitors also offered add-ons for the little wasp!
 
+<figure>
+    <img src="https://zerokspot.com/api/photos/2026/06/30/IMG_5734.jpeg?profile=1024" />
+    <figcaption>Social wasp board</figcaption>
+</figure>
+
 The other game was a passport where you were supposed to go to each of the main sponsor's booths and get a stamp. Once full, you'd be entitled to enter a raffle at the end of the event. That didn't work for me at all. The wasp was a completely carefree game. We wandered around and just randomly bumped into people who were looking for one mote or another. The sponsor pass vendor passport felt boring in comparison. Since some exhibitors were already onboard with the LED-wasp, it might have IMO been a better idea to do away with the passport and just integrate everything through the wasp 😅
 
 ## Personal take-aways
