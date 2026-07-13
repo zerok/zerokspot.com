@@ -7,7 +7,7 @@ require (
 	github.com/gohugoio/hugo v0.164.0
 	github.com/google/go-github/v52 v52.0.0
 	github.com/gosimple/slug v1.15.0
-	github.com/mattn/go-mastodon v0.0.11
+	github.com/mattn/go-mastodon v0.0.13
 	github.com/spf13/afero v1.15.0
 	github.com/spf13/cobra v1.10.2
 	github.com/stretchr/testify v1.11.1
