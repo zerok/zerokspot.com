@@ -1,10 +1,12 @@
 ---
-title: "Renewing my GnuPG Keys"
 date: "2026-08-23T13:43:00+02:00"
+incoming:
+- url: https://chaos.social/@zerok/117144667737080500
 tags:
 - gnupg
 - security
 - openpgp
+title: Renewing my GnuPG Keys
 ---
 
 After many years I've decided to give my local GnuPG key setup a refresh. It's been nearly 10 years and a lot has changed in crypto land. I've also made a few mistakes back then with regards to hardware tokens back then. None of these have bitten me but I've still wanted to fix those for a long time.
