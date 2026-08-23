@@ -2,6 +2,7 @@
 date: "2026-08-23T13:43:00+02:00"
 incoming:
 - url: https://chaos.social/@zerok/117144667737080500
+- url: https://bsky.app/profile/zerokspot.com/post/3mtqpux55d22k
 tags:
 - gnupg
 - security
