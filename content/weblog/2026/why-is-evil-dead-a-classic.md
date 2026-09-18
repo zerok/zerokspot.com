@@ -1,6 +1,6 @@
 ---
 title: "Why is Evil Dead a classic?"
-date: "2026-09-28T21:00:00+02:00"
+date: "2026-09-18T21:00:00+02:00"
 tags:
 - movies
 ---
