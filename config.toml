@@ -3,6 +3,7 @@ title = "zerokspot.com"
 metaDataFormat = "yaml"
 editor = "em -n"
 ignoreFiles = [ "\\.\\#" ]
+baseURL = "https://zerokspot.com/"
 
 [pagination]
 pageSize = 10
