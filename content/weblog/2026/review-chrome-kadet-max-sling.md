@@ -1,10 +1,12 @@
 ---
-title: "Review: Chrome Industries Kadet Max 15L Sling"
+date: "2026-10-06T18:50:00+02:00"
+incoming:
+- url: https://bsky.app/profile/zerokspot.com/post/3mxa3fpu23k2r
+rating: 5
 tags:
 - reviews
 - bags
-rating: 5
-date: "2026-10-06T18:50:00+02:00"
+title: 'Review: Chrome Industries Kadet Max 15L Sling'
 ---
 
 Earlier this year I noticed that my Crumpler and Timbuk2 bags were finally starting to fall apart. I had recently rediscovered my good old [Chrome Buran messenger](https://zerokspot.com/weblog/2012/04/15/chrome-buran/) but it was simply too heavy and large for what I had in mind. While browsing the current Chrome Industries catalog I stumbled upon the [Kadet Max 15L Sling](https://chromeindustries.com/products/kadet-max?variant=40678284820540) and I knew I'd have to buy this one!
