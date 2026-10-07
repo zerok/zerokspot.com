@@ -70,41 +70,6 @@ zs.icons.createIconElement = function(cfg) {
 
 window.zs = zs;
 
-(function() {
-    var button = document.createElement('a');
-    function toggleDarkMode(goDark) {
-      while(button.hasChildNodes()) {
-        button.removeChild(button.firstChild);
-      }
-      if (goDark) {
-        button.appendChild(window.zs.icons.createIconElement({group: 'regular', icon: 'sun'}));
-        document.getElementsByTagName('html')[0].classList.add('darkmode');
-      } else {
-        button.appendChild(window.zs.icons.createIconElement({group: 'regular', icon: 'moon'}));
-        document.getElementsByTagName('html')[0].classList.remove('darkmode');
-      }
-      window.localStorage.setItem('darkMode', goDark);
-    }
-    var goDark = window.localStorage.getItem('darkMode');
-    if (goDark == null) {
-        goDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    } else {
-        goDark = goDark === 'true';
-    }
-    var navList = document.querySelector('#main-nav > ul');
-    var navItem = document.createElement('li');
-    navItem.classList.add('darkmode-toggle');
-    toggleDarkMode(goDark);
-    button.setAttribute('href', '');
-    navItem.appendChild(button);
-    navList.appendChild(navItem);
-    button.addEventListener('click', (evt) => {
-        evt.preventDefault();
-        goDark = !goDark;
-        toggleDarkMode(goDark);
-    }, false);
-}());
-
 function renderMastodonComments() {
   var container = document.querySelector('.mastodon-comments');
   if (!container) {
