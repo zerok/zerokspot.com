@@ -1,12 +1,7 @@
 $darkmodeBlue: #8ac2f6;
 
-.darkmode-toggle a {
-    color: #333 !important;
-}
-html.darkmode {
-    .darkmode-toggle a {
-        color: #EFEFEF !important;
-    }
+@media (prefers-color-scheme: dark) {
+html {
     body {
         background: #333;
         color: #FEFEFE;
@@ -77,4 +72,5 @@ html.darkmode {
     .webmention blockquote {
         color: #FFF;
     }
+}
 }

@@ -184,8 +184,12 @@ aside {
     font-weight: normal;
     color: $base-fg;
 }
-.darkmode .entry-meta__attributes b {
-    color: #FFF;
+@media (prefer-color-scheme: dark) {
+    html {
+        .entry-meta__attributes b {
+            color: #FFF;
+        }
+    }
 }
 
 .page--single {
