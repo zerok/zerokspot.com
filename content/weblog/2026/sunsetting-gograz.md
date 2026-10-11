@@ -2,6 +2,7 @@
 date: "2026-10-11T19:44:00+02:00"
 incoming:
 - url: https://chaos.social/@zerok/117423554261243178
+- url: https://bsky.app/profile/zerokspot.com/post/3mxml3e6qis2r
 tags:
 - gograz
 - golang
