@@ -1,8 +1,10 @@
 ---
-title: "The End of the Journey for Foursquare"
+date: "2026-10-25T11:48:00+01:00"
+incoming:
+- url: https://chaos.social/@zerok/117501182950068413
 tags:
 - web20
-date: "2026-10-25T11:48:00+01:00"
+title: The End of the Journey for Foursquare
 ---
 
 It's always sad when a service you've used is shutting down. [Foursquare](https://foursquare.com/) ([the end](https://teendrama.substack.com/p/some-final-words-on-foursquare?utm_id=97760_v0_s00_e0_tv4&just_subscribed=true)) was one where I saw it coming for a long time, but that does only to some degree soften the blow. Foursquare (and later [Swarm](https://swarmapp.com/)) was *the* service that introduced me to location-based services. My first check-in was on 2010-01-10 while exploring the city of Graz, where I had moved to a few months earlier. From then on, pretty much all the way up to 2019, I've used the service to keep track of all the places I visited on my trips - from conference to conference, from vacation to vacation.
