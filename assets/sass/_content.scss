@@ -171,11 +171,11 @@
 
     a {
         color: $base-fg;
-        box-shadow: inset 0 -4px 0 lighten($heading-fg, 30);
+        box-shadow: inset 0 -4px 0 $red;
         text-decoration: none;
 
         &:hover {
-            background: lighten($heading-fg, 30);
+            background: $red;
             color: #FFF;
         }
     }

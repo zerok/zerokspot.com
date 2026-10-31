@@ -477,7 +477,8 @@ a.bsky-feed-post__date {
     font-size: 1.6rem;
     padding: 5px;
     margin: 0;
-    background: $blue;
+    background: $menuitem-bg-hi;
+    color: #FFF;
 }
 
 .presences__content {
@@ -493,13 +494,14 @@ a.bsky-feed-post__date {
 .presences__item a {
     display: block;
     padding: 5px;
-    background: lighten($blue, 10);
+    background: $menuitem-bg;
     font-weight: bold;
     text-decoration: none;
+    color: #FFF;
 
     &:hover {
         color: #FFF;
-        background: lighten($heading-fg, 30);
+        background: $menuitem-bg-hi;
     }
 }
 
