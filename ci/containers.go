@@ -26,11 +26,16 @@ func getHugoContainer(dc *dagger.Client, hugoVersion string) *dagger.Container {
 	}).From(versions.UbuntuImage()).
 		WithEnvVariable("DEBIAN_FRONTEND", "noninteractive").
 		WithExec([]string{"apt-get", "update"}).
-		WithExec([]string{"apt-get", "install", "-y", "curl", "tzdata", "git"}).
+		WithExec([]string{"apt-get", "install", "-y", "curl", "tzdata", "git", "tar"}).
 		WithExec([]string{"curl", "-L", "-o", "/tmp/otel-cli.deb", "https://github.com/equinix-labs/otel-cli/releases/download/v0.4.1/otel-cli_0.4.1_linux_amd64.deb"}).
 		WithExec([]string{"dpkg", "-i", "/tmp/otel-cli.deb"}).
 		WithExec([]string{"curl", "-L", "-o", "/tmp/hugo.deb", fmt.Sprintf("https://github.com/gohugoio/hugo/releases/download/v%s/hugo_extended_%s_linux-amd64.deb", hugoVersion, hugoVersion)}).
-		WithExec([]string{"dpkg", "-i", "/tmp/hugo.deb"})
+		WithExec([]string{"dpkg", "-i", "/tmp/hugo.deb"}).
+		WithExec([]string{"curl", "-L", "-o", "/tmp/dartsass.tar.gz", "https://github.com/sass/dart-sass/releases/download/1.107.1/dart-sass-1.107.1-linux-x64.tar.gz"}).
+		WithWorkdir("/tmp").
+		WithExec([]string{"tar", "-xzvf", "/tmp/dartsass.tar.gz"}).
+		WithExec([]string{"ln", "-s", "/tmp/dart-sass/sass", "/usr/local/bin/sass"}).
+		WithWorkdir("/")
 }
 
 func getRsyncContainer(dc *dagger.Client) *dagger.Container {

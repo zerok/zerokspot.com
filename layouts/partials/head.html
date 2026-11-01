@@ -1,4 +1,8 @@
-{{ $css := (resources.Get "sass/main.scss" | css.Sass | resources.Minify | resources.Fingerprint ) }}
+{{ $sassOpts := dict
+  "transpiler" "dartsass"
+  "enableSourceMap" true
+}}
+{{ $css := (resources.Get "sass/main.scss" | css.Sass $sassOpts | resources.Minify | resources.Fingerprint ) }}
 <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/favicon.png">
