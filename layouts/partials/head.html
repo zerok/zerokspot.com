@@ -1,7 +1,7 @@
 {{ $css := (resources.Get "sass/main.scss" | css.Sass | resources.Minify | resources.Fingerprint ) }}
 <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.png">
     <link rel="preload" href="/fonts/liberation-mono/LiberationMono-Bold-webfont.woff">
     <link rel="preload" href="/fonts/liberation-mono/LiberationMono-Italic-webfont.woff">
     <link rel="preload" href="/fonts/liberation-mono/LiberationMono-Regular-webfont.woff">
