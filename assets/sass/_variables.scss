@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $baseWidth: 800px;
 $blue: #73a2cd;
 $red: #b87f43;
@@ -8,11 +10,11 @@ $asideWidth: 200px;
 $contentPadding: 20px;
 $menuitem-bg: $blue;
 $menuitem-bg-hi: #4186c5;
-$link-fg: darken($menuitem-bg-hi, 10);
+$link-fg: color.adjust($menuitem-bg-hi, $lightness: -10%);
 $link-fg: #1077D7;
 $visited-link: #96B1CA;
-$quote-fg: lighten($base-fg, 10);
-$meta-fg: lighten($base-fg, 30);
-$heading-fg: darken($blue, 30);
-$body-font: 'Helvetica Neue', helvetica, arial, sans-serif;
-$content-font: 'Liberation Mono', 'Courier new';
+$quote-fg: color.adjust($base-fg, $lightness: +10%);
+$meta-fg: color.adjust($base-fg, $lightness: +30%);
+$heading-fg: color.adjust($blue, $lightness: -30%);
+$body-font: "Helvetica Neue", helvetica, arial, sans-serif;
+$content-font: "Liberation Mono", "Courier new";

@@ -1,3 +1,5 @@
+@use "variables" as *;
+@use "sass:color";
 @mixin content-content {
     line-height: 32px;
     font-size: 18px;
@@ -69,7 +71,7 @@
         font-size: 95%;
         margin: 3em 0;
         color: $quote-fg;
-        border-left: 8px solid lighten($link-fg, 50);
+        border-left: 8px solid color.adjust($link-fg, $lightness: +50%);
         em {
             font-style: normal;
         }

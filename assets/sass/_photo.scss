@@ -1,3 +1,5 @@
+@use "variables" as *;
+@use "content" as *;
 .photo__content {
     display: grid;
 }

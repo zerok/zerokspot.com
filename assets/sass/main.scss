@@ -1,13 +1,15 @@
-@import "normalize";
-@import "variables";
-@import "content";
-@import "common";
-@import "header";
-@import "postpaths";
-@import "reading";
-@import "hcard";
-@import "photo";
-@import "mixins";
+@use "normalize";
+@use "variables" as *;
+@use "content" as *;
+@use "common";
+@use "header";
+@use "postpaths";
+@use "reading";
+@use "hcard";
+@use "photo";
+@use "mixins" as *;
+@use "events";
+@use "darkmode";
 
 @font-face {
   font-family: 'Liberation Mono';
@@ -778,9 +780,6 @@ time .age {
         }
     }
 }
-
-@import "events";
-@import "darkmode";
 
 figure {
     img {

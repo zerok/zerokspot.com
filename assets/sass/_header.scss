@@ -1,3 +1,5 @@
+@use "variables" as *;
+@use "sass:color";
 .page__header {
     background: #F1F1F1;
     height: 40px;
@@ -30,20 +32,20 @@
         text-transform: lowercase;
         text-decoration: none;
         background-color: $menuitem-bg;
-        border-bottom: 5px solid lighten($menuitem-bg, 20);
+        border-bottom: 5px solid color.adjust($menuitem-bg, $lightness: +20%);
     }
 
     .active a, a:hover {
         background-color: $menuitem-bg-hi;
-        border-bottom: 5px solid lighten($menuitem-bg-hi, 20);
+        border-bottom: 5px solid color.adjust($menuitem-bg-hi, $lightness: +20%);
     }
 
     #nav-start {
         background-color: $red;
-        border-bottom: 5px solid lighten($red, 40);
+        border-bottom: 5px solid color.adjust($red, $lightness: +40%);
 
         &:hover {
-            border-bottom: 5px solid lighten($red, 20);
+            border-bottom: 5px solid color.adjust($red, $lightness: +20%);
         }
     }
 }
