@@ -1,11 +1,11 @@
+@use "variables" as *;
+@use "sass:color";
 $darkmodeBlue: #8ac2f6;
 
 @media (prefers-color-scheme: dark) {
-html {
-    body {
-        background: #333;
-        color: #FEFEFE;
-    }
+html body {
+    background: #333;
+    color: #FEFEFE;
 
     a, #wrapper {
         color: #FEFEFE;
@@ -33,13 +33,13 @@ html {
     }
 
     .page__header a {
-        border-bottom: 5px solid lighten($blue, 10);
+        border-bottom: 5px solid color.adjust($blue, $lightness: +10%);
         &:hover {
-            background: darken($darkmodeBlue, 20);
+            background: color.adjust($darkmodeBlue, $lightness: -20%);
         }
     }
     .page__header #nav-start  {
-        border-bottom: 5px solid lighten($red, 10);
+        border-bottom: 5px solid color.adjust($red, $lightness: +10%);
     }
 
     .page__listing--mini li:hover,
